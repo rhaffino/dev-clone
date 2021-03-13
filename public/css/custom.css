@@ -2109,25 +2109,47 @@ textarea.input-meta-description {
 }
 
 .delete {
-  color:var(--darkgrey);
-  cursor: pointer;
+    color: var(--darkgrey);
+    cursor: pointer;
 }
 
 .delete:hover {
-  color:var(--black);
+    color: var(--black);
 }
 
-
-.bootstrap-select.custom-select-blue .dropdown-menu.inner > li.selected > a, .bootstrap-select.custom-select-blue .dropdown-menu.inner > li:hover > a {
+.bootstrap-select.custom-select-blue .dropdown-menu.inner>li.selected>a, .bootstrap-select.custom-select-blue .dropdown-menu.inner>li:hover>a {
     background: var(--primaryblue) !important;
 }
 
-.bootstrap-select.custom-select-blue .dropdown-menu.inner > li.selected > a .text, .bootstrap-select.custom-select-blue .dropdown-menu.inner > li:hover > a .text {
+.bootstrap-select.custom-select-blue .dropdown-menu.inner>li.selected>a .text, .bootstrap-select.custom-select-blue .dropdown-menu.inner>li:hover>a .text {
     color: white;
     transition: 0.15s !important;
 }
 
-
 .form-control:focus {
-  border-color: var(--primaryblue);
+    border-color: var(--primaryblue);
+}
+
+.form-control.custom-textarea-82 {
+    resize: none;
+    height: 82%;
+}
+
+.form-control.custom-textarea-100px {
+    resize: none;
+    height: 100px;
+}
+
+.input-group-text {
+    background-color: transparent;
+    border-right-style: none;
+    border-radius: 0.42rem 0 0 0.42rem !important;
+}
+
+.custom-date {
+    border-left-style: none;
+}
+
+.custom-date:focus {
+    border-left-style: solid;
 }
