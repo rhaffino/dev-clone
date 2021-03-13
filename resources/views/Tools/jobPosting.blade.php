@@ -15,29 +15,6 @@ id/json-ld-jobPosting-schema-generator
 @endsection
 
 @section('content')
-@push('style')
-<style media="screen">
-    .bootstrap-select .bs-searchbox {
-        padding: 0;
-    }
-
-    .bs-searchbox .form-control {
-        border-radius: 0.42rem 0.42rem 0 0;
-    }
-
-    .bs-searchbox .form-control:focus {
-        border-color: transparent;
-    }
-
-    .bootstrap-select .dropdown-menu {
-        padding: 0;
-    }
-
-    .bootstrap-select .no-results {
-        margin: 0;
-    }
-</style>
-@endpush
 <div class="container container-tools mb-10">
     <div class="d-flex flex-column-fluid">
         <div class="container-fluid px-0">
@@ -160,12 +137,12 @@ id/json-ld-jobPosting-schema-generator
                                     <div class="col-12 col-md-8 col-xl-5">
                                         <label class="text-black font-weight-bold" for="province">@lang('jobPosting.label-province')</label>
                                         <div id="hide-province">
-                                            <select class="form-control selectpicker custom-select-blue province mb-5" disabled data-size="4" data-live-search="true" tabindex="null">
+                                            <select class="form-control selectpicker custom-select-blue custom-searchbox province mb-5" disabled data-size="4" data-live-search="true" tabindex="null">
                                                 <option value="none">@lang('jobPosting.placeholder-province')</option>
                                             </select>
                                         </div>
                                         <div id="province-show">
-                                            <select class="form-control selectpicker custom-select-blue province mb-5" data-size="4" data-live-search="true" tabindex="null">
+                                            <select class="form-control selectpicker custom-select-blue custom-searchbox province mb-5" data-size="4" data-live-search="true" tabindex="null">
                                                 <option value="none">@lang('jobPosting.placeholder-province')</option>
                                                 @foreach($province as $p)
                                                 <option value="{{ $p['code'] }}">{{ $p['name'] }}</option>
@@ -179,7 +156,7 @@ id/json-ld-jobPosting-schema-generator
                                     </div>
                                     <div class="col-8 col-md-12 col-xl-5">
                                         <label class="text-black font-weight-bold" for="country">@lang('jobPosting.label-country')</label>
-                                        <select class="form-control selectpicker custom-select-blue country mb-5" data-size="4" data-live-search="true" tabindex="null">
+                                        <select class="form-control selectpicker custom-select-blue custom-searchbox country mb-5" data-size="4" data-live-search="true" tabindex="null">
                                             <option value="none">@lang('jobPosting.placeholder-country')</option>
                                             @foreach($region as $r)
                                             <option value="{{ $r['code'] }}">{{ $r['name'] }}</option>
@@ -200,7 +177,7 @@ id/json-ld-jobPosting-schema-generator
                                     </div>
                                     <div class="col-6 col-xl-3">
                                         <label class="text-black font-weight-bold" for="currency">@lang('jobPosting.label-currency')</label>
-                                        <select class="form-control selectpicker custom-select-blue currency mb-5" data-size="4" data-live-search="true" disabled="disabled">
+                                        <select class="form-control selectpicker custom-select-blue custom-searchbox currency mb-5" data-size="4" data-live-search="true" disabled="disabled">
                                             <option value="none">@lang('jobPosting.placeholder-currency')</option>
                                             @foreach($currencies as $c)
                                             <option value="{{ $c['code'] }}">{{ $c['name'] }}</option>
@@ -215,6 +192,20 @@ id/json-ld-jobPosting-schema-generator
                                             <option value="Month">@lang('jobPosting.unitText-opt-3')</option>
                                             <option value="Year">@lang('jobPosting.unitText-opt-4')</option>
                                         </select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 col-md-4">
+                                        <label class="text-black font-weight-bold" for="responsibilities">@lang('jobPosting.label-responsibilities')</label>
+                                        <input type="text" name="" class="form-control responsibilities mb-5" placeholder="@lang('jobPosting.placeholder-responsibilities')" value="" data-id="0">
+                                    </div>
+                                    <div class="col-12 col-md-4 mb-5">
+                                        <label class="text-black font-weight-bold" for="skills">@lang('jobPosting.label-skills')</label>
+                                        <input type="text" name="" class="form-control skills" placeholder="@lang('jobPosting.placeholder-skills')" value="" data-id="0">
+                                    </div>
+                                    <div class="col-12 col-md-4">
+                                        <label class="text-black font-weight-bold" for="qualifications">@lang('jobPosting.label-qualifications')</label>
+                                        <input type="text" name="" class="form-control qualifications mb-5" placeholder="@lang('jobPosting.placeholder-qualifications')" value="" data-id="0">
                                     </div>
                                 </div>
                                 <div class="row">
