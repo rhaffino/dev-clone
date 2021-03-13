@@ -93,7 +93,7 @@ class ToolsController extends Controller
         $currencies = json_decode(file_get_contents($path_currencies), true);
 
         $local = App::getLocale();
-        return view('Tools/jobposting', compact('local', 'dataID', 'dataEN','region','province','currencies'));
+        return view('Tools/jobPosting', compact('local', 'dataID', 'dataEN','region','province','currencies'));
     }
 
     public function person($lang)
