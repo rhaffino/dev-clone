@@ -15,33 +15,6 @@ id/json-ld-product-schema-generator
 @endsection
 
 @section('content')
-@push('style')
-<style media="screen">
-    .bootstrap-select .bs-searchbox {
-        padding: 0;
-    }
-
-    .bs-searchbox .form-control {
-        border-radius: 0.42rem 0.42rem 0 0;
-    }
-
-    .bs-searchbox .form-control:focus {
-        border-color: transparent;
-    }
-
-    .bootstrap-select .dropdown-menu {
-        padding: 0;
-    }
-
-    .bootstrap-select .no-results {
-        margin: 0;
-    }
-
-    .hide-div {
-        display: none;
-    }
-</style>
-@endpush
 <div class="container container-tools mb-10">
     <div class="d-flex flex-column-fluid">
         <div class="container-fluid px-0">
@@ -126,7 +99,7 @@ id/json-ld-product-schema-generator
                                     </div>
                                     <div class="col-6 col-md-3">
                                         <label class="text-black font-weight-bold" for="priceCurrency">@lang('product.label-currency')</label>
-                                        <select class="form-control selectpicker custom-select-blue priceCurrency mb-5" data-size="4" data-live-search="true" disabled>
+                                        <select class="form-control selectpicker custom-select-blue custom-searchbox priceCurrency mb-5" data-size="4" data-live-search="true" disabled>
                                             <option value="None">@lang('product.placeholder-currency')</option>
                                             @foreach($currencies as $c)
                                             <option value="{{ $c['code'] }}">{{ $c['name'] }}</option>
@@ -139,7 +112,7 @@ id/json-ld-product-schema-generator
                                         <div class="invalid-feedback">@lang('layout.invalid-number')</div>
                                     </div>
                                 </div>
-                                <div id="ag_offer" class="row hide-div">
+                                <div id="ag_offer" class="row">
                                     <div class="col-md-4">
                                         <label class="text-black font-weight-bold" for="validThrough">@lang('product.label-validThrough')</label>
                                         <div class="input-group date mb-5">
@@ -177,7 +150,7 @@ id/json-ld-product-schema-generator
                                         </select>
                                     </div>
                                 </div>
-                                <div id="offer" class="row hide-div">
+                                <div id="offer" class="row">
                                     <div class="col-md-6 mb-5">
                                         <label class="text-black font-weight-bold" for="highPrice">@lang('product.label-highPrice')</label>
                                         <input type="number" name="" class="form-control highPrice" placeholder="@lang('product.placeholder-highPrice')" value="" min="0" data-id="0">

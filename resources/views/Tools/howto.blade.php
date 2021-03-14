@@ -15,29 +15,6 @@ id/json-ld-how-to-schema-generator
 @endsection
 
 @section('content')
-@push('style')
-<style media="screen">
-    .bootstrap-select .bs-searchbox {
-        padding: 0;
-    }
-
-    .bs-searchbox .form-control {
-        border-radius: 0.42rem 0.42rem 0 0;
-    }
-
-    .bs-searchbox .form-control:focus {
-        border-color: transparent;
-    }
-
-    .bootstrap-select .dropdown-menu {
-        padding: 0;
-    }
-
-    .bootstrap-select .no-results {
-        margin: 0;
-    }
-</style>
-@endpush
 <div class="container container-tools mb-10">
     <div class="d-flex flex-column-fluid">
         <div class="container-fluid px-0">
@@ -80,7 +57,7 @@ id/json-ld-how-to-schema-generator
                                             </div>
                                             <div class="col-6 col-md-4">
                                                 <label for="currency" class="text-black font-weight-bold">@lang('howto.label-currency')</label>
-                                                <select class="form-control selectpicker custom-select-blue currency mb-5" data-size="4" data-live-search="true">
+                                                <select class="form-control selectpicker custom-select-blue custom-searchbox currency mb-5" data-size="4" data-live-search="true">
                                                     <option value="none">Choose Currency</option>
                                                     @foreach($currencies as $c)
                                                     <option value="{{ $c['code'] }}">{{ $c['name'] }}</option>

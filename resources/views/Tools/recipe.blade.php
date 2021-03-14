@@ -15,29 +15,6 @@ id/json-ld-recipe-schema-generator
 @endsection
 
 @section('content')
-@push('style')
-<style media="screen">
-    .bootstrap-select .bs-searchbox {
-        padding: 0;
-    }
-
-    .bs-searchbox .form-control {
-        border-radius: 0.42rem 0.42rem 0 0;
-    }
-
-    .bs-searchbox .form-control:focus {
-        border-color: transparent;
-    }
-
-    .bootstrap-select .dropdown-menu {
-        padding: 0;
-    }
-
-    .bootstrap-select .no-results {
-        margin: 0;
-    }
-</style>
-@endpush
 <div class="container container-tools mb-10">
     <div class="d-flex flex-column-fluid">
         <div class="container-fluid px-0">

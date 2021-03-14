@@ -2153,3 +2153,23 @@ textarea.input-meta-description {
 .custom-date:focus {
     border-left-style: solid;
 }
+
+.bootstrap-select.custom-searchbox .dropdown-menu {
+    padding: 0;
+}
+
+.bootstrap-select.custom-searchbox .dropdown-menu .bs-searchbox {
+    padding: 0;
+}
+
+.bootstrap-select.custom-searchbox .dropdown-menu .no-results {
+    margin: 0;
+}
+
+.custom-searchbox .dropdown-menu .bs-searchbox .form-control {
+    border-radius: 0.42rem 0.42rem 0 0;
+}
+
+.custom-searchbox .dropdown-menu .bs-searchbox .form-control:focus {
+    border-color: transparent;
+}
