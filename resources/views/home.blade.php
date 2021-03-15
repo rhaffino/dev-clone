@@ -37,7 +37,7 @@ id
                             </div>
                         </div>
                         <div class="card-footer text-center border-top-0 pt-0">
-                            <button onclick="window.location.href='/{{ $local }}/word-counter'" type="button" class="btn btn-launch" name="button">LAUNCH</button>
+                            <a href="/{{ $local }}/word-counter" type="button" class="btn btn-launch" name="button">LAUNCH</a>
                         </div>
                     </div>
                 </div>
@@ -51,7 +51,7 @@ id
                             </div>
                         </div>
                         <div class="card-footer text-center border-top-0 pt-0">
-                            <button onclick="window.location.href='/{{ $local }}/page-title-meta-description-checker'" type="button" class="btn btn-launch" name="button">LAUNCH</button>
+                            <a href="/{{ $local }}/page-title-meta-description-checker" type="button" class="btn btn-launch" name="button">LAUNCH</a>
                         </div>
                     </div>
                 </div>
@@ -65,7 +65,7 @@ id
                             </div>
                         </div>
                         <div class="card-footer text-center border-top-0 pt-0">
-                            <button onclick="window.location.href='/{{ $local }}/json-ld-schema-generator'" type="button" class="btn btn-launch" name="button">LAUNCH</button>
+                            <a href="/{{ $local }}/json-ld-schema-generator" type="button" class="btn btn-launch" name="button">LAUNCH</a>
                         </div>
                     </div>
                 </div>
@@ -79,7 +79,7 @@ id
                             </div>
                         </div>
                         <div class="card-footer text-center border-top-0 pt-0">
-                            <button onclick="window.location.href='/{{ $local }}/pagespeed-test'" type="button" class="btn btn-launch" name="button">LAUNCH</button>
+                            <a href="/{{ $local }}/pagespeed-test" type="button" class="btn btn-launch" name="button">LAUNCH</a>
                         </div>
                     </div>
                 </div>
@@ -213,7 +213,7 @@ id
             </div>
             <div class="d-flex align-items-center">
                 <i class='bx bxs-check-circle text-darkgrey mr-1'></i>
-                <span class="text-darkgrey">Last update 15 Mar, 2021 | Version 1.0</span>
+                <span class="text-darkgrey">@lang('home.last-update') 15 Mar, 2021 | @lang('layout.version') 1.0</span>
             </div>
         </div>
     </div>
