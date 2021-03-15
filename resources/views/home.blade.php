@@ -93,7 +93,7 @@ id
                             </div>
                         </div>
                         <div class="card-footer text-center border-top-0 pt-0">
-                            <button onclick="window.location.href='/{{ $local }}/sitemap-generator'" type="button" class="btn btn-launch" name="button">LAUNCH</button>
+                            <a href="/{{ $local }}/sitemap-generator" type="button" class="btn btn-launch" name="button">LAUNCH</a>
                         </div>
                     </div>
                 </div>
@@ -107,7 +107,7 @@ id
                             </div>
                         </div>
                         <div class="card-footer text-center border-top-0 pt-0">
-                            <button onclick="window.location.href='/{{ $local }}/mobile-friendly-test'" type="button" class="btn btn-launch" name="button">LAUNCH</button>
+                            <a href="/{{ $local }}/mobile-friendly-test" type="button" class="btn btn-launch" name="button">LAUNCH</a>
                         </div>
                     </div>
                 </div>
@@ -121,7 +121,7 @@ id
                             </div>
                         </div>
                         <div class="card-footer text-center border-top-0 pt-0">
-                            <button onclick="window.location.href='/{{ $local }}/ssl-checker'" type="button" class="btn btn-launch" name="button">LAUNCH</button>
+                            <a href="/{{ $local }}/ssl-checker" type="button" class="btn btn-launch" name="button">LAUNCH</a>
                         </div>
                     </div>
                 </div>
@@ -135,7 +135,7 @@ id
                             </div>
                         </div>
                         <div class="card-footer text-center border-top-0 pt-0">
-                            <button onclick="window.location.href='/{{ $local }}/robotstxt-generator'" type="button" class="btn btn-launch" name="button">LAUNCH</button>
+                            <a href="/{{ $local }}/robotstxt-generator" type="button" class="btn btn-launch" name="button">LAUNCH</a>
                         </div>
                     </div>
                 </div>
@@ -149,7 +149,7 @@ id
                             </div>
                         </div>
                         <div class="card-footer text-center border-top-0 pt-0">
-                            <button onclick="window.location.href='/{{ $local }}/redirect-checker'" type="button" class="btn btn-launch" name="button">LAUNCH</button>
+                            <a href="/{{ $local }}/redirect-checker" type="button" class="btn btn-launch" name="button">LAUNCH</a>
                         </div>
                     </div>
                 </div>
@@ -163,7 +163,7 @@ id
                             </div>
                         </div>
                         <div class="card-footer text-center border-top-0 pt-0">
-                            <button onclick="window.location.href='/{{ $local }}/technology-lookup'" type="button" class="btn btn-launch" name="button">LAUNCH</button>
+                            <a href="/{{ $local }}/technology-lookup" type="button" class="btn btn-launch" name="button">LAUNCH</a>
                         </div>
                     </div>
                 </div>
@@ -177,7 +177,7 @@ id
                             </div>
                         </div>
                         <div class="card-footer text-center border-top-0 pt-0">
-                            <button onclick="window.location.href='/{{ $local }}/link-analyzer'" type="button" class="btn btn-launch" name="button">LAUNCH</button>
+                            <a href="/{{ $local }}/link-analyzer" type="button" class="btn btn-launch" name="button">LAUNCH</a>
                         </div>
                     </div>
                 </div>
@@ -191,7 +191,7 @@ id
                             </div>
                         </div>
                         <div class="card-footer text-center border-top-0 pt-0">
-                            <button onclick="window.location.href='/{{ $local }}/hreflang-checker'" type="button" class="btn btn-launch" name="button">LAUNCH</button>
+                            <a href="/{{ $local }}/hreflang-checker" type="button" class="btn btn-launch" name="button">LAUNCH</a>
                         </div>
                     </div>
                 </div>
@@ -203,7 +203,7 @@ id
                                 <i class='text-darkgrey bx bx-test-tube bx-lg'></i>
                                 <h2 class="h6 text-darkgrey font-weight-bolder">Keyword Research</h2>
                                 <p class="text-darkgrey">JSON-LD Generator adalah sebuah tools yang dibuat oleh cmlabs untuk memudahkan user.</p>
-                                <button onclick="window.location.href='/{{ $local }}/keyword-research'" type="button" class="btn btn-launch" name="button">LAUNCH</button>
+                                <a href="/{{ $local }}/keyword-research" type="button" class="btn btn-launch" name="button">LAUNCH</a>
                             </div>
                         </div>
                     </div>
