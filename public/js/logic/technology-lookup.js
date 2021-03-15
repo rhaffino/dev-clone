@@ -1,8 +1,10 @@
 const TECH_LOOKUP_LOCAL_STORAGE_KEY = 'tech-lookup-history';
 
 if (lang == "en") {
+    var created_at = "Created at "
     var localStorageNone = "This is your first impressions, no history yet!";
 } else if (lang == "id") {
+    var created_at = "Dibuat pada "
     var localStorageNone = "Ini adalah kesan pertama Anda, belum ada riwayat!";
 }
 
@@ -24,7 +26,7 @@ const HistoryTemplate = (url, date) => `
   <div class="d-flex justify-content-between">
     <div class="local-collection-title">${url}</div>
     <div class="d-flex align-items-center">
-      <i class='bx bxs-info-circle text-grey bx-sm mr-2' data-toggle="tooltip" data-theme="dark" title="Created at ${date}"></i>
+      <i class='bx bxs-info-circle text-grey bx-sm mr-2' data-toggle="tooltip" data-theme="dark" title="${created_at}${date}"></i>
       <i class='bx bxs-x-circle bx-sm text-grey delete-history--btn' data-url="${url}"></i>
     </div>
   </div>
