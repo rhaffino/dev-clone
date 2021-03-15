@@ -112,7 +112,7 @@ id/json-ld-product-schema-generator
                                         <div class="invalid-feedback">@lang('layout.invalid-number')</div>
                                     </div>
                                 </div>
-                                <div id="ag_offer" class="row">
+                                <div id="offer" class="row d-none">
                                     <div class="col-md-4">
                                         <label class="text-black font-weight-bold" for="validThrough">@lang('product.label-validThrough')</label>
                                         <div class="input-group date mb-5">
@@ -150,7 +150,7 @@ id/json-ld-product-schema-generator
                                         </select>
                                     </div>
                                 </div>
-                                <div id="offer" class="row">
+                                <div id="ag_offer" class="row d-none">
                                     <div class="col-md-6 mb-5">
                                         <label class="text-black font-weight-bold" for="highPrice">@lang('product.label-highPrice')</label>
                                         <input type="number" name="" class="form-control highPrice" placeholder="@lang('product.placeholder-highPrice')" value="" min="0" data-id="0">
