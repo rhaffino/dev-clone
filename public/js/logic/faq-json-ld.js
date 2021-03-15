@@ -224,16 +224,16 @@ jQuery(document).on('click', '.delete', function () {
         let data = getDataFromText()
         data.mainEntity.splice(index, 1);
         print(data);
-        for (let i = 0; i < main.mainEntity.length; i++) {
-            jQuery('.question[data-id=' + i + ']').val(main.mainEntity[i].name)
-            jQuery('.answer[data-id=' + i + ']').val(main.mainEntity[i].acceptedAnswer.text)
+        for (let i = 0; i < data.mainEntity.length; i++) {
+            jQuery('.question[data-id=' + i + ']').val(data.mainEntity[i].name)
+            jQuery('.answer[data-id=' + i + ']').val(data.mainEntity[i].acceptedAnswer.text)
         }
-        jQuery('.row[data-id=' + main.mainEntity.length + ']').remove();
+        jQuery('.row[data-id=' + data.mainEntity.length + ']').remove();
         let row = parseInt(jQuery('#json-format').val().split('\n').length);
         jQuery('#json-format').attr('rows',row);
-        save()
+        // save()
     }
-    sticky.update();
+    // sticky.update();
 });
 
 $(document).on('change', '#schema-json-ld', function() {

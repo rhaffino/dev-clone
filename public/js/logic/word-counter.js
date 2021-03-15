@@ -34,7 +34,7 @@ const refreshLocalStorage = function() {
                 $('#localsavemobile').append(div)
                 $('#localsavedesktop').append(div2)
             }
-        } 
+        }
     } catch (e) {
 
     }
@@ -217,7 +217,7 @@ function start() {
         var nonStopWords = [];
         var stopWords = ["+", "a", "able", "about", "above", "abst", "accordance", "according", "accordingly", "across", "actually", "adj", "after", "afterwards", "again", "against", "ah", "all", "almost", "alone", "along", "already", "also", "although", "always", "am", "among", "amongst", "an", "and", "another", "any", "anybody", "anyhow", "anymore", "anyone", "anything", "anyway", "anyways", "anywhere", "apparently", "approximately", "are", "aren", "arent", "around", "as", "aside", "at", "auth", "available", "away", "awfully", "b", "back", "be", "because", "before", "beforehand", "behind", "below", "beside", "besides", "between", "beyond", "biol", "both", "brief", "briefly", "but", "by", "c", "ca", "certain", "certainly", "co", "com", "contain", "couldnt", "d", "downwards", "due", "e", "ed", "edu", "eg", "eight", "either", "else", "elsewhere", "et", "et-al", "etc", "even", "ever", "ex", "f", "ff", "fifth", "first", "five", "fix", "followed", "following", "follows", "for", "former", "formerly", "forth", "found", "four", "from", "further", "furthermore", "g", "gave", "get", "gets", "getting", "give", "given", "gives", "giving", "go", "goes", "gone", "got", "gotten", "h", "had", "happens", "hardly", "has", "hasn't", "have", "haven't", "having", "he", "hed", "hence", "her", "here", "hereafter", "hereby", "herein", "heres", "hereupon", "hers", "herself", "hes", "hi", "hid", "him", "himself", "his", "hither", "home", "how", "howbeit", "however", "hundred", "i", "id", "ie", "if", "i'll", "im", "immediate", "immediately", "importance", "important", "in", "inc", "indeed", "index", "information", "instead", "into", "invention", "inward", "is", "isn't", "it", "itd", "it'll", "its", "itself", "i've", "j", "just", "k", "keep", "keeps", "kept", "kg", "km", "know", "known", "knows", "l", "largely", "last", "lately", "later", "latter", "latterly", "least", "less", "lest", "let", "lets", "like", "liked", "likely", "line", "little", "'ll", "look", "looking", "looks", "ltd", "m", "made", "mainly", "make", "makes", "many", "may", "maybe", "me", "mean", "means", "meantime", "meanwhile", "merely", "mg", "might", "million", "miss", "ml", "more", "moreover", "most", "mostly", "mr", "mrs", "much", "mug", "must", "my", "myself", "n", "na", "name", "namely", "nay", "nd", "near", "nearly", "necessarily", "necessary", "need", "needs", "neither", "never", "nevertheless", "new", "next", "nine", "ninety", "no", "nobody", "non", "none", "nonetheless", "noone", "nor", "normally", "nos", "not", "noted", "nothing", "now", "nowhere", "o", "obtain", "obtained", "obviously", "of", "off", "often", "oh", "ok", "okay", "old", "omitted", "on", "once", "one", "ones", "only", "onto", "or", "ord", "other", "others", "otherwise", "ought", "our", "ours", "ourselves", "out", "outside", "over", "overall", "owing", "own", "p", "page", "pages", "part", "particular", "particularly", "per", "perhaps", "placed", "please", "plus", "poorly", "possible", "possibly", "potentially", "pp", "predominantly", "previously", "primarily", "probably", "promptly", "proud", "provides", "put", "q", "que", "quickly", "quite", "qv", "r", "ran", "rather", "rd", "re", "readily", "really", "recent", "recently", "ref", "refs", "regarding", "regardless", "regards", "related", "relatively", "research", "respectively", "resulted", "resulting", "results", "right", "run", "s", "said", "same", "saw", "say", "saying", "says", "sec", "section", "see", "seeing", "seem", "seemed", "seeming", "seems", "seen", "self", "selves", "sent", "seven", "several", "shall", "she", "shed", "she'll", "shes", "should", "shouldn't", "show", "showed", "shown", "showns", "shows", "significant", "significantly", "similar", "similarly", "since", "six", "slightly", "so", "some", "somebody", "somehow", "someone", "somethan", "something", "sometime", "sometimes", "somewhat", "somewhere", "soon", "sorry", "specifically", "specified", "specify", "specifying", "still", "stop", "strongly", "sub", "substantially", "successfully", "such", "sufficiently", "sup", "sure", "t", "take", "taken", "taking", "tell", "tends", "th", "than", "thanx", "that", "that'll", "thats", "that've", "the", "their", "theirs", "them", "themselves", "then", "thence", "there", "thereafter", "thereby", "thered", "therefore", "therein", "there'll", "thereof", "therere", "theres", "thereto", "thereupon", "there've", "these", "they", "theyd", "they'll", "theyre", "they've", "think", "this", "those", "thou", "though", "thoughh", "thousand", "throug", "through", "throughout", "thru", "thus", "til", "tip", "to", "together", "too", "took", "toward", "towards", "tried", "tries", "truly", "try", "trying", "ts", "twice", "two", "u", "un", "under", "unfortunately", "unless", "unlike", "unlikely", "until", "unto", "up", "upon", "ups", "us", "use", "used", "useful", "usefully", "usefulness", "uses", "using", "usually", "v", "value", "various", "'ve", "very", "via", "viz", "vol", "vols", "vs", "w", "want", "wants", "was", "wasn't", "way", "we", "wed", "welcome", "we'll", "went", "were", "weren't", "we've", "what", "whatever", "what'll", "whats", "when", "whence", "whenever", "where", "whereafter", "whereas", "whereby", "wherein", "wheres", "whereupon", "wherever", "whether", "which", "while", "whim", "whither", "who", "whod", "whoever", "whole", "who'll", "whom", "whomever", "whos", "whose", "why", "widely", "willing", "wish", "with", "within", "without", "won't", "words", "world", "would", "wouldn't", "www", "x", "y", "yes", "yet", "you", "youd", "you'll", "your", "youre", "yours", "yourself", "yourselves", "you've", "z", "zero", "(", ")"];
         for (var i = 0; i < words.length; i++) {
-            if (stopWords.indexOf(words[i].toLowerCase()) === -1 && isNaN(words[i])) {
+            if (stopWords.indexOf(words[i].toLowerCase()) === -1) {
                 nonStopWords.push(words[i].toLowerCase());
             }
         }
@@ -231,8 +231,10 @@ function start() {
             }
         }
         var sortedKeywords = [];
+        var weights = 0;
         for (var keyword in keywords) {
             sortedKeywords.push([keyword, keywords[keyword]])
+            weights += keywords[keyword]
         }
         sortedKeywords.sort(function(a, b) {
             return b[1] - a[1]
@@ -252,7 +254,7 @@ function start() {
                     "<div class='col-4 d-flex justify-content-end align-items-center'>" +
                     "<div class='d-flex justify-content-end align-items-center'>" +
                     "<span class='mr-3 font-weight-bolder mt-1'>" + sortedKeywords[i][1] + "</span>" +
-                    "<span class='font-weight-bolder mt-1'>" + ((sortedKeywords[i][1] / words.length) * 100).toFixed(1) + "%</span>" +
+                    "<span class='font-weight-bolder mt-1'>" + ((sortedKeywords[i][1] / weights) * 100).toFixed(1) + "%</span>" +
                     "</div>" +
                     "</div>" +
                     "</div>"
@@ -268,7 +270,7 @@ function start() {
                     "<div class='col-4 d-flex justify-content-end align-items-center'>" +
                     "<div class='d-flex justify-content-end align-items-center'>" +
                     "<span class='mr-3 font-weight-bolder mt-1'>" + sortedKeywords[i][1] + "</span>" +
-                    "<span class='font-weight-bolder mt-1'>" + ((sortedKeywords[i][1] / words.length) * 100).toFixed(1) + "%</span>" +
+                    "<span class='font-weight-bolder mt-1'>" + ((sortedKeywords[i][1] / weights) * 100).toFixed(1) + "%</span>" +
                     "</div>" +
                     "</div>" +
                     "</div>" +
@@ -285,7 +287,7 @@ function start() {
                     "<div class='col-4 d-flex justify-content-end align-items-center'>" +
                     "<div class='d-flex justify-content-end align-items-center'>" +
                     "<span class='mr-3 font-weight-bolder mt-1'>" + sortedKeywords[i][1] + "</span>" +
-                    "<span class='font-weight-bolder mt-1'>" + ((sortedKeywords[i][1] / words.length) * 100).toFixed(1) + "%</span>" +
+                    "<span class='font-weight-bolder mt-1'>" + ((sortedKeywords[i][1] / weights) * 100).toFixed(1) + "%</span>" +
                     "</div>" +
                     "</div>" +
                     "</div>" +
@@ -308,7 +310,7 @@ function start() {
                     "<div class='col-4 d-flex justify-content-end align-items-center'>" +
                     "<div class='d-flex justify-content-end align-items-center'>" +
                     "<span class='mr-3 font-weight-bolder mt-1'>" + sortedKeywords[i][1] + "</span>" +
-                    "<span class='font-weight-bolder mt-1'>" + ((sortedKeywords[i][1] / words.length) * 100).toFixed(1) + "%</span>" +
+                    "<span class='font-weight-bolder mt-1'>" + ((sortedKeywords[i][1] / weights) * 100).toFixed(1) + "%</span>" +
                     "</div>" +
                     "</div>" +
                     "</div>"
@@ -324,7 +326,7 @@ function start() {
                     "<div class='col-4 d-flex justify-content-end align-items-center'>" +
                     "<div class='d-flex justify-content-end align-items-center'>" +
                     "<span class='mr-3 font-weight-bolder mt-1'>" + sortedKeywords[i][1] + "</span>" +
-                    "<span class='font-weight-bolder mt-1'>" + ((sortedKeywords[i][1] / words.length) * 100).toFixed(1) + "%</span>" +
+                    "<span class='font-weight-bolder mt-1'>" + ((sortedKeywords[i][1] / weights) * 100).toFixed(1) + "%</span>" +
                     "</div>" +
                     "</div>" +
                     "</div>" +
@@ -341,7 +343,7 @@ function start() {
                     "<div class='col-4 d-flex justify-content-end align-items-center'>" +
                     "<div class='d-flex justify-content-end align-items-center'>" +
                     "<span class='mr-3 font-weight-bolder mt-1'>" + sortedKeywords[i][1] + "</span>" +
-                    "<span class='font-weight-bolder mt-1'>" + ((sortedKeywords[i][1] / words.length) * 100).toFixed(1) + "%</span>" +
+                    "<span class='font-weight-bolder mt-1'>" + ((sortedKeywords[i][1] / weights) * 100).toFixed(1) + "%</span>" +
                     "</div>" +
                     "</div>" +
                     "</div>" +
@@ -360,8 +362,10 @@ function start() {
             }
         }
         var sortedKeywords2 = [];
+        var weights2 = 0
         for (var keyword in keywords2) {
             sortedKeywords2.push([keyword, keywords2[keyword]])
+            weights2 += keywords2[keyword]
         }
         sortedKeywords2.sort(function(a, b) {
             return b[1] - a[1]
@@ -381,7 +385,7 @@ function start() {
                     "<div class='col-4 d-flex justify-content-end align-items-center'>" +
                     "<div class='d-flex justify-content-end align-items-center'>" +
                     "<span class='mr-3 font-weight-bolder mt-1'>" + sortedKeywords2[i][1] + "</span>" +
-                    "<span class='font-weight-bolder mt-1'>" + ((sortedKeywords2[i][1] / (words.length)) * 100).toFixed(1) + "%</span>" +
+                    "<span class='font-weight-bolder mt-1'>" + ((sortedKeywords2[i][1] / weights2) * 100).toFixed(1) + "%</span>" +
                     "</div>" +
                     "</div>" +
                     "</div>"
@@ -397,7 +401,7 @@ function start() {
                     "<div class='col-4 d-flex justify-content-end align-items-center'>" +
                     "<div class='d-flex justify-content-end align-items-center'>" +
                     "<span class='mr-3 font-weight-bolder mt-1'>" + sortedKeywords2[i][1] + "</span>" +
-                    "<span class='font-weight-bolder mt-1'>" + ((sortedKeywords2[i][1] / (words.length)) * 100).toFixed(1) + "%</span>" +
+                    "<span class='font-weight-bolder mt-1'>" + ((sortedKeywords2[i][1] / weights2) * 100).toFixed(1) + "%</span>" +
                     "</div>" +
                     "</div>" +
                     "</div>" +
@@ -414,7 +418,7 @@ function start() {
                     "<div class='col-4 d-flex justify-content-end align-items-center'>" +
                     "<div class='d-flex justify-content-end align-items-center'>" +
                     "<span class='mr-3 font-weight-bolder mt-1'>" + sortedKeywords2[i][1] + "</span>" +
-                    "<span class='font-weight-bolder mt-1'>" + ((sortedKeywords2[i][1] / (words.length)) * 100).toFixed(1) + "%</span>" +
+                    "<span class='font-weight-bolder mt-1'>" + ((sortedKeywords2[i][1] / weights2) * 100).toFixed(1) + "%</span>" +
                     "</div>" +
                     "</div>" +
                     "</div>" +
@@ -438,7 +442,7 @@ function start() {
                     "<div class='col-4 d-flex justify-content-end align-items-center'>" +
                     "<div class='d-flex justify-content-end align-items-center'>" +
                     "<span class='mr-3 font-weight-bolder mt-1'>" + sortedKeywords2[i][1] + "</span>" +
-                    "<span class='font-weight-bolder mt-1'>" + ((sortedKeywords2[i][1] / (words.length)) * 100).toFixed(1) + "%</span>" +
+                    "<span class='font-weight-bolder mt-1'>" + ((sortedKeywords2[i][1] / weights2) * 100).toFixed(1) + "%</span>" +
                     "</div>" +
                     "</div>" +
                     "</div>"
@@ -454,7 +458,7 @@ function start() {
                     "<div class='col-4 d-flex justify-content-end align-items-center'>" +
                     "<div class='d-flex justify-content-end align-items-center'>" +
                     "<span class='mr-3 font-weight-bolder mt-1'>" + sortedKeywords2[i][1] + "</span>" +
-                    "<span class='font-weight-bolder mt-1'>" + ((sortedKeywords2[i][1] / (words.length)) * 100).toFixed(1) + "%</span>" +
+                    "<span class='font-weight-bolder mt-1'>" + ((sortedKeywords2[i][1] / weights2) * 100).toFixed(1) + "%</span>" +
                     "</div>" +
                     "</div>" +
                     "</div>" +
@@ -471,7 +475,7 @@ function start() {
                     "<div class='col-4 d-flex justify-content-end align-items-center'>" +
                     "<div class='d-flex justify-content-end align-items-center'>" +
                     "<span class='mr-3 font-weight-bolder mt-1'>" + sortedKeywords2[i][1] + "</span>" +
-                    "<span class='font-weight-bolder mt-1'>" + ((sortedKeywords2[i][1] / (words.length)) * 100).toFixed(1) + "%</span>" +
+                    "<span class='font-weight-bolder mt-1'>" + ((sortedKeywords2[i][1] / weights2) * 100).toFixed(1) + "%</span>" +
                     "</div>" +
                     "</div>" +
                     "</div>" +
@@ -490,8 +494,10 @@ function start() {
             }
         }
         var sortedKeywords3 = [];
+        var weights3 = 0
         for (var keyword in keywords3) {
             sortedKeywords3.push([keyword, keywords3[keyword]])
+            weights3 += keywords3[keyword]
         }
         sortedKeywords3.sort(function(a, b) {
             return b[1] - a[1]
@@ -511,7 +517,7 @@ function start() {
                     "<div class='col-4 d-flex justify-content-end align-items-center'>" +
                     "<div class='d-flex justify-content-end align-items-center'>" +
                     "<span class='mr-3 font-weight-bolder mt-1'>" + sortedKeywords3[i][1] + "</span>" +
-                    "<span class='font-weight-bolder mt-1'>" + ((sortedKeywords3[i][1] / (words.length)) * 100).toFixed(1) + "%</span>" +
+                    "<span class='font-weight-bolder mt-1'>" + ((sortedKeywords3[i][1] / weights3) * 100).toFixed(1) + "%</span>" +
                     "</div>" +
                     "</div>" +
                     "</div>"
@@ -527,7 +533,7 @@ function start() {
                     "<div class='col-4 d-flex justify-content-end align-items-center'>" +
                     "<div class='d-flex justify-content-end align-items-center'>" +
                     "<span class='mr-3 font-weight-bolder mt-1'>" + sortedKeywords3[i][1] + "</span>" +
-                    "<span class='font-weight-bolder mt-1'>" + ((sortedKeywords3[i][1] / (words.length)) * 100).toFixed(1) + "%</span>" +
+                    "<span class='font-weight-bolder mt-1'>" + ((sortedKeywords3[i][1] / weights3) * 100).toFixed(1) + "%</span>" +
                     "</div>" +
                     "</div>" +
                     "</div>" +
@@ -544,7 +550,7 @@ function start() {
                     "<div class='col-4 d-flex justify-content-end align-items-center'>" +
                     "<div class='d-flex justify-content-end align-items-center'>" +
                     "<span class='mr-3 font-weight-bolder mt-1'>" + sortedKeywords3[i][1] + "</span>" +
-                    "<span class='font-weight-bolder mt-1'>" + ((sortedKeywords3[i][1] / (words.length)) * 100).toFixed(1) + "%</span>" +
+                    "<span class='font-weight-bolder mt-1'>" + ((sortedKeywords3[i][1] / weights3) * 100).toFixed(1) + "%</span>" +
                     "</div>" +
                     "</div>" +
                     "</div>" +
@@ -568,7 +574,7 @@ function start() {
                     "<div class='col-4 d-flex justify-content-end align-items-center'>" +
                     "<div class='d-flex justify-content-end align-items-center'>" +
                     "<span class='mr-3 font-weight-bolder mt-1'>" + sortedKeywords3[i][1] + "</span>" +
-                    "<span class='font-weight-bolder mt-1'>" + ((sortedKeywords3[i][1] / (words.length)) * 100).toFixed(1) + "%</span>" +
+                    "<span class='font-weight-bolder mt-1'>" + ((sortedKeywords3[i][1] / weights3) * 100).toFixed(1) + "%</span>" +
                     "</div>" +
                     "</div>" +
                     "</div>"
@@ -584,7 +590,7 @@ function start() {
                     "<div class='col-4 d-flex justify-content-end align-items-center'>" +
                     "<div class='d-flex justify-content-end align-items-center'>" +
                     "<span class='mr-3 font-weight-bolder mt-1'>" + sortedKeywords3[i][1] + "</span>" +
-                    "<span class='font-weight-bolder mt-1'>" + ((sortedKeywords3[i][1] / (words.length)) * 100).toFixed(1) + "%</span>" +
+                    "<span class='font-weight-bolder mt-1'>" + ((sortedKeywords3[i][1] / weights3) * 100).toFixed(1) + "%</span>" +
                     "</div>" +
                     "</div>" +
                     "</div>" +
@@ -601,7 +607,7 @@ function start() {
                     "<div class='col-4 d-flex justify-content-end align-items-center'>" +
                     "<div class='d-flex justify-content-end align-items-center'>" +
                     "<span class='mr-3 font-weight-bolder mt-1'>" + sortedKeywords3[i][1] + "</span>" +
-                    "<span class='font-weight-bolder mt-1'>" + ((sortedKeywords3[i][1] / (words.length)) * 100).toFixed(1) + "%</span>" +
+                    "<span class='font-weight-bolder mt-1'>" + ((sortedKeywords3[i][1] / weights3) * 100).toFixed(1) + "%</span>" +
                     "</div>" +
                     "</div>" +
                     "</div>" +
