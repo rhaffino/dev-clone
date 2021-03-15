@@ -22,7 +22,7 @@ id/json-ld-schema-generator
                 <h1 class="text-black font-weight-light">JSON-LD SCHEMA GENERATOR</h1>
                 <div class="row justify-content-center">
                     <div class="col-md-8">
-                        <p class="text-black font-weight-light">JSON-LD SCHEMA GENERATOR is a special tool created by CMLABS to facilitate SEO writers to add schema.org markup to their content.</p>
+                        <p class="text-black font-weight-light">@lang('home.json-ld-desc')</p>
                     </div>
                 </div>
             </div>

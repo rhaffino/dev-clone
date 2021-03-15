@@ -1,3 +1,11 @@
+if (lang == "en") {
+    var created_at = "Created at "
+    var localStorageNone = "This is your first impressions, no history yet!"
+} else if (lang == "id") {
+    var created_at = "Dibuat pada "
+    var localStorageNone = "Ini adalah kesan pertama Anda, belum ada riwayat!"
+}
+
 const REDIRECT_CHAIN_CHECKER_LOCAL_STORAGE_KEY = 'redirect-chain-checker-history';
 
 const RedirectResultTemplate = (url, status_code, date) => `
@@ -10,7 +18,7 @@ const RedirectResultTemplate = (url, status_code, date) => `
   <div class="col-6">
     <div class="d-flex align-items-center justify-content-between">
       <span class="label label-primary label-inline font-weight-normal ml-8" data-toggle="tooltip" data-theme="dark" title="Redirect">${status_code}</span>
-      <p id="" class="text-black mb-0 desktopDate d-xs-none d-md-block"><em>${date}</em></p>
+      <p id="" class="text-black mb-0 desktopDate d-none d-md-block"><em>${date}</em></p>
       <i id="" class="bx bxs-info-circle bx-sm text-darkgrey mr-2 mobileDate d-md-none" data-toggle="tooltip" data-theme="dark" title="${date}"></i>
     </div>
   </div>
@@ -22,7 +30,7 @@ const HistoryTemplate = (url, date) => `
   <div class="d-flex justify-content-between">
     <div class="local-collection-title">${url}</div>
     <div class="d-flex align-items-center">
-      <i class='bx bxs-info-circle text-grey bx-sm mr-2' data-toggle="tooltip" data-theme="dark" title="Created at ${date}"></i>
+      <i class='bx bxs-info-circle text-grey bx-sm mr-2' data-toggle="tooltip" data-theme="dark" title="${created_at}${date}"></i>
       <i class='bx bxs-x-circle bx-sm text-grey delete-history--btn' data-url="${url}"></i>
     </div>
   </div>
@@ -32,7 +40,7 @@ const HistoryTemplate = (url, date) => `
 const EmptyHistoryTemplate = () => `
 <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
   <div class="d-flex justify-content-center text-center">
-    <span>This is your first impressions, no history yet!</span>
+    <span>${localStorageNone}</span>
   </div>
 </li>`;
 
@@ -50,7 +58,7 @@ const HistoryTemplateMobile = (url, date) => `
 const EmptyHistoryTemplateMobile = () => `
 <div class="custom-card py-5 px-3">
 <div class="d-flex justify-content-center text-center">
-  <span>This is your first impressions, no history yet!</span>
+  <span>${localStorageNone}</span>
 </div>
 </div>`;
 
@@ -258,4 +266,3 @@ $('.clear-history--btn').click(function(){
 $('#analyze-btn').click(function(){
     analyze($('#input-url').val());
 })
-
