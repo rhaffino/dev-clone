@@ -263,6 +263,11 @@ let removeLocal = function(index) {
     })
 }
 
+let clearAll = function () {
+    localStorage.removeItem('sitemap-generator')
+    refreshLocalStorage();
+}
+
 let getData = function(index) {
     $("#result").empty();
     $('#noCrawlResult').hide();

@@ -1203,12 +1203,18 @@ a:hover {
     font-weight: bold;
     border: 1px solid var(--darkgrey);
     color: var(--darkgrey);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 
 .btn-launch:hover {
     background: white !important;
     border: 1px solid white !important;
     color: var(--primaryblue) !important;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 
 .card-home {
@@ -1228,6 +1234,9 @@ a:hover {
     background: var(--primaryblue);
     color: white;
     border: 1px solid white;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 
 #description-tab-1, #description-tab-2, #description-tab-3, #description-tab-4, #description-tab-5, #description-tab-6, #description-tab-7, #description-tab-8, #description-tab-9, #description-tab-10, #description-tab-11 {
@@ -2106,4 +2115,70 @@ textarea.input-meta-description {
 
 .card-word-counter {
     background-color: var(--lightgrey);
+}
+
+.delete {
+    color: var(--darkgrey);
+    cursor: pointer;
+}
+
+.delete:hover {
+    color: var(--black);
+}
+
+.bootstrap-select.custom-select-blue .dropdown-menu.inner>li.selected>a, .bootstrap-select.custom-select-blue .dropdown-menu.inner>li:hover>a {
+    background: var(--primaryblue) !important;
+}
+
+.bootstrap-select.custom-select-blue .dropdown-menu.inner>li.selected>a .text, .bootstrap-select.custom-select-blue .dropdown-menu.inner>li:hover>a .text {
+    color: white;
+    transition: 0.15s !important;
+}
+
+.form-control:focus {
+    border-color: var(--primaryblue);
+}
+
+.form-control.custom-textarea-82 {
+    resize: none;
+    height: 82%;
+}
+
+.form-control.custom-textarea-100px {
+    resize: none;
+    height: 100px;
+}
+
+.input-group-text {
+    background-color: transparent;
+    border-right-style: none;
+    border-radius: 0.42rem 0 0 0.42rem !important;
+}
+
+.custom-date {
+    border-left-style: none;
+}
+
+.custom-date:focus {
+    border-left-style: solid;
+}
+
+.bootstrap-select.custom-searchbox .dropdown-menu {
+    padding: 0;
+}
+
+.bootstrap-select.custom-searchbox .dropdown-menu .bs-searchbox {
+    padding: 0;
+}
+
+.bootstrap-select.custom-searchbox .dropdown-menu .no-results {
+    margin: 0;
+}
+
+.custom-searchbox .dropdown-menu .bs-searchbox .form-control {
+    border-radius: 0.42rem 0.42rem 0 0;
+}
+
+.custom-searchbox .dropdown-menu .bs-searchbox .form-control:focus {
+    border-color: transparent;
 }

@@ -450,7 +450,7 @@ jQuery(document).ready(function () {
             $(".url, .price, .priceCurrency").removeAttr("disabled");
             $(".priceCurrency").selectpicker("refresh");
             $("#ag_offer").css('display', 'flex');
-            $("#offer").hide();
+            $("#offer").css('display', 'none');
         }else if(selectedItem === "Offer"){
             productFormat.offers = {
                 "@type": "Offer",
@@ -461,13 +461,13 @@ jQuery(document).ready(function () {
             $(".url, .price, .priceCurrency").removeAttr("disabled");
             $(".priceCurrency").selectpicker("refresh");
             $("#offer").css('display', 'flex');
-            $("#ag_offer").hide();
+            $("#ag_offer").css('display', 'none');
         }else if(selectedItem === "None"){
             delete productFormat.offers;
             $(".url, .price, .priceCurrency").attr("disabled", true);
             $(".priceCurrency").selectpicker("refresh");
-            $("#ag_offer").hide();
-            $("#offer").hide();
+            $("#ag_offer").css('display', 'none');
+            $("#offer").css('display', 'none');
         }
         productFormat.render();
     });
