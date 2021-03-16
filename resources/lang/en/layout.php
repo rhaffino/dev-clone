@@ -60,4 +60,8 @@ return [
     "invalid-url" => "Invalid URL",
     "invalid-number" => "Value should be more than 0",
     "which-schema" => "Which Schema would you like to create?",
+    "maintenance-title" => "This tool is under maintenance!",
+    "maintenance-desc-1" => "Our team is currently improving the tool’s performance.",
+    "maintenance-desc-2" => "Please wait for the next update!",
+    "maintenance-button" => "Back to Home",
 ];
