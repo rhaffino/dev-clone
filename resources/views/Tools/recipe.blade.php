@@ -47,13 +47,13 @@ id/json-ld-recipe-schema-generator
                                         <input type="text" name="" class="form-control name mb-5" placeholder="@lang('recipe.placeholder-name')" value="" data-id="0">
                                         <div class="row">
                                             <div class="col-12">
-                                                <label class="text-black font-weight-bold" for="keywords">@lang('recipe.label-description')</label>
+                                                <label class="text-black font-weight-bold" for="keywords">@lang('recipe.label-keywords')</label>
                                                 <input type="text" name="" class="form-control keywords mb-5" placeholder="@lang('recipe.placeholder-keywords')" value="" min="0" data-id="0">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-12 col-lg-6 mb-8 mb-lg-5">
-                                        <label class="text-black font-weight-bold" for="description">@lang('recipe.label-keywords')</label>
+                                        <label class="text-black font-weight-bold" for="description">@lang('recipe.label-description')</label>
                                         <textarea name="" class="form-control custom-textarea-82 description" placeholder="@lang('recipe.placeholder-description')" data-id="0"></textarea>
                                     </div>
                                 </div>

@@ -22,7 +22,7 @@ id/json-ld-schema-generator
                 <h1 class="text-black font-weight-light">JSON-LD SCHEMA GENERATOR</h1>
                 <div class="row justify-content-center">
                     <div class="col-md-8">
-                        <p class="text-black font-weight-light">JSON-LD SCHEMA GENERATOR is a special tool created by CMLABS to facilitate SEO writers to add schema.org markup to their content.</p>
+                        <p class="text-black font-weight-light">@lang('home.json-ld-desc')</p>
                     </div>
                 </div>
             </div>
@@ -37,7 +37,7 @@ id/json-ld-schema-generator
                             </div>
                         </div>
                         <div class="card-footer text-right border-top-0 pt-0">
-                            <button onclick="window.location.href='/{{ $local }}/json-ld-breadcrumb-schema-generator'" type="button" class="btn btn-launch" name="button">LAUNCH</button>
+                            <a href="/{{ $local }}/json-ld-breadcrumb-schema-generator" type="button" class="btn btn-launch" name="button">LAUNCH</a>
                         </div>
                     </div>
                 </div>
@@ -51,7 +51,7 @@ id/json-ld-schema-generator
                             </div>
                         </div>
                         <div class="card-footer text-right border-top-0 pt-0">
-                            <button onclick="window.location.href='/{{ $local }}/json-ld-faq-schema-generator'" type="button" class="btn btn-launch" name="button">LAUNCH</button>
+                            <a href="/{{ $local }}/json-ld-faq-schema-generator" type="button" class="btn btn-launch" name="button">LAUNCH</a>
                         </div>
                     </div>
                 </div>
@@ -65,7 +65,7 @@ id/json-ld-schema-generator
                             </div>
                         </div>
                         <div class="card-footer text-right border-top-0 pt-0">
-                            <button onclick="window.location.href='/{{ $local }}/json-ld-how-to-schema-generator'" type="button" class="btn btn-launch" name="button">LAUNCH</button>
+                            <a href="/{{ $local }}/json-ld-how-to-schema-generator" type="button" class="btn btn-launch" name="button">LAUNCH</a>
                         </div>
                     </div>
                 </div>
@@ -79,7 +79,7 @@ id/json-ld-schema-generator
                             </div>
                         </div>
                         <div class="card-footer text-right border-top-0 pt-0">
-                            <button onclick="window.location.href='/{{ $local }}/json-ld-job-posting-schema-generator'" type="button" class="btn btn-launch" name="button">LAUNCH</button>
+                            <a href="/{{ $local }}/json-ld-job-posting-schema-generator" type="button" class="btn btn-launch" name="button">LAUNCH</a>
                         </div>
                     </div>
                 </div>
@@ -93,7 +93,7 @@ id/json-ld-schema-generator
                             </div>
                         </div>
                         <div class="card-footer text-right border-top-0 pt-0">
-                            <button onclick="window.location.href='/{{ $local }}/json-ld-person-schema-generator'" type="button" class="btn btn-launch" name="button">LAUNCH</button>
+                            <a href="/{{ $local }}/json-ld-person-schema-generator" type="button" class="btn btn-launch" name="button">LAUNCH</a>
                         </div>
                     </div>
                 </div>
@@ -107,7 +107,7 @@ id/json-ld-schema-generator
                             </div>
                         </div>
                         <div class="card-footer text-right border-top-0 pt-0">
-                            <button onclick="window.location.href='/{{ $local }}/json-ld-product-schema-generator'" type="button" class="btn btn-launch" name="button">LAUNCH</button>
+                            <a href="/{{ $local }}/json-ld-product-schema-generator" type="button" class="btn btn-launch" name="button">LAUNCH</a>
                         </div>
                     </div>
                 </div>
@@ -121,14 +121,14 @@ id/json-ld-schema-generator
                             </div>
                         </div>
                         <div class="card-footer text-right border-top-0 pt-0">
-                            <button onclick="window.location.href='/{{ $local }}/json-ld-recipe-schema-generator'" type="button" class="btn btn-launch" name="button">LAUNCH</button>
+                            <a href="/{{ $local }}/json-ld-recipe-schema-generator" type="button" class="btn btn-launch" name="button">LAUNCH</a>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="d-flex align-items-center">
                 <i class='bx bxs-check-circle text-darkgrey mr-1'></i>
-                <span class="text-darkgrey">@lang('layout.whats-new-update') 1 Nov, 2020 | @lang('layout.version') 1.7</span>
+                <span class="text-darkgrey">@lang('layout.whats-new-update') 15 Mar, 2021 | @lang('layout.version') 1.0</span>
             </div>
         </div>
     </div>
@@ -227,6 +227,7 @@ id/json-ld-schema-generator
                 </div>
             </div>
         </div>
+        {{--
         <div class="row mb-10">
             <div class="col-md-6">
                 <h2 class="text-black">@lang('layout.feature-title')</h2>
@@ -250,6 +251,7 @@ id/json-ld-schema-generator
                 <label class="checkbox checkbox-disabled checkbox-features features-disabled mb-1"><input type="checkbox" disabled="disabled" name="Checkboxes14" /><span></span>&nbsp;&nbsp;<bdi>Daily domain ranking on SERP. Version 0.1</bdi></label>
             </div>
         </div>
+        --}}
         <h2 class="text-black">@lang('layout.whats-new-title') @lang('jsonldhome.title')</h2>
         <div class="row my-5">
             <div class="col-md-6 mb-5">
@@ -257,7 +259,7 @@ id/json-ld-schema-generator
                     <div class="alert-text mb-5">
                         <span class="h4 alert-title">@lang('layout.whats-new-sub-title')</span>&nbsp;&nbsp;<span class="label label-dot label-alert-features"></span>
                         <br />
-                        <span class="font-weight-light">@lang('layout.whats-new-update') Dec 2, 2020</span>
+                        <span class="font-weight-light">@lang('layout.whats-new-update') Mar 15, 2021</span>
                     </div>
                     <div class="alert-close pt-5 pr-5">
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -272,7 +274,7 @@ id/json-ld-schema-generator
                     <div class="alert-text mb-5">
                         <span class="h4 alert-title">@lang('layout.whats-new-sub-title')</span>&nbsp;&nbsp;<span class="label label-dot label-alert-features"></span>
                         <br />
-                        <span class="font-weight-light">@lang('layout.whats-new-update') Dec 2, 2020</span>
+                        <span class="font-weight-light">@lang('layout.whats-new-update') Mar 15, 2021</span>
                     </div>
                     <div class="alert-close pt-5 pr-5">
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -283,7 +285,9 @@ id/json-ld-schema-generator
                 </div>
             </div>
         </div>
+        {{--
         <p class="text-black view-all-release">@lang('layout.view-web-release')</p>
+        --}}
     </div>
 </div>
 @endsection
