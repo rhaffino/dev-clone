@@ -265,19 +265,21 @@ id/json-ld-jobPosting-schema-generator
           </div> --}}
                 </div>
                 <div class="col-md-4">
-                    <div class="accordion accordion-light accordion-toggle-arrow custom-features-accordion" id="accordionExample2">
-                        <div class="card bg-transparent" style="">
-                            <div class="card-header" id="headingOne2">
-                                <div class="card-title pt-0" data-toggle="collapse" data-target="#collapseOne2">
-                                    @lang('layout.version') 1.0
+                    <div class="desktop-version">
+                        <div class="accordion accordion-light accordion-toggle-arrow custom-features-accordion" id="accordionExample2">
+                            <div class="card bg-transparent" style="">
+                                <div class="card-header" id="headingOne2">
+                                    <div class="card-title" data-toggle="collapse" data-target="#collapseOne2">
+                                        @lang('layout.version') 1.0
+                                    </div>
                                 </div>
-                            </div>
-                            <div id="collapseOne2" class="collapse show" data-parent="#accordionExample2">
-                                <div class="card-body">
-                                    <p>@lang('jobPosting.highlight')</p>
-                                    <div class="d-flex align-items-center">
-                                        <i class='bx bxs-check-circle text-darkgrey mr-1'></i>
-                                        <span class="text-darkgrey h6 mb-0">@lang('layout.updated') 15 Mar, 2021</span>
+                                <div id="collapseOne2" class="collapse show" data-parent="#accordionExample2">
+                                    <div class="card-body">
+                                        <p>@lang('jobPosting.highlight')</p>
+                                        <div class="d-flex align-items-center">
+                                            <i class='bx bxs-check-circle text-darkgrey mr-1'></i>
+                                            <span class="text-darkgrey h6 mb-0">@lang('layout.updated') 15 Mar, 2021</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -289,8 +291,9 @@ id/json-ld-jobPosting-schema-generator
     </div>
 </div>
 
-{{-- <div class="w-100">
+<div class="w-100">
   <div class="local-collection-mobile bg-white py-5">
+      {{--
     <div class="local-collection-header d-flex justify-content-between mb-3 w-100 px-5">
       <div class="d-flex flex-row align-items-center">
         <i class='bx bxs-collection bx-sm text-darkgrey mr-2'></i>
@@ -301,8 +304,27 @@ id/json-ld-jobPosting-schema-generator
       </div>
     </div>
     <div id="localsavemobile" class="local-collection-body mt-3 px-5"></div>
+     --}}
+    <div id="mobile-version" class="px-5 accordion accordion-light accordion-toggle-arrow custom-features-accordion" id="accordionExample2">
+        <div class="card bg-transparent" style="">
+            <div class="card-header" id="headingOne2">
+                <div class="card-title" data-toggle="collapse" data-target="#collapseOne2">
+                    @lang('layout.version') 1.0
+                </div>
+            </div>
+            <div id="collapseOne2" class="collapse show" data-parent="#accordionExample2">
+                <div class="card-body">
+                    <p>@lang('jobPosting.highlight')</p>
+                    <div class="d-flex align-items-center">
+                        <i class='bx bxs-check-circle text-darkgrey mr-1'></i>
+                        <span class="text-darkgrey h6 mb-0">@lang('layout.updated') 15 Mar, 2021</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
   </div>
-</div> --}}
+</div>
 @endif
 <div class="" style="background:white">
     <div class="container container-description">
