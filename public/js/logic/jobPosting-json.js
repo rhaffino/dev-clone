@@ -38,6 +38,12 @@ const jobSchema = class {
             }
         };
 
+        this.tempStreetAdd = "";
+        this.tempaddressLocality = "";
+        this.tempPostalCode = "";
+        this.tempAddressCountry = "";
+        this.tempAddressRegion = "";
+
     }
 
     temp(){
@@ -45,13 +51,29 @@ const jobSchema = class {
         const tempObj = {};
 
 
-        if(this.streetAddress) tempObj.streetAddress = this.streetAddress;
 
-        if(this.addressLocality) tempObj.addressLocality = this.addressLocality;
+        if(this.streetAddress) {
+            tempObj.streetAddress = this.streetAddress;
+        }
 
-        if(this.postalCode) tempObj.postalCode = this.postalCode;
+        if(this.addressLocality) {
+            tempObj.addressLocality = this.addressLocality;
+        }
+
+        if(this.postalCode) {
+            tempObj.postalCode = this.postalCode;
+        }
+
+        tempObj.tempStreetAdd = this.tempStreetAdd;
+        tempObj.tempaddressLocality = this.tempaddressLocality;
+        tempObj.tempPostalCode = this.tempPostalCode;
+        tempObj.tempAddressRegion = this.tempAddressRegion;
+        tempObj.tempAddressCountry = this.tempAddressCountry;
 
         if(this.salaryValue) tempObj.salaryValue = this.salaryValue;
+
+
+
         tempObj.country = this.country;
 
         return tempObj;
@@ -113,10 +135,10 @@ if($('#hide-province').is(":visible")){
         "@type": "Place",
         "address": {
             "@type": "PostalAddress",
-            "streetAddress": "",
-            "addressLocality": "",
-            "postalCode": "",
-            "addressCountry": ""
+            "streetAddress": jobFormat.tempStreetAdd,
+            "addressLocality": jobFormat.tempaddressLocality,
+            "postalCode": jobFormat.tempPostalCode,
+            "addressCountry": jobFormat.tempAddressCountry
         }
     }
 
@@ -125,11 +147,11 @@ if($('#hide-province').is(":visible")){
         "@type": "Place",
         "address": {
             "@type": "PostalAddress",
-            "streetAddress": "",
-            "addressLocality": "",
-            "addressRegion": "",
-            "postalCode": "",
-            "addressCountry": ""
+            "streetAddress": jobFormat.tempStreetAdd,
+            "addressLocality": jobFormat.tempaddressLocality,
+            "addressRegion": jobFormat.tempAddressRegion,
+            "postalCode": jobFormat.tempPostalCode,
+            "addressCountry": jobFormat.tempAddressCountry
         }
     }
 }
@@ -138,19 +160,18 @@ if($('#hide-province').is(":visible")){
 
 $("#province-show").hide();
 
-jQuery(document).ready(function () {
+    // jQuery(document).on('keyup', '.name', function () {
+    //     let index = parseInt(jQuery(this).data('id'));
+    //     // console.log('index:' + index);
+    //     main.mainEntity[index].hiringOrganization.name = jQuery(this).val();
+    //     print();
+    // });
 
-    let deletes = lang ==='en'? 'Delete' : 'Hapus';
-    let jobTitle = lang ==='en'?'JobTitle':'Jabatan';
-    let identifier = lang==='en'?'Identifier':'Identifier';
-    let description = lang ==='en'?'Description':'Deskripsi';
-    let name = lang==='en'?'Name':'Nama';
-    let companyUrl = lang==='en'?'CompanyUrl':'UrlCompany';
-    let industry = lang==='en'?'Industry':'Industry';
-    let employmentType = lang==='en'?'EmploymentType':'TipePegawai';
-
-
-});
+    $('.name').keyup(function (e) {
+        let index = parseInt($(this).data('id'));
+        jobFormat.hiring.name = $(this).val();
+        jobFormat.render();
+    });
 
     $('.jobTitle').keyup(function(event){
         // let index = parseInt($(this).data('id'));
@@ -225,8 +246,10 @@ jQuery(document).ready(function () {
         jobFormat.render();
     });
 
-    $('.city').keyup(function (e){
-        jobFormat.jobLocation.address.addressLocality = $(this).val();
+    $('.zipCode').keyup(function (e){
+        jobFormat.jobLocation.address.postalCode = $(this).val();
+        jobFormat.tempPostalCode = $(this).val();
+        jobFormat.temp();
         jobFormat.render();
     });
 
@@ -247,9 +270,12 @@ jQuery(document).ready(function () {
 
                 jobFormat.jobLocation.addressCountry = "";
             }
+            jobFormat.tempAddressCountry = "";
+            $("#hide-province").show();
         }else{
             if(checkBox == 1){
                 jobFormat.applicantLocationRequirements.name = $(this).val();
+                $("#hide-province").show();
             }else{
 
                 if($(this).val() == 'ID'){
@@ -262,17 +288,21 @@ jQuery(document).ready(function () {
 
                 jobFormat.jobLocation.address.addressCountry = $(this).val();
             }
+            jobFormat.tempAddressCountry = $(this).val();
         }
+
+        jobFormat.temp();
+        jobFormat.render();
 
         if($('#hide-province').is(":visible")){
             jobFormat.jobLocation = {
                 "@type": "Place",
                 "address": {
                     "@type": "PostalAddress",
-                    "streetAddress": "",
-                    "addressLocality": "",
-                    "postalCode": "",
-                    "addressCountry": jobFormat.country
+                    "streetAddress": jobFormat.tempStreetAdd,
+                    "addressLocality": jobFormat.tempaddressLocality,
+                    "postalCode": jobFormat.tempPostalCode,
+                    "addressCountry": jobFormat.tempAddressCountry
                 }
             }
 
@@ -281,16 +311,16 @@ jQuery(document).ready(function () {
                 "@type": "Place",
                 "address": {
                     "@type": "PostalAddress",
-                    "streetAddress": "",
-                    "addressLocality": "",
-                    "addressRegion": "",
-                    "postalCode": "",
-                    "addressCountry": jobFormat.country
+                    "streetAddress": jobFormat.tempStreetAdd,
+                    "addressLocality": jobFormat.tempaddressLocality,
+                    "addressRegion": jobFormat.tempAddressRegion,
+                    "postalCode": jobFormat.tempPostalCode,
+                    "addressCountry": jobFormat.tempAddressCountry
                 }
             }
         }
-        jobFormat.temp();
-        jobFormat.render();
+
+
     });
 
     $("#remoteJob").change(function() {
@@ -309,10 +339,10 @@ jQuery(document).ready(function () {
                 "@type": "Place",
                 "address" : {
                     "@type": "PostalAddress",
-                    "streetAddress": "",
-                    "addressLocality": "",
-                    "postalCode": "",
-                    "addressCountry": jobFormat.country
+                    "streetAddress": jobFormat.tempStreetAdd,
+                    "addressLocality": jobFormat.tempaddressLocality,
+                    "postalCode": jobFormat.tempPostalCode,
+                    "addressCountry": jobFormat.tempAddressCountry
                 }
             }
             $(".street, .city, div.province > button, .zipCode").removeAttr("disabled");
@@ -379,24 +409,12 @@ jQuery(document).on('keyup', '.description', function () {
     print();
 });
 
-jQuery(document).on('keyup', '.name', function () {
-    let index = parseInt(jQuery(this).data('id'));
-    // console.log('index:' + index);
-    main.mainEntity[index].hiringOrganization.name = jQuery(this).val();
-    print();
-});
+
 
 jQuery(document).on('keyup', '.city', function () {
     let index = parseInt(jQuery(this).data('id'));
     // console.log('index:' + index);
     main.mainEntity[index].jobLocation.address.addressLocality = jQuery(this).val();
-    print();
-});
-
-jQuery(document).on('keyup', '.zipCode', function () {
-    let index = parseInt(jQuery(this).data('id'));
-    // console.log('index:' + index);
-    main.mainEntity[index].jobLocation.address.postalCode = jQuery(this).val();
     print();
 });
 
@@ -523,7 +541,7 @@ $(document).on("change", "#remoteJob", function() {
       $(".street, .city, div.province > button, .zipCode").removeAttr("disabled");
     }
   });
-  
+
 $(document).on("keyup", ".salary", function() {
     if (this.value.length > 0) {
       $(".maxSalary, .currency, .unitText").removeAttr("disabled");

@@ -37,7 +37,7 @@
 
             const obj = {
                 "@context": "https://schema.org",
-                "@type": "how-to",
+                "@type": "HowTo",
                 name:this.name,
             };
 
@@ -337,7 +337,7 @@
             $('.supplyName[data-id=' + (i - 1) + ']').val($('.supplyName[data-id=' + (i) + ']').val())
         }
 
-        $('.supply-name[data-id=' + jsonFormat.supplyItem.length + ']').remove();
+        $('.supply-name[data-id=' + index + ']').remove();
         let row = parseInt($('#json-format').val().split('\n').length);
         $('#json-format').attr('rows',row);
 
@@ -400,11 +400,10 @@
                 $('.loopStep[data-id=' + (i - 1) + ']').val($('.loopStep[data-id=' + (i) + ']').val())
             }
 
-        $('.deleteTool[data-id=' + jsonFormat.step.length + ']').remove();
-        $('.row[data-id=' + jsonFormat.step.length + ']').remove();
+        $('.deleteTool[data-id=' + index + ']').remove();
+        $('.row[data-id=' + index + ']').remove();
         let row = parseInt($('#json-format').val().split('\n').length);
         $('#json-format').attr('rows',row);
-    sticky.update();
     if(jsonFormat.step.length > 0) _stepCounter--;
 });
 

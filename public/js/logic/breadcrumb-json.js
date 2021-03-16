@@ -241,7 +241,7 @@
             }
 
             jsonFormat();
-            $('.form-cotainer[data-id=' + (counter) + ']').remove();
+            $('.form-cotainer[data-id=' + (index) + ']').remove();
             let row = parseInt(jQuery('#json-format').val().split('\n').length);
             $('#json-format').attr('rows',row);
             counter--;
@@ -256,42 +256,46 @@
         * Adding regex url
         * */
 
-        var _url = new URL(url);
+        var expression = /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)?/gi;
+        var regex = new RegExp(expression);
 
         if(index < 2){
             // console.log(index)
-            if (_url.protocol === 'https:' || _url.protocol === 'http:') {
+            if (url.match(regex)) {
                 main.itemListElement[index].item = url;
-                jsonFormat();
+                $(`.url[data-id=${index}]`).removeClass('is-invalid');
+                $('.invalid-feedback[data-id=' + (index) + ']').hide();
             } else {
                 main.itemListElement[index].item = url;
-                jsonFormat();
                 $(`.url[data-id=${index}]`).addClass('is-invalid');
-                $(`.invalid-feedback[data-id=${index}]`).show();
+                $('.invalid-feedback[data-id=' + (index) + ']').show();
             }
         }else{
             if(counter > 2){
-                if (_url.protocol === 'https:' || _url.protocol === 'http:') {
+                if (url.match(regex)) {
                     main.itemListElement[index-1].item = url;
-                    jsonFormat();
+                    $(`.url[data-id=${index}]`).removeClass('is-invalid');
+                    $('.invalid-feedback[data-id=' + (index) + ']').hide();
                 } else {
-                    main.itemListElement[index].item = url;
-                    jsonFormat();
-                    $(`.url[data-id=${counter}]`).addClass('is-invalid');
-                    $('.invalid-feedback[data-id=' + (counter) + ']').show();
+                    main.itemListElement[index-1].item = url;
+                    $(`.url[data-id=${index}]`).addClass('is-invalid');
+                    $('.invalid-feedback[data-id=' + (index) + ']').show();
                 }
             }else{
-                if (_url.protocol === 'https:' || _url.protocol === 'http:') {
+                if (url.match(regex)) {
                     main.itemListElement[index].item = url;
-                    jsonFormat();
+                    $(`.url[data-id=${index}]`).removeClass('is-invalid');
+                    $('.invalid-feedback[data-id=' + (index) + ']').hide();
                 } else {
                     main.itemListElement[index].item = url;
-                    jsonFormat();
-                    $(`.url[data-id=${counter}]`).addClass('is-invalid');
-                    $('.invalid-feedback[data-id=' + (counter) + ']').show();
+                    $(`.url[data-id=${index}]`).addClass('is-invalid');
+                    $('.invalid-feedback[data-id=' + (index) + ']').show();
                 }
             }
         }
+
+        jsonFormat();
+
 
 
 
