@@ -156,11 +156,12 @@ const refreshLocalStorage = function() {
         $('#localsavedesktop').empty();
         const keys = JSON.parse(localStorage.getItem('ssl-checker'))
         if (keys) {
-            let index = 0;
-            for (let key of keys) {
-                let date = new Date()
-                let formatDate = `Created at ${date.getHours() < 10 ? ('0'+date.getHours()) : date.getHours()}.${date.getMinutes() < 10 ? ('0'+date.getMinutes()) : date.getMinutes()} | ${date.getDate()}, ${month[date.getMonth()]} ${date.getFullYear()}`
-                let div = `<div class="custom-card py-5 px-3" onclick="getData(${index})">
+            if (keys.length > 0){
+                let index = 0;
+                for (let key of keys) {
+                    let date = new Date()
+                    let formatDate = `Created at ${date.getHours() < 10 ? ('0'+date.getHours()) : date.getHours()}.${date.getMinutes() < 10 ? ('0'+date.getMinutes()) : date.getMinutes()} | ${date.getDate()}, ${month[date.getMonth()]} ${date.getFullYear()}`
+                    let div = `<div class="custom-card py-5 px-3" onclick="getData(${index})">
                     <div class="d-flex align-items-center justify-content-between">
                         <div class="local-collection-title">${key.url}
                         </div>
@@ -172,7 +173,7 @@ const refreshLocalStorage = function() {
                     </div>
                 </div>`
 
-                let div2 = `<li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px" onclick="getData(${index})">
+                    let div2 = `<li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px" onclick="getData(${index})">
                   <div class="d-flex justify-content-between">
                     <div class="local-collection-title">${key.url}</div>
                     <div class="d-flex align-items-center">
@@ -180,7 +181,22 @@ const refreshLocalStorage = function() {
                       <i class='bx bxs-x-circle bx-sm text-grey' onclick="removeLocal(${index})"></i>
                     </div>
                   </div>`
-                index++
+                    index++
+                    $('#localsavemobile').append(div)
+                    $('#localsavedesktop').append(div2)
+                }
+            }else {
+                let div2 = `<li id="empty-impression" class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
+                  <div class="d-flex justify-content-center text-center">
+                    <span>` + no_history + `</span>
+                  </div>
+                </li>`
+                let div = `<div class="custom-card py-5 px-3">
+                    <div class="d-flex justify-content-center text-center">
+                        <span>` + no_history + `</span>
+                    </div>
+                </div>`
+
                 $('#localsavemobile').append(div)
                 $('#localsavedesktop').append(div2)
             }
