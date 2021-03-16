@@ -414,22 +414,7 @@ id
                 </div>
             </div>
         </div>
-        <div class="mt-10" style="background:var(--darkgrey); border-radius:20px">
-            <div class="row">
-                <div class="col-md-6 py-5">
-                    <div class="robo-container">
-                        <img src="{{asset('/media/images/robo-footer.png')}}" alt="robo-img" class="robo-img">
-                    </div>
-                </div>
-                <div class="col-md-6 py-10 pr-10">
-                    <div class="robo-text-container">
-                        <h2 class="text-white">@lang('layout.banner-robo-title')</h2>
-                        <p class="text-white">@lang('layout.banner-robo-desc')</p>
-                        <button onclick="window.open('https://cmlabs.co','_blank')" type="button" class="btn btn-explore " name="button">@lang('layout.banner-robo-btn')</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+        @include('layouts.roboDesc')
     </div>
 </div>
 @endsection
