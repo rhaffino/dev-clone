@@ -6,22 +6,17 @@ if (lang == "en") {
     var localStorageNone = "Ini adalah kesan pertama Anda, belum ada riwayat!"
 }
 
-jQuery(document).ready(function() {
-    $("#manual-mode").hide();
-    refreshLocalStorage();
-});
-
-jQuery('#crawlURL').click(function() {
+jQuery('#crawlURL').click(function () {
     var matchreg = /^(https?|ftp):\/\//;
     let urls = jQuery('#url').val().replace(matchreg, "");
     jQuery.get({
         url: 'https://api.cmlabs.co/?url=https://' + urls,
         success: (res) => {
-            $('#resulttitle').text(res.title);
-            $('#resultdesc').text(res.description);
+            $('#resulttitle').text(ellipsis(res.title,'title'));
+            $('#resultdesc').text(ellipsis(res.description,'description'));
             $('#resulturl').text('https://' + urls.toLowerCase());
-            $('#resulttitlemobile').text(res.title);
-            $('#resultdescmobile').text(res.description);
+            $('#resulttitlemobile').text(ellipsis(res.title,'title'));
+            $('#resultdescmobile').text(ellipsis(res.description,'description'));
             $('#resulturlmobile').text('https://' + urls.toLowerCase());
             $('#desc').val(res.description)
             $('#title').val(res.title)
@@ -41,26 +36,40 @@ jQuery('#crawlURL').click(function() {
     });
 })
 
-$('#title').on('keyup', function() {
+$('#title').on('keyup', function () {
     var rateTitle = titleChecker($(this).val());
     fillTitleBar(rateTitle)
-    $('#resulttitle').text($(this).val())
-    $('#resulttitlemobile').text($(this).val())
+    $('#resulttitle').text(ellipsis($(this).val(),'title'))
+    $('#resulttitlemobile').text(ellipsis($(this).val(),'title'))
 })
 
-$('#desc').on('keyup', function() {
+$('#desc').on('keyup', function () {
     var rateDesc = descChecker($(this).val());
     fillDescBar(rateDesc);
-    $('#resultdesc').text($(this).val());
-    $('#resultdescmobile').text($(this).val());
+    $('#resultdesc').text(ellipsis($(this).val(),'description'));
+    $('#resultdescmobile').text(ellipsis($(this).val(), 'description'));
 })
 
-$('#url').on('keyup', function() {
+$('#url').on('keyup', function () {
     $('#resulturl').text($(this).val().toLowerCase())
     $('#resulturlmobile').text($(this).val().toLowerCase())
 })
 
-const save = function(url, title, description) {
+const ellipsis = function (text, type){
+    if (type === 'title'){
+        if (text.length <= 55)
+            return text
+
+        return text.slice(0,55)+'...'
+    }else {
+        if (text.length <= 160)
+            return text
+
+        return text.slice(0,160)+'...'
+    }
+}
+
+const save = function (url, title, description) {
     let key = new Date().getTime();
     let datum = {
         url: url,
@@ -79,7 +88,7 @@ const save = function(url, title, description) {
     localStorage.setItem(key, JSON.stringify(datum));
 }
 
-const removeData = function(key) {
+const removeData = function (key) {
     let keys = JSON.parse(localStorage.getItem('keys'));
     for (var i in keys.meta) {
         if (keys.meta[i] === key) {
@@ -92,19 +101,19 @@ const removeData = function(key) {
     refreshLocalStorage();
 }
 
-const getMonth = function(index) {
+const getMonth = function (index) {
     const month = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL",
         "AUG", "SEP", "OCT", "NOV", "DES"
     ]
     return month[index]
 }
 
-const refreshLocalStorage = function() {
+const refreshLocalStorage = function () {
     try {
         $('#localsavemobile').empty();
         $('#localsavedesktop').empty();
         const keys = JSON.parse(localStorage.getItem('keys'))
-        if (keys) {
+        if (keys.meta.length > 0) {
             for (let key of keys.meta) {
                 let temp = JSON.parse(localStorage.getItem(key)).url
                 let date = new Date(key)
@@ -146,10 +155,11 @@ const refreshLocalStorage = function() {
             $('#localsavemobile').append(div)
             $('#localsavedesktop').append(div2)
         }
-    } catch (e) {}
+    } catch (e) {
+    }
 }
 
-const getData = function(key) {
+const getData = function (key) {
     if (localStorage.getItem(key)) {
         var res = JSON.parse(localStorage.getItem(key));
         $('#resulttitle').text(res.title);
@@ -170,18 +180,17 @@ const getData = function(key) {
     }
 }
 
-const clearAll = function() {
+const clearAll = function () {
     var res = JSON.parse(localStorage.getItem('keys'));
     for (let i of res.meta) {
         localStorage.removeItem(i);
     }
     res.meta = [];
     localStorage.setItem('keys', JSON.stringify(res))
-    $('#localsavemobile').empty();
-    $('#localsavedesktop').empty();
+    refreshLocalStorage()
 }
 
-const titleChecker = function(title) {
+const titleChecker = function (title) {
     var titlesizer = $('#titlesizer');
     var rate = 0;
     var l = title.length;
@@ -198,7 +207,7 @@ const titleChecker = function(title) {
     return rate;
 }
 
-const descChecker = function(desc) {
+const descChecker = function (desc) {
     var descsizer = $('#descsizer');
     var rate = 0;
     var l = desc.length;
@@ -215,7 +224,7 @@ const descChecker = function(desc) {
     return rate;
 }
 
-const fillTitleBar = function(param) {
+const fillTitleBar = function (param) {
     for (let i = 1; i < param + 1; i++) {
         $('#titlebar' + i).removeClass("blank")
         $('#titlebar' + i).addClass("active")
@@ -226,7 +235,7 @@ const fillTitleBar = function(param) {
     }
 }
 
-const fillDescBar = function(param) {
+const fillDescBar = function (param) {
     for (let i = 1; i < param + 1; i++) {
         $('#descbar' + i).removeClass("blank")
         $('#descbar' + i).addClass("active")
@@ -237,32 +246,38 @@ const fillDescBar = function(param) {
     }
 }
 
-$(document).ready(function() {
-    $('#manualModeOff').click(function() {
+$(document).ready(function () {
+    $('#manualModeOff').click(function () {
         $('#manualModeOn').removeClass("d-none").addClass("d-block");
         $('#botModeOff').removeClass("d-none").addClass("d-block");
         $('#manual-mode').removeClass("d-none").addClass("d-block").slideDown();
         $('#manualModeOff').removeClass("d-block").addClass("d-none");
         $('#botModeOn').removeClass("d-block").addClass("d-none");
         $("#crawlURL").attr("disabled", true);
+        $('#title').attr('disabled', false);
+        $('#desc').attr('disabled', false);
     });
 
-    $('#botModeOff').click(function() {
+    $('#botModeOff').click(function () {
         $('#botModeOn').removeClass("d-none").addClass("d-block");
         $('#manualModeOff').removeClass("d-none").addClass("d-block");
         $('#manual-mode').slideUp().removeClass("d-block");
         $('#botModeOff').removeClass("d-block").addClass("d-none");
         $('#manualModeOn').removeClass("d-block").addClass("d-none");
         $("#crawlURL").attr("disabled", false);
+        $('#title').attr('disabled', true);
+        $('#desc').attr('disabled', true);
     });
+
+    refreshLocalStorage();
 });
-jQuery.each(jQuery('textarea[data-autoresize]'), function() {
+jQuery.each(jQuery('textarea[data-autoresize]'), function () {
     var offset = this.offsetHeight - this.clientHeight;
 
-    var resizeTextarea = function(el) {
+    var resizeTextarea = function (el) {
         jQuery(el).css('height', 'auto').css('height', el.scrollHeight + offset);
     };
-    jQuery(this).on('keyup input', function() {
+    jQuery(this).on('keyup input', function () {
         resizeTextarea(this);
     }).removeAttr('data-autoresize');
 });

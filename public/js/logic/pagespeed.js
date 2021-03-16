@@ -27,47 +27,46 @@ toastr.options = {
 };
 const categories = ['performance', 'accessibility', 'best-practices', 'seo', 'pwa'];
 hideResult();
-triggerEnter('#analysis-button','#url');
+triggerEnter('#analysis-button', '#url');
 jQuery('#analysis-button').click(function () {
-    let match =/^(http(s)?|ftp):\/\//;
-    let urlWeb = jQuery('#url').val().replace(match,"");
+    let match = /^(http(s)?|ftp):\/\//;
+    let urlWeb = jQuery('#url').val().replace(match, "");
     let title = '';
     let button = '';
     let htmlFill = '';
-    if (lang === 'en'){
+    if (lang === 'en') {
         title = 'The crawling process will take some time';
         button = 'Cancel';
         htmlFill = 'While waiting please read our blog <a href="javascript:window.open(\'https://cmlabs.co/blog/\')" style="text-decoration: underline">here</a>'
-    }
-    else {
+    } else {
         title = 'Proses crawling akan memakan waktu';
         button = 'Batal';
         htmlFill = 'Sambil menunggu silahkan baca blog kami <a href="javascript:window.open(\'https://cmlabs.co/blog/\')" style="text-decoration: underline">disini</a>'
     }
     Swal.fire({
         title: title,
-        html:htmlFill,
+        html: htmlFill,
         showCancelButton: true,
         cancelButtonColor: '#FE2151',
         allowClickOutside: false,
-        cancelButtonText : button,
+        cancelButtonText: button,
         // timer:0,
         // timerProgressBar:true,
         onBeforeOpen: () => {
             // $('#swal2-content').after('<div class="spinner spinner-primary spinner-lg mr-15 spinner-right"></div>');
             // $('.swal2-confirm').after('<br>')
             // Swal.enableButtons();
-            $('.swal2-actions').css('flex-direction','column');
-            $('.swal2-actions').css('flex-direction','column');
-            $('.swal2-actions').css('flex-wrap','nowrap');
-            $('.swal2-actions').css('justify-content','flex-start');
-            $('.swal2-actions').css('align-items','center');
-            $('.swal2-actions').css('align-content','center');
+            $('.swal2-actions').css('flex-direction', 'column');
+            $('.swal2-actions').css('flex-direction', 'column');
+            $('.swal2-actions').css('flex-wrap', 'nowrap');
+            $('.swal2-actions').css('justify-content', 'flex-start');
+            $('.swal2-actions').css('align-items', 'center');
+            $('.swal2-actions').css('align-content', 'center');
             $('.swal2-confirm').addClass('mb-9');
             Swal.showLoading();
         }
-    }).then((result)=>{
-        if (result.dismiss === 'cancel'){
+    }).then((result) => {
+        if (result.dismiss === 'cancel') {
             loader.abort();
         }
     });
@@ -75,28 +74,28 @@ jQuery('#analysis-button').click(function () {
     hideResult();
     jQuery('#container-loader').css('display', 'block');
     loader = jQuery.ajax({
-        url: 'https://pagespeedonline.googleapis.com/pagespeedonline/v5/runPagespeed?category=ACCESSIBILITY&category=BEST_PRACTICES&category=PERFORMANCE&category=PWA&category=SEO&url=' + encodeURIComponent('https://'+urlWeb) + '&key=AIzaSyDjg7PenszK_cEZfg4tzvOlKFmnufwxVLs',
+        url: 'https://pagespeedonline.googleapis.com/pagespeedonline/v5/runPagespeed?category=ACCESSIBILITY&category=BEST_PRACTICES&category=PERFORMANCE&category=PWA&category=SEO&url=' + encodeURIComponent('https://' + urlWeb) + '&key=AIzaSyDjg7PenszK_cEZfg4tzvOlKFmnufwxVLs',
         success: function (data) {
             try {
                 saveData(data)
                 renderResult(data)
                 refreshLocalStorage();
-            }catch (e) {
+            } catch (e) {
                 Swal.close()
                 toastr.error(e)
             }
         },
-        error:function (response) {
+        error: function (response) {
             // jQuery('#spinner').removeClass('spinner spinner-success spinner-right');
             // console.log(response);
-            if (response.statusText === 'abort'){
+            if (response.statusText === 'abort') {
                 if (lang === 'en')
-                    toastr.error('Cancel button clicked','Cancel');
-                else toastr.error('Anda membatalkan proses','Batal');
-            }else {
+                    toastr.error('Cancel button clicked', 'Cancel');
+                else toastr.error('Anda membatalkan proses', 'Batal');
+            } else {
                 if (lang === 'en')
-                    toastr.error('Url not found or something went wrong. Use https:// or http://','Error');
-                else toastr.error('Url tidak ditemukan atau terjadi sesuatu yang salah. Gunakan https:// atau http://','Error');
+                    toastr.error('Url not found or something went wrong. Use https:// or http://', 'Error');
+                else toastr.error('Url tidak ditemukan atau terjadi sesuatu yang salah. Gunakan https:// atau http://', 'Error');
             }
             Swal.close();
         }
@@ -106,7 +105,7 @@ jQuery('#analysis-button').click(function () {
 function renderResult(data) {
     refreshAuditsResult();
     // jQuery('#spinner').removeClass('spinner spinner-success spinner-right');
-    jQuery('#performance').css('display','block');
+    jQuery('#performance').css('display', 'block');
     for (let j = 0; j < 5; j++) {
         // console.log('real score : '+data.lighthouseResult.categories[categories[j]].score);
         let score = (data.lighthouseResult.categories[categories[j]].score * 100).toFixed(0);
@@ -118,25 +117,25 @@ function renderResult(data) {
     addListenerForCollapsible();
     jQuery('#container-loader').css('display', 'none');
     sticky.update();
-    var target= $('.collapse');
+    var target = $('.collapse');
     for (let i = 0; i < target.length; i++) {
-        var observer = new MutationObserver(function(mutations) {
-            mutations.forEach(function(mutation) {
+        var observer = new MutationObserver(function (mutations) {
+            mutations.forEach(function (mutation) {
                 if (mutation.attributeName === "class") {
                     sticky.update();
                 }
             });
         });
-        observer.observe(target[i],{attributes:true});
+        observer.observe(target[i], {attributes: true});
     }
     Swal.close();
 }
 
 function listener() {
     for (let i = 0; i < 5; i++) {
-        jQuery('#nav-'+categories[i]).click(function () {
+        jQuery('#nav-' + categories[i]).click(function () {
             hideResult();
-            jQuery('#'+categories[i]).css('display','block');
+            jQuery('#' + categories[i]).css('display', 'block');
             sticky.update();
         })
     }
@@ -144,14 +143,14 @@ function listener() {
 
 function hideResult() {
     for (let j = 0; j < 5; j++) {
-        jQuery('#'+categories[j]).css('display','none');
+        jQuery('#' + categories[j]).css('display', 'none');
     }
 }
 
 function strokeValue(score, number, category) {
     let card = jQuery('.' + category);
     // let ribbon = jQuery('#ribbon-'+category);
-    let value = jQuery('.value-'+category);
+    let value = jQuery('.value-' + category);
     value.removeClass('value-green');
     value.removeClass('value-orange');
     value.removeClass('value-red');
@@ -168,8 +167,8 @@ function strokeValue(score, number, category) {
         card.addClass('progress-red');
         value.addClass('value-red');
     }
-    card.attr('data-percentage',score);
-    animateValue('value-'+category,0, score, 3000);
+    card.attr('data-percentage', score);
+    animateValue('value-' + category, 0, score, 3000);
 }
 
 function displayAuditsResult(data, category) {
@@ -178,33 +177,33 @@ function displayAuditsResult(data, category) {
     let group = [];
     for (let audit of audits) {
         let show = showAs(allAudits[audit.id]);
-        if (show.status === 'pass' && audit.group !== 'metrics'){
-            if (show.label === 'manual'){
-                if (group.includes('manual', 0)){
-                    addItem(allAudits, audit, 'manual-'+category, 'manual')
-                }else {
+        if (show.status === 'pass' && audit.group !== 'metrics') {
+            if (show.label === 'manual') {
+                if (group.includes('manual', 0)) {
+                    addItem(allAudits, audit, 'manual-' + category, 'manual')
+                } else {
                     group.push('manual');
-                    addSubTitle('Additional items to manually check','manual',null,'manual-'+category);
-                    addItem(allAudits, audit, 'manual-'+category,'manual')
+                    addSubTitle('Additional items to manually check', 'manual', null, 'manual-' + category);
+                    addItem(allAudits, audit, 'manual-' + category, 'manual')
                 }
-            }else if (show.label === 'notApplicable'){
-                if (group.includes('notApplicable', 0)){
-                    addItem(allAudits, audit, 'not-app-'+category,'notApplicable');
-                }else {
+            } else if (show.label === 'notApplicable') {
+                if (group.includes('notApplicable', 0)) {
+                    addItem(allAudits, audit, 'not-app-' + category, 'notApplicable');
+                } else {
                     group.push('notApplicable');
-                    addSubTitle('Not Applicable','notApplicable',null,'not-app-'+category);
-                    addItem(allAudits, audit, 'not-app-'+category, 'notApplicable');
+                    addSubTitle('Not Applicable', 'notApplicable', null, 'not-app-' + category);
+                    addItem(allAudits, audit, 'not-app-' + category, 'notApplicable');
                 }
-            }else {
-                if (group.includes('pass', 0)){
-                    addItem(allAudits, audit, 'pass-'+category, 'pass');
-                }else {
+            } else {
+                if (group.includes('pass', 0)) {
+                    addItem(allAudits, audit, 'pass-' + category, 'pass');
+                } else {
                     group.push('pass');
-                    addSubTitle('Pass Audit','pass',null,'pass-'+category);
-                    addItem(allAudits, audit, 'pass-'+category, 'pass');
+                    addSubTitle('Pass Audit', 'pass', null, 'pass-' + category);
+                    addItem(allAudits, audit, 'pass-' + category, 'pass');
                 }
             }
-        }else {
+        } else {
             if (audit.hasOwnProperty('group')) {
                 if (group.includes(audit.group, 0)) {
                     addItem(allAudits, audit, category);
@@ -273,9 +272,9 @@ function addItem(allAudits, audit, category, group = null) {
                         if (heading['valueType'] === 'thumbnail' || heading['itemType'] === 'thumbnail') {
                             table += "<td " + styling + "><img src=\"" + item[heading.key] + "\" height=\"auto\" width=\"50px\"></td>";
                         } else if (heading['valueType'] === 'url' || heading['itemType'] === 'url') {
-                            if (item[heading.key]){
+                            if (item[heading.key]) {
                                 table += "<td " + styling + "><a href=\"" + item[heading.key] + "\" class=\"url\">" + subStringUrl(item[heading.key]) + "</a></td>";
-                            }else {
+                            } else {
                                 table += "<td " + styling + "><a href=\"" + item["scriptUrl"] + "\" class=\"url\">" + subStringUrl(item["scriptUrl"]) + "</a></td>";
                             }
                         } else {
@@ -285,9 +284,9 @@ function addItem(allAudits, audit, category, group = null) {
                             } else if (heading['valueType'] === 'timespanMs' || heading['itemType'] === 'timespanMs') {
                                 value = item[heading.key] + " Ms";
                             } else if (heading['itemType'] === 'ms' || heading['valueType'] === 'ms') {
-                                if (item[heading.key] !== undefined){
+                                if (item[heading.key] !== undefined) {
                                     value = item[heading.key].toFixed(1) + " ms";
-                                }else {
+                                } else {
                                     value = "";
                                 }
                             } else if (heading['itemType'] === 'code' && item.hasOwnProperty(heading.key)) {
@@ -295,7 +294,7 @@ function addItem(allAudits, audit, category, group = null) {
                             } else if (heading['itemType'] === 'link') {
                                 value = "<a href=\"" + item[heading.key].url + "\">" + subStringUrl(item[heading.key].text) + "</a>"
                             } else if (heading['itemType'] === 'node') {
-                                if (item[heading.key]){
+                                if (item[heading.key]) {
                                     if (audit.id === 'link-name') {
                                         value = "<h5>" + item[heading.key].nodeLabel + "</h5><p>" + converter.makeHtml("`" + item[heading.key].snippet + "`") + "</p>"
                                     } else if (item[heading.key]['explanation']) {
@@ -329,9 +328,9 @@ function addItem(allAudits, audit, category, group = null) {
         }
     }
     let groupId = '';
-    if (group == null){
+    if (group == null) {
         groupId = audit.group;
-    }else {
+    } else {
         groupId = group;
     }
     let color = showAs(allAudits[audit.id]).color;
@@ -351,16 +350,16 @@ function addItem(allAudits, audit, category, group = null) {
     //     "    </div>\n");
     jQuery('.' + category + '-audit #' + groupId).append("<div class=\"card\">\n" +
         "                        <div class=\"card-header\">\n" +
-        "                            <div class=\"card-title collapsed\" data-toggle=\"collapse\" data-target=\"#"+audit.id+"\">\n" +
-        "<div class=\"mr-3\" style=\"width:15px\">"+
-        "<div class=\"btn btn-icon btn-circle bg-"+color+"\" style=\"height:15px; width:15px\">\n" +
-        "    </div></div><span class=\"title\">"+converter.makeHtml(allAudits[audit.id].title)+"<p class=\"text-"+color+"\">"+displayValue+"</p></span>"+
+        "                            <div class=\"card-title collapsed\" data-toggle=\"collapse\" data-target=\"#" + audit.id + "\">\n" +
+        "<div class=\"mr-3\" style=\"width:15px\">" +
+        "<div class=\"btn btn-icon btn-circle bg-" + color + "\" style=\"height:15px; width:15px\">\n" +
+        "    </div></div><span class=\"title\">" + converter.makeHtml(allAudits[audit.id].title) + "<p class=\"text-" + color + "\">" + displayValue + "</p></span>" +
         "                            </div>\n" +
         "                        </div>\n" +
-        "                        <div id=\""+audit.id+"\" class=\"collapse\" data-parent=\"#" + category + "-audit\">\n" +
+        "                        <div id=\"" + audit.id + "\" class=\"collapse\" data-parent=\"#" + category + "-audit\">\n" +
         "                            <div class=\"card-body\">\n" +
-        converter.makeHtml(allAudits[audit.id].description)+
-        table+
+        converter.makeHtml(allAudits[audit.id].description) +
+        table +
         "                            </div>\n" +
         "                        </div>\n" +
         "                    </div>");
@@ -414,50 +413,50 @@ function showAs(audit) {
     switch (audit.scoreDisplayMode) {
         case "manual":
         case "notApplicable":
-            return {label : audit.scoreDisplayMode, status : 'pass', color : 'grey'};
+            return {label: audit.scoreDisplayMode, status: 'pass', color: 'grey'};
         case "error":
         case "informative":
-            return {label : audit.scoreDisplayMode, status : 'fail', color : 'red'};
+            return {label: audit.scoreDisplayMode, status: 'fail', color: 'red'};
         case "numeric":
         case "binary":
         default:
-            if (audit.score >= PASS){
-                return {label : audit.scoreDisplayMode, status : 'pass', color : 'green'};
-            }else if (audit.score >= AVERAGE){
-                return {label : audit.scoreDisplayMode, status : 'fail', color : 'orange'};
-            }else if (audit.score >= 0){
-                return {label : audit.scoreDisplayMode, status : 'fail', color : 'red'};
-            }else {
-                return {label : audit.scoreDisplayMode, status : 'fail', color : 'grey'};
+            if (audit.score >= PASS) {
+                return {label: audit.scoreDisplayMode, status: 'pass', color: 'green'};
+            } else if (audit.score >= AVERAGE) {
+                return {label: audit.scoreDisplayMode, status: 'fail', color: 'orange'};
+            } else if (audit.score >= 0) {
+                return {label: audit.scoreDisplayMode, status: 'fail', color: 'red'};
+            } else {
+                return {label: audit.scoreDisplayMode, status: 'fail', color: 'grey'};
             }
     }
 }
 
-$('#url').on('input',function(){
+$('#url').on('input', function () {
     let check = regexHttps($(this).val());
-    if(check === 'https'){
+    if (check === 'https') {
         $('#noCrawl').hide()
         $('#crawlHttps').show()
         $('#crawlHttp').hide()
-    }else if (check === 'http'){
+    } else if (check === 'http') {
         $('#noCrawl').hide()
         $('#crawlHttps').hide()
         $('#crawlHttp').show()
-    }else{
+    } else {
         $('#noCrawl').show()
         $('#crawlHttps').hide()
         $('#crawlHttp').hide()
     }
 })
 
-function regexHttps(url){
+function regexHttps(url) {
     let httpsPattern = new RegExp("^https:\/\/")
     let httpPattern = new RegExp("^http:\/\/")
-    if (httpsPattern.test(url)){
+    if (httpsPattern.test(url)) {
         return 'https'
-    }else if (httpPattern.test(url)){
+    } else if (httpPattern.test(url)) {
         return 'http'
-    }else{
+    } else {
         return 'none'
     }
 }
@@ -465,12 +464,12 @@ function regexHttps(url){
 function animateValue(id, start, end, duration) {
     var range = end - start;
     var current = start;
-    var increment = end > start? 1 : -1;
+    var increment = end > start ? 1 : -1;
     var stepTime = Math.abs(Math.floor(duration / range));
-    var obj = jQuery('.'+id);
-    var timer = setInterval(function() {
+    var obj = jQuery('.' + id);
+    var timer = setInterval(function () {
         current += increment;
-        obj.html(current+'%');
+        obj.html(current + '%');
         if (current == end) {
             clearInterval(timer);
         }
@@ -479,36 +478,37 @@ function animateValue(id, start, end, duration) {
 
 function refreshAuditsResult() {
     for (let j = 0; j < 5; j++) {
-        jQuery('#'+categories[j]+'-audit').empty();
-        jQuery('#pass-'+categories[j]+'-audit').empty();
-        jQuery('#not-app-'+categories[j]+'-audit').empty();
-        jQuery('#manual-'+categories[j]+'-audit').empty();
+        jQuery('#' + categories[j] + '-audit').empty();
+        jQuery('#pass-' + categories[j] + '-audit').empty();
+        jQuery('#not-app-' + categories[j] + '-audit').empty();
+        jQuery('#manual-' + categories[j] + '-audit').empty();
     }
 }
 
 let saveData = function (data) {
     let dataFromLocal = localStorage.getItem('page-speed')
     let storage = []
-    if (dataFromLocal){
+    if (dataFromLocal) {
         storage = JSON.parse(dataFromLocal)
     }
     storage.push(data)
-    localStorage.setItem('page-speed',JSON.stringify(storage))
+    localStorage.setItem('page-speed', JSON.stringify(storage))
 }
 
-const refreshLocalStorage = function(){
-    try{
-        const month = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DES']
+const refreshLocalStorage = function () {
+    try {
+        const month = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DES']
         $('#localsavemobile').empty();
         $('#localsavedesktop').empty();
         const keys = JSON.parse(localStorage.getItem('page-speed'))
-        if(keys.length > 0 ){
-            let index = 0;
-            for (let key of keys){
-                let date = new Date(key.analysisUTCTimestamp)
-                date.setTime(date.getTime())
-                let formatDate = `${created_at} ${date.getHours() < 10 ? ('0'+date.getHours()) : date.getHours()}.${date.getMinutes() < 10 ? ('0'+date.getMinutes()) : date.getMinutes()} | ${date.getDate()}, ${month[date.getMonth()]} ${date.getFullYear()}`
-                let div = `<div class="custom-card py-5 px-3" onclick="getData(${index})">
+        if (keys) {
+            if (keys.length > 0) {
+                let index = 0;
+                for (let key of keys) {
+                    let date = new Date(key.analysisUTCTimestamp)
+                    date.setTime(date.getTime())
+                    let formatDate = `${created_at} ${date.getHours() < 10 ? ('0' + date.getHours()) : date.getHours()}.${date.getMinutes() < 10 ? ('0' + date.getMinutes()) : date.getMinutes()} | ${date.getDate()}, ${month[date.getMonth()]} ${date.getFullYear()}`
+                    let div = `<div class="custom-card py-5 px-3" onclick="getData(${index})">
                     <div class="d-flex align-items-center justify-content-between">
                         <div class="local-collection-title">${key.id}
                         </div>
@@ -520,7 +520,7 @@ const refreshLocalStorage = function(){
                     </div>
                 </div>`
 
-                let div2 = `<li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px" onclick="getData(${index})">
+                    let div2 = `<li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px" onclick="getData(${index})">
                   <div class="d-flex justify-content-between">
                     <div class="local-collection-title">${key.id}</div>
                     <div class="d-flex align-items-center">
@@ -528,11 +528,26 @@ const refreshLocalStorage = function(){
                       <i class='bx bxs-x-circle bx-sm text-grey' onclick="removeLocal(${index})"></i>
                     </div>
                   </div>`
-                index++
+                    index++
+                    $('#localsavemobile').append(div)
+                    $('#localsavedesktop').append(div2)
+                }
+            }else {
+                let div2 = `<li id="empty-impression" class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
+                  <div class="d-flex justify-content-center text-center">
+                    <span>` + localStorageNone + `</span>
+                  </div>
+                </li>`
+                let div = `<div class="custom-card py-5 px-3">
+                    <div class="d-flex justify-content-center text-center">
+                        <span>` + localStorageNone + `</span>
+                    </div>
+                </div>`
+
                 $('#localsavemobile').append(div)
                 $('#localsavedesktop').append(div2)
             }
-        }else {
+        } else {
             let div2 = `<li id="empty-impression" class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
                   <div class="d-flex justify-content-center text-center">
                     <span>` + localStorageNone + `</span>
@@ -547,15 +562,15 @@ const refreshLocalStorage = function(){
             $('#localsavemobile').append(div)
             $('#localsavedesktop').append(div2)
         }
-    }catch(e){
+    } catch (e) {
         console.log(e)
     }
 }
 
-let removeLocal = function (index){
+let removeLocal = function (index) {
     const keys = JSON.parse(localStorage.getItem('page-speed'))
-    keys.splice(index,1)
-    localStorage.setItem('page-speed',JSON.stringify(keys))
+    keys.splice(index, 1)
+    localStorage.setItem('page-speed', JSON.stringify(keys))
     refreshLocalStorage()
 }
 
@@ -572,8 +587,8 @@ let clearAll = function () {
 
 refreshLocalStorage();
 
-$(document).ready(function() {
-    $("#performancePB").click(function() {
+$(document).ready(function () {
+    $("#performancePB").click(function () {
         $("#performance").fadeIn().removeClass("d-none").addClass("d-block");
         $("#accessibility").removeClass("d-block").addClass("d-none").fadeOut();
         $("#best-practices").removeClass("d-block").addClass("d-none").fadeOut();
@@ -587,7 +602,7 @@ $(document).ready(function() {
         $("#pwaPB").removeClass("active");
     });
 
-    $("#accessibilityPB").click(function() {
+    $("#accessibilityPB").click(function () {
         $("#performance").removeClass("d-block").addClass("d-none").fadeOut();
         $("#accessibility").fadeIn().removeClass("d-none").addClass("d-block");
         $("#best-practices").removeClass("d-block").addClass("d-none").fadeOut();
@@ -601,7 +616,7 @@ $(document).ready(function() {
         $("#pwaPB").removeClass("active");
     });
 
-    $("#practicePB").click(function() {
+    $("#practicePB").click(function () {
         $("#performance").removeClass("d-block").addClass("d-none").fadeOut();
         $("#accessibility").removeClass("d-block").addClass("d-none").fadeOut();
         $("#best-practices").fadeIn().removeClass("d-none").addClass("d-block");
@@ -615,7 +630,7 @@ $(document).ready(function() {
         $("#pwaPB").removeClass("active");
     });
 
-    $("#seoPB").click(function() {
+    $("#seoPB").click(function () {
 
         $("#performance").removeClass("d-block").addClass("d-none").fadeOut();
         $("#accessibility").removeClass("d-block").addClass("d-none").fadeOut();
@@ -630,7 +645,7 @@ $(document).ready(function() {
         $("#pwaPB").removeClass("active");
     });
 
-    $("#pwaPB").click(function() {
+    $("#pwaPB").click(function () {
         $("#performance").removeClass("d-block").addClass("d-none").fadeOut();
         $("#accessibility").removeClass("d-block").addClass("d-none").fadeOut();
         $("#best-practices").removeClass("d-block").addClass("d-none").fadeOut();

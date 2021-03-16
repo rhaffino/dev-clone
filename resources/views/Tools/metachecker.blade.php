@@ -471,6 +471,8 @@ id/page-title-meta-description-checker
         --}}
     </div>
 </div>
+    <span id="titlesizer"></span>
+    <span id="descsizer"></span>
 @endsection
 
 @push('script')

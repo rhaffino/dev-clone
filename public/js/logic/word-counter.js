@@ -7,8 +7,10 @@ if (lang == "en") {
 }
 const refreshLocalStorage = function() {
     try {
+        $('#localsavemobile').empty();
+        $('#localsavedesktop').empty();
         const keys = JSON.parse(localStorage.getItem('keys'))
-        if (keys.wc) {
+        if (keys.wc.length > 0) {
             for (let key of keys.wc) {
                 let temp = localStorage.getItem(key)
                 let date = new Date(key * 1000)
@@ -34,6 +36,20 @@ const refreshLocalStorage = function() {
                 $('#localsavemobile').append(div)
                 $('#localsavedesktop').append(div2)
             }
+        }else {
+            let div2 = `<li id="empty-impression" class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
+                  <div class="d-flex justify-content-center text-center">
+                    <span>` + localStorageNone + `</span>
+                  </div>
+                </li>`
+            let div = `<div class="custom-card py-5 px-3">
+                    <div class="d-flex justify-content-center text-center">
+                        <span>` + localStorageNone + `</span>
+                    </div>
+                </div>`
+
+            $('#localsavemobile').append(div)
+            $('#localsavedesktop').append(div2)
         }
     } catch (e) {
 
@@ -141,15 +157,17 @@ const removeData = function(key) {
     }
     localStorage.setItem('keys', JSON.stringify(keys))
     localStorage.removeItem(key)
-    $('#localsavemobile').empty();
-    $('#localsavedesktop').empty();
     refreshLocalStorage();
 }
 
 const clearAll = function() {
-    localStorage.clear();
-    $('#localsavemobile').empty();
-    $('#localsavedesktop').empty();
+    var res = JSON.parse(localStorage.getItem('keys'));
+    for (let i of res.wc) {
+        localStorage.removeItem(i);
+    }
+    res.wc = [];
+    localStorage.setItem('keys', JSON.stringify(res))
+    refreshLocalStorage()
 }
 
 jQuery('#reset').click(function() {
