@@ -13,7 +13,7 @@ return [
     "sitemap-desc" => "Create a sitemap in as many markup languages as you want, know the details of the available pages, and make it easy for search engines to index the pages.",
     "mobile-friendly-desc" => "A quick and simple approach test to examine whether the pages on your site are mobile-friendly. And check for any issues appearing in the mobile display.",
     "ssl-checker-desc" => "Check the validity of the SSL certificate on the website and see the common name, server type, publication, validity, certificate chain, and additional certificate details. This tool is available in two languages: Indonesian and English.",
-    "robot-txt-desc" => "Robots.tx is used to control Google to access a website page, block pages that do not want to be displayed, index the website information, and protect the site from hackers. Utilize Robots.txt Generator to optimize the performance of the website SEO.",
+    "robot-txt-desc" => "Robots.txt is used to control Google to access a website page, block pages that do not want to be displayed, index the website information, and protect the site from hackers. Utilize Robots.txt Generator to optimize the performance of the website SEO.",
     "redirect-checker-desc" => "Redirect chain checker is a useful tool for you to find and repair redirect chains on your website.",
     "technology-lookup-desc" => "This technology lookup tool created by cmlabs is useful for revealing tech heaps and contact details of any website.",
     "link-analyzer-desc" => "External Link Analyzer is a tool that allows you to track all website links. Using this tool, you can analyze the external and internal links associated with your site.",

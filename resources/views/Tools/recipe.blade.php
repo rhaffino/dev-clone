@@ -15,6 +15,9 @@ id/json-ld-recipe-schema-generator
 @endsection
 
 @section('content')
+@if ($is_maintenance)
+@include('layouts.maintenance')
+@else
 <div class="container container-tools mb-10">
     <div class="d-flex flex-column-fluid">
         <div class="container-fluid px-0">
@@ -47,13 +50,13 @@ id/json-ld-recipe-schema-generator
                                         <input type="text" name="" class="form-control name mb-5" placeholder="@lang('recipe.placeholder-name')" value="" data-id="0">
                                         <div class="row">
                                             <div class="col-12">
-                                                <label class="text-black font-weight-bold" for="keywords">@lang('recipe.label-description')</label>
+                                                <label class="text-black font-weight-bold" for="keywords">@lang('recipe.label-keywords')</label>
                                                 <input type="text" name="" class="form-control keywords mb-5" placeholder="@lang('recipe.placeholder-keywords')" value="" min="0" data-id="0">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-12 col-lg-6 mb-8 mb-lg-5">
-                                        <label class="text-black font-weight-bold" for="description">@lang('recipe.label-keywords')</label>
+                                        <label class="text-black font-weight-bold" for="description">@lang('recipe.label-description')</label>
                                         <textarea name="" class="form-control custom-textarea-82 description" placeholder="@lang('recipe.placeholder-description')" data-id="0"></textarea>
                                     </div>
                                 </div>
@@ -250,19 +253,21 @@ id/json-ld-recipe-schema-generator
           </div> --}}
                 </div>
                 <div class="col-md-4">
-                    <div class="accordion accordion-light accordion-toggle-arrow custom-features-accordion" id="accordionExample2">
-                        <div class="card bg-transparent">
-                            <div class="card-header" id="headingOne2">
-                                <div class="card-title pt-0" data-toggle="collapse" data-target="#collapseOne2">
-                                    @lang('layout.version') 1.0
+                    <div class="desktop-version">
+                        <div class="accordion accordion-light accordion-toggle-arrow custom-features-accordion" id="accordionExample2">
+                            <div class="card bg-transparent" style="">
+                                <div class="card-header" id="headingOne2">
+                                    <div class="card-title" data-toggle="collapse" data-target="#collapseOne2">
+                                        @lang('layout.version') 1.0
+                                    </div>
                                 </div>
-                            </div>
-                            <div id="collapseOne2" class="collapse show" data-parent="#accordionExample2">
-                                <div class="card-body">
-                                    <p>@lang('recipe.highlight')</p>
-                                    <div class="d-flex align-items-center">
-                                        <i class='bx bxs-check-circle text-darkgrey mr-1'></i>
-                                        <span class="text-darkgrey h6 mb-0">@lang('layout.updated') 15 Mar, 2021</span>
+                                <div id="collapseOne2" class="collapse show" data-parent="#accordionExample2">
+                                    <div class="card-body">
+                                        <p>@lang('recipe.highlight')</p>
+                                        <div class="d-flex align-items-center">
+                                            <i class='bx bxs-check-circle text-darkgrey mr-1'></i>
+                                            <span class="text-darkgrey h6 mb-0">@lang('layout.updated') 15 Mar, 2021</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -273,8 +278,9 @@ id/json-ld-recipe-schema-generator
         </div>
     </div>
 </div>
-{{-- <div class="w-100">
-  <div class="local-collection-mobile bg-white py-5">
+<div class="w-100">
+    <div class="local-collection-mobile bg-white py-5">
+        {{--
     <div class="local-collection-header d-flex justify-content-between mb-3 w-100 px-5">
       <div class="d-flex flex-row align-items-center">
         <i class='bx bxs-collection bx-sm text-darkgrey mr-2'></i>
@@ -285,8 +291,28 @@ id/json-ld-recipe-schema-generator
       </div>
     </div>
     <div id="localsavemobile" class="local-collection-body mt-3 px-5"></div>
-  </div>
-</div> --}}
+     --}}
+        <div id="mobile-version" class="px-5 accordion accordion-light accordion-toggle-arrow custom-features-accordion" id="accordionExample2">
+            <div class="card bg-transparent" style="">
+                <div class="card-header" id="headingOne2">
+                    <div class="card-title" data-toggle="collapse" data-target="#collapseOne2">
+                        @lang('layout.version') 1.0
+                    </div>
+                </div>
+                <div id="collapseOne2" class="collapse show" data-parent="#accordionExample2">
+                    <div class="card-body">
+                        <p>@lang('recipe.highlight')</p>
+                        <div class="d-flex align-items-center">
+                            <i class='bx bxs-check-circle text-darkgrey mr-1'></i>
+                            <span class="text-darkgrey h6 mb-0">@lang('layout.updated') 15 Mar, 2021</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@endif
 <div class="" style="background:white">
     <div class="container container-description">
         <h2 class="text-black">Advance your writing</h2>
@@ -338,22 +364,7 @@ id/json-ld-recipe-schema-generator
                 </div>
             </div>
         </div>
-        <div class="my-10" style="background:var(--darkgrey); border-radius:20px">
-            <div class="row">
-                <div class="col-md-6 py-5">
-                    <div class="robo-container">
-                        <img src="{{asset('/media/images/robo-footer.png')}}" alt="robo-img" class="robo-img">
-                    </div>
-                </div>
-                <div class="col-md-6 py-10 pr-10">
-                    <div class="robo-text-container">
-                        <h2 class="text-white">@lang('layout.banner-robo-title')</h2>
-                        <p class="text-white">@lang('layout.banner-robo-desc')</p>
-                        <button type="button" class="btn btn-explore " name="button" onclick="window.open('https://cmlabs.co','_blank')">@lang('layout.banner-robo-btn')</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+        @include('layouts.roboDesc')
         {{-- <div class="row mb-10">
       <div class="col-md-6">
         <h2 class="text-black">@lang('layout.feature-title')</h2>

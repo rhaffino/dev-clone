@@ -93,7 +93,7 @@ id
                             </div>
                         </div>
                         <div class="card-footer text-center border-top-0 pt-0">
-                            <button onclick="window.location.href='/{{ $local }}/sitemap-generator'" type="button" class="btn btn-launch" name="button">LAUNCH</button>
+                            <a href="/{{ $local }}/sitemap-generator" type="button" class="btn btn-launch" name="button">LAUNCH</a>
                         </div>
                     </div>
                 </div>
@@ -107,7 +107,7 @@ id
                             </div>
                         </div>
                         <div class="card-footer text-center border-top-0 pt-0">
-                            <button onclick="window.location.href='/{{ $local }}/mobile-friendly-test'" type="button" class="btn btn-launch" name="button">LAUNCH</button>
+                            <a href="/{{ $local }}/mobile-friendly-test" type="button" class="btn btn-launch" name="button">LAUNCH</a>
                         </div>
                     </div>
                 </div>
@@ -121,7 +121,7 @@ id
                             </div>
                         </div>
                         <div class="card-footer text-center border-top-0 pt-0">
-                            <button onclick="window.location.href='/{{ $local }}/ssl-checker'" type="button" class="btn btn-launch" name="button">LAUNCH</button>
+                            <a href="/{{ $local }}/ssl-checker" type="button" class="btn btn-launch" name="button">LAUNCH</a>
                         </div>
                     </div>
                 </div>
@@ -135,7 +135,7 @@ id
                             </div>
                         </div>
                         <div class="card-footer text-center border-top-0 pt-0">
-                            <button onclick="window.location.href='/{{ $local }}/robotstxt-generator'" type="button" class="btn btn-launch" name="button">LAUNCH</button>
+                            <a href="/{{ $local }}/robotstxt-generator" type="button" class="btn btn-launch" name="button">LAUNCH</a>
                         </div>
                     </div>
                 </div>
@@ -149,7 +149,7 @@ id
                             </div>
                         </div>
                         <div class="card-footer text-center border-top-0 pt-0">
-                            <button onclick="window.location.href='/{{ $local }}/redirect-checker'" type="button" class="btn btn-launch" name="button">LAUNCH</button>
+                            <a href="/{{ $local }}/redirect-checker" type="button" class="btn btn-launch" name="button">LAUNCH</a>
                         </div>
                     </div>
                 </div>
@@ -163,7 +163,7 @@ id
                             </div>
                         </div>
                         <div class="card-footer text-center border-top-0 pt-0">
-                            <button onclick="window.location.href='/{{ $local }}/technology-lookup'" type="button" class="btn btn-launch" name="button">LAUNCH</button>
+                            <a href="/{{ $local }}/technology-lookup" type="button" class="btn btn-launch" name="button">LAUNCH</a>
                         </div>
                     </div>
                 </div>
@@ -177,7 +177,7 @@ id
                             </div>
                         </div>
                         <div class="card-footer text-center border-top-0 pt-0">
-                            <button onclick="window.location.href='/{{ $local }}/link-analyzer'" type="button" class="btn btn-launch" name="button">LAUNCH</button>
+                            <a href="/{{ $local }}/link-analyzer" type="button" class="btn btn-launch" name="button">LAUNCH</a>
                         </div>
                     </div>
                 </div>
@@ -191,7 +191,7 @@ id
                             </div>
                         </div>
                         <div class="card-footer text-center border-top-0 pt-0">
-                            <button onclick="window.location.href='/{{ $local }}/hreflang-checker'" type="button" class="btn btn-launch" name="button">LAUNCH</button>
+                            <a href="/{{ $local }}/hreflang-checker" type="button" class="btn btn-launch" name="button">LAUNCH</a>
                         </div>
                     </div>
                 </div>
@@ -203,7 +203,7 @@ id
                                 <i class='text-darkgrey bx bx-test-tube bx-lg'></i>
                                 <h2 class="h6 text-darkgrey font-weight-bolder">Keyword Research</h2>
                                 <p class="text-darkgrey">JSON-LD Generator adalah sebuah tools yang dibuat oleh cmlabs untuk memudahkan user.</p>
-                                <button onclick="window.location.href='/{{ $local }}/keyword-research'" type="button" class="btn btn-launch" name="button">LAUNCH</button>
+                                <a href="/{{ $local }}/keyword-research" type="button" class="btn btn-launch" name="button">LAUNCH</a>
                             </div>
                         </div>
                     </div>
@@ -414,22 +414,7 @@ id
                 </div>
             </div>
         </div>
-        <div class="mt-10" style="background:var(--darkgrey); border-radius:20px">
-            <div class="row">
-                <div class="col-md-6 py-5">
-                    <div class="robo-container">
-                        <img src="{{asset('/media/images/robo-footer.png')}}" alt="robo-img" class="robo-img">
-                    </div>
-                </div>
-                <div class="col-md-6 py-10 pr-10">
-                    <div class="robo-text-container">
-                        <h2 class="text-white">@lang('layout.banner-robo-title')</h2>
-                        <p class="text-white">@lang('layout.banner-robo-desc')</p>
-                        <button onclick="window.open('https://cmlabs.co','_blank')" type="button" class="btn btn-explore " name="button">@lang('layout.banner-robo-btn')</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+        @include('layouts.roboDesc')
     </div>
 </div>
 @endsection

@@ -449,8 +449,8 @@ jQuery(document).ready(function () {
             }
             $(".url, .price, .priceCurrency").removeAttr("disabled");
             $(".priceCurrency").selectpicker("refresh");
-            $("#ag_offer").css('display', 'flex');
-            $("#offer").css('display', 'none');
+            $("#ag_offer").removeClass('d-none');
+            $("#offer").addClass('d-none');
         }else if(selectedItem === "Offer"){
             productFormat.offers = {
                 "@type": "Offer",
@@ -460,14 +460,14 @@ jQuery(document).ready(function () {
             }
             $(".url, .price, .priceCurrency").removeAttr("disabled");
             $(".priceCurrency").selectpicker("refresh");
-            $("#offer").css('display', 'flex');
-            $("#ag_offer").css('display', 'none');
+            $("#offer").removeClass('d-none');
+            $("#ag_offer").addClass('d-none');
         }else if(selectedItem === "None"){
             delete productFormat.offers;
             $(".url, .price, .priceCurrency").attr("disabled", true);
             $(".priceCurrency").selectpicker("refresh");
-            $("#ag_offer").css('display', 'none');
-            $("#offer").css('display', 'none');
+            $("#ag_offer").addClass('d-none');
+            $("#offer").addClass('d-none');
         }
         productFormat.render();
     });
