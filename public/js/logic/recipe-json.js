@@ -57,6 +57,74 @@
             this.review = [];
             this.video = undefined;
 
+            this.tempnameVideo = "";
+            this.tempdescVideo = "";
+            this.tempthumbVideo = [""];
+            this.tempuploadDate = "";
+            this.tempcontentVideo = "";
+            this.tempembedurl = "";
+
+            this.tempaggRate = "";
+            this.tempnumOfRate = "";
+            this.temphighestval = "";
+            this.templowestval = "";
+
+            this.tempPrepTime = 0;
+            this.tempCookTime = 0;
+
+            this.tempReviewName = [];
+            this.tempReviewBody = [];
+            this.tempreviewRatingValue = [];
+
+        }
+
+        temp(){
+
+            const tempObj = {};
+
+            tempObj.tempnameVideo = this.tempnameVideo;
+            tempObj.tempdescVideo = this.tempdescVideo;
+
+            if(this.tempthumbVideo.length > 0) {
+                if (this.tempthumbVideo.length === 1) {
+                    tempObj.tempthumbVideo = this.tempthumbVideo[0];
+                } else {
+                    tempObj.tempthumbVideo = this.tempthumbVideo;
+                }
+            }
+            tempObj.tempuploadDate = this.tempuploadDate;
+            tempObj.tempcontentVideo = this.tempcontentVideo;
+            tempObj.tempembedurl = this.tempembedurl;
+
+            tempObj.tempPrepTime = this.tempPrepTime;
+            tempObj.tempCookTime = this.tempCookTime;
+
+            tempObj.tempaggRate = this.tempaggRate;
+            tempObj.tempnumOfRate = this.tempnumOfRate;
+            tempObj.temphighestval = this.temphighestval;
+            tempObj.templowestval = this.templowestval;
+
+
+            if(this.tempReviewName.length > 0) {
+                if (this.tempReviewName.length === 1) {
+                    tempObj.tempReviewName = this.tempReviewName[0];
+                } else {
+                    tempObj.tempReviewName = this.tempReviewName;
+                }
+            }
+
+            tempObj.tempReviewBody = this.tempReviewBody;
+
+            if(this.tempreviewRatingValue.length > 0) {
+                if (this.tempreviewRatingValue.length === 1) {
+                    tempObj.tempreviewRatingValue = this.tempreviewRatingValue[0];
+                } else {
+                    tempObj.tempreviewRatingValue = this.tempreviewRatingValue;
+                }
+            }
+            return tempObj;
+
+
         }
 
         render(){
@@ -141,6 +209,9 @@
 
 
 
+
+            if(this.video) obj.video = this.video;
+
             $("#json-format").val("<script type=\"application/ld+json\">\n" + JSON.stringify(obj, undefined, 4) + "\n<\/script>");
 
             return obj;
@@ -151,29 +222,17 @@
     let recipeFormat = new recipeSchema();
     recipeFormat.render();
 
-// jQuery(document).ready(function () {
-//     let deletes = lang ==='en'? 'Delete' : 'Hapus';
-//     let name = lang ==='en'? 'Name':'Nama';
-//     let image = lang ==='en'?'Image':'Gambar';
-//     let description = lang ==='en'?'Description':'Deskripsi';
-//     let keywords = lang==='en'?'KeyWords':'KataKunci';
-//     let authorName = lang==='en'?'AuthorName':'NamaPenulis';
-//     let prepTime = lang ==='en'?'PrepTime':'WaktuPersiapan';
-//     let cookTime = lang==='en'?'CookTime':'Waktu Masak';
-//     let recipeCategory = lang==='en'?'RecipeCategory':'KategoriResep';
-//     let recipeCuisine = lang==='en'?'RecipeCuisine':'RecipeCuisine';
-//     let recipeYield = lang==='en'?'RecipeYield':'RecipeYield';
-//     let imageUrl = lang==='en'?'ImageUrl':'UrlGambar';
-
-// });
-
     $('.name').keyup(function (e) {
+        recipeFormat.tempnameVideo = $(this).val();
         recipeFormat.name = $(this).val();
+        recipeFormat.temp();
         recipeFormat.render();
     });
 
     $('.description').keyup(function (e) {
+        recipeFormat.tempdescVideo = $(this).val();
         recipeFormat.description = $(this).val();
+        recipeFormat.temp();
         recipeFormat.render();
     });
 
@@ -192,8 +251,10 @@
         // console.log('index:' + index);
         if (recipeFormat.image === 1) {
             recipeFormat.image[0] = $(this).val();
+            recipeFormat.tempthumbVideo[0] = $(this).val();
         } else {
             recipeFormat.image[index] = $(this).val();
+            recipeFormat.tempthumbVideo[index] = $(this).val();
         }
 
         recipeFormat.render();
@@ -203,7 +264,9 @@
     $(document).on('click', '#add-imageUrl', function () {
         imageUrlCounter++;
         recipeFormat.image.push("")
+        recipeFormat.tempthumbVideo.push("")
         $('.imageurlList').append(`<div class="col-10 col-sm-11 image-url-data mb-5" data-id="${imageUrlCounter}"> <label class="text-black font-weight-bold" for="image">`+label_image+` # ${imageUrlCounter+1}</label> <input type="text" name="" class="form-control image" placeholder="`+placeholder_image+`" value="" data-id="${imageUrlCounter}"><div class="invalid-feedback" data-id="${imageUrlCounter}">`+invalid_url+`</div></div><div class="col-2 col-sm-1 deleteImageButton" data-id="${imageUrlCounter}"><div class="d-flex justify-content-center mt-9"> <i class='bx bxs-x-circle bx-md delete deleteImage' data-id="${imageUrlCounter}"></i></div></div></div>`);
+        recipeFormat.temp();
         recipeFormat.render();
     });
 
@@ -229,17 +292,36 @@
     });
 
     $('.publishedDate').change(function (e) {
+        recipeFormat.tempuploadDate = $(this).val();
         recipeFormat.datePublished = $(this).val();
+        if(recipeFormat.video !== undefined){
+            recipeFormat.video.uploadDate = $(this).val();
+        }
+        recipeFormat.temp();
         recipeFormat.render();
     });
 
     $('.prepTime').keyup(function (e) {
         recipeFormat.prepTime = `PT${$(this).val()}M`;
+        recipeFormat.tempPrepTime = $(this).val();
+
+        let cooktime = recipeFormat.tempCookTime == 0 ? 0 : parseInt(recipeFormat.tempCookTime);
+        let count = parseInt($(this).val()) + cooktime;
+
+        recipeFormat.totalTime = `PT${count}M`;
+
         recipeFormat.render();
     });
 
     $('.cookTime').keyup(function (e) {
         recipeFormat.cookTime = `PT${$(this).val()}M`;
+        recipeFormat.tempCookTime = $(this).val();
+
+        let preptime = recipeFormat.tempPrepTime == 0 ? 0 : parseInt(recipeFormat.tempPrepTime);
+
+        let count = ($(this).val().length == 0 ? 0 : parseInt($(this).val())) + preptime;
+
+        recipeFormat.totalTime = `PT${count}M`;
         recipeFormat.render();
     });
 
@@ -382,47 +464,47 @@
         recipeFormat.render();
     });
 
-jQuery(document).on('keyup', '.name', function () {
-    let index = parseInt(jQuery(this).data('id'));
-    // console.log('index:' + index);
-    main.name = jQuery(this).val();
-    print();
-});
 
-jQuery(document).on('keyup', '.imageUrl', function () {
-    let index = parseInt(jQuery(this).data('id'));
-    // console.log('index:' + index);
-    main.imageUrl.url.name[index] = jQuery(this).val();
-    print();
-});
+    $('.videoContent').keyup(function (e) {
+        if(recipeFormat.tempembedurl.length > 0){
+            recipeFormat.video = {
+                "@type": "VideoObject",
+                "name": recipeFormat.tempnameVideo,
+                "description": recipeFormat.tempdescVideo,
+                "thumbnailUrl": recipeFormat.tempthumbVideo.length === 1 ? recipeFormat.tempthumbVideo[0] : recipeFormat.tempthumbVideo,
+                "uploadDate": recipeFormat.tempuploadDate,
+                "contentUrl": $(this).val(),
+                "embedUrl": recipeFormat.tempembedurl
+            }
+        }else{
+            recipeFormat.video = {
+                "@type": "VideoObject",
+                "name": recipeFormat.tempnameVideo,
+                "description": recipeFormat.tempdescVideo,
+                "thumbnailUrl": recipeFormat.tempthumbVideo.length === 1 ? recipeFormat.tempthumbVideo[0] : recipeFormat.tempthumbVideo,
+                "uploadDate": recipeFormat.tempuploadDate,
+                "contentUrl": $(this).val()
+            }
+        }
+        recipeFormat.tempcontentVideo = $(this).val();
+        recipeFormat.temp();
+        recipeFormat.render();
+    });
 
-jQuery(document).on('keyup', '.description', function () {
-    let index = parseInt(jQuery(this).data('id'));
-    // console.log('index:' + index);
-    main.description = jQuery(this).val();
-    print();
-});
-
-jQuery(document).on('keyup', '.videoContentUrl', function () {
-    let index = parseInt(jQuery(this).data('id'));
-    // console.log('index:' + index);
-    main.video = {
-        "@type": "VideoObject",
-        "name": "",
-        "description": $(".description").val(),
-        "thumbnailUrl": "",
-        "uploadDate": "",
-        "contentUrl": ""
-    }
-    main.video.contentUrl = jQuery(this).val();
-    print();
-});
-
-jQuery(document).on('keyup', '.videoEmbedUrl', function () {
-    let index = parseInt(jQuery(this).data('id'));
-    main.video.embedUrl = jQuery(this).val();
-    print();
-});
+    $('.videoEmbed').keyup(function (e) {
+        recipeFormat.video = {
+            "@type": "VideoObject",
+            "name": recipeFormat.tempnameVideo,
+            "description": recipeFormat.tempdescVideo,
+            "thumbnailUrl": recipeFormat.tempthumbVideo.length === 1 ? recipeFormat.tempthumbVideo[0] : recipeFormat.tempthumbVideo,
+            "uploadDate": recipeFormat.tempuploadDate,
+            "contentUrl": recipeFormat.tempcontentVideo,
+            "embedUrl": $(this).val()
+        }
+        recipeFormat.tempembedurl = $(this).val();
+        recipeFormat.temp();
+        recipeFormat.render();
+    });
 
 jQuery(document).on('keyup', '.keywords', function () {
     let index = parseInt(jQuery(this).data('id'));
@@ -478,28 +560,36 @@ jQuery(document).on('change', '.fatContent', function () {
             recipeFormat.aggregateRating = {
                 "@type": "AggregateRating",
                 "ratingValue": $(this).val(),
-                "bestRating": "",
-                "worstRating": "",
-                "ratingCount": ""
+                "bestRating": recipeFormat.temphighestval,
+                "worstRating": recipeFormat.templowestval,
+                "ratingCount": recipeFormat.tempnumOfRate
             }
+            productFormat.tempaggRate = $(this).val();
         }
 
-        recipeFormat.render();
+        productFormat.temp();
+        productFormat.render();
 
     });
 
     $('.ratings').keyup(function (e) {
         recipeFormat.aggregateRating.ratingCount = $(this).val();
+        recipeFormat.tempnumOfRate = $(this).val();
+        recipeFormat.temp();
         recipeFormat.render();
     });
 
     $('.highest').keyup(function (e) {
         recipeFormat.aggregateRating.bestRating = $(this).val();
+        recipeFormat.temphighestval = $(this).val();
+        recipeFormat.temp();
         recipeFormat.render();
     });
 
     $('.lowest').keyup(function (e) {
         recipeFormat.aggregateRating.worstRating = $(this).val();
+        recipeFormat.templowestval = $(this).val();
+        recipeFormat.temp();
         recipeFormat.render();
     });
 
@@ -515,9 +605,9 @@ jQuery(document).on('change', '.fatContent', function () {
         "                   <div class=\"col-12 col-lg-6 mb-8 mb-lg-5\"><label class=\"text-black font-weight-bold\" for=\"reviewBody\">"+label_review_body+"</label><textarea name=\"\" class=\"form-control custom-textarea-82 reviewBody\" placeholder=\""+placeholder_review_body+"\" data-id=\""+(reviewCounter)+"\"></textarea></div></div>" +
         "                   <div class=\"row mb-5 author-data\" data-id=\""+(reviewCounter)+"\"><div class=\"col-5\"><label class=\"text-black font-weight-bold\" for=\"authorReview\">"+label_review_author+"</label><input type=\"text\" name=\"\" class=\"form-control authorReview\" placeholder=\""+placeholder_review_author+"\" value=\"\" data-id=\""+(reviewCounter)+"\"></div>" +
         "                   <div class=\"col-6\"><label class=\"text-black font-weight-bold\" for=\"publisher\">"+label_review_publisher+"</label><input type=\"text\" name=\"\" class=\"form-control publisher\" placeholder=\""+placeholder_review_publisher+"\" value=\"\" data-id=\""+(reviewCounter)+"\"></div>" +
-        "                   <div class=\"col-1\"><div class=\"d-flex justify-content-center mt-9\"><i class=\"bx bxs-x-circle bx-md delete deleteReview\"></i></div></div></div>"
+        "                   <div class=\"col-1\"><div class=\"d-flex justify-content-center mt-9\"><i class=\"bx bxs-x-circle bx-md delete deleteReview\" data-id=\""+(reviewCounter)+"\"></i></div></div></div>"
         );
-        
+
         var arrows;
         if (KTUtil.isRTL()) {
             arrows = {
@@ -567,72 +657,120 @@ jQuery(document).on('change', '.fatContent', function () {
             $('.publisher[data-id=' + (i - 1) + ']').val($('.publisher[data-id=' + (i) + ']').val())
         }
 
-        $('.review-data[data-id=' + recipeFormat.review.length + ']').remove();
-        $('.author-data[data-id=' + recipeFormat.review.length + ']').remove();
+        $('.review-data[data-id=' + index + ']').remove();
+        $('.author-data[data-id=' + index  + ']').remove();
         let row = parseInt($('#json-format').val().split('\n').length);
         $('#json-format').attr('rows',row);
         reviewCounter--;
     });
 
-
-jQuery(document).on('keyup', '.review', function () {
-    let index = parseInt(jQuery(this).data('id'));
-    // console.log('index:' + index);
-    main.review.name = jQuery(this).val();
-    print();
-});
-
-jQuery(document).on('keyup', '.reviewBody', function () {
-    let index = parseInt(jQuery(this).data('id'));
-    // console.log('index:' + index);
-    main.review.reviewBody = jQuery(this).val();
-    print();
-});
-
-jQuery(document).on('keyup', '.rating', function () {
-    let index = parseInt(jQuery(this).data('id'));
-    // console.log('index:' + index);
-    main.review.reviewRating = {
-        "@type": "Rating",
-        "ratingValue": ""
-    }
-    main.review.reviewRating.ratingValue = jQuery(this).val();
-    print();
-});
+    $(document).on('keyup', '.review', function () {
+        let index = parseInt($(this).data('id'));
+        delete recipeFormat.review[index]['@type']
+        recipeFormat.review[index] = Object.assign({"@type": "Review","name":""}, recipeFormat.review[index])
+        if($(this).val().length == 0) {
+            delete recipeFormat.review[index].name;
+        }else{
+            recipeFormat.review[index].name = $(this).val();
+        }
+        recipeFormat.render();
+    });
 
 
-jQuery(document).on('keyup', '.dateReview', function () {
-    let index = parseInt(jQuery(this).data('id'));
-    // console.log('index:' + index);
-    main.review.datePublished = jQuery(this).val();
-    print();
-});
+    $(document).on('keyup', '.reviewBody', function () {
+        let index = parseInt($(this).data('id'));
 
-jQuery(document).on('keyup', '.authorReview', function () {
-    let index = parseInt(jQuery(this).data('id'));
-    // console.log('index:' + index);
-    main.review.author.name = jQuery(this).val();
-    print();
-});
+        recipeFormat.review[index].reviewBody = $(this).val();
+        recipeFormat.tempReviewBody[index] = $(this).val()
+        recipeFormat.temp();
+        recipeFormat.render();
+    });
 
-jQuery(document).on('keyup', '.publisher', function () {
-    let index = parseInt(jQuery(this).data('id'));
-    // console.log('index:' + index);
-    main.review.author.publisher = jQuery(this).val();
-    print();
-});
+    $(document).on('keyup', '.rating', function () {
+        let index = parseInt(jQuery(this).data('id'));
+        recipeFormat.review[index] = Object.assign(recipeFormat.review[index],{"reviewRating" : {"@type": "Rating", "ratingValue": ""}})
 
-$(document).on('change', '#schema-json-ld', function() {
-    if($(this).val() !== 'home') {
-        window.location = 'json-ld-' + $(this).val() + '-schema-generator'
-    }else{
-        window.location = 'json-ld-schema-generator'
-    }
-});
+        if($(this).val().length == 0){
+            recipeFormat.review[index].reviewRating;
+        }else{
+            recipeFormat.review[index].reviewRating.ratingValue = $(this).val();
+        }
 
-jQuery('#copy').click(function () {
-    const copyText = jQuery('#json-format');
-    copyText.select();
-    // copyText.setSelectionRange(0, 999999); /*For mobile devices*/
-    document.execCommand("copy");
-});
+        // recipeFormat.tempreviewRatingValue[index] =  $(this).val();
+        // if($('.review').val().length == 0){
+        //     recipeFormat.review[index] = {
+        //         "@type": "Review",
+        //         "name": recipeFormat.tempReviewName[index],
+        //         "reviewBody": recipeFormat.tempReviewBody[index],
+        //         "reviewRating" : {
+        //             "@type": "Rating",
+        //             "ratingValue": $(this).val()
+        //         },
+        //         "author": {"@type": "Person", "name": ""}
+        //     };
+        // } else {
+        //     recipeFormat.review[index] = {
+        //         "@type": "Review",
+        //         "reviewBody": recipeFormat.tempReviewBody[index],
+        //         "reviewRating" : {
+        //             "@type": "Rating",
+        //             "ratingValue": $(this).val()
+        //         },
+        //         "author": {"@type": "Person", "name": ""}
+        //     };
+        // }
+
+
+        // recipeFormat.temp();
+        recipeFormat.render();
+
+    });
+
+
+
+
+    $(document).on('change', '.dateReview', function () {
+        let index = parseInt($(this).data('id'));
+
+        if($(this).val().length == 0){
+            delete recipeFormat.review[index].datePublished;
+        }else{
+            recipeFormat.review[index].datePublished = $(this).val();
+        }
+
+        recipeFormat.render();
+    });
+
+    $(document).on('keyup', '.authorReview', function () {
+        let index = parseInt(jQuery(this).data('id'));
+       recipeFormat.review[index].author.name = $(this).val();
+       recipeFormat.render();
+    });
+
+    jQuery(document).on('keyup', '.publisher', function () {
+        let index = parseInt(jQuery(this).data('id'));
+
+        if($(this).val().length == 0){
+            delete recipeFormat.review[index].publisher;
+        }else{
+            recipeFormat.review[index].publisher = {
+                "@type": "Organization", "name": $(this).val()
+            }
+        }
+        recipeFormat.render();
+    });
+
+    $(document).on('change', '#schema-json-ld', function() {
+        if($(this).val() !== 'home') {
+            window.location = 'json-ld-' + $(this).val() + '-schema-generator'
+        }else{
+            window.location = 'json-ld-schema-generator'
+        }
+    });
+
+    jQuery('#copy').click(function () {
+        const copyText = jQuery('#json-format');
+        copyText.select();
+        // copyText.setSelectionRange(0, 999999); /*For mobile devices*/
+        document.execCommand("copy");
+    });

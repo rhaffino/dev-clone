@@ -28,29 +28,27 @@ const jobSchema = class {
         this.jobLocation = {};
 
         this.applicantLocationRequirements = undefined;
-        this.baseSalary = {
-            "@type": "MonetaryAmount",
-            "currency": "",
-            "value": {
-                "@type": "QuantitativeValue",
-                "value": "",
-                "unitText": ""
-            }
-        };
+        this.baseSalary = {};
 
         this.tempStreetAdd = "";
         this.tempaddressLocality = "";
         this.tempPostalCode = "";
         this.tempAddressCountry = "";
         this.tempAddressRegion = "";
+        this.unitTextCur = "";
+        this.tempcurrency = "";
+
+        this.responsibilities = undefined;
+        this.skills = undefined;
+        this.qualifications = undefined;
+        this.educationRequirements = undefined;
+        this.experienceRequirements = undefined;
 
     }
 
     temp(){
 
         const tempObj = {};
-
-
 
         if(this.streetAddress) {
             tempObj.streetAddress = this.streetAddress;
@@ -70,6 +68,9 @@ const jobSchema = class {
         tempObj.tempAddressRegion = this.tempAddressRegion;
         tempObj.tempAddressCountry = this.tempAddressCountry;
 
+        tempObj.unitTextCur = this.unitTextCur;
+        tempObj.tempcurrency = this.tempcurrency;
+
         if(this.salaryValue) tempObj.salaryValue = this.salaryValue;
 
 
@@ -80,6 +81,7 @@ const jobSchema = class {
     }
 
     render(){
+
         const obj = {
             "@context": "https://schema.org/",
             "@type": "JobPosting",
@@ -121,7 +123,17 @@ const jobSchema = class {
 
         if(this.applicantLocationRequirements) obj.applicantLocationRequirements = this.applicantLocationRequirements;
 
-        if(this.baseSalary.value.value) obj.baseSalary = this.baseSalary;
+        if(this.baseSalary) obj.baseSalary = this.baseSalary;
+
+        if(this.responsibilities) obj.responsibilities = this.responsibilities;
+
+        if(this.skills) obj.skills = this.skills;
+
+        if(this.qualifications) obj.qualifications = this.qualifications;
+
+        if(this.educationRequirements) obj.educationRequirements = this.educationRequirements;
+
+        if(this.experienceRequirements) obj.experienceRequirements = this.experienceRequirements;
 
         $("#json-format").val("<script type=\"application/ld+json\">\n" + JSON.stringify(obj, undefined, 4) + "\n<\/script>");
         return obj;
@@ -130,31 +142,43 @@ const jobSchema = class {
 
     let jobFormat = new jobSchema();
 
-if($('#hide-province').is(":visible")){
-    jobFormat.jobLocation = {
-        "@type": "Place",
-        "address": {
-            "@type": "PostalAddress",
-            "streetAddress": jobFormat.tempStreetAdd,
-            "addressLocality": jobFormat.tempaddressLocality,
-            "postalCode": jobFormat.tempPostalCode,
-            "addressCountry": jobFormat.tempAddressCountry
+    jobFormat.baseSalary = {
+        "@type": "MonetaryAmount",
+        "currency": "",
+        "value": {
+            "@type": "QuantitativeValue",
+            "value": "",
+            "unitText": jobFormat.unitTextCur
         }
     }
 
-}else{
-    jobFormat.jobLocation = {
-        "@type": "Place",
-        "address": {
-            "@type": "PostalAddress",
-            "streetAddress": jobFormat.tempStreetAdd,
-            "addressLocality": jobFormat.tempaddressLocality,
-            "addressRegion": jobFormat.tempAddressRegion,
-            "postalCode": jobFormat.tempPostalCode,
-            "addressCountry": jobFormat.tempAddressCountry
+    if($('#hide-province').is(":visible")){
+        jobFormat.jobLocation = {
+            "@type": "Place",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": jobFormat.tempStreetAdd,
+                "addressLocality": jobFormat.tempaddressLocality,
+                "postalCode": jobFormat.tempPostalCode,
+                "addressCountry": jobFormat.tempAddressCountry
+            }
+        }
+
+    }else{
+        jobFormat.jobLocation = {
+            "@type": "Place",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": jobFormat.tempStreetAdd,
+                "addressLocality": jobFormat.tempaddressLocality,
+                "addressRegion": jobFormat.tempAddressRegion,
+                "postalCode": jobFormat.tempPostalCode,
+                "addressCountry": jobFormat.tempAddressCountry
+            }
         }
     }
-}
+    jobFormat.temp();
+
 
     jobFormat.render();
 
@@ -238,11 +262,15 @@ $("#province-show").hide();
 
     $('.street').keyup(function (e){
         jobFormat.jobLocation.address.streetAddress = $(this).val();
+        jobFormat.tempStreetAdd = $(this).val();
+        jobFormat.temp();
         jobFormat.render();
     });
 
     $('.city').keyup(function (e){
         jobFormat.jobLocation.address.addressLocality = $(this).val();
+        jobFormat.tempaddressLocality = $(this).val();
+        jobFormat.temp();
         jobFormat.render();
     });
 
@@ -335,16 +363,33 @@ $("#province-show").hide();
         } else {
             checkBox = 0;
             delete jobFormat.applicantLocationRequirements;
-            jobFormat.jobLocation = {
-                "@type": "Place",
-                "address" : {
-                    "@type": "PostalAddress",
-                    "streetAddress": jobFormat.tempStreetAdd,
-                    "addressLocality": jobFormat.tempaddressLocality,
-                    "postalCode": jobFormat.tempPostalCode,
-                    "addressCountry": jobFormat.tempAddressCountry
+
+            if($('.country').find(":selected").text() == 'Indonesia'){
+                jobFormat.jobLocation = {
+                    "@type": "Place",
+                    "address" : {
+                        "@type": "PostalAddress",
+                        "streetAddress": jobFormat.tempStreetAdd,
+                        "addressLocality": jobFormat.tempaddressLocality,
+                        "addressRegion": jobFormat.tempAddressRegion,
+                        "postalCode": jobFormat.tempPostalCode,
+                        "addressCountry": jobFormat.tempAddressCountry
+                    }
+                }
+            }else{
+                jobFormat.jobLocation = {
+                    "@type": "Place",
+                    "address" : {
+                        "@type": "PostalAddress",
+                        "streetAddress": jobFormat.tempStreetAdd,
+                        "addressLocality": jobFormat.tempaddressLocality,
+                        "postalCode": jobFormat.tempPostalCode,
+                        "addressCountry": jobFormat.tempAddressCountry
+                    }
                 }
             }
+
+
             $(".street, .city, div.province > button, .zipCode").removeAttr("disabled");
         }
         jobFormat.render();
@@ -354,8 +399,14 @@ $("#province-show").hide();
         if (this.value.length > 0) {
             $(".maxSalary, .currency, .unitText").removeAttr("disabled");
             $(".currency, .unitText").selectpicker("refresh");
-            jobFormat.baseSalary.value.value = $(this).val();
-            jobFormat.salaryValue = $(this).val();
+            if($('.maxSalary').val().length > 0) {
+                jobFormat.baseSalary.value.minValue = $(this).val();
+                jobFormat.salaryValue = $(this).val();
+            } else {
+                jobFormat.baseSalary.value.value = $(this).val();
+                jobFormat.salaryValue = $(this).val();
+            }
+
         } else {
             $(".maxSalary, .currency, .unitText").attr("disabled", true);
             $(".currency, .unitText").selectpicker("refresh");
@@ -365,159 +416,77 @@ $("#province-show").hide();
 
     $(".province").change(function() {
         jobFormat.jobLocation.address.addressRegion = $(this).val();
+        jobFormat.tempAddressRegion = $(this).val();
+        jobFormat.temp();
         jobFormat.render();
     });
 
-    $('.maxSalary').keyup(function (e) {
+
+    $(document).on('keyup', '.maxSalary', function () {
         if(this.value.length > 0){
-            delete jobFormat.baseSalary.value.value;
-            jobFormat.baseSalary.value = {
-                "@type": "QuantitativeValue",
-                "minValue": jobFormat.salaryValue,
-                "maxValue": $(this).val(),
-                "unitText": ""
+            jobFormat.baseSalary = {
+                "@type": "MonetaryAmount",
+                "currency": jobFormat.tempcurrency,
+                "value" : {
+                    "@type": "QuantitativeValue",
+                    "minValue": jobFormat.salaryValue,
+                    "maxValue": $(this).val(),
+                    "unitText": jobFormat.unitTextCur
+                }
             }
         }else{
-            delete jobFormat.baseSalary.value;
-            jobFormat.baseSalary.value = {
-                "@type": "QuantitativeValue",
-                "value": jobFormat.salaryValue,
-                "unitText": ""
+            jobFormat.baseSalary = {
+                "@type": "MonetaryAmount",
+                "currency": jobFormat.tempcurrency,
+                "value" : {
+                    "@type": "QuantitativeValue",
+                    "value": jobFormat.salaryValue,
+                    "unitText": jobFormat.unitTextCur
+                }
             }
         }
+        jobFormat.render();
     });
 
+    $('.currency').change(function (e) {
+        jobFormat.baseSalary.currency = $(this).val();
+        jobFormat.tempcurrency = $(this).val();
+        jobFormat.temp();
+        jobFormat.render();
+    });
 
-// jQuery(document).on('keyup', '.jobTitle', function () {
-//     let index = parseInt(jQuery(this).data('id'));
-//     // console.log('index:' + index);
-//     main.mainEntity[index].title = jQuery(this).val();
-//     print();
-// });
+    $('.unitText').change(function (e) {
+        jobFormat.baseSalary.value.unitText = $(this).val();
+        jobFormat.unitTextCur = $(this).val();
+        jobFormat.temp();
+        jobFormat.render();
+    });
 
-// jQuery(document).on('keyup', '.identifier', function () {
-//     let index = parseInt(jQuery(this).data('id'));
-//     // console.log('index:' + index);
-//     main.mainEntity[index].identifier = jQuery(this).val();
-//     print();
-// });
+    $('.responsibilities').keyup(function (e) {
+        jobFormat.responsibilities = this.value;
+        jobFormat.render();
+    });
 
-jQuery(document).on('keyup', '.description', function () {
-    let index = parseInt(jQuery(this).data('id'));
-    // console.log('index:' + index);
-    main.mainEntity[index].description = jQuery(this).val();
-    print();
-});
+    $('.skills').keyup(function (e) {
+        jobFormat.skills = this.value;
+        jobFormat.render();
+    });
 
+    $('.qualifications').keyup(function (e) {
+        jobFormat.qualifications = this.value;
+        jobFormat.render();
+    });
 
+    $('.educationRequirements').keyup(function (e) {
+        jobFormat.educationRequirements = this.value;
+        jobFormat.render();
+    });
 
-jQuery(document).on('keyup', '.city', function () {
-    let index = parseInt(jQuery(this).data('id'));
-    // console.log('index:' + index);
-    main.mainEntity[index].jobLocation.address.addressLocality = jQuery(this).val();
-    print();
-});
+    $('.experienceRequirements').keyup(function (e) {
+        jobFormat.experienceRequirements = this.value;
+        jobFormat.render();
+    });
 
-jQuery(document).on('keyup', '.country', function () {
-    let index = parseInt(jQuery(this).data('id'));
-    // console.log('index:' + index);
-    main.mainEntity[index].jobLocation.address.addressCountry = jQuery(this).val();
-    print();
-});
-
-// jQuery(document).on('keyup', '.salary', function () {
-//     let index = parseInt(jQuery(this).data('id'));
-//     // console.log('index:' + index);
-//     main.mainEntity[index].baseSalary.value.minValue = jQuery(this).val();
-//     print();
-// });
-
-jQuery(document).on('change', '.currency', function () {
-    let index = parseInt(jQuery(this).data('id'));
-    // console.log('index:' + index);
-    main.mainEntity[index].baseSalary.currency = jQuery(this).val();
-    print();
-});
-
-// jQuery(document).on('keyup', '.maxSalary', function () {
-//     let index = parseInt(jQuery(this).data('id'));
-//     // console.log('index:' + index);
-//     main.mainEntity[index].baseSalary.value.maxValue = jQuery(this).val();
-//     print();
-// });
-
-
-jQuery(document).on('change', '.unitText', function () {
-    let index = parseInt(jQuery(this).data('id'));
-    // console.log('index:' + index);
-    main.mainEntity[index].baseSalary.value.unitText = jQuery(this).val();
-    print();
-});
-
-jQuery(document).on('keyup', '.responsibilities', function () {
-    let index = parseInt(jQuery(this).data('id'));
-    // console.log('index:' + index);
-    main.mainEntity[index].responsibilities = jQuery(this).val();
-    print();
-});
-
-jQuery(document).on('keyup', '.skills', function () {
-    let index = parseInt(jQuery(this).data('id'));
-    // console.log('index:' + index);
-    main.mainEntity[index].skills = jQuery(this).val();
-    print();
-});
-
-jQuery(document).on('keyup', '.qualifications', function () {
-    let index = parseInt(jQuery(this).data('id'));
-    // console.log('index:' + index);
-    main.mainEntity[index].qualifications = jQuery(this).val();
-    print();
-});
-
-jQuery(document).on('keyup', '.educationRequirements', function () {
-    let index = parseInt(jQuery(this).data('id'));
-    // console.log('index:' + index);
-    main.mainEntity[index].educationRequirements = jQuery(this).val();
-    print();
-});
-
-jQuery(document).on('keyup', '.experienceRequirements', function () {
-    let index = parseInt(jQuery(this).data('id'));
-    // console.log('index:' + index);
-    main.mainEntity[index].experienceRequirements = jQuery(this).val();
-    print();
-});
-
-
-jQuery(document).on('click', '.delete', function () {
-    let index = parseInt(jQuery(this).data('id'));
-    if (index!==0){
-        main.mainEntity.splice(index, 1);
-        print();
-        for (let i = index + 1; i < main.mainEntity.length + 1; i++) {
-            jQuery('.jobTitle[data-id=' + (i - 1) + ']').val(jQuery('.jobTitle[data-id=' + (i) + ']').val())
-            jQuery('.identifier[data-id=' + (i - 1) + ']').val(jQuery('.identifier[data-id=' + (i) + ']').val())
-            jQuery('.employmentType[data-id=' + (i - 1) + ']').val(jQuery('.employmentType[data-id=' + (i) + ']').val())
-            jQuery('.description[data-id=' + (i - 1) + ']').val(jQuery('.description[data-id=' + (i) + ']').val())
-            jQuery('.name[data-id=' + (i - 1) + ']').val(jQuery('.name[data-id=' + (i) + ']').val())
-            jQuery('.companyUrl[data-id=' + (i - 1) + ']').val(jQuery('.companyUrl[data-id=' + (i) + ']').val())
-            jQuery('.industry[data-id=' + (i - 1) + ']').val(jQuery('.industry[data-id=' + (i) + ']').val())
-        }
-        jQuery('label[data-id=' + main.mainEntity.length + ']').remove();
-        jQuery('.jobTitle[data-id=' + main.mainEntity.length + ']').remove();
-        jQuery('.identifier[data-id=' + main.mainEntity.length + ']').remove();
-        jQuery('.description[data-id=' + main.mainEntity.length + ']').remove();
-        jQuery('.name[data-id=' + main.mainEntity.length + ']').remove();
-        jQuery('.companyUrl[data-id=' + main.mainEntity.length + ']').remove();
-        jQuery('.industry[data-id=' + main.mainEntity.length + ']').remove();
-        jQuery('.employmentType[data-id=' + main.mainEntity.length + ']').remove();
-        jQuery('.delete[data-id=' + main.mainEntity.length + ']').remove();
-        let row = parseInt(jQuery('#json-format').val().split('\n').length);
-        jQuery('#json-format').attr('rows',row);
-    }
-    sticky.update();
-});
 
 $(document).on('change', '#schema-json-ld', function() {
     if($(this).val() !== 'home') {

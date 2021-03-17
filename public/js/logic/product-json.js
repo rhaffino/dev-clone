@@ -91,6 +91,21 @@
 
 
             this.tempIdentify = [];
+
+            this.tempUrloffer = "";
+            this.temppriceCur = "";
+            this.tempprice = "";
+            this.tempHighPrice = "";
+
+            this.tempPriceValid = "";
+            this.tempAvailability = "";
+            this.tempItemCondition = "";
+
+            this.tempaggRate = "";
+            this.tempnumOfRate = "";
+            this.temphighestval = "";
+            this.templowestval = "";
+
         }
 
         temp(){
@@ -98,10 +113,22 @@
 
             tempObj.price = this.price;
             tempObj.lowPrice = this.price;
-            // tempObj.highPrice = this.highPrice;
             tempObj.url = this.url;
 
-            // if(this.offers.url) tempObj.offers.url = this.offers.url;
+            tempObj.tempUrloffer = this.tempUrloffer;
+            tempObj.tempprice = this.tempprice;
+            tempObj.temppriceCur = this.temppriceCur;
+            tempObj.tempHighPrice = this.tempHighPrice;
+
+            tempObj.tempPriceValid = this.tempPriceValid;
+            tempObj.tempAvailability = this.tempAvailability;
+            tempObj.tempItemCondition = this.tempItemCondition;
+
+            tempObj.tempaggRate = this.tempaggRate;
+            tempObj.tempnumOfRate = this.tempnumOfRate;
+            tempObj.temphighestval = this.temphighestval;
+            tempObj.templowestval = this.templowestval;
+
 
             return tempObj;
         }
@@ -133,7 +160,10 @@
                 obj.offers.lowPrice = this.offers.lowPrice;
                 if(this.offers.price) obj.offers.price = this.offers.price;
                 if(this.offers.highPrice) obj.offers.highPrice = this.offers.highPrice;
-                if(this.offers.offerCount) obj.offers.offerCount = this.offers.offerCount
+                if(this.offers.offerCount) obj.offers.offerCount = this.offers.offerCount;
+                if(this.offers.priceValidUntil) obj.offers.priceValidUntil = this.offers.priceValidUntil;
+                if(this.offers.availability) obj.offers.availability = this.offers.availability;
+                if(this.offers.itemCondition) obj.offers.itemCondition = this.offers.itemCondition;
             }
 
             if(this.aggregateRating) obj.aggregateRating = this.aggregateRating;
@@ -157,18 +187,6 @@
 
     let productFormat = new productSchema();
     productFormat.render();
-
-jQuery(document).ready(function () {
-    let deletes = lang ==='en'? 'Delete' : 'Hapus';
-    let jobTitle = lang ==='en'?'JobTitle':'Jabatan';
-    let identifier = lang==='en'?'Identifier':'Identifier';
-    let description = lang ==='en'?'Description':'Deskripsi';
-    let name = lang==='en'?'Name':'Nama';
-    let companyUrl = lang==='en'?'CompanyUrl':'UrlCompany';
-    let industry = lang==='en'?'Industry':'Industry';
-    let employmentType = lang==='en'?'EmploymentType':'TipePegawai';
-
-});
 
     $('.name').keyup(function (e) {
         productFormat.name = $(this).val();
@@ -272,18 +290,25 @@ jQuery(document).ready(function () {
 
     $('.url').keyup(function (e) {
         productFormat.offers.url = $(this).val();
+        productFormat.tempUrloffer = $(this).val();
         productFormat.temp();
         productFormat.render();
     });
 
     $('.priceCurrency').change(function (e) {
         productFormat.offers.priceCurrency = $(this).val();
+        productFormat.temppriceCur = $(this).val();
         productFormat.temp();
         productFormat.render();
     });
 
     $('.price').keyup(function (e) {
-        productFormat.offers.price = $(this).val();
+        if(productFormat.offers.lowPrice !== undefined){
+            productFormat.offers.lowPrice = $(this).val();
+        } else {
+            productFormat.offers.price = $(this).val();
+        }
+        productFormat.tempprice = $(this).val();
         productFormat.temp();
         productFormat.render();
     });
@@ -293,7 +318,9 @@ jQuery(document).ready(function () {
             delete productFormat.offers.highPrice;
         }else{
             productFormat.offers.highPrice = $(this).val();
+            productFormat.tempHighPrice = $(this).val();
         }
+        productFormat.temp();
         productFormat.render();
     });
 
@@ -315,10 +342,6 @@ jQuery(document).ready(function () {
             $('.bestRating').attr('disabled', true)
             $('.worstRating').attr('disabled', true)
             delete productFormat.aggregateRating;
-            $('.ratingCount').val('');
-            $('.bestRating').val('');
-            $('.worstRating').val('');
-
         }else{
             $('.ratingCount').removeAttr('disabled')
             $('.bestRating').removeAttr('disabled')
@@ -326,28 +349,36 @@ jQuery(document).ready(function () {
             productFormat.aggregateRating = {
                 "@type": "AggregateRating",
                 "ratingValue": $(this).val(),
-                "bestRating": "",
-                "worstRating": "",
-                "ratingCount": ""
+                "bestRating": productFormat.temphighestval,
+                "worstRating": productFormat.templowestval,
+                "ratingCount": productFormat.tempnumOfRate
             }
+            productFormat.tempaggRate = $(this).val();
         }
 
+        productFormat.temp();
         productFormat.render();
 
     });
 
     $('.ratingCount').keyup(function (e) {
         productFormat.aggregateRating.ratingCount = $(this).val();
+        productFormat.tempnumOfRate = $(this).val();
+        productFormat.temp();
         productFormat.render();
     });
 
     $('.bestRating').keyup(function (e) {
         productFormat.aggregateRating.bestRating = $(this).val();
+        productFormat.temphighestval = $(this).val();
+        productFormat.temp();
         productFormat.render();
     });
 
     $('.worstRating').keyup(function (e) {
         productFormat.aggregateRating.worstRating = $(this).val();
+        productFormat.templowestval = $(this).val();
+        productFormat.temp();
         productFormat.render();
     });
 
@@ -430,7 +461,28 @@ jQuery(document).ready(function () {
         }
     });
 
-    jQuery('#copy').click(function () {
+    $('.validThrough').change(function (e) {
+        productFormat.tempPriceValid = $(this).val();
+        productFormat.offers.priceValidUntil = $(this).val();
+        productFormat.temp();
+        productFormat.render();
+    });
+
+    $('.availability').change(function (e) {
+        productFormat.tempAvailability = $(this).val();
+        productFormat.offers.availability = $(this).val();
+        productFormat.temp();
+        productFormat.render();
+    });
+
+    $('.condition').change(function (e) {
+        productFormat.tempItemCondition = $(this).val();
+        productFormat.offers.itemCondition = $(this).val();
+        productFormat.temp();
+        productFormat.render();
+    })
+
+    $('#copy').click(function () {
         const copyText = jQuery('#json-format');
         copyText.select();
         // copyText.setSelectionRange(0, 999999); /*For mobile devices*/
@@ -441,12 +493,24 @@ jQuery(document).ready(function () {
         var selectedItem = $(this).val();
 
         if(selectedItem === "Aggregate Offer") {
-            productFormat.offers = {
-                "@type": "AggregateOffer",
-                "url": "",
-                "priceCurrency": "",
-                "lowPrice": ""
+            if(productFormat.tempHighPrice != "") {
+                productFormat.offers = {
+                    "@type": "AggregateOffer",
+                    "url": productFormat.tempUrloffer,
+                    "priceCurrency": productFormat.temppriceCur,
+                    "lowPrice": productFormat.tempprice,
+                    "highPrice": productFormat.tempHighPrice
+                }
+            } else {
+                productFormat.offers = {
+                    "@type": "AggregateOffer",
+                    "url": productFormat.tempUrloffer,
+                    "priceCurrency": productFormat.temppriceCur,
+                    "lowPrice": productFormat.tempprice
+                }
             }
+
+
             $(".url, .price, .priceCurrency").removeAttr("disabled");
             $(".priceCurrency").selectpicker("refresh");
             $("#ag_offer").removeClass('d-none');
@@ -454,10 +518,15 @@ jQuery(document).ready(function () {
         }else if(selectedItem === "Offer"){
             productFormat.offers = {
                 "@type": "Offer",
-                "url": "",
-                "priceCurrency": "",
-                "price": ""
+                "url": productFormat.tempUrloffer,
+                "priceCurrency": productFormat.temppriceCur,
+                "price": productFormat.tempprice
             }
+
+            if(productFormat.tempPriceValid !== "") productFormat.offers.priceValidUntil = productFormat.tempPriceValid;
+            if(productFormat.tempAvailability !== "") productFormat.offers.availability = productFormat.tempAvailability;
+            if(productFormat.tempItemCondition !== "") productFormat.offers.itemCondition = productFormat.tempItemCondition;
+
             $(".url, .price, .priceCurrency").removeAttr("disabled");
             $(".priceCurrency").selectpicker("refresh");
             $("#offer").removeClass('d-none');

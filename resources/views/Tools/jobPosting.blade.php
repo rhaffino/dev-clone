@@ -187,10 +187,10 @@ id/json-ld-jobPosting-schema-generator
                                     <div class="col-6 col-xl-2">
                                         <label class="text-black font-weight-bold" for="unitText">Per-</label>
                                         <select class="form-control selectpicker custom-select-blue unitText mb-5" tabindex="null" disabled="disabled">
-                                            <option value="Hour">@lang('jobPosting.unitText-opt-1')</option>
-                                            <option value="Week">@lang('jobPosting.unitText-opt-2')</option>
-                                            <option value="Month">@lang('jobPosting.unitText-opt-3')</option>
-                                            <option value="Year">@lang('jobPosting.unitText-opt-4')</option>
+                                            <option value="HOUR">@lang('jobPosting.unitText-opt-1')</option>
+                                            <option value="WEEK">@lang('jobPosting.unitText-opt-2')</option>
+                                            <option value="MONTH">@lang('jobPosting.unitText-opt-3')</option>
+                                            <option value="YEAR">@lang('jobPosting.unitText-opt-4')</option>
                                         </select>
                                     </div>
                                 </div>
