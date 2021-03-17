@@ -15,6 +15,9 @@ id/ssl-checker
 @endsection
 
 @section('content')
+@if ($is_maintenance)
+    @include('layouts.maintenance')
+@else
 <div class="container container-tools mb-10">
     <div class="d-flex flex-column-fluid">
         <div class="container-fluid px-0">
@@ -26,7 +29,7 @@ id/ssl-checker
                         <i id="noCrawl" class='bx bxs-shield text-white bx-md mr-3'></i>
                         <i id="crawlHttps" style="display: none;" class='bx bxs-check-shield text-white bx-md mr-3'></i>
                         <i id="crawlHttp" style="display: none;" class='bx bxs-shield-x text-white bx-md mr-3'></i>
-                        <input id="url" type="url" class="form-control lookup-url" name="" value="" autocomplete="off" placeholder="https://example.com">
+                        <input id="url" type="url" class="form-control lookup-url" name="" value="" autocomplete="off" placeholder="example.com">
                     </div>
                     <div class="col-sm-3 col-md-2 col-lg-3 col-xl-2 d-flex justify-content-end py-1">
                         <button id="crawlButton" type="button" class="btn btn-crawl" name="button">@lang('sslchecker.btn-check')</button>
@@ -128,6 +131,7 @@ id/ssl-checker
         </div>
     </div>
 </div>
+@endif
 <div class="" style="background:white" id="ssl-description">
     <div class="container container-description">
         <div class="row">
@@ -274,22 +278,7 @@ id/ssl-checker
                 </div>
             </div>
         </div>
-        <div class="my-10" style="background:var(--darkgrey); border-radius:20px">
-            <div class="row">
-                <div class="col-md-6 py-5">
-                    <div class="robo-container">
-                        <img src="{{asset('/media/images/robo-footer.png')}}" alt="" class="robo-img">
-                    </div>
-                </div>
-                <div class="col-md-6 py-10 pr-10">
-                    <div class="robo-text-container">
-                        <h2 class="text-white">@lang('layout.banner-robo-title')</h2>
-                        <p class="text-white">@lang('layout.banner-robo-desc')</p>
-                        <button onclick="window.open('https://cmlabs.co','_blank')" type="button" class="btn btn-explore " name="button">@lang('layout.banner-robo-btn')</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+        @include('layouts.roboDesc')
         {{--
         <div class="row mb-10">
             <div class="col-md-6">

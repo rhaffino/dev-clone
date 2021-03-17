@@ -795,17 +795,23 @@ a:hover {
 }
 
 .btn-explore {
-    background: white;
-    color: var(--black);
+    background: white !important;
+    color: var(--black) !important;
     border-radius: 20px;
     font-weight: bold;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 
 .btn-explore:hover {
-    background: var(--lightgrey);
-    color: var(--black);
+    background: var(--lightgrey) !important;
+    color: var(--black) !important;
     border-radius: 20px;
     font-weight: bold;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 
 .robo-img {
@@ -2181,4 +2187,42 @@ textarea.input-meta-description {
 
 .custom-searchbox .dropdown-menu .bs-searchbox .form-control:focus {
     border-color: transparent;
+}
+
+.container-maintenance {
+    width: 35%;
+}
+
+@media only screen and (min-width:992px) and (max-width:1199px) {
+    .container-maintenance {
+        width: 40%;
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:991px) {
+    .container-maintenance {
+        width: 45%;
+    }
+}
+
+@media only screen and (min-width:576px) and (max-width:767px) {
+    .container-maintenance {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width:575px){
+    .container-maintenance {
+        width: 80%;
+    }
+}
+
+.btn-back-home {
+    color: var(--primaryblue) !important;
+    cursor: pointer;
+}
+
+.btn-back-home:hover {
+    color: #037BCB !important;
+    cursor: pointer;
 }

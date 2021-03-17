@@ -60,4 +60,8 @@ return [
     "invalid-url" => "URL Tidak Valid",
     "invalid-number" => "Nilai harus lebih dari 0",
     "which-schema" => "Skema mana yang ingin Anda buat?",
+    "maintenance-title" => "Tool ini sedang dalam perbaikan!",
+    "maintenance-desc-1" => "Tim kami sedang meningkatkan kinerja tool.",
+    "maintenance-desc-2" => "Mohon tunggu update selanjutnya!",
+    "maintenance-button" => "Kembali ke Beranda",
 ];

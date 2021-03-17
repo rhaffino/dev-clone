@@ -30,7 +30,10 @@ class ToolsController extends Controller
         $dataID = $this->HomeController->getBlogWordpressId();
         $dataEN = $this->HomeController->getBlogWordpressEn();
         $local = App::getLocale();
-        return view('Tools/sslchecker', compact('local', 'dataID', 'dataEN'));
+
+        $is_maintenance = in_array('ssl-checker', explode(',', env('TOOLS_MAINTENANCE'))) && env('APP_ENV') === 'production';
+
+        return view('Tools/sslchecker', compact('local', 'dataID', 'dataEN', 'is_maintenance'));
     }
 
     public function jsonld($lang)
@@ -48,7 +51,10 @@ class ToolsController extends Controller
         $dataID = $this->HomeController->getBlogWordpressId();
         $dataEN = $this->HomeController->getBlogWordpressEn();
         $local = App::getLocale();
-        return view('Tools/faq', compact('local', 'dataID', 'dataEN'));
+
+        $is_maintenance = in_array('faq', explode(',', env('TOOLS_MAINTENANCE'))) && env('APP_ENV') === 'production';
+
+        return view('Tools/faq', compact('local', 'dataID', 'dataEN', 'is_maintenance'));
     }
 
     public function breadcrumb($lang)
@@ -57,7 +63,10 @@ class ToolsController extends Controller
         $dataID = $this->HomeController->getBlogWordpressId();
         $dataEN = $this->HomeController->getBlogWordpressEn();
         $local = App::getLocale();
-        return view('Tools/breadcrumb', compact('local', 'dataID', 'dataEN'));
+
+        $is_maintenance = in_array('breadcrumb', explode(',', env('TOOLS_MAINTENANCE'))) && env('APP_ENV') === 'production';
+
+        return view('Tools/breadcrumb', compact('local', 'dataID', 'dataEN', 'is_maintenance'));
     }
 
     public function howto($lang)
@@ -71,7 +80,10 @@ class ToolsController extends Controller
         $currencies = json_decode(file_get_contents($path_currencies), true);
 
         $local = App::getLocale();
-        return view('Tools/howto', compact('local', 'dataID', 'dataEN', 'currencies'));
+
+        $is_maintenance = in_array('how-to', explode(',', env('TOOLS_MAINTENANCE'))) && env('APP_ENV') === 'production';
+
+        return view('Tools/howto', compact('local', 'dataID', 'dataEN', 'currencies', 'is_maintenance'));
     }
 
     public function jobposting($lang)
@@ -93,7 +105,10 @@ class ToolsController extends Controller
         $currencies = json_decode(file_get_contents($path_currencies), true);
 
         $local = App::getLocale();
-        return view('Tools/jobPosting', compact('local', 'dataID', 'dataEN','region','province','currencies'));
+
+        $is_maintenance = in_array('job-posting', explode(',', env('TOOLS_MAINTENANCE'))) && env('APP_ENV') === 'production';
+
+        return view('Tools/jobPosting', compact('local', 'dataID', 'dataEN','region','province','currencies', 'is_maintenance'));
     }
 
     public function person($lang)
@@ -102,7 +117,10 @@ class ToolsController extends Controller
         $dataID = $this->HomeController->getBlogWordpressId();
         $dataEN = $this->HomeController->getBlogWordpressEn();
         $local = App::getLocale();
-        return view('Tools/person', compact('local', 'dataID', 'dataEN'));
+
+        $is_maintenance = in_array('person', explode(',', env('TOOLS_MAINTENANCE'))) && env('APP_ENV') === 'production';
+
+        return view('Tools/person', compact('local', 'dataID', 'dataEN', 'is_maintenance'));
     }
 
     public function product($lang)
@@ -116,7 +134,10 @@ class ToolsController extends Controller
         $currencies = json_decode(file_get_contents($path_currencies), true);
 
         $local = App::getLocale();
-        return view('Tools/product', compact('local', 'dataID', 'dataEN', 'currencies'));
+
+        $is_maintenance = in_array('product', explode(',', env('TOOLS_MAINTENANCE'))) && env('APP_ENV') === 'production';
+
+        return view('Tools/product', compact('local', 'dataID', 'dataEN', 'currencies', 'is_maintenance'));
     }
 
     public function recipe($lang)
@@ -125,7 +146,10 @@ class ToolsController extends Controller
         $dataID = $this->HomeController->getBlogWordpressId();
         $dataEN = $this->HomeController->getBlogWordpressEn();
         $local = App::getLocale();
-        return view('Tools/recipe', compact('local', 'dataID', 'dataEN'));
+
+        $is_maintenance = in_array('recipe', explode(',', env('TOOLS_MAINTENANCE'))) && env('APP_ENV') === 'production';
+
+        return view('Tools/recipe', compact('local', 'dataID', 'dataEN', 'is_maintenance'));
     }
 
     public function wordcounter($lang)
@@ -134,7 +158,10 @@ class ToolsController extends Controller
         $dataID = $this->HomeController->getBlogWordpressId();
         $dataEN = $this->HomeController->getBlogWordpressEn();
         $local = App::getLocale();
-        return view('Tools/wordcounter', compact('local', 'dataID', 'dataEN'));
+
+        $is_maintenance = in_array('word-counter', explode(',', env('TOOLS_MAINTENANCE'))) && env('APP_ENV') === 'production';
+
+        return view('Tools/wordcounter', compact('local', 'dataID', 'dataEN', 'is_maintenance'));
     }
 
     public function creditcard($local)
@@ -157,7 +184,10 @@ class ToolsController extends Controller
         $dataID = $this->HomeController->getBlogWordpressId();
         $dataEN = $this->HomeController->getBlogWordpressEn();
         $local = App::getLocale();
-        return view('Tools/metachecker', compact('local', 'dataID', 'dataEN'));
+
+        $is_maintenance = in_array('meta-checker', explode(',', env('TOOLS_MAINTENANCE'))) && env('APP_ENV') === 'production';
+
+        return view('Tools/metachecker', compact('local', 'dataID', 'dataEN', 'is_maintenance'));
     }
 
     public function pagespeed($lang)
@@ -166,7 +196,10 @@ class ToolsController extends Controller
         $dataID = $this->HomeController->getBlogWordpressId();
         $dataEN = $this->HomeController->getBlogWordpressEn();
         $local = App::getLocale();
-        return view('Tools/pagespeed', compact('local', 'dataID', 'dataEN'));
+
+        $is_maintenance = in_array('page-speed', explode(',', env('TOOLS_MAINTENANCE'))) && env('APP_ENV') === 'production';
+
+        return view('Tools/pagespeed', compact('local', 'dataID', 'dataEN', 'is_maintenance'));
     }
 
     public function mobiletest($lang)
@@ -175,7 +208,10 @@ class ToolsController extends Controller
       $dataID = $this->HomeController->getBlogWordpressId();
       $dataEN = $this->HomeController->getBlogWordpressEn();
       $local = App::getLocale();
-      return view('Tools/mobiletest', compact('local', 'dataID', 'dataEN'));
+
+      $is_maintenance = in_array('mobile-test', explode(',', env('TOOLS_MAINTENANCE'))) && env('APP_ENV') === 'production';
+
+      return view('Tools/mobiletest', compact('local', 'dataID', 'dataEN', 'is_maintenance'));
     }
 
     public function sitemap($lang)
@@ -184,7 +220,10 @@ class ToolsController extends Controller
       $dataID = $this->HomeController->getBlogWordpressId();
       $dataEN = $this->HomeController->getBlogWordpressEn();
       $local = App::getLocale();
-      return view('Tools/sitemap', compact('local', 'dataID', 'dataEN'));
+
+      $is_maintenance = in_array('sitemap-generator', explode(',', env('TOOLS_MAINTENANCE'))) && env('APP_ENV') === 'production';
+
+      return view('Tools/sitemap', compact('local', 'dataID', 'dataEN', 'is_maintenance'));
     }
 
     public function robotgenerator($lang)
@@ -193,7 +232,10 @@ class ToolsController extends Controller
         $dataID = $this->HomeController->getBlogWordpressId();
         $dataEN = $this->HomeController->getBlogWordpressEn();
         $local = App::getLocale();
-        return view('Tools/robotgenerator', compact('local', 'dataID', 'dataEN'));
+
+        $is_maintenance = in_array('robot-generator', explode(',', env('TOOLS_MAINTENANCE'))) && env('APP_ENV') === 'production';
+
+        return view('Tools/robotgenerator', compact('local', 'dataID', 'dataEN', 'is_maintenance'));
     }
 
     public function technologylookup($lang)
@@ -204,7 +246,10 @@ class ToolsController extends Controller
 //        $dataID = $this->HomeController->getBlogWordpressId();
 //        $dataEN = $this->HomeController->getBlogWordpressEn();
         $local = App::getLocale();
-        return view('Tools/technologylookup', compact('local', 'dataID', 'dataEN'));
+
+        $is_maintenance = in_array('technology-lookup', explode(',', env('TOOLS_MAINTENANCE'))) && env('APP_ENV') === 'production';
+
+        return view('Tools/technologylookup', compact('local', 'dataID', 'dataEN', 'is_maintenance'));
     }
 
     public function redirectchecker($lang)
@@ -213,7 +258,10 @@ class ToolsController extends Controller
         $dataID = $this->HomeController->getBlogWordpressId();
         $dataEN = $this->HomeController->getBlogWordpressEn();
         $local = App::getLocale();
-        return view('Tools/redirectchecker', compact('local', 'dataID', 'dataEN'));
+
+        $is_maintenance = in_array('redirect-checker', explode(',', env('TOOLS_MAINTENANCE'))) && env('APP_ENV') === 'production';
+
+        return view('Tools/redirectchecker', compact('local', 'dataID', 'dataEN', 'is_maintenance'));
     }
 
     public function hreflangchecker($lang)
@@ -222,7 +270,10 @@ class ToolsController extends Controller
         $dataID = $this->HomeController->getBlogWordpressId();
         $dataEN = $this->HomeController->getBlogWordpressEn();
         $local = App::getLocale();
-        return view('Tools/hreflangchecker', compact('local', 'dataID', 'dataEN'));
+
+        $is_maintenance = in_array('hreflang-checker', explode(',', env('TOOLS_MAINTENANCE'))) && env('APP_ENV') === 'production';
+
+        return view('Tools/hreflangchecker', compact('local', 'dataID', 'dataEN', 'is_maintenance'));
     }
 
     public function linkanalyzer($lang)
@@ -231,7 +282,10 @@ class ToolsController extends Controller
         $dataID = $this->HomeController->getBlogWordpressId();
         $dataEN = $this->HomeController->getBlogWordpressEn();
         $local = App::getLocale();
-        return view('Tools/linkanalyzer', compact('local', 'dataID', 'dataEN'));
+
+        $is_maintenance = in_array('link-analyzer', explode(',', env('TOOLS_MAINTENANCE'))) && env('APP_ENV') === 'production';
+
+        return view('Tools/linkanalyzer', compact('local', 'dataID', 'dataEN', 'is_maintenance'));
     }
 
     public function keywordresearch($lang)
@@ -240,7 +294,10 @@ class ToolsController extends Controller
         $dataID = $this->HomeController->getBlogWordpressId();
         $dataEN = $this->HomeController->getBlogWordpressEn();
         $local = App::getLocale();
-        return view('Tools/keywordresearch', compact('local', 'dataID', 'dataEN'));
+
+        $is_maintenance = in_array('keyword-research', explode(',', env('TOOLS_MAINTENANCE'))) && env('APP_ENV') === 'production';
+
+        return view('Tools/keywordresearch', compact('local', 'dataID', 'dataEN', 'is_maintenance'));
     }
 
     public function englishVersion()
