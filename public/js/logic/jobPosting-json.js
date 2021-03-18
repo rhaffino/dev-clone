@@ -28,6 +28,59 @@ const jobSchema = class {
         this.jobLocation = {};
 
         this.applicantLocationRequirements = undefined;
+        this.baseSalary = {};
+
+        this.tempStreetAdd = "";
+        this.tempaddressLocality = "";
+        this.tempPostalCode = "";
+        this.tempAddressCountry = "";
+        this.tempAddressRegion = "";
+        this.unitTextCur = "";
+        this.tempcurrency = "";
+
+        this.responsibilities = undefined;
+        this.skills = undefined;
+        this.qualifications = undefined;
+        this.educationRequirements = undefined;
+        this.experienceRequirements = undefined;
+
+    }
+
+    resetrender(){
+        this.country = '';
+        this.streetAddress = '';
+        this.addressLocality = '';
+        this.postalCode = '';
+        this.title = '';
+        this.description = '';
+        this.salaryValue = '';
+        this.identify = {
+            "@type": "PropertyValue",
+            "name": "",
+            "value":""
+        };
+        this.hiring = {
+            "@type": "Organization",
+            "name": ""
+        };
+        this.industry = undefined;
+        this.employmentType = undefined;
+        this.workHours = undefined;
+        this.datePosted = '';
+        this.validThrough = '';
+
+        this.jobLocation = {
+            "@type": "Place",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "",
+                "addressLocality": "",
+                "postalCode": "",
+                "addressCountry": ""
+            }
+        };
+
+        this.applicantLocationRequirements = undefined;
         this.baseSalary = {
             "@type": "MonetaryAmount",
             "currency": "",
@@ -38,26 +91,114 @@ const jobSchema = class {
             }
         };
 
+        this.tempStreetAdd = "";
+        this.tempaddressLocality = "";
+        this.tempPostalCode = "";
+        this.tempAddressCountry = "";
+        this.tempAddressRegion = "";
+        this.unitTextCur = "";
+        this.tempcurrency = "";
+
+        this.responsibilities = undefined;
+        this.skills = undefined;
+        this.qualifications = undefined;
+        this.educationRequirements = undefined;
+        this.experienceRequirements = undefined;
+
+        const resetObj = {
+            "@context": "https://schema.org/",
+            "@type": "JobPosting",
+            title:this.title,
+            description:this.description,
+
+        }
+
+
+        resetObj.title = this.title;
+
+        resetObj.description = this.description;
+
+        if(this.identify.name || this.identify.value) resetObj.identifier = this.identify;
+
+        resetObj.hiringOrganization = this.hiring;
+
+        if(this.industry) resetObj.industry = this.industry;
+
+        if(this.employmentType) resetObj.employmentType = this.employmentType;
+
+        if(this.workHours) resetObj.workHours = this.workHours;
+
+        resetObj.datePosted = this.datePosted;
+
+        resetObj.validThrough = this.validThrough;
+
+        if(this.hiring.length > 0){
+            if(this.hiring.length === 1){
+                resetObj.hiringOrganization = this.hiring[0];
+            } else {
+                resetObj.hiringOrganization = this.hiring;
+            }
+        }
+
+        resetObj.jobLocation = this.jobLocation;
+
+        // if(this.jobLocationReg) obj.jobLocation = this.jobLocationReg;
+
+        if(this.applicantLocationRequirements) resetObj.applicantLocationRequirements = this.applicantLocationRequirements;
+
+        resetObj.baseSalary = this.baseSalary;
+
+        if(this.responsibilities) resetObj.responsibilities = this.responsibilities;
+
+        if(this.skills) resetObj.skills = this.skills;
+
+        if(this.qualifications) resetObj.qualifications = this.qualifications;
+
+        if(this.educationRequirements) resetObj.educationRequirements = this.educationRequirements;
+
+        if(this.experienceRequirements) resetObj.experienceRequirements = this.experienceRequirements;
+
+        $("#json-format").val("<script type=\"application/ld+json\">\n" + JSON.stringify(resetObj, undefined, 4) + "\n<\/script>");
+        return resetObj;
+
     }
 
     temp(){
 
         const tempObj = {};
 
+        if(this.streetAddress) {
+            tempObj.streetAddress = this.streetAddress;
+        }
 
-        if(this.streetAddress) tempObj.streetAddress = this.streetAddress;
+        if(this.addressLocality) {
+            tempObj.addressLocality = this.addressLocality;
+        }
 
-        if(this.addressLocality) tempObj.addressLocality = this.addressLocality;
+        if(this.postalCode) {
+            tempObj.postalCode = this.postalCode;
+        }
 
-        if(this.postalCode) tempObj.postalCode = this.postalCode;
+        tempObj.tempStreetAdd = this.tempStreetAdd;
+        tempObj.tempaddressLocality = this.tempaddressLocality;
+        tempObj.tempPostalCode = this.tempPostalCode;
+        tempObj.tempAddressRegion = this.tempAddressRegion;
+        tempObj.tempAddressCountry = this.tempAddressCountry;
+
+        tempObj.unitTextCur = this.unitTextCur;
+        tempObj.tempcurrency = this.tempcurrency;
 
         if(this.salaryValue) tempObj.salaryValue = this.salaryValue;
+
+
+
         tempObj.country = this.country;
 
         return tempObj;
     }
 
     render(){
+
         const obj = {
             "@context": "https://schema.org/",
             "@type": "JobPosting",
@@ -99,7 +240,17 @@ const jobSchema = class {
 
         if(this.applicantLocationRequirements) obj.applicantLocationRequirements = this.applicantLocationRequirements;
 
-        if(this.baseSalary.value.value) obj.baseSalary = this.baseSalary;
+        if(this.baseSalary) obj.baseSalary = this.baseSalary;
+
+        if(this.responsibilities) obj.responsibilities = this.responsibilities;
+
+        if(this.skills) obj.skills = this.skills;
+
+        if(this.qualifications) obj.qualifications = this.qualifications;
+
+        if(this.educationRequirements) obj.educationRequirements = this.educationRequirements;
+
+        if(this.experienceRequirements) obj.experienceRequirements = this.experienceRequirements;
 
         $("#json-format").val("<script type=\"application/ld+json\">\n" + JSON.stringify(obj, undefined, 4) + "\n<\/script>");
         return obj;
@@ -108,49 +259,60 @@ const jobSchema = class {
 
     let jobFormat = new jobSchema();
 
-if($('#hide-province').is(":visible")){
-    jobFormat.jobLocation = {
-        "@type": "Place",
-        "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "",
-            "addressLocality": "",
-            "postalCode": "",
-            "addressCountry": ""
+    jobFormat.baseSalary = {
+        "@type": "MonetaryAmount",
+        "currency": "",
+        "value": {
+            "@type": "QuantitativeValue",
+            "value": "",
+            "unitText": jobFormat.unitTextCur
         }
     }
 
-}else{
-    jobFormat.jobLocation = {
-        "@type": "Place",
-        "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "",
-            "addressLocality": "",
-            "addressRegion": "",
-            "postalCode": "",
-            "addressCountry": ""
+    if($('#hide-province').is(":visible")){
+        jobFormat.jobLocation = {
+            "@type": "Place",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": jobFormat.tempStreetAdd,
+                "addressLocality": jobFormat.tempaddressLocality,
+                "postalCode": jobFormat.tempPostalCode,
+                "addressCountry": jobFormat.tempAddressCountry
+            }
+        }
+
+    }else{
+        jobFormat.jobLocation = {
+            "@type": "Place",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": jobFormat.tempStreetAdd,
+                "addressLocality": jobFormat.tempaddressLocality,
+                "addressRegion": jobFormat.tempAddressRegion,
+                "postalCode": jobFormat.tempPostalCode,
+                "addressCountry": jobFormat.tempAddressCountry
+            }
         }
     }
-}
+    jobFormat.temp();
+
 
     jobFormat.render();
 
 $("#province-show").hide();
 
-jQuery(document).ready(function () {
+    // jQuery(document).on('keyup', '.name', function () {
+    //     let index = parseInt(jQuery(this).data('id'));
+    //     // console.log('index:' + index);
+    //     main.mainEntity[index].hiringOrganization.name = jQuery(this).val();
+    //     print();
+    // });
 
-    let deletes = lang ==='en'? 'Delete' : 'Hapus';
-    let jobTitle = lang ==='en'?'JobTitle':'Jabatan';
-    let identifier = lang==='en'?'Identifier':'Identifier';
-    let description = lang ==='en'?'Description':'Deskripsi';
-    let name = lang==='en'?'Name':'Nama';
-    let companyUrl = lang==='en'?'CompanyUrl':'UrlCompany';
-    let industry = lang==='en'?'Industry':'Industry';
-    let employmentType = lang==='en'?'EmploymentType':'TipePegawai';
-
-
-});
+    $('.name').keyup(function (e) {
+        let index = parseInt($(this).data('id'));
+        jobFormat.hiring.name = $(this).val();
+        jobFormat.render();
+    });
 
     $('.jobTitle').keyup(function(event){
         // let index = parseInt($(this).data('id'));
@@ -217,16 +379,22 @@ jQuery(document).ready(function () {
 
     $('.street').keyup(function (e){
         jobFormat.jobLocation.address.streetAddress = $(this).val();
+        jobFormat.tempStreetAdd = $(this).val();
+        jobFormat.temp();
         jobFormat.render();
     });
 
     $('.city').keyup(function (e){
         jobFormat.jobLocation.address.addressLocality = $(this).val();
+        jobFormat.tempaddressLocality = $(this).val();
+        jobFormat.temp();
         jobFormat.render();
     });
 
-    $('.city').keyup(function (e){
-        jobFormat.jobLocation.address.addressLocality = $(this).val();
+    $('.zipCode').keyup(function (e){
+        jobFormat.jobLocation.address.postalCode = $(this).val();
+        jobFormat.tempPostalCode = $(this).val();
+        jobFormat.temp();
         jobFormat.render();
     });
 
@@ -247,9 +415,12 @@ jQuery(document).ready(function () {
 
                 jobFormat.jobLocation.addressCountry = "";
             }
+            jobFormat.tempAddressCountry = "";
+            $("#hide-province").show();
         }else{
             if(checkBox == 1){
                 jobFormat.applicantLocationRequirements.name = $(this).val();
+                $("#hide-province").show();
             }else{
 
                 if($(this).val() == 'ID'){
@@ -262,17 +433,21 @@ jQuery(document).ready(function () {
 
                 jobFormat.jobLocation.address.addressCountry = $(this).val();
             }
+            jobFormat.tempAddressCountry = $(this).val();
         }
+
+        jobFormat.temp();
+        jobFormat.render();
 
         if($('#hide-province').is(":visible")){
             jobFormat.jobLocation = {
                 "@type": "Place",
                 "address": {
                     "@type": "PostalAddress",
-                    "streetAddress": "",
-                    "addressLocality": "",
-                    "postalCode": "",
-                    "addressCountry": jobFormat.country
+                    "streetAddress": jobFormat.tempStreetAdd,
+                    "addressLocality": jobFormat.tempaddressLocality,
+                    "postalCode": jobFormat.tempPostalCode,
+                    "addressCountry": jobFormat.tempAddressCountry
                 }
             }
 
@@ -281,16 +456,16 @@ jQuery(document).ready(function () {
                 "@type": "Place",
                 "address": {
                     "@type": "PostalAddress",
-                    "streetAddress": "",
-                    "addressLocality": "",
-                    "addressRegion": "",
-                    "postalCode": "",
-                    "addressCountry": jobFormat.country
+                    "streetAddress": jobFormat.tempStreetAdd,
+                    "addressLocality": jobFormat.tempaddressLocality,
+                    "addressRegion": jobFormat.tempAddressRegion,
+                    "postalCode": jobFormat.tempPostalCode,
+                    "addressCountry": jobFormat.tempAddressCountry
                 }
             }
         }
-        jobFormat.temp();
-        jobFormat.render();
+
+
     });
 
     $("#remoteJob").change(function() {
@@ -305,16 +480,33 @@ jQuery(document).ready(function () {
         } else {
             checkBox = 0;
             delete jobFormat.applicantLocationRequirements;
-            jobFormat.jobLocation = {
-                "@type": "Place",
-                "address" : {
-                    "@type": "PostalAddress",
-                    "streetAddress": "",
-                    "addressLocality": "",
-                    "postalCode": "",
-                    "addressCountry": jobFormat.country
+
+            if($('.country').find(":selected").text() == 'Indonesia'){
+                jobFormat.jobLocation = {
+                    "@type": "Place",
+                    "address" : {
+                        "@type": "PostalAddress",
+                        "streetAddress": jobFormat.tempStreetAdd,
+                        "addressLocality": jobFormat.tempaddressLocality,
+                        "addressRegion": jobFormat.tempAddressRegion,
+                        "postalCode": jobFormat.tempPostalCode,
+                        "addressCountry": jobFormat.tempAddressCountry
+                    }
+                }
+            }else{
+                jobFormat.jobLocation = {
+                    "@type": "Place",
+                    "address" : {
+                        "@type": "PostalAddress",
+                        "streetAddress": jobFormat.tempStreetAdd,
+                        "addressLocality": jobFormat.tempaddressLocality,
+                        "postalCode": jobFormat.tempPostalCode,
+                        "addressCountry": jobFormat.tempAddressCountry
+                    }
                 }
             }
+
+
             $(".street, .city, div.province > button, .zipCode").removeAttr("disabled");
         }
         jobFormat.render();
@@ -324,8 +516,14 @@ jQuery(document).ready(function () {
         if (this.value.length > 0) {
             $(".maxSalary, .currency, .unitText").removeAttr("disabled");
             $(".currency, .unitText").selectpicker("refresh");
-            jobFormat.baseSalary.value.value = $(this).val();
-            jobFormat.salaryValue = $(this).val();
+            if($('.maxSalary').val().length > 0) {
+                jobFormat.baseSalary.value.minValue = $(this).val();
+                jobFormat.salaryValue = $(this).val();
+            } else {
+                jobFormat.baseSalary.value.value = $(this).val();
+                jobFormat.salaryValue = $(this).val();
+            }
+
         } else {
             $(".maxSalary, .currency, .unitText").attr("disabled", true);
             $(".currency, .unitText").selectpicker("refresh");
@@ -335,171 +533,77 @@ jQuery(document).ready(function () {
 
     $(".province").change(function() {
         jobFormat.jobLocation.address.addressRegion = $(this).val();
+        jobFormat.tempAddressRegion = $(this).val();
+        jobFormat.temp();
         jobFormat.render();
     });
 
-    $('.maxSalary').keyup(function (e) {
+
+    $(document).on('keyup', '.maxSalary', function () {
         if(this.value.length > 0){
-            delete jobFormat.baseSalary.value.value;
-            jobFormat.baseSalary.value = {
-                "@type": "QuantitativeValue",
-                "minValue": jobFormat.salaryValue,
-                "maxValue": $(this).val(),
-                "unitText": ""
+            jobFormat.baseSalary = {
+                "@type": "MonetaryAmount",
+                "currency": jobFormat.tempcurrency,
+                "value" : {
+                    "@type": "QuantitativeValue",
+                    "minValue": jobFormat.salaryValue,
+                    "maxValue": $(this).val(),
+                    "unitText": jobFormat.unitTextCur
+                }
             }
         }else{
-            delete jobFormat.baseSalary.value;
-            jobFormat.baseSalary.value = {
-                "@type": "QuantitativeValue",
-                "value": jobFormat.salaryValue,
-                "unitText": ""
+            jobFormat.baseSalary = {
+                "@type": "MonetaryAmount",
+                "currency": jobFormat.tempcurrency,
+                "value" : {
+                    "@type": "QuantitativeValue",
+                    "value": jobFormat.salaryValue,
+                    "unitText": jobFormat.unitTextCur
+                }
             }
         }
+        jobFormat.render();
     });
 
+    $('.currency').change(function (e) {
+        jobFormat.baseSalary.currency = $(this).val();
+        jobFormat.tempcurrency = $(this).val();
+        jobFormat.temp();
+        jobFormat.render();
+    });
 
-// jQuery(document).on('keyup', '.jobTitle', function () {
-//     let index = parseInt(jQuery(this).data('id'));
-//     // console.log('index:' + index);
-//     main.mainEntity[index].title = jQuery(this).val();
-//     print();
-// });
+    $('.unitText').change(function (e) {
+        jobFormat.baseSalary.value.unitText = $(this).val();
+        jobFormat.unitTextCur = $(this).val();
+        jobFormat.temp();
+        jobFormat.render();
+    });
 
-// jQuery(document).on('keyup', '.identifier', function () {
-//     let index = parseInt(jQuery(this).data('id'));
-//     // console.log('index:' + index);
-//     main.mainEntity[index].identifier = jQuery(this).val();
-//     print();
-// });
+    $('.responsibilities').keyup(function (e) {
+        jobFormat.responsibilities = this.value;
+        jobFormat.render();
+    });
 
-jQuery(document).on('keyup', '.description', function () {
-    let index = parseInt(jQuery(this).data('id'));
-    // console.log('index:' + index);
-    main.mainEntity[index].description = jQuery(this).val();
-    print();
-});
+    $('.skills').keyup(function (e) {
+        jobFormat.skills = this.value;
+        jobFormat.render();
+    });
 
-jQuery(document).on('keyup', '.name', function () {
-    let index = parseInt(jQuery(this).data('id'));
-    // console.log('index:' + index);
-    main.mainEntity[index].hiringOrganization.name = jQuery(this).val();
-    print();
-});
+    $('.qualifications').keyup(function (e) {
+        jobFormat.qualifications = this.value;
+        jobFormat.render();
+    });
 
-jQuery(document).on('keyup', '.city', function () {
-    let index = parseInt(jQuery(this).data('id'));
-    // console.log('index:' + index);
-    main.mainEntity[index].jobLocation.address.addressLocality = jQuery(this).val();
-    print();
-});
+    $('.educationRequirements').keyup(function (e) {
+        jobFormat.educationRequirements = this.value;
+        jobFormat.render();
+    });
 
-jQuery(document).on('keyup', '.zipCode', function () {
-    let index = parseInt(jQuery(this).data('id'));
-    // console.log('index:' + index);
-    main.mainEntity[index].jobLocation.address.postalCode = jQuery(this).val();
-    print();
-});
+    $('.experienceRequirements').keyup(function (e) {
+        jobFormat.experienceRequirements = this.value;
+        jobFormat.render();
+    });
 
-jQuery(document).on('keyup', '.country', function () {
-    let index = parseInt(jQuery(this).data('id'));
-    // console.log('index:' + index);
-    main.mainEntity[index].jobLocation.address.addressCountry = jQuery(this).val();
-    print();
-});
-
-// jQuery(document).on('keyup', '.salary', function () {
-//     let index = parseInt(jQuery(this).data('id'));
-//     // console.log('index:' + index);
-//     main.mainEntity[index].baseSalary.value.minValue = jQuery(this).val();
-//     print();
-// });
-
-jQuery(document).on('change', '.currency', function () {
-    let index = parseInt(jQuery(this).data('id'));
-    // console.log('index:' + index);
-    main.mainEntity[index].baseSalary.currency = jQuery(this).val();
-    print();
-});
-
-// jQuery(document).on('keyup', '.maxSalary', function () {
-//     let index = parseInt(jQuery(this).data('id'));
-//     // console.log('index:' + index);
-//     main.mainEntity[index].baseSalary.value.maxValue = jQuery(this).val();
-//     print();
-// });
-
-
-jQuery(document).on('change', '.unitText', function () {
-    let index = parseInt(jQuery(this).data('id'));
-    // console.log('index:' + index);
-    main.mainEntity[index].baseSalary.value.unitText = jQuery(this).val();
-    print();
-});
-
-jQuery(document).on('keyup', '.responsibilities', function () {
-    let index = parseInt(jQuery(this).data('id'));
-    // console.log('index:' + index);
-    main.mainEntity[index].responsibilities = jQuery(this).val();
-    print();
-});
-
-jQuery(document).on('keyup', '.skills', function () {
-    let index = parseInt(jQuery(this).data('id'));
-    // console.log('index:' + index);
-    main.mainEntity[index].skills = jQuery(this).val();
-    print();
-});
-
-jQuery(document).on('keyup', '.qualifications', function () {
-    let index = parseInt(jQuery(this).data('id'));
-    // console.log('index:' + index);
-    main.mainEntity[index].qualifications = jQuery(this).val();
-    print();
-});
-
-jQuery(document).on('keyup', '.educationRequirements', function () {
-    let index = parseInt(jQuery(this).data('id'));
-    // console.log('index:' + index);
-    main.mainEntity[index].educationRequirements = jQuery(this).val();
-    print();
-});
-
-jQuery(document).on('keyup', '.experienceRequirements', function () {
-    let index = parseInt(jQuery(this).data('id'));
-    // console.log('index:' + index);
-    main.mainEntity[index].experienceRequirements = jQuery(this).val();
-    print();
-});
-
-
-jQuery(document).on('click', '.delete', function () {
-    let index = parseInt(jQuery(this).data('id'));
-    if (index!==0){
-        main.mainEntity.splice(index, 1);
-        print();
-        for (let i = index + 1; i < main.mainEntity.length + 1; i++) {
-            jQuery('.jobTitle[data-id=' + (i - 1) + ']').val(jQuery('.jobTitle[data-id=' + (i) + ']').val())
-            jQuery('.identifier[data-id=' + (i - 1) + ']').val(jQuery('.identifier[data-id=' + (i) + ']').val())
-            jQuery('.employmentType[data-id=' + (i - 1) + ']').val(jQuery('.employmentType[data-id=' + (i) + ']').val())
-            jQuery('.description[data-id=' + (i - 1) + ']').val(jQuery('.description[data-id=' + (i) + ']').val())
-            jQuery('.name[data-id=' + (i - 1) + ']').val(jQuery('.name[data-id=' + (i) + ']').val())
-            jQuery('.companyUrl[data-id=' + (i - 1) + ']').val(jQuery('.companyUrl[data-id=' + (i) + ']').val())
-            jQuery('.industry[data-id=' + (i - 1) + ']').val(jQuery('.industry[data-id=' + (i) + ']').val())
-        }
-        jQuery('label[data-id=' + main.mainEntity.length + ']').remove();
-        jQuery('.jobTitle[data-id=' + main.mainEntity.length + ']').remove();
-        jQuery('.identifier[data-id=' + main.mainEntity.length + ']').remove();
-        jQuery('.description[data-id=' + main.mainEntity.length + ']').remove();
-        jQuery('.name[data-id=' + main.mainEntity.length + ']').remove();
-        jQuery('.companyUrl[data-id=' + main.mainEntity.length + ']').remove();
-        jQuery('.industry[data-id=' + main.mainEntity.length + ']').remove();
-        jQuery('.employmentType[data-id=' + main.mainEntity.length + ']').remove();
-        jQuery('.delete[data-id=' + main.mainEntity.length + ']').remove();
-        let row = parseInt(jQuery('#json-format').val().split('\n').length);
-        jQuery('#json-format').attr('rows',row);
-    }
-    sticky.update();
-});
 
 $(document).on('change', '#schema-json-ld', function() {
     if($(this).val() !== 'home') {
@@ -523,7 +627,7 @@ $(document).on("change", "#remoteJob", function() {
       $(".street, .city, div.province > button, .zipCode").removeAttr("disabled");
     }
   });
-  
+
 $(document).on("keyup", ".salary", function() {
     if (this.value.length > 0) {
       $(".maxSalary, .currency, .unitText").removeAttr("disabled");
@@ -532,4 +636,22 @@ $(document).on("keyup", ".salary", function() {
       $(".maxSalary, .currency, .unitText").attr("disabled", true);
       $(".currency, .unitText").selectpicker("refresh");
     }
+});
+
+$('.reset').click(function (e) {
+    checkBox= 0;
+    $(".street, .city, div.province > button, .zipCode").removeAttr("disabled");
+    $(".maxSalary, .currency, .unitText").attr("disabled", true);
+    $("#hide-province").show();
+    $("#province-show").hide();
+    $('.province').val(1);
+    $('.province').change();
+    $(".country").val(1);
+    $(".country").change();
+    $(".currency").val(1);
+    $(".currency").change();
+    $(".unitText").val(1);
+    $(".unitText").change();
+    $('#form').trigger("reset");
+    jobFormat.resetrender();
 });
