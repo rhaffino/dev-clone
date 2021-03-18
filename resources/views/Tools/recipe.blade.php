@@ -43,173 +43,175 @@ id/json-ld-recipe-schema-generator
                                 </div>
                             </div>
                             <p class="h6 text-black mb-5">Recipe</p>
-                            <div class="" id="formrecipe">
-                                <div class="row">
-                                    <div class="col-12 col-lg-6">
-                                        <label class="text-black font-weight-bold" for="name">@lang('recipe.label-name')</label>
-                                        <input type="text" name="" class="form-control name mb-5" placeholder="@lang('recipe.placeholder-name')" value="" data-id="0">
-                                        <div class="row">
-                                            <div class="col-12">
-                                                <label class="text-black font-weight-bold" for="keywords">@lang('recipe.label-keywords')</label>
-                                                <input type="text" name="" class="form-control keywords mb-5" placeholder="@lang('recipe.placeholder-keywords')" value="" min="0" data-id="0">
+                            <form action="" id="form-recipe">
+                                <div class="" id="formrecipe">
+                                    <div class="row">
+                                        <div class="col-12 col-lg-6">
+                                            <label class="text-black font-weight-bold" for="name">@lang('recipe.label-name')</label>
+                                            <input type="text" name="" class="form-control name mb-5" placeholder="@lang('recipe.placeholder-name')" value="" data-id="0">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <label class="text-black font-weight-bold" for="keywords">@lang('recipe.label-keywords')</label>
+                                                    <input type="text" name="" class="form-control keywords mb-5" placeholder="@lang('recipe.placeholder-keywords')" value="" min="0" data-id="0">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-lg-6 mb-8 mb-lg-5">
+                                            <label class="text-black font-weight-bold" for="description">@lang('recipe.label-description')</label>
+                                            <textarea name="" class="form-control custom-textarea-82 description" placeholder="@lang('recipe.placeholder-description')" data-id="0"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="row imageurlList">
+                                        <div class="col-10 col-sm-11 mb-5">
+                                            <label class="text-black font-weight-bold" for="image">@lang('recipe.label-image') #1</label>
+                                            <input type="text" name="" class="form-control image" placeholder="@lang('recipe.placeholder-image')" value="" data-id="0">
+                                            <div class="invalid-feedback">@lang('layout.invalid-url')</div>
+                                        </div>
+                                        <div class="col-2 col-sm-1">
+                                            <div class="d-flex justify-content-center mt-9">
+                                                <i class='bx bxs-x-circle bx-md btn-delete-disabled'></i>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-12 col-lg-6 mb-8 mb-lg-5">
-                                        <label class="text-black font-weight-bold" for="description">@lang('recipe.label-description')</label>
-                                        <textarea name="" class="form-control custom-textarea-82 description" placeholder="@lang('recipe.placeholder-description')" data-id="0"></textarea>
-                                    </div>
-                                </div>
-                                <div class="row imageurlList">
-                                    <div class="col-10 col-sm-11 mb-5">
-                                        <label class="text-black font-weight-bold" for="image">@lang('recipe.label-image') #1</label>
-                                        <input type="text" name="" class="form-control image" placeholder="@lang('recipe.placeholder-image')" value="" data-id="0">
-                                        <div class="invalid-feedback">@lang('layout.invalid-url')</div>
-                                    </div>
-                                    <div class="col-2 col-sm-1">
-                                        <div class="d-flex justify-content-center mt-9">
-                                            <i class='bx bxs-x-circle bx-md btn-delete-disabled'></i>
+                                    <div class="row mb-5">
+                                        <div class="col-12">
+                                            <div id="image"></div>
+                                        </div>
+                                        <div class="col-12 col-md-5 col-xl-4">
+                                            <button type="button" class="btn btn-block btn-add-question mb-5 mt-5" name="button" id="add-imageUrl">
+                                                <i class='bx bx-plus'></i> @lang('recipe.btn-addImageUrl')
+                                            </button>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="row mb-5">
-                                <div class="col-12">
-                                    <div id="image"></div>
-                                </div>
-                                <div class="col-12 col-md-5 col-xl-4">
-                                    <button type="button" class="btn btn-block btn-add-question mb-5 mt-5" name="button" id="add-imageUrl">
-                                        <i class='bx bx-plus'></i> @lang('recipe.btn-addImageUrl')
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="row mb-5">
-                                <div class="col-12 col-md-6 mb-5 mb-md-0">
-                                    <label class="text-black font-weight-bold" for="videoContent">@lang('recipe.label-videoContent')</label>
-                                    <input type="text" name="" class="form-control videoContent" placeholder="@lang('recipe.placeholder-videoContent')" value="" data-id="0">
-                                    <div class="invalid-feedback">@lang('layout.invalid-url')</div>
-                                </div>
-                                <div class="col-12 col-md-6">
-                                    <label class="text-black font-weight-bold" for="videoEmbed">@lang('recipe.label-videoEmbed')</label>
-                                    <input type="text" name="" class="form-control videoEmbed" placeholder="@lang('recipe.placeholder-videoEmbed')" value="" data-id="0">
-                                    <div class="invalid-feedback">@lang('layout.invalid-url')</div>
-                                </div>
-                            </div>
-                            <div class="row mb-5">
-                                <div class="col-12 col-md-6 col-xl-3 col-xxl-5 mb-5">
-                                    <label class="text-black font-weight-bold" for="authorName">@lang('recipe.label-authorName')</label>
-                                    <input type="text" name="" class="form-control authorName" placeholder="@lang('recipe.placeholder-authorName')" value="" data-id="0">
-                                </div>
-                                <div class="col-12 col-md-6 col-xl-3 col-xxl-3 mb-5">
-                                    <label class="text-black font-weight-bold" for="publishedDate">@lang('recipe.label-publishedDate')</label>
-                                    <div class="input-group date">
-                                        <div class="input-group-append">
+                                    <div class="row mb-5">
+                                        <div class="col-12 col-md-6 mb-5 mb-md-0">
+                                            <label class="text-black font-weight-bold" for="videoContent">@lang('recipe.label-videoContent')</label>
+                                            <input type="text" name="" class="form-control videoContent" placeholder="@lang('recipe.placeholder-videoContent')" value="" data-id="0">
+                                            <div class="invalid-feedback">@lang('layout.invalid-url')</div>
+                                        </div>
+                                        <div class="col-12 col-md-6">
+                                            <label class="text-black font-weight-bold" for="videoEmbed">@lang('recipe.label-videoEmbed')</label>
+                                            <input type="text" name="" class="form-control videoEmbed" placeholder="@lang('recipe.placeholder-videoEmbed')" value="" data-id="0">
+                                            <div class="invalid-feedback">@lang('layout.invalid-url')</div>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-5">
+                                        <div class="col-12 col-md-6 col-xl-3 col-xxl-5 mb-5">
+                                            <label class="text-black font-weight-bold" for="authorName">@lang('recipe.label-authorName')</label>
+                                            <input type="text" name="" class="form-control authorName" placeholder="@lang('recipe.placeholder-authorName')" value="" data-id="0">
+                                        </div>
+                                        <div class="col-12 col-md-6 col-xl-3 col-xxl-3 mb-5">
+                                            <label class="text-black font-weight-bold" for="publishedDate">@lang('recipe.label-publishedDate')</label>
+                                            <div class="input-group date">
+                                                <div class="input-group-append">
                                             <span class="input-group-text">
                                                 <i class="bx bx-calendar text-darkgrey"></i>
                                             </span>
+                                                </div>
+                                                <input type="text" id="kt_datepicker_2" name="" class="form-control custom-date publishedDate" readonly placeholder="@lang('recipe.placeholder-publishedDate')" value="" data-id="0" />
+                                            </div>
                                         </div>
-                                        <input type="text" id="kt_datepicker_2" name="" class="form-control custom-date publishedDate" readonly placeholder="@lang('recipe.placeholder-publishedDate')" value="" data-id="0" />
+                                        <div class="col-6 col-xl-3 col-xxl-2">
+                                            <label class="text-black font-weight-bold" for="prepTime">@lang('recipe.label-prepTime')</label>
+                                            <input type="number" name="" class="form-control prepTime" placeholder="@lang('recipe.placeholder-prepTime')" value="" min="0" data-id="0">
+                                            <div class="invalid-feedback">@lang('layout.invalid-number')</div>
+                                        </div>
+                                        <div class="col-6 col-xl-3 col-xxl-2">
+                                            <label class="text-black font-weight-bold" for="cookTime">@lang('recipe.label-cookTime')</label>
+                                            <input type="number" name="" class="form-control cookTime" placeholder="@lang('recipe.placeholder-cookTime')" value="" min="0" data-id="0">
+                                            <div class="invalid-feedback">@lang('layout.invalid-number')</div>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-5">
+                                        <div class="col-12 col-md-4 mb-5 mb-md-0">
+                                            <label class="text-black font-weight-bold" for="recipeCategory">@lang('recipe.label-recipeCategory')</label>
+                                            <select class="form-control selectpicker custom-select-blue recipeCategory">
+                                                <option value="Appetizer">@lang('recipe.recipe-category-opt-1')</option>
+                                                <option value="Entree">@lang('recipe.recipe-category-opt-2')</option>
+                                                <option value="Dessert">@lang('recipe.recipe-category-opt-3')</option>
+                                                <option selected="selected" value="Not specified">@lang('recipe.recipe-category-opt-4')</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-12 col-md-4 mb-5 mb-md-0">
+                                            <label class="text-black font-weight-bold" for="recipeCuisine">@lang('recipe.label-recipeCuisine')</label>
+                                            <input type="text" name="" class="form-control recipeCuisine" placeholder="@lang('recipe.placeholder-recipeCuisine')" value="" data-id="0">
+                                        </div>
+                                        <div class="col-12 col-md-4">
+                                            <label class="text-black font-weight-bold" for="recipeServings">@lang('recipe.label-recipeServings')</label>
+                                            <input type="number" name="" class="form-control recipeServings" placeholder="@lang('recipe.placeholder-recipeServings')" value="" min="0" data-id="0">
+                                            <div class="invalid-feedback">@lang('layout.invalid-number')</div>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-5">
+                                        <div class="col-12">
+                                            <div id="ingredients"></div>
+                                        </div>
+                                        <div class="col-12 col-md-5 col-xl-4">
+                                            <button type="button" class="btn btn-block btn-add-question mb-5 mt-5" name="button" id="add-ingredients">
+                                                <i class='bx bx-plus'></i> @lang('recipe.btn-addIngredients')
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-5">
+                                        <div class="col-12 col-md-4 mb-5 mb-md-0">
+                                            <label class="text-black font-weight-bold" for="servingSize">@lang('recipe.label-servingSize')</label>
+                                            <input type="text" name="" class="form-control servingSize" placeholder="@lang('recipe.placeholder-servingSize')" value="" data-id="0">
+                                        </div>
+                                        <div class="col-6 col-md-4">
+                                            <label class="text-black font-weight-bold" for="calories">@lang('recipe.label-calories')</label>
+                                            <input type="number" name="" class="form-control calories" placeholder="@lang('recipe.placeholder-calories')" value="" min="0" data-id="0">
+                                            <div class="invalid-feedback">@lang('layout.invalid-number')</div>
+                                        </div>
+                                        <div class="col-6 col-md-4">
+                                            <label class="text-black font-weight-bold" for="fat">@lang('recipe.label-fat')</label>
+                                            <input type="number" name="" class="form-control fat" placeholder="@lang('recipe.placeholder-fat')" value="" min="0" data-id="0">
+                                            <div class="invalid-feedback">@lang('layout.invalid-number')</div>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-5">
+                                        <div class="col-12">
+                                            <div id="step"></div>
+                                        </div>
+                                        <div class="col-12 col-md-5 col-xl-4">
+                                            <button type="button" class="btn btn-block btn-add-question mt-5 mb-5" name="button" id="add-recipe-step">
+                                                <i class='bx bx-plus'></i> @lang('recipe.btn-addStep')
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-6 mb-5">
+                                            <label class="text-black font-weight-bold" for="aggregate">@lang('recipe.label-aggregate')</label>
+                                            <input type="number" name="" class="form-control aggregate" placeholder="@lang('recipe.placeholder-aggregate')" value="" min="0" data-id="0">
+                                            <div class="invalid-feedback">@lang('layout.invalid-number')</div>
+                                        </div>
+                                        <div class="col-6 mb-5">
+                                            <label class="text-black font-weight-bold" for="ratings">@lang('recipe.label-ratings')</label>
+                                            <input type="number" name="" class="form-control ratings" placeholder="@lang('recipe.placeholder-ratings')" value="" min="0" data-id="0">
+                                            <div class="invalid-feedback">@lang('layout.invalid-number')</div>
+                                        </div>
+                                        <div class="col-6 mb-5">
+                                            <label class="text-black font-weight-bold" for="highest">@lang('recipe.label-highest')</label>
+                                            <input type="number" name="" class="form-control highest" placeholder="@lang('recipe.placeholder-highest')" value="" min="0" data-id="0">
+                                            <div class="invalid-feedback">@lang('layout.invalid-number')</div>
+                                        </div>
+                                        <div class="col-6 mb-5">
+                                            <label class="text-black font-weight-bold" for="lowest">@lang('recipe.label-lowest')</label>
+                                            <input type="number" name="" class="form-control lowest" placeholder="@lang('recipe.placeholder-lowest')" value="" min="0" data-id="0">
+                                            <div class="invalid-feedback">@lang('layout.invalid-number')</div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div id="addReview"></div>
+                                        </div>
+                                        <div class="col-12 col-md-5 col-xl-4">
+                                            <button type="button" class="btn btn-block btn-add-question mt-5 mb-5" name="button" id="add-recipe-review">
+                                                <i class='bx bx-plus'></i> @lang('recipe.btn-addReview')
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col-6 col-xl-3 col-xxl-2">
-                                    <label class="text-black font-weight-bold" for="prepTime">@lang('recipe.label-prepTime')</label>
-                                    <input type="number" name="" class="form-control prepTime" placeholder="@lang('recipe.placeholder-prepTime')" value="" min="0" data-id="0">
-                                    <div class="invalid-feedback">@lang('layout.invalid-number')</div>
-                                </div>
-                                <div class="col-6 col-xl-3 col-xxl-2">
-                                    <label class="text-black font-weight-bold" for="cookTime">@lang('recipe.label-cookTime')</label>
-                                    <input type="number" name="" class="form-control cookTime" placeholder="@lang('recipe.placeholder-cookTime')" value="" min="0" data-id="0">
-                                    <div class="invalid-feedback">@lang('layout.invalid-number')</div>
-                                </div>
-                            </div>
-                            <div class="row mb-5">
-                                <div class="col-12 col-md-4 mb-5 mb-md-0">
-                                    <label class="text-black font-weight-bold" for="recipeCategory">@lang('recipe.label-recipeCategory')</label>
-                                    <select class="form-control selectpicker custom-select-blue recipeCategory">
-                                        <option value="Appetizer">@lang('recipe.recipe-category-opt-1')</option>
-                                        <option value="Entree">@lang('recipe.recipe-category-opt-2')</option>
-                                        <option value="Dessert">@lang('recipe.recipe-category-opt-3')</option>
-                                        <option selected="selected" value="Not specified">@lang('recipe.recipe-category-opt-4')</option>
-                                    </select>
-                                </div>
-                                <div class="col-12 col-md-4 mb-5 mb-md-0">
-                                    <label class="text-black font-weight-bold" for="recipeCuisine">@lang('recipe.label-recipeCuisine')</label>
-                                    <input type="text" name="" class="form-control recipeCuisine" placeholder="@lang('recipe.placeholder-recipeCuisine')" value="" data-id="0">
-                                </div>
-                                <div class="col-12 col-md-4">
-                                    <label class="text-black font-weight-bold" for="recipeServings">@lang('recipe.label-recipeServings')</label>
-                                    <input type="number" name="" class="form-control recipeServings" placeholder="@lang('recipe.placeholder-recipeServings')" value="" min="0" data-id="0">
-                                    <div class="invalid-feedback">@lang('layout.invalid-number')</div>
-                                </div>
-                            </div>
-                            <div class="row mb-5">
-                                <div class="col-12">
-                                    <div id="ingredients"></div>
-                                </div>
-                                <div class="col-12 col-md-5 col-xl-4">
-                                    <button type="button" class="btn btn-block btn-add-question mb-5 mt-5" name="button" id="add-ingredients">
-                                        <i class='bx bx-plus'></i> @lang('recipe.btn-addIngredients')
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="row mb-5">
-                                <div class="col-12 col-md-4 mb-5 mb-md-0">
-                                    <label class="text-black font-weight-bold" for="servingSize">@lang('recipe.label-servingSize')</label>
-                                    <input type="text" name="" class="form-control servingSize" placeholder="@lang('recipe.placeholder-servingSize')" value="" data-id="0">
-                                </div>
-                                <div class="col-6 col-md-4">
-                                    <label class="text-black font-weight-bold" for="calories">@lang('recipe.label-calories')</label>
-                                    <input type="number" name="" class="form-control calories" placeholder="@lang('recipe.placeholder-calories')" value="" min="0" data-id="0">
-                                    <div class="invalid-feedback">@lang('layout.invalid-number')</div>
-                                </div>
-                                <div class="col-6 col-md-4">
-                                    <label class="text-black font-weight-bold" for="fat">@lang('recipe.label-fat')</label>
-                                    <input type="number" name="" class="form-control fat" placeholder="@lang('recipe.placeholder-fat')" value="" min="0" data-id="0">
-                                    <div class="invalid-feedback">@lang('layout.invalid-number')</div>
-                                </div>
-                            </div>
-                            <div class="row mb-5">
-                                <div class="col-12">
-                                    <div id="step"></div>
-                                </div>
-                                <div class="col-12 col-md-5 col-xl-4">
-                                    <button type="button" class="btn btn-block btn-add-question mt-5 mb-5" name="button" id="add-recipe-step">
-                                        <i class='bx bx-plus'></i> @lang('recipe.btn-addStep')
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-6 mb-5">
-                                    <label class="text-black font-weight-bold" for="aggregate">@lang('recipe.label-aggregate')</label>
-                                    <input type="number" name="" class="form-control aggregate" placeholder="@lang('recipe.placeholder-aggregate')" value="" min="0" data-id="0">
-                                    <div class="invalid-feedback">@lang('layout.invalid-number')</div>
-                                </div>
-                                <div class="col-6 mb-5">
-                                    <label class="text-black font-weight-bold" for="ratings">@lang('recipe.label-ratings')</label>
-                                    <input type="number" name="" class="form-control ratings" placeholder="@lang('recipe.placeholder-ratings')" value="" min="0" data-id="0">
-                                    <div class="invalid-feedback">@lang('layout.invalid-number')</div>
-                                </div>
-                                <div class="col-6 mb-5">
-                                    <label class="text-black font-weight-bold" for="highest">@lang('recipe.label-highest')</label>
-                                    <input type="number" name="" class="form-control highest" placeholder="@lang('recipe.placeholder-highest')" value="" min="0" data-id="0">
-                                    <div class="invalid-feedback">@lang('layout.invalid-number')</div>
-                                </div>
-                                <div class="col-6 mb-5">
-                                    <label class="text-black font-weight-bold" for="lowest">@lang('recipe.label-lowest')</label>
-                                    <input type="number" name="" class="form-control lowest" placeholder="@lang('recipe.placeholder-lowest')" value="" min="0" data-id="0">
-                                    <div class="invalid-feedback">@lang('layout.invalid-number')</div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-12">
-                                    <div id="addReview"></div>
-                                </div>
-                                <div class="col-12 col-md-5 col-xl-4">
-                                    <button type="button" class="btn btn-block btn-add-question mt-5 mb-5" name="button" id="add-recipe-review">
-                                        <i class='bx bx-plus'></i> @lang('recipe.btn-addReview')
-                                    </button>
-                                </div>
-                            </div>
+                            </form>
                         </div>
                         <div class="col-md-4 mb-5">
                             <div class="p-2" style="border: 1px solid #E4E6EF; border-radius: 0.42rem;">
@@ -224,7 +226,7 @@ id/json-ld-recipe-schema-generator
                                                 <i class='bx bx-check-circle'></i> <span>@lang('layout.btn-check')</span></button>
                                         </div>
                                         <div id="reset" class="col-4 d-flex justify-content-center px-0 button-result">
-                                            <button type="button" class="btn font-weight-bold" name="button">
+                                            <button type="button" class="btn font-weight-bold reset" name="button">
                                                 <i class='bx bx-refresh'></i> <span>@lang('layout.btn-reset')</span></button>
                                         </div>
                                     </div>
