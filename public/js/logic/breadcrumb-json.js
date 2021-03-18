@@ -344,4 +344,20 @@
         var copyText = jQuery('#json-format');
         copyText.select();
         document.execCommand("copy");
+        toastr.info('Copied to Clipboard', 'Information');
+    });
+
+    $('.reset').click(function (e) {
+        let data = getDataFromText()
+        for (let i = 1; i < data.itemListElement.length; i++) {
+            $('.form-cotainer[data-id=' + i + ']').remove();
+        }
+        data.itemListElement.splice(1, data.itemListElement.length);
+        data.itemListElement[0].name = '';
+        data.itemListElement[0].item = '';
+        jQuery('.pageName[data-id=' + 0 + ']').val(main.itemListElement[0].name)
+        jQuery('.url[data-id=' + 0 + ']').val(main.itemListElement[0].item)
+        jsonFormat(data);
+        let row = parseInt(jQuery('#json-format').val().split('\n').length);
+        jQuery('#json-format').attr('rows', row);
     });

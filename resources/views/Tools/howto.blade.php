@@ -43,96 +43,101 @@ id/json-ld-how-to-schema-generator
                                 </div>
                             </div>
                             <p class="h6 text-black mb-5">How-to</p>
-                            <div id="formhowto">
-                                <div class="row">
-                                    <div class="col-12 col-xl-7 col-xxl-6">
-                                        <label class="text-black font-weight-bold" for="name">@lang('howto.label-name')</label>
-                                        <input type="text" name="" class="form-control name mb-5" placeholder="@lang('howto.placeholder-name')" value="" data-id="0">
-                                        <div class="row">
-                                            <div class="col-12 col-md-4 mb-5">
-                                                <label class="text-black font-weight-bold" for="totalTime">@lang('howto.label-totalTime')</label>
-                                                <input type="number" name="" class="form-control totalTime" placeholder="@lang('howto.placeholder-totalTime')" value="" min="0" data-id="0">
-                                                <div class="invalid-feedback">@lang('layout.invalid-number')</div>
+                            <div class="howto-form">
+
+                                <div id="formhowto">
+                                    <div class="row">
+                                        <div class="col-12 col-xl-7 col-xxl-6">
+                                            <label class="text-black font-weight-bold" for="name">@lang('howto.label-name')</label>
+                                            <input type="text" name="" class="form-control name mb-5" placeholder="@lang('howto.placeholder-name')" value="" data-id="0">
+                                            <div class="row">
+                                                <div class="col-12 col-md-4 mb-5">
+                                                    <label class="text-black font-weight-bold" for="totalTime">@lang('howto.label-totalTime')</label>
+                                                    <input type="number" name="" class="form-control totalTime" placeholder="@lang('howto.placeholder-totalTime')" value="" min="0" data-id="0">
+                                                    <div class="invalid-feedback">@lang('layout.invalid-number')</div>
+                                                </div>
+                                                <div class="col-6 col-md-4">
+                                                    <label class="text-black font-weight-bold" for="estimated">@lang('howto.label-estimated')</label>
+                                                    <input type="number" name="" class="form-control estimated mb-5" placeholder="@lang('howto.placeholder-estimated')" value="" data-id="0">
+                                                </div>
+                                                <div class="col-6 col-md-4">
+                                                    <label for="currency" class="text-black font-weight-bold">@lang('howto.label-currency')</label>
+                                                    <select class="form-control selectpicker custom-select-blue custom-searchbox currency mb-5" data-size="4" data-live-search="true">
+                                                        <option value="none">Choose Currency</option>
+                                                        @foreach($currencies as $c)
+                                                            <option value="{{ $c['code'] }}">{{ $c['name'] }}</option>
+                                                        @endforeach
+                                                    </select>
+                                                </div>
                                             </div>
-                                            <div class="col-6 col-md-4">
-                                                <label class="text-black font-weight-bold" for="estimated">@lang('howto.label-estimated')</label>
-                                                <input type="number" name="" class="form-control estimated mb-5" placeholder="@lang('howto.placeholder-estimated')" value="" data-id="0">
-                                            </div>
-                                            <div class="col-6 col-md-4">
-                                                <label for="currency" class="text-black font-weight-bold">@lang('howto.label-currency')</label>
-                                                <select class="form-control selectpicker custom-select-blue custom-searchbox currency mb-5" data-size="4" data-live-search="true">
-                                                    <option value="none">Choose Currency</option>
-                                                    @foreach($currencies as $c)
-                                                    <option value="{{ $c['code'] }}">{{ $c['name'] }}</option>
-                                                    @endforeach
-                                                </select>
+                                        </div>
+                                        <div class="col-12 col-xl-5 col-xxl-6 mb-5">
+                                            <label class="text-black font-weight-bold" for="description">@lang('howto.label-description')</label>
+                                            <textarea name="" class="form-control custom-textarea-82 description" placeholder="@lang('howto.placeholder-description')" data-id="0"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-5">
+                                        <div class="col-md-12">
+                                            <label class="text-black font-weight-bold mt-3 mt-xl-0" for="imageUrl">@lang('howto.label-imageUrl')</label>
+                                            <input type="text" name="" class="form-control imageUrl" placeholder="@lang('howto.placeholder-imageUrl')" value="" data-id="0">
+                                            <div class="invalid-feedback">@lang('layout.invalid-url')</div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12 col-md-6">
+                                            <div id="howto-supply"></div>
+                                            <button type="button" class="btn btn-block btn-add-question mt-5 mb-5" name="button" id="add-howto-supply">
+                                                <i class='bx bx-plus'></i> @lang('howto.btn-add-supply')
+                                            </button>
+                                        </div>
+                                        <div class="col-12 col-md-6">
+                                            <div id="howto-tool"></div>
+                                            <button type="button" class="btn btn-block btn-add-question mt-5 mb-5" name="button" id="add-howto-tool">
+                                                <i class='bx bx-plus'></i> @lang('howto.btn-add-tool')
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-5">
+                                        <div class="col-10 col-sm-11">
+                                            <label class="text-black font-weight-bold" for="instructions">@lang('howto.label-step') #1: @lang('howto.label-instructions')</label>
+                                            <input type="text" name="" class="form-control instructions mb-5" placeholder="@lang('howto.placeholder-instructions')" value="" data-id="0">
+                                        </div>
+                                        <div class="col-2 col-sm-1">
+                                            <div class="d-flex justify-content-center mt-9">
+                                                <i class='bx bxs-x-circle bx-md btn-delete-disabled'></i>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-12 col-xl-5 col-xxl-6 mb-5">
-                                        <label class="text-black font-weight-bold" for="description">@lang('howto.label-description')</label>
-                                        <textarea name="" class="form-control custom-textarea-82 description" placeholder="@lang('howto.placeholder-description')" data-id="0"></textarea>
+                                    <div class="row">
+                                        <div class="col-12 col-md-4 mb-5">
+                                            <label class="text-black font-weight-bold" for="imageStep">@lang('howto.label-imageStep')</label>
+                                            <input type="text" name="" class="form-control imageStep" placeholder="@lang('howto.placeholder-imageStep')" value="" data-id="0">
+                                            <div class="invalid-feedback">@lang('layout.invalid-url')</div>
+                                        </div>
+                                        <div class="col-12 col-md-4 mb-5">
+                                            <label class="text-black font-weight-bold" for="nameStep">@lang('howto.label-nameStep')</label>
+                                            <input type="text" name="" class="form-control nameStep" placeholder="@lang('howto.placeholder-nameStep')" value="" data-id="0">
+                                        </div>
+                                        <div class="col-12 col-md-4 mb-5">
+                                            <label class="text-black font-weight-bold" for="url">URL</label>
+                                            <input type="text" name="" class="form-control url" placeholder="@lang('howto.placeholder-urlStep')" value="" data-id="0">
+                                            <div class="invalid-feedback">@lang('layout.invalid-url')</div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div id="howto-step"></div>
+                                        </div>
+                                        <div class="col-12 col-md-4">
+                                            <button type="button" class="btn btn-block btn-add-question mt-5 mb-5" name="button" id="add-howto-step">
+                                                <i class='bx bx-plus'></i> @lang('howto.btn-add-step')
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="row mb-5">
-                                    <div class="col-md-12">
-                                        <label class="text-black font-weight-bold mt-3 mt-xl-0" for="imageUrl">@lang('howto.label-imageUrl')</label>
-                                        <input type="text" name="" class="form-control imageUrl" placeholder="@lang('howto.placeholder-imageUrl')" value="" data-id="0">
-                                        <div class="invalid-feedback">@lang('layout.invalid-url')</div>
-                                    </div>
-                                </div>
+
                             </div>
-                            <div class="row">
-                                <div class="col-12 col-md-6">
-                                    <div id="howto-supply"></div>
-                                    <button type="button" class="btn btn-block btn-add-question mt-5 mb-5" name="button" id="add-howto-supply">
-                                        <i class='bx bx-plus'></i> @lang('howto.btn-add-supply')
-                                    </button>
-                                </div>
-                                <div class="col-12 col-md-6">
-                                    <div id="howto-tool"></div>
-                                    <button type="button" class="btn btn-block btn-add-question mt-5 mb-5" name="button" id="add-howto-tool">
-                                        <i class='bx bx-plus'></i> @lang('howto.btn-add-tool')
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="row mt-5">
-                                <div class="col-10 col-sm-11">
-                                    <label class="text-black font-weight-bold" for="instructions">@lang('howto.label-step') #1: @lang('howto.label-instructions')</label>
-                                    <input type="text" name="" class="form-control instructions mb-5" placeholder="@lang('howto.placeholder-instructions')" value="" data-id="0">
-                                </div>
-                                <div class="col-2 col-sm-1">
-                                    <div class="d-flex justify-content-center mt-9">
-                                        <i class='bx bxs-x-circle bx-md btn-delete-disabled'></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-12 col-md-4 mb-5">
-                                    <label class="text-black font-weight-bold" for="imageStep">@lang('howto.label-imageStep')</label>
-                                    <input type="text" name="" class="form-control imageStep" placeholder="@lang('howto.placeholder-imageStep')" value="" data-id="0">
-                                    <div class="invalid-feedback">@lang('layout.invalid-url')</div>
-                                </div>
-                                <div class="col-12 col-md-4 mb-5">
-                                    <label class="text-black font-weight-bold" for="nameStep">@lang('howto.label-nameStep')</label>
-                                    <input type="text" name="" class="form-control nameStep" placeholder="@lang('howto.placeholder-nameStep')" value="" data-id="0">
-                                </div>
-                                <div class="col-12 col-md-4 mb-5">
-                                    <label class="text-black font-weight-bold" for="url">URL</label>
-                                    <input type="text" name="" class="form-control url" placeholder="@lang('howto.placeholder-urlStep')" value="" data-id="0">
-                                    <div class="invalid-feedback">@lang('layout.invalid-url')</div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-12">
-                                    <div id="howto-step"></div>
-                                </div>
-                                <div class="col-12 col-md-4">
-                                    <button type="button" class="btn btn-block btn-add-question mt-5 mb-5" name="button" id="add-howto-step">
-                                        <i class='bx bx-plus'></i> @lang('howto.btn-add-step')
-                                    </button>
-                                </div>
-                            </div>
+
                         </div>
                         <div class="col-md-4 mb-5">
                             <div class="p-2" style="border: 1px solid #E4E6EF; border-radius: 0.42rem;">
@@ -147,7 +152,7 @@ id/json-ld-how-to-schema-generator
                                                 <i class='bx bx-check-circle'></i> <span>@lang('layout.btn-check')</span></button>
                                         </div>
                                         <div id="reset" class="col-4 d-flex justify-content-center px-0 button-result">
-                                            <button type="button" class="btn font-weight-bold" name="button">
+                                            <button type="button" class="btn font-weight-bold reset" name="button">
                                                 <i class='bx bx-refresh'></i> <span>@lang('layout.btn-reset')</span></button>
                                         </div>
                                     </div>

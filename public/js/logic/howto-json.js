@@ -1,3 +1,5 @@
+    const HOW_TO_LOCAL_STORAGE = 'how-to-storage';
+
     var _supplyCounter = 0;
     var _toolsCounter = 0;
     var _stepCounter = 0;
@@ -31,6 +33,70 @@
                 "value": ""
             };
 
+        }
+
+        resetRender(){
+            _stepCounter =0;
+            _toolsCounter =0;
+            _supplyCounter = 0;
+
+            this.name = '';
+            this.description = undefined;
+            this.image = undefined;
+            this.totalTime = undefined;
+            this.supplyItem = [];
+            this.tools = [];
+            this.step = [];
+            this.costEstimate = undefined;
+            this.currency = undefined;
+            this.estimate = {
+                "@type": "MonetaryAmount",
+                "currency": "",
+                "value": ""
+            };
+
+            const obj = {
+                "@context": "https://schema.org",
+                "@type": "HowTo",
+                name:this.name,
+            };
+
+            obj.name = this.name;
+
+            if(this.description) obj.description = this.description;
+
+            if(this.image) obj.image = this.image;
+
+            if(this.totalTime) obj.totalTime = "PT"+this.totalTime+"M";
+
+            if(this.supplyItem.length > 0) {
+                if (this.supplyItem.length === 1) {
+                    obj.supply = this.supplyItem[0];
+                } else {
+                    obj.supply = this.supplyItem;
+                }
+            }
+
+            if(this.tools.length > 0) {
+                if (this.tools.length === 1) {
+                    obj.tools = this.tools[0];
+                } else {
+                    obj.tools = this.tools;
+                }
+            }
+
+            if(this.estimate.currency || this.estimate.value) obj.estimateCost = this.estimate;
+
+            if(this.step.length > 0){
+                if(this.step.length === 1){
+                    obj.step = this.step[0];
+                } else {
+                    obj.step = this.step;
+                }
+            }
+
+            $("#json-format").val("<script type=\"application/ld+json\">\n" + JSON.stringify(obj, undefined, 4) + "\n<\/script>");
+            return obj;
         }
 
         render(){
@@ -79,6 +145,10 @@
             return obj;
         }
     }
+    localStorage.clear();
+
+    localStorage.setItem(HOW_TO_LOCAL_STORAGE, $('#formhowto').html());
+
 
     let jsonFormat = new jsonSchema();
     jsonFormat.step.push({
@@ -88,7 +158,6 @@
     jsonFormat.render();
 
     const _howToLocalStorage = 'how-to-history';
-    localStorage.clear();
     const HistoryTemplate = (name, date) => `
 <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px history--list" data-name="${name}">
   <div class="d-flex justify-content-between">
@@ -420,4 +489,29 @@ jQuery('#copy').click(function () {
     copyText.select();
     // copyText.setSelectionRange(0, 999999); /*For mobile devices*/
     document.execCommand("copy");
+});
+
+$('.reset').click(function (e) {
+
+    $('.name').val('');
+    $('.description').val('');
+    $('.totalTime').val('');
+    $('.imageUrl').val('');
+    $('.estimated').val('');
+    $('.currency').val('none');
+    $('.instructions').val('');
+    $('.imageStep').val('');
+    $('.nameStep').val('');
+    $('.url').val('');
+    $('#howto-supply').html('');
+    $('#howto-tool').html('');
+    $('#howto-step').html('');
+
+
+    jsonFormat.resetRender();
+    jsonFormat.step.push({
+        "@type": "HowToStep",
+        "text": "",
+    })
+    jsonFormat.render();
 });

@@ -106,6 +106,10 @@
             this.temphighestval = "";
             this.templowestval = "";
 
+            this.tempReviewName = [];
+            this.tempReviewBody = [];
+            this.tempreviewRatingValue = [];
+
         }
 
         temp(){
@@ -128,6 +132,24 @@
             tempObj.tempnumOfRate = this.tempnumOfRate;
             tempObj.temphighestval = this.temphighestval;
             tempObj.templowestval = this.templowestval;
+
+            if(this.tempReviewName.length > 0) {
+                if (this.tempReviewName.length === 1) {
+                    tempObj.tempReviewName = this.tempReviewName[0];
+                } else {
+                    tempObj.tempReviewName = this.tempReviewName;
+                }
+            }
+
+            tempObj.tempReviewBody = this.tempReviewBody;
+
+            if(this.tempreviewRatingValue.length > 0) {
+                if (this.tempreviewRatingValue.length === 1) {
+                    tempObj.tempreviewRatingValue = this.tempreviewRatingValue[0];
+                } else {
+                    tempObj.tempreviewRatingValue = this.tempreviewRatingValue;
+                }
+            }
 
 
             return tempObj;
@@ -394,7 +416,7 @@
             "                   <div class=\"col-12 col-lg-6 mb-8 mb-lg-5\"><label class=\"text-black font-weight-bold\" for=\"reviewBody\">"+label_review_body+"</label><textarea name=\"\" class=\"form-control custom-textarea-82 reviewBody\" placeholder=\""+placeholder_review_body+"\" data-id=\""+(reviewCounter)+"\"></textarea></div></div>" +
             "                   <div class=\"row mb-5 author-data\" data-id=\""+(reviewCounter)+"\"><div class=\"col-5\"><label class=\"text-black font-weight-bold\" for=\"authorReview\">"+label_review_author+"</label><input type=\"text\" name=\"\" class=\"form-control authorReview\" placeholder=\""+placeholder_review_author+"\" value=\"\" data-id=\""+(reviewCounter)+"\"></div>" +
             "                   <div class=\"col-6\"><label class=\"text-black font-weight-bold\" for=\"publisher\">"+label_review_publisher+"</label><input type=\"text\" name=\"\" class=\"form-control publisher\" placeholder=\""+placeholder_review_publisher+"\" value=\"\" data-id=\""+(reviewCounter)+"\"></div>" +
-            "                   <div class=\"col-1\"><div class=\"d-flex justify-content-center mt-9\"><i class=\"bx bxs-x-circle bx-md delete deleteReview\"></i></div></div></div>"
+            "                   <div class=\"col-1\"><div class=\"d-flex justify-content-center mt-9\"><i class=\"bx bxs-x-circle bx-md delete deleteReview\" data-id=\""+(reviewCounter)+"\"></i></div></div></div>"
         );
 
         var arrows;
@@ -481,6 +503,89 @@
         productFormat.temp();
         productFormat.render();
     })
+
+    $(document).on('keyup', '.review', function () {
+        let index = parseInt($(this).data('id'));
+        delete productFormat.review[index]['@type']
+        productFormat.review[index] = Object.assign({"@type": "Review","name":""}, productFormat.review[index])
+        if($(this).val().length == 0) {
+            delete productFormat.review[index].name;
+        }else{
+            productFormat.review[index].name = $(this).val();
+        }
+        productFormat.render();
+    });
+
+
+    $(document).on('keyup', '.reviewBody', function () {
+        let index = parseInt($(this).data('id'));
+
+        productFormat.review[index].reviewBody = $(this).val();
+        productFormat.tempReviewBody[index] = $(this).val()
+        productFormat.temp();
+        productFormat.render();
+    });
+
+    $(document).on('keyup', '.rating', function () {
+        let index = parseInt(jQuery(this).data('id'));
+        productFormat.review[index] = Object.assign(productFormat.review[index],{"reviewRating" : {"@type": "Rating", "ratingValue": ""}})
+
+        if($(this).val().length == 0){
+            productFormat.review[index].reviewRating;
+        }else{
+            productFormat.review[index].reviewRating.ratingValue = $(this).val();
+        }
+
+        // recipeFormat.tempreviewRatingValue[index] =  $(this).val();
+        // if($('.review').val().length == 0){
+        //     recipeFormat.review[index] = {
+        //         "@type": "Review",
+        //         "name": recipeFormat.tempReviewName[index],
+        //         "reviewBody": recipeFormat.tempReviewBody[index],
+        //         "reviewRating" : {
+        //             "@type": "Rating",
+        //             "ratingValue": $(this).val()
+        //         },
+        //         "author": {"@type": "Person", "name": ""}
+        //     };
+        // } else {
+        //     recipeFormat.review[index] = {
+        //         "@type": "Review",
+        //         "reviewBody": recipeFormat.tempReviewBody[index],
+        //         "reviewRating" : {
+        //             "@type": "Rating",
+        //             "ratingValue": $(this).val()
+        //         },
+        //         "author": {"@type": "Person", "name": ""}
+        //     };
+        // }
+
+
+        // recipeFormat.temp();
+        productFormat.render();
+
+    });
+
+
+
+
+    $(document).on('change', '.dateReview', function () {
+        let index = parseInt($(this).data('id'));
+
+        if($(this).val().length == 0){
+            delete productFormat.review[index].datePublished;
+        }else{
+            productFormat.review[index].datePublished = $(this).val();
+        }
+
+        productFormat.render();
+    });
+
+    $(document).on('keyup', '.authorReview', function () {
+        let index = parseInt(jQuery(this).data('id'));
+        productFormat.review[index].author.name = $(this).val();
+        productFormat.render();
+    });
 
     $('#copy').click(function () {
         const copyText = jQuery('#json-format');

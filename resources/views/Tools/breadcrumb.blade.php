@@ -102,7 +102,7 @@ id/json-ld-breadcrumb-schema-generator
                                                 <i class='bx bx-check-circle'></i> <span>@lang('layout.btn-check')</span></button>
                                         </div>
                                         <div id="reset" class="col-4 d-flex justify-content-center px-0 button-result">
-                                            <button type="button" class="btn font-weight-bold" name="button">
+                                            <button type="button" class="btn font-weight-bold reset" name="button">
                                                 <i class='bx bx-refresh'></i> <span>@lang('layout.btn-reset')</span></button>
                                         </div>
                                     </div>
