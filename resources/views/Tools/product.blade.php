@@ -43,161 +43,163 @@ id/json-ld-product-schema-generator
                                 </div>
                             </div>
                             <p class="h6 text-black mb-5">Product</p>
-                            <div class="" id="formproduct">
-                                <div class="row">
-                                    <div class="col-12 col-md-6">
-                                        <label class="text-black font-weight-bold" for="name">@lang('product.label-name')</label>
-                                        <input type="text" name="" class="form-control name mb-5" placeholder="@lang('product.placeholder-name')" value="" data-id="0">
+                            <form action="" id="form-product">
+                                <div class="" id="formproduct">
+                                    <div class="row">
+                                        <div class="col-12 col-md-6">
+                                            <label class="text-black font-weight-bold" for="name">@lang('product.label-name')</label>
+                                            <input type="text" name="" class="form-control name mb-5" placeholder="@lang('product.placeholder-name')" value="" data-id="0">
+                                        </div>
+                                        <div class="col-12 col-md-6 mb-5">
+                                            <label class="text-black font-weight-bold" for="image">@lang('product.label-image')</label>
+                                            <input type="text" name="" class="form-control image" placeholder="@lang('product.placeholder-image')" value="" data-id="0">
+                                            <div class="invalid-feedback">@lang('layout.invalid-url')</div>
+                                        </div>
                                     </div>
-                                    <div class="col-12 col-md-6 mb-5">
-                                        <label class="text-black font-weight-bold" for="image">@lang('product.label-image')</label>
-                                        <input type="text" name="" class="form-control image" placeholder="@lang('product.placeholder-image')" value="" data-id="0">
-                                        <div class="invalid-feedback">@lang('layout.invalid-url')</div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-12 col-lg-6">
-                                        <label class="text-black font-weight-bold" for="productBrand">@lang('product.label-productBrand')</label>
-                                        <input type="text" name="" class="form-control productBrand mb-5" placeholder="@lang('product.placeholder-productBrand')" value="" data-id="0">
-                                        <div class="row">
-                                            <div class="col-12 mb-5">
-                                                <label class="text-black font-weight-bold" for="identifier">@lang('product.label-identifier')</label>
-                                                <div class="dropdown bootstrap-select show-tick form-control">
-                                                    <select class="form-control selectpicker custom-select-blue identifier" multiple="multiple" data-actions-box="false" tabindex="null">
-                                                        <option value="sku">sku</option>
-                                                        <option value="gtin8">gtin8</option>
-                                                        <option value="gtin13">gtin13</option>
-                                                        <option value="gtin14">gtin14</option>
-                                                        <option value="mpn">mpn</option>
-                                                    </select>
+                                    <div class="row">
+                                        <div class="col-12 col-lg-6">
+                                            <label class="text-black font-weight-bold" for="productBrand">@lang('product.label-productBrand')</label>
+                                            <input type="text" name="" class="form-control productBrand mb-5" placeholder="@lang('product.placeholder-productBrand')" value="" data-id="0">
+                                            <div class="row">
+                                                <div class="col-12 mb-5">
+                                                    <label class="text-black font-weight-bold" for="identifier">@lang('product.label-identifier')</label>
+                                                    <div class="dropdown bootstrap-select show-tick form-control">
+                                                        <select class="form-control selectpicker custom-select-blue identifier" multiple="multiple" data-actions-box="false" tabindex="null">
+                                                            <option value="sku">sku</option>
+                                                            <option value="gtin8">gtin8</option>
+                                                            <option value="gtin13">gtin13</option>
+                                                            <option value="gtin14">gtin14</option>
+                                                            <option value="mpn">mpn</option>
+                                                        </select>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
+                                        <div class="col-12 col-lg-6 mb-8 mb-lg-5">
+                                            <label class="text-black font-weight-bold" for="description">@lang('product.label-description')</label>
+                                            <textarea name="" class="form-control custom-textarea-82 description" placeholder="@lang('product.placeholder-description')" data-id="0"></textarea>
+                                        </div>
                                     </div>
-                                    <div class="col-12 col-lg-6 mb-8 mb-lg-5">
-                                        <label class="text-black font-weight-bold" for="description">@lang('product.label-description')</label>
-                                        <textarea name="" class="form-control custom-textarea-82 description" placeholder="@lang('product.placeholder-description')" data-id="0"></textarea>
+                                    <div class="row product-description">
+                                        <input type="hidden" id="skulang" value="@lang('product.placeholder-sku')">
+                                        <input type="hidden" id="gtin8lang" value="@lang('product.placeholder-gtin8')">
+                                        <input type="hidden" id="gtin13lang" value="@lang('product.placeholder-gtin13')">
+                                        <input type="hidden" id="gtin14lang" value="@lang('product.placeholder-gtin14')">
+                                        <input type="hidden" id="mpnlang" value="@lang('product.placeholder-mpn')">
                                     </div>
-                                </div>
-                                <div class="row product-description">
-                                    <input type="hidden" id="skulang" value="@lang('product.placeholder-sku')">
-                                    <input type="hidden" id="gtin8lang" value="@lang('product.placeholder-gtin8')">
-                                    <input type="hidden" id="gtin13lang" value="@lang('product.placeholder-gtin13')">
-                                    <input type="hidden" id="gtin14lang" value="@lang('product.placeholder-gtin14')">
-                                    <input type="hidden" id="mpnlang" value="@lang('product.placeholder-mpn')">
-                                </div>
-                                <div class="row">
-                                    <div class="col-6 col-md-3">
-                                        <label class="text-black font-weight-bold" for="offerType">@lang('product.label-offer-type') @type</label>
-                                        <select class="form-control selectpicker custom-select-blue offerType mb-5">
-                                            <option value="None">@lang('product.offer-type-opt-1')</option>
-                                            <option value="Offer">@lang('product.offer-type-opt-2')</option>
-                                            <option value="Aggregate Offer">@lang('product.offer-type-opt-3')</option>
-                                        </select>
+                                    <div class="row">
+                                        <div class="col-6 col-md-3">
+                                            <label class="text-black font-weight-bold" for="offerType">@lang('product.label-offer-type') @type</label>
+                                            <select class="form-control selectpicker custom-select-blue offerType mb-5">
+                                                <option value="None">@lang('product.offer-type-opt-1')</option>
+                                                <option value="Offer">@lang('product.offer-type-opt-2')</option>
+                                                <option value="Aggregate Offer">@lang('product.offer-type-opt-3')</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-6 col-md-3 mb-5">
+                                            <label class="text-black font-weight-bold" for="url">URL</label>
+                                            <input type="text" name="" class="form-control url" placeholder="@lang('product.placeholder-url')" value="" data-id="0" disabled>
+                                            <div class="invalid-feedback">@lang('layout.invalid-url')</div>
+                                        </div>
+                                        <div class="col-6 col-md-3">
+                                            <label class="text-black font-weight-bold" for="priceCurrency">@lang('product.label-currency')</label>
+                                            <select class="form-control selectpicker custom-select-blue custom-searchbox priceCurrency mb-5" data-size="4" data-live-search="true" disabled>
+                                                <option value="None">@lang('product.placeholder-currency')</option>
+                                                @foreach($currencies as $c)
+                                                    <option value="{{ $c['code'] }}">{{ $c['name'] }}</option>
+                                                @endforeach
+                                            </select>
+                                        </div>
+                                        <div class="col-6 col-md-3 mb-5">
+                                            <label class="text-black font-weight-bold" for="price">@lang('product.label-price')</label>
+                                            <input type="number" name="" class="form-control price" placeholder="@lang('product.placeholder-price')" value="" data-id="0" disabled>
+                                            <div class="invalid-feedback">@lang('layout.invalid-number')</div>
+                                        </div>
                                     </div>
-                                    <div class="col-6 col-md-3 mb-5">
-                                        <label class="text-black font-weight-bold" for="url">URL</label>
-                                        <input type="text" name="" class="form-control url" placeholder="@lang('product.placeholder-url')" value="" data-id="0" disabled>
-                                        <div class="invalid-feedback">@lang('layout.invalid-url')</div>
-                                    </div>
-                                    <div class="col-6 col-md-3">
-                                        <label class="text-black font-weight-bold" for="priceCurrency">@lang('product.label-currency')</label>
-                                        <select class="form-control selectpicker custom-select-blue custom-searchbox priceCurrency mb-5" data-size="4" data-live-search="true" disabled>
-                                            <option value="None">@lang('product.placeholder-currency')</option>
-                                            @foreach($currencies as $c)
-                                            <option value="{{ $c['code'] }}">{{ $c['name'] }}</option>
-                                            @endforeach
-                                        </select>
-                                    </div>
-                                    <div class="col-6 col-md-3 mb-5">
-                                        <label class="text-black font-weight-bold" for="price">@lang('product.label-price')</label>
-                                        <input type="number" name="" class="form-control price" placeholder="@lang('product.placeholder-price')" value="" data-id="0" disabled>
-                                        <div class="invalid-feedback">@lang('layout.invalid-number')</div>
-                                    </div>
-                                </div>
-                                <div id="offer" class="row d-none">
-                                    <div class="col-md-4">
-                                        <label class="text-black font-weight-bold" for="validThrough">@lang('product.label-validThrough')</label>
-                                        <div class="input-group date mb-5">
-                                            <div class="input-group-append">
+                                    <div id="offer" class="row d-none">
+                                        <div class="col-md-4">
+                                            <label class="text-black font-weight-bold" for="validThrough">@lang('product.label-validThrough')</label>
+                                            <div class="input-group date mb-5">
+                                                <div class="input-group-append">
                                                 <span class="input-group-text">
                                                     <i class="bx bx-calendar text-darkgrey"></i>
                                                 </span>
+                                                </div>
+                                                <input type="text" id="kt_datepicker_2" name="" class="form-control custom-date validThrough" readonly placeholder="@lang('product.placeholder-validThrough')" value="" data-id="0" />
                                             </div>
-                                            <input type="text" id="kt_datepicker_2" name="" class="form-control custom-date validThrough" readonly placeholder="@lang('product.placeholder-validThrough')" value="" data-id="0" />
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label class="text-black font-weight-bold" for="availability">@lang('product.label-availability')</label>
+                                            <select class="form-control selectpicker custom-select-blue availability mb-5">
+                                                <option selected="selected" value="In stock">@lang('product.availability-opt-1')</option>
+                                                <option value="Out of stock">@lang('product.availability-opt-2')</option>
+                                                <option value="Online only">@lang('product.availability-opt-3')</option>
+                                                <option value="In store only">@lang('product.availability-opt-4')</option>
+                                                <option value="Pre-order">@lang('product.availability-opt-5')</option>
+                                                <option value="Pre-sale">@lang('product.availability-opt-6')</option>
+                                                <option value="Limited availability">@lang('product.availability-opt-7')</option>
+                                                <option value="Sold out">@lang('product.availability-opt-8')</option>
+                                                <option value="Discontinued">@lang('product.availability-opt-9')</option>
+                                                <option class="font-italic" value="Not specified">@lang('product.availability-opt-10')</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label class="text-black font-weight-bold" for="condition">@lang('product.label-condition')</label>
+                                            <select class="form-control selectpicker custom-select-blue condition mb-5">
+                                                <option selected="selected" value="New">@lang('product.condition-opt-1')</option>
+                                                <option value="Used">@lang('product.condition-opt-2')</option>
+                                                <option value="Refurbished">@lang('product.condition-opt-3')</option>
+                                                <option value="Damaged">@lang('product.condition-opt-4')</option>
+                                                <option value="Pre-order">@lang('product.condition-opt-5')</option>
+                                            </select>
                                         </div>
                                     </div>
-                                    <div class="col-md-4">
-                                        <label class="text-black font-weight-bold" for="availability">@lang('product.label-availability')</label>
-                                        <select class="form-control selectpicker custom-select-blue availability mb-5">
-                                            <option selected="selected" value="In stock">@lang('product.availability-opt-1')</option>
-                                            <option value="Out of stock">@lang('product.availability-opt-2')</option>
-                                            <option value="Online only">@lang('product.availability-opt-3')</option>
-                                            <option value="In store only">@lang('product.availability-opt-4')</option>
-                                            <option value="Pre-order">@lang('product.availability-opt-5')</option>
-                                            <option value="Pre-sale">@lang('product.availability-opt-6')</option>
-                                            <option value="Limited availability">@lang('product.availability-opt-7')</option>
-                                            <option value="Sold out">@lang('product.availability-opt-8')</option>
-                                            <option value="Discontinued">@lang('product.availability-opt-9')</option>
-                                            <option class="font-italic" value="Not specified">@lang('product.availability-opt-10')</option>
-                                        </select>
+                                    <div id="ag_offer" class="row d-none">
+                                        <div class="col-md-6 mb-5">
+                                            <label class="text-black font-weight-bold" for="highPrice">@lang('product.label-highPrice')</label>
+                                            <input type="number" name="" class="form-control highPrice" placeholder="@lang('product.placeholder-highPrice')" value="" min="0" data-id="0">
+                                            <div class="invalid-feedback">@lang('layout.invalid-number')</div>
+                                        </div>
+                                        <div class="col-md-6 mb-5">
+                                            <label class="text-black font-weight-bold" for="offer">@lang('product.label-offer')</label>
+                                            <input type="number" name="" class="form-control offer" placeholder="@lang('product.placeholder-offer')" value="" min="0" data-id="0">
+                                            <div class="invalid-feedback">@lang('layout.invalid-number')</div>
+                                        </div>
                                     </div>
-                                    <div class="col-md-4">
-                                        <label class="text-black font-weight-bold" for="condition">@lang('product.label-condition')</label>
-                                        <select class="form-control selectpicker custom-select-blue condition mb-5">
-                                            <option selected="selected" value="New">@lang('product.condition-opt-1')</option>
-                                            <option value="Used">@lang('product.condition-opt-2')</option>
-                                            <option value="Refurbished">@lang('product.condition-opt-3')</option>
-                                            <option value="Damaged">@lang('product.condition-opt-4')</option>
-                                            <option value="Pre-order">@lang('product.condition-opt-5')</option>
-                                        </select>
+                                    <div class="row">
+                                        <div class="col-6 mb-5">
+                                            <label class="text-black font-weight-bold" for="ratingValue">@lang('product.label-ratingValue')</label>
+                                            <input type="number" name="" class="form-control ratingValue" placeholder="@lang('product.placeholder-ratingValue')" value="" min="0" data-id="0">
+                                            <div class="invalid-feedback">@lang('layout.invalid-number')</div>
+                                        </div>
+                                        <div class="col-6 mb-5">
+                                            <label class="text-black font-weight-bold" for="ratingCount">@lang('product.label-ratingCount')</label>
+                                            <input type="number" name="" class="form-control ratingCount" disabled placeholder="@lang('product.placeholder-ratingCount')" value="" min="0" data-id="0">
+                                            <div class="invalid-feedback">@lang('layout.invalid-number')</div>
+                                        </div>
+                                        <div class="col-6 mb-5">
+                                            <label class="text-black font-weight-bold" for="bestRating">@lang('product.label-bestRating')</label>
+                                            <input type="number" name="" class="form-control bestRating" disabled placeholder="@lang('product.placeholder-bestRating')" value="" min="0" data-id="0">
+                                            <div class="invalid-feedback">@lang('layout.invalid-number')</div>
+                                        </div>
+                                        <div class="col-6 mb-5">
+                                            <label class="text-black font-weight-bold" for="worstRating">@lang('product.label-worstRating')</label>
+                                            <input type="number" name="" class="form-control worstRating" disabled placeholder="@lang('product.placeholder-worstRating')" value="" min="0" data-id="0">
+                                            <div class="invalid-feedback">@lang('layout.invalid-number')</div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div id="ag_offer" class="row d-none">
-                                    <div class="col-md-6 mb-5">
-                                        <label class="text-black font-weight-bold" for="highPrice">@lang('product.label-highPrice')</label>
-                                        <input type="number" name="" class="form-control highPrice" placeholder="@lang('product.placeholder-highPrice')" value="" min="0" data-id="0">
-                                        <div class="invalid-feedback">@lang('layout.invalid-number')</div>
-                                    </div>
-                                    <div class="col-md-6 mb-5">
-                                        <label class="text-black font-weight-bold" for="offer">@lang('product.label-offer')</label>
-                                        <input type="number" name="" class="form-control offer" placeholder="@lang('product.placeholder-offer')" value="" min="0" data-id="0">
-                                        <div class="invalid-feedback">@lang('layout.invalid-number')</div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-6 mb-5">
-                                        <label class="text-black font-weight-bold" for="ratingValue">@lang('product.label-ratingValue')</label>
-                                        <input type="number" name="" class="form-control ratingValue" placeholder="@lang('product.placeholder-ratingValue')" value="" min="0" data-id="0">
-                                        <div class="invalid-feedback">@lang('layout.invalid-number')</div>
-                                    </div>
-                                    <div class="col-6 mb-5">
-                                        <label class="text-black font-weight-bold" for="ratingCount">@lang('product.label-ratingCount')</label>
-                                        <input type="number" name="" class="form-control ratingCount" disabled placeholder="@lang('product.placeholder-ratingCount')" value="" min="0" data-id="0">
-                                        <div class="invalid-feedback">@lang('layout.invalid-number')</div>
-                                    </div>
-                                    <div class="col-6 mb-5">
-                                        <label class="text-black font-weight-bold" for="bestRating">@lang('product.label-bestRating')</label>
-                                        <input type="number" name="" class="form-control bestRating" disabled placeholder="@lang('product.placeholder-bestRating')" value="" min="0" data-id="0">
-                                        <div class="invalid-feedback">@lang('layout.invalid-number')</div>
-                                    </div>
-                                    <div class="col-6 mb-5">
-                                        <label class="text-black font-weight-bold" for="worstRating">@lang('product.label-worstRating')</label>
-                                        <input type="number" name="" class="form-control worstRating" disabled placeholder="@lang('product.placeholder-worstRating')" value="" min="0" data-id="0">
-                                        <div class="invalid-feedback">@lang('layout.invalid-number')</div>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div id="addReview"></div>
+                                        </div>
+                                        <div class="col-12 col-md-4">
+                                            <button type="button" class="btn btn-block btn-add-question mt-5 mb-5" name="button" id="add-product-review">
+                                                <i class='bx bx-plus'></i> @lang('product.btn-addReview')
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="col-12">
-                                        <div id="addReview"></div>
-                                    </div>
-                                    <div class="col-12 col-md-4">
-                                        <button type="button" class="btn btn-block btn-add-question mt-5 mb-5" name="button" id="add-product-review">
-                                            <i class='bx bx-plus'></i> @lang('product.btn-addReview')
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
+                            </form>
                         </div>
                         <div class="col-md-4 mb-5">
                             <div class="p-2" style="border: 1px solid #E4E6EF; border-radius: 0.42rem;">
@@ -212,7 +214,7 @@ id/json-ld-product-schema-generator
                                                 <i class='bx bx-check-circle'></i> <span>@lang('layout.btn-check')</span></button>
                                         </div>
                                         <div id="reset" class="col-4 d-flex justify-content-center px-0 button-result">
-                                            <button type="button" class="btn font-weight-bold" name="button">
+                                            <button type="button" class="btn font-weight-bold reset" name="button">
                                                 <i class='bx bx-refresh'></i> <span>@lang('layout.btn-reset')</span></button>
                                         </div>
                                     </div>

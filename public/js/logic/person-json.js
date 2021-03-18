@@ -194,6 +194,70 @@
 
         }
 
+        resetrender(){
+
+            counterSocial =0;
+
+            facebookVal = "";
+            twitterVal = "";
+            linkedinVal = "";
+            wikipediaVal = "";
+            websiteVal = "";
+            pinterestVal = "";
+            githubVal = "";
+            tumblrVal = "";
+            soundcloudVal = "";
+            instagramVal = "";
+            youtubeVal = "";
+
+            this.name = '';
+            this.url = '';
+            this.image = '';
+            this.sameAs = [];
+            this.jobTitle = undefined;
+            this.worksFor = {
+                "@type": "Organization",
+                "name": ""
+            }
+
+            this.socialMedia = [];
+            this.tempSocial = [];
+
+            this.facebookVal = "";
+            this.twitterVal = "";
+            this.linkedinVal = "";
+            this.wikipediaVal = "";
+            this.websiteVal = "";
+            this.pinterestVal = "";
+            this.githubVal = "";
+            this.tumblrVal = "";
+            this.soundcloudVal = "";
+            this.instagramVal = "";
+            this.youtubeVal = "";
+
+            const obj = {
+                "@context": "https://schema.org/",
+                "@type": "Person",
+                "name": this.name,
+                "url": this.url,
+                "image": this.image
+            }
+
+            obj.name = this.name;
+            obj.url = this.url;
+            obj.image = this.image;
+
+            if(this.sameAs.length > 0) obj.sameAs = this.sameAs;
+
+            if(this.jobTitle) obj.jobTitle = this.jobTitle;
+
+            if(this.worksFor.name) obj.worksFor = this.worksFor;
+
+            $("#json-format").val("<script type=\"application/ld+json\">\n" + JSON.stringify(obj, undefined, 4) + "\n<\/script>");
+            return obj;
+
+        }
+
         temp(){
 
             const tempObj = {};
@@ -336,16 +400,17 @@
         let sosmedData = $(this).attr('data-sosmed');
 
         if(sosmedData == 'facebook'){
+            personFormat.facebookVal = $(this).val();
         } else if(sosmedData == 'twitter'){
             personFormat.twitterVal = $(this).val();
         }else if(sosmedData == 'linkedin'){
             personFormat.linkedinVal = $(this).val();
         }else if(sosmedData == 'wikipedia'){
-            personFormat.wikipediaVal == $(this).val();
+            personFormat.wikipediaVal = $(this).val();
         }else if(sosmedData == 'website'){
-            personFormat.websiteVal == $(this).val();
+            personFormat.websiteVal = $(this).val();
         }else if(sosmedData == 'pinterest'){
-            personFormat.pinterestVal == $(this).val();
+            personFormat.pinterestVal = $(this).val();
         }else if(sosmedData == 'github'){
             personFormat.githubVal = $(this).val();
         }else if(sosmedData == 'tumblr'){
@@ -379,4 +444,13 @@
         copyText.select();
         // copyText.setSelectionRange(0, 999999); /*For mobile devices*/
         document.execCommand("copy");
+        toastr.info('Copied to Clipboard', 'Information');
+    });
+
+    $('.reset').click(function (e) {
+        $('#form').trigger("reset");
+        $('.social-profiles').val(1)
+        $('.social-profiles').change()
+        $('.sosial-profile-url').html('')
+        personFormat.resetrender()
     });
