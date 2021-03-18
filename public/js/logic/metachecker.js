@@ -58,7 +58,7 @@ $('#desc').on('keyup', function () {
 })
 
 $('#url').on('keyup', function () {
-    $('#resulturl').text($(this).val().toowerCase())
+    $('#resulturl').text($(this).val().toLowerCase())
     $('#resulturlmobile').text($(this).val().toLowerCase())
 })
 
