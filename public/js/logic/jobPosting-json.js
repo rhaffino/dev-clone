@@ -46,6 +46,123 @@ const jobSchema = class {
 
     }
 
+    resetrender(){
+        this.country = '';
+        this.streetAddress = '';
+        this.addressLocality = '';
+        this.postalCode = '';
+        this.title = '';
+        this.description = '';
+        this.salaryValue = '';
+        this.identify = {
+            "@type": "PropertyValue",
+            "name": "",
+            "value":""
+        };
+        this.hiring = {
+            "@type": "Organization",
+            "name": ""
+        };
+        this.industry = undefined;
+        this.employmentType = undefined;
+        this.workHours = undefined;
+        this.datePosted = '';
+        this.validThrough = '';
+
+        this.jobLocation = {
+            "@type": "Place",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "",
+                "addressLocality": "",
+                "postalCode": "",
+                "addressCountry": ""
+            }
+        };
+
+        this.applicantLocationRequirements = undefined;
+        this.baseSalary = {
+            "@type": "MonetaryAmount",
+            "currency": "",
+            "value": {
+                "@type": "QuantitativeValue",
+                "value": "",
+                "unitText": ""
+            }
+        };
+
+        this.tempStreetAdd = "";
+        this.tempaddressLocality = "";
+        this.tempPostalCode = "";
+        this.tempAddressCountry = "";
+        this.tempAddressRegion = "";
+        this.unitTextCur = "";
+        this.tempcurrency = "";
+
+        this.responsibilities = undefined;
+        this.skills = undefined;
+        this.qualifications = undefined;
+        this.educationRequirements = undefined;
+        this.experienceRequirements = undefined;
+
+        const resetObj = {
+            "@context": "https://schema.org/",
+            "@type": "JobPosting",
+            title:this.title,
+            description:this.description,
+
+        }
+
+
+        resetObj.title = this.title;
+
+        resetObj.description = this.description;
+
+        if(this.identify.name || this.identify.value) resetObj.identifier = this.identify;
+
+        resetObj.hiringOrganization = this.hiring;
+
+        if(this.industry) resetObj.industry = this.industry;
+
+        if(this.employmentType) resetObj.employmentType = this.employmentType;
+
+        if(this.workHours) resetObj.workHours = this.workHours;
+
+        resetObj.datePosted = this.datePosted;
+
+        resetObj.validThrough = this.validThrough;
+
+        if(this.hiring.length > 0){
+            if(this.hiring.length === 1){
+                resetObj.hiringOrganization = this.hiring[0];
+            } else {
+                resetObj.hiringOrganization = this.hiring;
+            }
+        }
+
+        resetObj.jobLocation = this.jobLocation;
+
+        // if(this.jobLocationReg) obj.jobLocation = this.jobLocationReg;
+
+        if(this.applicantLocationRequirements) resetObj.applicantLocationRequirements = this.applicantLocationRequirements;
+
+        resetObj.baseSalary = this.baseSalary;
+
+        if(this.responsibilities) resetObj.responsibilities = this.responsibilities;
+
+        if(this.skills) resetObj.skills = this.skills;
+
+        if(this.qualifications) resetObj.qualifications = this.qualifications;
+
+        if(this.educationRequirements) resetObj.educationRequirements = this.educationRequirements;
+
+        if(this.experienceRequirements) resetObj.experienceRequirements = this.experienceRequirements;
+
+        $("#json-format").val("<script type=\"application/ld+json\">\n" + JSON.stringify(resetObj, undefined, 4) + "\n<\/script>");
+        return resetObj;
+
+    }
+
     temp(){
 
         const tempObj = {};
@@ -519,4 +636,22 @@ $(document).on("keyup", ".salary", function() {
       $(".maxSalary, .currency, .unitText").attr("disabled", true);
       $(".currency, .unitText").selectpicker("refresh");
     }
+});
+
+$('.reset').click(function (e) {
+    checkBox= 0;
+    $(".street, .city, div.province > button, .zipCode").removeAttr("disabled");
+    $(".maxSalary, .currency, .unitText").attr("disabled", true);
+    $("#hide-province").show();
+    $("#province-show").hide();
+    $('.province').val(1);
+    $('.province').change();
+    $(".country").val(1);
+    $(".country").change();
+    $(".currency").val(1);
+    $(".currency").change();
+    $(".unitText").val(1);
+    $(".unitText").change();
+    $('#form').trigger("reset");
+    jobFormat.resetrender();
 });
