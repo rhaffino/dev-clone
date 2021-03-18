@@ -45,29 +45,27 @@ $('#crawlButton').on('click', function() {
     let url = $('#url').val().replace(/^(http(s)?|ftp):\/\//, '');
     url = url.substr(url.length - 1) === '/' ? url.slice(0, -1) : url;
     $.ajax({
-        url: 'https://api.cmlabs.co/ssl',
-        type: 'GET',
-        header: {
-            "Access-Control-Allow-Origin": "*",
-        },
-        dataType: "JSON",
-        contentType: "application/json",
+        url: SSL_CHECKER_URL,
+        type: 'POST',
         data: {
+            _token: $('meta[name="csrf-token"]').attr('content'),
             url: url
         },
         success: (response) => {
-            if ("errno" in response) {
+            if (response.statusCode === 200){
+                renderData(response.data)
+                save(response.data, url)
+                refreshLocalStorage()
+                toastr.success('Success scan your ssl', 'Success');
+            }else {
                 toastr.error('Domain Not found', 'Error');
                 $('#result').empty()
                 $('#noCrawlResult').show()
-            } else {
-                toastr.success('Success scan your ssl', 'Success');
-                save(response, url)
-                renderData(response)
-                refreshLocalStorage()
             }
         },
         error: (error) => {
+            $('#result').empty()
+            $('#noCrawlResult').show()
             if (lang === 'en')
                 toastr.error('Error happen during proses', 'Error')
             else toastr.error('Error terjadi selama proses berlangsung', 'Error')

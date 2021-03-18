@@ -55,4 +55,14 @@ trait ApiHelper
         $response = $this->request("api/redirect-chain-checker/check", 'POST', compact('url'));
         return \GuzzleHttp\json_decode($response, 1);
     }
+
+    protected function requestSslChecker($url){
+        $response = $this->request("api/ssl-checker/check", 'POST', compact('url'));
+        return \GuzzleHttp\json_decode($response, 1);
+    }
+
+    protected function requestMetaChecker($url){
+        $response = $this->request("api/meta-checker/check", 'POST', compact('url'));
+        return \GuzzleHttp\json_decode($response, 1);
+    }
 }

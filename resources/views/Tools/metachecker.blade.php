@@ -482,6 +482,7 @@ id/page-title-meta-description-checker
         }]
     }
 </script>
+<script>const META_CHECKER_URL = '{{route('api.analyze-meta')}}'</script>
 <script src="{{asset('js/logic/predifine-localstorage.js')}}"></script>
 <script src="{{asset('js/logic/metachecker.js')}}"></script>
 <script type="text/javascript">

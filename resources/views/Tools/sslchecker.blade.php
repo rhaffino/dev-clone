@@ -345,6 +345,7 @@ id/ssl-checker
 @endsection
 
 @push('script')
+<script>const SSL_CHECKER_URL = '{{route('api.analyze-ssl')}}'</script>
 <script src="{{asset('js/logic/trigerEnterButton.js')}}"></script>
 <script src="{{asset('js/logic/sslchecker.js')}}"></script>
 <script type="text/javascript">
