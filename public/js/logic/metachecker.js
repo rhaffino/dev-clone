@@ -7,31 +7,38 @@ if (lang == "en") {
 }
 
 jQuery('#crawlURL').click(function () {
-    var matchreg = /^(https?|ftp):\/\//;
-    let urls = jQuery('#url').val().replace(matchreg, "");
-    jQuery.get({
-        url: 'https://api.cmlabs.co/?url=https://' + urls,
-        success: (res) => {
-            $('#resulttitle').text(ellipsis(res.title,'title'));
-            $('#resultdesc').text(ellipsis(res.description,'description'));
-            $('#resulturl').text('https://' + urls.toLowerCase());
-            $('#resulttitlemobile').text(ellipsis(res.title,'title'));
-            $('#resultdescmobile').text(ellipsis(res.description,'description'));
-            $('#resulturlmobile').text('https://' + urls.toLowerCase());
-            $('#desc').val(res.description)
-            $('#title').val(res.title)
-            $("#manual-mode").removeClass("d-none").addClass("d-block").slideDown();
-            $('#desc').attr('disabled', 'disabled');
-            $('#title').attr('disabled', 'disabled');
-            var rateTitle = titleChecker(res.title);
-            fillTitleBar(rateTitle);
-            var rateDesc = descChecker(res.description);
-            fillDescBar(rateDesc);
-            save('https://' + urls, res.title, res.description)
-            refreshLocalStorage();
+    let url = jQuery('#url').val();
+    $.post({
+        url: META_CHECKER_URL,
+        data: {
+            _token: $('meta[name="csrf-token"]').attr('content'),
+            url: url
         },
-        fail: (res) => {
-            toastr.error("Your URL not valid")
+        success: (res) => {
+            if (res.statusCode === 200) {
+                $('#resulttitle').text(ellipsis(res.data.title, 'title'));
+                $('#resultdesc').text(ellipsis(res.data.description, 'description'));
+                $('#resulturl').text('https://' + url.toLowerCase());
+                $('#resulttitlemobile').text(ellipsis(res.data.title, 'title'));
+                $('#resultdescmobile').text(ellipsis(res.data.description, 'description'));
+                $('#resulturlmobile').text(url.toLowerCase());
+                $('#desc').val(res.data.description)
+                $('#title').val(res.data.title)
+                $("#manual-mode").removeClass("d-none").addClass("d-block").slideDown();
+                $('#desc').attr('disabled', 'disabled');
+                $('#title').attr('disabled', 'disabled');
+                var rateTitle = titleChecker(res.data.title);
+                fillTitleBar(rateTitle);
+                var rateDesc = descChecker(res.data.description);
+                fillDescBar(rateDesc);
+                save(url, res.data.title, res.data.description)
+                refreshLocalStorage();
+            } else {
+                toastr.error(res.message)
+            }
+        },
+        error: (err) => {
+            toastr.error(err.responseJSON.message)
         }
     });
 })
@@ -39,14 +46,14 @@ jQuery('#crawlURL').click(function () {
 $('#title').on('keyup', function () {
     var rateTitle = titleChecker($(this).val());
     fillTitleBar(rateTitle)
-    $('#resulttitle').text(ellipsis($(this).val(),'title'))
-    $('#resulttitlemobile').text(ellipsis($(this).val(),'title'))
+    $('#resulttitle').text(ellipsis($(this).val(), 'title'))
+    $('#resulttitlemobile').text(ellipsis($(this).val(), 'title'))
 })
 
 $('#desc').on('keyup', function () {
     var rateDesc = descChecker($(this).val());
     fillDescBar(rateDesc);
-    $('#resultdesc').text(ellipsis($(this).val(),'description'));
+    $('#resultdesc').text(ellipsis($(this).val(), 'description'));
     $('#resultdescmobile').text(ellipsis($(this).val(), 'description'));
 })
 
@@ -55,17 +62,17 @@ $('#url').on('keyup', function () {
     $('#resulturlmobile').text($(this).val().toLowerCase())
 })
 
-const ellipsis = function (text, type){
-    if (type === 'title'){
+const ellipsis = function (text, type) {
+    if (type === 'title') {
         if (text.length <= 55)
             return text
 
-        return text.slice(0,55)+'...'
-    }else {
+        return text.slice(0, 55) + '...'
+    } else {
         if (text.length <= 160)
             return text
 
-        return text.slice(0,160)+'...'
+        return text.slice(0, 160) + '...'
     }
 }
 
@@ -113,34 +120,50 @@ const refreshLocalStorage = function () {
         $('#localsavemobile').empty();
         $('#localsavedesktop').empty();
         const keys = JSON.parse(localStorage.getItem('keys'))
-        if (keys.meta.length > 0) {
-            for (let key of keys.meta) {
-                let temp = JSON.parse(localStorage.getItem(key)).url
-                let date = new Date(key)
-                let div = '<div class="custom-card py-5 px-3" onclick="getData(' + key + ')">' +
-                    '<div class="d-flex align-items-center justify-content-between">' +
-                    '<div class="local-collection-title">' + temp + '</div>' +
-                    '<div class="d-flex align-items-center">' +
-                    '<span class="mr-2 text-grey date-created">' + created_at + ((date.getHours() < 10) ? ('0' + date.getHours()) : date.getHours()) + '.' + ((date.getMinutes() < 10) ? ('0' + date.getMinutes()) : date.getMinutes()) + ' | ' + date.getDate() + ', ' + getMonth(date.getMonth()) + ' ' + date.getFullYear() + '</span>' +
-                    '<i class="bx bxs-x-circle text-grey" onclick="removeData(' + key + ')"></i>' +
-                    '</div>' +
-                    '</div>' +
-                    '</div>'
+        if (keys){
+            if (keys.meta.length > 0) {
+                for (let key of keys.meta) {
+                    let temp = JSON.parse(localStorage.getItem(key)).url
+                    let date = new Date(key)
+                    let div = '<div class="custom-card py-5 px-3" onclick="getData(' + key + ')">' +
+                        '<div class="d-flex align-items-center justify-content-between">' +
+                        '<div class="local-collection-title">' + temp + '</div>' +
+                        '<div class="d-flex align-items-center">' +
+                        '<span class="mr-2 text-grey date-created">' + created_at + ((date.getHours() < 10) ? ('0' + date.getHours()) : date.getHours()) + '.' + ((date.getMinutes() < 10) ? ('0' + date.getMinutes()) : date.getMinutes()) + ' | ' + date.getDate() + ', ' + getMonth(date.getMonth()) + ' ' + date.getFullYear() + '</span>' +
+                        '<i class="bx bxs-x-circle text-grey" onclick="removeData(' + key + ')"></i>' +
+                        '</div>' +
+                        '</div>' +
+                        '</div>'
 
-                let div2 = '<li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px" onclick="getData(' + key + ')">' +
-                    '<div class="d-flex justify-content-between">' +
-                    '  <div class="local-collection-title">' + temp + '</div>' +
-                    '  <div class="d-flex align-items-center">' +
-                    '    <span class="mr-2 text-grey date-created">' + created_at + (date.getHours() < 10 ? ('0' + date.getHours()) : date.getHours()) + '.' + (date.getMinutes() < 10 ? ('0' + date.getMinutes()) : date.getMinutes()) + ' | ' + date.getDate() + ', ' + getMonth(date.getMonth()) + ' ' + date.getFullYear() + '</span>' +
-                    '    <i class="bx bxs-x-circle text-grey" onclick="removeData(' + key + ')"></i>' +
-                    '  </div>' +
-                    '</div>' +
-                    '</li>'
+                    let div2 = '<li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px" onclick="getData(' + key + ')">' +
+                        '<div class="d-flex justify-content-between">' +
+                        '  <div class="local-collection-title">' + temp + '</div>' +
+                        '  <div class="d-flex align-items-center">' +
+                        '    <span class="mr-2 text-grey date-created">' + created_at + (date.getHours() < 10 ? ('0' + date.getHours()) : date.getHours()) + '.' + (date.getMinutes() < 10 ? ('0' + date.getMinutes()) : date.getMinutes()) + ' | ' + date.getDate() + ', ' + getMonth(date.getMonth()) + ' ' + date.getFullYear() + '</span>' +
+                        '    <i class="bx bxs-x-circle text-grey" onclick="removeData(' + key + ')"></i>' +
+                        '  </div>' +
+                        '</div>' +
+                        '</li>'
+
+                    $('#localsavemobile').append(div)
+                    $('#localsavedesktop').append(div2)
+                }
+            } else {
+                let div2 = `<li id="empty-impression" class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
+                  <div class="d-flex justify-content-center text-center">
+                    <span>` + localStorageNone + `</span>
+                  </div>
+                </li>`
+                let div = `<div class="custom-card py-5 px-3">
+                    <div class="d-flex justify-content-center text-center">
+                        <span>` + localStorageNone + `</span>
+                    </div>
+                </div>`
 
                 $('#localsavemobile').append(div)
                 $('#localsavedesktop').append(div2)
             }
-        } else {
+        }else {
             let div2 = `<li id="empty-impression" class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
                   <div class="d-flex justify-content-center text-center">
                     <span>` + localStorageNone + `</span>
