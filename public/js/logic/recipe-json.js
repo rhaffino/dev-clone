@@ -78,6 +78,145 @@
 
         }
 
+        resetrender(){
+            imageUrlCounter = 0;
+            ingredientsCounter = -1;
+            stepCounter = -1;
+            reviewCounter = -1;
+            this.name = '';
+            this.image = [""];
+            this.description = '';
+            this.keywords = '';
+            this.author = {
+                "@type": "Person",
+                "name": ""
+            };
+            this.datePublished = '';
+            this.prepTime = '';
+            this.cookTime = '';
+            this.totalTime = '';
+            this.recipeCategory = undefined;
+            this.recipeCuisine = undefined;
+            this.recipeYield = undefined;
+            this.nutrition = {
+                "@type": "NutritionInformation",
+                "calories": ""
+            }
+            this.recipeIngredient = undefined;
+            this.recipeInstructions = [];
+            this.aggregateRating = undefined;
+            this.review = [];
+            this.video = undefined;
+
+            this.tempnameVideo = "";
+            this.tempdescVideo = "";
+            this.tempthumbVideo = [""];
+            this.tempuploadDate = "";
+            this.tempcontentVideo = "";
+            this.tempembedurl = "";
+
+            this.tempaggRate = "";
+            this.tempnumOfRate = "";
+            this.temphighestval = "";
+            this.templowestval = "";
+
+            this.tempPrepTime = 0;
+            this.tempCookTime = 0;
+
+            this.tempReviewName = [];
+            this.tempReviewBody = [];
+            this.tempreviewRatingValue = [];
+
+            const obj = {
+                "@context": "https://schema.org/",
+                "@type": "Recipe",
+                "name": this.name,
+                "image": this.image.length === 1 ? this.image[0] : this.image,
+                "description": this.description,
+                "keywords": this.keywords,
+                "author": this.author,
+            }
+
+
+            obj.name = this.name;
+
+            if(this.image.length > 0) {
+                if (this.image.length === 1) {
+                    obj.image = this.image[0];
+                } else {
+                    obj.image = this.image;
+                }
+            }
+
+            obj.description = this.description;
+            obj.keywords = this.keywords;
+
+            if(this.author.name) obj.author.name = this.author.name;
+            if(this.datePublished) obj.datePublished = this.datePublished;
+            obj.prepTime = this.prepTime;
+            obj.cookTime = this.cookTime;
+            obj.totalTime = this.totalTime;
+            if(this.recipeCategory) obj.recipeCategory = this.recipeCategory;
+            if(this.recipeCuisine) obj.recipeCuisine = this.recipeCuisine;
+            if(this.recipeYield) obj.recipeYield = this.recipeYield;
+            obj.nutrition = this.nutrition;
+            if(this.nutrition.servingSize) obj.nutrition.servingSize = this.nutrition.servingSize;
+            obj.nutrition.calories = this.nutrition.calories;
+            if(this.nutrition.fatContent) obj.nutrition.fatContent = this.nutrition.fatContent;
+
+            if(this.recipeIngredient) {
+                if(this.recipeIngredient.length > 0) {
+                    if (this.recipeIngredient.length === 1) {
+                        obj.recipeIngredient = this.recipeIngredient[0];
+                    } else {
+                        obj.recipeIngredient = this.recipeIngredient;
+                    }
+                }
+            }
+
+            if(this.recipeInstructions) {
+                if(this.recipeInstructions.length > 0) {
+                    if (this.recipeInstructions.length === 1) {
+                        obj.recipeInstructions = this.recipeInstructions[0];
+                    } else {
+                        obj.recipeInstructions = this.recipeInstructions;
+                    }
+                }
+            }
+
+            if(this.recipeInstructions){
+                if(this.recipeInstructions.length > 0) {
+                    if (this.recipeInstructions.length === 1) {
+                        obj.recipeInstructions = this.recipeInstructions[0];
+                    } else {
+                        obj.recipeInstructions = this.recipeInstructions;
+                    }
+                }
+            }
+
+            if(this.aggregateRating) obj.aggregateRating = this.aggregateRating;
+
+            if(this.review){
+                if(this.review.length > 0) {
+                    if (this.review.length === 1) {
+                        obj.review = this.review[0];
+                    } else {
+                        obj.review = this.review;
+                    }
+                }
+            }
+
+
+
+
+            if(this.video) obj.video = this.video;
+
+            $("#json-format").val("<script type=\"application/ld+json\">\n" + JSON.stringify(obj, undefined, 4) + "\n<\/script>");
+
+            return obj;
+
+        }
+
         temp(){
 
             const tempObj = {};
@@ -773,4 +912,16 @@ jQuery(document).on('change', '.fatContent', function () {
         copyText.select();
         // copyText.setSelectionRange(0, 999999); /*For mobile devices*/
         document.execCommand("copy");
+    });
+
+    $('.reset').click(function (e) {
+        $('.form-recipe').trigger('reset')
+        $('.imageurlList').parent().find('.image-url-data').remove();
+        $('.imageurlList').parent().find('.deleteImageButton').remove();
+        $('.recipeCategory').val(1)
+        $('.recipeCategory').change()
+        $('#ingredients').html('')
+        $('#step').html('')
+        $('#addReview').html('')
+        recipeFormat.resetrender();
     });
