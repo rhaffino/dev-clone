@@ -112,6 +112,104 @@
 
         }
 
+        resetrender(){
+
+            reviewCounter = -1;
+
+            this.name = '';
+            this.image = '';
+            this.description = undefined;
+            this.brand = undefined;
+
+            this.skuTemp = 'none';
+            this.gtin8Temp = 'none';
+            this.gtin13Temp = 'none';
+            this.gtin14Temp = 'none';
+            this.mpnTemp = 'none';
+
+            this.sku = '';
+            this.gtin8 = '';
+            this.gtin13 = '';
+            this.gtin14 = '';
+            this.mpn = '';
+
+            this.price = '';
+            this.highPrice = '';
+            this.priceCurrency = ''
+            this.url = '';
+
+            this.offers = undefined;
+
+            this.aggregateRating = undefined;
+            this.review = [];
+
+
+            this.tempIdentify = [];
+
+            this.tempUrloffer = "";
+            this.temppriceCur = "";
+            this.tempprice = "";
+            this.tempHighPrice = "";
+
+            this.tempPriceValid = "";
+            this.tempAvailability = "";
+            this.tempItemCondition = "";
+
+            this.tempaggRate = "";
+            this.tempnumOfRate = "";
+            this.temphighestval = "";
+            this.templowestval = "";
+
+            this.tempReviewName = [];
+            this.tempReviewBody = [];
+            this.tempreviewRatingValue = [];
+            const obj = {
+                "@context": "https://schema.org",
+                "@type": "Product",
+                "name": this.name,
+                "image": this.image,
+            };
+
+            obj.name = this.name;
+            obj.image = this.image;
+
+            if(this.description) obj.description = this.description;
+
+            if(this.brand) obj.brand = this.brand;
+
+            if(this.skuTemp != 'none') obj.sku = this.sku;
+            if(this.gtin8Temp != 'none') obj.gtin8 = this.gtin8;
+            if(this.gtin13Temp != 'none') obj.gtin13 = this.gtin13;
+            if(this.gtin14Temp != 'none') obj.gtin14 = this.gtin14;
+            if(this.mpnTemp != 'none') obj.mpn = this.mpn;
+
+            if(this.offers) {
+                obj.offers = this.offers;
+                obj.offers.lowPrice = this.offers.lowPrice;
+                if(this.offers.price) obj.offers.price = this.offers.price;
+                if(this.offers.highPrice) obj.offers.highPrice = this.offers.highPrice;
+                if(this.offers.offerCount) obj.offers.offerCount = this.offers.offerCount;
+                if(this.offers.priceValidUntil) obj.offers.priceValidUntil = this.offers.priceValidUntil;
+                if(this.offers.availability) obj.offers.availability = this.offers.availability;
+                if(this.offers.itemCondition) obj.offers.itemCondition = this.offers.itemCondition;
+            }
+
+            if(this.aggregateRating) obj.aggregateRating = this.aggregateRating;
+
+            if(this.review){
+                if(this.review.length > 0) {
+                    if (this.review.length === 1) {
+                        obj.review = this.review[0];
+                    } else {
+                        obj.review = this.review;
+                    }
+                }
+            }
+
+            $("#json-format").val("<script type=\"application/ld+json\">\n" + JSON.stringify(obj, undefined, 4) + "\n<\/script>");
+            return obj;
+        }
+
         temp(){
             const tempObj = {};
 
@@ -592,6 +690,7 @@
         copyText.select();
         // copyText.setSelectionRange(0, 999999); /*For mobile devices*/
         document.execCommand("copy");
+        toastr.info('Copied to Clipboard', 'Information');
     });
 
     $(document).on("change", ".offerType", function() {
@@ -644,4 +743,27 @@
             $("#offer").addClass('d-none');
         }
         productFormat.render();
+    });
+
+    $('.reset').click(function (e) {
+        $('#form-product').trigger('reset')
+        $('.product-description').html('')
+        $(".url, .price, .priceCurrency").attr("disabled", true);
+        $(".priceCurrency").selectpicker("refresh");
+        $("#ag_offer").addClass('d-none');
+        $("#offer").addClass('d-none');
+        $('.ratingCount').attr('disabled', true)
+        $('.bestRating').attr('disabled', true)
+        $('.worstRating').attr('disabled', true)
+        $('.availability').val(1)
+        $('.availability').change()
+        $('.condition').val(1)
+        $('.condition').change()
+        $('.priceCurrency').val(1)
+        $('.priceCurrency').change()
+        $('.offerType').val(1)
+        $('.offerType').change()
+        $('#addReview').html('')
+
+        productFormat.resetrender();
     });

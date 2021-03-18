@@ -489,6 +489,7 @@ jQuery('#copy').click(function () {
     copyText.select();
     // copyText.setSelectionRange(0, 999999); /*For mobile devices*/
     document.execCommand("copy");
+    toastr.info('Copied to Clipboard', 'Information');
 });
 
 $('.reset').click(function (e) {
