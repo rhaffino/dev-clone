@@ -1085,11 +1085,11 @@ id/keyword-research
             <div class="accordion accordion-light accordion-toggle-arrow custom-features-accordion" id="accordionExample2">
               <div class="card bg-transparent" style="">
                 <div class="card-header" id="headingOne2">
-                  <div class="card-title" data-toggle="collapse" data-target="#collapseOne2">
+                  <div class="card-title collapsed" data-toggle="collapse" data-target="#collapseOne2">
                     Version 2.3
                   </div>
                 </div>
-                <div id="collapseOne2" class="collapse show" data-parent="#accordionExample2">
+                <div id="collapseOne2" class="collapse" data-parent="#accordionExample2">
                   <div class="card-body">
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
                       consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -1175,11 +1175,11 @@ id/keyword-research
     <div id="mobile-version" class="px-5 accordion accordion-light accordion-toggle-arrow custom-features-accordion" id="accordionExample2">
       <div class="card bg-transparent" style="">
         <div class="card-header" id="headingOne2">
-          <div class="card-title" data-toggle="collapse" data-target="#collapseOne2">
+          <div class="card-title collapsed" data-toggle="collapse" data-target="#collapseOne2">
             Version 2.3
           </div>
         </div>
-        <div id="collapseOne2" class="collapse show" data-parent="#accordionExample2">
+        <div id="collapseOne2" class="collapse" data-parent="#accordionExample2">
           <div class="card-body">
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
               consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>

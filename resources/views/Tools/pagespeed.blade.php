@@ -315,14 +315,14 @@ id/pagespeed-test
                         </div>
                     </div>
                     <div class="desktop-version">
-                        <div class="accordion accordion-light accordion-toggle-arrow custom-features-accordion" id="accordionExample2">
+                        <div class="accordion accordion-light accordion-toggle-arrow custom-features-accordion" id="accordionExample3">
                             <div class="card bg-transparent" style="">
-                                <div class="card-header" id="headingOne2">
-                                    <div class="card-title" data-toggle="collapse" data-target="#collapseOne2">
+                                <div class="card-header" id="headingOne3">
+                                    <div class="card-title collapsed" data-toggle="collapse" data-target="#collapseOne3">
                                         @lang('layout.version') 2.0
                                     </div>
                                 </div>
-                                <div id="collapseOne2" class="collapse show" data-parent="#accordionExample2">
+                                <div id="collapseOne3" class="collapse" data-parent="#accordionExample3">
                                     <div class="card-body">
                                         <p>@lang('pagespeed.highlight')</p>
                                         <div class="d-flex align-items-center">
@@ -354,14 +354,14 @@ id/pagespeed-test
         <div class="local-collection-body mt-3 px-5" id="localsavemobile">
 
         </div>
-        <div id="mobile-version" class="px-5 accordion accordion-light accordion-toggle-arrow custom-features-accordion" id="accordionExample2">
+        <div id="mobile-version" class="px-5 accordion accordion-light accordion-toggle-arrow custom-features-accordion" id="accordionExample3">
             <div class="card bg-transparent" style="">
-                <div class="card-header" id="headingOne2">
-                    <div class="card-title" data-toggle="collapse" data-target="#collapseOne2">
+                <div class="card-header" id="headingOne3">
+                    <div class="card-title collapsed" data-toggle="collapse" data-target="#collapseOne3">
                         @lang('layout.version') 2.0
                     </div>
                 </div>
-                <div id="collapseOne2" class="collapse show" data-parent="#accordionExample2">
+                <div id="collapseOne3" class="collapse" data-parent="#accordionExample3">
                     <div class="card-body">
                         <p>@lang('pagespeed.highlight')</p>
                         <div class="d-flex align-items-center">
