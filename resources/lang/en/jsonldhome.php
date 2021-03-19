@@ -1,11 +1,10 @@
 <?php
-$data = count(json_decode(file_get_contents(base_path('resources/js/json/tools.json')),true));
 return [
-    "meta-title" => "18 SEO Tools (Free) English Version \ cmlabs",
-    "meta-desc" => "Check your website with Free SEO tools cmlabs: Page Speed Test, Sitemap Generator, Word Counter, Title & Meta Desc Checker, etc.",
+    "meta-title" => "JSON-LD Schema Markup Generator for SEO",
+    "meta-desc" => "Choose structured data for recipe, job posting and product schema and build the markup with JSON-LD Generator.",
     "lang" => "en",
     "title" => "JSON-LD SCHEMA GENERATOR",
-    "sub-title" => "JSON-LD SCHEMA GENERATOR is a special tool created by CMLABS to facilitate SEO writers to add schema.org markup to their content.",
+    "sub-title" => "Enabling rich snippets for a website on SERP becomes easier with JSON LD FAQ Schema Generator. Write the questions and the best answers, get the equipped series of code from the tool.",
     "json-ld-breadcrumb-desc" => "JSON-LD Generator Breadcrumb is a tool created by cmlabs to make it easier for users to see visible navigation in the form of internal links.",
     "json-ld-faq-desc" => "Frequently Asked Questions (FAQ) containing questions and answers related to topics, products, to specific companies. Use Google Rich Result to answer user questions directly on Google Search Page.",
     "json-ld-howto-desc" => "JSON-LD How To Schema Generator is a tool that helps to explicitly tell Google that your content is a guide and increase the chances of Google showing rich snippets from your site in search results.",

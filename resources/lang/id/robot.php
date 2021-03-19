@@ -1,9 +1,9 @@
 <?php
 return [
-    "meta-title" => "Buat File Robots.txt Website Anda Dengan Generator Robots.txt",
-    "meta-desc" => "Robots.txt Generator gratis dari CMLABS dikembangkan untuk membantu Google mengindeks situs web Anda dengan lebih tepat",
+    "meta-title" => "Robots.Txt Generator - Buat file robots.txt dengan mudah",
+    "meta-desc" => "Buat file Robots.txt untuk mengelola trafik Crawler Google di situs web dengan mudah dan cepat",
     "title" => "ROBOT.TXT GENERATOR",
-    "subtitle" => "Login to unlock all features here, 100% free!",
+    "subtitle" => "Buat file robots.txt dengan mudah",
     "label-robot-access" => "Akses robot default",
     "placeholder-robot-access" => "Pilih akses",
     "robot-access-opt-1" => "Izinkan",
@@ -67,5 +67,5 @@ return [
     "desc-6-3-3" => "Buat file Robots.txt",
     "desc-6-3-3-1" => "Langkah selanjutnya adalah \"Buat Robots.txt Baru\" di bagian ini Anda dapat menuliskan aturan apa pun yang ingin Anda gunakan dan terapkan. Sesuaikan dengan kebutuhan Anda.",
     "whats-new-1" => "Pada versi terbaru ini, kami melengkapi tools Robot TXT Generator dengan fitur export. Fitur ini memudahkan pengguna untuk langsung memeriksa kode di Google Rich Result. Proses merayapi situs web dan meninjau semua konten kini lebih cepat dan tepat. Anda dapat mempelajari lebih dalam tentang fitur ini dengan mencobanya secara langsung.",
-    "whats-new-2" => "Pada update versi terbaru ini, kami menambahkan lebih banyak fitur useragent. Fitur ini memungkinkan lebih banyak perintah yang dapat diterima oleh Robot TXT Generator. Sehingga, Robot.txt lebih spesifik dalam memilah mana konten yang ingin Anda tutup dan mana yang ingin Anda tampilkan. Kami berharap pembaruan ini memudahkan pekerjaan Anda.",         
+    "whats-new-2" => "Pada update versi terbaru ini, kami menambahkan lebih banyak fitur useragent. Fitur ini memungkinkan lebih banyak perintah yang dapat diterima oleh Robot TXT Generator. Sehingga, Robot.txt lebih spesifik dalam memilah mana konten yang ingin Anda tutup dan mana yang ingin Anda tampilkan. Kami berharap pembaruan ini memudahkan pekerjaan Anda.",
 ];
