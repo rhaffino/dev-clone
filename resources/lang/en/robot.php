@@ -1,9 +1,9 @@
 <?php
 return [
-    "meta-title" => "Robots Txt Generator – Site Preview Tool",
-    "meta-desc" => "Robots Txt Generator Tool from CMLABS to help search engines index your site more appropriately",
+    "meta-title" => "Robots.Txt Generator - Generate robots.txt file easily",
+    "meta-desc" => "Create a Robots.txt file to manage Google Crawler traffic on the website easily and quickly",
     "title" => "ROBOT.TXT GENERATOR",
-    "subtitle" => "Login to unlock all features here, 100% free!",
+    "subtitle" => "Generate robots.txt file easily",
     "label-robot-access" => "Default robot access",
     "placeholder-robot-access" => "Select Access",
     "robot-access-opt-1" => "Allow",

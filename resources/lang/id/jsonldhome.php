@@ -1,11 +1,10 @@
 <?php
-$data = count(json_decode(file_get_contents(base_path('resources/js/json/tools.json')),true));
 return [
-    "meta-title" => "18 SEO Tools (Gratis) Versi Bahasa Indonesia \ cmlabs",
-    "meta-desc" => "Cek website dengan Free SEO Tools cmlabs: Page Speed Test, Sitemap Generator, Word Counter, Title & Meta Desc Checker, dll",
+    "meta-title" => "JSON LD Generator Markup Skema untuk SEO",
+    "meta-desc" => "Pilih struktur data untuk skema resep, lowongan kerja, produk dan buat markup dari JSON-LD Generator.",
     "lang" => "id",
     "title" => "JSON-LD SCHEMA GENERATOR",
-    "sub-title" => "JSON-LD SCHEMA GENERATOR is a special tool created by CMLABS to facilitate SEO writers to add schema.org markup to their content.",
+    "sub-title" => "Mengaktifkan cuplikan kaya untuk laman website pada tampilan SERP makin mudah menggunakan alat JSON LD FAQ Schema generator. Tuliskan daftar pertanyaan serta jawaban terbaiknya, dan dapatkan rangkaian kode siap pakai dari mesin.",
     "json-ld-breadcrumb-desc" => "JSON-LD Generator Breadcrumb adalah sebuah tools yang dibuat oleh cmlabs untuk memudahkan user melihat navigasi yang terlihat dalam bentuk tautan internal.",
     "json-ld-faq-desc" => "Frequently Asked Questions (FAQ) berisi pertanyaan dan jawaban berkaitan dengan topik, produk, hingga perusahaan tertentu. Gunakan Google Rich Result untuk menjawab pertanyaan pengguna langsung di SERP.",
     "json-ld-howto-desc" => "JSON-LD How To Schema Generator adalah tool yang membantu untuk memberitahu Google secara eksplisit bahwa konten Anda adalah panduan dan tingkatkan peluang Google menampilkan rich snippets dari situs Anda di hasil penelusuran.",
