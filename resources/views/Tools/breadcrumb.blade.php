@@ -43,51 +43,57 @@ id/json-ld-breadcrumb-schema-generator
                                 </div>
                             </div>
                             <p class="h6 text-black mb-5">Breadcrumb Generator</p>
-                            <div class="" id="formbreadcrumb">
-                                <div class="row">
-                                    <div class="col-10 col-sm-11">
-                                        <div class="row">
-                                            <div class="col-sm-5 mb-5">
-                                                <label for="pageName" class="font-weight-bold text-black">@lang('breadcrumb.label-page') #1 @lang('breadcrumb.label-name')</label>
-                                                <input type="text" id="pageName" class="form-control pageName" name="" placeholder="{{ Lang::get('breadcrumb.placeholder-pageName') }}" value="" data-id="0">
+                            <form action="" id="form-breadcrumb">
+                                <div class="">
+                                    <div class="row">
+                                        <div class="col-10 col-sm-11">
+                                            <div class="row">
+                                                <div class="col-sm-5 mb-5">
+                                                    <label for="pageName" class="font-weight-bold text-black">@lang('breadcrumb.label-page') #1 @lang('breadcrumb.label-name')</label>
+                                                    <input type="text" id="pageName" class="form-control pageName" name="" placeholder="{{ Lang::get('breadcrumb.placeholder-pageName') }}" value="" data-id="0">
+                                                </div>
+                                                <div class="col-sm-7 mb-5">
+                                                    <label for="url" class="font-weight-bold text-black">URL #1</label>
+                                                    <input type="text" id="url" class="form-control url" name="" placeholder="{{ Lang::get('breadcrumb.placeholder-url') }}" value="" data-id="0">
+                                                    <div class="invalid-feedback" data-id="0">@lang('layout.invalid-url')</div>
+                                                </div>
                                             </div>
-                                            <div class="col-sm-7 mb-5">
-                                                <label for="url" class="font-weight-bold text-black">URL #1</label>
-                                                <input type="text" id="url" class="form-control url" name="" placeholder="{{ Lang::get('breadcrumb.placeholder-url') }}" value="" data-id="0">
-                                                <div class="invalid-feedback" data-id="0">@lang('layout.invalid-url')</div>
+                                        </div>
+                                        <div class="col-2 col-sm-1">
+                                            <div class="d-flex justify-content-center mt-9">
+                                                <i class='bx bxs-x-circle bx-md btn-delete-disabled'></i>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-2 col-sm-1">
-                                        <div class="d-flex justify-content-center mt-9">
-                                            <i class='bx bxs-x-circle bx-md btn-delete-disabled'></i>
+                                    <div class="row">
+                                        <div class="col-10 col-sm-11">
+                                            <div class="row">
+                                                <div class="col-sm-5 mb-5">
+                                                    <label for="pageName" class="font-weight-bold text-black">@lang('breadcrumb.label-page') #2 @lang('breadcrumb.label-name')</label>
+                                                    <input type="text" id="pageName" class="form-control pageName" name="" placeholder="{{ Lang::get('breadcrumb.placeholder-pageName') }}" value="" data-id="1">
+                                                </div>
+                                                <div class="col-sm-7 mb-5">
+                                                    <label for="url" class="font-weight-bold text-black">URL #2</label>
+                                                    <input type="text" id="url" class="form-control url" name="" placeholder="{{ Lang::get('breadcrumb.placeholder-url') }}" value="" data-id="1">
+                                                    <div class="invalid-feedback" data-id="1">@lang('layout.invalid-url')</div>
+                                                </div>
+                                            </div>
                                         </div>
+                                        <div class="col-2 col-sm-1">
+                                            <div class="d-flex justify-content-center mt-9">
+                                                <i class='bx bxs-x-circle bx-md btn-delete-disabled'></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="formbreadcrumb">
+
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="col-10 col-sm-11">
-                                        <div class="row">
-                                            <div class="col-sm-5 mb-5">
-                                                <label for="pageName" class="font-weight-bold text-black">@lang('breadcrumb.label-page') #2 @lang('breadcrumb.label-name')</label>
-                                                <input type="text" id="pageName" class="form-control pageName" name="" placeholder="{{ Lang::get('breadcrumb.placeholder-pageName') }}" value="" data-id="1">
-                                            </div>
-                                            <div class="col-sm-7 mb-5">
-                                                <label for="url" class="font-weight-bold text-black">URL #2</label>
-                                                <input type="text" id="url" class="form-control url" name="" placeholder="{{ Lang::get('breadcrumb.placeholder-url') }}" value="" data-id="1">
-                                                <div class="invalid-feedback" data-id="1">@lang('layout.invalid-url')</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-2 col-sm-1">
-                                        <div class="d-flex justify-content-center mt-9">
-                                            <i class='bx bxs-x-circle bx-md btn-delete-disabled'></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <button type="button" class="btn btn-add-question mb-5 mt-5" name="button" id="add-breadcrumb">
-                                <i class='bx bx-plus'></i> @lang('breadcrumb.btn-add')
-                            </button>
+                                <button type="button" class="btn btn-add-question mb-5 mt-5" name="button" id="add-breadcrumb">
+                                    <i class='bx bx-plus'></i> @lang('breadcrumb.btn-add')
+                                </button>
+                            </form>
+
                         </div>
                         <div class="col-md-4 mb-5">
                             <div class="p-2" style="border: 1px solid #E4E6EF; border-radius: 0.42rem;">
