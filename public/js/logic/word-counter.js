@@ -665,7 +665,7 @@ function start() {
 
 $(document).ready(function () {
     $('#autoSaveOff').tooltip({
-        'template': '<div class="tooltip tooltip-autosave-off" role="tooltip">"+"<div class="arrow"></div>"+"<div class="tooltip-inner"></div>"+"</div>'
+        'template': '<div class="tooltip tooltip-autosave-off" role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>'
     });
 
     $('#autoSaveOn').tooltip({
