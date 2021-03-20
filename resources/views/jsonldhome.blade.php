@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
-@section('title', 'JSON-LD Schema Generator')
+@section('title', Lang::get('jsonldhome.meta-title'))
 
-@section('meta-desc', 'JSON-LD Schema Generator')
+@section('meta-desc', Lang::get('jsonldhome.meta-desc'))
 
 @section('conical','/en/json-ld-schema-generator')
 
@@ -19,10 +19,10 @@ id/json-ld-schema-generator
     <div class="d-flex flex-column-fluid">
         <div class="container-fluid px-0">
             <div class="text-center">
-                <h1 class="text-black font-weight-light">JSON-LD SCHEMA GENERATOR</h1>
+                <h1 class="text-black font-weight-light">@lang('jsonldhome.title')</h1>
                 <div class="row justify-content-center">
                     <div class="col-md-8">
-                        <p class="text-black font-weight-light">@lang('home.json-ld-desc')</p>
+                        <p class="text-black font-weight-light">@lang('jsonldhome.sub-title')</p>
                     </div>
                 </div>
             </div>

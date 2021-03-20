@@ -80,11 +80,11 @@ id/technology-lookup
                         <div class="accordion accordion-light accordion-toggle-arrow custom-features-accordion" id="accordionExample2">
                             <div class="card bg-transparent" style="">
                                 <div class="card-header" id="headingOne2">
-                                    <div class="card-title" data-toggle="collapse" data-target="#collapseOne2">
+                                    <div class="card-title collapsed" data-toggle="collapse" data-target="#collapseOne2">
                                         @lang('layout.version') 1.0
                                     </div>
                                 </div>
-                                <div id="collapseOne2" class="collapse show" data-parent="#accordionExample2">
+                                <div id="collapseOne2" class="collapse" data-parent="#accordionExample2">
                                     <div class="card-body">
                                         <p>@lang('lookup.highlight')</p>
                                         <div class="d-flex align-items-center">
@@ -116,11 +116,11 @@ id/technology-lookup
         <div id="mobile-version" class="px-5 accordion accordion-light accordion-toggle-arrow custom-features-accordion" id="accordionExample2">
             <div class="card bg-transparent" style="">
                 <div class="card-header" id="headingOne2">
-                    <div class="card-title" data-toggle="collapse" data-target="#collapseOne2">
+                    <div class="card-title collapsed" data-toggle="collapse" data-target="#collapseOne2">
                         @lang('layout.version') 1.0
                     </div>
                 </div>
-                <div id="collapseOne2" class="collapse show" data-parent="#accordionExample2">
+                <div id="collapseOne2" class="collapse" data-parent="#accordionExample2">
                     <div class="card-body">
                         <p>@lang('lookup.highlight')</p>
                         <div class="d-flex align-items-center">

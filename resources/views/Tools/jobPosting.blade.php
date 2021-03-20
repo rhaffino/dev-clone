@@ -44,183 +44,185 @@ id/json-ld-jobPosting-schema-generator
                             </div>
                             <p class="h6 text-black mb-5">Job Posting</p>
                             <div class="" id="formjobposting">
-                                <div class="row">
-                                    <div class="col-12 col-md-6">
-                                        <label class="text-black font-weight-bold" for="jobTitle">@lang('jobPosting.label-jobTitle')</label>
-                                        <input type="text" name="" class="form-control jobTitle mb-5" placeholder="@lang('jobPosting.placeholder-jobTitle')" value="" data-id="0">
-                                    </div>
-                                    <div class="col-12 col-md-6">
-                                        <label class="text-black font-weight-bold" for="identifier">@lang('jobPosting.label-identifier')</label>
-                                        <input type="text" name="" class="form-control identifier mb-5" placeholder="@lang('jobPosting.placeholder-identifier')" value="" data-id="0">
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-12">
-                                        <label class="text-black font-weight-bold" for="description">@lang('jobPosting.label-description')</label>
-                                        <textarea name="" class="form-control custom-textarea-100px description mb-5" placeholder="@lang('jobPosting.placeholder-description')" data-id="0"></textarea>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-12 col-xl-4">
-                                        <label class="text-black font-weight-bold" for="name">@lang('jobPosting.label-name')</label>
-                                        <input type="text" name="" class="form-control name mb-5" placeholder="@lang('jobPosting.placeholder-name')" value="" data-id="0">
-                                    </div>
-                                    <div class="col-12 col-md-6 col-xl-4 mb-5">
-                                        <label class="text-black font-weight-bold" for="companyUrl">@lang('jobPosting.label-companyUrl')</label>
-                                        <input type="text" name="" class="form-control companyUrl" placeholder="@lang('jobPosting.placeholder-companyUrl')" value="" data-id="0">
-                                        <div class="invalid-feedback">@lang('layout.invalid-url')</div>
-                                    </div>
-                                    <div class="col-12 col-md-6 col-xl-4">
-                                        <label class="text-black font-weight-bold" for="industry">@lang('jobPosting.label-industry')</label>
-                                        <input type="text" name="" class="form-control industry mb-5" placeholder="@lang('jobPosting.placeholder-industry')" value="" data-id="0">
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-12 col-xl-6">
-                                        <label class="text-black font-weight-bold" for="employmentType">@lang('jobPosting.label-employmentType')</label>
-                                        <select class="form-control selectpicker custom-select-blue employment-type mb-5">
-                                            <option value="none">@lang('jobPosting.placeholder-employmentType')</option>
-                                            <option value="FULL_TIME">@lang('jobPosting.employmentType-opt-1')</option>
-                                            <option value="PART_TIME">@lang('jobPosting.employmentType-opt-2')</option>
-                                            <option value="CONTRACTOR">@lang('jobPosting.employmentType-opt-3')</option>
-                                            <option value="TEMPORARY">@lang('jobPosting.employmentType-opt-4')</option>
-                                            <option value="INTERN">@lang('jobPosting.employmentType-opt-5')</option>
-                                            <option value="VOLUNTEER">@lang('jobPosting.employmentType-opt-6')</option>
-                                            <option value="PER_DIEM">@lang('jobPosting.employmentType-opt-7')</option>
-                                            <option value="OTHER">@lang('jobPosting.employmentType-opt-8')</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-12 col-xl-6">
-                                        <label class="text-black font-weight-bold" for="workHours">@lang('jobPosting.label-workHours')</label>
-                                        <input type="text" name="" class="form-control workHours mb-5" placeholder="@lang('jobPosting.placeholder-workHours')" value="" data-id="0">
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-12 col-md-6">
-                                        <label class="text-black font-weight-bold" for="datePosted">@lang('jobPosting.label-datePosted')</label>
-                                        <div class="input-group date mb-5">
-                                            <div class="input-group-append">
-                                                <span class="input-group-text">
-                                                    <i class="bx bx-calendar text-darkgrey"></i>
-                                                </span>
-                                            </div>
-                                            <input type="text" id="kt_datepicker_2" name="" class="form-control custom-date datePosted" readonly placeholder="@lang('jobPosting.placeholder-datePosted')" value="" data-id="0" />
+                                <form action="javascript:void(0)" id="form">
+                                    <div class="row">
+                                        <div class="col-12 col-md-6">
+                                            <label class="text-black font-weight-bold" for="jobTitle">@lang('jobPosting.label-jobTitle')</label>
+                                            <input type="text" name="" class="form-control jobTitle mb-5" placeholder="@lang('jobPosting.placeholder-jobTitle')" value="" data-id="0">
+                                        </div>
+                                        <div class="col-12 col-md-6">
+                                            <label class="text-black font-weight-bold" for="identifier">@lang('jobPosting.label-identifier')</label>
+                                            <input type="text" name="" class="form-control identifier mb-5" placeholder="@lang('jobPosting.placeholder-identifier')" value="" data-id="0">
                                         </div>
                                     </div>
-                                    <div class="col-12 col-md-6">
-                                        <label class="text-black font-weight-bold" for="expiredDate">@lang('jobPosting.label-expiredDate')</label>
-                                        <div class="input-group date mb-5">
-                                            <div class="input-group-append">
-                                                <span class="input-group-text">
-                                                    <i class="bx bx-calendar text-darkgrey"></i>
-                                                </span>
-                                            </div>
-                                            <input type="text" id="kt_datepicker_2" name="" class="form-control custom-date expiredDate" readonly placeholder="@lang('jobPosting.placeholder-expiredDate')" value="" data-id="0" />
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <label class="text-black font-weight-bold" for="description">@lang('jobPosting.label-description')</label>
+                                            <textarea name="" class="form-control custom-textarea-100px description mb-5" placeholder="@lang('jobPosting.placeholder-description')" data-id="0"></textarea>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-12 col-md-3 col-xxl-2 align-self-center mt-md-2 mb-5 mb-md-0">
-                                        <div class="checkbox-list align-items-center">
-                                            <label class="checkbox text-black font-weight-bold">
-                                                <input type="checkbox" id="remoteJob" name="" />
-                                                <span></span>@lang('jobPosting.label-remoteJob')</label>
+                                    <div class="row">
+                                        <div class="col-12 col-xl-4">
+                                            <label class="text-black font-weight-bold" for="name">@lang('jobPosting.label-name')</label>
+                                            <input type="text" name="" class="form-control name mb-5" placeholder="@lang('jobPosting.placeholder-name')" value="" data-id="0">
+                                        </div>
+                                        <div class="col-12 col-md-6 col-xl-4 mb-5">
+                                            <label class="text-black font-weight-bold" for="companyUrl">@lang('jobPosting.label-companyUrl')</label>
+                                            <input type="text" name="" class="form-control companyUrl" placeholder="@lang('jobPosting.placeholder-companyUrl')" value="" data-id="0">
+                                            <div class="invalid-feedback">@lang('layout.invalid-url')</div>
+                                        </div>
+                                        <div class="col-12 col-md-6 col-xl-4">
+                                            <label class="text-black font-weight-bold" for="industry">@lang('jobPosting.label-industry')</label>
+                                            <input type="text" name="" class="form-control industry mb-5" placeholder="@lang('jobPosting.placeholder-industry')" value="" data-id="0">
                                         </div>
                                     </div>
-                                    <div class="col-12 col-md-5 col-xxl-5">
-                                        <label class="text-black font-weight-bold" for="street">@lang('jobPosting.label-street')</label>
-                                        <input type="text" name="" class="form-control street mb-5" placeholder="@lang('jobPosting.placeholder-street')" value="" data-id="0">
-                                    </div>
-                                    <div class="col-12 col-md-4 col-xxl-5">
-                                        <label class="text-black font-weight-bold" for="city">@lang('jobPosting.label-city')</label>
-                                        <input type="text" name="" class="form-control city mb-5" placeholder="@lang('jobPosting.placeholder-city')" value="" data-id="0">
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-12 col-md-8 col-xl-5">
-                                        <label class="text-black font-weight-bold" for="province">@lang('jobPosting.label-province')</label>
-                                        <div id="hide-province">
-                                            <select class="form-control selectpicker custom-select-blue custom-searchbox province mb-5" disabled data-size="4" data-live-search="true" tabindex="null">
-                                                <option value="none">@lang('jobPosting.placeholder-province')</option>
+                                    <div class="row">
+                                        <div class="col-12 col-xl-6">
+                                            <label class="text-black font-weight-bold" for="employmentType">@lang('jobPosting.label-employmentType')</label>
+                                            <select class="form-control selectpicker custom-select-blue employment-type mb-5">
+                                                <option value="none">@lang('jobPosting.placeholder-employmentType')</option>
+                                                <option value="FULL_TIME">@lang('jobPosting.employmentType-opt-1')</option>
+                                                <option value="PART_TIME">@lang('jobPosting.employmentType-opt-2')</option>
+                                                <option value="CONTRACTOR">@lang('jobPosting.employmentType-opt-3')</option>
+                                                <option value="TEMPORARY">@lang('jobPosting.employmentType-opt-4')</option>
+                                                <option value="INTERN">@lang('jobPosting.employmentType-opt-5')</option>
+                                                <option value="VOLUNTEER">@lang('jobPosting.employmentType-opt-6')</option>
+                                                <option value="PER_DIEM">@lang('jobPosting.employmentType-opt-7')</option>
+                                                <option value="OTHER">@lang('jobPosting.employmentType-opt-8')</option>
                                             </select>
                                         </div>
-                                        <div id="province-show">
-                                            <select class="form-control selectpicker custom-select-blue custom-searchbox province mb-5" data-size="4" data-live-search="true" tabindex="null">
-                                                <option value="none">@lang('jobPosting.placeholder-province')</option>
-                                                @foreach($province as $p)
-                                                <option value="{{ $p['code'] }}">{{ $p['name'] }}</option>
+                                        <div class="col-12 col-xl-6">
+                                            <label class="text-black font-weight-bold" for="workHours">@lang('jobPosting.label-workHours')</label>
+                                            <input type="text" name="" class="form-control workHours mb-5" placeholder="@lang('jobPosting.placeholder-workHours')" value="" data-id="0">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12 col-md-6">
+                                            <label class="text-black font-weight-bold" for="datePosted">@lang('jobPosting.label-datePosted')</label>
+                                            <div class="input-group date mb-5">
+                                                <div class="input-group-append">
+                                                <span class="input-group-text">
+                                                    <i class="bx bx-calendar text-darkgrey"></i>
+                                                </span>
+                                                </div>
+                                                <input type="text" id="kt_datepicker_2" name="" class="form-control custom-date datePosted" readonly placeholder="@lang('jobPosting.placeholder-datePosted')" value="" data-id="0" />
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-6">
+                                            <label class="text-black font-weight-bold" for="expiredDate">@lang('jobPosting.label-expiredDate')</label>
+                                            <div class="input-group date mb-5">
+                                                <div class="input-group-append">
+                                                <span class="input-group-text">
+                                                    <i class="bx bx-calendar text-darkgrey"></i>
+                                                </span>
+                                                </div>
+                                                <input type="text" id="kt_datepicker_2" name="" class="form-control custom-date expiredDate" readonly placeholder="@lang('jobPosting.placeholder-expiredDate')" value="" data-id="0" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12 col-md-3 col-xxl-2 align-self-center mt-md-2 mb-5 mb-md-0">
+                                            <div class="checkbox-list align-items-center">
+                                                <label class="checkbox text-black font-weight-bold">
+                                                    <input type="checkbox" id="remoteJob" name="" />
+                                                    <span></span>@lang('jobPosting.label-remoteJob')</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-5 col-xxl-5">
+                                            <label class="text-black font-weight-bold" for="street">@lang('jobPosting.label-street')</label>
+                                            <input type="text" name="" class="form-control street mb-5" placeholder="@lang('jobPosting.placeholder-street')" value="" data-id="0">
+                                        </div>
+                                        <div class="col-12 col-md-4 col-xxl-5">
+                                            <label class="text-black font-weight-bold" for="city">@lang('jobPosting.label-city')</label>
+                                            <input type="text" name="" class="form-control city mb-5" placeholder="@lang('jobPosting.placeholder-city')" value="" data-id="0">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12 col-md-8 col-xl-5">
+                                            <label class="text-black font-weight-bold" for="province">@lang('jobPosting.label-province')</label>
+                                            <div id="hide-province">
+                                                <select class="form-control selectpicker custom-select-blue custom-searchbox province mb-5" disabled data-size="4" data-live-search="true" tabindex="null">
+                                                    <option value="none">@lang('jobPosting.placeholder-province')</option>
+                                                </select>
+                                            </div>
+                                            <div id="province-show">
+                                                <select class="form-control selectpicker custom-select-blue custom-searchbox province mb-5" data-size="4" data-live-search="true" tabindex="null">
+                                                    <option value="none">@lang('jobPosting.placeholder-province')</option>
+                                                    @foreach($province as $p)
+                                                        <option value="{{ $p['code'] }}">{{ $p['name'] }}</option>
+                                                    @endforeach
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 col-xl-2">
+                                            <label class="text-black font-weight-bold" for="zipCode">@lang('jobPosting.label-zipCode')</label>
+                                            <input type="text" name="" class="form-control zipCode mb-5" placeholder="@lang('jobPosting.placeholder-zipCode')" value="" data-id="0">
+                                        </div>
+                                        <div class="col-8 col-md-12 col-xl-5">
+                                            <label class="text-black font-weight-bold" for="country">@lang('jobPosting.label-country')</label>
+                                            <select class="form-control selectpicker custom-select-blue custom-searchbox country mb-5" data-size="4" data-live-search="true" tabindex="null">
+                                                <option value="none">@lang('jobPosting.placeholder-country')</option>
+                                                @foreach($region as $r)
+                                                    <option value="{{ $r['code'] }}">{{ $r['name'] }}</option>
                                                 @endforeach
                                             </select>
                                         </div>
                                     </div>
-                                    <div class="col-4 col-xl-2">
-                                        <label class="text-black font-weight-bold" for="zipCode">@lang('jobPosting.label-zipCode')</label>
-                                        <input type="text" name="" class="form-control zipCode mb-5" placeholder="@lang('jobPosting.placeholder-zipCode')" value="" data-id="0">
+                                    <div class="row">
+                                        <div class="col-6 col-xl-4 mb-5">
+                                            <label class="text-black font-weight-bold" for="salary">@lang('jobPosting.label-salary')</label>
+                                            <input type="number" name="" class="form-control salary" placeholder="@lang('jobPosting.placeholder-salary')" value="" min="0" data-id="0">
+                                            <div class="invalid-feedback">@lang('layout.invalid-number')</div>
+                                        </div>
+                                        <div class="col-6 col-xl-3 mb-5">
+                                            <label class="text-black font-weight-bold" for="maxSalary">@lang('jobPosting.label-maxSalary')</label>
+                                            <input type="number" name="" class="form-control maxSalary" placeholder="@lang('jobPosting.placeholder-maxSalary')" value="" min="0" data-id="0" disabled="disabled">
+                                            <div class="invalid-feedback">@lang('layout.invalid-number')</div>
+                                        </div>
+                                        <div class="col-6 col-xl-3">
+                                            <label class="text-black font-weight-bold" for="currency">@lang('jobPosting.label-currency')</label>
+                                            <select class="form-control selectpicker custom-select-blue custom-searchbox currency mb-5" data-size="4" data-live-search="true" disabled="disabled">
+                                                <option value="none">@lang('jobPosting.placeholder-currency')</option>
+                                                @foreach($currencies as $c)
+                                                    <option value="{{ $c['code'] }}">{{ $c['name'] }}</option>
+                                                @endforeach
+                                            </select>
+                                        </div>
+                                        <div class="col-6 col-xl-2">
+                                            <label class="text-black font-weight-bold" for="unitText">Per-</label>
+                                            <select class="form-control selectpicker custom-select-blue unitText mb-5" tabindex="null" disabled="disabled">
+                                                <option value="HOUR">@lang('jobPosting.unitText-opt-1')</option>
+                                                <option value="WEEK">@lang('jobPosting.unitText-opt-2')</option>
+                                                <option value="MONTH">@lang('jobPosting.unitText-opt-3')</option>
+                                                <option value="YEAR">@lang('jobPosting.unitText-opt-4')</option>
+                                            </select>
+                                        </div>
                                     </div>
-                                    <div class="col-8 col-md-12 col-xl-5">
-                                        <label class="text-black font-weight-bold" for="country">@lang('jobPosting.label-country')</label>
-                                        <select class="form-control selectpicker custom-select-blue custom-searchbox country mb-5" data-size="4" data-live-search="true" tabindex="null">
-                                            <option value="none">@lang('jobPosting.placeholder-country')</option>
-                                            @foreach($region as $r)
-                                            <option value="{{ $r['code'] }}">{{ $r['name'] }}</option>
-                                            @endforeach
-                                        </select>
+                                    <div class="row">
+                                        <div class="col-12 col-md-4">
+                                            <label class="text-black font-weight-bold" for="responsibilities">@lang('jobPosting.label-responsibilities')</label>
+                                            <input type="text" name="" class="form-control responsibilities mb-5" placeholder="@lang('jobPosting.placeholder-responsibilities')" value="" data-id="0">
+                                        </div>
+                                        <div class="col-12 col-md-4 mb-5">
+                                            <label class="text-black font-weight-bold" for="skills">@lang('jobPosting.label-skills')</label>
+                                            <input type="text" name="" class="form-control skills" placeholder="@lang('jobPosting.placeholder-skills')" value="" data-id="0">
+                                        </div>
+                                        <div class="col-12 col-md-4">
+                                            <label class="text-black font-weight-bold" for="qualifications">@lang('jobPosting.label-qualifications')</label>
+                                            <input type="text" name="" class="form-control qualifications mb-5" placeholder="@lang('jobPosting.placeholder-qualifications')" value="" data-id="0">
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-6 col-xl-4 mb-5">
-                                        <label class="text-black font-weight-bold" for="salary">@lang('jobPosting.label-salary')</label>
-                                        <input type="number" name="" class="form-control salary" placeholder="@lang('jobPosting.placeholder-salary')" value="" min="0" data-id="0">
-                                        <div class="invalid-feedback">@lang('layout.invalid-number')</div>
+                                    <div class="row">
+                                        <div class="col-12 col-xl-6">
+                                            <label class="text-black font-weight-bold" for="educationRequirements">@lang('jobPosting.label-educationRequirements')</label>
+                                            <input type="text" name="" class="form-control educationRequirements mb-5" placeholder="@lang('jobPosting.placeholder-educationRequirements')" value="" data-id="0">
+                                        </div>
+                                        <div class="col-12 col-xl-6">
+                                            <label class="text-black font-weight-bold" for="experienceRequirements">@lang('jobPosting.label-experienceRequirements')</label>
+                                            <input type="text" name="" class="form-control experienceRequirements mb-5" placeholder="@lang('jobPosting.placeholder-experienceRequirements')" value="" data-id="0">
+                                        </div>
                                     </div>
-                                    <div class="col-6 col-xl-3 mb-5">
-                                        <label class="text-black font-weight-bold" for="maxSalary">@lang('jobPosting.label-maxSalary')</label>
-                                        <input type="number" name="" class="form-control maxSalary" placeholder="@lang('jobPosting.placeholder-maxSalary')" value="" min="0" data-id="0" disabled="disabled">
-                                        <div class="invalid-feedback">@lang('layout.invalid-number')</div>
-                                    </div>
-                                    <div class="col-6 col-xl-3">
-                                        <label class="text-black font-weight-bold" for="currency">@lang('jobPosting.label-currency')</label>
-                                        <select class="form-control selectpicker custom-select-blue custom-searchbox currency mb-5" data-size="4" data-live-search="true" disabled="disabled">
-                                            <option value="none">@lang('jobPosting.placeholder-currency')</option>
-                                            @foreach($currencies as $c)
-                                            <option value="{{ $c['code'] }}">{{ $c['name'] }}</option>
-                                            @endforeach
-                                        </select>
-                                    </div>
-                                    <div class="col-6 col-xl-2">
-                                        <label class="text-black font-weight-bold" for="unitText">Per-</label>
-                                        <select class="form-control selectpicker custom-select-blue unitText mb-5" tabindex="null" disabled="disabled">
-                                            <option value="Hour">@lang('jobPosting.unitText-opt-1')</option>
-                                            <option value="Week">@lang('jobPosting.unitText-opt-2')</option>
-                                            <option value="Month">@lang('jobPosting.unitText-opt-3')</option>
-                                            <option value="Year">@lang('jobPosting.unitText-opt-4')</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-12 col-md-4">
-                                        <label class="text-black font-weight-bold" for="responsibilities">@lang('jobPosting.label-responsibilities')</label>
-                                        <input type="text" name="" class="form-control responsibilities mb-5" placeholder="@lang('jobPosting.placeholder-responsibilities')" value="" data-id="0">
-                                    </div>
-                                    <div class="col-12 col-md-4 mb-5">
-                                        <label class="text-black font-weight-bold" for="skills">@lang('jobPosting.label-skills')</label>
-                                        <input type="text" name="" class="form-control skills" placeholder="@lang('jobPosting.placeholder-skills')" value="" data-id="0">
-                                    </div>
-                                    <div class="col-12 col-md-4">
-                                        <label class="text-black font-weight-bold" for="qualifications">@lang('jobPosting.label-qualifications')</label>
-                                        <input type="text" name="" class="form-control qualifications mb-5" placeholder="@lang('jobPosting.placeholder-qualifications')" value="" data-id="0">
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-12 col-xl-6">
-                                        <label class="text-black font-weight-bold" for="educationRequirements">@lang('jobPosting.label-educationRequirements')</label>
-                                        <input type="text" name="" class="form-control educationRequirements mb-5" placeholder="@lang('jobPosting.placeholder-educationRequirements')" value="" data-id="0">
-                                    </div>
-                                    <div class="col-12 col-xl-6">
-                                        <label class="text-black font-weight-bold" for="experienceRequirements">@lang('jobPosting.label-experienceRequirements')</label>
-                                        <input type="text" name="" class="form-control experienceRequirements mb-5" placeholder="@lang('jobPosting.placeholder-experienceRequirements')" value="" data-id="0">
-                                    </div>
-                                </div>
+                                </form>
                             </div>
                         </div>
                         <div class="col-md-4 mb-5">
@@ -236,7 +238,7 @@ id/json-ld-jobPosting-schema-generator
                                                 <i class='bx bx-check-circle'></i> <span>@lang('layout.btn-check')</span></button>
                                         </div>
                                         <div id="reset" class="col-4 d-flex justify-content-center px-0 button-result">
-                                            <button type="button" class="btn font-weight-bold" name="button">
+                                            <button type="button" class="btn font-weight-bold reset" name="button">
                                                 <i class='bx bx-refresh'></i> <span>@lang('layout.btn-reset')</span></button>
                                         </div>
                                     </div>
@@ -269,11 +271,11 @@ id/json-ld-jobPosting-schema-generator
                         <div class="accordion accordion-light accordion-toggle-arrow custom-features-accordion" id="accordionExample2">
                             <div class="card bg-transparent" style="">
                                 <div class="card-header" id="headingOne2">
-                                    <div class="card-title" data-toggle="collapse" data-target="#collapseOne2">
+                                    <div class="card-title collapsed" data-toggle="collapse" data-target="#collapseOne2">
                                         @lang('layout.version') 1.0
                                     </div>
                                 </div>
-                                <div id="collapseOne2" class="collapse show" data-parent="#accordionExample2">
+                                <div id="collapseOne2" class="collapse" data-parent="#accordionExample2">
                                     <div class="card-body">
                                         <p>@lang('jobPosting.highlight')</p>
                                         <div class="d-flex align-items-center">
@@ -308,11 +310,11 @@ id/json-ld-jobPosting-schema-generator
     <div id="mobile-version" class="px-5 accordion accordion-light accordion-toggle-arrow custom-features-accordion" id="accordionExample2">
         <div class="card bg-transparent" style="">
             <div class="card-header" id="headingOne2">
-                <div class="card-title" data-toggle="collapse" data-target="#collapseOne2">
+                <div class="card-title collapsed" data-toggle="collapse" data-target="#collapseOne2">
                     @lang('layout.version') 1.0
                 </div>
             </div>
-            <div id="collapseOne2" class="collapse show" data-parent="#accordionExample2">
+            <div id="collapseOne2" class="collapse" data-parent="#accordionExample2">
                 <div class="card-body">
                     <p>@lang('jobPosting.highlight')</p>
                     <div class="d-flex align-items-center">
@@ -346,7 +348,7 @@ id/json-ld-jobPosting-schema-generator
                     <p>@lang('jobPosting.desc-3-1')</p>
                     <p>@lang('jobPosting.desc-3-2')</p>
                     <pre class="language-html mb-4">
-            <code class="language-html">/
+            <code class="language-html">
               &lt;script type="application/ld+json"&gt;
                 {
                   "@context": "https://schema.org/",

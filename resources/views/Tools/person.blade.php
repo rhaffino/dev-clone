@@ -43,60 +43,62 @@ id/json-ld-person-schema-generator
                                 </div>
                             </div>
                             <p class="h6 text-black mb-5">Person</p>
-                            <div class="" id="formperson">
-                                <div class="row">
-                                    <div class="col-12 col-md-6 mb-5">
-                                        <label class="text-black font-weight-bold" for="name">@lang('person.label-name')</label>
-                                        <input type="text" name="" class="form-control name" placeholder="@lang('person.placeholder-name')" value="" data-id="0">
+                            <form action="" id="form-person">
+                                <div class="" id="formperson">
+                                    <div class="row">
+                                        <div class="col-12 col-md-6 mb-5">
+                                            <label class="text-black font-weight-bold" for="name">@lang('person.label-name')</label>
+                                            <input type="text" name="" class="form-control name" placeholder="@lang('person.placeholder-name')" value="" data-id="0">
+                                        </div>
+                                        <div class="col-12 col-md-6 mb-5">
+                                            <label class="text-black font-weight-bold" for="url">URL</label>
+                                            <input type="text" name="" class="form-control url" placeholder="@lang('person.placeholder-url')" value="" data-id="0">
+                                            <div class="invalid-feedback">@lang('layout.invalid-url')</div>
+                                        </div>
                                     </div>
-                                    <div class="col-12 col-md-6 mb-5">
-                                        <label class="text-black font-weight-bold" for="url">URL</label>
-                                        <input type="text" name="" class="form-control url" placeholder="@lang('person.placeholder-url')" value="" data-id="0">
-                                        <div class="invalid-feedback">@lang('layout.invalid-url')</div>
+                                    <div class="row">
+                                        <div class="col-12 col-md-6 mb-5">
+                                            <label class="text-black font-weight-bold" for="pictureUrl">@lang('person.label-pictureUrl')</label>
+                                            <input type="text" name="" class="form-control pictureUrl" placeholder="@lang('person.placeholder-pictureUrl')" value="" data-id="0">
+                                            <div class="invalid-feedback">@lang('layout.invalid-url')</div>
+                                        </div>
+                                        <div class="col-12 col-md-6">
+                                            <label class="text-black font-weight-bold" for="sosmed">@lang('person.label-social-profiles')</label>
+                                            <div class="dropdown bootstrap-select show-tick form-control">
+                                                <select class="form-control selectpicker custom-select-blue social-profiles mb-5" multiple="multiple" data-actions-box="false" tabindex="null">
+                                                    <option value="twitter">Twitter</option>
+                                                    <option value="facebook">Facebook</option>
+                                                    <option value="instagram">Instagram</option>
+                                                    <option value="youtube">Youtube</option>
+                                                    <option value="linkedin">Linkedin</option>
+                                                    <option value="pinterest">Pinterest</option>
+                                                    <option value="soundcloud">Soundcloud</option>
+                                                    <option value="tumblr">Tumblr</option>
+                                                    <option value="wikipedia">Wikipedia</option>
+                                                    <option value="github">Github</option>
+                                                    <option value="website">Website</option>
+                                                </select>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-12 col-md-6 mb-5">
-                                        <label class="text-black font-weight-bold" for="pictureUrl">@lang('person.label-pictureUrl')</label>
-                                        <input type="text" name="" class="form-control pictureUrl" placeholder="@lang('person.placeholder-pictureUrl')" value="" data-id="0">
-                                        <div class="invalid-feedback">@lang('layout.invalid-url')</div>
+                                    <div class="row">
+                                        <div class="col-12 col-md-6">
+                                            <label class="text-black font-weight-bold" for="jobTitle">@lang('person.label-jobTitle')</label>
+                                            <input type="text" name="" class="form-control jobTitle mb-5" placeholder="@lang('person.placeholder-jobTitle')" value="" data-id="0">
+                                        </div>
+                                        <div class="col-12 col-md-6">
+                                            <label class="text-black font-weight-bold" for="company">@lang('person.label-company')</label>
+                                            <input type="text" name="" class="form-control company mb-5" placeholder="@lang('person.placeholder-company')" value="" data-id="0">
+                                        </div>
                                     </div>
-                                    <div class="col-12 col-md-6">
-                                        <label class="text-black font-weight-bold" for="sosmed">@lang('person.label-social-profiles')</label>
-                                        <div class="dropdown bootstrap-select show-tick form-control">
-                                            <select class="form-control selectpicker custom-select-blue social-profiles mb-5" multiple="multiple" data-actions-box="false" tabindex="null">
-                                                <option value="twitter">Twitter</option>
-                                                <option value="facebook">Facebook</option>
-                                                <option value="instagram">Instagram</option>
-                                                <option value="youtube">Youtube</option>
-                                                <option value="linkedin">Linkedin</option>
-                                                <option value="pinterest">Pinterest</option>
-                                                <option value="soundcloud">Soundcloud</option>
-                                                <option value="tumblr">Tumblr</option>
-                                                <option value="wikipedia">Wikipedia</option>
-                                                <option value="github">Github</option>
-                                                <option value="website">Website</option>
-                                            </select>
+                                    <div class="row">
+                                        <div class="col-12 mb-5">
+                                            <div class="sosial-profile-url">
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="col-12 col-md-6">
-                                        <label class="text-black font-weight-bold" for="jobTitle">@lang('person.label-jobTitle')</label>
-                                        <input type="text" name="" class="form-control jobTitle mb-5" placeholder="@lang('person.placeholder-jobTitle')" value="" data-id="0">
-                                    </div>
-                                    <div class="col-12 col-md-6">
-                                        <label class="text-black font-weight-bold" for="company">@lang('person.label-company')</label>
-                                        <input type="text" name="" class="form-control company mb-5" placeholder="@lang('person.placeholder-company')" value="" data-id="0">
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-12 mb-5">
-                                        <div class="sosial-profile-url">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            </form>
                         </div>
                         <div class="col-md-4 mb-5">
                             <div class="p-2" style="border: 1px solid #E4E6EF; border-radius: 0.42rem;">
@@ -111,7 +113,7 @@ id/json-ld-person-schema-generator
                                                 <i class='bx bx-check-circle'></i> <span>@lang('layout.btn-check')</span></button>
                                         </div>
                                         <div id="reset" class="col-4 d-flex justify-content-center px-0 button-result">
-                                            <button type="button" class="btn font-weight-bold" name="button">
+                                            <button type="button" class="btn font-weight-bold reset" name="button">
                                                 <i class='bx bx-refresh'></i> <span>@lang('layout.btn-reset')</span></button>
                                         </div>
                                     </div>
@@ -144,11 +146,11 @@ id/json-ld-person-schema-generator
                         <div class="accordion accordion-light accordion-toggle-arrow custom-features-accordion" id="accordionExample2">
                             <div class="card bg-transparent" style="">
                                 <div class="card-header" id="headingOne2">
-                                    <div class="card-title" data-toggle="collapse" data-target="#collapseOne2">
+                                    <div class="card-title collapsed" data-toggle="collapse" data-target="#collapseOne2">
                                         @lang('layout.version') 1.0
                                     </div>
                                 </div>
-                                <div id="collapseOne2" class="collapse show" data-parent="#accordionExample2">
+                                <div id="collapseOne2" class="collapse" data-parent="#accordionExample2">
                                     <div class="card-body">
                                         <p>@lang('person.highlight')</p>
                                         <div class="d-flex align-items-center">
@@ -183,11 +185,11 @@ id/json-ld-person-schema-generator
         <div id="mobile-version" class="px-5 accordion accordion-light accordion-toggle-arrow custom-features-accordion" id="accordionExample2">
             <div class="card bg-transparent" style="">
                 <div class="card-header" id="headingOne2">
-                    <div class="card-title" data-toggle="collapse" data-target="#collapseOne2">
+                    <div class="card-title collapsed" data-toggle="collapse" data-target="#collapseOne2">
                         @lang('layout.version') 1.0
                     </div>
                 </div>
-                <div id="collapseOne2" class="collapse show" data-parent="#accordionExample2">
+                <div id="collapseOne2" class="collapse" data-parent="#accordionExample2">
                     <div class="card-body">
                         <p>@lang('person.highlight')</p>
                         <div class="d-flex align-items-center">

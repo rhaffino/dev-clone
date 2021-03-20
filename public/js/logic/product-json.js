@@ -91,6 +91,123 @@
 
 
             this.tempIdentify = [];
+
+            this.tempUrloffer = "";
+            this.temppriceCur = "";
+            this.tempprice = "";
+            this.tempHighPrice = "";
+
+            this.tempPriceValid = "";
+            this.tempAvailability = "";
+            this.tempItemCondition = "";
+
+            this.tempaggRate = "";
+            this.tempnumOfRate = "";
+            this.temphighestval = "";
+            this.templowestval = "";
+
+            this.tempReviewName = [];
+            this.tempReviewBody = [];
+            this.tempreviewRatingValue = [];
+
+        }
+
+        resetrender(){
+
+            reviewCounter = -1;
+
+            this.name = '';
+            this.image = '';
+            this.description = undefined;
+            this.brand = undefined;
+
+            this.skuTemp = 'none';
+            this.gtin8Temp = 'none';
+            this.gtin13Temp = 'none';
+            this.gtin14Temp = 'none';
+            this.mpnTemp = 'none';
+
+            this.sku = '';
+            this.gtin8 = '';
+            this.gtin13 = '';
+            this.gtin14 = '';
+            this.mpn = '';
+
+            this.price = '';
+            this.highPrice = '';
+            this.priceCurrency = ''
+            this.url = '';
+
+            this.offers = undefined;
+
+            this.aggregateRating = undefined;
+            this.review = [];
+
+
+            this.tempIdentify = [];
+
+            this.tempUrloffer = "";
+            this.temppriceCur = "";
+            this.tempprice = "";
+            this.tempHighPrice = "";
+
+            this.tempPriceValid = "";
+            this.tempAvailability = "";
+            this.tempItemCondition = "";
+
+            this.tempaggRate = "";
+            this.tempnumOfRate = "";
+            this.temphighestval = "";
+            this.templowestval = "";
+
+            this.tempReviewName = [];
+            this.tempReviewBody = [];
+            this.tempreviewRatingValue = [];
+            const obj = {
+                "@context": "https://schema.org",
+                "@type": "Product",
+                "name": this.name,
+                "image": this.image,
+            };
+
+            obj.name = this.name;
+            obj.image = this.image;
+
+            if(this.description) obj.description = this.description;
+
+            if(this.brand) obj.brand = this.brand;
+
+            if(this.skuTemp != 'none') obj.sku = this.sku;
+            if(this.gtin8Temp != 'none') obj.gtin8 = this.gtin8;
+            if(this.gtin13Temp != 'none') obj.gtin13 = this.gtin13;
+            if(this.gtin14Temp != 'none') obj.gtin14 = this.gtin14;
+            if(this.mpnTemp != 'none') obj.mpn = this.mpn;
+
+            if(this.offers) {
+                obj.offers = this.offers;
+                obj.offers.lowPrice = this.offers.lowPrice;
+                if(this.offers.price) obj.offers.price = this.offers.price;
+                if(this.offers.highPrice) obj.offers.highPrice = this.offers.highPrice;
+                if(this.offers.offerCount) obj.offers.offerCount = this.offers.offerCount;
+                if(this.offers.priceValidUntil) obj.offers.priceValidUntil = this.offers.priceValidUntil;
+                if(this.offers.availability) obj.offers.availability = this.offers.availability;
+                if(this.offers.itemCondition) obj.offers.itemCondition = this.offers.itemCondition;
+            }
+
+            if(this.aggregateRating) obj.aggregateRating = this.aggregateRating;
+
+            if(this.review){
+                if(this.review.length > 0) {
+                    if (this.review.length === 1) {
+                        obj.review = this.review[0];
+                    } else {
+                        obj.review = this.review;
+                    }
+                }
+            }
+
+            $("#json-format").val("<script type=\"application/ld+json\">\n" + JSON.stringify(obj, undefined, 4) + "\n<\/script>");
+            return obj;
         }
 
         temp(){
@@ -98,10 +215,40 @@
 
             tempObj.price = this.price;
             tempObj.lowPrice = this.price;
-            // tempObj.highPrice = this.highPrice;
             tempObj.url = this.url;
 
-            // if(this.offers.url) tempObj.offers.url = this.offers.url;
+            tempObj.tempUrloffer = this.tempUrloffer;
+            tempObj.tempprice = this.tempprice;
+            tempObj.temppriceCur = this.temppriceCur;
+            tempObj.tempHighPrice = this.tempHighPrice;
+
+            tempObj.tempPriceValid = this.tempPriceValid;
+            tempObj.tempAvailability = this.tempAvailability;
+            tempObj.tempItemCondition = this.tempItemCondition;
+
+            tempObj.tempaggRate = this.tempaggRate;
+            tempObj.tempnumOfRate = this.tempnumOfRate;
+            tempObj.temphighestval = this.temphighestval;
+            tempObj.templowestval = this.templowestval;
+
+            if(this.tempReviewName.length > 0) {
+                if (this.tempReviewName.length === 1) {
+                    tempObj.tempReviewName = this.tempReviewName[0];
+                } else {
+                    tempObj.tempReviewName = this.tempReviewName;
+                }
+            }
+
+            tempObj.tempReviewBody = this.tempReviewBody;
+
+            if(this.tempreviewRatingValue.length > 0) {
+                if (this.tempreviewRatingValue.length === 1) {
+                    tempObj.tempreviewRatingValue = this.tempreviewRatingValue[0];
+                } else {
+                    tempObj.tempreviewRatingValue = this.tempreviewRatingValue;
+                }
+            }
+
 
             return tempObj;
         }
@@ -133,7 +280,10 @@
                 obj.offers.lowPrice = this.offers.lowPrice;
                 if(this.offers.price) obj.offers.price = this.offers.price;
                 if(this.offers.highPrice) obj.offers.highPrice = this.offers.highPrice;
-                if(this.offers.offerCount) obj.offers.offerCount = this.offers.offerCount
+                if(this.offers.offerCount) obj.offers.offerCount = this.offers.offerCount;
+                if(this.offers.priceValidUntil) obj.offers.priceValidUntil = this.offers.priceValidUntil;
+                if(this.offers.availability) obj.offers.availability = this.offers.availability;
+                if(this.offers.itemCondition) obj.offers.itemCondition = this.offers.itemCondition;
             }
 
             if(this.aggregateRating) obj.aggregateRating = this.aggregateRating;
@@ -157,18 +307,6 @@
 
     let productFormat = new productSchema();
     productFormat.render();
-
-jQuery(document).ready(function () {
-    let deletes = lang ==='en'? 'Delete' : 'Hapus';
-    let jobTitle = lang ==='en'?'JobTitle':'Jabatan';
-    let identifier = lang==='en'?'Identifier':'Identifier';
-    let description = lang ==='en'?'Description':'Deskripsi';
-    let name = lang==='en'?'Name':'Nama';
-    let companyUrl = lang==='en'?'CompanyUrl':'UrlCompany';
-    let industry = lang==='en'?'Industry':'Industry';
-    let employmentType = lang==='en'?'EmploymentType':'TipePegawai';
-
-});
 
     $('.name').keyup(function (e) {
         productFormat.name = $(this).val();
@@ -272,18 +410,25 @@ jQuery(document).ready(function () {
 
     $('.url').keyup(function (e) {
         productFormat.offers.url = $(this).val();
+        productFormat.tempUrloffer = $(this).val();
         productFormat.temp();
         productFormat.render();
     });
 
     $('.priceCurrency').change(function (e) {
         productFormat.offers.priceCurrency = $(this).val();
+        productFormat.temppriceCur = $(this).val();
         productFormat.temp();
         productFormat.render();
     });
 
     $('.price').keyup(function (e) {
-        productFormat.offers.price = $(this).val();
+        if(productFormat.offers.lowPrice !== undefined){
+            productFormat.offers.lowPrice = $(this).val();
+        } else {
+            productFormat.offers.price = $(this).val();
+        }
+        productFormat.tempprice = $(this).val();
         productFormat.temp();
         productFormat.render();
     });
@@ -293,7 +438,9 @@ jQuery(document).ready(function () {
             delete productFormat.offers.highPrice;
         }else{
             productFormat.offers.highPrice = $(this).val();
+            productFormat.tempHighPrice = $(this).val();
         }
+        productFormat.temp();
         productFormat.render();
     });
 
@@ -315,10 +462,6 @@ jQuery(document).ready(function () {
             $('.bestRating').attr('disabled', true)
             $('.worstRating').attr('disabled', true)
             delete productFormat.aggregateRating;
-            $('.ratingCount').val('');
-            $('.bestRating').val('');
-            $('.worstRating').val('');
-
         }else{
             $('.ratingCount').removeAttr('disabled')
             $('.bestRating').removeAttr('disabled')
@@ -326,28 +469,36 @@ jQuery(document).ready(function () {
             productFormat.aggregateRating = {
                 "@type": "AggregateRating",
                 "ratingValue": $(this).val(),
-                "bestRating": "",
-                "worstRating": "",
-                "ratingCount": ""
+                "bestRating": productFormat.temphighestval,
+                "worstRating": productFormat.templowestval,
+                "ratingCount": productFormat.tempnumOfRate
             }
+            productFormat.tempaggRate = $(this).val();
         }
 
+        productFormat.temp();
         productFormat.render();
 
     });
 
     $('.ratingCount').keyup(function (e) {
         productFormat.aggregateRating.ratingCount = $(this).val();
+        productFormat.tempnumOfRate = $(this).val();
+        productFormat.temp();
         productFormat.render();
     });
 
     $('.bestRating').keyup(function (e) {
         productFormat.aggregateRating.bestRating = $(this).val();
+        productFormat.temphighestval = $(this).val();
+        productFormat.temp();
         productFormat.render();
     });
 
     $('.worstRating').keyup(function (e) {
         productFormat.aggregateRating.worstRating = $(this).val();
+        productFormat.templowestval = $(this).val();
+        productFormat.temp();
         productFormat.render();
     });
 
@@ -363,7 +514,7 @@ jQuery(document).ready(function () {
             "                   <div class=\"col-12 col-lg-6 mb-8 mb-lg-5\"><label class=\"text-black font-weight-bold\" for=\"reviewBody\">"+label_review_body+"</label><textarea name=\"\" class=\"form-control custom-textarea-82 reviewBody\" placeholder=\""+placeholder_review_body+"\" data-id=\""+(reviewCounter)+"\"></textarea></div></div>" +
             "                   <div class=\"row mb-5 author-data\" data-id=\""+(reviewCounter)+"\"><div class=\"col-5\"><label class=\"text-black font-weight-bold\" for=\"authorReview\">"+label_review_author+"</label><input type=\"text\" name=\"\" class=\"form-control authorReview\" placeholder=\""+placeholder_review_author+"\" value=\"\" data-id=\""+(reviewCounter)+"\"></div>" +
             "                   <div class=\"col-6\"><label class=\"text-black font-weight-bold\" for=\"publisher\">"+label_review_publisher+"</label><input type=\"text\" name=\"\" class=\"form-control publisher\" placeholder=\""+placeholder_review_publisher+"\" value=\"\" data-id=\""+(reviewCounter)+"\"></div>" +
-            "                   <div class=\"col-1\"><div class=\"d-flex justify-content-center mt-9\"><i class=\"bx bxs-x-circle bx-md delete deleteReview\"></i></div></div></div>"
+            "                   <div class=\"col-1\"><div class=\"d-flex justify-content-center mt-9\"><i class=\"bx bxs-x-circle bx-md delete deleteReview\" data-id=\""+(reviewCounter)+"\"></i></div></div></div>"
         );
 
         var arrows;
@@ -430,23 +581,140 @@ jQuery(document).ready(function () {
         }
     });
 
-    jQuery('#copy').click(function () {
+    $('.validThrough').change(function (e) {
+        productFormat.tempPriceValid = $(this).val();
+        productFormat.offers.priceValidUntil = $(this).val();
+        productFormat.temp();
+        productFormat.render();
+    });
+
+    $('.availability').change(function (e) {
+        productFormat.tempAvailability = $(this).val();
+        productFormat.offers.availability = $(this).val();
+        productFormat.temp();
+        productFormat.render();
+    });
+
+    $('.condition').change(function (e) {
+        productFormat.tempItemCondition = $(this).val();
+        productFormat.offers.itemCondition = $(this).val();
+        productFormat.temp();
+        productFormat.render();
+    })
+
+    $(document).on('keyup', '.review', function () {
+        let index = parseInt($(this).data('id'));
+        delete productFormat.review[index]['@type']
+        productFormat.review[index] = Object.assign({"@type": "Review","name":""}, productFormat.review[index])
+        if($(this).val().length == 0) {
+            delete productFormat.review[index].name;
+        }else{
+            productFormat.review[index].name = $(this).val();
+        }
+        productFormat.render();
+    });
+
+
+    $(document).on('keyup', '.reviewBody', function () {
+        let index = parseInt($(this).data('id'));
+
+        productFormat.review[index].reviewBody = $(this).val();
+        productFormat.tempReviewBody[index] = $(this).val()
+        productFormat.temp();
+        productFormat.render();
+    });
+
+    $(document).on('keyup', '.rating', function () {
+        let index = parseInt(jQuery(this).data('id'));
+        productFormat.review[index] = Object.assign(productFormat.review[index],{"reviewRating" : {"@type": "Rating", "ratingValue": ""}})
+
+        if($(this).val().length == 0){
+            productFormat.review[index].reviewRating;
+        }else{
+            productFormat.review[index].reviewRating.ratingValue = $(this).val();
+        }
+
+        // recipeFormat.tempreviewRatingValue[index] =  $(this).val();
+        // if($('.review').val().length == 0){
+        //     recipeFormat.review[index] = {
+        //         "@type": "Review",
+        //         "name": recipeFormat.tempReviewName[index],
+        //         "reviewBody": recipeFormat.tempReviewBody[index],
+        //         "reviewRating" : {
+        //             "@type": "Rating",
+        //             "ratingValue": $(this).val()
+        //         },
+        //         "author": {"@type": "Person", "name": ""}
+        //     };
+        // } else {
+        //     recipeFormat.review[index] = {
+        //         "@type": "Review",
+        //         "reviewBody": recipeFormat.tempReviewBody[index],
+        //         "reviewRating" : {
+        //             "@type": "Rating",
+        //             "ratingValue": $(this).val()
+        //         },
+        //         "author": {"@type": "Person", "name": ""}
+        //     };
+        // }
+
+
+        // recipeFormat.temp();
+        productFormat.render();
+
+    });
+
+
+
+
+    $(document).on('change', '.dateReview', function () {
+        let index = parseInt($(this).data('id'));
+
+        if($(this).val().length == 0){
+            delete productFormat.review[index].datePublished;
+        }else{
+            productFormat.review[index].datePublished = $(this).val();
+        }
+
+        productFormat.render();
+    });
+
+    $(document).on('keyup', '.authorReview', function () {
+        let index = parseInt(jQuery(this).data('id'));
+        productFormat.review[index].author.name = $(this).val();
+        productFormat.render();
+    });
+
+    $('#copy').click(function () {
         const copyText = jQuery('#json-format');
         copyText.select();
         // copyText.setSelectionRange(0, 999999); /*For mobile devices*/
         document.execCommand("copy");
+        toastr.info('Copied to Clipboard', 'Information');
     });
 
     $(document).on("change", ".offerType", function() {
         var selectedItem = $(this).val();
 
         if(selectedItem === "Aggregate Offer") {
-            productFormat.offers = {
-                "@type": "AggregateOffer",
-                "url": "",
-                "priceCurrency": "",
-                "lowPrice": ""
+            if(productFormat.tempHighPrice != "") {
+                productFormat.offers = {
+                    "@type": "AggregateOffer",
+                    "url": productFormat.tempUrloffer,
+                    "priceCurrency": productFormat.temppriceCur,
+                    "lowPrice": productFormat.tempprice,
+                    "highPrice": productFormat.tempHighPrice
+                }
+            } else {
+                productFormat.offers = {
+                    "@type": "AggregateOffer",
+                    "url": productFormat.tempUrloffer,
+                    "priceCurrency": productFormat.temppriceCur,
+                    "lowPrice": productFormat.tempprice
+                }
             }
+
+
             $(".url, .price, .priceCurrency").removeAttr("disabled");
             $(".priceCurrency").selectpicker("refresh");
             $("#ag_offer").removeClass('d-none');
@@ -454,10 +722,15 @@ jQuery(document).ready(function () {
         }else if(selectedItem === "Offer"){
             productFormat.offers = {
                 "@type": "Offer",
-                "url": "",
-                "priceCurrency": "",
-                "price": ""
+                "url": productFormat.tempUrloffer,
+                "priceCurrency": productFormat.temppriceCur,
+                "price": productFormat.tempprice
             }
+
+            if(productFormat.tempPriceValid !== "") productFormat.offers.priceValidUntil = productFormat.tempPriceValid;
+            if(productFormat.tempAvailability !== "") productFormat.offers.availability = productFormat.tempAvailability;
+            if(productFormat.tempItemCondition !== "") productFormat.offers.itemCondition = productFormat.tempItemCondition;
+
             $(".url, .price, .priceCurrency").removeAttr("disabled");
             $(".priceCurrency").selectpicker("refresh");
             $("#offer").removeClass('d-none');
@@ -470,4 +743,27 @@ jQuery(document).ready(function () {
             $("#offer").addClass('d-none');
         }
         productFormat.render();
+    });
+
+    $('.reset').click(function (e) {
+        $('#form-product').trigger('reset')
+        $('.product-description').html('')
+        $(".url, .price, .priceCurrency").attr("disabled", true);
+        $(".priceCurrency").selectpicker("refresh");
+        $("#ag_offer").addClass('d-none');
+        $("#offer").addClass('d-none');
+        $('.ratingCount').attr('disabled', true)
+        $('.bestRating').attr('disabled', true)
+        $('.worstRating').attr('disabled', true)
+        $('.availability').val(1)
+        $('.availability').change()
+        $('.condition').val(1)
+        $('.condition').change()
+        $('.priceCurrency').val(1)
+        $('.priceCurrency').change()
+        $('.offerType').val(1)
+        $('.offerType').change()
+        $('#addReview').html('')
+
+        productFormat.resetrender();
     });
