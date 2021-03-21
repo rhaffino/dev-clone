@@ -1,4 +1,4 @@
-name: staging-FreeTools
+name: staging-deployment
 
 on:
   push:
@@ -19,10 +19,8 @@ jobs:
             git stash
             git pull origin develop
             composer install
-            npm install
-            npm run production
             chown www-data:www-data -R ./
-            chmod 775 -R storage public bootstrap/cache
+            chmod 775 -R storage/ public/ bootstrap/cache
           # Hostname or IP address of the server.
           host: ${{secrets.HOST_ADDRESS}}
           # Username for authentication to server.
@@ -33,5 +31,3 @@ jobs:
           key: ${{secrets.PRIVATE_KEY}}
           # Password for authentication.
           pass: ${{secrets.HOST_PASS}}
-          # SSH parameters for example: -tt.
-          args: # optional
