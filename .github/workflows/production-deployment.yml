@@ -18,8 +18,8 @@ jobs:
             cd /var/www/tools.cmlabs.co/
             git pull origin master
             composer install
-            chown www-data:www-data -R ./
-            chmod 775 -R storage public bootstrap/cache
+            sudo chown www-data:www-data -R ./
+            sudo chmod 775 -R storage public bootstrap/cache
           # Hostname or IP address of the server.
           host: ${{secrets.HOST_ADDRESS_PRODUCTION}}
           # Username for authentication to server.
