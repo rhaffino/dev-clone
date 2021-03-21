@@ -190,6 +190,9 @@ jQuery('#reset').click(function () {
     sessionStorage.clear();
     jQuery('#textarea').val('');
     jQuery('.collapse').collapse('hide');
+    $('#textarea').data('key', new Date().getTime())
+    $('#textarea').val('')
+    start();
 
     characterCount.innerHTML = 0;
     wordCount.innerHTML = 0;
@@ -827,6 +830,8 @@ $(document).ready(function () {
             }
         }
     });
+
+    lastData();
 });
 
 jQuery.each(jQuery('textarea[data-autoresize]'), function () {
@@ -855,5 +860,16 @@ function myFunction() {
         $('#textarea').popover().click(function () {
             $('#textarea').popover('hide');
         });
+    }
+}
+
+const lastData = function () {
+    let data = JSON.parse(localStorage.getItem('keys'))
+    if (data.wc.length > 0) {
+        if (localStorage.getItem(data.wc[data.wc.length - 1])) {
+            $('#textarea').val(localStorage.getItem(data.wc[data.wc.length - 1]));
+            $('#textarea').data('key', data.wc[data.wc.length - 1])
+            start();
+        }
     }
 }
