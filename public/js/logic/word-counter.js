@@ -14,7 +14,7 @@ const refreshLocalStorage = function () {
             if (keys.wc.length > 0) {
                 for (let key of keys.wc) {
                     let temp = localStorage.getItem(key)
-                    let date = new Date(key * 1000)
+                    let date = new Date(key)
                     let div = '<div class="custom-card py-5 px-3" onclick="getData(' + key + ')">' +
                         '<div class="d-flex align-items-center justify-content-between">' +
                         '<div class="local-collection-title">' + temp + '</div>' +
@@ -118,7 +118,7 @@ refreshLocalStorage();
 
 $('#textarea').on('input', function () {
     if ($('#autosaveParam').data('autosave') == "on") {
-        if ($(this).val()) {
+        if ($(this).val() || $(this).val() !== '') {
             const key = $(this).data('key');
             const keys = window.localStorage.getItem('keys')
             var temp = define();
@@ -148,13 +148,27 @@ $('#textarea').on('input', function () {
     start();
 })
 
+$('#textarea').keypress( function (e) {
+    if (e.key === " "){
+        saveState()
+    }
+})
+
+$(window).keydown(function (e) {
+    if ((e.metaKey || e.ctrlKey) && e.key === "z") {
+        $('#textarea').val(State.undo())
+        e.preventDefault()
+    }
+})
+
 const getData = function (key) {
     if (localStorage.getItem(key)) {
+        State.reset()
         $('#textarea').val(localStorage.getItem(key));
         $('#textarea').data('key', key)
+        saveState()
         start();
     }
-
 }
 
 const removeData = function (key) {
@@ -186,10 +200,34 @@ const clearAll = function () {
     refreshLocalStorage()
 }
 
+$('#new-text').click(function () {
+    if ($('#textarea').val()){
+        const key = $('#textarea').data('key');
+        const keys = window.localStorage.getItem('keys')
+        var temp = define();
+        if (keys) {
+            temp = JSON.parse(keys)
+        }
+        if (!temp.wc.includes(key)) {
+            temp.wc.push(key)
+        }
+        window.localStorage.setItem('keys', JSON.stringify(temp));
+        window.localStorage.setItem(key, $('#textarea').val());
+    }
+    State.reset()
+    $('#textarea').data('key', new Date().getTime())
+    $('#textarea').val('')
+    saveState();
+    refreshLocalStorage();
+})
+
 jQuery('#reset').click(function () {
     sessionStorage.clear();
+    saveState()
     jQuery('#textarea').val('');
     jQuery('.collapse').collapse('hide');
+    saveState()
+    start();
 
     characterCount.innerHTML = 0;
     wordCount.innerHTML = 0;
@@ -664,6 +702,8 @@ function start() {
 }
 
 $(document).ready(function () {
+    $('#textarea').data('key', new Date().getTime())
+
     $('#autoSaveOff').tooltip({
         'template': '<div class="tooltip tooltip-autosave-off" role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>'
     });
@@ -827,6 +867,8 @@ $(document).ready(function () {
             }
         }
     });
+
+    lastData();
 });
 
 jQuery.each(jQuery('textarea[data-autoresize]'), function () {
@@ -856,4 +898,20 @@ function myFunction() {
             $('#textarea').popover('hide');
         });
     }
+}
+
+const lastData = function () {
+    let data = JSON.parse(localStorage.getItem('keys'))
+    if (data.wc.length > 0) {
+        if (localStorage.getItem(data.wc[data.wc.length - 1])) {
+            $('#textarea').val(localStorage.getItem(data.wc[data.wc.length - 1]));
+            $('#textarea').data('key', data.wc[data.wc.length - 1])
+            saveState()
+            start();
+        }
+    }
+}
+
+const saveState = function () {
+    State.save($('#textarea').val())
 }
