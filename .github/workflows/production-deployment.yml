@@ -1,8 +1,8 @@
-name: staging-FreeTools
+name: production-deployment
 
 on:
   push:
-    branches: [ develop ]
+    branches: [ master ]
 
 jobs:
   laravel-deploy:
@@ -15,23 +15,16 @@ jobs:
         with:
           # Command to execute on the remote server.
           command: |
-            cd /var/www/staging-FreeTools/
-            git stash
-            git pull origin develop
+            cd /var/www/tools.cmlabs.co/
+            git pull origin master
             composer install
-            npm install
-            npm run production
-            chown www-data:www-data -R ./
-            chmod 775 -R storage public bootstrap/cache
+            sudo chown www-data:www-data -R ./
+            sudo chmod 775 -R storage public bootstrap/cache
           # Hostname or IP address of the server.
-          host: ${{secrets.HOST_ADDRESS}}
+          host: ${{secrets.HOST_ADDRESS_PRODUCTION}}
           # Username for authentication to server.
-          user: ${{secrets.HOST_USER}}
+          user: ${{secrets.HOST_USER_PRODUCTION}}
           # Port number of the server.
           port: 22
           # File Location or string that contains a private key for either key-based or hostbased user authentication (OpenSSH format)
-          key: ${{secrets.PRIVATE_KEY}}
-          # Password for authentication.
-          pass: ${{secrets.HOST_PASS}}
-          # SSH parameters for example: -tt.
-          args: # optional
+          key: ${{secrets.PRIVATE_KEY_PRODUCTION}}

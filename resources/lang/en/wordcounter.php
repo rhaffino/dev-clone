@@ -7,7 +7,7 @@ return[
     "tooltip-copy" => "Copy",
     "tooltip-clear" => "Clear",
     "tooltip-set-font-size" => "Set font size to",
-    "tooltip-local-history" => "Local History",
+    "tooltip-new-local-history" => "Create New",
     "autosave-on" => "Autosave is <b>ON</b>",
     "autosave-off" => "Autosave is <b>OFF</b>",
     "character" => "Characters",

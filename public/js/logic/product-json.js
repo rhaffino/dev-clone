@@ -26,30 +26,36 @@
     let placeholder_review_author = lang ==='en'? 'Type author name here..' : 'Ketik nama penulis disini..';
     let placeholder_review_publisher = lang ==='en'? 'Type publisher here..' : 'Ketik penerbit disini';
 
+    let skuTempVal = '';
+    let gtin8TempVal = '';
+    let gtin13TempVal = '';
+    let gtin14TempVal = '';
+    let mpnTempVal = '';
+
 
     const sku = (id) => `<div class="col-12 col-md-4" id="sku">
         <label class="text-black font-weight-bold" for="sku">sku</label>
-        <input type="text" name="" class="form-control sku mb-5" placeholder="${$('#skulang').val()}" value="" data-id="${id}">
+        <input type="text" name="" class="form-control sku mb-5" placeholder="${$('#skulang').val()}" value="${skuTempVal}" data-id="${id}">
       </div>`;
 
     const gtin = (id) => `<div class="col-12 col-md-4" id="gtin8">
     <label class="text-black font-weight-bold" for="gtin8">gtin8</label>
-    <input type="text" name="" class="form-control gtin8 mb-5" placeholder="${$('#gtin8lang').val()}" value="" data-id="${id}">
+    <input type="text" name="" class="form-control gtin8 mb-5" placeholder="${$('#gtin8lang').val()}" value="${gtin8TempVal}" data-id="${id}">
   </div>`;
 
     const Secondgtin = (id) => `<div class="col-12 col-md-4" id="gtin13">
     <label class="text-black font-weight-bold" for="gtin13">gtin13</label>
-    <input type="text" name="" class="form-control gtin13 mb-5" placeholder="${$('#gtin13lang').val()}" value="" data-id="${id}">
+    <input type="text" name="" class="form-control gtin13 mb-5" placeholder="${$('#gtin13lang').val()}" value="${gtin13TempVal}" data-id="${id}">
   </div>`;
 
     const Thirdgtin = (id) => `<div class="col-12 col-md-4" id="gtin14">
     <label class="text-black font-weight-bold" for="gtin14">gtin14</label>
-    <input type="text" name="" class="form-control gtin14 mb-5" placeholder="${$('#gtin14lang').val()}" value="" data-id="${id}">
+    <input type="text" name="" class="form-control gtin14 mb-5" placeholder="${$('#gtin14lang').val()}" value="${gtin14TempVal}" data-id="${id}">
   </div>`;
 
     const mpn = (id) => ` <div class="col-12 col-md-4" id="mpn">
     <label class="text-black font-weight-bold" for="mpn">mpn</label>
-    <input type="text" name="" class="form-control mpn mb-5" placeholder="${$('#mpnlang').val()}" value="" data-id="${id}">
+    <input type="text" name="" class="form-control mpn mb-5" placeholder="${$('#mpnlang').val()}" value="${mpnTempVal}" data-id="${id}">
   </div>`;
 
     const productDescription = {
@@ -72,6 +78,12 @@
             this.gtin13Temp = 'none';
             this.gtin14Temp = 'none';
             this.mpnTemp = 'none';
+
+            this.skuTempVal = '';
+            this.gtin8TempVal = '';
+            this.gtin13TempVal = '';
+            this.gtin14TempVal = '';
+            this.mpnTempVal = '';
 
             this.sku = '';
             this.gtin8 = '';
@@ -231,6 +243,21 @@
             tempObj.temphighestval = this.temphighestval;
             tempObj.templowestval = this.templowestval;
 
+            tempObj.skuTempVal = this.skuTempVal;
+            skuTempVal = this.skuTempVal;
+
+            tempObj.gtin8TempVal = this.gtin8TempVal;
+            gtin8TempVal = this.gtin8TempVal;
+
+            tempObj.gtin13TempVal = this.gtin13TempVal;
+            gtin13TempVal = this.gtin13TempVal;
+
+            tempObj.gtin14TempVal = this.gtin14TempVal;
+            gtin14TempVal = this.gtin14TempVal;
+
+            tempObj.mpnTempVal = this.mpnTempVal;
+            mpnTempVal = this.mpnTempVal;
+
             if(this.tempReviewName.length > 0) {
                 if (this.tempReviewName.length === 1) {
                     tempObj.tempReviewName = this.tempReviewName[0];
@@ -336,19 +363,19 @@
 
                     if(productFormat.tempIdentify[i] === 'sku'){
                         productFormat.skuTemp = "none";
-                        productFormat.sku = "";
+                        productFormat.sku = productFormat.skuTempVal;
                     } else if(productFormat.tempIdentify[i] === 'gtin8'){
                         productFormat.gtin8Temp = "none";
-                        productFormat.gtin8 = "";
+                        productFormat.gtin8 = productFormat.gtin8TempVal;
                     } else if(productFormat.tempIdentify[i] === 'gtin13'){
                         productFormat.gtin13Temp = "none";
-                        productFormat.gtin13 = "";
+                        productFormat.gtin13 = productFormat.gtin13TempVal;
                     } else if(productFormat.tempIdentify[i] === 'gtin14'){
                         productFormat.gtin14Temp = "none";
-                        productFormat.gtin14 = "";
+                        productFormat.gtin14 = productFormat.gtin14TempVal;
                     } else {
                         productFormat.mpnTemp = "none";
-                        productFormat.mpn = "";
+                        productFormat.mpn = productFormat.mpnTempVal;
                     }
 
                     $('#'+productFormat.tempIdentify[i]+'').remove();
@@ -385,26 +412,36 @@
 
     $(document).on('keyup', '.gtin8', function () {
         productFormat.gtin8 = $(this).val();
+        productFormat.gtin8TempVal = $(this).val();
+        productFormat.temp();
         productFormat.render();
     });
 
     $(document).on('keyup', '.sku', function () {
         productFormat.sku = $(this).val();
+        productFormat.skuTempVal = $(this).val();
+        productFormat.temp();
         productFormat.render();
     });
 
     $(document).on('keyup', '.gtin14', function () {
         productFormat.gtin14 = $(this).val();
+        productFormat.gtin14TempVal = $(this).val();
+        productFormat.temp();
         productFormat.render();
     });
 
     $(document).on('keyup', '.mpn', function () {
         productFormat.mpn = $(this).val();
+        productFormat.mpnTempVal =  $(this).val()
+        productFormat.temp();
         productFormat.render();
     });
 
     $(document).on('keyup', '.gtin13', function () {
         productFormat.gtin13 = $(this).val();
+        productFormat.gtin13TempVal = $(this).val();
+        productFormat.temp();
         productFormat.render();
     });
 
@@ -755,6 +792,8 @@
         $('.ratingCount').attr('disabled', true)
         $('.bestRating').attr('disabled', true)
         $('.worstRating').attr('disabled', true)
+        $('.identifier').val(1);
+        $('.identifier').change();
         $('.availability').val(1)
         $('.availability').change()
         $('.condition').val(1)

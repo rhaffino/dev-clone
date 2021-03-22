@@ -49,9 +49,7 @@ id/word-counter
                                     </div>
                                 </div>
                                 <div id="autosaveParam" data-autosave="on" class="">
-                                    <a href="#local-collection-desktop">
-                                        <i class='bx bxs-collection bx-sm mx-2 text-darkgrey text-hover-primaryblue'  data-toggle="tooltip" data-theme="dark" title="{{ Lang::get('wordcounter.tooltip-local-history') }}"></i>
-                                    </a>
+                                    <i id="new-text" class='bx bxs-collection bx-sm mx-2 text-darkgrey text-hover-primaryblue' data-toggle="tooltip" data-theme="dark" title="{{ Lang::get('wordcounter.tooltip-new-local-history') }}"></i>
                                     <i id="autoSaveOff" class='bx bxs-server bx-sm mx-2 text-darkgrey text-hover-primaryblue auto-save-off' data-html="true" data-placement="top" title="{{ Lang::get('wordcounter.autosave-off') }}"></i>
                                     <i id="autoSaveOn" class='bx bxs-server bx-sm mx-2 text-primaryblue text-hover-primaryblue auto-save-on' data-html="true" data-placement="top" title="{{ Lang::get('wordcounter.autosave-on') }}"></i>
                                 </div>
@@ -497,6 +495,7 @@ id/word-counter
 
 @push('script')
 <script src="{{asset('js/logic/predifine-localstorage.js')}}"></script>
+<script src="{{asset('js/logic/State.js')}}"></script>
 <script src="{{asset('js/logic/word-counter.js')}}"></script>
 <script type="application/ld+json">
     {

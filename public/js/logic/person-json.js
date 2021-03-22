@@ -448,7 +448,7 @@
     });
 
     $('.reset').click(function (e) {
-        $('#form').trigger("reset");
+        $('#form-person').trigger("reset");
         $('.social-profiles').val(1)
         $('.social-profiles').change()
         $('.sosial-profile-url').html('')

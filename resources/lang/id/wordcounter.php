@@ -8,7 +8,7 @@ return [
     "tooltip-copy" => "Salin",
     "tooltip-clear" => "Bersihkan",
     "tooltip-set-font-size" => "Atur ukuran font ke",
-    "tooltip-local-history" => "Riwayat",
+    "tooltip-new-local-history" => "Buat Baru",
     "autosave-on" => "Autosave <b>AKTIF</b>",
     "autosave-off" => "Autosave <b>NONAKTIF</b>",
     "character" => "Karakter",

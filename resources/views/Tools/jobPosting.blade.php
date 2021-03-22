@@ -191,6 +191,7 @@ id/json-ld-jobPosting-schema-generator
                                         <div class="col-6 col-xl-2">
                                             <label class="text-black font-weight-bold" for="unitText">Per-</label>
                                             <select class="form-control selectpicker custom-select-blue unitText mb-5" tabindex="null" disabled="disabled">
+                                                <option value="none">Nothing Selected</option>
                                                 <option value="HOUR">@lang('jobPosting.unitText-opt-1')</option>
                                                 <option value="WEEK">@lang('jobPosting.unitText-opt-2')</option>
                                                 <option value="MONTH">@lang('jobPosting.unitText-opt-3')</option>
@@ -348,7 +349,7 @@ id/json-ld-jobPosting-schema-generator
                     <p>@lang('jobPosting.desc-3-1')</p>
                     <p>@lang('jobPosting.desc-3-2')</p>
                     <pre class="language-html mb-4">
-            <code class="language-html">/
+            <code class="language-html">
               &lt;script type="application/ld+json"&gt;
                 {
                   "@context": "https://schema.org/",
