@@ -65,6 +65,7 @@ id/json-ld-product-schema-generator
                                                     <label class="text-black font-weight-bold" for="identifier">@lang('product.label-identifier')</label>
                                                     <div class="dropdown bootstrap-select show-tick form-control">
                                                         <select class="form-control selectpicker custom-select-blue identifier" multiple="multiple" data-actions-box="false" tabindex="null">
+                                                            <option value="none">Nothing Selected</option>
                                                             <option value="sku">sku</option>
                                                             <option value="gtin8">gtin8</option>
                                                             <option value="gtin13">gtin13</option>
@@ -131,7 +132,8 @@ id/json-ld-product-schema-generator
                                         <div class="col-md-4">
                                             <label class="text-black font-weight-bold" for="availability">@lang('product.label-availability')</label>
                                             <select class="form-control selectpicker custom-select-blue availability mb-5">
-                                                <option selected="selected" value="In stock">@lang('product.availability-opt-1')</option>
+                                                <option value="none">Nothing Selected</option>
+                                                <option value="In stock">@lang('product.availability-opt-1')</option>
                                                 <option value="Out of stock">@lang('product.availability-opt-2')</option>
                                                 <option value="Online only">@lang('product.availability-opt-3')</option>
                                                 <option value="In store only">@lang('product.availability-opt-4')</option>
@@ -146,7 +148,8 @@ id/json-ld-product-schema-generator
                                         <div class="col-md-4">
                                             <label class="text-black font-weight-bold" for="condition">@lang('product.label-condition')</label>
                                             <select class="form-control selectpicker custom-select-blue condition mb-5">
-                                                <option selected="selected" value="New">@lang('product.condition-opt-1')</option>
+                                                <option value="none">Nothing Selected</option>
+                                                <option value="New">@lang('product.condition-opt-1')</option>
                                                 <option value="Used">@lang('product.condition-opt-2')</option>
                                                 <option value="Refurbished">@lang('product.condition-opt-3')</option>
                                                 <option value="Damaged">@lang('product.condition-opt-4')</option>
