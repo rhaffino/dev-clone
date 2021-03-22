@@ -43,6 +43,7 @@ const jobSchema = class {
         this.qualifications = undefined;
         this.educationRequirements = undefined;
         this.experienceRequirements = undefined;
+        this.tempCompanyName = "";
 
     }
 
@@ -104,6 +105,7 @@ const jobSchema = class {
         this.qualifications = undefined;
         this.educationRequirements = undefined;
         this.experienceRequirements = undefined;
+        this.tempCompanyName = "";
 
         const resetObj = {
             "@context": "https://schema.org/",
@@ -187,6 +189,7 @@ const jobSchema = class {
 
         tempObj.unitTextCur = this.unitTextCur;
         tempObj.tempcurrency = this.tempcurrency;
+        tempObj.tempCompanyName = this.tempCompanyName;
 
         if(this.salaryValue) tempObj.salaryValue = this.salaryValue;
 
@@ -311,6 +314,7 @@ $("#province-show").hide();
     $('.name').keyup(function (e) {
         let index = parseInt($(this).data('id'));
         jobFormat.hiring.name = $(this).val();
+        jobFormat.identify.name = $(this).val();
         jobFormat.render();
     });
 
@@ -399,6 +403,17 @@ $("#province-show").hide();
     });
 
     $('.country').change(function (e){
+
+        if($(this).val() == "ID"){
+            console.log('yes');
+        }else{
+            console.log('no')
+            jobFormat.tempAddressRegion = "";
+            jobFormat.jobLocation.address.addressRegion = "";
+            jobFormat.temp();
+            jobFormat.render();
+        }
+
         jobFormat.country = $(this).val();
         if($(this).val() == "none"){
             if(checkBox == 1){
@@ -435,7 +450,6 @@ $("#province-show").hide();
             }
             jobFormat.tempAddressCountry = $(this).val();
         }
-
         jobFormat.temp();
         jobFormat.render();
 
