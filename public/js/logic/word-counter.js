@@ -288,7 +288,7 @@ function start() {
                     "<div class='col-4 d-flex justify-content-end align-items-center'>" +
                     "<div class='d-flex justify-content-end align-items-center'>" +
                     "<span class='mr-3 font-weight-bolder mt-1'>" + sortedKeywords[i][1] + "</span>" +
-                    "<span class='font-weight-bolder mt-1'>" + ((sortedKeywords[i][1] / nonStopWords.length) * 100).toFixed(1) + "%</span>" +
+                    "<span class='mt-1'>" + ((sortedKeywords[i][1] / nonStopWords.length) * 100).toFixed(1) + "%</span>" +
                     "</div>" +
                     "</div>" +
                     "</div>"
@@ -304,7 +304,7 @@ function start() {
                     "<div class='col-4 d-flex justify-content-end align-items-center'>" +
                     "<div class='d-flex justify-content-end align-items-center'>" +
                     "<span class='mr-3 font-weight-bolder mt-1'>" + sortedKeywords[i][1] + "</span>" +
-                    "<span class='font-weight-bolder mt-1'>" + ((sortedKeywords[i][1] / nonStopWords.length) * 100).toFixed(1) + "%</span>" +
+                    "<span class='mt-1'>" + ((sortedKeywords[i][1] / nonStopWords.length) * 100).toFixed(1) + "%</span>" +
                     "</div>" +
                     "</div>" +
                     "</div>" +
@@ -321,7 +321,7 @@ function start() {
                     "<div class='col-4 d-flex justify-content-end align-items-center'>" +
                     "<div class='d-flex justify-content-end align-items-center'>" +
                     "<span class='mr-3 font-weight-bolder mt-1'>" + sortedKeywords[i][1] + "</span>" +
-                    "<span class='font-weight-bolder mt-1'>" + ((sortedKeywords[i][1] / nonStopWords.length) * 100).toFixed(1) + "%</span>" +
+                    "<span class='mt-1'>" + ((sortedKeywords[i][1] / nonStopWords.length) * 100).toFixed(1) + "%</span>" +
                     "</div>" +
                     "</div>" +
                     "</div>" +
@@ -344,7 +344,7 @@ function start() {
                     "<div class='col-4 d-flex justify-content-end align-items-center'>" +
                     "<div class='d-flex justify-content-end align-items-center'>" +
                     "<span class='mr-3 font-weight-bolder mt-1'>" + sortedKeywords[i][1] + "</span>" +
-                    "<span class='font-weight-bolder mt-1'>" + ((sortedKeywords[i][1] / nonStopWords.length) * 100).toFixed(1) + "%</span>" +
+                    "<span class='mt-1'>" + ((sortedKeywords[i][1] / nonStopWords.length) * 100).toFixed(1) + "%</span>" +
                     "</div>" +
                     "</div>" +
                     "</div>"
@@ -360,7 +360,7 @@ function start() {
                     "<div class='col-4 d-flex justify-content-end align-items-center'>" +
                     "<div class='d-flex justify-content-end align-items-center'>" +
                     "<span class='mr-3 font-weight-bolder mt-1'>" + sortedKeywords[i][1] + "</span>" +
-                    "<span class='font-weight-bolder mt-1'>" + ((sortedKeywords[i][1] / nonStopWords.length) * 100).toFixed(1) + "%</span>" +
+                    "<span class='mt-1'>" + ((sortedKeywords[i][1] / nonStopWords.length) * 100).toFixed(1) + "%</span>" +
                     "</div>" +
                     "</div>" +
                     "</div>" +
@@ -377,7 +377,7 @@ function start() {
                     "<div class='col-4 d-flex justify-content-end align-items-center'>" +
                     "<div class='d-flex justify-content-end align-items-center'>" +
                     "<span class='mr-3 font-weight-bolder mt-1'>" + sortedKeywords[i][1] + "</span>" +
-                    "<span class='font-weight-bolder mt-1'>" + ((sortedKeywords[i][1] / nonStopWords.length) * 100).toFixed(1) + "%</span>" +
+                    "<span class='mt-1'>" + ((sortedKeywords[i][1] / nonStopWords.length) * 100).toFixed(1) + "%</span>" +
                     "</div>" +
                     "</div>" +
                     "</div>" +
@@ -419,7 +419,7 @@ function start() {
                     "<div class='col-4 d-flex justify-content-end align-items-center'>" +
                     "<div class='d-flex justify-content-end align-items-center'>" +
                     "<span class='mr-3 font-weight-bolder mt-1'>" + sortedKeywords2[i][1] + "</span>" +
-                    "<span class='font-weight-bolder mt-1'>" + ((sortedKeywords2[i][1] / nonStopWords.length) * 100).toFixed(1) + "%</span>" +
+                    "<span class='mt-1'>" + ((sortedKeywords2[i][1] / nonStopWords.length) * 100).toFixed(1) + "%</span>" +
                     "</div>" +
                     "</div>" +
                     "</div>"
@@ -435,7 +435,7 @@ function start() {
                     "<div class='col-4 d-flex justify-content-end align-items-center'>" +
                     "<div class='d-flex justify-content-end align-items-center'>" +
                     "<span class='mr-3 font-weight-bolder mt-1'>" + sortedKeywords2[i][1] + "</span>" +
-                    "<span class='font-weight-bolder mt-1'>" + ((sortedKeywords2[i][1] / nonStopWords.length) * 100).toFixed(1) + "%</span>" +
+                    "<span class='mt-1'>" + ((sortedKeywords2[i][1] / nonStopWords.length) * 100).toFixed(1) + "%</span>" +
                     "</div>" +
                     "</div>" +
                     "</div>" +
@@ -452,7 +452,7 @@ function start() {
                     "<div class='col-4 d-flex justify-content-end align-items-center'>" +
                     "<div class='d-flex justify-content-end align-items-center'>" +
                     "<span class='mr-3 font-weight-bolder mt-1'>" + sortedKeywords2[i][1] + "</span>" +
-                    "<span class='font-weight-bolder mt-1'>" + ((sortedKeywords2[i][1] / nonStopWords.length) * 100).toFixed(1) + "%</span>" +
+                    "<span class='mt-1'>" + ((sortedKeywords2[i][1] / nonStopWords.length) * 100).toFixed(1) + "%</span>" +
                     "</div>" +
                     "</div>" +
                     "</div>" +
@@ -476,7 +476,7 @@ function start() {
                     "<div class='col-4 d-flex justify-content-end align-items-center'>" +
                     "<div class='d-flex justify-content-end align-items-center'>" +
                     "<span class='mr-3 font-weight-bolder mt-1'>" + sortedKeywords2[i][1] + "</span>" +
-                    "<span class='font-weight-bolder mt-1'>" + ((sortedKeywords2[i][1] / nonStopWords.length) * 100).toFixed(1) + "%</span>" +
+                    "<span class='mt-1'>" + ((sortedKeywords2[i][1] / nonStopWords.length) * 100).toFixed(1) + "%</span>" +
                     "</div>" +
                     "</div>" +
                     "</div>"
@@ -492,7 +492,7 @@ function start() {
                     "<div class='col-4 d-flex justify-content-end align-items-center'>" +
                     "<div class='d-flex justify-content-end align-items-center'>" +
                     "<span class='mr-3 font-weight-bolder mt-1'>" + sortedKeywords2[i][1] + "</span>" +
-                    "<span class='font-weight-bolder mt-1'>" + ((sortedKeywords2[i][1] / nonStopWords.length) * 100).toFixed(1) + "%</span>" +
+                    "<span class='mt-1'>" + ((sortedKeywords2[i][1] / nonStopWords.length) * 100).toFixed(1) + "%</span>" +
                     "</div>" +
                     "</div>" +
                     "</div>" +
@@ -509,7 +509,7 @@ function start() {
                     "<div class='col-4 d-flex justify-content-end align-items-center'>" +
                     "<div class='d-flex justify-content-end align-items-center'>" +
                     "<span class='mr-3 font-weight-bolder mt-1'>" + sortedKeywords2[i][1] + "</span>" +
-                    "<span class='font-weight-bolder mt-1'>" + ((sortedKeywords2[i][1] / nonStopWords.length) * 100).toFixed(1) + "%</span>" +
+                    "<span class='mt-1'>" + ((sortedKeywords2[i][1] / nonStopWords.length) * 100).toFixed(1) + "%</span>" +
                     "</div>" +
                     "</div>" +
                     "</div>" +
@@ -551,7 +551,7 @@ function start() {
                     "<div class='col-4 d-flex justify-content-end align-items-center'>" +
                     "<div class='d-flex justify-content-end align-items-center'>" +
                     "<span class='mr-3 font-weight-bolder mt-1'>" + sortedKeywords3[i][1] + "</span>" +
-                    "<span class='font-weight-bolder mt-1'>" + ((sortedKeywords3[i][1] / nonStopWords.length) * 100).toFixed(1) + "%</span>" +
+                    "<span class='mt-1'>" + ((sortedKeywords3[i][1] / nonStopWords.length) * 100).toFixed(1) + "%</span>" +
                     "</div>" +
                     "</div>" +
                     "</div>"
@@ -567,7 +567,7 @@ function start() {
                     "<div class='col-4 d-flex justify-content-end align-items-center'>" +
                     "<div class='d-flex justify-content-end align-items-center'>" +
                     "<span class='mr-3 font-weight-bolder mt-1'>" + sortedKeywords3[i][1] + "</span>" +
-                    "<span class='font-weight-bolder mt-1'>" + ((sortedKeywords3[i][1] / nonStopWords.length) * 100).toFixed(1) + "%</span>" +
+                    "<span class='mt-1'>" + ((sortedKeywords3[i][1] / nonStopWords.length) * 100).toFixed(1) + "%</span>" +
                     "</div>" +
                     "</div>" +
                     "</div>" +
@@ -584,7 +584,7 @@ function start() {
                     "<div class='col-4 d-flex justify-content-end align-items-center'>" +
                     "<div class='d-flex justify-content-end align-items-center'>" +
                     "<span class='mr-3 font-weight-bolder mt-1'>" + sortedKeywords3[i][1] + "</span>" +
-                    "<span class='font-weight-bolder mt-1'>" + ((sortedKeywords3[i][1] / nonStopWords.length) * 100).toFixed(1) + "%</span>" +
+                    "<span class='mt-1'>" + ((sortedKeywords3[i][1] / nonStopWords.length) * 100).toFixed(1) + "%</span>" +
                     "</div>" +
                     "</div>" +
                     "</div>" +
@@ -608,7 +608,7 @@ function start() {
                     "<div class='col-4 d-flex justify-content-end align-items-center'>" +
                     "<div class='d-flex justify-content-end align-items-center'>" +
                     "<span class='mr-3 font-weight-bolder mt-1'>" + sortedKeywords3[i][1] + "</span>" +
-                    "<span class='font-weight-bolder mt-1'>" + ((sortedKeywords3[i][1] / nonStopWords.length) * 100).toFixed(1) + "%</span>" +
+                    "<span class='mt-1'>" + ((sortedKeywords3[i][1] / nonStopWords.length) * 100).toFixed(1) + "%</span>" +
                     "</div>" +
                     "</div>" +
                     "</div>"
@@ -624,7 +624,7 @@ function start() {
                     "<div class='col-4 d-flex justify-content-end align-items-center'>" +
                     "<div class='d-flex justify-content-end align-items-center'>" +
                     "<span class='mr-3 font-weight-bolder mt-1'>" + sortedKeywords3[i][1] + "</span>" +
-                    "<span class='font-weight-bolder mt-1'>" + ((sortedKeywords3[i][1] / nonStopWords.length) * 100).toFixed(1) + "%</span>" +
+                    "<span class='mt-1'>" + ((sortedKeywords3[i][1] / nonStopWords.length) * 100).toFixed(1) + "%</span>" +
                     "</div>" +
                     "</div>" +
                     "</div>" +
@@ -641,7 +641,7 @@ function start() {
                     "<div class='col-4 d-flex justify-content-end align-items-center'>" +
                     "<div class='d-flex justify-content-end align-items-center'>" +
                     "<span class='mr-3 font-weight-bolder mt-1'>" + sortedKeywords3[i][1] + "</span>" +
-                    "<span class='font-weight-bolder mt-1'>" + ((sortedKeywords3[i][1] / nonStopWords.length) * 100).toFixed(1) + "%</span>" +
+                    "<span class='mt-1'>" + ((sortedKeywords3[i][1] / nonStopWords.length) * 100).toFixed(1) + "%</span>" +
                     "</div>" +
                     "</div>" +
                     "</div>" +

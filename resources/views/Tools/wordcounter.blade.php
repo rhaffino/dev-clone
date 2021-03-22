@@ -29,8 +29,8 @@ id/word-counter
                         <div class="card-body py-3 px-4">
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="d-flex align-items-center">
-                                    <i id="copy-text" class='bx bxs-copy-alt bx-sm mx-2 text-darkgrey text-hover-primaryblue'></i>
-                                    <i id="reset" class='bx bxs-trash bx-sm mx-2 text-darkgrey text-hover-primaryblue'></i>
+                                    <i id="copy-text" class='bx bxs-copy-alt bx-sm mx-2 text-darkgrey text-hover-primaryblue' data-toggle="tooltip" data-theme="dark" title="{{ Lang::get('wordcounter.tooltip-copy') }}"></i>
+                                    <i id="reset" class='bx bxs-trash bx-sm mx-2 text-darkgrey text-hover-red'  data-toggle="tooltip" data-theme="dark" title="{{ Lang::get('wordcounter.tooltip-clear') }}"></i>
                                     <div class="wordcounter-background-text-size-left-edge d-flex justify-content-center align-items-center p-2 ml-5">
                                         <span>
                                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill:rgba(0, 0, 0, 1);transform:;-ms-filter:">
@@ -38,19 +38,19 @@ id/word-counter
                                             </svg>
                                         </span>
                                     </div>
-                                    <div id="set-font-size-10px" class="wordcounter-background-text-size text-white font-weight-bolder d-flex justify-content-center align-items-center p-2">
+                                    <div id="set-font-size-10px" class="wordcounter-background-text-size text-white font-weight-bolder d-flex justify-content-center align-items-center p-2"  data-toggle="tooltip" data-theme="dark" title="{{ Lang::get('wordcounter.tooltip-set-font-size') }} 10px">
                                         10px
                                     </div>
-                                    <div id="set-font-size-12px" class="wordcounter-background-text-size active text-white d-flex justify-content-center font-weight-bolder align-items-center p-2">
+                                    <div id="set-font-size-12px" class="wordcounter-background-text-size active text-white d-flex justify-content-center font-weight-bolder align-items-center p-2"  data-toggle="tooltip" data-theme="dark" title="{{ Lang::get('wordcounter.tooltip-set-font-size') }} 12px">
                                         12px
                                     </div>
-                                    <div id="set-font-size-15px" class="wordcounter-background-text-size wordcounter-background-text-size-right-edge text-white font-weight-bolder d-flex justify-content-center align-items-center p-2">
+                                    <div id="set-font-size-15px" class="wordcounter-background-text-size wordcounter-background-text-size-right-edge text-white font-weight-bolder d-flex justify-content-center align-items-center p-2"  data-toggle="tooltip" data-theme="dark" title="{{ Lang::get('wordcounter.tooltip-set-font-size') }} 15px">
                                         15px
                                     </div>
                                 </div>
                                 <div id="autosaveParam" data-autosave="on" class="">
                                     <a href="#local-collection-desktop">
-                                        <i class='bx bxs-collection bx-sm mx-2 text-darkgrey text-hover-primaryblue'></i>
+                                        <i class='bx bxs-collection bx-sm mx-2 text-darkgrey text-hover-primaryblue'  data-toggle="tooltip" data-theme="dark" title="{{ Lang::get('wordcounter.tooltip-local-history') }}"></i>
                                     </a>
                                     <i id="autoSaveOff" class='bx bxs-server bx-sm mx-2 text-darkgrey text-hover-primaryblue auto-save-off' data-html="true" data-placement="top" title="{{ Lang::get('wordcounter.autosave-off') }}"></i>
                                     <i id="autoSaveOn" class='bx bxs-server bx-sm mx-2 text-primaryblue text-hover-primaryblue auto-save-on' data-html="true" data-placement="top" title="{{ Lang::get('wordcounter.autosave-on') }}"></i>
@@ -177,7 +177,7 @@ id/word-counter
     <div class="bg-white p-5 word-counter-result-card-mobile">
         <div class="d-flex justify-content-center align-items-center mb-5">
             <div class="wordcounter-background-density wordcounter-background-density-left-edge font-weight-bolder d-flex justify-content-center align-items-center p-2">
-                WORDS
+                @lang('wordcounter.keyword-density')
             </div>
             <div id="showWords1Mobile" class="wordcounter-background-density active font-weight-bolder d-flex justify-content-center align-items-center p-2">
                 1
@@ -464,11 +464,11 @@ id/word-counter
                         <br />
                         <span class="font-weight-light">@lang('layout.whats-new-update') Mar 15, 2021</span>
                     </div>
-                    <div class="alert-close pt-5 pr-5">
+                    <!-- <div class="alert-close pt-5 pr-5">
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                             <span aria-hidden="true"><i class="ki ki-close icon-alert-close"></i></span>
                         </button>
-                    </div>
+                    </div> -->
                     <span class="alert-features-text">@lang('wordcounter.whats-new-1')</span>
                 </div>
             </div>
@@ -479,11 +479,11 @@ id/word-counter
                         <br />
                         <span class="font-weight-light">@lang('layout.whats-new-update') Mar 15, 2021</span>
                     </div>
-                    <div class="alert-close pt-5 pr-5">
+                    <!-- <div class="alert-close pt-5 pr-5">
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                             <span aria-hidden="true"><i class="ki ki-close icon-alert-close"></i></span>
                         </button>
-                    </div>
+                    </div> -->
                     <span class="alert-features-text">@lang('wordcounter.whats-new-2')</span>
                 </div>
             </div>
