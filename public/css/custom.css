@@ -74,6 +74,11 @@ body {
     color: var(--white) !important;
 }
 
+.text-hover-red:hover {
+    cursor: pointer;
+    color: #FB1818;
+}
+
 .font-15px {
     font-size: 15px;
 }
@@ -1123,7 +1128,7 @@ a:hover {
 .wordcounter-background-density-left-edge {
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
-    width: 65.16px;
+    width: 90px;
 }
 
 .wordcounter-background-density-right-edge {
