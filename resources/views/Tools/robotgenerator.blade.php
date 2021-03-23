@@ -302,7 +302,7 @@
                 </div>
                 <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-6">
                     <div class="mr-2" style="width:24px !important; height: 24px !important;">
-                        <span class="label label-lg label-tools-description" id="nav-label-tab-5">6</span>
+                        <span class="label label-lg label-tools-description" id="nav-label-tab-6">6</span>
                     </div>
                     <a class="">@lang('robot.desc-6')</a>
                 </div>
@@ -343,11 +343,11 @@
                         <br />
                         <span class="font-weight-light">@lang('layout.whats-new-update') Mar 15, 2021</span>
                     </div>
-                    <div class="alert-close pt-5 pr-5">
+                    <!-- <div class="alert-close pt-5 pr-5">
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                             <span aria-hidden="true"><i class="ki ki-close icon-alert-close"></i></span>
                         </button>
-                    </div>
+                    </div> -->
                     <span class="alert-features-text">@lang('robot.whats-new-1')</span>
                 </div>
             </div>
@@ -358,11 +358,11 @@
                         <br />
                         <span class="font-weight-light">@lang('layout.whats-new-update') Mar 15, 2021</span>
                     </div>
-                    <div class="alert-close pt-5 pr-5">
+                    <!-- <div class="alert-close pt-5 pr-5">
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                             <span aria-hidden="true"><i class="ki ki-close icon-alert-close"></i></span>
                         </button>
-                    </div>
+                    </div> -->
                     <span class="alert-features-text">@lang('robot.whats-new-2')</span>
                 </div>
             </div>

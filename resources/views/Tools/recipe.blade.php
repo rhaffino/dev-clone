@@ -230,7 +230,7 @@ id/json-ld-recipe-schema-generator
                                                 <i class='bx bx-refresh'></i> <span>@lang('layout.btn-reset')</span></button>
                                         </div>
                                     </div>
-                                    <textarea name="code_snippet" style="resize:none" rows="16" class="form-control" id="json-format" data-key="{{time()}}"></textarea>
+                                    <textarea name="code_snippet" style="resize:none" rows="16" class="form-control" id="json-format" data-key="{{time()}}" readonly></textarea>
                                 </form>
                             </div>
                         </div>
@@ -339,7 +339,7 @@ id/json-ld-recipe-schema-generator
                                 {
                                     "@context": "https://schema.org",
                                     "@type": "Recipe",
-                                    "author": "Jake  Smith",
+                                    "author": "Jake Smith",
                                     "cookTime": "PT2H",
                                     "datePublished": "2015-05-18",
                                     "description": "Your recipe description goes here",
@@ -367,7 +367,7 @@ id/json-ld-recipe-schema-generator
                                     "prepTime": "PT15M",
                                     "recipeInstructions": "This is the long part, etc.",
                                     "recipeYield": "12 cookies"
-                                } 
+                                }
                             &lt;/script&gt;
                         </code>
                     </pre>
@@ -427,11 +427,11 @@ id/json-ld-recipe-schema-generator
                         <br />
                         <span class="font-weight-light">@lang('layout.whats-new-update') 15 Mar, 2021</span>
                     </div>
-                    <div class="alert-close pt-5 pr-5">
+                    <!-- <div class="alert-close pt-5 pr-5">
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                             <span aria-hidden="true"><i class="ki ki-close icon-alert-close"></i></span>
                         </button>
-                    </div>
+                    </div> -->
                     <span class="alert-features-text">@lang('recipe.whats-new-1')</span>
                 </div>
             </div>
@@ -442,11 +442,11 @@ id/json-ld-recipe-schema-generator
                         <br />
                         <span class="font-weight-light">@lang('layout.whats-new-update') 15 Mar, 2021</span>
                     </div>
-                    <div class="alert-close pt-5 pr-5">
+                    <!-- <div class="alert-close pt-5 pr-5">
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                             <span aria-hidden="true"><i class="ki ki-close icon-alert-close"></i></span>
                         </button>
-                    </div>
+                    </div> -->
                     <span class="alert-features-text">@lang('recipe.whats-new-2')</span>
                 </div>
             </div>
