@@ -565,7 +565,7 @@ a:hover {
 }
 
 .card-footer-office {
-    background-color: var(--darkgrey);
+    background-color: var(--black);
     border-radius: 10px;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25) !important;
 }
@@ -583,7 +583,7 @@ a:hover {
     color: var(--white);
 }
 .office-detail .office-hours {
-    color: var(--grey);
+    color: var(--darkgrey);
     transition: .3s;
 }
 @media (max-width: 554px) {
@@ -593,7 +593,7 @@ a:hover {
 }
 .btn-open-map {
     background-color: var(--white);
-    color: var(--softgrey);
+    color: var(--grey);
     border-radius: 30px;
     transition: .3s;
 }

@@ -198,7 +198,7 @@
                 <div class="mb-10">
                     <a href="https://cmlabs.co/{{$local}}-id/seo-guidelines" target="_blank">
                         <div class="card card-custom footer-resource-list mb-2">
-                            <div class="card-body d-flex flex-wrap align-items-center w-100 p-4">
+                            <div class="card-body d-flex flex-wrap align-items-center w-100 p-3">
                                 <div class="footer-resource-icon d-flex align-items-center">
                                     <i class="bx bxs-help-circle icon-lg mr-2"></i>
                                     <span class="h6 font-weight-normal mb-0">13</span>
@@ -209,7 +209,7 @@
                     </a>
                     <a href="https://cmlabs.co/{{$local}}-id/seo-terms" target="_blank">
                         <div class="card card-custom footer-resource-list mb-2">
-                            <div class="card-body d-flex flex-wrap align-items-center w-100 p-4">
+                            <div class="card-body d-flex flex-wrap align-items-center w-100 p-3">
                                 <div class="footer-resource-icon d-flex align-items-center">
                                     <i class="bx bxs-book icon-lg mr-2"></i>
                                     <span class="h6 font-weight-normal mb-0">150</span>
@@ -220,7 +220,7 @@
                     </a>
                     <a href="https://cmlabs.co/{{$local}}-id/blog" target="_blank">
                         <div class="card card-custom footer-resource-list mb-2">
-                            <div class="card-body d-flex flex-wrap align-items-center w-100 p-4">
+                            <div class="card-body d-flex flex-wrap align-items-center w-100 p-3">
                                 <div class="footer-resource-icon d-flex align-items-center">
                                     <i class="bx bxs-news icon-lg mr-2"></i>
                                     <span class="h6 font-weight-normal mb-0">45</span>
