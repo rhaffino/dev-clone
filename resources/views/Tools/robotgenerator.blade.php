@@ -302,7 +302,7 @@
                 </div>
                 <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-6">
                     <div class="mr-2" style="width:24px !important; height: 24px !important;">
-                        <span class="label label-lg label-tools-description" id="nav-label-tab-5">6</span>
+                        <span class="label label-lg label-tools-description" id="nav-label-tab-6">6</span>
                     </div>
                     <a class="">@lang('robot.desc-6')</a>
                 </div>
