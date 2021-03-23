@@ -598,11 +598,15 @@ a:hover {
     border-radius: 30px;
     transition: .3s;
 }
+
+.btn-open-map:hover {
+    color: var(--black) !important;
+}
 .card-footer-office:hover .card-body .office-footer .office-detail .office-hours {
     color: #ffde68;
 }
 .card-footer-office:hover .card-body .office-footer .office-map .btn-open-map {
-    color: var(--darkgrey);
+    color: var(--black);
 }
 
 .footer-company-list {
