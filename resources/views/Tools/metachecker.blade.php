@@ -67,7 +67,7 @@ id/page-title-meta-description-checker
                                 <div id="titlebar3" class="progress-bar_item progress-bar_item-3 blank"></div>
                             </div>
                         </div>
-                        <input id="title" type="text" class="form-control bg-primaryblue text-white px-0 input-meta-title" id="meta-title" placeholder="{{ Lang::get('metachecker.input-hint-manual') }}">
+                        <input id="title" type="text" class="form-control bg-primaryblue text-white px-0 input-meta-title" id="meta-title" autocomplete="off" placeholder="{{ Lang::get('metachecker.input-hint-manual') }}">
                     </div>
                 </div>
                 <div class="bg-info py-5 px-9 bg-primaryblue border-radius-5px">
@@ -80,7 +80,7 @@ id/page-title-meta-description-checker
                                 <div id="descbar3" class="progress-bar_item progress-bar_item-3 blank"></div>
                             </div>
                         </div>
-                        <textarea id="desc" data-autoresize rows="1" class="form-control bg-primaryblue text-white px-0 input-meta-description" placeholder="{{ Lang::get('metachecker.input-hint-manual') }}"
+                        <textarea id="desc" data-autoresize rows="1" class="form-control bg-primaryblue text-white px-0 input-meta-description" autocomplete="off" placeholder="{{ Lang::get('metachecker.input-hint-manual') }}"
                             style="resize:none; overflow:hidden"></textarea>
                     </div>
                 </div>
@@ -91,46 +91,47 @@ id/page-title-meta-description-checker
                         <div class="card-body px-0">
                             <div class="d-flex flex-column px-10 py-3">
                                 <div class="link-meta d-flex flex-row align-items-center mb-2">
-                                    <span>analytics.cmlabs.co <i class='bx bx-caret-down ml-1' style="color: #4D5156; vertical-align: text-bottom;"></i></span>
+                                    <strong class="mr-2">Ad</strong>
+                                    <span>career.cmlabs.co<i class='bx bx-caret-down ml-1' style="color: #4D5156; vertical-align: text-bottom;"></i></span>
+                                </div>
+                                <div class="title-meta mb-2">
+                                    Career at cmlabs - Lets Join us and be a part of Imagineers!
+                                </div>
+                                <div class="desc-meta">
+                                    cmlabs opens opportunities for those of you who want to join our team. Find information about job vacancies, internal programs, and other collaborations at career cmlabs.
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column px-10 py-3">
+                                <div class="link-meta d-flex flex-row align-items-center mb-2">
+                                    <span>analytics.cmlabs.co › en › member › dashboard<i class='bx bx-caret-down ml-1' style="color: #4D5156; vertical-align: text-bottom;"></i></span>
                                 </div>
                                 <div class="title-meta mb-2">
                                     cmlabs Analytics, Search/SERPs Tracking
                                 </div>
                                 <div class="desc-meta">
-                                    Changing the way you receive insight through tools and analytics. Track the ranking thousands of keyword and multiple domains.
-                                </div>
-                            </div>
-                            <div class="d-flex flex-column px-10 py-3">
-                                <div class="link-meta d-flex flex-row align-items-center mb-2">
-                                    <span>cmlabs.co › career › content-writer <i class='bx bx-caret-down ml-1' style="color: #4D5156; vertical-align: text-bottom;"></i></span>
-                                </div>
-                                <div class="title-meta mb-2">
-                                    Job Description Content Writer Profession - CMLABS Career
-                                </div>
-                                <div class="desc-meta">
-                                    Starting career as a writer or content writer isn&#039;t difficult. Learn the following job description of content writer profession.
+                                    Dec 2, 2020 — CMLABS Analytics is designed to work seamlessly with important Google solutions and partner products (eg. Keyword Planner for Search ...
                                 </div>
                             </div>
                             <div class="d-flex flex-column px-10 py-3 bg-color-lightyellow">
                                 <div class="link-meta d-flex flex-row align-items-center mb-2">
-                                    <span><span id="resulturl">tools.cmlabs.co</span> › page-title-meta-description-checker <i class='bx bx-caret-down ml-1' style="color: #4D5156; vertical-align: text-bottom;"></i></span>
+                                    <span><span id="resulturl">cmlabs.co</span><i class='bx bx-caret-down ml-1' style="color: #4D5156; vertical-align: text-bottom;"></i></span>
                                 </div>
                                 <div id="resulttitle" class="title-meta mb-2 color-green">
-                                    Page Title and Meta Description Length Checker
+                                    Incorporating quality practices in SEO fields - cmlabs
                                 </div>
                                 <div id="resultdesc" class="desc-meta">
-                                    Check the length of the Page Title and Meta Description of your website in the content writing Tools from cmlabs. Improve your writing skills!
+                                    PT CMLABS INDONESIA DIGITAL is a company that focuses on SEO, Marketing ...
                                 </div>
                             </div>
                             <div class="d-flex flex-column px-10 py-3">
                                 <div class="link-meta d-flex flex-row align-items-center mb-2">
-                                    <span>tools.cmlabs.co › page-title-meta-description-checker <i class='bx bx-caret-down ml-1' style="color: #4D5156; vertical-align: text-bottom;"></i></span>
+                                    <span>tools.cmlabs.co › home<i class='bx bx-caret-down ml-1' style="color: #4D5156; vertical-align: text-bottom;"></i></span>
                                 </div>
                                 <div class="title-meta mb-2">
-                                    Page Title and Meta Description Length Checker
+                                    18 SEO Tools (Free) English Version \ cmlabs
                                 </div>
                                 <div class="desc-meta">
-                                    Check the length of the Page Title and Meta Description of your website in the content writing Tools from cmlabs. Improve your writing skills!
+                                    The cmlabs tool is an online tool developed to help content writers, SEO specialists and developers improve the quality of their work. All of these tools are free and accessible for all users without limits.
                                 </div>
                             </div>
                         </div>
@@ -156,46 +157,47 @@ id/page-title-meta-description-checker
                         <div class="card-body px-0">
                             <div class="d-flex flex-column px-10 py-3">
                                 <div class="link-meta d-flex align-items-center mb-2">
-                                    <span>analytics.cmlabs.co <i class='bx bx-caret-down ml-1' style="color: #4D5156; vertical-align: text-bottom;"></i></span>
+                                    <strong class="mr-2">Ad</strong>
+                                    <span>career.cmlabs.co<i class='bx bx-caret-down ml-1' style="color: #4D5156; vertical-align: text-bottom;"></i></span>
+                                </div>
+                                <div class="title-meta mb-2">
+                                    Career at cmlabs - Lets Join us and be a part of Imagineers!
+                                </div>
+                                <div class="desc-meta">
+                                    cmlabs opens opportunities for those of you who want to join our team. Find information about job vacancies, internal programs, and other collaborations at career cmlabs.
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column px-10 py-3">
+                                <div class="link-meta d-flex flex-row align-items-center mb-2">
+                                    <span>analytics.cmlabs.co › en › member › dashboard<i class='bx bx-caret-down ml-1' style="color: #4D5156; vertical-align: text-bottom;"></i></span>
                                 </div>
                                 <div class="title-meta mb-2">
                                     cmlabs Analytics, Search/SERPs Tracking
                                 </div>
                                 <div class="desc-meta">
-                                    Changing the way you receive insight through tools and analytics. Track the ranking thousands of keyword and multiple domains.
-                                </div>
-                            </div>
-                            <div class="d-flex flex-column px-10 py-3">
-                                <div class="link-meta d-flex flex-row align-items-center mb-2">
-                                    <span>cmlabs.co › career › content-writer <i class='bx bx-caret-down ml-1' style="color: #4D5156; vertical-align: text-bottom;"></i></span>
-                                </div>
-                                <div class="title-meta mb-2">
-                                    Job Description Content Writer Profession - CMLABS Career
-                                </div>
-                                <div class="desc-meta">
-                                    Starting career as a writer or content writer isn&#039;t difficult. Learn the following job description of content writer profession.
+                                    Dec 2, 2020 — CMLABS Analytics is designed to work seamlessly with important Google solutions and partner products (eg. Keyword Planner for Search ...
                                 </div>
                             </div>
                             <div class="d-flex flex-column px-10 py-3 bg-color-lightyellow">
                                 <div class="link-meta d-flex flex-row align-items-center mb-2">
-                                    <span><span id="resulturlmobile">tools.cmlabs.co</span> › page-title-meta-description-checker <i class='bx bx-caret-down ml-1' style="color: #4D5156; vertical-align: text-bottom;"></i></span>
+                                    <span><span id="resulturlmobile">cmlabs.co</span><i class='bx bx-caret-down ml-1' style="color: #4D5156; vertical-align: text-bottom;"></i></span>
                                 </div>
                                 <div id="resulttitlemobile" class="title-meta mb-2 color-green">
-                                    Page Title and Meta Description Length Checker
+                                    Incorporating quality practices in SEO fields - cmlabs
                                 </div>
                                 <div id="resultdescmobile" class="desc-meta">
-                                    Check the length of the Page Title and Meta Description of your website in the content writing Tools from cmlabs. Improve your writing skills!
+                                    PT CMLABS INDONESIA DIGITAL is a company that focuses on SEO, Marketing ...
                                 </div>
                             </div>
                             <div class="d-flex flex-column px-10 py-3">
                                 <div class="link-meta d-flex flex-row align-items-center mb-2">
-                                    <span>tools.cmlabs.co › page-title-meta-description-checker <i class='bx bx-caret-down ml-1' style="color: #4D5156; vertical-align: text-bottom;"></i></span>
+                                    <span>tools.cmlabs.co › home<i class='bx bx-caret-down ml-1' style="color: #4D5156; vertical-align: text-bottom;"></i></span>
                                 </div>
                                 <div class="title-meta mb-2">
-                                    Page Title and Meta Description Length Checker
+                                    18 SEO Tools (Free) English Version \ cmlabs
                                 </div>
                                 <div class="desc-meta">
-                                    Check the length of the Page Title and Meta Description of your website in the content writing Tools from cmlabs. Improve your writing skills!
+                                    The cmlabs tool is an online tool developed to help content writers, SEO specialists and developers improve the quality of their work. All of these tools are free and accessible for all users without limits.
                                 </div>
                             </div>
                         </div>
@@ -425,11 +427,11 @@ id/page-title-meta-description-checker
                         <br />
                         <span class="font-weight-light">@lang('layout.whats-new-update') Mar 15, 2021</span>
                     </div>
-                    <div class="alert-close pt-5 pr-5">
+                    <!-- <div class="alert-close pt-5 pr-5">
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                             <span aria-hidden="true"><i class="ki ki-close icon-alert-close"></i></span>
                         </button>
-                    </div>
+                    </div> -->
                     <span class="alert-features-text">@lang('metachecker.whats-new-1')</span>
                 </div>
             </div>
@@ -440,11 +442,11 @@ id/page-title-meta-description-checker
                         <br />
                         <span class="font-weight-light">@lang('layout.whats-new-update') Mar 15, 2021</span>
                     </div>
-                    <div class="alert-close pt-5 pr-5">
+                    <!-- <div class="alert-close pt-5 pr-5">
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                             <span aria-hidden="true"><i class="ki ki-close icon-alert-close"></i></span>
                         </button>
-                    </div>
+                    </div> -->
                     <span class="alert-features-text">@lang('metachecker.whats-new-2')</span>
                 </div>
             </div>

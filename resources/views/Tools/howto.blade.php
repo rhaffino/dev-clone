@@ -509,11 +509,11 @@ id/json-ld-how-to-schema-generator
                         <br />
                         <span class="font-weight-light">@lang('layout.whats-new-update') 15 Mar, 2021</span>
                     </div>
-                    <div class="alert-close pt-5 pr-5">
+                    <!-- <div class="alert-close pt-5 pr-5">
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                             <span aria-hidden="true"><i class="ki ki-close icon-alert-close"></i></span>
                         </button>
-                    </div>
+                    </div> -->
                     <span class="alert-features-text">@lang('howto.whats-new-1')</span>
                 </div>
             </div>
@@ -524,11 +524,11 @@ id/json-ld-how-to-schema-generator
                         <br />
                         <span class="font-weight-light">@lang('layout.whats-new-update') 15 Mar, 2021</span>
                     </div>
-                    <div class="alert-close pt-5 pr-5">
+                    <!-- <div class="alert-close pt-5 pr-5">
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                             <span aria-hidden="true"><i class="ki ki-close icon-alert-close"></i></span>
                         </button>
-                    </div>
+                    </div> -->
                     <span class="alert-features-text">@lang('howto.whats-new-2')</span>
                 </div>
             </div>

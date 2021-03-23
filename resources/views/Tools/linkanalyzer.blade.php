@@ -332,11 +332,11 @@ id/link-analyzer
                         <br />
                         <span class="font-weight-light">@lang('layout.whats-new-update') Mar 15, 2021</span>
                     </div>
-                    <div class="alert-close pt-5 pr-5">
+                    <!-- <div class="alert-close pt-5 pr-5">
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                             <span aria-hidden="true"><i class="ki ki-close icon-alert-close"></i></span>
                         </button>
-                    </div>
+                    </div> -->
                     <span class="alert-features-text">@lang('analyzer.whats-new-1')</span>
                 </div>
             </div>
@@ -347,11 +347,11 @@ id/link-analyzer
                         <br />
                         <span class="font-weight-light">@lang('layout.whats-new-update') Mar 15, 2021</span>
                     </div>
-                    <div class="alert-close pt-5 pr-5">
+                    <!-- <div class="alert-close pt-5 pr-5">
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                             <span aria-hidden="true"><i class="ki ki-close icon-alert-close"></i></span>
                         </button>
-                    </div>
+                    </div> -->
                     <span class="alert-features-text">@lang('analyzer.whats-new-2')</span>
                 </div>
             </div>
