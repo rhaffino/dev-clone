@@ -268,23 +268,13 @@ id/link-analyzer
                 <div class="d-none" id="description-tab-2">
                     <h2 class="text-black">@lang('analyzer.desc-2')</h2>
                     <p class="text-black">@lang('analyzer.desc-2-1')</p>
+                    <p class="text-black">@lang('analyzer.desc-2-2')</p>
+                    <p class="text-black">@lang('analyzer.desc-2-3')</p>
                 </div>
                 <div class="d-none" id="description-tab-3">
                     <h2 class="text-black">@lang('analyzer.desc-3')</h2>
                     <p class="text-black">@lang('analyzer.desc-3-1')</p>
                     <p class="text-black">@lang('analyzer.desc-3-2')</p>
-                    <p class="text-black">@lang('analyzer.desc-3-3')</p>
-                </div>
-                <div class="d-none" id="description-tab-4">
-                    <h2 class="text-black">@lang('analyzer.desc-4')</h2>
-                    <p class="text-black">@lang('analyzer.desc-4-1')</p>
-                    <p class="text-black">@lang('analyzer.desc-4-2')</p>
-                    <p class="text-black">@lang('analyzer.desc-4-3')</p>
-                </div>
-                <div class="d-none" id="description-tab-5">
-                    <h2 class="text-black">@lang('analyzer.desc-5')</h2>
-                    <p class="text-black">@lang('analyzer.desc-5-1')</p>
-                    <p class="text-black">@lang('analyzer.desc-5-2')</p>
                 </div>
             </div>
             <div class="col-md-3">
@@ -305,18 +295,6 @@ id/link-analyzer
                         <span class="label label-lg label-tools-description" id="nav-label-tab-3">3</span>
                     </div>
                     <a class="">@lang('analyzer.desc-3')</a>
-                </div>
-                <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-4">
-                    <div class="mr-2" style="width:24px !important; height: 24px !important;">
-                        <span class="label label-lg label-tools-description" id="nav-label-tab-4">4</span>
-                    </div>
-                    <a class="">@lang('analyzer.desc-4')</a>
-                </div>
-                <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-5">
-                    <div class="mr-2" style="width:24px !important; height: 24px !important;">
-                        <span class="label label-lg label-tools-description" id="nav-label-tab-5">5</span>
-                    </div>
-                    <a class="">@lang('analyzer.desc-5')</a>
                 </div>
             </div>
         </div>

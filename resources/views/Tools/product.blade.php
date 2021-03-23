@@ -339,61 +339,34 @@ id/json-ld-product-schema-generator
                     <h2>@lang('product.desc-4')</h2>
                     <p>@lang('product.desc-4-1')</p>
                     <pre class="language-html mb-4">
-            <code class="language-html">
-              &lt;html&gt;
-                &lt;head&gt;
-                  &lt;title&gt;Executive Anvil&lt;/title&gt;
-                  &lt;script type="application/ld+json"&gt;
-                  {
-                    "@context": "https://schema.org/",
-                    "@type": "Product",
-                    "name": "Executive Anvil",
-                    "image": [
-                      "https://example.com/photos/1x1/photo.jpg",
-                      "https://example.com/photos/4x3/photo.jpg",
-                      "https://example.com/photos/16x9/photo.jpg"
-                     ],
-                    "description": "Sleeker than ACME's Classic Anvil, the Executive Anvil is perfect for the business traveler looking for something to drop from a height.",
-                    "sku": "0446310786",
-                    "mpn": "925872",
-                    "brand": {
-                      "@type": "Brand",
-                      "name": "ACME"
-                    },
-                    "review": {
-                      "@type": "Review",
-                      "reviewRating": {
-                        "@type": "Rating",
-                        "ratingValue": "4",
-                        "bestRating": "5"
-                      },
-                      "author": {
-                        "@type": "Person",
-                        "name": "Fred Benson"
-                      }
-                    },
-                    "aggregateRating": {
-                      "@type": "AggregateRating",
-                      "ratingValue": "4.4",
-                      "reviewCount": "89"
-                    },
-                    "offers": {
-                      "@type": "Offer",
-                      "url": "https://example.com/anvil",
-                      "priceCurrency": "USD",
-                      "price": "119.99",
-                      "priceValidUntil": "2020-11-20",
-                      "itemCondition": "https://schema.org/UsedCondition",
-                      "availability": "https://schema.org/InStock"
-                    }
-                  }
-                  &lt;/script&gt;
-                &lt;/head&gt;
-                &lt;body&gt;
-                &lt;/body&gt;
-              &lt;/html&gt;
-            </code>
-          </pre>
+                        <code class="language-html">
+                            &lt;html&gt;
+                                &lt;head&gt;
+                                    &lt;title&gt;Executive Anvil&lt;/title&gt;
+                                    &lt;script type="application/ld+json"&gt;
+                                        {
+                                          "@context": "http://schema.org/",
+                                          "@type": "Product",
+                                          "name": "cmlabs SEO Tools",
+                                          "image": "https://tools.cmlabs.co/media/logos/new/new-logo-default.png",
+                                          "description": "Choose structured data for recipe, job posting and product schema and build the markup with JSON-LD Generator.",
+                                          "brand": {
+                                            "@type": "Thing",
+                                            "name": "cmlabs"
+                                          },
+                                          "offers": {
+                                            "@type": "Offer",
+                                            "priceCurrency": "USD",
+                                            "price": "79.00"
+                                          }
+                                        }
+                                    &lt;/script&gt;
+                                &lt;/head&gt;
+                                &lt;body&gt;
+                                &lt;/body&gt;
+                            &lt;/html&gt;
+                        </code>
+                    </pre>
                 </div>
             </div>
             <div class="col-md-3">

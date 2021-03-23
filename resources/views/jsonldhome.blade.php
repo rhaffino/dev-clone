@@ -171,17 +171,17 @@ id/json-ld-schema-generator
                 {
                   "@context": "http://schema.org/",
                   "@type": "Product",
-                  "name": "Yoast SEO for WordPress",
-                  "image": "https://cdn-images.yoast.com/uploads/2010/10/Yoast_SEO_WP_plugin_FB.png",
-                  "description": "Yoast SEO is the most complete WordPress SEO plugin. It handles the technical optimization of your site & assists with optimizing your content.",
+                  "name": "cmlabs SEO Tools",
+                  "image": "https://tools.cmlabs.co/media/logos/new/new-logo-default.png",
+                  "description": "Choose structured data for recipe, job posting and product schema and build the markup with JSON-LD Generator.",
                   "brand": {
                     "@type": "Thing",
-                    "name": "Yoast"
+                    "name": "cmlabs"
                   },
                   "offers": {
                     "@type": "Offer",
                     "priceCurrency": "USD",
-                    "price": "69.00"
+                    "price": "79.00"
                   }
                 }
               &lt;/script&gt;
