@@ -79,7 +79,7 @@
                                 </a>
                             </li>
                             <li class="splide__slide">
-                                <a href="/{{$local}}/robotstxt-generator">
+                                <a href="/{{$local}}/redirect-checker">
                                     <div class="card card-custom seo-footer-list card-stretch mr-2">
                                         <div class="card-body pt-10 pb-3 px-3">
                                             <span>Redirect Chain Checker</span>
@@ -88,7 +88,7 @@
                                 </a>
                             </li>
                             <li class="splide__slide">
-                                <a href="/{{$local}}/robotstxt-generator">
+                                <a href="/{{$local}}/technology-lookup">
                                     <div class="card card-custom seo-footer-list card-stretch mr-2">
                                         <div class="card-body pt-10 pb-3 px-3">
                                             <span>Technology Lookup</span>
@@ -97,7 +97,7 @@
                                 </a>
                             </li>
                             <li class="splide__slide">
-                                <a href="/{{$local}}/robotstxt-generator">
+                                <a href="/{{$local}}/link-analyzer">
                                     <div class="card card-custom seo-footer-list card-stretch mr-2">
                                         <div class="card-body pt-10 pb-3 px-3">
                                             <span>Link Analyzer</span>
@@ -106,7 +106,7 @@
                                 </a>
                             </li>
                             <li class="splide__slide">
-                                <a href="/{{$local}}/robotstxt-generator">
+                                <a href="/{{$local}}/hreflang-checker">
                                     <div class="card card-custom seo-footer-list card-stretch mr-2">
                                         <div class="card-body pt-10 pb-3 px-3">
                                             <span>Hreflang Checker</span>
