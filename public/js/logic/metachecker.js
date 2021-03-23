@@ -18,7 +18,7 @@ jQuery('#crawlURL').click(function () {
             if (res.statusCode === 200) {
                 $('#resulttitle').text(ellipsis(res.data.title, 'title'));
                 $('#resultdesc').text(ellipsis(res.data.description, 'description'));
-                $('#resulturl').text('https://' + url.toLowerCase());
+                $('#resulturl').text(url.toLowerCase());
                 $('#resulttitlemobile').text(ellipsis(res.data.title, 'title'));
                 $('#resultdescmobile').text(ellipsis(res.data.description, 'description'));
                 $('#resulturlmobile').text(url.toLowerCase());
