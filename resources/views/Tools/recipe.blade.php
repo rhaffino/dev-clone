@@ -230,7 +230,7 @@ id/json-ld-recipe-schema-generator
                                                 <i class='bx bx-refresh'></i> <span>@lang('layout.btn-reset')</span></button>
                                         </div>
                                     </div>
-                                    <textarea name="code_snippet" style="resize:none" rows="16" class="form-control" id="json-format" data-key="{{time()}}"></textarea>
+                                    <textarea name="code_snippet" style="resize:none" rows="16" class="form-control" id="json-format" data-key="{{time()}}" readonly></textarea>
                                 </form>
                             </div>
                         </div>
@@ -367,7 +367,7 @@ id/json-ld-recipe-schema-generator
                                     "prepTime": "PT15M",
                                     "recipeInstructions": "This is the long part, etc.",
                                     "recipeYield": "12 cookies"
-                                } 
+                                }
                             &lt;/script&gt;
                         </code>
                     </pre>

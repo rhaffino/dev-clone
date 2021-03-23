@@ -2,7 +2,7 @@
     var imageUrlCounter = 0;
     var ingredientsCounter = -1;
     var stepCounter = -1;
-    var reviewCounter = -1;
+    var reviewCounter = 0;
 
     let invalid_url = lang ==='en'? 'Invalid URL' : 'URL Tidak Valid';
     let invalid_number = lang ==='en'? 'Value should be more than 0' : 'Nilai harus lebih dari 0';
@@ -687,7 +687,7 @@ jQuery(document).on('change', '.fatContent', function () {
             $('.ratings').attr('disabled')
             $('.highest').attr('disabled')
             $('.lowest').attr('disabled')
-            delete productFormat.aggregateRating;
+            delete recipeFormat.aggregateRating;
             $('.ratings').val('');
             $('.highest').val('');
             $('.lowest').val('');
@@ -703,11 +703,11 @@ jQuery(document).on('change', '.fatContent', function () {
                 "worstRating": recipeFormat.templowestval,
                 "ratingCount": recipeFormat.tempnumOfRate
             }
-            productFormat.tempaggRate = $(this).val();
+            recipeFormat.tempaggRate = $(this).val();
         }
 
-        productFormat.temp();
-        productFormat.render();
+        recipeFormat.temp();
+        recipeFormat.render();
 
     });
 
@@ -735,7 +735,6 @@ jQuery(document).on('change', '.fatContent', function () {
     $(document).on('click', '#add-recipe-review', function () {
         let index = parseInt(jQuery(this).data('id'));
         let deletes = lang ==='en'? 'Delete Review' : 'Hapus Review';
-        reviewCounter++;
 
         $('#addReview').append("<div class=\"row review-data\" data-id=\""+(reviewCounter)+"\"><div class=\"col-12 col-lg-6\"><label class=\"text-black font-weight-bold\" for=\"review\">#"+(reviewCounter+1)+" "+label_review_name+"</label><input type=\"text\" name=\"\" class=\"form-control review mb-5\" placeholder=\""+placeholder_review_name+"\" value=\"\" data-id=\""+(reviewCounter)+"\">" +
         "                   <div class=\"row\"><div class=\"col-6 col-md-4 mb-5\"><label class=\"text-black font-weight-bold\" for=\"rating\">"+label_review_rating+"</label><input type=\"number\" name=\"\" class=\"form-control rating\" placeholder=\"0\" value=\"\" min=\"0\" data-id=\""+(reviewCounter)+"\"><div class=\"invalid-feedback\" data-id="+(reviewCounter)+">"+invalid_number+"</div></div>" +
@@ -777,23 +776,27 @@ jQuery(document).on('change', '.fatContent', function () {
             "author": {"@type": "Person", "name": ""}
         });
         recipeFormat.render();
+        reviewCounter++;
     });
 
     $(document).on('click', '.deleteReview', function () {
         let index = parseInt($(this).data('id'));
-        recipeFormat.review.splice(index, 1);
+
+        let reviewIndex = $(this).index('.deleteReview');
+
+        recipeFormat.review.splice(reviewIndex, 1);
         recipeFormat.render();
 
         for(let i = index+1; i < recipeFormat.review.length + 1; i++){
             $('.review-data[data-id=' + (i - 1) + ']').val($('.review-data[data-id=' + (i) + ']').val())
             $('.author-data[data-id=' + (i - 1) + ']').val($('.author-data[data-id=' + (i) + ']').val())
             $('.daleteReview[data-id=' + (i - 1) + ']').val($('.daleteReview[data-id=' + (i) + ']').val())
-            $('.review[data-id=' + (i - 1) + ']').val($('.review[data-id=' + (i) + ']').val())
-            $('.reviewBody[data-id=' + (i - 1) + ']').val($('.reviewBody[data-id=' + (i) + ']').val())
-            $('.rating[data-id=' + (i - 1) + ']').val($('.rating[data-id=' + (i) + ']').val())
-            $('.dateReview[data-id=' + (i - 1) + ']').val($('.dateReview[data-id=' + (i) + ']').val())
-            $('.authorReview[data-id=' + (i - 1) + ']').val($('.authorReview[data-id=' + (i) + ']').val())
-            $('.publisher[data-id=' + (i - 1) + ']').val($('.publisher[data-id=' + (i) + ']').val())
+            // $('.review[data-id=' + (i - 1) + ']').val($('.review[data-id=' + (i) + ']').val())
+            // $('.reviewBody[data-id=' + (i - 1) + ']').val($('.reviewBody[data-id=' + (i) + ']').val())
+            // $('.rating[data-id=' + (i - 1) + ']').val($('.rating[data-id=' + (i) + ']').val())
+            // $('.dateReview[data-id=' + (i - 1) + ']').val($('.dateReview[data-id=' + (i) + ']').val())
+            // $('.authorReview[data-id=' + (i - 1) + ']').val($('.authorReview[data-id=' + (i) + ']').val())
+            // $('.publisher[data-id=' + (i - 1) + ']').val($('.publisher[data-id=' + (i) + ']').val())
         }
 
         $('.review-data[data-id=' + index + ']').remove();
