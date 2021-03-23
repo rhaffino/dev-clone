@@ -301,7 +301,7 @@
         })
 
         jsonFormat.render();
-        jQuery('#howto-supply').append("<input type='hidden' id='supplyCounter' value='"+(_supplyCounter)+"'><div class=\"row mb-5 supply-name\" data-id=\""+(_supplyCounter)+"\"><div class=\"col-10\" data-id=\""+(_supplyCounter)+"\"><label class=\"text-black font-weight-bold\" for=\"tool\" data-id=\""+(_supplyCounter)+"\">Supply #"+(_supplyCounter+1)+"</label>\n" +
+        jQuery('#howto-supply').append("<input type='hidden' id='supplyCounter' value='"+(_supplyCounter)+"'><div class=\"row mb-5 supply-name\" data-id=\""+(_supplyCounter)+"\"><div class=\"col-10\" data-id=\""+(_supplyCounter)+"\"><label class=\"text-black font-weight-bold\" for=\"tool\" data-id=\""+(_supplyCounter)+"\">Supply #<span class='supplyCount'>"+(_supplyCounter+1)+"</span></label>\n" +
         "                <input type=\"text\" name=\"\" class=\"form-control supplyName\" placeholder=\""+placeholder_type+" supply #"+(_supplyCounter+1)+" "+placeholder_here+"\" value=\"\" data-id=\""+(_supplyCounter)+"\"></div><div class=\"col-2\"><div class=\"d-flex justify-content-center mt-9\"><i class=\'bx bxs-x-circle bx-md text-darkgrey delete deleteSupply\' data-id=\""+(_supplyCounter)+"\"></i></div></div>"
         );
         let row = parseInt($('#json-format').val().split('\n').length);
@@ -321,7 +321,7 @@
 
         jsonFormat.render();
 
-        $('#howto-tool').append("<input type='hidden' id='toolsCounter' value='"+(_toolsCounter)+"'><div class=\"row mb-5 tools-name\" data-id=\""+(_toolsCounter)+"\"><div class=\"col-10\" data-id=\""+(_toolsCounter)+"\"><label class=\"text-black font-weight-bold\" for=\"tool\" data-id=\""+(_toolsCounter)+"\">Tool #"+(_toolsCounter+1)+"</label>\n" +
+        $('#howto-tool').append("<input type='hidden' id='toolsCounter' value='"+(_toolsCounter)+"'><div class=\"row mb-5 tools-name\" data-id=\""+(_toolsCounter)+"\"><div class=\"col-10\" data-id=\""+(_toolsCounter)+"\"><label class=\"text-black font-weight-bold\" for=\"tool\" data-id=\""+(_toolsCounter)+"\">Tool # <span class='toolsCount'>"+(_toolsCounter+1)+"</span></label>\n" +
         "                <input type=\"text\" name=\"\" class=\"form-control tool\" placeholder=\""+placeholder_type+" tool #"+(_toolsCounter+1)+" "+placeholder_here+"\" value=\"\" data-id=\""+(_toolsCounter)+"\"></div><div class=\"col-2\"><div class=\"d-flex justify-content-center mt-9\"><i class=\'bx bxs-x-circle bx-md text-darkgrey delete deleteTool\' data-id=\""+(_toolsCounter)+"\"></i></div></div>"
         );
         let row = parseInt(jQuery('#json-format').val().split('\n').length);
@@ -339,7 +339,7 @@
 
         jsonFormat.render();
 
-        jQuery('#howto-step').append("<div class='loopStep' data-id='"+(_stepCounter)+"'><input type='hidden' id='stepCounter' value='"+(_stepCounter)+"'><div class=\"row\" data-id=\""+(_stepCounter)+"\"><div class=\"col-10 col-sm-11\"><label class=\"text-black font-weight-bold\" for=\"instructions\" data-id=\""+(_stepCounter)+"\">"+label_step+" #"+(_stepCounter+1)+": "+label_instructions+"</label>\n" +
+        jQuery('#howto-step').append("<div class='loopStep' data-id='"+(_stepCounter)+"'><input type='hidden' class='stepCounter' data-id=\""+(_stepCounter)+"\" value='"+(jsonFormat.step.length - 1)+"'><div class=\"row\" data-id=\""+(_stepCounter)+"\"><div class=\"col-10 col-sm-11\"><label class=\"text-black font-weight-bold\" for=\"instructions\" data-id=\""+(_stepCounter)+"\">"+label_step+" #<span class='counter' data-id=\""+(_stepCounter)+"\">"+(_stepCounter+1)+"</span>: "+label_instructions+"</label>\n" +
             "                <input type=\"text\" name=\"\" class=\"form-control instructions mb-5\" placeholder=\""+placeholder_instructions+"\" value=\"\" data-id=\""+(_stepCounter)+"\"></div><div class=\"col-2 col-sm-1\"><div class=\"d-flex justify-content-center mt-9\"><i class=\'bx bxs-x-circle bx-md text-darkgrey delete deleteStep\' data-id=\""+(_stepCounter)+"\"></i></div></div></div>\n" +
             "                <div class=\"row\" data-id=\""+(_stepCounter)+"\"><div class=\"col-12 col-md-4 mb-5\"><label class=\"text-black font-weight-bold\" for=\"imageStep\" data-id=\""+(_stepCounter)+"\">"+label_imageStep+"</label><input type=\"text\" name=\"\" class=\"form-control imageStep\" placeholder=\""+placeholder_imageStep+"\" value=\"\" data-id=\""+(_stepCounter)+"\"><div class=\"invalid-feedback\">"+invalid_url+"</div></div>" +
             "                <div class=\"col-12 col-md-4 mb-5\"><label class=\"text-black font-weight-bold\" for=\"nameStep\" data-id=\""+(_stepCounter)+"\">"+label_nameStep+"</label><input type=\"text\" name=\"\" class=\"form-control nameStep\" placeholder=\""+placeholder_nameStep+"\" value=\"\" data-id=\""+(_stepCounter)+"\"></div>" +
@@ -405,8 +405,12 @@
         for(let i = index+1; i < jsonFormat.supplyItem.length + 1; i++){
             $('.supplyName[data-id=' + (i - 1) + ']').val($('.supplyName[data-id=' + (i) + ']').val())
         }
-
         $('.supply-name[data-id=' + index + ']').remove();
+
+        $('span[class="supplyCount"]').each(function(index, item) {
+            $(item).html(index+1);
+        });
+
         let row = parseInt($('#json-format').val().split('\n').length);
         $('#json-format').attr('rows',row);
 
@@ -450,6 +454,9 @@
                 $('.tool[data-id=' + (i - 1) + ']').val($('.tool[data-id=' + (i) + ']').val())
             }
 
+        $('span[class="toolsCount"]').each(function(index, item) {
+            $(item).html(index+1);
+        });
             $('.tools-name[data-id=' + jsonFormat.tools.length + ']').remove();
             let row = parseInt($('#json-format').val().split('\n').length);
             $('#json-format').attr('rows',row);
@@ -461,8 +468,8 @@
 
     $(document).on('click', '.deleteStep', function () {
         let index = parseInt(jQuery(this).data('id'));
-
-            jsonFormat.step.splice(index, 1);
+        console.log($('.stepCounter[data-id=' + index + ']').val())
+            jsonFormat.step.splice($('.stepCounter[data-id=' + index + ']').val(), 1);
             jsonFormat.render();
 
             for (let i = index + 1; i < jsonFormat.step.length + 1; i++) {
@@ -473,7 +480,16 @@
         $('.row[data-id=' + index + ']').remove();
         let row = parseInt($('#json-format').val().split('\n').length);
         $('#json-format').attr('rows',row);
-    if(jsonFormat.step.length > 0) _stepCounter--;
+
+        $('span[class="counter"]').each(function(index, item) {
+            $(item).html($(item).html()-1);
+        });
+
+        $('.stepCounter').each(function(index, item) {
+            $(item).val($(item).val()-1);
+        });
+
+        if(jsonFormat.step.length > 0) _stepCounter--;
 });
 
 $(document).on('change', '#schema-json-ld', function() {

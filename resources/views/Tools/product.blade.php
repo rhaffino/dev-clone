@@ -65,6 +65,7 @@ id/json-ld-product-schema-generator
                                                     <label class="text-black font-weight-bold" for="identifier">@lang('product.label-identifier')</label>
                                                     <div class="dropdown bootstrap-select show-tick form-control">
                                                         <select class="form-control selectpicker custom-select-blue identifier" multiple="multiple" data-actions-box="false" tabindex="null">
+                                                            <option value="none">Nothing Selected</option>
                                                             <option value="sku">sku</option>
                                                             <option value="gtin8">gtin8</option>
                                                             <option value="gtin13">gtin13</option>
@@ -131,7 +132,8 @@ id/json-ld-product-schema-generator
                                         <div class="col-md-4">
                                             <label class="text-black font-weight-bold" for="availability">@lang('product.label-availability')</label>
                                             <select class="form-control selectpicker custom-select-blue availability mb-5">
-                                                <option selected="selected" value="In stock">@lang('product.availability-opt-1')</option>
+                                                <option value="none">Nothing Selected</option>
+                                                <option value="In stock">@lang('product.availability-opt-1')</option>
                                                 <option value="Out of stock">@lang('product.availability-opt-2')</option>
                                                 <option value="Online only">@lang('product.availability-opt-3')</option>
                                                 <option value="In store only">@lang('product.availability-opt-4')</option>
@@ -146,7 +148,8 @@ id/json-ld-product-schema-generator
                                         <div class="col-md-4">
                                             <label class="text-black font-weight-bold" for="condition">@lang('product.label-condition')</label>
                                             <select class="form-control selectpicker custom-select-blue condition mb-5">
-                                                <option selected="selected" value="New">@lang('product.condition-opt-1')</option>
+                                                <option value="none">Nothing Selected</option>
+                                                <option value="New">@lang('product.condition-opt-1')</option>
                                                 <option value="Used">@lang('product.condition-opt-2')</option>
                                                 <option value="Refurbished">@lang('product.condition-opt-3')</option>
                                                 <option value="Damaged">@lang('product.condition-opt-4')</option>
@@ -339,61 +342,34 @@ id/json-ld-product-schema-generator
                     <h2>@lang('product.desc-4')</h2>
                     <p>@lang('product.desc-4-1')</p>
                     <pre class="language-html mb-4">
-            <code class="language-html">
-              &lt;html&gt;
-                &lt;head&gt;
-                  &lt;title&gt;Executive Anvil&lt;/title&gt;
-                  &lt;script type="application/ld+json"&gt;
-                  {
-                    "@context": "https://schema.org/",
-                    "@type": "Product",
-                    "name": "Executive Anvil",
-                    "image": [
-                      "https://example.com/photos/1x1/photo.jpg",
-                      "https://example.com/photos/4x3/photo.jpg",
-                      "https://example.com/photos/16x9/photo.jpg"
-                     ],
-                    "description": "Sleeker than ACME's Classic Anvil, the Executive Anvil is perfect for the business traveler looking for something to drop from a height.",
-                    "sku": "0446310786",
-                    "mpn": "925872",
-                    "brand": {
-                      "@type": "Brand",
-                      "name": "ACME"
-                    },
-                    "review": {
-                      "@type": "Review",
-                      "reviewRating": {
-                        "@type": "Rating",
-                        "ratingValue": "4",
-                        "bestRating": "5"
-                      },
-                      "author": {
-                        "@type": "Person",
-                        "name": "Fred Benson"
-                      }
-                    },
-                    "aggregateRating": {
-                      "@type": "AggregateRating",
-                      "ratingValue": "4.4",
-                      "reviewCount": "89"
-                    },
-                    "offers": {
-                      "@type": "Offer",
-                      "url": "https://example.com/anvil",
-                      "priceCurrency": "USD",
-                      "price": "119.99",
-                      "priceValidUntil": "2020-11-20",
-                      "itemCondition": "https://schema.org/UsedCondition",
-                      "availability": "https://schema.org/InStock"
-                    }
-                  }
-                  &lt;/script&gt;
-                &lt;/head&gt;
-                &lt;body&gt;
-                &lt;/body&gt;
-              &lt;/html&gt;
-            </code>
-          </pre>
+                        <code class="language-html">
+                            &lt;html&gt;
+                                &lt;head&gt;
+                                    &lt;title&gt;Executive Anvil&lt;/title&gt;
+                                    &lt;script type="application/ld+json"&gt;
+                                        {
+                                          "@context": "http://schema.org/",
+                                          "@type": "Product",
+                                          "name": "cmlabs SEO Tools",
+                                          "image": "https://tools.cmlabs.co/media/logos/new/new-logo-default.png",
+                                          "description": "Choose structured data for recipe, job posting and product schema and build the markup with JSON-LD Generator.",
+                                          "brand": {
+                                            "@type": "Thing",
+                                            "name": "cmlabs"
+                                          },
+                                          "offers": {
+                                            "@type": "Offer",
+                                            "priceCurrency": "USD",
+                                            "price": "79.00"
+                                          }
+                                        }
+                                    &lt;/script&gt;
+                                &lt;/head&gt;
+                                &lt;body&gt;
+                                &lt;/body&gt;
+                            &lt;/html&gt;
+                        </code>
+                    </pre>
                 </div>
             </div>
             <div class="col-md-3">
@@ -456,11 +432,11 @@ id/json-ld-product-schema-generator
                         <br />
                         <span class="font-weight-light">@lang('layout.whats-new-update') 15 Mar, 2021</span>
                     </div>
-                    <div class="alert-close pt-5 pr-5">
+                    <!-- <div class="alert-close pt-5 pr-5">
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                             <span aria-hidden="true"><i class="ki ki-close icon-alert-close"></i></span>
                         </button>
-                    </div>
+                    </div> -->
                     <span class="alert-features-text">@lang('product.whats-new-1')</span>
                 </div>
             </div>
@@ -471,11 +447,11 @@ id/json-ld-product-schema-generator
                         <br />
                         <span class="font-weight-light">@lang('layout.whats-new-update') 15 Mar, 2021</span>
                     </div>
-                    <div class="alert-close pt-5 pr-5">
+                    <!-- <div class="alert-close pt-5 pr-5">
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                             <span aria-hidden="true"><i class="ki ki-close icon-alert-close"></i></span>
                         </button>
-                    </div>
+                    </div> -->
                     <span class="alert-features-text">@lang('product.whats-new-2')</span>
                 </div>
             </div>

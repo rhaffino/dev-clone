@@ -171,17 +171,17 @@ id/json-ld-schema-generator
                 {
                   "@context": "http://schema.org/",
                   "@type": "Product",
-                  "name": "Yoast SEO for WordPress",
-                  "image": "https://cdn-images.yoast.com/uploads/2010/10/Yoast_SEO_WP_plugin_FB.png",
-                  "description": "Yoast SEO is the most complete WordPress SEO plugin. It handles the technical optimization of your site & assists with optimizing your content.",
+                  "name": "cmlabs SEO Tools",
+                  "image": "https://tools.cmlabs.co/media/logos/new/new-logo-default.png",
+                  "description": "Choose structured data for recipe, job posting and product schema and build the markup with JSON-LD Generator.",
                   "brand": {
                     "@type": "Thing",
-                    "name": "Yoast"
+                    "name": "cmlabs"
                   },
                   "offers": {
                     "@type": "Offer",
                     "priceCurrency": "USD",
-                    "price": "69.00"
+                    "price": "79.00"
                   }
                 }
               &lt;/script&gt;
@@ -246,11 +246,11 @@ id/json-ld-schema-generator
                         <br />
                         <span class="font-weight-light">@lang('layout.whats-new-update') Mar 15, 2021</span>
                     </div>
-                    <div class="alert-close pt-5 pr-5">
+                    <!-- <div class="alert-close pt-5 pr-5">
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                             <span aria-hidden="true"><i class="ki ki-close icon-alert-close"></i></span>
                         </button>
-                    </div>
+                    </div> -->
                     <span class="alert-features-text">@lang('jsonldhome.whats-new-1')</span>
                 </div>
             </div>
@@ -261,11 +261,11 @@ id/json-ld-schema-generator
                         <br />
                         <span class="font-weight-light">@lang('layout.whats-new-update') Mar 15, 2021</span>
                     </div>
-                    <div class="alert-close pt-5 pr-5">
+                    <!-- <div class="alert-close pt-5 pr-5">
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                             <span aria-hidden="true"><i class="ki ki-close icon-alert-close"></i></span>
                         </button>
-                    </div>
+                    </div> -->
                     <span class="alert-features-text">@lang('jsonldhome.whats-new-2')</span>
                 </div>
             </div>

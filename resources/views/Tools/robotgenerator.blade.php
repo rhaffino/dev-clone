@@ -211,63 +211,6 @@
                     </ol>
                     <p>@lang('robot.desc-5-2')</p>
                 </div>
-                <div class="d-none" id="description-tab-6">
-                    <h2>@lang('robot.desc-6')</h2>
-                    <ol>
-                        <li>
-                            <p>@lang('robot.desc-6-1')</p>
-                            <p>@lang('robot.desc-6-1-1')</p>
-                            <ul>
-                                <li>
-                                    <p>@lang('robot.desc-6-1-1-1')</p>
-                                </li>
-                                <li>
-                                    <p>@lang('robot.desc-6-1-1-2')</p>
-                                    <p>@lang('robot.desc-6-1-1-2-1')</p>
-                                </li>
-                                <li>
-                                    <p>@lang('robot.desc-6-1-1-3')</p>
-                                    <p>@lang('robot.desc-6-1-1-3-1')</p>
-                                </li>
-                                <li>
-                                    <p>@lang('robot.desc-6-1-1-4')</p>
-                                    <p>@lang('robot.desc-6-1-1-4-1')</p>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <p>@lang('robot.desc-6-2')</p>
-                            <p>@lang('robot.desc-6-2-1')</p>
-                            <ul>
-                                <li>
-                                    <p>@lang('robot.desc-6-2-1-1')</p>
-                                    <p>@lang('robot.desc-6-2-1-1-1')</p>
-                                </li>
-                                <li>
-                                    <p>@lang('robot.desc-6-2-1-2')</p>
-                                    <p>@lang('robot.desc-6-2-1-2-1')</p>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <p>@lang('robot.desc-6-3')</p>
-                            <ul>
-                                <li>
-                                    <p>@lang('robot.desc-6-3-1')</p>
-                                    <p>@lang('robot.desc-6-3-1-1')</p>
-                                </li>
-                                <li>
-                                    <p>@lang('robot.desc-6-3-2')</p>
-                                    <p>@lang('robot.desc-6-3-2-1')</p>
-                                </li>
-                                <li>
-                                    <p>@lang('robot.desc-6-3-3')</p>
-                                    <p>@lang('robot.desc-6-3-3-1')</p>
-                                </li>
-                            </ul>
-                        </li>
-                    </ol>
-                </div>
             </div>
             <div class="col-md-3">
                 <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-1">
@@ -299,12 +242,6 @@
                         <span class="label label-lg label-tools-description" id="nav-label-tab-5">5</span>
                     </div>
                     <a class="">@lang('robot.desc-5')</a>
-                </div>
-                <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-6">
-                    <div class="mr-2" style="width:24px !important; height: 24px !important;">
-                        <span class="label label-lg label-tools-description" id="nav-label-tab-5">6</span>
-                    </div>
-                    <a class="">@lang('robot.desc-6')</a>
                 </div>
             </div>
         </div>
@@ -343,11 +280,11 @@
                         <br />
                         <span class="font-weight-light">@lang('layout.whats-new-update') Mar 15, 2021</span>
                     </div>
-                    <div class="alert-close pt-5 pr-5">
+                    <!-- <div class="alert-close pt-5 pr-5">
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                             <span aria-hidden="true"><i class="ki ki-close icon-alert-close"></i></span>
                         </button>
-                    </div>
+                    </div> -->
                     <span class="alert-features-text">@lang('robot.whats-new-1')</span>
                 </div>
             </div>
@@ -358,11 +295,11 @@
                         <br />
                         <span class="font-weight-light">@lang('layout.whats-new-update') Mar 15, 2021</span>
                     </div>
-                    <div class="alert-close pt-5 pr-5">
+                    <!-- <div class="alert-close pt-5 pr-5">
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                             <span aria-hidden="true"><i class="ki ki-close icon-alert-close"></i></span>
                         </button>
-                    </div>
+                    </div> -->
                     <span class="alert-features-text">@lang('robot.whats-new-2')</span>
                 </div>
             </div>
