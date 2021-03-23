@@ -229,7 +229,7 @@
                             </div>
                         </div>
                     </a>
-                    <a href="https://tools.cmlabs.co">
+                    <a href="/{{$local}}">
                         <div class="card card-custom footer-resource-list mb-2">
                             <div class="card-body d-flex flex-wrap align-items-center w-100 p-3">
                                 <div class="footer-resource-icon d-flex align-items-center">
@@ -240,7 +240,7 @@
                             </div>
                         </div>
                     </a>
-                    <a href="https://tools.cmlabs.co">
+                    <a href="/{{$local}}">
                         <div class="card card-custom footer-resource-list">
                             <div class="card-body d-flex flex-wrap align-items-center w-100 p-3">
                                 <div class="footer-resource-icon d-flex align-items-center">
