@@ -61,7 +61,7 @@ id/json-ld-breadcrumb-schema-generator
                                         </div>
                                         <div class="col-2 col-sm-1">
                                             <div class="d-flex justify-content-center mt-9">
-                                                <i class='bx bxs-x-circle bx-md btn-delete-disabled'></i>
+                                                <i class='bx bxs-x-circle bx-md btn-delete-disabled delete-bread'></i>
                                             </div>
                                         </div>
                                     </div>
@@ -81,7 +81,7 @@ id/json-ld-breadcrumb-schema-generator
                                         </div>
                                         <div class="col-2 col-sm-1">
                                             <div class="d-flex justify-content-center mt-9">
-                                                <i class='bx bxs-x-circle bx-md btn-delete-disabled'></i>
+                                                <i class='bx bxs-x-circle bx-md btn-delete-disabled delete-bread'></i>
                                             </div>
                                         </div>
                                     </div>
