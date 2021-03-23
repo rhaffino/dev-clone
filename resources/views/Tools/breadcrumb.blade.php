@@ -214,25 +214,25 @@ id/json-ld-breadcrumb-schema-generator
                     <p>@lang('breadcrumb.desc-2-2')</p>
                     <div class="d-flex flex-column px-3 py-3">
                         <div class="title-meta mb-1">
-                            Structured Data Mark Up Optimisation & Consultancy | Organic Digital
+                            Informasi Perusahaan - PT CMLABS INDONESIA DIGITAL
                         </div>
                         <div class="link-meta d-flex flex-row align-items-center color-green mb-1">
-                            <span>https://organicdigital.co › Services <i class='bx bx-caret-down ml-1' style="color: #4D5156; vertical-align: text-bottom;"></i></span>
+                            <span>cmlabs.co › about-us <i class='bx bx-caret-down ml-1' style="color: #4D5156; vertical-align: text-bottom;"></i></span>
                         </div>
                         <div class="desc-meta mb-4">
-                            Enhance your search listings and click through rate. Organic Digital can assist your site's structured data <br>mark up optimisation
+                            CMLABS. PT CMLABS INDONESIA DIGITAL is a company specializing in SEO services, Digital<br>Marketing and tools to support SEO activities ...
                         </div>
                     </div>
                     <p>@lang('breadcrumb.desc-2-3')</p>
                     <div class="d-flex flex-column px-3 py-3">
                         <div class="title-meta mb-1">
-                            Organic & Technical SEO Services | Organic Digital
+                            Informasi Perusahaan - PT CMLABS INDONESIA DIGITAL
                         </div>
                         <div class="link-meta d-flex flex-row align-items-center color-green mb-1">
-                            <span>https://organicdigital.co/services/ <i class='bx bx-caret-down ml-1' style="color: #4D5156; vertical-align: text-bottom;"></i></span>
+                            <span>https://cmlabs.co/about-us/ <i class='bx bx-caret-down ml-1' style="color: #4D5156; vertical-align: text-bottom;"></i></span>
                         </div>
                         <div class="desc-meta mb-4">
-                            Diagnose, fix and optimise every part of your website to drive the best performance. Contact now to find out <br>more
+                            CMLABS. PT CMLABS INDONESIA DIGITAL is a company specializing in SEO services, Digital<br>Marketing and tools to support SEO activities ...
                         </div>
                     </div>
                 </div>
@@ -254,9 +254,8 @@ id/json-ld-breadcrumb-schema-generator
                     <pre class="language-html mb-4">
             <code class="language-html">
               &lt;ul id="breadcrumblist"&gt;
-                 &lt;li&gt;&lt;a href="https://organicdigital.co/"&gt;Home&lt;/a&gt;/&lt;/li&gt;
-                 &lt;li&gt;&lt;a href="https://organicdigital.co/services/"&gt;Services&lt;/a&gt;/&lt;/li&gt;
-                 &lt;li&gt;&lt;a href="https://organicdigital.co/services/structured-data.php"&gt;Structured Data&lt;/a&gt;&lt;/li&gt;
+                 &lt;li&gt;&lt;a href="https://cmlabs.co/"&gt;Home&lt;/a&gt;/&lt;/li&gt;
+                 &lt;li&gt;&lt;a href="https://cmlabs.co/about-us/"&gt;About Us&lt;/a&gt;/&lt;/li&gt;
                &lt;/ul&gt;
             </code>
           </pre>
@@ -276,9 +275,8 @@ id/json-ld-breadcrumb-schema-generator
                     <pre class="language-html mb-4">
             <code class="language-html">
               &lt;ul id="breadcrumblist" itemscope itemtype="http://schema.org/BreadcrumbList"&gt;
-                &lt;li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"&gt;&lt;a itemprop="item" href="https://organicdigital.co/"&gt;&lt;span itemprop="name"&gt;Home&lt;/span&gt;&lt;/a&gt;/&lt;meta itemprop="position" content="1" /&gt;&lt;/li&gt;
-                &lt;li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"&gt;&lt;a itemprop="item" href="https://organicdigital.co/services/"&gt;&lt;span itemprop="name"&gt;Services&lt;/span&gt;&lt;/a&gt;&lt;meta itemprop="position" content="2" /&gt;/&lt;/li&gt;
-                &lt;li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"&gt;&lt;a itemprop="item" href="https://organicdigital.co/services/structured-data.php"&gt;&lt;span itemprop="name"&gt;Structured Data&lt;/span&gt;&lt;/a&gt;&lt;meta itemprop="position" content="3" /&gt;&lt;/li&gt;
+                &lt;li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"&gt;&lt;a itemprop="item" href="https://cmlabs.co/"&gt;&lt;span itemprop="name"&gt;Home&lt;/span&gt;&lt;/a&gt;/&lt;meta itemprop="position" content="1" /&gt;&lt;/li&gt;
+                &lt;li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"&gt;&lt;a itemprop="item" href="https://cmlabs.co/about-us/"&gt;&lt;span itemprop="name"&gt;About Us&lt;/span&gt;&lt;/a&gt;&lt;meta itemprop="position" content="2" /&gt;/&lt;/li&gt;
               &lt;/ul&gt;
             </code>
           </pre>
@@ -287,33 +285,26 @@ id/json-ld-breadcrumb-schema-generator
                     <pre class="language-html mb-4">
             <code class="language-html">
               &lt;script type="application/ld+json"&gt;
-                {
-                  "@context": "https://schema.org",
-                  "@type": "BreadcrumbList",
-                  "itemListElement": [{
-                    "@type": "ListItem",
-                    "position": 1,
-                    "item": {
-                      "@id": "https://organicdigital.co/",
-                      "name": "Home"
-                    }
-                  },{
-                    "@type": "ListItem",
-                    "position": 2,
-                    "item": {
-                      "@id": "https://organicdigital.co/services/",
-                      "name": "Services"
-                    }
-                  },{
-                    "@type": "ListItem",
-                    "position": 3,
-                    "item": {
-                      "@id": "https://organicdigital.co/services/structured-data.php",
-                      "name": "Structured Data"
-                    }
-                  }]
-                }
-                &lt;/script&gt;
+              {
+                "@context": "https://schema.org",
+                "@type": "BreadcrumbList",
+                "itemListElement": [{
+                  "@type": "ListItem",
+                  "position": 1,
+                  "item": {
+                    "@id": "https://cmlabs.co/",
+                    "name": "Home"
+                  }
+                },{
+                  "@type": "ListItem",
+                  "position": 2,
+                  "item": {
+                    "@id": "https://cmlabs.co/about-us/",
+                    "name": "About Us"
+                  }
+                }]
+              }
+              &lt;/script&gt;
             </code>
           </pre>
                 </div>

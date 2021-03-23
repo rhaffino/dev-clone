@@ -339,7 +339,7 @@ id/json-ld-recipe-schema-generator
                                 {
                                     "@context": "https://schema.org",
                                     "@type": "Recipe",
-                                    "author": "Jake  Smith",
+                                    "author": "Jake Smith",
                                     "cookTime": "PT2H",
                                     "datePublished": "2015-05-18",
                                     "description": "Your recipe description goes here",

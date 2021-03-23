@@ -13,7 +13,7 @@ return [
     "desc-1-1" => "Find tech stacks from any website. List the websites that use a particular technology, with email addresses and phone numbers. Use our tools for lead generation, market analysis and competitor research.",
     "desc-2" => "Find out what websites are built with",
     "desc-2-1" => "Instantly reveals the tech stack and contact details of any website, such as an e-commerce platform, content management system, or marketing automation tool.",
-    "desc-3" => "Find out what websites are built with",
+    "desc-3" => "List the websites that use a particular technology",
     "desc-3-1" => "Find new prospects with the technology they use. The lead list contains a website, email address, phone number, and social media profiles. Establish and export personalized reports based on website traffic, location and language for any web technology.",
     "desc-4" => "Search a number of websites at once",
     "desc-4-1" => "Provide a list of websites of your own to generate reports on the technologies they use, along with contact details and social media profiles. Get a better understanding of your target audience with technographic insights.",

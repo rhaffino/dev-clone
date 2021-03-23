@@ -91,49 +91,46 @@ id/page-title-meta-description-checker
                         <div class="card-body px-0">
                             <div class="d-flex flex-column px-10 py-3">
                                 <div class="link-meta d-flex flex-row align-items-center mb-2">
-                                    <strong class="mr-2">Ad</strong>
-                                    <span>visa-insurance.eu <i class='bx bx-caret-down ml-1' style="color: #4D5156; vertical-align: text-bottom;"></i></span>
+                                    <span>analytics.cmlabs.co <i class='bx bx-caret-down ml-1' style="color: #4D5156; vertical-align: text-bottom;"></i></span>
                                 </div>
                                 <div class="title-meta mb-2">
-                                    Buy ‪Travel Insurance Schengen‬ - Officially accepted for visa
+                                    cmlabs Analytics, Search/SERPs Tracking
                                 </div>
                                 <div class="desc-meta">
-                                    Travel medical insurance to all Schengen Area. Refund if visa denied! Buy in 5 minutes. Pay with credit/deibt and get insurance documents instantly via email. No age limit.
+                                    Changing the way you receive insight through tools and analytics. Track the ranking thousands of keyword and multiple domains.
                                 </div>
                             </div>
                             <div class="d-flex flex-column px-10 py-3">
                                 <div class="link-meta d-flex flex-row align-items-center mb-2">
-                                    <span>www.traveloka.com › en-id › insurance › travel › visa-schengen <i class='bx bx-caret-down ml-1' style="color: #4D5156; vertical-align: text-bottom;"></i></span>
+                                    <span>cmlabs.co › career › content-writer <i class='bx bx-caret-down ml-1' style="color: #4D5156; vertical-align: text-bottom;"></i></span>
                                 </div>
                                 <div class="title-meta mb-2">
-                                    Buy Your Schengen Visa Travel Insurance at Traveloka
+                                    Job Description Content Writer Profession - CMLABS Career
                                 </div>
                                 <div class="desc-meta">
-                                    When arranging a Schengen Visa, tourists must equip themselves with travel insurance. Travel insurance is very important to provide protection as long as you are in this country. Without adequate travel insurance,
-                                    your Schengen
-                                    Visa application will be refused.
+                                    Starting career as a writer or content writer isn&#039;t difficult. Learn the following job description of content writer profession.
                                 </div>
                             </div>
                             <div class="d-flex flex-column px-10 py-3 bg-color-lightyellow">
                                 <div class="link-meta d-flex flex-row align-items-center mb-2">
-                                    <span><span id="resulturl">www.schengenvisainfo.com</span> › schengen-visa-insurance <i class='bx bx-caret-down ml-1' style="color: #4D5156; vertical-align: text-bottom;"></i></span>
+                                    <span><span id="resulturl">tools.cmlabs.co</span> › page-title-meta-description-checker <i class='bx bx-caret-down ml-1' style="color: #4D5156; vertical-align: text-bottom;"></i></span>
                                 </div>
                                 <div id="resulttitle" class="title-meta mb-2 color-green">
-                                    Schengen Travel Visa Insurance – Europe Travel Insurance
+                                    Page Title and Meta Description Length Checker
                                 </div>
                                 <div id="resultdesc" class="desc-meta">
-                                    Dec 10, 2020 — Schengen Visa Insurance Requirements · Minimum coverage of at least 30,000 EUR (equivalent to 34,000 USD). · It should cover all member ...
+                                    Check the length of the Page Title and Meta Description of your website in the content writing Tools from cmlabs. Improve your writing skills!
                                 </div>
                             </div>
                             <div class="d-flex flex-column px-10 py-3">
                                 <div class="link-meta d-flex flex-row align-items-center mb-2">
-                                    <span>www.schengenvisainfo.com › schengen-visa-insurance <i class='bx bx-caret-down ml-1' style="color: #4D5156; vertical-align: text-bottom;"></i></span>
+                                    <span>tools.cmlabs.co › page-title-meta-description-checker <i class='bx bx-caret-down ml-1' style="color: #4D5156; vertical-align: text-bottom;"></i></span>
                                 </div>
                                 <div class="title-meta mb-2">
-                                    Schengen Travel Visa Insurance – Europe Travel Insurance
+                                    Page Title and Meta Description Length Checker
                                 </div>
                                 <div class="desc-meta">
-                                    Dec 10, 2020 — Schengen Visa Insurance Requirements · Minimum coverage of at least 30,000 EUR (equivalent to 34,000 USD). · It should cover all member ...
+                                    Check the length of the Page Title and Meta Description of your website in the content writing Tools from cmlabs. Improve your writing skills!
                                 </div>
                             </div>
                         </div>
@@ -159,49 +156,46 @@ id/page-title-meta-description-checker
                         <div class="card-body px-0">
                             <div class="d-flex flex-column px-10 py-3">
                                 <div class="link-meta d-flex align-items-center mb-2">
-                                    <strong class="mr-2">Ad</strong>
-                                    <span>visa-insurance.eu <i class='bx bx-caret-down ml-1' style="color: #4D5156; vertical-align: text-bottom;"></i></span>
+                                    <span>analytics.cmlabs.co <i class='bx bx-caret-down ml-1' style="color: #4D5156; vertical-align: text-bottom;"></i></span>
                                 </div>
                                 <div class="title-meta mb-2">
-                                    Buy ‪Travel Insurance Schengen‬ - Officially accepted for visa
+                                    cmlabs Analytics, Search/SERPs Tracking
                                 </div>
                                 <div class="desc-meta">
-                                    Travel medical insurance to all Schengen Area. Refund if visa denied! Buy in 5 minutes. Pay with credit/deibt and get insurance documents instantly via email. No age limit.
+                                    Changing the way you receive insight through tools and analytics. Track the ranking thousands of keyword and multiple domains.
                                 </div>
                             </div>
                             <div class="d-flex flex-column px-10 py-3">
                                 <div class="link-meta d-flex flex-row align-items-center mb-2">
-                                    <span>www.traveloka.com › en-id › insurance › travel › visa-schengen <i class='bx bx-caret-down ml-1' style="color: #4D5156; vertical-align: text-bottom;"></i></span>
+                                    <span>cmlabs.co › career › content-writer <i class='bx bx-caret-down ml-1' style="color: #4D5156; vertical-align: text-bottom;"></i></span>
                                 </div>
                                 <div class="title-meta mb-2">
-                                    Buy Your Schengen Visa Travel Insurance at Traveloka
+                                    Job Description Content Writer Profession - CMLABS Career
                                 </div>
                                 <div class="desc-meta">
-                                    When arranging a Schengen Visa, tourists must equip themselves with travel insurance. Travel insurance is very important to provide protection as long as you are in this country. Without adequate travel insurance,
-                                    your Schengen
-                                    Visa application will be refused.
+                                    Starting career as a writer or content writer isn&#039;t difficult. Learn the following job description of content writer profession.
                                 </div>
                             </div>
                             <div class="d-flex flex-column px-10 py-3 bg-color-lightyellow">
                                 <div class="link-meta d-flex flex-row align-items-center mb-2">
-                                    <span><span id="resulturlmobile">www.schengenvisainfo.com</span> › schengen-visa-insurance <i class='bx bx-caret-down ml-1' style="color: #4D5156; vertical-align: text-bottom;"></i></span>
+                                    <span><span id="resulturlmobile">tools.cmlabs.co</span> › page-title-meta-description-checker <i class='bx bx-caret-down ml-1' style="color: #4D5156; vertical-align: text-bottom;"></i></span>
                                 </div>
                                 <div id="resulttitlemobile" class="title-meta mb-2 color-green">
-                                    Schengen Travel Visa Insurance – Europe Travel Insurance
+                                    Page Title and Meta Description Length Checker
                                 </div>
                                 <div id="resultdescmobile" class="desc-meta">
-                                    Dec 10, 2020 — Schengen Visa Insurance Requirements · Minimum coverage of at least 30,000 EUR (equivalent to 34,000 USD). · It should cover all member ...
+                                    Check the length of the Page Title and Meta Description of your website in the content writing Tools from cmlabs. Improve your writing skills!
                                 </div>
                             </div>
                             <div class="d-flex flex-column px-10 py-3">
                                 <div class="link-meta d-flex flex-row align-items-center mb-2">
-                                    <span>www.schengenvisainfo.com › schengen-visa-insurance <i class='bx bx-caret-down ml-1' style="color: #4D5156; vertical-align: text-bottom;"></i></span>
+                                    <span>tools.cmlabs.co › page-title-meta-description-checker <i class='bx bx-caret-down ml-1' style="color: #4D5156; vertical-align: text-bottom;"></i></span>
                                 </div>
                                 <div class="title-meta mb-2">
-                                    Schengen Travel Visa Insurance – Europe Travel Insurance
+                                    Page Title and Meta Description Length Checker
                                 </div>
                                 <div class="desc-meta">
-                                    Dec 10, 2020 — Schengen Visa Insurance Requirements · Minimum coverage of at least 30,000 EUR (equivalent to 34,000 USD). · It should cover all member ...
+                                    Check the length of the Page Title and Meta Description of your website in the content writing Tools from cmlabs. Improve your writing skills!
                                 </div>
                             </div>
                         </div>

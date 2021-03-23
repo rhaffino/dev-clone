@@ -211,148 +211,50 @@ id/json-ld-person-schema-generator
                     <h2>@lang('person.desc-1')</h2>
                     <p>@lang('person.desc-1-1')</p>
                     <p>@lang('person.desc-1-2')</p>
-                    <p>@lang('person.desc-1-3')</p>
-                    <p>@lang('person.desc-1-4')</p>
-                    <p>@lang('person.desc-1-5')</p>
-                    <p>@lang('person.desc-1-6')</p>
-                    <pre class="language-html mb-4">
-            <code class="language-html">
-              &lt;script type="application/ld+json"&gt;
-                {
-                  "@context": "https://schema.org",
-                  "@type": "Person",
-                  "address": {
-                    "@type": "PostalAddress",
-                    "addressLocality": "Colorado Springs",
-                    "addressRegion": "CO",
-                    "postalCode": "80840",
-                    "streetAddress": "100 Main Street"
-                  },
-                  "colleague": [
-                    "http://www.example.com/JohnColleague.html",
-                    "http://www.example.com/JameColleague.html"
-                  ],
-                  "email": "info@example.com",
-                  "image": "janedoe.jpg",
-                  "jobTitle": "Research Assistant",
-                  "name": "Jane Doe",
-                  "alumniOf": "Dartmouth",
-                  "birthPlace": "Philadelphia, PA",
-                  "birthDate": "1979-10-12",
-                  "height": "72 inches",
-                  "gender": "female",
-                  "memberOf": "Republican Party",
-                  "nationality": "Albanian",
-                  "telephone": "(123) 456-6789",
-                  "url": "http://www.example.com",
-                  "sameAs" : [ "https://www.facebook.com/",
-                  "https://www.linkedin.com/",
-                  "http://twitter.com/",
-                  "http://instagram.com/",
-                  "https://plus.google.com/"]
-                }
-              &lt;/script&gt;
-            view rawperson.js hosted with ❤ by GitHub
-            </code>
-          </pre>
-                    <p>@lang('person.desc-1-7')</p>
-                    <pre class="language-html mb-4">
-            <code class="language-html">
-              &lt;script type="application/ld+json"&gt;
-                {
-                  "@context": "http://www.schema.org",
-                  "@type": "Person",
-                  "@id": "https://jay.holtslander.ca/#person",
-                  "name": "Jay Holtslander",
-                  "alternateName": "Jason Holtslander",
-                  "nationality": "Canadian",
-                  "birthPlace" : {
-                    "@type": "Place",
-                      "address": {
-                        "@type": "PostalAddress",
-                      "addressLocality": "Vancouver",
-                      "addressRegion": "BC",
-                          "addressCountry": "Canada"
-                    }
-                  },
-                  "affiliation": [
-                    {
-                      "@type": "Organization",
-                      "name": "Futurpreneur",
-                      "sameAs": [
-                        "https://twitter.com/futurpreneur",
-                        "https://www.facebook.com/futurpreneur/",
-                        "https://www.linkedin.com/company-beta/100369/",
-                        "https://www.youtube.com/user/CYBF"
-                      ]
-                      }
-                  ],
-                  "alumniOf": [
-                    {
-                     "@type": "CollegeOrUniversity",
-                     "name": "Vancouver Film School",
-                     "sameAs": "https://en.wikipedia.org/wiki/Vancouver_Film_School"
-                    },
-                    {
-                     "@type": "CollegeOrUniversity",
-                     "name": "CodeCore Bootcamp"
-                    }
-                  ],
-                  "gender": "Male",
-                  "Description": "Technologist",
-                  "disambiguatingDescription": "Co-founder of CodeCore Bootcamp",
-                  "jobTitle": "Technical Director",
-                  "worksFor": [
-                    {
-                      "@type": "Organization",
-                      "name": "Skunkworks Creative Group Inc.",
-                      "sameAs": [
-                        "https://twitter.com/skunkworks_ca",
-                        "https://www.facebook.com/skunkworks.ca",
-                        "https://www.linkedin.com/company/skunkworks-creative-group-inc-",
-                        "https://plus.google.com/+SkunkworksCa"
-                      ]
-                    }
-                  ],
-                  "url": "https://jay.holtslander.ca",
-                  "image": "https://s.gravatar.com/avatar/961997eb7fd5c22b3e12fb3c8ca14e11?s=512&r=g",
-                  "address": {
-                    "@type": "PostalAddress",
-                    "addressLocality": "Vancouver",
-                    "addressRegion": "BC",
-                    "addressCountry": "Canada"
-                  },
-                  "sameAs": [
-                    "https://twitter.com/j_holtslander",
-                    "https://pinterest.com/j_holtslander",
-                    "https://instagram.com/j_holtslander",
-                    "https://www.facebook.com/jay.holtslander",
-                    "https://ca.linkedin.com/in/holtslander/en",
-                    "https://plus.google.com/+JayHoltslander",
-                    "https://www.youtube.com/user/jasonh1234",
-                    "https://github.com/JayHoltslander",
-                    "https://profiles.wordpress.org/jasonh1234",
-                    "https://angel.co/j_holtslander",
-                    "https://www.foursquare.com/user/184843",
-                    "https://jholtslander.yelp.ca",
-                    "https://codepen.io/j_holtslander/",
-                    "https://stackoverflow.com/users/751570/jay",
-                    "https://dribbble.com/j_holtslander",
-                    "http://jasonh1234.deviantart.com/",
-                    "https://www.behance.net/j_holtslander",
-                    "https://www.flickr.com/people/jasonh1234/",
-                    "https://medium.com/@j_holtslander"
-                    ]
-                }
-              &lt;/script&gt;
-            </code>
-          </pre>
+                    <pre class="language-html">
+                        <code class="language-html">
+                            &lt;script type="application/ld+json"&gt;
+                                {
+                                    "@context": "https://schema.org",
+                                    "@type": "Person",
+                                    "address": {
+                                      "@type": "PostalAddress",
+                                      "addressLocality": "Freetown",
+                                      "addressRegion": "MA",
+                                      "postalCode": "02702",
+                                      "streetAddress": "3394 Randolph Street"
+                                    },
+                                    "colleague": [
+                                      "http://www.example.com/BestColleague.html",
+                                      "http://www.example.com/BestColleague.html"
+                                    ],
+                                    "email": "info@example.com",
+                                    "image": "DonABest.jpg",
+                                    "jobTitle": "Cardiographic technician",
+                                    "name": "Don A. Best",
+                                    "alumniOf": "Dartmouth",
+                                    "birthPlace": "Philadelphia, PA",
+                                    "birthDate": "1997-13-20",
+                                    "height": "72 inches",
+                                    "gender": "Male",
+                                    "memberOf": "Republican Party",
+                                    "nationality": "Albanian",
+                                    "telephone": "508-644-7231",
+                                    "url": "http://www.example.com",
+                                    "sameAs" : [ "https://www.facebook.com/",
+                                    "https://www.linkedin.com/",
+                                    "http://twitter.com/",
+                                    "http://instagram.com/",
+                                    "https://plus.google.com/"]
+                                }
+                            &lt;/script&gt;
+                        </code>
+                    </pre>
                 </div>
                 <div class="d-none" id="description-tab-2">
                     <h2>@lang('person.desc-2')</h2>
                     <p>@lang('person.desc-2-1')</p>
                     <img class="mb-4" src="{{asset('/media/images/person-instruction-1.png')}}" alt="person-instruction-1" width="300">
-                    <p>@lang('person.desc-2-2')</p>
                 </div>
             </div>
             <div class="col-md-3">
