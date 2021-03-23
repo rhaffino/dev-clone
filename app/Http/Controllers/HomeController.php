@@ -25,7 +25,7 @@ class HomeController extends Controller
         $dataEN = $this->getBlogWordpressEn();
         $data = json_decode(file_get_contents(base_path('resources/js/json/tools.json')),true);
         $local = App::getLocale();
-        return view('home', compact('data','local', 'dataID', 'dataEN'));
+        return view('home', compact('data','local'));
     }
 
     /**
@@ -96,6 +96,8 @@ class HomeController extends Controller
 
     public function getBlogWordpressId()
     {
+        // TODO : Delete this
+        return [];
         try{
           $client = new Client();
           $response = $client->get("https://cmlabs.co/wp-json/wp/v2/posts?per_page=4");
@@ -117,6 +119,8 @@ class HomeController extends Controller
 
     public function getBlogWordpressEn()
     {
+        // TODO : Delete this
+        return [];
         try {
           $client = new Client();
           $response = $client->get("https://cmlabs.co/en/wp-json/wp/v2/posts?per_page=4");
@@ -182,6 +186,23 @@ class HomeController extends Controller
                     break;
             }
             return $id." ".date_format($date,"d, Y - H:i");
+        }
+    }
+
+    public function getBlogData() {
+        $lang = App::getLocale();
+
+        try {
+            $client = new Client();
+            $response = $client->get("http://cmlabs.co/en/wp-json/wp/v2/posts?per_page=3");
+
+            return json_decode($response->getBody()->getContents(), true);
+        } catch (Exception $e){
+            if ( $lang == 'id' ) {
+                return json_decode(file_get_contents(base_path('resources/js/json/idBlog.json')), true);
+            } else {
+                return json_decode(file_get_contents(base_path('resources/js/json/enBlog.json')), true);
+            }
         }
     }
 }

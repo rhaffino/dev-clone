@@ -1,0 +1,23 @@
+<?php
+return [
+    "meta-title" =>"Free Online Tool - Link Analyzer",
+    "meta-desc" => "keep track of all the links of your website. Using this link analyzer tool, you can analyze both external and internal links related to your site.",
+    "lang" => "en",
+    "title" => "LINK ANALYZER",
+    "sub-title" => "Keep Track All The Links Of Your Site",
+    "analyze-btn" => "Analyze URL",
+    "result-none" => "No URL analyzed, please input your domain above!",
+    "desc-1" => "How Do I Use This Link Analysis Tool?",
+    "desc-1-1" => "Simply enter the URL of the website you want to review to use this Link Analyzer tool and choose if you want it through an external link, an internal link or both. You can also check the box for do not follow links.",
+    "desc-1-2" => "This Link Analyzer will produce results instantly. This will display a report covering all incoming and outgoing links and associated link text. If there is a hyperlinked image on the page, the image's alt attribute will be displayed as link text.",
+    "desc-2" => "Advantages Of This Analyzer Link Tool",
+    "desc-2-1" => "The link analyzer can analyze your internal and external links and do not follow and unfollow links on your website. This link checker has been developed to provide website owners, webmasters and SEO professionals with tools that show reliable results which can be used to analyze all the links on a particular website.",
+    "desc-2-2" => "You will be shown a table of internal and external links to your website. If your website includes hidden links or spam links, these hidden links and spam links can be calculated using a link analyzer tool. It will also show you which sites send traffic or backlinks to you. You can use this website link checker tool to focus on your important web pages, then increase other links to get higher page rank on various search engines like Google.",
+    "desc-2-3" => "The search engine ranking of a website really depends on the quantity and quality of incoming links. It is important that you check the competition, prepare your website for optimization, and increase your traffic by analyzing the link building techniques used by your competitors. To provide you with better and more reliable backlink analysis reports for your website, this link checker tool will be of great help.",
+    "desc-3" => "How Do I Use This Link Analysis Tool?",
+    "desc-3-1" => "One of the most critical aspects of search engine optimization is relation analysis.You need to be precise about the total number of links directed or linked to your website. A proper analysis of your incoming and outgoing links will allow you to reap the benefits in terms of SEO.",
+    "desc-3-2" => "There are many similar SEO tools all over the internet, but this is the best free online Link Analyzer you will find. This website link checker can provide you with all the information you need if you wish to check incoming and outgoing links on your website.",
+    "highlight" => "In this latest version of SEO Tool from cmlabs, we add the Link Analyzer tool. This Link Analyzer tool has been developed to provide website owners, webmasters, and SEO professionals with showing reliable results which can be used to analyze all the links on a particular website. This will provide the user with information about the inbound and outbound links of a particular website. From this information, you can easily analyze the links on your site and compare them to the number of incoming/outgoing links of your competitors.",
+    "whats-new-1" => "In this latest version of SEO Tool from cmlabs, we add the Link Analyzer tool. This will provide the user with information about the inbound and outbound links of a particular website. From this information, you can easily analyze the links on your site and compare them to the number of incoming/outgoing links of your competitors.",
+    "whats-new-2" => "This Link Analyzer tool has been developed to provide website owners, webmasters, and SEO professionals with showing reliable results which can be used to analyze all the links on a particular website. If a website has hidden links or spammy links, it can be checked with this tool. With this new tool, we hope you can optimize the links on your website effectively.",
+];

@@ -16,6 +16,7 @@
     <meta property="og:image" content="{{asset('media/logos/new/new-logo-default.png')}}" />
     <meta property="og:image:width" content="1142" />
     <meta property="og:image:height" content="1142" />
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     @if(env('APP_ENV')==='production')
         <!-- Global site tag (gtag.js) - Google Analytics -->
             <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156389913-2"></script>
@@ -37,6 +38,7 @@
     <link rel="alternate" hreflang="id-ID" href="https://tools.cmlabs.co/@yield('id-link')" />
     <!--begin::Fonts-->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <!--end::Fonts-->
     <!--begin::Page Vendors Styles(used by this page)-->
     <link href="{{asset('plugins/custom/fullcalendar/fullcalendar.bundle.css?v=7.0.5')}}" rel="stylesheet" type="text/css" />
@@ -63,7 +65,7 @@
     <!--end::Global Theme Styles-->
     <!--begin::Layout Themes(used by all pages)-->
     <!--end::Layout Themes-->
-    <link rel="shortcut icon" href="{{ asset('media/logos/new_logo_default.ico') }}"/>
+    <link rel="shortcut icon" href="{{ asset('media/logos/cmlabs.ico') }}"/>
     <meta name="google-site-verification" content="YCopEocQW4s_qTQ_Vqle_cfHtfpqK5__es6PHei4ooY" />
 </head>
 <!--end::Head-->
@@ -78,6 +80,7 @@
     <!--begin::Page-->
     <div class="d-flex flex-row flex-column-fluid page">
         <!--begin::Aside-->
+        @include('layouts.asidemobile')
         <!--end::Aside-->
         <!--begin::Wrapper-->
         <div class="d-flex flex-column flex-row-fluid wrapper custom-wrapper" id="kt_wrapper">
@@ -85,12 +88,12 @@
             @include('layouts.header')
             <!--end::Header-->
             <!--begin::Content-->
-            <div class="content d-flex flex-column flex-row-fluid custom-data-content" id="kt_content">
+            <div class="content d-flex flex-column flex-row-fluid custom-data-content pb-0" id="kt_content">
               @include('layouts.subheader')
                 <!--begin::Entry-->
                 <div class="d-flex flex-column-fluid">
                     <!--begin::Container-->
-                    <div class="container" style="padding-top: 20px;">
+                    <div style="padding-top: 20px; width:100%">
                         @yield('content')
                     </div>
                     <!--end::Container-->
@@ -98,7 +101,7 @@
                 <!--end::Entry-->
             </div>
             <!--end::Content-->
-            @include('layouts.footer')
+            @include('layouts.footernew')
         </div>
         <!--end::Wrapper-->
     </div>
@@ -155,9 +158,7 @@
   };
 </script>
 <script>
-$(document).ready(function(){
-  $('[data-toggle="tooltip"]').tooltip();
-});
+
 </script>
 <script type="text/javascript">
   // var deadline = new Date("dec 1, 2020 12:00:00").getTime();

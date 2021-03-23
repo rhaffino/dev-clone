@@ -4,754 +4,439 @@
 
 @section('meta-desc', Lang::get('home.meta-desc'))
 
-@section('meta-keyword', Lang::get('home.meta-keyword'))
+@section('conical','/en')
 
 @section('en-link')
 en
 @endsection
+
 @section('id-link')
 id
 @endsection
-@push('style')
-<style media="screen">
-.tool-tab.active{
-  border-bottom: 2px solid #0095EB !important;
-  color: #0095EB !important;
-}
-.tool-tab:hover{
-  color: #0095EB !important;
-  border-bottom: 2px solid #0095EB !important;
-}
-@media only screen and (max-width: 600px) and (min-width: 425px) {
-  .button {
-    display: none;
-  }
-  .image{
-    width: 20%;
-  }
-  .title{
-    width: 80%;
-  }
-}
-@media only screen and (max-width: 600px) {
-    .contributor-profile {
-        display: none;
-    }
-}
-@media only screen and (max-width: 425px) {
-  .button {
-    display: none;
-  }
-  .image{
-    width: 25%;
-  }
-  .title{
-    width: 75%;
-  }
-}
 
-@media only screen and (max-width: 414px) {
-  .button {
-    display: none;
-  }
-  .image{
-    width: 25%;
-  }
-  .title{
-    width: 100%;
-  }
-  .title-1{
-    width: 55%;
-  }
-  .title-2 {
-    width: 50%;
-  }
-  .title-2-0 {
-    width: 50%;
-  }
-  .adjust {
-    width: 80%;
-    padding-left: 7%;
-  }
-  .faq-title {
-    width: 90%;
-  }
-}
-
-@media only screen and (max-width: 375px) {
-  .button {
-    display: none;
-  }
-  .image{
-    width: 25%;
-  }
-  .title{
-    width: 100%;
-  }
-  .title-1{
-    width: 50%;
-  }
-  .title-2 {
-    width: 50%;
-  }
-  .title-2-0 {
-    width: 50%;
-    margin-left: 15px;
-  }
-  .adjust {
-    width: 80%;
-    padding-left: 7%;
-  }
-  .faq-title {
-    width: 90%;
-  }
-}
-
-@media only screen and (max-width: 360px) {
-  .button {
-    display: none;
-  }
-  .image{
-    width: 25%;
-  }
-  .title{
-    width: 100%;
-    padding-left: 5px;
-  }
-  .title-1{
-    width: 50%;
-  }
-  .title-2 {
-    width: 50%;
-  }
-  .adjust {
-    width: 80%;
-    padding-left: 7%;
-  }
-  .title-2-0 {
-    width: 50%;
-    margin-left: 15px;
-  }
-  /* .ol-content {
-    background: red;
-    width: 75%;
-  } */
-  .faq-title {
-    width: 90%;
-  }
-}
-
-@media only screen and (max-width: 320px) {
-  .button {
-    display: none;
-  }
-  .image{
-    width: 25%;
-  }
-  .title{
-    width: 50%;
-    padding-left: 10px;
-  }
-  .title-1{
-    width: 50%;
-  }
-  .title-2 {
-    width: 50%;
-  }
-  .title-2-0 {
-    width: 50%;
-    margin-left: 10px;
-  }
-  /* .ol-content {
-    background: red;
-    width: 75%;
-  } */
-  .faq-title {
-    width: 90%;
-  }
-} 
-</style>
-@endpush
 @section('content')
-<div class="d-flex flex-column-fluid">
-    <div class="container-fluid">
-        <nav aria-label="breadcrumb">
-          <ol class="breadcrumb" style="background-color:#EEF0F8 !important;">
-            <li class="breadcrumb-item active" style="color:#2F80ED"><b>@lang('home.homepage')</b></li>
-          </ol>
-        </nav>
-          <div class="card card-custom mb-5">
-            <div class="card-header">
-              <div class="card-title">
-                <h1 class="card-label">@lang('home.title-0')</h1>
-                <small>@lang('home.sub-title-0')</small>
-              </div>
-            </div>
-        </div>
-        <div class="row"  data-sticky-container>
-            <div class="col-lg-8">
-                <div class="card card-custom mb-5">
-                    <div class="card-body">
-                        <p class="pt-4">@lang('home.desc-1')</p>
-                        <p>@lang('home.desc-2')</p>
-                        <p>@lang('home.desc-3')</p>
-                        <p>@lang('home.desc-4')</p>
+<div class="container container-tools mb-10">
+    <div class="d-flex flex-column-fluid">
+        <div class="container-fluid px-0">
+            <div class="text-center">
+                <h1 class="text-black font-weight-bold display-4">@lang('home.title')</h1>
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <p class="text-black">@lang('home.sub-title')</p>
                     </div>
-                </div>
-                <div class="card card-custom mb-5">
-                    <div class="card-header border-0">
-                      <div class="card-title">
-                         <h2 class="card-label pt-4">@lang('home.title-1')</h2>
-                       </div>
-                      </div>
-                    <div class="card-body">
-                        @foreach($data as $datum)
-                        <table class="mb-10" width="100%">
-                          <tr >
-                            <th rowspan="2" width="13%" class="image"><span class="svg-icon svg-icon-2x p-4" style="background-color:#EBFAFF; border-radius:5px">
-                                {!! $datum['img'] !!}
-                            </span></th>
-                            <td width="72%" class="title"><span class="d-flex align-items-center text-dark font-size-h5 font-weight-bold mr-3 tools-title">{{$datum['title']}}</span></td>
-                            <td rowspan="2" width="15%"><a href="{{'/'.$local.$datum['route']}}"><button class="button btn btn-primary btn-sm font-weight-bolder text-uppercase text-white form-control">Launch</button></a></td>
-                          </tr>
-                          <tr>
-                            <td width="72%">
-                                <a
-                                    href="#"
-                                    class="mr-lg-8 mr-5 mb-lg-0 mb-2 title"
-                                    data-toggle="modal"
-                                    data-target="#modaldetail"
-                                    data-title="{{$datum['title']}}"
-                                    data-route="{{'/'.$local.$datum['route']}}"
-                                    data-desc="@if(App::getLocale()=='id') {{$datum['description']}} @else {{$datum['description-en']}} @endif"
-                                    style="color:#0095EB">
-                                    @lang('home.detail-button')
-                                </a>
-                            </td>
-                          </tr>
-                        </table>
-                        @endforeach
-                    </div>
-                </div>
-                <div class="card card-custom mb-5">
-                  <div class="card-header border-0">
-                    <div class="card-title">
-                      <h2 class="card-label pt-4">@lang('home.title-2')</h2>
-                    </div>
-                  </div>
-                  <div class="card-body">
-                      <div class="row">
-                          <div class="col-lg-12">
-                              <div id="contributor-slide" class="carousel slide" data-ride="carousel" data-interval="4000">
-                                  <div class="carousel-inner">
-                                    <div class="carousel-item active">
-                                        <div class="row mb-5">
-                                             <div class="col-lg-5 col-md-6 col-sm-12 text-center mb-5 contributor-profile">
-                                                 <div class="symbol symbol-60 symbol-circle symbol-xl-90 mb-5">
-                                                    <div class="symbol-label" style="background-image: url('https://cmlabs.co/wp-content/uploads/2020/06/Andaru-Pramudito-Suhud-110x110.png')"></div>
-                                                </div>
-                                                <h3 class="font-weight-bold my-2">ANDARU SUHUD</h3>
-                                                <div class="text-muted mb-2">DATA SCIENTIST</div>
-                                             </div>
-                                             <div class="col-lg-7 col-md-6 col-sm-12">
-                                                 <div class="contributor-content">
-                                                     <a href="@lang('home.url-1')" class="contributor-title" target="_blank"><h4 class="font-weight-bold my-2 mb-4">@lang('home.sub-title-2-1')</h4></a>
-                                                     <p>
-                                                         @lang('home.desc-2-1-1')
-                                                     </p>
-                                                 </div>
-                                             </div>
-                                         </div>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <div class="row mb-5">
-                                           <div class="col-lg-5 col-md-6 col-sm-12 text-center mb-5 contributor-profile">
-                                               <div class="symbol symbol-60 symbol-circle symbol-xl-90 mb-5">
-                                                <div class="symbol-label" style="background-image: url('https://cmlabs.co/wp-content/uploads/2020/06/m-ilman-akbar-110x110.png')"></div>
-                                            </div>
-                                            <h3 class="font-weight-bold my-2">ILMAN AKBAR</h3>
-                                            <div class="text-muted mb-2">DIGITAL MARKETING</div>
-                                           </div>
-                                           <div class="col-lg-7 col-md-6 col-sm-12">
-                                               <div class="contributor-content">
-                                                   <a href="@lang('home.url-2')" class="contributor-title" target="_blank"><h4 class="font-weight-bold my-2 mb-4">@lang('home.sub-title-2-2')</h4></a>
-                                                   <p>
-                                                       @lang('home.desc-2-2-1')
-                                                   </p>
-                                               </div>
-                                           </div>
-                                       </div>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <div class="row mb-5">
-                                           <div class="col-lg-5 col-md-6 col-sm-12 text-center mb-5 contributor-profile">
-                                               <div class="symbol symbol-60 symbol-circle symbol-xl-90 mb-5">
-                                                <div class="symbol-label" style="background-image: url('https://cmlabs.co/wp-content/uploads/2020/06/hangga-nuarta-2-110x110.jpeg')"></div>
-                                            </div>
-                                            <h3 class="font-weight-bold my-2">HANGGA NUARTA</h3>
-                                            <div class="text-muted mb-2">SEO SPECIALIST</div>
-                                           </div>
-                                           <div class="col-lg-7 col-md-6 col-sm-12">
-                                               <div class="contributor-content">
-                                                   <a href="@lang('home.url-3')" class="contributor-title" target="_blank"><h4 class="font-weight-bold my-2 mb-4">@lang('home.sub-title-2-3')</h4></a>
-                                                   <p>
-                                                       @lang('home.desc-2-3-1')
-                                                   </p>
-                                               </div>
-                                           </div>
-                                       </div>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <div class="row mb-5">
-                                             <div class="col-lg-5 col-md-6 col-sm-12 text-center mb-5 contributor-profile">
-                                                 <div class="symbol symbol-60 symbol-circle symbol-xl-90 mb-5">
-                                                    <div class="symbol-label" style="background-image: url('https://cmlabs.co/wp-content/uploads/2020/06/udhi-vilanata-110x110.jpeg')"></div>
-                                                </div>
-                                                <h3 class="font-weight-bold my-2">UDHI S VILANATA</h3>
-                                                <div class="text-muted mb-2">SEO SPECIALIST</div>
-                                             </div>
-                                             <div class="col-lg-7 col-md-6 col-sm-12">
-                                                 <div class="contributor-content">
-                                                     <a href="@lang('home.url-4')" class="contributor-title" target="_blank"><h4 class="font-weight-bold my-2 mb-4">@lang('home.sub-title-2-4')</h4></a>
-                                                     <p>
-                                                         @lang('home.desc-2-4-1')
-                                                     </p>
-                                                 </div>
-                                             </div>
-                                         </div>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <div class="row mb-5">
-                                             <div class="col-lg-5 col-md-6 col-sm-12 text-center mb-5 contributor-profile">
-                                                 <div class="symbol symbol-60 symbol-circle symbol-xl-90 mb-5">
-                                                    <div class="symbol-label" style="background-image: url('https://cmlabs.co/wp-content/uploads/2020/06/foto-rochman-maarif-110x110.jpg')"></div>
-                                                </div>
-                                                <h3 class="font-weight-bold my-2">ROCHMAN</h3>
-                                                <div class="text-muted mb-2">SEO SPECIALIST</div>
-                                             </div>
-                                             <div class="col-lg-7 col-md-6 col-sm-12">
-                                                 <div class="contributor-content">
-                                                     <a href="@lang('home.url-5')" class="contributor-title" target="_blank"><h4 class="font-weight-bold my-2 mb-4">@lang('home.sub-title-2-5')</h4></a>
-                                                     <p>
-                                                         @lang('home.desc-2-5-1')
-                                                     </p>
-                                                 </div>
-                                             </div>
-                                         </div>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <div class="row mb-5">
-                                             <div class="col-lg-5 col-md-6 col-sm-12 text-center mb-5 contributor-profile">
-                                                 <div class="symbol symbol-60 symbol-circle symbol-xl-90 mb-5">
-                                                    <div class="symbol-label" style="background-image: url('https://cmlabs.co/wp-content/uploads/2020/08/photo6145300840353737129-1-110x110.jpg')"></div>
-                                                </div>
-                                                <h3 class="font-weight-bold my-2">SELENA</h3>
-                                                <div class="text-muted mb-2">SEO SPECIALIST</div>
-                                             </div>
-                                             <div class="col-lg-7 col-md-6 col-sm-12">
-                                                 <div class="contributor-content">
-                                                     <a href="@lang('home.url-6')" class="contributor-title" target="_blank"><h4 class="font-weight-bold my-2 mb-4">@lang('home.sub-title-2-6')</h4></a>
-                                                     <p>
-                                                         @lang('home.desc-2-6-1')
-                                                     </p>
-                                                 </div>
-                                             </div>
-                                         </div>
-                                    </div>
-                                  </div>
-                              </div>
-                          </div>
-                          <div class="col-lg-12 text-center">
-                             <span>
-                                 <a href="#contributor-slide" data-slide="prev">
-                                     <button class="btn btn-prev btn-icon btn-circle flaticon2-back btn-light-twitter mr-3"></button>
-                                 <a/>
-                             </span>
-                             <span>
-                                 <a href="#contributor-slide" data-slide="next">
-                                     <button class="btn btn-next btn-icon btn-circle flaticon2-next btn-light-twitter ml-3"></button>
-                                 </a>
-                             </span>
-                         </div>
-                      </div>
-                  </div>
-                </div>
-                <div class="card card-custom mb-5">
-                  <div class="card-header border-0">
-                    <div class="card-title">
-                      <h2 class="card-label pt-4">@lang('home.title-3')</h2>
-                    </div>
-                  </div>
-                  <div class="card-body">
-                    <table class="mb-10" width="100%">
-                      <tr >
-                        <th rowspan="2" class="pt-4" valign="top" width="10%"><span class="svg-icon svg-icon-2x p-4" style="background-color:#EBFAFF; border-radius:5px; color:#0095EB">
-                            01
-                        </span></th>
-                        <td width="90%" class="title-1"><span class="d-flex align-items-center text-dark font-size-h5 font-weight-bold mr-3">@lang('home.sub-title-3-1')</span></td>
-                      </tr>
-                      <tr>
-                        <td> <p>@lang('home.desc-3-1-1')</p> </td>
-                      </tr>
-                    </table>
-
-                    <table class="mb-10" width="100%">
-                      <tr >
-                        <th rowspan="2" class="pt-4" valign="top" width="10%"><span class="svg-icon svg-icon-2x p-4" style="background-color:#EBFAFF; border-radius:5px; color:#0095EB">
-                            02
-                        </span></th>
-                        <td width="90%" class="title-1"><span class="d-flex align-items-center text-dark font-size-h5 font-weight-bold mr-3">@lang('home.sub-title-3-2')</span></td>
-                      </tr>
-                      <tr>
-                        <td> <p>@lang('home.desc-3-2-1')</p> </td>
-                      </tr>
-                    </table>
-
-                    <table class="mb-10" width="100%">
-                      <tr >
-                        <th rowspan="2" class="pt-4" valign="top" width="10%"><span class="svg-icon svg-icon-2x p-4" style="background-color:#EBFAFF; border-radius:5px; color:#0095EB">
-                            03
-                        </span></th>
-                        <td width="90%" class="title-1"><span class="d-flex align-items-center text-dark font-size-h5 font-weight-bold mr-3">@lang('home.sub-title-3-3')</span></td>
-                      </tr>
-                      <tr>
-                        <td> <p>@lang('home.desc-3-3-1')</p> </td>
-                      </tr>
-                    </table>
-                  </div>
-                </div>
-                <div class="card card-custom mb-5">
-                    <div class="card-header border-0">
-                      <div class="card-title">
-                        <h2 class="card-label pt-4">@lang('home.title-4')</h2>
-                      </div>
-                    </div>
-                  <div class="card-body">
-                      <ul class="nav nav-tabs nav-tabs-line nav-bolder nav-tabs-line-2x justify-content-center mb-5">
-                         <li class="nav-item">
-                             <a class="nav-link tool-tab mr-10 active" data-toggle="tab" href="#importantnotes">@lang('home.sub-title-4-1')</a>
-                         </li>
-                         <li class="nav-item ml-10">
-                             <a class="nav-link tool-tab" data-toggle="tab" href="#howtouse">@lang('home.sub-title-4-2')</a>
-                         </li>
-                    </ul>
-                    <div class="tab-content mt-5" id="myTabContent">
-                        <div class="tab-pane fade show active" id="importantnotes" role="tabpanel" aria-labelledby="importantnotes">
-                            <table width="100%" class="mb-5">
-                              <tr valign="center">
-                                <th rowspan="2" class="pt-4" valign="top" width="10%"><span class="flaticon2-check-mark pr-4 pl-4 pt-3 pb-3" style="background-color:#EBFAFF; border-radius:50%; color:#0095EB"></span></th>
-                                <td width="90%" class="title-2" valign="center">
-                                    <p>@lang('home.desc-4-1-1')</p>
-                                </td>
-                              </tr>
-                            </table>
-                            <table width="100%" class="mb-5">
-                              <tr>
-                                <th rowspan="2" class="pt-4" valign="top" width="10%"><span class="flaticon2-check-mark pr-4 pl-4 pt-3 pb-3" style="background-color:#EBFAFF; border-radius:50%; color:#0095EB"></span></th>
-                                <td width="90%" valign="center" class="title-2">
-                                    <p>@lang('home.desc-4-1-2')</p>
-                                </td>
-                              </tr>
-                            </table>
-                            <table width="100%" class="mb-5">
-                              <tr>
-                                <th rowspan="2" class="pt-4" valign="top" width="10%"><span class="flaticon2-check-mark pr-4 pl-4 pt-3 pb-3" style="background-color:#EBFAFF; border-radius:50%; color:#0095EB"></span></th>
-                                <td width="90%" valign="center" class="title-2">
-                                    <p>@lang('home.desc-4-1-3')</p>
-                                </td>
-                              </tr>
-                            </table>
-                            <table width="100%" class="mb-5">
-                              <tr>
-                                <th rowspan="2" class="@if($local == 'id') pt-4 @else pt-1 @endif" valign="top" width="10%"><span class="flaticon2-check-mark pr-4 pl-4 pt-3 pb-3" style="background-color:#EBFAFF; border-radius:50%; color:#0095EB"></span></th>
-                                <td width="90%" valign="center" class="title-2">
-                                    <p>@lang('home.desc-4-1-4')</p>
-                                </td>
-                              </tr>
-                            </table>
-                            <table width="100%" class="mb-5">
-                              <tr>
-                                <th rowspan="2" class="pt-4" valign="top" width="10%"><span class="flaticon2-check-mark pr-4 pl-4 pt-3 pb-3" style="background-color:#EBFAFF; border-radius:50%; color:#0095EB"></span></th>
-                                <td width="90%" valign="center" class="title-2">
-                                    <p>@lang('home.desc-4-1-5')</p>
-                                </td>
-                              </tr>
-                            </table>
-                        </div>
-                        <div class="tab-pane fade" id="howtouse" role="tabpanel" aria-labelledby="howtouse">
-                            <table width="100%" class="mb-5">
-                              <tr>
-                                <th rowspan="2" class="pt-4" valign="top" width="10%"><span class="flaticon2-check-mark pr-4 pl-4 pt-3 pb-3" style="background-color:#EBFAFF; border-radius:50%; color:#0095EB"></span></th>
-                                <td width="90%" class="title-2-0">
-                                    <span class="text-dark font-size-h5 font-weight-bold">@lang('home.sub-sub-title-4-2-1')</span>
-                                    <ol class="pl-5">
-                                      <li>@lang('home.desc-4-2-1-1')</li>
-                                      <li>@lang('home.desc-4-2-1-2')</li>
-                                      <li>@lang('home.desc-4-2-1-3')</li>
-                                      <li>@lang('home.desc-4-2-1-4')</li>
-                                    </ol>
-                                </td>
-                              </tr>
-                            </table>
-                            <table width="100%" class="mb-5">
-                              <tr>
-                                <th rowspan="2" class="pt-4" valign="top" width="10%"><span class="flaticon2-check-mark pr-4 pl-4 pt-3 pb-3" style="background-color:#EBFAFF; border-radius:50%; color:#0095EB"></span></th>
-                                <td width="90%" class="title-2-0">
-                                    <span class="text-dark font-size-h5 font-weight-bold">@lang('home.sub-sub-title-4-2-2')</span>
-                                    <ol class="pl-5">
-                                      <li>@lang('home.desc-4-2-2-1')</li>
-                                      <li>@lang('home.desc-4-2-2-2')</li>
-                                      <li>@lang('home.desc-4-2-2-3')</li>
-                                      <li>@lang('home.desc-4-2-2-4')</li>
-                                      <li>@lang('home.desc-4-2-2-5')</li>
-                                    </ol>
-                                </td>
-                              </tr>
-                            </table>
-                            <table width="100%" class="mb-5">
-                              <tr>
-                                <th rowspan="2" class="pt-4" valign="top" width="10%"><span class="flaticon2-check-mark pr-4 pl-4 pt-3 pb-3" style="background-color:#EBFAFF; border-radius:50%; color:#0095EB"></span></th>
-                                <td width="90%" class="title-2-0">
-                                    <span class="text-dark font-size-h5 font-weight-bold">@lang('home.sub-sub-title-4-2-3')</span>
-                                    <ol class="pl-5">
-                                      <li>@lang('home.desc-4-2-3-1')</li>
-                                      <li>@lang('home.desc-4-2-3-2')</li>
-                                      <li>@lang('home.desc-4-2-3-3')</li>
-                                    </ol>
-                                </td>
-                              </tr>
-                            </table>
-                            <table width="100%" class="mb-5">
-                              <tr>
-                                <th rowspan="2" class="pt-4" valign="top" width="10%"><span class="flaticon2-check-mark pr-4 pl-4 pt-3 pb-3" style="background-color:#EBFAFF; border-radius:50%; color:#0095EB"></span></th>
-                                <td width="90%" class="title-2-0">
-                                    <span class="text-dark font-size-h5 font-weight-bold">@lang('home.sub-sub-title-4-2-4')</span>
-                                    <ol class="pl-5">
-                                      <li>@lang('home.desc-4-2-4-1')</li>
-                                      <li>@lang('home.desc-4-2-4-2')</li>
-                                      <li>@lang('home.desc-4-2-4-3')</li>
-                                      <li>@lang('home.desc-4-2-4-4')</li>
-                                    </ol>
-                                </td>
-                              </tr>
-                            </table>
-                            <table width="100%" class="mb-5">
-                              <tr>
-                                <th rowspan="2" class="pt-4" valign="top" width="10%"><span class="flaticon2-check-mark pr-4 pl-4 pt-3 pb-3" style="background-color:#EBFAFF; border-radius:50%; color:#0095EB"></span></th>
-                                <td width="90%" class="title-2-0">
-                                    <span class="text-dark font-size-h5 font-weight-bold">@lang('home.sub-sub-title-4-2-5')</span>
-                                    <ol class="pl-5">
-                                      <li>@lang('home.desc-4-2-5-1')</li>
-                                      <li>@lang('home.desc-4-2-5-2')</li>
-                                      <li>@lang('home.desc-4-2-5-3')</li>
-                                      <li>@lang('home.desc-4-2-5-4')</li>
-                                    </ol>
-                                </td>
-                              </tr>
-                            </table>
-                            <table width="100%" class="mb-5">
-                              <tr>
-                                <th rowspan="2" class="pt-4" valign="top" width="10%"><span class="flaticon2-check-mark pr-4 pl-4 pt-3 pb-3" style="background-color:#EBFAFF; border-radius:50%; color:#0095EB"></span></th>
-                                <td width="90%" class="title-2-0">
-                                    <span class="text-dark font-size-h5 font-weight-bold">@lang('home.sub-sub-title-4-2-6')</span>
-                                    <ol class="pl-5">
-                                      <li>@lang('home.desc-4-2-6-1')</li>
-                                      <li>@lang('home.desc-4-2-6-2')</li>
-                                      <li>@lang('home.desc-4-2-6-3')</li>
-                                      <li>@lang('home.desc-4-2-6-4')</li>
-                                    </ol>
-                                </td>
-                              </tr>
-                            </table>
-                            <table width="100%" class="mb-5">
-                              <tr>
-                                <th rowspan="2" class="pt-4" valign="top" width="10%"><span class="flaticon2-check-mark pr-4 pl-4 pt-3 pb-3" style="background-color:#EBFAFF; border-radius:50%; color:#0095EB"></span></th>
-                                <td width="90%" class="title-2-0">
-                                    <span class="text-dark font-size-h5 font-weight-bold">@lang('home.sub-sub-title-4-2-7')</span>
-                                    <ol class="pl-5">
-                                      <li>@lang('home.desc-4-2-7-1')</li>
-                                      <li>@lang('home.desc-4-2-7-2')</li>
-                                      <li>@lang('home.desc-4-2-7-3')</li>
-                                    </ol>
-                                </td>
-                              </tr>
-                            </table>
-                            <table width="100%" class="mb-5">
-                              <tr>
-                                <th rowspan="2" class="pt-4" valign="top" width="10%"><span class="flaticon2-check-mark pr-4 pl-4 pt-3 pb-3" style="background-color:#EBFAFF; border-radius:50%; color:#0095EB"></span></th>
-                                <td width="90%" class="title-2-0">
-                                <div class="adjust">
-                                    <span class="text-dark font-size-h5 font-weight-bold">@lang('home.sub-sub-title-4-2-8')</span>
-                                    <ol class="pl-5">
-                                      <li>@lang('home.desc-4-2-8-1')</li>
-                                      <li>@lang('home.desc-4-2-8-2')</li>
-                                      <li>@lang('home.desc-4-2-8-3')</li>
-                                      <li>@lang('home.desc-4-2-8-4')</li>
-                                      <ul class="pl-5">
-                                        <li>@lang('home.desc-4-2-8-5')</li>
-                                        <li>@lang('home.desc-4-2-8-6')</li>
-                                      </ul>
-                                      <li>@lang('home.desc-4-2-8-7')</li>
-                                    </ol>
-                                </div>
-                                </td>
-                              </tr>
-                            </table>
-                        </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="card card-custom mb-5">
-                  <div class="card-header border-0">
-                    <div class="card-title">
-                      <h2 class="card-label pt-4">@lang('home.title-5')</h2>
-                    </div>
-                  </div>
-                  <div class="card-body">
-                    <div class="accordion accordion-light accordion-toggle-arrow" id="accordionExample2">
-                     <div class="card">
-                      <div class="card-header" id="headingOne2">
-                       <div class="card-title" data-toggle="collapse" data-target="#collapseOne2">
-                       <div class="faq-title">
-                        @lang('home.sub-title-5-1')
-                       </div>
-                       </div>
-                      </div>
-                      <div id="collapseOne2" class="collapse show" data-parent="#accordionExample2">
-                       <div class="card-body">
-                           @lang('home.desc-5-1-1')<br/><br/>
-                           @lang('home.desc-5-1-2')<br/><br/>
-                           @lang('home.desc-5-1-3')
-                       </div>
-                      </div>
-                     </div>
-                     <div class="card">
-                      <div class="card-header" id="headingTwo2">
-                       <div class="card-title collapsed" data-toggle="collapse" data-target="#collapseTwo2">
-                       <div class="faq-title">
-                        @lang('home.sub-title-5-2')
-                       </div>
-                       </div>
-                      </div>
-                      <div id="collapseTwo2" class="collapse"  data-parent="#accordionExample2">
-                       <div class="card-body">
-                           <ul>
-                               <li>@lang('home.desc-5-2-1')</li>
-                               <li>@lang('home.desc-5-2-2')</li>
-                               <li>@lang('home.desc-5-2-3')</li>
-                               <li>@lang('home.desc-5-2-4')</li>
-                               <li>@lang('home.desc-5-2-5')</li>
-                               <li>@lang('home.desc-5-2-6')</li>
-                               <li>@lang('home.desc-5-2-7')</li>
-                           </ul>
-                           @lang('home.sub-sub-title-5-2')
-                       </div>
-                      </div>
-                     </div>
-                     <div class="card">
-                      <div class="card-header" id="headingThree2">
-                       <div class="card-title collapsed" data-toggle="collapse" data-target="#collapseThree2">
-                       <div class="faq-title">
-                        @lang('home.sub-title-5-3')
-                       </div>
-                       </div>
-                      </div>
-                      <div id="collapseThree2" class="collapse" data-parent="#accordionExample2">
-                       <div class="card-body">
-                               <ul>
-                                   <li>@lang('home.desc-5-3-1')</li>
-                                   <li>@lang('home.desc-5-3-2')</li>
-                                   <li>@lang('home.desc-5-3-3')</li>
-                               </ul>
-                       </div>
-                      </div>
-                     </div>
-                     <div class="card">
-                      <div class="card-header" id="headingFour2">
-                       <div class="card-title collapsed" data-toggle="collapse" data-target="#collapseFour2">
-                       <div class="faq-title">
-                        @lang('home.sub-title-5-4')
-                       </div>
-                       </div>
-                      </div>
-                      <div id="collapseFour2" class="collapse" data-parent="#accordionExample2">
-                       <div class="card-body">
-                           @lang('home.desc-5-4-1')
-                           @lang('home.desc-5-4-2') <br/><br/>
-                           @lang('home.desc-5-4-3') <br/><br/>
-                           @lang('home.desc-5-4-4')
-                       </div>
-                      </div>
-                     </div>
-                    </div>
-                  </div>
                 </div>
             </div>
-            @include('layouts/stickybar')
+            <div class="mt-10 row">
+                <div class="col-6 col-md-3 mb-8">
+                    <div class="card card-custom card-stretch card-home">
+                        <div class="card-body p-7">
+                            <div class="text-center">
+                                <i class='text-darkgrey bx bx-calculator bx-lg'></i>
+                                <h2 class="h6 text-darkgrey font-weight-bolder">Word Counter</h2>
+                                <p class="text-darkgrey mb-0">@lang('home.word-counter-desc')</p>
+                            </div>
+                        </div>
+                        <div class="card-footer text-center border-top-0 pt-0">
+                            <a href="/{{ $local }}/word-counter" type="button" class="btn btn-launch" name="button">LAUNCH</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 mb-8">
+                    <div class="card card-custom card-stretch card-home">
+                        <div class="card-body p-7">
+                            <div class="text-center">
+                                <i class='text-darkgrey bx bx-text bx-lg'></i>
+                                <h2 class="h6 text-darkgrey font-weight-bolder">Title & Lengths Checker</h2>
+                                <p class="text-darkgrey mb-0">@lang('home.meta-checker-desc')</p>
+                            </div>
+                        </div>
+                        <div class="card-footer text-center border-top-0 pt-0">
+                            <a href="/{{ $local }}/page-title-meta-description-checker" type="button" class="btn btn-launch" name="button">LAUNCH</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 mb-8">
+                    <div class="card card-custom card-stretch card-home">
+                        <div class="card-body p-7">
+                            <div class="text-center">
+                                <i class='text-darkgrey bx bx-code-curly bx-lg'></i>
+                                <h2 class="h6 text-darkgrey font-weight-bolder">JSON-LD Generator</h2>
+                                <p class="text-darkgrey mb-0">@lang('home.json-ld-desc')</p>
+                            </div>
+                        </div>
+                        <div class="card-footer text-center border-top-0 pt-0">
+                            <a href="/{{ $local }}/json-ld-schema-generator" type="button" class="btn btn-launch" name="button">LAUNCH</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 mb-8">
+                    <div class="card card-custom card-stretch card-home">
+                        <div class="card-body p-7">
+                            <div class="text-center">
+                                <i class='text-darkgrey bx bx-timer bx-lg'></i>
+                                <h2 class="h6 text-darkgrey font-weight-bolder">Page Speed Test</h2>
+                                <p class="text-darkgrey mb-0">@lang('home.pagespeed-desc')</p>
+                            </div>
+                        </div>
+                        <div class="card-footer text-center border-top-0 pt-0">
+                            <a href="/{{ $local }}/pagespeed-test" type="button" class="btn btn-launch" name="button">LAUNCH</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 mb-8">
+                    <div class="card card-custom card-stretch card-home">
+                        <div class="card-body p-7">
+                            <div class="text-center">
+                                <i class='text-darkgrey bx bx-code-block bx-lg'></i>
+                                <h2 class="h6 text-darkgrey font-weight-bolder">Sitemap Generator</h2>
+                                <p class="text-darkgrey mb-0">@lang('home.sitemap-desc')</p>
+                            </div>
+                        </div>
+                        <div class="card-footer text-center border-top-0 pt-0">
+                            <a href="/{{ $local }}/sitemap-generator" type="button" class="btn btn-launch" name="button">LAUNCH</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 mb-8">
+                    <div class="card card-custom card-stretch card-home">
+                        <div class="card-body p-7">
+                            <div class="text-center">
+                                <i class='text-darkgrey bx bx-mobile-alt bx-lg'></i>
+                                <h2 class="h6 text-darkgrey font-weight-bolder">Mobile Friendly Test</h2>
+                                <p class="text-darkgrey mb-0">@lang('home.mobile-friendly-desc')</p>
+                            </div>
+                        </div>
+                        <div class="card-footer text-center border-top-0 pt-0">
+                            <a href="/{{ $local }}/mobile-friendly-test" type="button" class="btn btn-launch" name="button">LAUNCH</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 mb-8">
+                    <div class="card card-custom card-stretch card-home">
+                        <div class="card-body p-7">
+                            <div class="text-center">
+                                <i class='text-darkgrey bx bx-check-shield bx-lg'></i>
+                                <h2 class="h6 text-darkgrey font-weight-bolder">SSL Checker</h2>
+                                <p class="text-darkgrey mb-0">@lang('home.ssl-checker-desc')</p>
+                            </div>
+                        </div>
+                        <div class="card-footer text-center border-top-0 pt-0">
+                            <a href="/{{ $local }}/ssl-checker" type="button" class="btn btn-launch" name="button">LAUNCH</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 mb-8">
+                    <div class="card card-custom card-stretch card-home">
+                        <div class="card-body p-7">
+                            <div class="text-center">
+                                <i class='text-darkgrey bx bx-mask bx-lg'></i>
+                                <h2 class="h6 text-darkgrey font-weight-bolder">Robot.txt Generator</h2>
+                                <p class="text-darkgrey mb-0">@lang('home.robot-txt-desc')</p>
+                            </div>
+                        </div>
+                        <div class="card-footer text-center border-top-0 pt-0">
+                            <a href="/{{ $local }}/robotstxt-generator" type="button" class="btn btn-launch" name="button">LAUNCH</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 mb-8">
+                    <div class="card card-custom card-stretch card-home">
+                        <div class="card-body p-7">
+                            <div class="text-center">
+                                <i class='text-darkgrey bx bx-link bx-lg'></i>
+                                <h2 class="h6 text-darkgrey font-weight-bolder">Redirect Chain Checker</h2>
+                                <p class="text-darkgrey mb-0">@lang('home.redirect-checker-desc')</p>
+                            </div>
+                        </div>
+                        <div class="card-footer text-center border-top-0 pt-0">
+                            <a href="/{{ $local }}/redirect-checker" type="button" class="btn btn-launch" name="button">LAUNCH</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 mb-8">
+                    <div class="card card-custom card-stretch card-home">
+                        <div class="card-body p-7">
+                            <div class="text-center">
+                                <i class='text-darkgrey bx bx-bot bx-lg'></i>
+                                <h2 class="h6 text-darkgrey font-weight-bolder">Technology Lookup</h2>
+                                <p class="text-darkgrey mb-0">@lang('home.technology-lookup-desc')</p>
+                            </div>
+                        </div>
+                        <div class="card-footer text-center border-top-0 pt-0">
+                            <a href="/{{ $local }}/technology-lookup" type="button" class="btn btn-launch" name="button">LAUNCH</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 mb-8">
+                    <div class="card card-custom card-stretch card-home">
+                        <div class="card-body p-7">
+                            <div class="text-center">
+                                <i class='text-darkgrey bx bx-lg bx-globe'></i>
+                                <h2 class="h6 text-darkgrey font-weight-bolder">Link Analyzer</h2>
+                                <p class="text-darkgrey mb-0">@lang('home.link-analyzer-desc')</p>
+                            </div>
+                        </div>
+                        <div class="card-footer text-center border-top-0 pt-0">
+                            <a href="/{{ $local }}/link-analyzer" type="button" class="btn btn-launch" name="button">LAUNCH</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 mb-8">
+                    <div class="card card-custom card-stretch card-home">
+                        <div class="card-body p-7">
+                            <div class="text-center">
+                                <i class='text-darkgrey bx bx-file-find bx-lg'></i>
+                                <h2 class="h6 text-darkgrey font-weight-bolder">Hreflang Checker</h2>
+                                <p class="text-darkgrey mb-0">@lang('home.hreflang-checker-desc')</p>
+                            </div>
+                        </div>
+                        <div class="card-footer text-center border-top-0 pt-0">
+                            <a href="/{{ $local }}/hreflang-checker" type="button" class="btn btn-launch" name="button">LAUNCH</a>
+                        </div>
+                    </div>
+                </div>
+                    {{--
+                <div class="col-6 col-md-3 mb-8">
+                    <div class="card card-custom card-stretch card-home">
+                        <div class="card-body p-7">
+                            <div class="text-center">
+                                <i class='text-darkgrey bx bx-test-tube bx-lg'></i>
+                                <h2 class="h6 text-darkgrey font-weight-bolder">Keyword Research</h2>
+                                <p class="text-darkgrey">JSON-LD Generator adalah sebuah tools yang dibuat oleh cmlabs untuk memudahkan user.</p>
+                                <a href="/{{ $local }}/keyword-research" type="button" class="btn btn-launch" name="button">LAUNCH</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                --}}
+
+            </div>
+            <div class="d-flex align-items-center">
+                <i class='bx bxs-check-circle text-darkgrey mr-1'></i>
+                <span class="text-darkgrey">@lang('home.last-update') 15 Mar, 2021 | @lang('layout.version') 1.0</span>
+            </div>
         </div>
     </div>
 </div>
+<div class="" style="background:white">
+    <div class="container container-description">
+        <div class="row">
+            <div class="col-md-9">
+                <div class="" id="description-tab-1">
+                    <h2>@lang('home.desc-1')</h2>
+                    <ul>
+                        <li>@lang('home.desc-1-1')</li>
+                        <li>@lang('home.desc-1-2')</li>
+                        <li>@lang('home.desc-1-3')</li>
+                        <li>@lang('home.desc-1-4')</li>
+                        <li>@lang('home.desc-1-5')</li>
+                    </ul>
+                </div>
 
+                <div class="d-none" id="description-tab-2">
+                    <h2>@lang('home.desc-2')</h2>
+                    <h3>@lang('home.desc-2-1')</h3>
+                    <ol>
+                        <li>@lang('home.desc-2-1-1')</li>
+                        <li>@lang('home.desc-2-1-2')</li>
+                        <li>@lang('home.desc-2-1-3')</li>
+                        <li>@lang('home.desc-2-1-4')</li>
+                    </ol>
+                    <h3>@lang('home.desc-2-2')</h3>
+                    <ol>
+                        <li>@lang('home.desc-2-2-1')</li>
+                        <li>@lang('home.desc-2-2-2')</li>
+                        <li>@lang('home.desc-2-2-3')</li>
+                        <li>@lang('home.desc-2-2-4')</li>
+                    </ol>
+                    <h3>@lang('home.desc-2-3')</h3>
+                    <h4>@lang('home.desc-2-3-1')</h4>
+                    <ol>
+                        <li>@lang('home.desc-2-3-1-1')</li>
+                        <li>@lang('home.desc-2-3-1-2')</li>
+                        <li>@lang('home.desc-2-3-1-3')</li>
+                        <li>@lang('home.desc-2-3-1-4')</li>
+                    </ol>
+                    <h4>@lang('home.desc-2-3-2')</h4>
+                    <ol>
+                        <li>@lang('home.desc-2-3-2-1')</li>
+                        <li>@lang('home.desc-2-3-2-2')</li>
+                        <li>@lang('home.desc-2-3-2-3')</li>
+                        <li>@lang('home.desc-2-3-2-4')</li>
+                    </ol>
+                    <h4>@lang('home.desc-2-3-3')</h4>
+                    <ol>
+                        <li>@lang('home.desc-2-3-3-1')</li>
+                        <li>@lang('home.desc-2-3-3-2')</li>
+                        <li>@lang('home.desc-2-3-3-3')</li>
+                        <li>@lang('home.desc-2-3-3-4')</li>
+                    </ol>
+                    <h4>@lang('home.desc-2-3-4')</h4>
+                    <ol>
+                        <li>@lang('home.desc-2-3-4-1')</li>
+                        <li>@lang('home.desc-2-3-4-2')</li>
+                        <li>@lang('home.desc-2-3-4-3')</li>
+                        <li>@lang('home.desc-2-3-4-4')</li>
+                    </ol>
+                    <h4>@lang('home.desc-2-3-5')</h4>
+                    <ol>
+                        <li>@lang('home.desc-2-3-5-1')</li>
+                        <li>@lang('home.desc-2-3-5-2')</li>
+                        <li>@lang('home.desc-2-3-5-3')</li>
+                        <li>@lang('home.desc-2-3-5-4')</li>
+                    </ol>
+                    <h4>@lang('home.desc-2-3-6')</h4>
+                    <ol>
+                        <li>@lang('home.desc-2-3-6-1')</li>
+                        <li>@lang('home.desc-2-3-6-2')</li>
+                        <li>@lang('home.desc-2-3-6-3')</li>
+                        <li>@lang('home.desc-2-3-6-4')</li>
+                    </ol>
+                    <h4>@lang('home.desc-2-3-7')</h4>
+                    <ol>
+                        <li>@lang('home.desc-2-3-7-1')</li>
+                        <li>@lang('home.desc-2-3-7-2')</li>
+                        <li>@lang('home.desc-2-3-7-3')</li>
+                        <li>@lang('home.desc-2-3-7-4')</li>
+                    </ol>
+                    <h3>@lang('home.desc-2-4')</h3>
+                    <ol>
+                        <li>@lang('home.desc-2-4-1')</li>
+                        <li>@lang('home.desc-2-4-2')</li>
+                        <li>@lang('home.desc-2-4-3')</li>
+                        <li>@lang('home.desc-2-4-4')</li>
+                    </ol>
+                    <h3>@lang('home.desc-2-5')</h3>
+                    <ol>
+                        <li>@lang('home.desc-2-5-1')</li>
+                        <li>@lang('home.desc-2-5-2')</li>
+                        <li>@lang('home.desc-2-5-3')</li>
+                        <li>@lang('home.desc-2-5-4')</li>
+                    </ol>
+                    <h3>@lang('home.desc-2-6')</h3>
+                    <ol>
+                        <li>@lang('home.desc-2-6-1')</li>
+                        <li>@lang('home.desc-2-6-2')</li>
+                        <li>@lang('home.desc-2-6-3')</li>
+                        <li>@lang('home.desc-2-6-4')</li>
+                    </ol>
+                    <h3>@lang('home.desc-2-7')</h3>
+                    <ol>
+                        <li>@lang('home.desc-2-7-1')</li>
+                        <li>@lang('home.desc-2-7-2')</li>
+                        <li>@lang('home.desc-2-7-3')</li>
+                    </ol>
+                    <h3>@lang('home.desc-2-8')</h3>
+                    <ol>
+                        <li>@lang('home.desc-2-8-1')</li>
+                        <li>@lang('home.desc-2-8-2')</li>
+                        <li>@lang('home.desc-2-8-3')</li>
+                        <li>@lang('home.desc-2-8-4')</li>
+                        <li>@lang('home.desc-2-8-5')</li>
+                        <li>@lang('home.desc-2-8-6')</li>
+                        <li>@lang('home.desc-2-8-7')</li>
+                    </ol>
+                    <h3>@lang('home.desc-2-9')</h3>
+                    <ol>
+                        <li>@lang('home.desc-2-9-1')</li>
+                        <li>@lang('home.desc-2-9-2')</li>
+                        <li>@lang('home.desc-2-9-3')</li>
+                        <li>@lang('home.desc-2-9-4')</li>
+                    </ol>
+                    <h3>@lang('home.desc-2-10')</h3>
+                    <ol>
+                        <li>@lang('home.desc-2-10-1')</li>
+                        <li>@lang('home.desc-2-10-2')</li>
+                        <li>@lang('home.desc-2-10-3')</li>
+                        <li>@lang('home.desc-2-10-4')</li>
+                    </ol>
+                    <h3>@lang('home.desc-2-11')</h3>
+                    <ol>
+                        <li>@lang('home.desc-2-11-1')</li>
+                        <li>@lang('home.desc-2-11-2')</li>
+                        <li>@lang('home.desc-2-11-3')</li>
+                        <li>@lang('home.desc-2-11-4')</li>
+                    </ol>
+                    <h3>@lang('home.desc-2-12')</h3>
+                    <ol>
+                        <li>@lang('home.desc-2-12-1')</li>
+                        <li>@lang('home.desc-2-12-2')</li>
+                        <li>@lang('home.desc-2-12-3')</li>
+                        <li>@lang('home.desc-2-12-4')</li>
+                    </ol>
+                </div>
 
-
-<!-- Modal Detail Tools-->
-<div class="modal fade" id="modaldetail" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdrop" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-header border-0">
-                <h2 class="modal-title" id="modal-title"></h2>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <i aria-hidden="true" class="ki ki-close"></i>
-                </button>
+                <div class="d-none" id="description-tab-3">
+                    <h2>@lang('home.desc-3')</h2>
+                    <h3>@lang('home.desc-3-1')</h3>
+                    <p>@lang('home.desc-3-1-1')</p>
+                    <p>@lang('home.desc-3-1-2')</p>
+                    <p>@lang('home.desc-3-1-3')</p>
+                    <h3>@lang('home.desc-3-2')</h3>
+                    <p>@lang('home.desc-3-2-1')</p>
+                    <p>@lang('home.desc-3-2-2')</p>
+                    <p>@lang('home.desc-3-2-3')</p>
+                    <p>@lang('home.desc-3-2-4')</p>
+                    <p>@lang('home.desc-3-2-5')</p>
+                    <p>@lang('home.desc-3-2-6')</p>
+                    <p>@lang('home.desc-3-2-7')</p>
+                    <p>@lang('home.desc-3-2-8')</p>
+                    <h3>@lang('home.desc-3-3')</h3>
+                    <ol>
+                        <li>@lang('home.desc-3-3-1')</li>
+                        <li>@lang('home.desc-3-3-2')</li>
+                        <li>@lang('home.desc-3-3-3')</li>
+                    </ol>
+                    <h3>@lang('home.desc-3-4')</h3>
+                    <p>@lang('home.desc-3-4-1')</p>
+                    <p>@lang('home.desc-3-4-2')</p>
+                    <p>@lang('home.desc-3-4-3')</p>
+                </div>
             </div>
-            <div class="modal-body">
-                <p id="modal-desc"></p>
-            </div>
-            <div class="modal-footer border-0">
-                <button type="button" class="btn btn-light-primary font-weight-bold px-5" data-dismiss="modal">Close</button>
-                <a id="modal-link" href=""><button class="button btn btn-primary btn-sm px-5 font-weight-bolder text-uppercase text-white form-control">Launch</button></a>
+            <div class="col-md-3">
+                <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-1">
+                    <div class="mr-2" style="width:24px !important; height: 24px !important;">
+                        <span class="label label-lg label-tools-description active" id="nav-label-tab-1">1</span>
+                    </div>
+                    <a class="">@lang('home.desc-1')</a>
+                </div>
+                <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-2">
+                    <div class="mr-2" style="width:24px !important; height: 24px !important;">
+                        <span class="label label-lg label-tools-description" id="nav-label-tab-2">2</span>
+                    </div>
+                    <a class="">@lang('home.desc-2')</a>
+                </div>
+                <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-3">
+                    <div class="mr-2" style="width:24px !important; height: 24px !important;">
+                        <span class="label label-lg label-tools-description" id="nav-label-tab-3">3</span>
+                    </div>
+                    <a class="">@lang('home.desc-3')</a>
+                </div>
             </div>
         </div>
+        @include('layouts.roboDesc')
     </div>
 </div>
 @endsection
 
 @push('script')
-<!-- <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-<script src="{{asset('js/slick.js')}}"></script> -->
-<script type="text/javascript">
-    $(document).ready(function() {
-      $('#modaldetail').on('show.bs.modal', function(e) {
-          var target = $(e.relatedTarget);
-          var title = target.data('title');
-          var route = target.data('route');
-          var desc = target.data('desc');
-
-          $('#modal-title').text(title);
-          $('#modal-link').attr('href', route);
-          $('#modal-desc').text(desc);
-      });
-
-      $('.contributor-slide').carousel({
-          pause: "hover"
-      })
-    });
-</script>
-@endpush
-@push('script')
 <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [{
-      "@type": "ListItem",
-      "position": 1,
-      "name": "@lang('home.homepage')"
-    }]
-  }
+    {
+        "@context": "https://schema.org/",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+            "@type": "ListItem",
+            "position": 1,
+            "name": "@lang('layout.home')",
+            "item": "{{url('/')}}/{{$local}}"
+        }]
+    }
+</script>
+<script type="text/javascript">
+    $('#toggle_button_webmaster').click();
 </script>
 @endpush
-<!-- home -->
+
 @section('home')
-menu-item-active
+active
 @endsection
