@@ -564,6 +564,46 @@ a:hover {
     background-color: var(--primaryblue);
 }
 
+.card-footer-office {
+    background-color: var(--darkgrey);
+    border-radius: 10px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25) !important;
+}
+.office-footer .office-detail {
+    flex: 85%;
+}
+.office-footer .office-map {
+    flex: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.office-detail .office-label,
+.office-detail .office-address {
+    color: var(--white);
+}
+.office-detail .office-hours {
+    color: var(--grey);
+    transition: .3s;
+}
+@media (max-width: 554px) {
+    .office-detail {
+        margin-bottom: 20px;
+    }
+}
+.btn-open-map {
+    background-color: var(--white);
+    color: var(--softgrey);
+    border-radius: 30px;
+    transition: .3s;
+}
+.card-footer-office:hover .card-body .office-footer .office-detail .office-hours {
+    color: #ffde68;
+}
+.card-footer-office:hover .card-body .office-footer .office-map .btn-open-map {
+    color: var(--darkgrey);
+}
+
 .footer-company-list {
     background-color: var(--lightgrey);
     box-shadow: none !important;
