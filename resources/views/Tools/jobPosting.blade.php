@@ -349,168 +349,61 @@ id/json-ld-jobPosting-schema-generator
                     <p>@lang('jobPosting.desc-3-1')</p>
                     <p>@lang('jobPosting.desc-3-2')</p>
                     <pre class="language-html mb-4">
-            <code class="language-html">
-              &lt;script type="application/ld+json"&gt;
-                {
-                  "@context": "https://schema.org/",
-                  "@type": "JobPosting",
-                  "title": "WordPress Developer",
-                  "description": "Vestibulum id ligula porta felis euismod semper...",
-                  "identifier": {
-                    "@type": "PropertyValue",
-                    "name": "WP-Buddy",
-                    "value": "1234567"
-                  },
-                  "datePosted": "2019-06-01",
-                  "validThrough": "2019-12-31T00:00",
-                  "employmentType": "CONTRACTOR",
-                  "hiringOrganization": {
-                    "@type": "Organization",
-                    "name": "WP-Buddy",
-                    "sameAs": "https://wp-buddy.com",
-                    "logo": "https://wp-buddy.com/images/logo.png"
-                  },
-                  "jobLocation": {
-                    "@type": "Place",
-                    "address": {
-                      "@type": "PostalAddress",
-                      "streetAddress": "Musterstraße 1",
-                      "addressLocality": "Musterstadt",
-                      "addressRegion": "BY",
-                      "postalCode": "12345",
-                      "addressCountry": "DE"
-                    }
-                  },
-                  "baseSalary": {
-                    "@type": "MonetaryAmount",
-                    "currency": "EUR",
-                    "value": {
-                      "@type": "QuantitativeValue",
-                      "value": 60.00,
-                      "unitText": "HOUR"
-                    }
-                  }
-                }
-              &lt;/script&gt;
-            </code>
-          </pre>
+                        <code class="language-html">
+                            &lt;script type="application/ld+json"&gt;
+                                {
+                                    "@context": "https://schema.org/",
+                                    "@type": "JobPosting",
+                                    "title": "Developer",
+                                    "description": "Let's join our code enthusiast and create a new inovation for the world.",
+                                    "identifier": {
+                                        "@type": "PropertyValue",
+                                        "name": "cmlabs",
+                                        "value": "12345"
+                                    },
+                                    "hiringOrganization": {
+                                        "@type": "Organization",
+                                        "name": "cmlabs",
+                                        "sameAs": "cmlabs.co"
+                                    },
+                                    "industry": "Software House",
+                                    "employmentType": "FULL_TIME",
+                                    "workHours": "08.00 - 16.00",
+                                    "datePosted": "04/20/2021",
+                                    "validThrough": "05/11/2021",
+                                    "jobLocation": {
+                                        "@type": "Place",
+                                        "address": {
+                                            "@type": "PostalAddress",
+                                            "streetAddress": "Malang, Indonesia",
+                                            "addressLocality": "Malang",
+                                            "addressRegion": "JI",
+                                            "postalCode": "65141",
+                                            "addressCountry": "ID"
+                                        }
+                                    },
+                                    "baseSalary": {
+                                        "@type": "MonetaryAmount",
+                                        "currency": "IDR",
+                                        "value": {
+                                            "@type": "QuantitativeValue",
+                                            "value": "2000000",
+                                            "unitText": "MONTH"
+                                        }
+                                    },
+                                    "responsibilities": "building API",
+                                    "educationRequirements": "Bachelor Degree",
+                                    "experienceRequirements": "min. 4 years experience"
+                                }
+                            &lt;/script&gt;
+                        </code>
+                    </pre>
                 </div>
                 <div class="d-none" id="description-tab-4">
                     <h2>@lang('jobPosting.desc-4')</h2>
                     <p>@lang('jobPosting.desc-4-1')</p>
                     <p>@lang('jobPosting.desc-4-2')</p>
                     <img class="mb-4" src="{{asset('/media/images/jobPosting-instruction-2.png')}}" alt="jobPosting-instruction-2" width="500">
-                </div>
-                <div class="d-none" id="description-tab-5">
-                    <h2>@lang('jobPosting.desc-5')</h2>
-                    <p>@lang('jobPosting.desc-5-1')</p>
-                    <p>@lang('jobPosting.desc-5-2')</p>
-                    <p>@lang('jobPosting.desc-5-3')</p>
-                    <p>@lang('jobPosting.desc-5-4')</p>
-                    <pre class="language-html mb-4">
-            <code class="language-html">
-              &lt;script type="application/ld+json"&gt;
-                {
-                  {
-                    "id": "snip-5ba213a8a8e21",
-                    "context": "http://schema.org",
-                    "type": "JobPosting",
-                    "datePosted-prop-5ba214cfe7db5": {
-                        "0": "current_post_date",
-                        "1": null,
-                        "overridable": false,
-                        "overridable_multiple": false
-                    },
-                    "description-prop-5ba214f35d336": {
-                        "0": "codepirates_job_description",
-                        "1": null,
-                        "overridable": false,
-                        "overridable_multiple": false
-                    },
-                    "employmentType-prop-5ba2150f61eff": {
-                        "0": "codepirates_employment_type",
-                        "1": null,
-                        "overridable": false,
-                        "overridable_multiple": false
-                    },
-                    "hiringOrganization-prop-5ba2154aa9ada": {
-                        "0": "codepirates_organization",
-                        "1": null,
-                        "overridable": false,
-                        "overridable_multiple": false
-                    },
-                    "identifier-prop-5ba215681873f": {
-                        "0": "http://schema.org/PropertyValue",
-                        "1": {
-                            "id": "snip-5ba215711936a",
-                            "context": "http://schema.org",
-                            "type": "PropertyValue",
-                            "value-prop-5ba215848023f": {
-                                "0": "codepirates_job_id",
-                                "1": null,
-                                "overridable": false,
-                                "overridable_multiple": false
-                            },
-                            "name-prop-5ba2159e9af77": {
-                                "0": "current_post_title",
-                                "1": null,
-                                "overridable": false,
-                                "overridable_multiple": false
-                            }
-                        },
-                        "overridable": false,
-                        "overridable_multiple": false
-                    },
-                    "jobLocation-prop-5ba21785f2b90": {
-                        "0": "codepirates_job_location",
-                        "1": null,
-                        "overridable": false,
-                        "overridable_multiple": false
-                    },
-                    "title-prop-5ba217ca17982": {
-                        "0": "current_post_title",
-                        "1": null,
-                        "overridable": false,
-                        "overridable_multiple": false
-                    },
-                    "validThrough-prop-5ba217f02b8de": {
-                        "0": "codepirates_job_validity",
-                        "1": null,
-                        "overridable": false,
-                        "overridable_multiple": false
-                    },
-                    "mainEntityOfPage-prop-5ceb9fa7833b9": {
-                        "0": "http://schema.org/WebPage",
-                        "1": {
-                            "id": "snip-5ceba1da3e25e",
-                            "context": "http://schema.org",
-                            "type": "WebPage",
-                            "@id-prop-5ceba1de6c705": {
-                                "0": "textfield",
-                                "1": "#webpage",
-                                "overridable": false,
-                                "overridable_multiple": false
-                            }
-                        },
-                        "overridable": false,
-                        "overridable_multiple": false
-                    },
-                    "@id-prop-5ceba25138a71": {
-                        "0": "textfield",
-                        "1": "#job",
-                        "overridable": false,
-                        "overridable_multiple": false
-                    },
-                    "_is_export": true
-                }
-              &lt;/script&gt;
-            </code>
-          </pre>
-                </div>
-                <div class="d-none" id="description-tab-6">
-                    <h2>@lang('jobPosting.desc-6')</h2>
-                    <p>@lang('jobPosting.desc-6-1')</p>
-                    <p>@lang('jobPosting.desc-6-2')</p>
                 </div>
             </div>
             <div class="col-md-3">
@@ -537,18 +430,6 @@ id/json-ld-jobPosting-schema-generator
                         <span class="label label-lg label-tools-description" id="nav-label-tab-4">4</span>
                     </div>
                     <a class="">@lang('jobPosting.desc-4')</a>
-                </div>
-                <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-5">
-                    <div class="mr-2" style="width:24px !important; height: 24px !important;">
-                        <span class="label label-lg label-tools-description" id="nav-label-tab-5">5</span>
-                    </div>
-                    <a class="">@lang('jobPosting.desc-5')</a>
-                </div>
-                <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-6">
-                    <div class="mr-2" style="width:24px !important; height: 24px !important;">
-                        <span class="label label-lg label-tools-description" id="nav-label-tab-6">6</span>
-                    </div>
-                    <a class="">@lang('jobPosting.desc-6')</a>
                 </div>
             </div>
         </div>
