@@ -468,7 +468,6 @@
 
     $(document).on('click', '.deleteStep', function () {
         let index = parseInt(jQuery(this).data('id'));
-        console.log($('.stepCounter[data-id=' + index + ']').val())
             jsonFormat.step.splice($('.stepCounter[data-id=' + index + ']').val(), 1);
             jsonFormat.render();
 
@@ -476,8 +475,7 @@
                 $('.loopStep[data-id=' + (i - 1) + ']').val($('.loopStep[data-id=' + (i) + ']').val())
             }
 
-        $('.deleteTool[data-id=' + index + ']').remove();
-        $('.row[data-id=' + index + ']').remove();
+        $('.loopStep[data-id=' + index + ']').remove();
         let row = parseInt($('#json-format').val().split('\n').length);
         $('#json-format').attr('rows',row);
 

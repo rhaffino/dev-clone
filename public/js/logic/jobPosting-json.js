@@ -405,11 +405,20 @@ $("#province-show").hide();
     $('.country').change(function (e){
 
         if($(this).val() == "ID"){
-            console.log('yes');
+            // console.log('yes');
         }else{
-            console.log('no')
+            // console.log('no')
+            if($(this).val() == "none"){
+                console.log('yes')
+                delete jobFormat.jobLocation.address.addressCountry;
+                jobFormat.tempAddressCountry = "";
+            }
+
             jobFormat.tempAddressRegion = "";
             jobFormat.jobLocation.address.addressRegion = "";
+
+
+
             jobFormat.temp();
             jobFormat.render();
         }
@@ -428,7 +437,7 @@ $("#province-show").hide();
                     $("#province-show").hide();
                 }
 
-                jobFormat.jobLocation.addressCountry = "";
+                jobFormat.jobLocation.address.addressCountry = "";
             }
             jobFormat.tempAddressCountry = "";
             $("#hide-province").show();
