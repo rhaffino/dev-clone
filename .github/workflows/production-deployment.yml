@@ -16,6 +16,7 @@ jobs:
           # Command to execute on the remote server.
           command: |
             cd /var/www/tools.cmlabs.co/
+            sudo chown ubuntu:www-data -R ./
             git pull origin master
             composer install
             sudo chown www-data:www-data -R ./
