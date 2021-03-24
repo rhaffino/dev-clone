@@ -7,6 +7,7 @@ use App\Http\Resources\BaseApiResource;
 use Illuminate\Http\Request;
 use App\Traits\ApiHelper;
 use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\Facades\Redis;
 use Illuminate\Support\Facades\Validator;
 use Mockery\Exception;
@@ -18,40 +19,42 @@ class ApiController extends Controller
     public function analyzeTechnology(Request $request)
     {
         $url = $request->get('url');
-        $ipAddress = $request->ip();
-        $cacheKey = "$ipAddress-$url";
+
+        $sessionCookie = Cookie::get("tl_session");
+        if(!$sessionCookie){
+            $sessionCookie = Session::getId();
+            Cookie::forever("tl_session", encrypt($sessionCookie));
+            $cacheKey = "$sessionCookie-$url";
+        } else {
+            $cacheKey = "$sessionCookie-$url";
+        }
+
 
         if (!filter_var($url, FILTER_VALIDATE_URL)) {
             return new BaseApiResource(null, 'URL is not valid', 422, 'danger');
         }
 
         try {
-            $response = Redis::get($cacheKey);
-            if (!$response) {
+            $keys = Redis::keys("$sessionCookie-*");
+
+            if(count($keys) < 5){
                 $response = $this->requestTechLookup($url);
                 if ($response['statusCode'] === 200) {
                     Redis::set($cacheKey, json_encode($response));
                     Redis::expire($cacheKey, 60 * 60);
-                } else if ($response['statusCode'] === 429) {
-                    // get latest key remaining time
-                    $keys = Redis::keys("*$ipAddress*");
-                    $minimumTime = 60 * 60 * 24 * 30;
-                    $currentKey = null;
-                    foreach ($keys as $key) {
-                        $_key = str_replace(config('database.redis.options.prefix'), "", $key);
-                        $currentTime = Redis::ttl("$_key");
-                        $minimumTime = $minimumTime > $currentTime ? $currentTime : $minimumTime;
-                    }
-
-                    return new BaseApiResource(['current_time' => $minimumTime], $response['message'], $response['statusCode'], 'danger');
+                    return new BaseApiResource($response['data'] ?? [], $response['message'], $response['statusCode']);
                 } else {
                     return new BaseApiResource(null, $response['message'], 500);
                 }
             } else {
-                $response = json_decode($response, true);
+                $minimumTime = 60 * 60 * 24 * 30;
+                foreach ($keys as $key) {
+                    $_key = str_replace(config('database.redis.options.prefix'), "", $key);
+                    $currentTime = Redis::ttl("$_key");
+                    $minimumTime = $minimumTime > $currentTime ? $currentTime : $minimumTime;
+                }
+                return new BaseApiResource(['current_time' => $minimumTime], 'Too Many Request', 429, 'danger');
             }
-
-            return new BaseApiResource($response['data'] ?? [], $response['message'], $response['statusCode']);
         } catch (\Exception $exception) {
             return new BaseApiResource(null, $exception->getMessage(), 500);
         }
