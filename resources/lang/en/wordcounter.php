@@ -3,7 +3,7 @@ return[
     "meta-title" => "Word Counter Online - Word counter tools",
     "meta-desc" => "Count the number of words, paragraphs, reading time, and keyword density with the Word Counter Tool",
     "title" => "WORD COUNTER",
-    "subtitle" => "Advance Your Writing",
+    "subtitle" => "Calculate The Number of Words in a Text",
     "tooltip-copy" => "Copy",
     "tooltip-clear" => "Clear",
     "tooltip-set-font-size" => "Set font size to",
