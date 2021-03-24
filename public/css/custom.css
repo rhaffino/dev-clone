@@ -2280,3 +2280,8 @@ textarea.input-meta-description {
     color: #037BCB !important;
     cursor: pointer;
 }
+
+.anchor-analyzer p img {
+    width: 100%;
+    height: 100%;
+}
