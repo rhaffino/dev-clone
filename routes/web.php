@@ -16,18 +16,6 @@ use Illuminate\Support\Facades\Cookie;
 Route::get('/login', 'Auth\LoginController@loginView');
 Route::post('/validate','Auth\LoginController@validateLogin');
 Route::get('/logout','Auth\LoginController@logout');
-Route::get('/test', function(){
-    $sessionCookie = Cookie::get("tl_session");
-
-//    dd(encrypt(Session::getId()));
-    if(!$sessionCookie){
-        $sessionCookie = Session::getId();
-        Cookie::queue("tl_session", encrypt($sessionCookie));
-    } else {
-        $cacheKey = decrypt($cacheKey);
-    }
-    return $cacheKey;
-});
 Route::middleware([\App\Http\Middleware\ManualAuth::class])->group(function (){
     Route::redirect('/', '/en');
 //Route::resource('/', 'HomeController');
