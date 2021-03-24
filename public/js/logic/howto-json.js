@@ -181,7 +181,7 @@
             const keys = JSON.parse(localStorage.getItem(_howToLocalStorage))
             if (keys.how_to){
                 for (let key of keys.how_to){
-                    console.log(sleceFirstLastLine(localStorage.getItem(key)))
+                    // console.log(sleceFirstLastLine(localStorage.getItem(key)))
                     let temp = JSON.parse(sleceFirstLastLine(localStorage.getItem(key)))
                     let date = new Date(key*1000)
                     // let div = '<div class="custom-card py-5 px-3" onclick="getData('+key+')">'+
@@ -250,7 +250,7 @@
         let datas = getDataFromText();
         // console.log(datas.mainEntity.length !== 1 || (datas.mainEntity[0].name && datas.mainEntity[0].acceptedAnswer.text))
         if(datas.length !== 1){
-            console.log(datas,"SAVE")
+            // console.log(datas,"SAVE")
             const key = $('#json-format').data('key');
             const keys = window.localStorage.getItem(_howToLocalStorage)
             var temp = define();
@@ -263,7 +263,7 @@
             localStorage.setItem(_howToLocalStorage, JSON.stringify(temp));
             localStorage.setItem(key, $('#json-format').val());
         }else{
-            console.log(datas,"FAIL")
+            // console.log(datas,"FAIL")
             const key = $('#json-format').data('key');
             const keys = window.localStorage.getItem(_howToLocalStorage)
             var temp = define();
@@ -468,7 +468,7 @@
 
     $(document).on('click', '.deleteStep', function () {
         let index = parseInt(jQuery(this).data('id'));
-        console.log($('.stepCounter[data-id=' + index + ']').val())
+        // console.log($('.stepCounter[data-id=' + index + ']').val())
             jsonFormat.step.splice($('.stepCounter[data-id=' + index + ']').val(), 1);
             jsonFormat.render();
 
