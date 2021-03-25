@@ -1128,8 +1128,8 @@ a:hover {
     font-weight: bold;
 }
 
-.font-size-10px {
-    font-size: 10px !important;
+.font-size-18px {
+    font-size: 18px !important;
 }
 
 .font-size-12px {
@@ -1177,7 +1177,7 @@ a:hover {
 .wordcounter-background-density-left-edge {
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
-    width: 90px;
+    width: 65px;
 }
 
 .wordcounter-background-density-right-edge {
@@ -2128,7 +2128,7 @@ textarea.input-meta-description {
 }
 
 .btn-download-sitemap:hover {
-    background: var(--black);
+    background: var(--black) !important;
     color: white;
 }
 
