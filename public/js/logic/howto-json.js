@@ -399,23 +399,28 @@
 
     $(document).on('click', '.deleteSupply', function () {
         let index = parseInt(jQuery(this).data('id'));
+
         jsonFormat.supplyItem.splice(index, 1);
         jsonFormat.render();
 
         for(let i = index+1; i < jsonFormat.supplyItem.length + 1; i++){
+            // console.log(i)
             $('.supplyName[data-id=' + (i - 1) + ']').val($('.supplyName[data-id=' + (i) + ']').val())
         }
-        $('.supply-name[data-id=' + index + ']').remove();
 
         $('span[class="supplyCount"]').each(function(index, item) {
             $(item).html(index+1);
         });
 
+        $('.supply-name[data-id=' + jsonFormat.supplyItem.length + ']').remove();
+
+
         let row = parseInt($('#json-format').val().split('\n').length);
         $('#json-format').attr('rows',row);
 
-        sticky.update();
         if(jsonFormat.supplyItem.length > 0) _supplyCounter--;
+
+
     });
 
     $(document).on('keyup', '.instructions', function () {
