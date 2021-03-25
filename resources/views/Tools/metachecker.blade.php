@@ -25,63 +25,99 @@ id/page-title-meta-description-checker
             <span class="text-darkgrey h4 font-weight-normal">@lang('metachecker.sub-title')</span>
             <div class="header-blue py-3 mb-5 px-4 mt-10">
                 <div class="row d-flex align-items-center">
-                    <div class="col-md-3 text-left pl-0 col-mobile">
+                    <div class="col-md-2 text-left pl-0 col-mobile">
                         <div class="d-flex align-items-center metachecker-option">
                             <div class="metachecker-background-text-size-left-edge d-flex justify-content-center align-items-center p-2 ml-5">
                                 <i class='bx bxs-cog text-white'></i>
                             </div>
-                            <div id="manualModeOff" class="d-block metachecker-background-text-size text-white font-weight-bolder justify-content-center align-items-center p-2" data-toggle="tooltip" data-theme="dark"
+                            <div id="manualModeOff" class="d-none metachecker-background-text-size text-white font-weight-bolder justify-content-center align-items-center p-2" data-toggle="tooltip" data-theme="dark"
                                 title="{{ Lang::get('metachecker.tooltip-manual-off') }}">
                                 MANUAL
                             </div>
-                            <div id="manualModeOn" class="d-none metachecker-background-text-size active text-white font-weight-bolder justify-content-center align-items-center p-2" data-toggle="tooltip" data-theme="dark"
+                            <div id="manualModeOn" class="d-block metachecker-background-text-size active text-white font-weight-bolder justify-content-center align-items-center p-2" data-toggle="tooltip" data-theme="dark"
                                 title="{{ Lang::get('metachecker.tooltip-manual-on') }}">
                                 MANUAL
                             </div>
-                            <div id="botModeOff" class="d-none metachecker-background-text-size metachecker-background-text-size-right-edge text-white font-weight-bolder justify-content-center align-items-center p-2" data-toggle="tooltip"
+                            <div id="botModeOff" class="d-block metachecker-background-text-size metachecker-background-text-size-right-edge text-white font-weight-bolder justify-content-center align-items-center p-2" data-toggle="tooltip"
                                 data-theme="dark" title="{{ Lang::get('metachecker.tooltip-bot-off') }}">
                                 BOT
                             </div>
-                            <div id="botModeOn" class="d-block metachecker-background-text-size active metachecker-background-text-size-right-edge text-white font-weight-bolder justify-content-center align-items-center p-2" data-toggle="tooltip"
+                            <div id="botModeOn" class="d-none metachecker-background-text-size active metachecker-background-text-size-right-edge text-white font-weight-bolder justify-content-center align-items-center p-2" data-toggle="tooltip"
                                 data-theme="dark" title="{{ Lang::get('metachecker.tooltip-bot-on') }}">
                                 BOT
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 col-mobile">
-                        <input id="url" type="text" class="input-url text-center w-100" placeholder="https://example.com" value="" autocomplete="off">
+                    <div class="col-md-7 col-mobile">
+                        <input id="url" type="text" class="input-url input-url-meta-checker text-center w-100" placeholder="https://example.com" value="" autocomplete="off">
                     </div>
                     <div class="col-md-3 text-right col-mobile">
                         <button id="crawlURL" class="btn btn-crawl px-10">@lang('metachecker.btn-crawl')</button>
                     </div>
                 </div>
             </div>
-            <div id="manual-mode" class="mb-5 d-none">
+            <div id="manual-mode" class="mb-5 d-block">
                 <div class="bg-info bg-primaryblue border-radius-5px mb-5 px-9 py-5">
                     <div class="row d-flex flex-column ">
-                        <div class="d-flex align-items-center flex-row">
+                        <div class="d-flex align-items-center justify-content-between flex-row">
+                            <div class="">
                             <span class="meta-title mr-5">PAGE TITLE</span>
                             <div class="progress-bar_wrap">
-                                <div id="titlebar1" class="progress-bar_item progress-bar_item-1 blank"></div>
-                                <div id="titlebar2" class="progress-bar_item progress-bar_item-2 blank"></div>
-                                <div id="titlebar3" class="progress-bar_item progress-bar_item-3 blank"></div>
+                                <div id="titlebar1" class="progress-bar_item progress-bar_item-1 warning"></div>
+                                <div id="titlebar2" class="progress-bar_item progress-bar_item-2 active"></div>
+                                <div id="titlebar3" class="progress-bar_item progress-bar_item-3 danger"></div>
+                            </div>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div class="text-center mx-2">
+                                    <p class="mb-0 text-white">Word : <strong>999</strong></p>
+                                </div>
+                                <div class="text-center mx-2">
+                                    <p class="mb-0 text-white">Pixel : <strong>999px</strong></p>
+                                </div>
                             </div>
                         </div>
-                        <input id="title" type="text" class="form-control bg-primaryblue text-white px-0 input-meta-title" id="meta-title" autocomplete="off" placeholder="{{ Lang::get('metachecker.input-hint-manual') }}">
+                        <input id="title" type="text" class="form-control bg-primaryblue text-white px-0 input-meta-title mb-2" id="meta-title" autocomplete="off" placeholder="{{ Lang::get('metachecker.input-hint-manual') }}">
+                        <div class="d-flex align-items-center">
+                            <i class='bx bx-error text-white mr-2'></i>
+                            <p class="mb-0 text-white">Word More Than 12</p>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <i class='bx bx-error text-white mr-2'></i>
+                            <p class="mb-0 text-white">Pixel More Than 12px</p>
+                        </div>
                     </div>
                 </div>
                 <div class="bg-info py-5 px-9 bg-primaryblue border-radius-5px">
                     <div class="row d-flex flex-column">
-                        <div class="d-flex align-items-center flex-row">
-                            <span class="meta-desc mr-5">META DESCRIPTION</span>
-                            <div class="progress-bar_wrap">
-                                <div id="descbar1" class="progress-bar_item progress-bar_item-1 blank"></div>
-                                <div id="descbar2" class="progress-bar_item progress-bar_item-2 blank"></div>
-                                <div id="descbar3" class="progress-bar_item progress-bar_item-3 blank"></div>
+                        <div class="d-flex align-items-center justify-content-between flex-row">
+                            <div class="">
+                                <span class="meta-desc mr-5">META DESCRIPTION</span>
+                                <div class="progress-bar_wrap">
+                                    <div id="descbar1" class="progress-bar_item progress-bar_item-1 blank"></div>
+                                    <div id="descbar2" class="progress-bar_item progress-bar_item-2 blank"></div>
+                                    <div id="descbar3" class="progress-bar_item progress-bar_item-3 blank"></div>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div class="text-center mx-2">
+                                    <p class="mb-0 text-white">Word : <strong>999</strong></p>
+                                </div>
+                                <div class="text-center mx-2">
+                                    <p class="mb-0 text-white">Pixel : <strong>999px</strong></p>
+                                </div>
                             </div>
                         </div>
-                        <textarea id="desc" data-autoresize rows="1" class="form-control bg-primaryblue text-white px-0 input-meta-description" autocomplete="off" placeholder="{{ Lang::get('metachecker.input-hint-manual') }}"
+                        <textarea id="desc" data-autoresize rows="1" class="mb-2 form-control bg-primaryblue text-white px-0 input-meta-description" autocomplete="off" placeholder="{{ Lang::get('metachecker.input-hint-manual') }}"
                             style="resize:none; overflow:hidden"></textarea>
+                            <div class="d-flex align-items-center">
+                                <i class='bx bx-error text-white mr-2'></i>
+                                <p class="mb-0 text-white">Word More Than 12</p>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <i class='bx bx-error text-white mr-2'></i>
+                                <p class="mb-0 text-white">Pixel More Than 12px</p>
+                            </div>
                     </div>
                 </div>
             </div>

@@ -270,6 +270,8 @@ const fillDescBar = function (param) {
 }
 
 $(document).ready(function () {
+    $("#crawlURL").attr("disabled", true);
+    $("#title").focus();
     $('#manualModeOff').click(function () {
         $('#manualModeOn').removeClass("d-none").addClass("d-block");
         $('#botModeOff').removeClass("d-none").addClass("d-block");
@@ -279,6 +281,7 @@ $(document).ready(function () {
         $("#crawlURL").attr("disabled", true);
         $('#title').attr('disabled', false);
         $('#desc').attr('disabled', false);
+        $("#title").focus();
     });
 
     $('#botModeOff').click(function () {
@@ -290,6 +293,7 @@ $(document).ready(function () {
         $("#crawlURL").attr("disabled", false);
         $('#title').attr('disabled', true);
         $('#desc').attr('disabled', true);
+        $("#url").focus();
     });
 
     refreshLocalStorage();
