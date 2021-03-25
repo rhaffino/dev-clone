@@ -11,6 +11,8 @@
 |
 */
 
+use Illuminate\Support\Facades\Cookie;
+
 Route::get('/login', 'Auth\LoginController@loginView');
 Route::post('/validate','Auth\LoginController@validateLogin');
 Route::get('/logout','Auth\LoginController@logout');

@@ -94,7 +94,7 @@ function deleteHistory(_url = null) {
     let histories = [];
     if (_url) {
         histories = localStorage.getItem(TECH_LOOKUP_LOCAL_STORAGE_KEY) || [];
-        if (typeof(histories) === 'string' || histories instanceof String) histories = JSON.parse(histories);
+        if (typeof (histories) === 'string' || histories instanceof String) histories = JSON.parse(histories);
         histories = histories.filter((history) => {
             return history.url !== _url;
         });
@@ -136,6 +136,12 @@ function analyzeUrl(_url) {
                     renderAllData(res.data);
                     addHistory(_url, res.data);
                     getHistories();
+                } else if (err.responseJSON.statusCode === 429) {
+                    let {
+                        minute,
+                        second
+                    } = convertSecond(err.responseJSON.data.current_time);
+                    toastr.error(`Please wait for ${minute} minutes and ${second} seconds`, `Error ${err.responseJSON.message}`)
                 } else {
                     $('#technology-lookup-result-list').hide();
                     $('#technology-lookup-result-empty').show();
@@ -143,6 +149,7 @@ function analyzeUrl(_url) {
                 }
             },
             error: (err) => {
+                console.log(err);
                 if (err.responseJSON.statusCode === 429) {
                     let {
                         minute,
@@ -181,7 +188,7 @@ function renderAllData(data) {
 
 function formatDate(date) {
     // Format should be : DD/MM/YYYY HH:ii
-    return `${date.getDate()}/${date.getMonth()}/${date.getFullYear()} ${date.getHours()}:${date.getMinutes()}`
+    return `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()} ${date.getHours()}:${date.getMinutes()}`
 }
 
 function checkUrl(url) {
@@ -202,7 +209,7 @@ function getProtocol(url) {
     }
 }
 
-$('#input-url').keyup(function() {
+$('#input-url').keyup(function () {
     const _url = $(this).val();
     if (checkUrl(_url)) {
         $('#empty-url').hide();
@@ -221,9 +228,9 @@ $('#input-url').keyup(function() {
     }
 });
 
-$('#local-history').on('click', '.delete-history--btn', function() {
+$('#local-history').on('click', '.delete-history--btn', function () {
     deleteHistory($(this).data('url'))
-}).on('click', '.history--list', function(e) {
+}).on('click', '.history--list', function (e) {
     if (e.target.classList.contains('delete-history--btn')) return;
     const _url = $(this).data('url');
 
@@ -238,9 +245,9 @@ $('#local-history').on('click', '.delete-history--btn', function() {
     renderAllData(history.data);
 })
 
-$('#local-history-mobile').on('click', '.delete-history--btn', function() {
+$('#local-history-mobile').on('click', '.delete-history--btn', function () {
     deleteHistory($(this).data('url'))
-}).on('click', '.history--list', function(e) {
+}).on('click', '.history--list', function (e) {
     if (e.target.classList.contains('delete-history--btn')) return;
     // analyze($(this).data('url'));
     const _url = $(this).data('url');
@@ -256,10 +263,10 @@ $('#local-history-mobile').on('click', '.delete-history--btn', function() {
     renderAllData(history.data);
 })
 
-$('.clear-history--btn').click(function() {
+$('.clear-history--btn').click(function () {
     deleteHistory();
 });
 
-$('#crawl-btn').click(function() {
+$('#crawl-btn').click(function () {
     analyzeUrl($('#input-url').val());
 })

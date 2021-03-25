@@ -78,12 +78,12 @@ id/json-ld-faq-schema-generator
                                             <button type="submit" id="test" class="btn font-weight-bold " name="button">
                                                 <i class='bx bx-check-circle'></i> <span>@lang('layout.btn-check')</span></button>
                                         </div>
-                                        <div id="reset" class="col-4 d-flex justify-content-center px-0 button-result">
-                                            <button type="button" class="btn font-weight-bold" name="button">
+                                        <div class="col-4 d-flex justify-content-center px-0 button-result">
+                                            <button type="button" id="reset" class="btn font-weight-bold" name="button">
                                                 <i class='bx bx-refresh'></i> <span>@lang('layout.btn-reset')</span></button>
                                         </div>
                                     </div>
-                                    <textarea name="code_snippet" style="resize:none" rows="16" class="form-control" id="json-format" data-key="{{time()}}"></textarea>
+                                    <textarea name="code_snippet" style="resize:none" rows="16" class="form-control" id="json-format" data-key="{{time()}}" readonly></textarea>
                                 </form>
                             </div>
                         </div>

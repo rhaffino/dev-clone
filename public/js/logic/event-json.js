@@ -110,7 +110,7 @@ jQuery(document).on('change', '.eventStatus', function () {
 
 jQuery(document).on('change', '.attendance', function () {
     let index = parseInt(jQuery(this).data('id'));
-    console.log(jQuery(this).val())
+    // console.log(jQuery(this).val())
     if (jQuery(this).val() == 'offline') {
         main.mainEntity[index].eventAttendanceMode = jQuery(this).val();
         main.mainEntity[index].location ={
@@ -154,7 +154,7 @@ jQuery(document).on('change', '.attendance', function () {
         let row = parseInt(jQuery('#json-format').val().split('\n').length);
         jQuery('#json-format').attr('rows',row);
         sticky.update();
-        console.log("INDEX :",index)
+        // console.log("INDEX :",index)
 
     } else if (jQuery(this).val() == 'mixed') {
         main.mainEntity[index].eventAttendanceMode = jQuery(this).val();
@@ -245,42 +245,42 @@ jQuery(document).on('keyup', '.namePerformer', function () {
 
 jQuery(document).on('change', '.currency', function () {
     let index = parseInt(jQuery(this).data('id'));
-    console.log("INDEX : ", index)
+    // console.log("INDEX : ", index)
     main.mainEntity[index].offers.priceCurrency = jQuery(this).val();
     print();
 });
 
 jQuery(document).on('keyup', '.nameOffer', function () {
     let index = parseInt(jQuery(this).data('id'));
-    console.log("INDEX : ", index)
+    // console.log("INDEX : ", index)
     main.mainEntity[index].offers.name = jQuery(this).val();
     print();
 });
 
 jQuery(document).on('keyup', '.price', function () {
     let index = parseInt(jQuery(this).data('id'));
-    console.log("INDEX : ", index)
+    // console.log("INDEX : ", index)
     main.mainEntity[index].offers.price = jQuery(this).val();
     print();
 });
 
 jQuery(document).on('change', '.validFrom', function () {
     let index = parseInt(jQuery(this).data('id'));
-    console.log("INDEX : ", index)
+    // console.log("INDEX : ", index)
     main.mainEntity[index].offers.validFrom = jQuery(this).val();
     print();
 });
 
 jQuery(document).on('keyup', '.url', function () {
     let index = parseInt(jQuery(this).data('id'));
-    console.log("INDEX : ", index)
+    // console.log("INDEX : ", index)
     main.mainEntity[index].offers.url = jQuery(this).val();
     print();
 });
 
 jQuery(document).on('change', '.availability', function () {
     let index = parseInt(jQuery(this).data('id'));
-    console.log("INDEX : ", index)
+    // console.log("INDEX : ", index)
     main.mainEntity[index].offers.availability = jQuery(this).val();
     print();
 });

@@ -367,7 +367,7 @@ id/link-analyzer
 <script>
     const LINK_ANALYZER_API_URL = '{{ route('api.analyze-link') }}';
     $('#toggle_button_webmaster').click();
-    $('a[href*="#"]:not([href="#"])').click(function() {
+    $('.links').click(function() {
         var offset = -80;
         if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
             var target = $(this.hash);

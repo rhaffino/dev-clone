@@ -189,7 +189,7 @@ function renderAllData(data) {
 
 function formatDate(date) {
     // Format should be : DD/MM/YYYY HH:ii
-    return `${date.getDate()}/${date.getMonth()}/${date.getFullYear()} ${date.getHours()}:${date.getMinutes()}`
+    return `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()} ${date.getHours()}:${date.getMinutes()}`
 }
 
 function checkUrl(url) {

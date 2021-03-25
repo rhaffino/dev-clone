@@ -181,7 +181,7 @@
             const keys = JSON.parse(localStorage.getItem(_howToLocalStorage))
             if (keys.how_to){
                 for (let key of keys.how_to){
-                    console.log(sleceFirstLastLine(localStorage.getItem(key)))
+                    // console.log(sleceFirstLastLine(localStorage.getItem(key)))
                     let temp = JSON.parse(sleceFirstLastLine(localStorage.getItem(key)))
                     let date = new Date(key*1000)
                     // let div = '<div class="custom-card py-5 px-3" onclick="getData('+key+')">'+
@@ -250,7 +250,7 @@
         let datas = getDataFromText();
         // console.log(datas.mainEntity.length !== 1 || (datas.mainEntity[0].name && datas.mainEntity[0].acceptedAnswer.text))
         if(datas.length !== 1){
-            console.log(datas,"SAVE")
+            // console.log(datas,"SAVE")
             const key = $('#json-format').data('key');
             const keys = window.localStorage.getItem(_howToLocalStorage)
             var temp = define();
@@ -263,7 +263,7 @@
             localStorage.setItem(_howToLocalStorage, JSON.stringify(temp));
             localStorage.setItem(key, $('#json-format').val());
         }else{
-            console.log(datas,"FAIL")
+            // console.log(datas,"FAIL")
             const key = $('#json-format').data('key');
             const keys = window.localStorage.getItem(_howToLocalStorage)
             var temp = define();
@@ -399,23 +399,28 @@
 
     $(document).on('click', '.deleteSupply', function () {
         let index = parseInt(jQuery(this).data('id'));
+
         jsonFormat.supplyItem.splice(index, 1);
         jsonFormat.render();
 
         for(let i = index+1; i < jsonFormat.supplyItem.length + 1; i++){
+            // console.log(i)
             $('.supplyName[data-id=' + (i - 1) + ']').val($('.supplyName[data-id=' + (i) + ']').val())
         }
-        $('.supply-name[data-id=' + index + ']').remove();
 
         $('span[class="supplyCount"]').each(function(index, item) {
             $(item).html(index+1);
         });
 
+        $('.supply-name[data-id=' + jsonFormat.supplyItem.length + ']').remove();
+
+
         let row = parseInt($('#json-format').val().split('\n').length);
         $('#json-format').attr('rows',row);
 
-        sticky.update();
         if(jsonFormat.supplyItem.length > 0) _supplyCounter--;
+
+
     });
 
     $(document).on('keyup', '.instructions', function () {
@@ -468,7 +473,6 @@
 
     $(document).on('click', '.deleteStep', function () {
         let index = parseInt(jQuery(this).data('id'));
-        console.log($('.stepCounter[data-id=' + index + ']').val())
             jsonFormat.step.splice($('.stepCounter[data-id=' + index + ']').val(), 1);
             jsonFormat.render();
 
@@ -476,8 +480,7 @@
                 $('.loopStep[data-id=' + (i - 1) + ']').val($('.loopStep[data-id=' + (i) + ']').val())
             }
 
-        $('.deleteTool[data-id=' + index + ']').remove();
-        $('.row[data-id=' + index + ']').remove();
+        $('.loopStep[data-id=' + index + ']').remove();
         let row = parseInt($('#json-format').val().split('\n').length);
         $('#json-format').attr('rows',row);
 

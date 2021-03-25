@@ -15,12 +15,12 @@ jobs:
         with:
           # Command to execute on the remote server.
           command: |
-            cd /var/www/staging-FreeTools/
-            git stash
+            cd /var/www/staging-tools/
+            echo ${{secrets.HOST_PASS}} | sudo -S chown dev:www-data -R ./
             git pull origin develop
             composer install
-            chown www-data:www-data -R ./
-            chmod 775 -R storage/ public/ bootstrap/cache
+            echo ${{secrets.HOST_PASS}} | sudo -S chown www-data:www-data -R ./
+            echo ${{secrets.HOST_PASS}} | sudo -S chmod 775 -R storage/ public/ bootstrap/cache
           # Hostname or IP address of the server.
           host: ${{secrets.HOST_ADDRESS}}
           # Username for authentication to server.
@@ -28,6 +28,5 @@ jobs:
           # Port number of the server.
           port: 22
           # File Location or string that contains a private key for either key-based or hostbased user authentication (OpenSSH format)
-          key: ${{secrets.PRIVATE_KEY}}
           # Password for authentication.
           pass: ${{secrets.HOST_PASS}}
