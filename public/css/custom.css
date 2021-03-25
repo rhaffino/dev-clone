@@ -2280,3 +2280,75 @@ textarea.input-meta-description {
     color: #037BCB !important;
     cursor: pointer;
 }
+
+.anchor-analyzer p img {
+    width: 100%;
+    height: 100%;
+}
+
+@media only screen and (min-width:299px) and (max-width:330px) {
+    button#copy{
+            padding: 0.65rem 1.5rem !important
+    }
+}
+
+@media only screen and (min-width:325px) and (max-width:330px) {
+    button#export{
+            padding: 0.65rem 1.1rem !important
+    }
+}
+
+@media only screen and (min-width:281px) and (max-width:330px) {
+    button#test{
+            padding: 0.65rem 1.7rem !important
+    }
+}
+
+@media only screen and (min-width:312px) and (max-width:330px) {
+    button#reset{
+            padding: 0.65rem 1.3rem !important
+    }
+}
+
+@media only screen and (min-width:780px) and (max-width:873px) {
+    button#copy{
+            padding: 0.65rem 1.5rem !important
+    }
+}
+
+@media only screen and (min-width:855px) and (max-width:873px) {
+    button#export{
+            padding: 0.65rem 1.1rem !important
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:873px) {
+    button#test{
+            padding: 0.65rem 1.7rem !important
+    }
+}
+
+@media only screen and (min-width:816px) and (max-width:873px) {
+    button#reset{
+            padding: 0.65rem 1.3rem !important
+    }
+}
+
+
+@media only screen and (min-width:992px) and (max-width:1199px) {
+    button#copy{
+            padding: 0.65rem 1.3rem !important
+    }
+}
+
+@media only screen and (min-width:992px) and (max-width:1199px) {
+    button#test{
+            padding: 0.65rem 1.7rem !important
+    }
+}
+
+@media only screen and (min-width:992px) and (max-width:1199px) {
+    button#reset{
+            padding: 0.65rem 1.1rem !important
+    }
+}

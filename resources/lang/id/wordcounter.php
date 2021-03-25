@@ -4,7 +4,7 @@ return [
     "meta-title" => "Word Counter Online – Tool penghitung jumlah kata",
     "meta-desc" => "Hitung jumlah kata, paragraf, waktu membaca, dan kepadatan keyword dengan Word Counter Tool.",
     "title" => "WORD COUNTER",
-    "subtitle" => "Tingkatkan Skill Menulis",
+    "subtitle" => "Hitung Kata dalam Teks",
     "tooltip-copy" => "Salin",
     "tooltip-clear" => "Bersihkan",
     "tooltip-set-font-size" => "Atur ukuran font ke",
