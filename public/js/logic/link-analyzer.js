@@ -141,7 +141,6 @@ function analyze(_url) {
                     addHistory(_url, res.data)
                     renderAllData(res.data);
                 } else {
-                    console.log(res);
                     toastr.error(res.message, 'Error API');
                 }
             },
@@ -235,7 +234,7 @@ function renderListOfLinks(amount = 10) {
 
 function formatDate(date) {
     // Format should be : DD/MM/YYYY HH:ii
-    return `${date.getDate()}/${date.getMonth()}/${date.getFullYear()} ${date.getHours()}:${date.getMinutes()}`
+    return `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()} ${date.getHours()}:${date.getMinutes()}`
 }
 
 function checkUrl(url) {
@@ -243,7 +242,7 @@ function checkUrl(url) {
         let _url = new URL(url)
         return _url.protocol === 'https:' || _url.protocol === 'http:';
     } catch (e) {
-        console.log(e)
+        // console.log(e)
         return false
     }
 }

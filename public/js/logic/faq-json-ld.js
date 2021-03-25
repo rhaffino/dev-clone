@@ -7,7 +7,7 @@ const refreshLocalStorage = function () {
         const keys = JSON.parse(localStorage.getItem('keys'))
         if (keys.faq) {
             for (let key of keys.faq) {
-                console.log(sleceFirstLastLine(localStorage.getItem(key)))
+                // console.log(sleceFirstLastLine(localStorage.getItem(key)))
                 let temp = JSON.parse(sleceFirstLastLine(localStorage.getItem(key)))
                 let date = new Date(key * 1000)
                 let div = '<div class="custom-card py-5 px-3" onclick="getData(' + key + ')">' +
@@ -121,9 +121,9 @@ const getDataFromText = function () {
 
 const save = function () {
     let data = getDataFromText();
-    console.log(data.mainEntity.length !== 1 || (data.mainEntity[0].name && data.mainEntity[0].acceptedAnswer.text))
+    // console.log(data.mainEntity.length !== 1 || (data.mainEntity[0].name && data.mainEntity[0].acceptedAnswer.text))
     if (data.mainEntity.length !== 1 || (data.mainEntity[0].name && data.mainEntity[0].acceptedAnswer.text)) {
-        console.log(data, "SAVE")
+        // console.log(data, "SAVE")
         const key = $('#json-format').data('key');
         const keys = window.localStorage.getItem('keys')
         var temp = define();
@@ -136,7 +136,7 @@ const save = function () {
         window.localStorage.setItem('keys', JSON.stringify(temp));
         window.localStorage.setItem(key, $('#json-format').val());
     } else {
-        console.log(data, "FAIL")
+        // console.log(data, "FAIL")
         const key = $('#json-format').data('key');
         const keys = window.localStorage.getItem('keys')
         var temp = define();

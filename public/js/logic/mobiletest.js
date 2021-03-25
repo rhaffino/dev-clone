@@ -172,7 +172,7 @@ check_url.click(function() {
         ic_http.addClass('d-none')
         ic_https.addClass('d-none')
     }
-    
+
     $('#task-sleeping').addClass('d-none')
     $('#task-progress').removeClass('d-none')
 
@@ -289,7 +289,7 @@ function renderAllData(result){
     mobileissues(result.mobileFriendlyIssues)
     resourceissues(result.resourceIssues)
 
-    console.log(result)
+    // console.log(result)
     $('#task-progress').addClass('d-none')
     $('#task-done').removeClass('d-none')
     updateProgressBar(100)
