@@ -70,17 +70,20 @@ id/page-title-meta-description-checker
                             </div>
                             <div class="d-flex align-items-center justify-content-between">
                                 <div class="text-center mx-2">
-                                    <p class="mb-0 text-white">Word : <strong>999</strong></p>
+                                    <p class="mb-0 text-white">Character : <strong>999</strong></p>
                                 </div>
                                 <div class="text-center mx-2">
                                     <p class="mb-0 text-white">Pixel : <strong>999px</strong></p>
+                                </div>
+                                <div class="text-center mx-2">
+                                    <p class="mb-0 text-white">Word : <strong>999</strong></p>
                                 </div>
                             </div>
                         </div>
                         <input id="title" type="text" class="form-control bg-primaryblue text-white px-0 input-meta-title mb-2" id="meta-title" autocomplete="off" placeholder="{{ Lang::get('metachecker.input-hint-manual') }}">
                         <div class="d-flex align-items-center">
                             <i class='bx bx-error text-white mr-2'></i>
-                            <p class="mb-0 text-white">Word More Than 12</p>
+                            <p class="mb-0 text-white">Character More Than 12</p>
                         </div>
                         <div class="d-flex align-items-center">
                             <i class='bx bx-error text-white mr-2'></i>
@@ -101,10 +104,13 @@ id/page-title-meta-description-checker
                             </div>
                             <div class="d-flex align-items-center justify-content-between">
                                 <div class="text-center mx-2">
-                                    <p class="mb-0 text-white">Word : <strong>999</strong></p>
+                                    <p class="mb-0 text-white">Character : <strong>999</strong></p>
                                 </div>
                                 <div class="text-center mx-2">
                                     <p class="mb-0 text-white">Pixel : <strong>999px</strong></p>
+                                </div>
+                                <div class="text-center mx-2">
+                                    <p class="mb-0 text-white">Word : <strong>999</strong></p>
                                 </div>
                             </div>
                         </div>
@@ -112,7 +118,7 @@ id/page-title-meta-description-checker
                             style="resize:none; overflow:hidden"></textarea>
                             <div class="d-flex align-items-center">
                                 <i class='bx bx-error text-white mr-2'></i>
-                                <p class="mb-0 text-white">Word More Than 12</p>
+                                <p class="mb-0 text-white">Character More Than 12</p>
                             </div>
                             <div class="d-flex align-items-center">
                                 <i class='bx bx-error text-white mr-2'></i>
