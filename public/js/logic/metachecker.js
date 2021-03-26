@@ -75,15 +75,15 @@ $('#url').on('keyup', function () {
 
 const ellipsis = function (text, type) {
     if (type === 'title') {
-        if (text.length <= 55)
+        if (text.length <= constrain.maxTitleChar)
             return text
 
-        return text.slice(0, 55) + '...'
+        return text.slice(0, constrain.maxTitleChar) + '...'
     } else {
-        if (text.length <= 160)
+        if (text.length <= constrain.maxDescChar)
             return text
 
-        return text.slice(0, 160) + '...'
+        return text.slice(0, constrain.maxDescChar) + '...'
     }
 }
 

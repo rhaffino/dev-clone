@@ -1414,7 +1414,7 @@ input.input-url-meta-checker,
 textarea.input-meta-description {
     border-radius: 0px;
     border: none;
-    border-bottom: 1px solid var(--primaryblue);
+    border-bottom: 1px solid white;
 }
 
 input.input-meta-title:focus,
