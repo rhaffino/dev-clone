@@ -6,6 +6,17 @@ if (lang == "en") {
     var localStorageNone = "Ini adalah kesan pertama Anda, belum ada riwayat!"
 }
 
+const constrain = {
+    minTitleChar : 50,
+    minTitlePixel : 250,
+    maxTitleChar : 60,
+    maxTitlePixel : 600,
+    minDescChar : 50,
+    minDescPixel : 400,
+    maxDescChar : 160,
+    maxDescPixel : 920,
+}
+
 jQuery('#crawlURL').click(function () {
     let url = jQuery('#url').val();
     $.post({
@@ -216,56 +227,160 @@ const clearAll = function () {
 const titleChecker = function (title) {
     var titlesizer = $('#titlesizer');
     var rate = 0;
+    var badChar = 0;
+    var badPixel = 0;
     var l = title.length;
-    if (l > 30 && l < 55) {
+    if (l >= constrain.minTitleChar && l <= constrain.maxTitleChar) {
         rate++;
+    }else if (l > constrain.minTitleChar){
+        badChar = l - constrain.maxTitleChar
+    }else{
+        badChar = l - constrain.minTitleChar
     }
     titlesizer.css("display: inline-block; text-decoration: none; color: #1e0fbe; font-size: 18px !important; line-height: 18px !important;white-space:nowrap;visibility:hidden; font-family: Arial,Arial, Tahoma, Sans Serif")
     titlesizer.append(title);
     var pixel = titlesizer.innerWidth();
-    if (pixel >= 250 && pixel <= 470) {
+    if (pixel >= constrain.minTitlePixel && pixel <= constrain.maxTitlePixel) {
         rate += 2;
+    }else if (pixel > constrain.maxTitlePixel){
+        badPixel = pixel - constrain.maxTitlePixel
+    }else{
+        badPixel = pixel - constrain.minTitlePixel
     }
     titlesizer.empty();
-    return rate;
+    let word = title.split(' ')
+    return {
+        rate : rate,
+        word : word.length,
+        pixel : pixel,
+        char : l,
+        badChar : badChar,
+        badPixel : badPixel
+    };
 }
 
 const descChecker = function (desc) {
     var descsizer = $('#descsizer');
     var rate = 0;
+    var badChar = 0;
+    var badPixel = 0;
     var l = desc.length;
-    if (l > 65 && l < 160) {
+    if (l >= constrain.minDescChar && l <= constrain.maxDescChar) {
         rate++;
+    }else if (l > constrain.maxDescChar){
+        badChar = l - constrain.maxDescChar
+    }else{
+        badChar = l - constrain.minDescChar
     }
     descsizer.css("display: inline-block; font-family: arial, sans-serif; font-size: 13px;color: #545454;line-height: 1.4;white-space: pre-wrap;word-wrap: break-word;filter: none!important;white-space:nowrap;visibility:hidden;");
     descsizer.append(desc)
     var pixel = descsizer.innerWidth();
-    if (pixel >= 400 && pixel <= 750) {
+    if (pixel >= constrain.minDescPixel && pixel <= constrain.maxDescPixel) {
         rate += 2;
+    }else if (pixel > constrain.maxDescPixel){
+        badPixel = pixel - constrain.maxDescPixel
+    }else{
+        badPixel = pixel - constrain.minDescPixel
     }
     descsizer.empty()
-    return rate;
+    let word = desc.split(' ')
+    return {
+        rate : rate,
+        word : word.length,
+        pixel : pixel,
+        char : l,
+        badChar : badChar,
+        badPixel : badPixel
+    };
 }
 
 const fillTitleBar = function (param) {
-    for (let i = 1; i < param + 1; i++) {
+    for (let i = 1; i < param.rate + 1; i++) {
         $('#titlebar' + i).removeClass("blank")
         $('#titlebar' + i).addClass("active")
     }
-    for (let i = param + 1; i < 4; i++) {
+    for (let i = param.rate + 1; i < 4; i++) {
         $('#titlebar' + i).removeClass("active")
         $('#titlebar' + i).addClass("blank")
+    }
+    $('#title-char').text(param.char)
+    $('#title-pixel').text(param.pixel+'px')
+    $('#title-word').text(param.word)
+    if (param.char > 0){
+        if (param.badChar !== 0){
+            if (param.badChar < 0){
+                $('#title-bad-char-point').text('Your character less then '+constrain.minTitleChar)
+            }else {
+                $('#title-bad-char-point').text('Your character more then '+constrain.maxTitleChar)
+            }
+            $('#title-bad-char').removeClass('d-none')
+            $('#title-bad-char').addClass('d-flex')
+        }else{
+            $('#title-bad-char').removeClass('d-flex')
+            $('#title-bad-char').addClass('d-none')
+        }
+        if (param.badPixel !== 0){
+            if (param.badPixel < 0){
+                $('#title-bad-pixel-point').text('Your pixel less then '+constrain.minTitlePixel)
+            }else {
+                $('#title-bad-pixel-point').text('Your pixel more then '+constrain.maxTitlePixel)
+            }
+            $('#title-bad-pixel').removeClass('d-none')
+            $('#title-bad-pixel').addClass('d-flex')
+        }else{
+            $('#title-bad-pixel').removeClass('d-flex')
+            $('#title-bad-pixel').addClass('d-none')
+        }
+    }else{
+        $('#title-bad-char').removeClass('d-flex')
+        $('#title-bad-char').addClass('d-none')
+        $('#title-bad-pixel').removeClass('d-flex')
+        $('#title-bad-pixel').addClass('d-none')
     }
 }
 
 const fillDescBar = function (param) {
-    for (let i = 1; i < param + 1; i++) {
+    for (let i = 1; i < param.rate + 1; i++) {
         $('#descbar' + i).removeClass("blank")
         $('#descbar' + i).addClass("active")
     }
-    for (let i = param + 1; i < 4; i++) {
+    for (let i = param.rate + 1; i < 4; i++) {
         $('#descbar' + i).removeClass("active")
         $('#descbar' + i).addClass("blank")
+    }
+    $('#desc-char').text(param.char)
+    $('#desc-pixel').text(param.pixel+'px')
+    $('#desc-word').text(param.word)
+    if (param.char > 0){
+        if (param.badChar !== 0){
+            if (param.badChar < 0){
+                $('#desc-bad-char-point').text('Your character less then '+constrain.minDescChar)
+            }else {
+                $('#desc-bad-char-point').text('Your character more then '+constrain.maxDescChar)
+            }
+            $('#desc-bad-char').removeClass('d-none')
+            $('#desc-bad-char').addClass('d-flex')
+        }else{
+            $('#desc-bad-char').removeClass('d-flex')
+            $('#desc-bad-char').addClass('d-none')
+        }
+        if (param.badPixel !== 0){
+            if (param.badPixel < 0){
+                $('#desc-bad-pixel-point').text('Your pixel less then '+constrain.minDescPixel)
+            }else {
+                $('#desc-bad-pixel-point').text('Your pixel more then '+constrain.maxDescPixel)
+            }
+            $('#desc-bad-pixel').removeClass('d-none')
+            $('#desc-bad-pixel').addClass('d-flex')
+        }else{
+            $('#desc-bad-pixel').removeClass('d-flex')
+            $('#desc-bad-pixel').addClass('d-none')
+        }
+    }else{
+        $('#desc-bad-char').removeClass('d-flex')
+        $('#desc-bad-char').addClass('d-none')
+        $('#desc-bad-pixel').removeClass('d-flex')
+        $('#desc-bad-pixel').addClass('d-none')
     }
 }
 
