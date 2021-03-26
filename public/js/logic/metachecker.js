@@ -237,6 +237,7 @@ const titleChecker = function (title) {
     }else{
         badChar = l - constrain.minTitleChar
     }
+
     titlesizer.css("display: inline-block; text-decoration: none; color: #1e0fbe; font-size: 18px !important; line-height: 18px !important;white-space:nowrap;visibility:hidden; font-family: Arial,Arial, Tahoma, Sans Serif")
     titlesizer.append(title);
     var pixel = titlesizer.innerWidth();
@@ -248,10 +249,14 @@ const titleChecker = function (title) {
         badPixel = pixel - constrain.minTitlePixel
     }
     titlesizer.empty();
-    let word = title.split(' ')
+
+    let word = 0
+    if (title.length > 0)
+        word = title.split(' ').length
+
     return {
         rate : rate,
-        word : word.length,
+        word : word,
         pixel : pixel,
         char : l,
         badChar : badChar,
@@ -272,6 +277,7 @@ const descChecker = function (desc) {
     }else{
         badChar = l - constrain.minDescChar
     }
+
     descsizer.css("display: inline-block; font-family: arial, sans-serif; font-size: 13px;color: #545454;line-height: 1.4;white-space: pre-wrap;word-wrap: break-word;filter: none!important;white-space:nowrap;visibility:hidden;");
     descsizer.append(desc)
     var pixel = descsizer.innerWidth();
@@ -283,10 +289,14 @@ const descChecker = function (desc) {
         badPixel = pixel - constrain.minDescPixel
     }
     descsizer.empty()
-    let word = desc.split(' ')
+
+    let word = 0
+    if (desc.length > 0)
+        word = desc.split(' ')
+
     return {
         rate : rate,
-        word : word.length,
+        word : word,
         pixel : pixel,
         char : l,
         badChar : badChar,
@@ -309,9 +319,9 @@ const fillTitleBar = function (param) {
     if (param.char > 0){
         if (param.badChar !== 0){
             if (param.badChar < 0){
-                $('#title-bad-char-point').text('Your character less then '+constrain.minTitleChar)
+                $('#title-bad-char-point').text('Your character less than '+constrain.minTitleChar)
             }else {
-                $('#title-bad-char-point').text('Your character more then '+constrain.maxTitleChar)
+                $('#title-bad-char-point').text('Your character more than '+constrain.maxTitleChar)
             }
             $('#title-bad-char').removeClass('d-none')
             $('#title-bad-char').addClass('d-flex')
@@ -321,9 +331,9 @@ const fillTitleBar = function (param) {
         }
         if (param.badPixel !== 0){
             if (param.badPixel < 0){
-                $('#title-bad-pixel-point').text('Your pixel less then '+constrain.minTitlePixel)
+                $('#title-bad-pixel-point').text('Your pixel less than '+constrain.minTitlePixel)
             }else {
-                $('#title-bad-pixel-point').text('Your pixel more then '+constrain.maxTitlePixel)
+                $('#title-bad-pixel-point').text('Your pixel more than '+constrain.maxTitlePixel)
             }
             $('#title-bad-pixel').removeClass('d-none')
             $('#title-bad-pixel').addClass('d-flex')
@@ -354,9 +364,9 @@ const fillDescBar = function (param) {
     if (param.char > 0){
         if (param.badChar !== 0){
             if (param.badChar < 0){
-                $('#desc-bad-char-point').text('Your character less then '+constrain.minDescChar)
+                $('#desc-bad-char-point').text('Your character less than '+constrain.minDescChar)
             }else {
-                $('#desc-bad-char-point').text('Your character more then '+constrain.maxDescChar)
+                $('#desc-bad-char-point').text('Your character more than '+constrain.maxDescChar)
             }
             $('#desc-bad-char').removeClass('d-none')
             $('#desc-bad-char').addClass('d-flex')
@@ -366,9 +376,9 @@ const fillDescBar = function (param) {
         }
         if (param.badPixel !== 0){
             if (param.badPixel < 0){
-                $('#desc-bad-pixel-point').text('Your pixel less then '+constrain.minDescPixel)
+                $('#desc-bad-pixel-point').text('Your pixel less than '+constrain.minDescPixel)
             }else {
-                $('#desc-bad-pixel-point').text('Your pixel more then '+constrain.maxDescPixel)
+                $('#desc-bad-pixel-point').text('Your pixel more than '+constrain.maxDescPixel)
             }
             $('#desc-bad-pixel').removeClass('d-none')
             $('#desc-bad-pixel').addClass('d-flex')
