@@ -292,7 +292,7 @@ const descChecker = function (desc) {
 
     let word = 0
     if (desc.length > 0)
-        word = desc.split(' ')
+        word = desc.split(' ').length
 
     return {
         rate : rate,
