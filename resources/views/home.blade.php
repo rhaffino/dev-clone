@@ -27,7 +27,7 @@ id
                 </div>
             </div>
             <div class="mt-10 row">
-                <div class="col-6 col-md-3 mb-8">
+                <div class="col-12 col-md-4 col-lg-3 mb-8">
                     <div class="card card-custom card-stretch card-home">
                         <div class="card-body p-7">
                             <div class="text-center">
@@ -41,7 +41,7 @@ id
                         </div>
                     </div>
                 </div>
-                <div class="col-6 col-md-3 mb-8">
+                <div class="col-12 col-md-4 col-lg-3 mb-8">
                     <div class="card card-custom card-stretch card-home">
                         <div class="card-body p-7">
                             <div class="text-center">
@@ -55,7 +55,7 @@ id
                         </div>
                     </div>
                 </div>
-                <div class="col-6 col-md-3 mb-8">
+                <div class="col-12 col-md-4 col-lg-3 mb-8">
                     <div class="card card-custom card-stretch card-home">
                         <div class="card-body p-7">
                             <div class="text-center">
@@ -69,7 +69,7 @@ id
                         </div>
                     </div>
                 </div>
-                <div class="col-6 col-md-3 mb-8">
+                <div class="col-12 col-md-4 col-lg-3 mb-8">
                     <div class="card card-custom card-stretch card-home">
                         <div class="card-body p-7">
                             <div class="text-center">
@@ -83,7 +83,7 @@ id
                         </div>
                     </div>
                 </div>
-                <div class="col-6 col-md-3 mb-8">
+                <div class="col-12 col-md-4 col-lg-3 mb-8">
                     <div class="card card-custom card-stretch card-home">
                         <div class="card-body p-7">
                             <div class="text-center">
@@ -97,7 +97,7 @@ id
                         </div>
                     </div>
                 </div>
-                <div class="col-6 col-md-3 mb-8">
+                <div class="col-12 col-md-4 col-lg-3 mb-8">
                     <div class="card card-custom card-stretch card-home">
                         <div class="card-body p-7">
                             <div class="text-center">
@@ -111,7 +111,7 @@ id
                         </div>
                     </div>
                 </div>
-                <div class="col-6 col-md-3 mb-8">
+                <div class="col-12 col-md-4 col-lg-3 mb-8">
                     <div class="card card-custom card-stretch card-home">
                         <div class="card-body p-7">
                             <div class="text-center">
@@ -125,7 +125,7 @@ id
                         </div>
                     </div>
                 </div>
-                <div class="col-6 col-md-3 mb-8">
+                <div class="col-12 col-md-4 col-lg-3 mb-8">
                     <div class="card card-custom card-stretch card-home">
                         <div class="card-body p-7">
                             <div class="text-center">
@@ -139,7 +139,7 @@ id
                         </div>
                     </div>
                 </div>
-                <div class="col-6 col-md-3 mb-8">
+                <div class="col-12 col-md-4 col-lg-3 mb-8">
                     <div class="card card-custom card-stretch card-home">
                         <div class="card-body p-7">
                             <div class="text-center">
@@ -153,7 +153,7 @@ id
                         </div>
                     </div>
                 </div>
-                <div class="col-6 col-md-3 mb-8">
+                <div class="col-12 col-md-4 col-lg-3 mb-8">
                     <div class="card card-custom card-stretch card-home">
                         <div class="card-body p-7">
                             <div class="text-center">
@@ -167,7 +167,7 @@ id
                         </div>
                     </div>
                 </div>
-                <div class="col-6 col-md-3 mb-8">
+                <div class="col-12 col-md-4 col-lg-3 mb-8">
                     <div class="card card-custom card-stretch card-home">
                         <div class="card-body p-7">
                             <div class="text-center">
@@ -181,7 +181,7 @@ id
                         </div>
                     </div>
                 </div>
-                <div class="col-6 col-md-3 mb-8">
+                <div class="col-12 col-md-4 col-lg-3 mb-8">
                     <div class="card card-custom card-stretch card-home">
                         <div class="card-body p-7">
                             <div class="text-center">
@@ -196,7 +196,7 @@ id
                     </div>
                 </div>
                     {{--
-                <div class="col-6 col-md-3 mb-8">
+                <div class="col-12 col-md-4 col-lg-3 mb-8">
                     <div class="card card-custom card-stretch card-home">
                         <div class="card-body p-7">
                             <div class="text-center">
