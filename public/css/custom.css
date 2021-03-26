@@ -1128,8 +1128,8 @@ a:hover {
     font-weight: bold;
 }
 
-.font-size-10px {
-    font-size: 10px !important;
+.font-size-18px {
+    font-size: 18px !important;
 }
 
 .font-size-12px {
@@ -1177,7 +1177,7 @@ a:hover {
 .wordcounter-background-density-left-edge {
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
-    width: 90px;
+    width: 65px;
 }
 
 .wordcounter-background-density-right-edge {
@@ -1410,8 +1410,17 @@ a:hover {
 }
 
 input.input-meta-title,
+input.input-url-meta-checker,
 textarea.input-meta-description {
+    border-radius: 0px;
     border: none;
+    border-bottom: 1px solid white;
+}
+
+input.input-meta-title:focus,
+input.input-url-meta-checker:focus,
+textarea.input-meta-description:focus {
+    border-bottom: 1px solid white;
 }
 
 .progress-bar_wrap {
@@ -1434,6 +1443,18 @@ textarea.input-meta-description {
 .progress-bar_item-2.active,
 .progress-bar_item-3.active {
     background: #B1F25D;
+}
+
+.progress-bar_item-1.danger,
+.progress-bar_item-2.danger,
+.progress-bar_item-3.danger {
+    background: #FF5656;
+}
+
+.progress-bar_item-1.warning,
+.progress-bar_item-2.warning,
+.progress-bar_item-3.warning {
+    background: #FFDE68;
 }
 
 .progress-bar_item-1.blank,
@@ -2128,7 +2149,7 @@ textarea.input-meta-description {
 }
 
 .btn-download-sitemap:hover {
-    background: var(--black);
+    background: var(--black) !important;
     color: white;
 }
 
