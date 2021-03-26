@@ -15,7 +15,7 @@ return[
     "sentence" => "Sentences",
     "paragraph" => "Paragraph",
     "reading-time" => "Reading Time",
-    "keyword-density" => "WORDS",
+    "keyword-density" => "KEYWORDS",
     "textarea-placeholder" => "Type or paste your text..",
     "highlight" => "This latest version update provides autosave and copy & adjust font features. With the autosave feature, you don't have to worry if your writing is lost due to technical problems, the system will store your writing safely. Meanwhile, the copy & adjust font feature will make it easier for you to copy text and adjust the size as desired. It's time to write safely for better writing results.",
     "desc-1"=>"Improve Your Writing with a Word Counter",
