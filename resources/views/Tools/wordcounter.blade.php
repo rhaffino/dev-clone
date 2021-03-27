@@ -120,12 +120,12 @@ id/word-counter
                                 <div id="showWords3Desktop" class="wordcounter-background-density d-flex justify-content-center font-weight-bolder align-items-center p-2">
                                     3
                                 </div>
-                                <div id="showWords4Desktop" class="wordcounter-background-density d-flex justify-content-center font-weight-bolder align-items-center p-2">
-                                    4
-                                </div>
-                                <div id="showWords5Desktop" class="wordcounter-background-density wordcounter-background-density-right-edge font-weight-bolder d-flex justify-content-center align-items-center p-2">
-                                    5
-                                </div>
+{{--                                <div id="showWords4Desktop" class="wordcounter-background-density d-flex justify-content-center font-weight-bolder align-items-center p-2">--}}
+{{--                                    4--}}
+{{--                                </div>--}}
+{{--                                <div id="showWords5Desktop" class="wordcounter-background-density wordcounter-background-density-right-edge font-weight-bolder d-flex justify-content-center align-items-center p-2">--}}
+{{--                                    5--}}
+{{--                                </div>--}}
                             </div>
                         </div>
                     </div>
@@ -137,10 +137,10 @@ id/word-counter
                             </div>
                             <div class="" id="top3">
                             </div>
-                            <div class="" id="top4">
-                            </div>
-                            <div class="" id="top5">
-                            </div>
+{{--                            <div class="" id="top4">--}}
+{{--                            </div>--}}
+{{--                            <div class="" id="top5">--}}
+{{--                            </div>--}}
                         </div>
                     </div>
                     <div class="word-counter-version-desktop">
@@ -196,12 +196,12 @@ id/word-counter
             <div id="showWords3Mobile" class="wordcounter-background-density d-flex justify-content-center font-weight-bolder align-items-center p-2">
                 3
             </div>
-            <div id="showWords4Mobile" class="wordcounter-background-density d-flex justify-content-center font-weight-bolder align-items-center p-2">
-                4
-            </div>
-            <div id="showWords5Mobile" class="wordcounter-background-density wordcounter-background-density-right-edge font-weight-bolder d-flex justify-content-center align-items-center p-2">
-                5
-            </div>
+{{--            <div id="showWords4Mobile" class="wordcounter-background-density d-flex justify-content-center font-weight-bolder align-items-center p-2">--}}
+{{--                4--}}
+{{--            </div>--}}
+{{--            <div id="showWords5Mobile" class="wordcounter-background-density wordcounter-background-density-right-edge font-weight-bolder d-flex justify-content-center align-items-center p-2">--}}
+{{--                5--}}
+{{--            </div>--}}
         </div>
         <div class="" id="topKeywordsMobile">
         </div>
@@ -209,10 +209,10 @@ id/word-counter
         </div>
         <div class="mb-5" id="top3Mobile">
         </div>
-        <div class="mb-5" id="top4Mobile">
-        </div>
-        <div class="mb-5" id="top5Mobile">
-        </div>
+{{--        <div class="mb-5" id="top4Mobile">--}}
+{{--        </div>--}}
+{{--        <div class="mb-5" id="top5Mobile">--}}
+{{--        </div>--}}
         <div class="accordion accordion-light accordion-toggle-arrow custom-features-accordion" id="accordionExample2">
             <div class="card bg-transparent" style="">
                 <div class="card-header" id="headingOne2">
