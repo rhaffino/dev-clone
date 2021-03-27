@@ -15,20 +15,14 @@ toastr.options = {
     "showMethod": "fadeIn",
     "hideMethod": "fadeOut"
 };
-let robot_sleep = lang === 'en' ? 'Our robot is sleeping right now. Give him a task!' : 'Robot kita sedang tidur sekarang. Beri dia tugas!';
 let DATA_FINAL;
 let isCanceled = false;
 let rendering = {
     skip: 0,
     take: 10
 }
-
-const socket = io(URL_API, {
-    transports: ['websocket'],
-    secure: true
-});
-
 $(document).ready(function() {
+    let robot_sleep = lang === 'en' ? 'Our robot is sleeping right now. Give him a task!' : 'Robot kita sedang tidur sekarang. Beri dia tugas!';
     let robot_progress = lang === 'en' ? 'Our robot is excecuting your task..' : 'Robot kami sedang menjalankan tugas Anda ...';
     let robot_done = lang === 'en' ? 'Our robot is already finished your task.' : 'Robot kami sudah menyelesaikan tugas Anda.';
     let has_crawled = lang === 'en' ? ' Has been crawled' : ' Telah ditelusuri';
@@ -39,6 +33,10 @@ $(document).ready(function() {
     cancel(false)
     refreshLocalStorage()
     clearTable();
+    const socket = io(URL_API, {
+        transports: ['websocket'],
+        secure: true
+    });
     triggerEnter('#generate', '#url');
     $('#generate').click(function() {
         $(this).prop('disabled', true)
@@ -58,7 +56,18 @@ $(document).ready(function() {
         isCanceled = false;
     });
 
-
+    $('#cancelOn').on('click', function() {
+        socket.emit('stop');
+        cancel(false)
+        $("#noCrawlResult").show();
+        $("#generateCrawlResult").hide();
+        $('#info').html(robot_sleep)
+        $('#detail-progress').empty();
+        isCanceled = true;
+        updateProgressBar(0)
+        toastr.error('Cancel your task')
+        $('#generate').prop('disabled', false)
+    });
 
     socket.on('update queue', data => {
         if (!isCanceled) {
@@ -104,20 +113,6 @@ $('#url').on('input', function() {
         $('#crawlHttp').hide()
     }
 })
-
-let cancelButton = function(){
-    console.log('test')
-    socket.emit('stop');
-    cancel(false)
-    $("#noCrawlResult").show();
-    $("#generateCrawlResult").hide();
-    $('#info').html(robot_sleep)
-    $('#detail-progress').empty();
-    isCanceled = true;
-    updateProgressBar(0)
-    toastr.error('Cancel your task')
-    $('#generate').prop('disabled', false)
-}
 
 function addData(data, i) {
     $("#result").append('<div class="d-flex align-items-center mx-5 result-row">' +
@@ -323,7 +318,7 @@ let cancel = function(param) {
     let cancel = $('#cancel-button')
     cancel.empty()
     if (param) {
-        cancel.append(`<button id="cancelOn" onclick="cancelButton()" type="button" class="btn btn-cancel" name="button">` + btn_cancel + `
+        cancel.append(`<button id="cancelOn" type="button" class="btn btn-cancel" name="button">` + btn_cancel + `
                                     </button>`)
     } else {
         cancel.append(`<button id="cancelOff" type="button" class="btn btn-cancel-disabled" disabled

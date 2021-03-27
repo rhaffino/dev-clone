@@ -16,7 +16,7 @@ return [
     "sentence" => "Kalimat",
     "paragraph" => "Paragraf",
     "reading-time" => "Waktu Baca",
-    "keyword-density" => "KATA",
+    "keyword-density" => "KATA KUNCI",
     "textarea-placeholder" => "Ketik atau tempel teks Anda..",
     "highlight" => "Update versi terbaru ini menyediakan fitur autosave dan copy & adjust font. Dengan fitur autosave, anda tidak perlu khawatir jika tulisan hilang karena masalah teknis, sistem akan menyimpan tulisanmu dengan aman. Sedangkan fitur copy & adjust font akan memudahkan Anda untuk menyalin tulisan dan menyesuaikan ukurannya sesuai keinginan. Ini saatnya menulis dengan aman untuk hasil tulisan yang lebih baik.",
     "desc-1"=>"Tingkatkan Tulisan Anda dengan Word Counter",

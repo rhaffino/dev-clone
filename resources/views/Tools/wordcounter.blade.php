@@ -38,14 +38,14 @@ id/word-counter
                                             </svg>
                                         </span>
                                     </div>
-                                    <div id="set-font-size-12px" class="wordcounter-background-text-size active text-white font-weight-bolder d-flex justify-content-center align-items-center p-2"  data-toggle="tooltip" data-theme="dark" title="{{ Lang::get('wordcounter.tooltip-set-font-size') }} 12px">
+                                    <div id="set-font-size-10px" class="wordcounter-background-text-size text-white font-weight-bolder d-flex justify-content-center align-items-center p-2"  data-toggle="tooltip" data-theme="dark" title="{{ Lang::get('wordcounter.tooltip-set-font-size') }} 10px">
+                                        10px
+                                    </div>
+                                    <div id="set-font-size-12px" class="wordcounter-background-text-size active text-white d-flex justify-content-center font-weight-bolder align-items-center p-2"  data-toggle="tooltip" data-theme="dark" title="{{ Lang::get('wordcounter.tooltip-set-font-size') }} 12px">
                                         12px
                                     </div>
-                                    <div id="set-font-size-15px" class="wordcounter-background-text-size text-white d-flex justify-content-center font-weight-bolder align-items-center p-2"  data-toggle="tooltip" data-theme="dark" title="{{ Lang::get('wordcounter.tooltip-set-font-size') }} 15px">
+                                    <div id="set-font-size-15px" class="wordcounter-background-text-size wordcounter-background-text-size-right-edge text-white font-weight-bolder d-flex justify-content-center align-items-center p-2"  data-toggle="tooltip" data-theme="dark" title="{{ Lang::get('wordcounter.tooltip-set-font-size') }} 15px">
                                         15px
-                                    </div>
-                                    <div id="set-font-size-18px" class="wordcounter-background-text-size wordcounter-background-text-size-right-edge text-white font-weight-bolder d-flex justify-content-center align-items-center p-2"  data-toggle="tooltip" data-theme="dark" title="{{ Lang::get('wordcounter.tooltip-set-font-size') }} 18px">
-                                        18px
                                     </div>
                                 </div>
                                 <div id="autosaveParam" data-autosave="on" class="">
@@ -117,7 +117,7 @@ id/word-counter
                                 <div id="showWords2Desktop" class="wordcounter-background-density d-flex justify-content-center font-weight-bolder align-items-center p-2">
                                     2
                                 </div>
-                                <div id="showWords3Desktop" class="wordcounter-background-density d-flex justify-content-center font-weight-bolder align-items-center p-2">
+                                <div id="showWords3Desktop" class="wordcounter-background-density wordcounter-background-density-right-edge font-weight-bolder d-flex justify-content-center align-items-center p-2">
                                     3
                                 </div>
 {{--                                <div id="showWords4Desktop" class="wordcounter-background-density d-flex justify-content-center font-weight-bolder align-items-center p-2">--}}
@@ -193,7 +193,7 @@ id/word-counter
             <div id="showWords2Mobile" class="wordcounter-background-density d-flex justify-content-center font-weight-bolder align-items-center p-2">
                 2
             </div>
-            <div id="showWords3Mobile" class="wordcounter-background-density d-flex justify-content-center font-weight-bolder align-items-center p-2">
+            <div id="showWords3Mobile" class="wordcounter-background-density wordcounter-background-density-right-edge font-weight-bolder d-flex justify-content-center align-items-center p-2">
                 3
             </div>
 {{--            <div id="showWords4Mobile" class="wordcounter-background-density d-flex justify-content-center font-weight-bolder align-items-center p-2">--}}
