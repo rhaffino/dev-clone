@@ -238,9 +238,9 @@ const titleChecker = function (title) {
         badChar = l - constrain.minTitleChar
     }
 
-    titlesizer.css("display: inline-block; text-decoration: none; color: #1e0fbe; font-size: 18px !important; line-height: 18px !important;white-space:nowrap;visibility:hidden; font-family: Arial,Arial, Tahoma, Sans Serif")
+    titlesizer.attr("style","font-family: arial, sans-serif !important;font-size: 18px!important;position:absolute!important;white-space:nowrap!important;visibility:hidden!important")
     titlesizer.append(title);
-    var pixel = titlesizer.innerWidth();
+    var pixel = Math.floor(titlesizer.innerWidth());
     if (pixel >= constrain.minTitlePixel && pixel <= constrain.maxTitlePixel) {
         rate += 2;
     } else if (pixel > constrain.maxTitlePixel) {
@@ -278,9 +278,9 @@ const descChecker = function (desc) {
         badChar = l - constrain.minDescChar
     }
 
-    descsizer.css("display: inline-block; font-family: arial, sans-serif; font-size: 13px;color: #545454;line-height: 1.4;white-space: pre-wrap;word-wrap: break-word;filter: none!important;white-space:nowrap;visibility:hidden;");
+    descsizer.attr("style", "font-family: arial, sans-serif !important;font-size:13px !important;position:absolute !important;visibility:hidden !important;white-space:nowrap !important;");
     descsizer.append(desc)
-    var pixel = descsizer.innerWidth();
+    var pixel = Math.floor(descsizer.innerWidth());
     if (pixel >= constrain.minDescPixel && pixel <= constrain.maxDescPixel) {
         rate += 2;
     } else if (pixel > constrain.maxDescPixel) {
