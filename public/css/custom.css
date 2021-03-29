@@ -28,8 +28,8 @@ body {
     color: var(--black);
 }
 
-.text-darkgrey {
-    color: var(--darkgrey);
+.text-black {
+    color: var(--black);
 }
 
 .text-grey {
@@ -54,9 +54,9 @@ body {
     color: var(--black) !important;
 }
 
-.text-hover-darkgrey:hover {
+.text-hover-black:hover {
     cursor: pointer;
-    color: var(--darkgrey) !important;
+    color: var(--black) !important;
 }
 
 .text-hover-grey:hover {
@@ -234,7 +234,7 @@ a:hover {
 
 .button-language:hover {
     background: #F4F4F4;
-    color: var(--darkgrey) !important;
+    color: var(--black) !important;
 }
 
 .button-language, .button-language-mobile {
@@ -345,7 +345,7 @@ a:hover {
 
 .btn-custom-login {
     background: #f4f4f4;
-    color: var(--darkgrey);
+    color: var(--black);
     padding: 5px 20px !important;
     border-radius: 50px;
     transition: .3s;
@@ -526,49 +526,31 @@ a:hover {
 /* Custom New Footer */
 .custom-footer-new {
     background: var(--white);
-    padding-bottom: 50px;
+    padding: 50px 0;
 }
-
 .footer-new-logo {
     width: fit-content;
 }
-
 .footer-new-logo span {
     font-weight: 900;
     font-family: 'Noto Sans TC', sans-serif;
 }
-
 .footer-new-icon i {
     color: var(--black) !important;
 }
-
 .footer-new-link a {
     color: var(--black);
-    font-weight: 400;
     text-decoration: underline !important;
+    font-weight: 400;
 }
-
 .footer-new-link:hover a {
     color: var(--primaryblue);
     font-weight: 400;
 }
-
-.seo-footer-list {
-    background-color: var(--lightgrey);
-    box-shadow: none !important;
-    border-radius: 10px;
-    transition: .3s;
-}
-
-.seo-footer-list:hover {
-    background-color: var(--primaryblue);
-    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-}
-
 .card-footer-office {
-    background-color: var(--black);
+    background-color: rgba(102, 117, 127, 0.05);
     border-radius: 10px;
-    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25) !important;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.05) !important;
 }
 .office-footer .office-detail {
     flex: 85%;
@@ -581,7 +563,7 @@ a:hover {
 }
 .office-detail .office-label,
 .office-detail .office-address {
-    color: var(--white);
+    color: var(--black);
 }
 .office-detail .office-hours {
     color: var(--darkgrey);
@@ -593,91 +575,92 @@ a:hover {
     }
 }
 .btn-open-map {
-    background-color: var(--white);
-    color: var(--grey);
+    background-color: var(--darkgrey);
+    color: var(--white);
     border-radius: 30px;
     transition: .3s;
 }
-
-.btn-open-map:hover {
-    color: var(--black) !important;
-}
 .card-footer-office:hover .card-body .office-footer .office-detail .office-hours {
-    color: #ffde68;
+    color: var(--primaryblue);
 }
 .card-footer-office:hover .card-body .office-footer .office-map .btn-open-map {
-    color: var(--black);
+    background-color: var(--primaryblue);
+    color: var(--white);
 }
-
-.footer-company-list {
-    background-color: var(--lightgrey);
+.seo-footer-list {
+    background-color: rgba(102, 117, 127, 0.05);
     box-shadow: none !important;
     border-radius: 10px;
     transition: .3s;
 }
-
+.seo-footer-list:hover {
+    background-color: var(--primaryblue);
+}
+.footer-company-list {
+    background-color: rgba(102, 117, 127, 0.05);
+    border-radius: 10px;
+    transition: .3s;
+    text-align: center;
+    box-shadow: none !important;
+}
 .seo-footer-list .card-body span {
-    color: var(--darkgrey);
+    color: var(--black);
     font-weight: 500;
     transition: .3s;
-    text-decoration: underline;
 }
-
 .seo-footer-list:hover .card-body span {
     color: var(--white);
+    text-decoration: underline;
 }
-
 .footer-company-list:hover {
     background-color: var(--primaryblue);
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25) !important;
 }
-
 .footer-company-list .card-body .footer-company-cat,
 .footer-company-list .card-body .footer-company-title {
     color: var(--black);
 }
-
 .footer-company-list:hover .card-body .footer-company-cat,
 .footer-company-list:hover .card-body .footer-company-title {
     color: var(--white);
 }
-
 .footer-company-list .card-body .footer-company-title,
 .footer-company-list:hover .card-body .footer-company-title {
     text-decoration: underline;
 }
-
 .footer-resource-list {
     max-width: 50%;
     border-radius: 10px;
-    background-color: var(--darkgrey);
+    background-color: rgba(102, 117, 127, 0.05);
     transition: .3s;
+    box-shadow: none !important;
 }
-
 .footer-resource-icon {
     flex: 25%;
 }
-
-.footer-resource-icon i,
-.footer-resource-icon span {
-    color: var(--white);
+.footer-resource-icon i {
+    color: var(--darkgrey);
 }
-
+.footer-resource-icon span {
+    color: var(--black);
+}
 .footer-resource-text {
     flex: 75%;
-    color: var(--white);
-}
-
-.footer-resource-list:hover {
-    background-color: var(--black);
-    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-}
-
-.footer-resource-list .card-body .footer-resource-text,
-.footer-resource-list:hover .card-body .footer-resource-text {
+    color: var(--black);
     text-decoration: underline;
 }
-
+.footer-resource-list:hover {
+    background-color: var(--primaryblue);
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25) !important;
+}
+.footer-resource-list:hover .card-body .footer-resource-text {
+    text-decoration: underline;
+    color: var(--white);
+}
+.footer-resource-list:hover .card-body .footer-resource-icon i,
+.footer-resource-list:hover .card-body .footer-resource-icon span {
+    color: var(--white);
+}
 @media (max-width: 575px) {
     .footer-resource-list {
         max-width: 100%;
@@ -821,7 +804,7 @@ a:hover {
 }
 
 .alert-features-new .alert-close>button>span>.icon-alert-close {
-    color: var(--darkgrey) !important;
+    color: var(--black) !important;
     font-weight: bolder;
 }
 
@@ -926,14 +909,14 @@ a:hover {
 }
 
 .tools-description-points:hover .label-tools-description {
-    background: var(--darkgrey);
+    background: var(--black);
     color: var(--white);
     font-weight: bold;
     text-decoration: none !important;
 }
 
 .tools-description-points .label-tools-description.active {
-    background: var(--darkgrey);
+    background: var(--black);
     color: var(--white);
     font-weight: bold;
     text-decoration: none !important;
@@ -973,7 +956,7 @@ a:hover {
 }
 
 .button-close-whats-new {
-    color: var(--darkgrey);
+    color: var(--black);
     cursor: pointer;
 }
 
@@ -996,21 +979,21 @@ a:hover {
 
 .custom-features-accordion .card .card-header .card-title.collapsed,
 .custom-features-accordion .card .card-header .card-title::after {
-    color: var(--darkgrey) !important;
+    color: var(--black) !important;
 }
 
 .custom-features-accordion .card .card-header .card-title,
 .custom-features-accordion .card .card-header .card-title.collapsed::after {
-    color: var(--darkgrey) !important;
+    color: var(--black) !important;
 }
 
 .custom-features-accordion .card .card-header .card-title small {
-    color: var(--darkgrey) !important;
+    color: var(--black) !important;
 }
 
 .custom-features-accordion .card .card-header .card-title.collapsed span,
 .custom-features-accordion .card .card-header .card-title.collapsed small {
-    color: var(--darkgrey) !important;
+    color: var(--black) !important;
 }
 
 .local-collection-mobile .local-collection-body .custom-card {
@@ -1117,7 +1100,7 @@ a:hover {
 }
 
 .label-top-3 {
-    background: var(--darkgrey);
+    background: var(--black);
     color: white;
     font-weight: bold;
 }
@@ -1261,8 +1244,8 @@ a:hover {
 .btn-launch {
     background: white;
     font-weight: bold;
-    border: 1px solid var(--darkgrey);
-    color: var(--darkgrey);
+    border: 1px solid var(--black);
+    color: var(--black);
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -1508,7 +1491,7 @@ textarea.input-meta-description {
 }
 
 .hreflang-url-result, .analyzer-url-result, .redirect-url-result, .sitemap-url-result {
-    color: var(--darkgrey);
+    color: var(--black);
     font-weight: bold;
 }
 
@@ -1548,11 +1531,11 @@ textarea.input-meta-description {
     width: 25px;
     font-weight: 400;
     background: var(--lightgrey);
-    color: var(--darkgrey);
+    color: var(--black);
 }
 
 .hreflang-show-more, .analyzer-show-more, .redirect-show-more, .sitemap-show-more {
-    color: var(--darkgrey);
+    color: var(--black);
 }
 
 .result-row:hover .label-hreflang, .result-row:hover .label-analyzer, .result-row:hover .label-redirect, .result-row:hover .label-sitemap {
@@ -1744,7 +1727,7 @@ textarea.input-meta-description {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    color: var(--darkgrey);
+    color: var(--black);
 }
 
 .result-row:hover .number-hreflang p, .result-row:hover .url-hreflang p, .result-row:hover .hreflang p, .result-row:hover .language-hreflang p, .result-row:hover .region-hreflang p {
@@ -1770,7 +1753,7 @@ textarea.input-meta-description {
 
 .label-primary-version {
     background: var(--lightgrey);
-    color: var(--darkgrey);
+    color: var(--black);
 }
 
 .btn-add-question {
@@ -1799,7 +1782,7 @@ textarea.input-meta-description {
 }
 
 .result-row .url-analyzer, .result-row .link-rel-analyzer, .result-row .anchor-analyzer {
-    color: var(--darkgrey);
+    color: var(--black);
 }
 
 .result-row:hover .url-analyzer, .result-row:hover .link-rel-analyzer, .result-row:hover .anchor-analyzer {
@@ -2001,7 +1984,7 @@ textarea.input-meta-description {
 }
 
 .btn-result-link {
-    color: var(--darkgrey);
+    color: var(--black);
     font-weight: 500;
     border-radius: 20px;
 }
@@ -2037,7 +2020,7 @@ textarea.input-meta-description {
 }
 
 .technology-name {
-    color: var(--darkgrey);
+    color: var(--black);
     font-weight: bold;
 }
 
@@ -2049,7 +2032,7 @@ textarea.input-meta-description {
     width: 40px;
     font-weight: 400;
     background: var(--lightgrey);
-    color: var(--darkgrey);
+    color: var(--black);
 }
 
 .redirect-url-result-link {
@@ -2122,7 +2105,7 @@ textarea.input-meta-description {
 .btn-download-sitemap {
     line-height: 1;
     width: 137px;
-    background: var(--darkgrey);
+    background: var(--black);
     color: white;
     border-radius: 20px;
 }
@@ -2149,7 +2132,7 @@ textarea.input-meta-description {
 
 .button-result span,
 .button-result i {
-    color: var(--darkgrey);
+    color: var(--black);
 }
 
 .button-result:hover span {
@@ -2161,7 +2144,7 @@ textarea.input-meta-description {
 }
 
 .delete-robo {
-    color: var(--darkgrey);
+    color: var(--black);
     cursor: pointer;
 }
 
@@ -2178,7 +2161,7 @@ textarea.input-meta-description {
 }
 
 .delete {
-    color: var(--darkgrey);
+    color: var(--black);
     cursor: pointer;
 }
 
