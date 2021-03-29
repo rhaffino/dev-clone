@@ -234,7 +234,7 @@ a:hover {
 
 .button-language:hover {
     background: #F4F4F4;
-    color: var(--black) !important;
+    color: var(--darkgrey) !important;
 }
 
 .button-language, .button-language-mobile {
@@ -345,7 +345,7 @@ a:hover {
 
 .btn-custom-login {
     background: #f4f4f4;
-    color: var(--black);
+    color: var(--darkgrey);
     padding: 5px 20px !important;
     border-radius: 50px;
     transition: .3s;
@@ -804,7 +804,7 @@ a:hover {
 }
 
 .alert-features-new .alert-close>button>span>.icon-alert-close {
-    color: var(--black) !important;
+    color: var(--darkgrey) !important;
     font-weight: bolder;
 }
 
@@ -909,14 +909,14 @@ a:hover {
 }
 
 .tools-description-points:hover .label-tools-description {
-    background: var(--black);
+    background: var(--darkgrey);
     color: var(--white);
     font-weight: bold;
     text-decoration: none !important;
 }
 
 .tools-description-points .label-tools-description.active {
-    background: var(--black);
+    background: var(--darkgrey);
     color: var(--white);
     font-weight: bold;
     text-decoration: none !important;
@@ -956,7 +956,7 @@ a:hover {
 }
 
 .button-close-whats-new {
-    color: var(--black);
+    color: var(--darkgrey);
     cursor: pointer;
 }
 
@@ -979,21 +979,21 @@ a:hover {
 
 .custom-features-accordion .card .card-header .card-title.collapsed,
 .custom-features-accordion .card .card-header .card-title::after {
-    color: var(--black) !important;
+    color: var(--darkgrey) !important;
 }
 
 .custom-features-accordion .card .card-header .card-title,
 .custom-features-accordion .card .card-header .card-title.collapsed::after {
-    color: var(--black) !important;
+    color: var(--darkgrey) !important;
 }
 
 .custom-features-accordion .card .card-header .card-title small {
-    color: var(--black) !important;
+    color: var(--darkgrey) !important;
 }
 
 .custom-features-accordion .card .card-header .card-title.collapsed span,
 .custom-features-accordion .card .card-header .card-title.collapsed small {
-    color: var(--black) !important;
+    color: var(--darkgrey) !important;
 }
 
 .local-collection-mobile .local-collection-body .custom-card {
@@ -1100,7 +1100,7 @@ a:hover {
 }
 
 .label-top-3 {
-    background: var(--black);
+    background: var(--darkgrey);
     color: white;
     font-weight: bold;
 }
@@ -1244,8 +1244,8 @@ a:hover {
 .btn-launch {
     background: white;
     font-weight: bold;
-    border: 1px solid var(--black);
-    color: var(--black);
+    border: 1px solid var(--darkgrey);
+    color: var(--darkgrey);
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -1491,7 +1491,7 @@ textarea.input-meta-description {
 }
 
 .hreflang-url-result, .analyzer-url-result, .redirect-url-result, .sitemap-url-result {
-    color: var(--black);
+    color: var(--darkgrey);
     font-weight: bold;
 }
 
@@ -1531,11 +1531,11 @@ textarea.input-meta-description {
     width: 25px;
     font-weight: 400;
     background: var(--lightgrey);
-    color: var(--black);
+    color: var(--darkgrey);
 }
 
 .hreflang-show-more, .analyzer-show-more, .redirect-show-more, .sitemap-show-more {
-    color: var(--black);
+    color: var(--darkgrey);
 }
 
 .result-row:hover .label-hreflang, .result-row:hover .label-analyzer, .result-row:hover .label-redirect, .result-row:hover .label-sitemap {
@@ -1727,7 +1727,7 @@ textarea.input-meta-description {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    color: var(--black);
+    color: var(--darkgrey);
 }
 
 .result-row:hover .number-hreflang p, .result-row:hover .url-hreflang p, .result-row:hover .hreflang p, .result-row:hover .language-hreflang p, .result-row:hover .region-hreflang p {
@@ -1753,7 +1753,7 @@ textarea.input-meta-description {
 
 .label-primary-version {
     background: var(--lightgrey);
-    color: var(--black);
+    color: var(--darkgrey);
 }
 
 .btn-add-question {
@@ -1782,7 +1782,7 @@ textarea.input-meta-description {
 }
 
 .result-row .url-analyzer, .result-row .link-rel-analyzer, .result-row .anchor-analyzer {
-    color: var(--black);
+    color: var(--darkgrey);
 }
 
 .result-row:hover .url-analyzer, .result-row:hover .link-rel-analyzer, .result-row:hover .anchor-analyzer {
@@ -1984,7 +1984,7 @@ textarea.input-meta-description {
 }
 
 .btn-result-link {
-    color: var(--black);
+    color: var(--darkgrey);
     font-weight: 500;
     border-radius: 20px;
 }
@@ -2020,7 +2020,7 @@ textarea.input-meta-description {
 }
 
 .technology-name {
-    color: var(--black);
+    color: var(--darkgrey);
     font-weight: bold;
 }
 
@@ -2032,7 +2032,7 @@ textarea.input-meta-description {
     width: 40px;
     font-weight: 400;
     background: var(--lightgrey);
-    color: var(--black);
+    color: var(--darkgrey);
 }
 
 .redirect-url-result-link {
@@ -2105,7 +2105,7 @@ textarea.input-meta-description {
 .btn-download-sitemap {
     line-height: 1;
     width: 137px;
-    background: var(--black);
+    background: var(--darkgrey);
     color: white;
     border-radius: 20px;
 }
@@ -2132,7 +2132,7 @@ textarea.input-meta-description {
 
 .button-result span,
 .button-result i {
-    color: var(--black);
+    color: var(--darkgrey);
 }
 
 .button-result:hover span {
@@ -2144,7 +2144,7 @@ textarea.input-meta-description {
 }
 
 .delete-robo {
-    color: var(--black);
+    color: var(--darkgrey);
     cursor: pointer;
 }
 
@@ -2161,7 +2161,7 @@ textarea.input-meta-description {
 }
 
 .delete {
-    color: var(--black);
+    color: var(--darkgrey);
     cursor: pointer;
 }
 
