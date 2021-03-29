@@ -244,7 +244,20 @@ const descChecker = function (desc) {
         rate += 2;
     }
     descsizer.empty()
-    return rate;
+
+    let word = 0
+    if (desc.length > 0)
+        word = desc.split(' ').length
+
+    return {
+        rate : rate,
+        word : word,
+        pixel : pixel,
+        char : l,
+        badChar : badChar,
+        badPixel : badPixel
+    };
+
 }
 
 const fillTitleBar = function (param) {

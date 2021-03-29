@@ -24,8 +24,8 @@ body {
     color: var(--primaryblue);
 }
 
-.text-black {
-    color: var(--black);
+.text-darkgrey {
+    color: var(--darkgrey);
 }
 
 .text-black {
@@ -49,9 +49,9 @@ body {
     color: var(--primaryblue) !important;
 }
 
-.text-hover-black:hover {
+.text-hover-darkgrey:hover {
     cursor: pointer;
-    color: var(--black) !important;
+    color: var(--darkgrey) !important;
 }
 
 .text-hover-black:hover {
@@ -585,7 +585,7 @@ a:hover {
 }
 .card-footer-office:hover .card-body .office-footer .office-map .btn-open-map {
     background-color: var(--primaryblue);
-    color: var(--white);
+    color: var(--white) !important;
 }
 .seo-footer-list {
     background-color: rgba(102, 117, 127, 0.05);
