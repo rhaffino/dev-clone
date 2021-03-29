@@ -6,6 +6,17 @@ if (lang == "en") {
     var localStorageNone = "Ini adalah kesan pertama Anda, belum ada riwayat!"
 }
 
+const constrain = {
+    minTitleChar: 50,
+    minTitlePixel: 250,
+    maxTitleChar: 60,
+    maxTitlePixel: 600,
+    minDescChar: 50,
+    minDescPixel: 400,
+    maxDescChar: 160,
+    maxDescPixel: 920,
+}
+
 jQuery('#crawlURL').click(function () {
     let url = jQuery('#url').val();
     $.post({
@@ -64,15 +75,15 @@ $('#url').on('keyup', function () {
 
 const ellipsis = function (text, type) {
     if (type === 'title') {
-        if (text.length <= 55)
+        if (text.length <= constrain.maxTitleChar)
             return text
 
-        return text.slice(0, 55) + '...'
+        return text.slice(0, constrain.maxTitleChar) + '...'
     } else {
-        if (text.length <= 160)
+        if (text.length <= constrain.maxDescChar)
             return text
 
-        return text.slice(0, 160) + '...'
+        return text.slice(0, constrain.maxDescChar) + '...'
     }
 }
 
@@ -120,7 +131,7 @@ const refreshLocalStorage = function () {
         $('#localsavemobile').empty();
         $('#localsavedesktop').empty();
         const keys = JSON.parse(localStorage.getItem('keys'))
-        if (keys){
+        if (keys) {
             if (keys.meta.length > 0) {
                 for (let key of keys.meta) {
                     let temp = JSON.parse(localStorage.getItem(key)).url
@@ -163,7 +174,7 @@ const refreshLocalStorage = function () {
                 $('#localsavemobile').append(div)
                 $('#localsavedesktop').append(div2)
             }
-        }else {
+        } else {
             let div2 = `<li id="empty-impression" class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
                   <div class="d-flex justify-content-center text-center">
                     <span>` + localStorageNone + `</span>
@@ -216,32 +227,66 @@ const clearAll = function () {
 const titleChecker = function (title) {
     var titlesizer = $('#titlesizer');
     var rate = 0;
+    var badChar = 0;
+    var badPixel = 0;
     var l = title.length;
-    if (l > 30 && l < 55) {
+    if (l >= constrain.minTitleChar && l <= constrain.maxTitleChar) {
         rate++;
+    } else if (l > constrain.minTitleChar) {
+        badChar = l - constrain.maxTitleChar
+    } else {
+        badChar = l - constrain.minTitleChar
     }
+
     titlesizer.css("display: inline-block; text-decoration: none; color: #1e0fbe; font-size: 18px !important; line-height: 18px !important;white-space:nowrap;visibility:hidden; font-family: Arial,Arial, Tahoma, Sans Serif")
     titlesizer.append(title);
     var pixel = titlesizer.innerWidth();
-    if (pixel >= 250 && pixel <= 470) {
+    if (pixel >= constrain.minTitlePixel && pixel <= constrain.maxTitlePixel) {
         rate += 2;
+    } else if (pixel > constrain.maxTitlePixel) {
+        badPixel = pixel - constrain.maxTitlePixel
+    } else {
+        badPixel = pixel - constrain.minTitlePixel
     }
     titlesizer.empty();
-    return rate;
+
+    let word = 0
+    if (title.length > 0)
+        word = title.split(' ').length
+
+    return {
+        rate: rate,
+        word: word,
+        pixel: pixel,
+        char: l,
+        badChar: badChar,
+        badPixel: badPixel
+    };
 }
 
 const descChecker = function (desc) {
     var descsizer = $('#descsizer');
     var rate = 0;
+    var badChar = 0;
+    var badPixel = 0;
     var l = desc.length;
-    if (l > 65 && l < 160) {
+    if (l >= constrain.minDescChar && l <= constrain.maxDescChar) {
         rate++;
+    } else if (l > constrain.maxDescChar) {
+        badChar = l - constrain.maxDescChar
+    } else {
+        badChar = l - constrain.minDescChar
     }
+
     descsizer.css("display: inline-block; font-family: arial, sans-serif; font-size: 13px;color: #545454;line-height: 1.4;white-space: pre-wrap;word-wrap: break-word;filter: none!important;white-space:nowrap;visibility:hidden;");
     descsizer.append(desc)
     var pixel = descsizer.innerWidth();
-    if (pixel >= 400 && pixel <= 750) {
+    if (pixel >= constrain.minDescPixel && pixel <= constrain.maxDescPixel) {
         rate += 2;
+    } else if (pixel > constrain.maxDescPixel) {
+        badPixel = pixel - constrain.maxDescPixel
+    } else {
+        badPixel = pixel - constrain.minDescPixel
     }
     descsizer.empty()
 
@@ -250,39 +295,108 @@ const descChecker = function (desc) {
         word = desc.split(' ').length
 
     return {
-        rate : rate,
-        word : word,
-        pixel : pixel,
-        char : l,
-        badChar : badChar,
-        badPixel : badPixel
+        rate: rate,
+        word: word,
+        pixel: pixel,
+        char: l,
+        badChar: badChar,
+        badPixel: badPixel
     };
-
 }
 
 const fillTitleBar = function (param) {
-    for (let i = 1; i < param + 1; i++) {
+    for (let i = 1; i < param.rate + 1; i++) {
         $('#titlebar' + i).removeClass("blank")
         $('#titlebar' + i).addClass("active")
     }
-    for (let i = param + 1; i < 4; i++) {
+    for (let i = param.rate + 1; i < 4; i++) {
         $('#titlebar' + i).removeClass("active")
         $('#titlebar' + i).addClass("blank")
+    }
+    $('#title-char').text(param.char)
+    $('#title-pixel').text(param.pixel + 'px')
+    $('#title-word').text(param.word)
+    if (param.char > 0) {
+        if (param.badChar !== 0) {
+            if (param.badChar < 0) {
+                $('#title-bad-char-point').text('Your character less than ' + constrain.minTitleChar)
+            } else {
+                $('#title-bad-char-point').text('Your character more than ' + constrain.maxTitleChar)
+            }
+            $('#title-bad-char').removeClass('d-none')
+            $('#title-bad-char').addClass('d-flex')
+        } else {
+            $('#title-bad-char').removeClass('d-flex')
+            $('#title-bad-char').addClass('d-none')
+        }
+        if (param.badPixel !== 0) {
+            if (param.badPixel < 0) {
+                $('#title-bad-pixel-point').text('Your pixel less than ' + constrain.minTitlePixel)
+            } else {
+                $('#title-bad-pixel-point').text('Your pixel more than ' + constrain.maxTitlePixel)
+            }
+            $('#title-bad-pixel').removeClass('d-none')
+            $('#title-bad-pixel').addClass('d-flex')
+        } else {
+            $('#title-bad-pixel').removeClass('d-flex')
+            $('#title-bad-pixel').addClass('d-none')
+        }
+    } else {
+        $('#title-bad-char').removeClass('d-flex')
+        $('#title-bad-char').addClass('d-none')
+        $('#title-bad-pixel').removeClass('d-flex')
+        $('#title-bad-pixel').addClass('d-none')
     }
 }
 
 const fillDescBar = function (param) {
-    for (let i = 1; i < param + 1; i++) {
+    for (let i = 1; i < param.rate + 1; i++) {
         $('#descbar' + i).removeClass("blank")
         $('#descbar' + i).addClass("active")
     }
-    for (let i = param + 1; i < 4; i++) {
+    for (let i = param.rate + 1; i < 4; i++) {
         $('#descbar' + i).removeClass("active")
         $('#descbar' + i).addClass("blank")
+    }
+    $('#desc-char').text(param.char)
+    $('#desc-pixel').text(param.pixel + 'px')
+    $('#desc-word').text(param.word)
+    if (param.char > 0) {
+        if (param.badChar !== 0) {
+            if (param.badChar < 0) {
+                $('#desc-bad-char-point').text('Your character less than ' + constrain.minDescChar)
+            } else {
+                $('#desc-bad-char-point').text('Your character more than ' + constrain.maxDescChar)
+            }
+            $('#desc-bad-char').removeClass('d-none')
+            $('#desc-bad-char').addClass('d-flex')
+        } else {
+            $('#desc-bad-char').removeClass('d-flex')
+            $('#desc-bad-char').addClass('d-none')
+        }
+        if (param.badPixel !== 0) {
+            if (param.badPixel < 0) {
+                $('#desc-bad-pixel-point').text('Your pixel less than ' + constrain.minDescPixel)
+            } else {
+                $('#desc-bad-pixel-point').text('Your pixel more than ' + constrain.maxDescPixel)
+            }
+            $('#desc-bad-pixel').removeClass('d-none')
+            $('#desc-bad-pixel').addClass('d-flex')
+        } else {
+            $('#desc-bad-pixel').removeClass('d-flex')
+            $('#desc-bad-pixel').addClass('d-none')
+        }
+    } else {
+        $('#desc-bad-char').removeClass('d-flex')
+        $('#desc-bad-char').addClass('d-none')
+        $('#desc-bad-pixel').removeClass('d-flex')
+        $('#desc-bad-pixel').addClass('d-none')
     }
 }
 
 $(document).ready(function () {
+    $("#crawlURL").attr("disabled", true);
+    $("#title").focus();
     $('#manualModeOff').click(function () {
         $('#manualModeOn').removeClass("d-none").addClass("d-block");
         $('#botModeOff').removeClass("d-none").addClass("d-block");
@@ -292,6 +406,7 @@ $(document).ready(function () {
         $("#crawlURL").attr("disabled", true);
         $('#title').attr('disabled', false);
         $('#desc').attr('disabled', false);
+        $("#title").focus();
     });
 
     $('#botModeOff').click(function () {
@@ -303,6 +418,7 @@ $(document).ready(function () {
         $("#crawlURL").attr("disabled", false);
         $('#title').attr('disabled', true);
         $('#desc').attr('disabled', true);
+        $("#url").focus();
     });
 
     refreshLocalStorage();
