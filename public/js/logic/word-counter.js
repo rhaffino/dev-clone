@@ -250,11 +250,11 @@ jQuery('#reset').click(function () {
 
 function start() {
 
-    characterCount.innerHTML = input.value.length;
+    characterCount.innerHTML = numberWithCommas(input.value.length);
 
     var words = input.value.replace(/['";:,.?\xbf\-!\xa1]+/g, "").match(/\S+/g);
     if (words) {
-        wordCount.innerHTML = words.length;
+        wordCount.innerHTML = numberWithCommas(words.length);
     } else {
         wordCount.innerHTML = 0;
     }
@@ -794,4 +794,8 @@ const lastData = function () {
 
 const saveState = function () {
     State.save($('#textarea').val())
+}
+
+function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
