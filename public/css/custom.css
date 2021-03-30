@@ -1393,8 +1393,17 @@ a:hover {
 }
 
 input.input-meta-title,
-textarea.input-meta-description {
+textarea.input-meta-description,
+input.input-url-meta-checker{
     border: none;
+    border-radius:0px;
+    border-bottom: 1px solid white;
+}
+
+input.input-meta-title:focus,
+textarea.input-meta-description:focus,
+input.input-url-meta-checker:focus{
+    border-bottom: 1px solid white;
 }
 
 .progress-bar_wrap {
