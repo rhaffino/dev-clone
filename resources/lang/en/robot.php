@@ -1,7 +1,7 @@
 <?php
 return [
-    "meta-title" => "Robots.Txt Generator - Generate robots.txt file easily",
-    "meta-desc" => "Create a Robots.txt file to manage Google Crawler traffic on the website easily and quickly",
+    "meta-title" => "Robots.txt Generator for SEO - Custom and Check robots.txt File in Free",
+    "meta-desc" => "Use robots.txt generator to set the index status of the link on your website. Helps Google optimize dan improve your web performance.",
     "title" => "ROBOT.TXT GENERATOR",
     "subtitle" => "Generate robots.txt file easily",
     "label-robot-access" => "Default robot access",

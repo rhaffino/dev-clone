@@ -1,8 +1,8 @@
 <?php
 
 return [
-    "meta-title" => "Word Counter Online – Tool penghitung jumlah kata",
-    "meta-desc" => "Hitung jumlah kata, paragraf, waktu membaca, dan kepadatan keyword dengan Word Counter Tool.",
+    "meta-title" => "Word Counter - Alat Penghitung Kata & Keyword Density",
+    "meta-desc" => "Word Counter untuk menghitung kata, paragraf dan durasi membaca secara instan. Lengkap dengan SEO Keyword Density checker untuk penulis!",
     "title" => "WORD COUNTER",
     "subtitle" => "Hitung Kata dalam Teks",
     "tooltip-copy" => "Salin",

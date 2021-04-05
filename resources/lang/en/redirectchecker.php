@@ -1,7 +1,7 @@
 <?php
 return [
-    "meta-title" =>"Redirect Checker - Free Online Tools",
-    "meta-desc" => "Find and fix redirect chain on your website with this Redirect Chain Checker. Free online tools!",
+    "meta-title" =>"Free Redirect Checker - Find Out The Website HTTP Status Code",
+    "meta-desc" => "The redirect checker helps web developers to find out the ​HTTP status codes. Improve the aspect make the best SEO prospect for your website",
     "lang" => "en",
     "title" => "REDIRECT CHECKER",
     "sub-title" => "Check And Show Redirect Chain",

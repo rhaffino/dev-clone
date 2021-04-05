@@ -1,7 +1,7 @@
 <?php
 return [
-    "meta-title" => "Tool Online Gratis - Link Analyzer",
-    "meta-desc" => "melacak semua tautan situs web Anda. Dengan menggunakan tool ini, Anda dapat menganalisis tautan eksternal dan internal yang terkait dengan situs Anda.",
+    "meta-title" => "Link Analyzer Tool Online - Cek Link Internal & Eksternal dari Website Anda",
+    "meta-desc" => "Tool link analyzer membantu Anda mengecek link yang terhubung dengan web, dari internal dan external laman. Analisa dan atur link untuk tingkatkan SEO.",
     "lang" => "id",
     "title" => "LINK ANALYZER",
     "sub-title" => "Terus Lacak Semua Tautan Di Situs Web Anda",

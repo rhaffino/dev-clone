@@ -1,7 +1,7 @@
 <?php
 return[
-    "meta-title" => "Word Counter Online - Word counter tools",
-    "meta-desc" => "Count the number of words, paragraphs, reading time, and keyword density with the Word Counter Tool",
+    "meta-title" => "Word Counter Online - Count Word and Keyword Density",
+    "meta-desc" => "Word Counter helps to count words, paragraphs and know the reading time. Use the keyword density checker and local history for better experiences",
     "title" => "WORD COUNTER",
     "subtitle" => "Calculate The Number of Words in a Text",
     "tooltip-copy" => "Copy",

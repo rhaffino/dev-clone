@@ -1,7 +1,7 @@
 <?php
 return [
-    "meta-title" => "Mobile Friendly Test Tool – Alat Pratinjau Tampilan Seluler",
-    "meta-desc" => "Mobile Friendly Test Tool dari CMLABS adalah cara cepat dan mudah untuk menguji apakah halaman situs Anda mobile-friendly",
+    "meta-title" => "Mobile Friendly Test - Pratinjau Performa Web di Seluler untuk SEO",
+    "meta-desc" => "Cek tampilan web dengan Mobile Friendly Test dari cmlabs. Identifikasi masalah dan analisa performa web agar lebih ramah handphone.",
     "title" => "MOBILE FRIENDLY TEST",
     "sub-title" => "Tes Tampilan Web Di Mobile",
     "btn-check" => "CEK URL",

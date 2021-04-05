@@ -2,8 +2,8 @@
 return [
     "title" => "TITLE & META DESCRIPTION CHECKER",
     "sub-title" => "Cek Panjang Judul dan Meta",            
-    "meta-title" => "Page Title dan Meta Description Length Checker",
-    "meta-desc" => "Cek panjang Judul Halaman dan Meta Description di tampilan Google menggunakan tool meta length checker dari CMLABS.",
+    "meta-title" => "Title dan Meta Description Length Checker - Google SERP Preview",
+    "meta-desc" => "Tool title dan meta decription length checker cmlabs dengan pratinjau Google untuk SEO. Dapatkan lebih banyak klik dengan meta yang tepat!",
     "input-hint-manual" => "Ketik atau tempel teks Anda ...",
     "btn-crawl" => "TELUSURI URL",
     "tooltip-manual-off" => "mode MANUAL NONAKTIF",

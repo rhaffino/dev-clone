@@ -1,7 +1,7 @@
 <?php
 return [
-    "meta-title" => "Mobile Friendly Test Tool – Site Preview Tools",
-    "meta-desc" => "The Mobile Friendly Test Tool from CMLABS is a fast and easy way to test whether your site pages are mobile-friendly",
+    "meta-title" => "Mobile Friendly Test - Preview Website Performance in Mobile for SEO",
+    "meta-desc" => "Check your web with the Mobile Friendly Test from cmlabs. Identify problems and analyze web performance to make it more mobile-friendly.",
     "title" => "MOBILE FRIENDLY TEST",
     "sub-title" => "Sites Preview On Mobile",
     "btn-check" => "CHECK URL",

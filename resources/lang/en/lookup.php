@@ -1,7 +1,7 @@
 <?php
 return [
-    "meta-title" =>"Technology Lookup - Online Tools for Developers",
-    "meta-desc" => "Find out what websites are built with. Instantly reveal the technology stack and contact details of any website with this technology lookup tools",
+    "meta-title" =>"Technology Lookup Online - Know The Website Technology and More!",
+    "meta-desc" => "Technology Lookup is a tool for identify widgets, identifying languages ​​and the full version of the technology applied by a site.",
     "lang" => "en",
     "title" => "TECHNOLOGY LOOKUP",
     "sub-title" => "Find Out What Websites Are Built",

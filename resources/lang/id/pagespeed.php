@@ -1,7 +1,7 @@
 <?php
 return [
-    "meta-title" => "Page Speed Test - Site Analysis Tool",
-    "meta-desc" => "Gunakan PageSpeed dari SEO Tools cmlabs untuk melihat skor performa, aksesibilitas, SEO, dan PWA dari website Anda",
+    "meta-title" => "Page Speed Test - Cek Performa dan  Skor Website untuk SEO",
+    "meta-desc" => "Analisa skor web dengan Page Speed Test Tool dari cmlabs. Cek performa laman dan dapatkan rekomendasi solusi untuk tingkatkan nilai.",
     "lang" => "id",
     "title" => "PAGE SPEED TEST",
     "sub-title" => "Periksa Kecepatan Situs Dan Masalah Web",
