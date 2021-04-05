@@ -1,7 +1,7 @@
 <?php
 return [
-    "meta-title" =>"Check Your Tag - Hreflang Checker",
-    "meta-desc" => "Target the correct content on your website to international users with Hreflang checker tools online and free for use!",
+    "meta-title" =>"Hreflang Tags Checker - Know The Language and Region of Website",
+    "meta-desc" => "Hreflang checker is a tool to identify hreflang tags automatically. Help Google recognize the language and place it in the right market.",
     "lang" => "en",
     "title" => "HREFLANG CHECKER",
     "sub-title" => "Quickly Check Hreflang Tags For A Page",

@@ -1,7 +1,7 @@
 <?php
 return [
-    "meta-title" => "SSL Checker Tool Online Gratis",
-    "meta-desc" => "Cek Validitas sertifikat SSL dan lihat detail SSL tambahan di website Anda dengan SSL Checker Tool.",
+    "meta-title" => "SSL Certificate Checker - Analisa Status Instalasi & Issues Konfigurasi",
+    "meta-desc" => "Gunakan SSL Checker tool dari untuk memastikan validalitas sebuah website. Temukan informasi expiration date dan keterangan TLS Certificate.",
     "title" => "SSL CHECKER TOOL",
     "subtitle" => "Periksa Sertifikat SSL Anda",
     "btn-check" => "CEK URL",

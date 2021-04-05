@@ -1,7 +1,7 @@
 <?php
 return [
-    "meta-title" => "Technology Lookup - Tool online untuk Developer",
-    "meta-desc" => "Cari tahu dengan apa situs web dibuat. Secara instan mengungkap tumpukan teknologi dan detail kontak dari situs web mana pun dengan technology lookup tool",
+    "meta-title" => "Technology Lookup Online - Cek Teknologi Website dan Terapkan!",
+    "meta-desc" => "Technology Lookup adalah tool untuk melihat widget, identifikasi bahasa dan versi lengkap teknologi yang digunakan sebuah situs.",
     "lang" => "id",
     "title" => "TECHNOLOGY LOOKUP",
     "sub-title" => "Temukan Website Apa Yang Ingin Di Bangun",
