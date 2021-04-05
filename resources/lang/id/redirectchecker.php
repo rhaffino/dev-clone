@@ -1,7 +1,7 @@
 <?php
 return [
-    "meta-title" => "Redirect Checker - Online Tool Gratis",
-    "meta-desc" => "Temukan dan perbaiki redirect chain di situs web Anda dengantool redirect chain checker ini. Tool online gratis!",
+    "meta-title" => "Redirect Checker Gratis - Cek HTTP Status Code Website untuk SEO",
+    "meta-desc" => "Redirect checker memudahkan developer web mengetahui HTTP  status code  5xx, 4xx, 3xx dan 2xx dari laman. Tingkatkan aspek SEO dari website Anda.",
     "lang" => "id",
     "title" => "REDIRECT CHECKER",
     "sub-title" => "Cek Dan Lihat Redirect Chain",

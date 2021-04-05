@@ -1,7 +1,7 @@
 <?php
 return [
-    "meta-title" => "Sitemap Generator – Developer Tool",
-    "meta-desc" => "Utilize the sitemap generator to find out the available page details & get the best of search engines crawlers",
+    "meta-title" => "Sitemap Generator - Create Google XML Sitemap Online for SEO",
+    "meta-desc" => "XML Sitemap Generator Tool free from cmlabs to create XML files and help Google to indexing your website.",
     "title" => "SITEMAP GENERATOR",
     "sub-title" => "Enhance Sitemap For Crawlers",
     "btn-generate" => "GENERATE",

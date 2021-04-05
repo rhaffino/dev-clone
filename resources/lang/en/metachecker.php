@@ -2,8 +2,8 @@
 return [
     "title" => "TITLE & META DESCRIPTION CHECKER",
     "sub-title" => "Check Title and Meta Lengths",            
-    "meta-title" => "Page Title and Meta Description Length Checker",
-    "meta-desc" => "Check the length of the Page Title and Meta Description of your website in the content writing Tools from cmlabs. Improve your writing skills!",
+    "meta-title" => "Title and Meta Description Length Checker - Google SERP Preview",
+    "meta-desc" => "Page title and meta description length checker from cmlabs with Google Preview for SEO. Get more clicks with better meta information!",
     "input-hint-manual" => "Type or paste your text..",
     "btn-crawl" => "CRAWL URL",
     "tooltip-manual-off" => "MANUAL mode is OFF",

@@ -1,7 +1,7 @@
 <?php
 return [
-    "meta-title" =>"Free Online Tool - Link Analyzer",
-    "meta-desc" => "keep track of all the links of your website. Using this link analyzer tool, you can analyze both external and internal links related to your site.",
+    "meta-title" =>"Link Analyzer Online Tool - Check Internal & External Links of Website",
+    "meta-desc" => "The link analyzer tool helps you track connected links from internal and external to your website. Analyze and organize the links to improve SEO.",
     "lang" => "en",
     "title" => "LINK ANALYZER",
     "sub-title" => "Keep Track All The Links Of Your Site",
