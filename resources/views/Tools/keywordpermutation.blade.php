@@ -30,7 +30,7 @@ id/keyword-permutation
                             <div class="container px-4 pt-3">
                                 <div class="d-flex justify-content-between">
                                     <p class="mb-0 text-black"><strong>Keyword 1</strong> <small>(@lang('permutation.one-per-line'))</small></p>
-                                    <p class="mb-0 text-black"><strong>0</strong></p>
+                                    <p class="mb-0 text-primaryblue"><span>0</span> keywords</p>
                                 </div>
                             </div>
                             <hr class="mb-0">
@@ -42,7 +42,7 @@ id/keyword-permutation
                             <div class="container px-4 pt-3">
                                 <div class="d-flex justify-content-between">
                                     <p class="mb-0 text-black"><strong>Keyword 2</strong> <small>(@lang('permutation.one-per-line'))</small></p>
-                                    <p class="mb-0 text-black"><strong>0</strong></p>
+                                    <p class="mb-0 text-primaryblue"><span>0</span> keywords</p>
                                 </div>
                             </div>
                             <hr class="mb-0">
@@ -54,7 +54,7 @@ id/keyword-permutation
                             <div class="container px-4 pt-3">
                                 <div class="d-flex justify-content-between">
                                     <p class="mb-0 text-black"><strong>Keyword 3</strong> <small>(@lang('permutation.one-per-line'))</small></p>
-                                    <p class="mb-0 text-black"><strong>0</strong></p>
+                                    <p class="mb-0 text-primaryblue"><span>0</span> keywords</p>
                                 </div>
                             </div>
                             <hr class="mb-0">
@@ -103,13 +103,14 @@ id/keyword-permutation
                         <div class="card-body p-0">
                             <div class="container px-4 pt-3">
                                 <div class="d-flex justify-content-between">
-                                    <div class="">
-                                        <p class="mb-0 text-black"><strong>@lang('permutation.permutation-result')</strong></p>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <p class="mb-0 text-black mr-2"><strong>@lang('permutation.permutation-result')</strong></p>                                        
+                                        <small id="copy-text" class="mb-0 mx-2 text-darkgrey text-hover-underline">@lang('permutation.copy-btn')</small>
+                                        <small id="reset" class="mb-0 mx-2 text-darkgrey text-hover-underline">@lang('permutation.clear-btn')</small>
                                     </div>
                                     <div class="d-flex justify-content-between">
-                                        <p class="mb-0 mx-2 text-black"><strong>0</strong></p>
-                                        <p id="copy-text" class="mb-0 mx-2 text-darkgrey text-hover-underline">@lang('permutation.copy-btn')</p>
-                                        <p id="reset" class="mb-0 mx-2 text-darkgrey text-hover-underline">@lang('permutation.clear-btn')</p>
+                                        <p class="mb-0 text-primaryblue"><span>0</span> keywords</p>
+
                                     </div>
                                 </div>
                             </div>
