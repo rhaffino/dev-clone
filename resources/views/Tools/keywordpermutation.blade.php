@@ -30,11 +30,11 @@ id/keyword-permutation
                             <div class="container px-4 pt-3">
                                 <div class="d-flex justify-content-between">
                                     <p class="mb-0 text-black"><strong>Keyword 1</strong> <small>(@lang('permutation.one-per-line'))</small></p>
-                                    <p class="mb-0 text-primaryblue"><span>0</span> keywords</p>
+                                    <p class="mb-0 text-primaryblue"><span id="count-keyword-box1">0</span> keywords</p>
                                 </div>
                             </div>
                             <hr class="mb-0">
-                            <textarea data-autoresize name="name" placeholder="{{ Lang::get('permutation.textarea-placeholder') }}" rows="7" style="resize:none;" class="form-control keyword-permutation-text__area"></textarea>
+                            <textarea id="box1" data-autoresize name="name" placeholder="{{ Lang::get('permutation.textarea-placeholder') }}" rows="7" style="resize:none;" class="form-control keyword-permutation-text__area"></textarea>
                         </div>
                     </div>
                     <div class="card card-custom mb-5">
@@ -42,11 +42,11 @@ id/keyword-permutation
                             <div class="container px-4 pt-3">
                                 <div class="d-flex justify-content-between">
                                     <p class="mb-0 text-black"><strong>Keyword 2</strong> <small>(@lang('permutation.one-per-line'))</small></p>
-                                    <p class="mb-0 text-primaryblue"><span>0</span> keywords</p>
+                                    <p class="mb-0 text-primaryblue"><span id="count-keyword-box2">0</span> keywords</p>
                                 </div>
                             </div>
                             <hr class="mb-0">
-                            <textarea data-autoresize name="name" placeholder="{{ Lang::get('permutation.textarea-placeholder') }}" rows="7" style="resize:none;" class="form-control keyword-permutation-text__area"></textarea>
+                            <textarea id="box2" data-autoresize name="name" placeholder="{{ Lang::get('permutation.textarea-placeholder') }}" rows="7" style="resize:none;" class="form-control keyword-permutation-text__area"></textarea>
                         </div>
                     </div>
                     <div class="card card-custom mb-5">
@@ -54,11 +54,11 @@ id/keyword-permutation
                             <div class="container px-4 pt-3">
                                 <div class="d-flex justify-content-between">
                                     <p class="mb-0 text-black"><strong>Keyword 3</strong> <small>(@lang('permutation.one-per-line'))</small></p>
-                                    <p class="mb-0 text-primaryblue"><span>0</span> keywords</p>
+                                    <p class="mb-0 text-primaryblue"><span id="count-keyword-box3">0</span> keywords</p>
                                 </div>
                             </div>
                             <hr class="mb-0">
-                            <textarea data-autoresize name="name" placeholder="{{ Lang::get('permutation.textarea-placeholder') }}" rows="7" style="resize:none;" class="form-control keyword-permutation-text__area"></textarea>
+                            <textarea id="box3" data-autoresize name="name" placeholder="{{ Lang::get('permutation.textarea-placeholder') }}" rows="7" style="resize:none;" class="form-control keyword-permutation-text__area"></textarea>
                         </div>
                     </div>
                     <div class="desktop-version">
@@ -87,14 +87,14 @@ id/keyword-permutation
                         <div class="card-body px-3 pt-3 pb-0">
                             <div class="row">
                                 <div class="col-md-7 col-lg-8 mb-3">
-                                    <select class="form-control picker" name="">
-                                        <option value="">@lang('permutation.broad-match')</option>
+                                    <select id="option" class="form-control picker" name="">
+                                        <option value="normal">@lang('permutation.broad-match')</option>
                                         <option value="quotes">@lang('permutation.phrase-match')</option>
                                         <option value="square">@lang('permutation.exact-match')</option>
                                     </select>
                                 </div>
                                 <div class="col-md-5 col-lg-4 mb-3">
-                                        <button type="button" class="btn btn-generate-permutation btn-block" name="button">@lang('permutation.permutation-btn')</button>
+                                        <button id="generator" type="button" class="btn btn-generate-permutation btn-block" name="button">@lang('permutation.permutation-btn')</button>
                                 </div>
                             </div>
                         </div>
@@ -109,7 +109,7 @@ id/keyword-permutation
                                         <small id="reset" class="mb-0 mx-2 text-darkgrey text-hover-underline">@lang('permutation.clear-btn')</small>
                                     </div>
                                     <div class="d-flex justify-content-between">
-                                        <p class="mb-0 text-primaryblue"><span>0</span> keywords</p>
+                                        <p class="mb-0 text-primaryblue"><span id="count-keyword">0</span> keywords</p>
 
                                     </div>
                                 </div>
@@ -280,6 +280,7 @@ id/keyword-permutation
 @endsection
 
 @push('script')
+<script src="{{asset('/js/logic/keyword-permutation.js')}}"></script>
 <script type="text/javascript">
     $('#toggle_button_webmaster').click();
     $("#copy-text").click(function () {
