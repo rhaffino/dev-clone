@@ -104,7 +104,7 @@ id/keyword-permutation
                             <div class="container px-4 pt-3">
                                 <div class="d-flex justify-content-between">
                                     <div class="d-flex align-items-center justify-content-between">
-                                        <p class="mb-0 text-black mr-2"><strong>@lang('permutation.permutation-result')</strong></p>                                        
+                                        <p class="mb-0 text-black mr-2"><strong>@lang('permutation.permutation-result')</strong></p>
                                         <small id="copy-text" class="mb-0 mx-2 text-darkgrey text-hover-underline">@lang('permutation.copy-btn')</small>
                                         <small id="reset" class="mb-0 mx-2 text-darkgrey text-hover-underline">@lang('permutation.clear-btn')</small>
                                     </div>
