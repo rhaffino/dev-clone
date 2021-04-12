@@ -44,16 +44,25 @@ $(document).ready(function () {
     //count keywords for boxes
     $('#box1').keyup(function() {
         var box1 = $(this).val().split('\n')
+        if(!$(this).val()) {
+            return $('#count-keyword-box1').text(0)
+        }
         $('#count-keyword-box1').text(box1.length)
     })
 
     $('#box2').keyup(function() {
         var box2 = $(this).val().split('\n')
+        if(!$(this).val()) {
+            return $('#count-keyword-box2').text(0)
+        }
         $('#count-keyword-box2').text(box2.length)
     })
 
     $('#box3').keyup(function() {
         var box3 = $(this).val().split('\n')
+        if(!$(this).val()) {
+            return $('#count-keyword-box3').text(0)
+        }
         $('#count-keyword-box3').text(box3.length)
     })
 })
