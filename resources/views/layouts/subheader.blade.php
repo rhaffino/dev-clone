@@ -36,7 +36,7 @@
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item @yield('redirect-checker')" href="/{{ $local }}/redirect-checker">Redirect Chain Checker</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item @yield('hreflang-checker')" href="/{{ $local }}/hreflang-checker">Hreflang Cheker</a>
+                            <a class="dropdown-item @yield('hreflang-checker')" href="/{{ $local }}/hreflang-checker">Hreflang Checker</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item @yield('link-analyzer')" href="/{{ $local }}/link-analyzer">Link Analyzer</a>
                             <div class="dropdown-divider"></div>
