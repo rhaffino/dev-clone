@@ -153,26 +153,27 @@ id/keyword-permutation
                 <div class="" id="description-tab-1">
                     <h2 class="text-black">@lang('permutation.desc-1')</h2>
                     <p class="text-black">@lang('permutation.desc-1-1')</p>
+                    <p class="text-black">@lang('permutation.desc-1-2')</p>
                 </div>
                 <div class="d-none" id="description-tab-2">
                     <h2 class="text-black">@lang('permutation.desc-2')</h2>
                     <p class="text-black">@lang('permutation.desc-2-1')</p>
+                    <h3 class="text-black">@lang('permutation.desc-2-2')</h3>
+                    <p class="text-black">@lang('permutation.desc-2-2-1')</p>
+                    <h3 class="text-black">@lang('permutation.desc-2-3')</h3>
+                    <p class="text-black">@lang('permutation.desc-2-3-1')</p>
+                    <h3 class="text-black">@lang('permutation.desc-2-4')</h3>
+                    <p class="text-black">@lang('permutation.desc-2-4-1')</p>
                 </div>
                 <div class="d-none" id="description-tab-3">
                     <h2 class="text-black">@lang('permutation.desc-3')</h2>
                     <p class="text-black">@lang('permutation.desc-3-1')</p>
-                </div>
-                <div class="d-none" id="description-tab-4">
-                    <h2 class="text-black">@lang('permutation.desc-4')</h2>
-                    <p class="text-black">@lang('permutation.desc-4-1')</p>
-                </div>
-                <div class="d-none" id="description-tab-5">
-                    <h2 class="text-black">@lang('permutation.desc-5')</h2>
-                    <p class="text-black">@lang('permutation.desc-5-1')</p>
-                </div>
-                <div class="d-none" id="description-tab-6">
-                    <h2 class="text-black">@lang('permutation.desc-6')</h2>
-                    <p class="text-black">@lang('permutation.desc-6-1')</p>
+                    <h3 class="text-black">@lang('permutation.desc-3-2')</h3>
+                    <p class="text-black">@lang('permutation.desc-3-2-1')</p>
+                    <h3 class="text-black">@lang('permutation.desc-3-3')</h3>
+                    <p class="text-black">@lang('permutation.desc-3-3-1')</p>
+                    <h3 class="text-black">@lang('permutation.desc-3-4')</h3>
+                    <p class="text-black">@lang('permutation.desc-3-4-1')</p>
                 </div>
             </div>
             <div class="col-md-3">
@@ -193,24 +194,6 @@ id/keyword-permutation
                         <span class="label label-lg label-tools-description" id="nav-label-tab-3">3</span>
                     </div>
                     <a class="">@lang('permutation.desc-3')</a>
-                </div>
-                <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-4">
-                    <div class="mr-2" style="width:24px !important; height: 24px !important;">
-                        <span class="label label-lg label-tools-description" id="nav-label-tab-4">4</span>
-                    </div>
-                    <a class="">@lang('permutation.desc-4')</a>
-                </div>
-                <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-5">
-                    <div class="mr-2" style="width:24px !important; height: 24px !important;">
-                        <span class="label label-lg label-tools-description" id="nav-label-tab-5">5</span>
-                    </div>
-                    <a class="">@lang('permutation.desc-5')</a>
-                </div>
-                <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-6">
-                    <div class="mr-2" style="width:24px !important; height: 24px !important;">
-                        <span class="label label-lg label-tools-description" id="nav-label-tab-6">6</span>
-                    </div>
-                    <a class="">@lang('permutation.desc-6')</a>
                 </div>
             </div>
         </div>
@@ -239,7 +222,7 @@ id/keyword-permutation
             </div>
         </div>
         --}}
-        <h2 class="text-black">@lang('layout.whats-new-title') @lang('permutation.title')</h2>
+        {{-- <h2 class="text-black">@lang('layout.whats-new-title') @lang('permutation.title')</h2>
         <div class="row my-5">
             <div class="col-md-6 mb-5">
                 <div class="alert alert-custom alert-features-new fade show card card-custom card-stretch" role="alert" style="background: var(--lightgrey); display:block">
@@ -271,7 +254,7 @@ id/keyword-permutation
                     <span class="alert-features-text">@lang('permutation.whats-new-2')</span>
                 </div>
             </div>
-        </div>
+        </div> --}}
         {{--
         <p class="text-black view-all-release">@lang('layout.view-web-release')</p>
         --}}
