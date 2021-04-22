@@ -1201,16 +1201,21 @@ a:hover {
 }
 
 @media only screen and (min-width: 1400px) {
-    #local-collection-desktop.word-counter-local .local-collection-title {
+    .local-collection .local-collection-title {
         max-width: 70%;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
     }
-}
 
-@media only screen and (min-width: 1200px) and (max-width:1399px) {
-    #local-collection-desktop.word-counter-local .local-collection-title {
+    .local-collection.word__counter-local .local-collection-title {
+        max-width: 70%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .local-collection.metachecker-local .local-collection-title {
         max-width: 65%;
         white-space: nowrap;
         overflow: hidden;
@@ -1218,8 +1223,22 @@ a:hover {
     }
 }
 
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-    #local-collection-desktop.word-counter-local .local-collection-title {
+@media only screen and (min-width: 1200px) and (max-width:1399px) {
+    .local-collection .local-collection-title {
+        max-width: 65%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .local-collection.word__counter-local .local-collection-title {
+        max-width: 65%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .local-collection.metachecker-local .local-collection-title {
         max-width: 60%;
         white-space: nowrap;
         overflow: hidden;
@@ -1227,13 +1246,57 @@ a:hover {
     }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-    #local-collection-desktop.word-counter-local .local-collection-title {
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .local-collection .local-collection-title {
+        max-width: 60%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .local-collection.word__counter-local .local-collection-title {
+        max-width: 60%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .local-collection.metachecker-local .local-collection-title {
         max-width: 55%;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
     }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .local-collection .local-collection-title {
+        max-width: 55%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .local-collection.word__counter-local .local-collection-title {
+        max-width: 55%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .local-collection.metachecker-local .local-collection-title {
+        max-width: 50%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+#resulturl {
+    max-width: 80%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .bx-lg {
