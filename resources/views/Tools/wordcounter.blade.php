@@ -119,7 +119,7 @@
                                               id="textarea"></textarea>
                                 </div>
                             </div>
-                            <div id="local-collection-desktop" class="local-collection word-counter-local">
+                            <div id="local-collection-desktop" class="local-collection word__counter-local">
                                 <div class="local-collection-header d-flex justify-content-between px-2 mb-3">
                                     <div class="d-flex flex-row align-items-center">
                                         <i class='bx bxs-collection bx-sm text-darkgrey mr-2'></i>
