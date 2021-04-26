@@ -4,7 +4,7 @@ return [
     "meta-desc" => "Kombinasikan kata dengan keyword combination tool untuk membantu persingkat waktu riset",
     "lang" => "id",
     "title" => "KEYWORD PERMUTATION",
-    "sub-title" => "Penghasil Ratusan Keyword dalam Waktu Singkat",
+    "sub-title" => "Permutasi Keyword SEO Generator",
     "one-per-line" => "satu kata perbaris",
     "broad-match" => "Broad match - contoh",
     "phrase-match" => 'Phrase match - “contoh”',

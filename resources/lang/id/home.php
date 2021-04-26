@@ -19,6 +19,7 @@ return [
     "link-analyzer-desc" => " Lacak tautan yang terhubung dengan situs Anda dari eksternal atau internal. Cukup masukkan URL yang ingin ditinjau dengan link analyzer dan pilih apakah Anda menginginkannya. ",
     "hreflang-checker-desc" => "Hreflang Checker adalah tool untuk proses penerapan tag hreflang situs secara otomatis. Bantu Google menargetkan konten yang benar di situs Anda untuk pasar yang lebih luas.",
     "keyword-search-desc" => "Keyword research tool untuk writer adalah tempat riset kata kunci untuk hasilkan artikel berkualitas. Bantu analisa, bandingkan, dan proritaskan peluang keyword untuk web Anda.",
+    "keyword-permutation-desc" => "Tool keyword permutation penghasil serangkaian data dari proses mengolah kombinasi kata yang Anda inputkan. Persingkat waktu mengetik untuk hasil riset yang lebih maksimal.",
     "last-update" => "Terakhir Diperbarui",
     "desc-1" => "Catatan Penting",
     "desc-1-1" => "Dalam menggunakan beberapa tool yang mengharuskan Anda memasukkan URL, pastikan itu valid. Jika tidak, tool tidak akan berfungsi dengan baik.",

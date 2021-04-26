@@ -212,7 +212,20 @@ id
                     </div>
                 </div>
                 --}}
-
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-8">
+                    <div class="card card-custom card-stretch card-home">
+                        <div class="card-body p-7">
+                            <div class="text-center">
+                                <i class='text-darkgrey bx bx-shape-circle bx-lg'></i>
+                                <h2 class="h6 text-darkgrey font-weight-bolder">Keyword Permutation</h2>
+                                <p class="text-darkgrey mb-0">@lang('home.keyword-permutation-desc')</p>
+                            </div>
+                        </div>
+                        <div class="card-footer text-center border-top-0 pt-0">
+                            <a href="/{{ $local }}/keyword-permutation" type="button" class="btn btn-launch" name="button">LAUNCH</a>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="d-flex align-items-center">
                 <i class='bx bxs-check-circle text-darkgrey mr-1'></i>

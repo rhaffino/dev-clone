@@ -143,6 +143,11 @@
                         <span class="menu-text">Title and Meta Checker</span>
                     </a>
                 </li>
+                <li class="menu-item" aria-haspopup="true">
+                    <a href="/{{ $local }}/keyword-permutation" class="menu-link">
+                        <span class="menu-text">Keyword Permutation</span>
+                    </a>
+                </li>
             </ul>
         </div>
         <div class="aside-footer d-flex flex-column flex-column-auto">
