@@ -115,7 +115,7 @@ id/keyword-permutation
                                 </div>
                             </div>
                             <hr class="mb-0">
-                            <textarea id="permutation-textarea-result" data-autoresize name="name" placeholder="{{ Lang::get('permutation.textarea-result-placeholder') }}" rows="25" style="resize:none;" class="form-control keyword-permutation-text__area"></textarea>
+                            <textarea id="permutation-textarea-result" readonly data-autoresize name="name" placeholder="{{ Lang::get('permutation.textarea-result-placeholder') }}" rows="25" style="resize:none;" class="form-control keyword-permutation-text__area"></textarea>
                         </div>
                     </div>
                 </div>
@@ -265,17 +265,7 @@ id/keyword-permutation
 @push('script')
 <script src="{{asset('/js/logic/keyword-permutation.js')}}"></script>
 <script type="text/javascript">
-    $('#toggle_button_webmaster').click();
-    $("#copy-text").click(function () {
-        const textarea = $('#permutation-textarea-result');
-        textarea.select();
-        document.execCommand("copy");
-        toastr.info('Copied to Clipboard', 'Information');
-    });
-    $("#reset").click(function () {
-        const textarea = $('#permutation-textarea-result');
-        textarea.val('');
-    });
+    $('#toggle_button_webmaster').click();    
 </script>
 <script type="application/ld+json">
     {
