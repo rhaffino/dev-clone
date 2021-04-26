@@ -641,7 +641,7 @@ jQuery('#copy').click(function () {
     copyText.select();
     // copyText.setSelectionRange(0, 999999); /*For mobile devices*/
     document.execCommand("copy");
-    toastr.info('Copied to Clipboard', 'Information');
+    toastr.success('Copied to Clipboard', 'Information');
 });
 
 $(document).on("change", "#remoteJob", function() {
