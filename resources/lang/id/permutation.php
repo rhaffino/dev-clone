@@ -1,6 +1,6 @@
 <?php
 return [
-    "meta-title" =>"Tool Keyword Permutation - Penghasil Ribuan Keyword secara Cepat",
+    "meta-title" =>"Tool SEO Keyword Permutation Generator - Penghasil Ribuan Keyword secara Cepat",
     "meta-desc" => "Kombinasikan kata dengan keyword combination tool untuk membantu persingkat waktu riset",
     "lang" => "id",
     "title" => "KEYWORD PERMUTATION",
