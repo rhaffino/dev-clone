@@ -270,7 +270,7 @@ id/keyword-permutation
         const textarea = $('#permutation-textarea-result');
         textarea.select();
         document.execCommand("copy");
-        toastr.info('Copied to Clipboard', 'Information');
+        toastr.success('Copied to Clipboard', 'Information');
     });
     $("#reset").click(function () {
         const textarea = $('#permutation-textarea-result');

@@ -299,7 +299,7 @@ jQuery('#copy').click(function() {
     textarea.select();
     document.execCommand("copy");
 
-    toastr.info('Copied to Clipboard', 'Information');
+    toastr.success('Copied to Clipboard', 'Information');
 });
 
 // Reset Action

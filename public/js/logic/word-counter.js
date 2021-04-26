@@ -474,7 +474,7 @@ $(document).ready(function () {
         const textarea = $('#textarea');
         textarea.select();
         document.execCommand("copy");
-        toastr.info('Copied to Clipboard', 'Information');
+        toastr.success('Copied to Clipboard', 'Information');
     });
 
     $("#set-font-size-18px").click(function () {
