@@ -343,7 +343,7 @@ $('#copy').click(function () {
     var copyText = jQuery('#json-format');
     copyText.select();
     document.execCommand("copy");
-    toastr.info('Copied to Clipboard', 'Information');
+    toastr.success('Copied to Clipboard', 'Information');
 });
 
 $('.reset').click(function (e) {

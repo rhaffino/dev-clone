@@ -51,7 +51,7 @@ var KTCardTools = function () {
 
         // Reload event handlers
         card.on('reload', function(card) {
-            toastr.info('Leload event fired!');
+            toastr.info('Reload event fired!');
 
             KTApp.block(card.getSelf(), {
                 overlayColor: '#ffffff',
@@ -114,7 +114,7 @@ var KTCardTools = function () {
 
         // Reload event handlers
         card.on('reload', function(card) {
-            toastr.info('Leload event fired!');
+            toastr.info('Reload event fired!');
 
             KTApp.block(card.getSelf(), {
                 overlayColor: '#000000',
@@ -177,7 +177,7 @@ var KTCardTools = function () {
 
         // Reload event handlers
         card.on('reload', function(card) {
-            toastr.info('Leload event fired!');
+            toastr.info('Reload event fired!');
 
             KTApp.block(card.getSelf(), {
                 type: 'loader',
@@ -263,7 +263,7 @@ var KTCardTools = function () {
 
         // Reload event handlers
         card.on('reload', function(card) {
-            toastr.info('Leload event fired!');
+            toastr.info('Reload event fired!');
 
             KTApp.block(card.getSelf(), {
                 type: 'loader',
