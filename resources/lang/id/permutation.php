@@ -3,7 +3,7 @@ return [
     "meta-title" =>"Tool Keyword Permutation - Penghasil Ribuan Keyword secara Cepat",
     "meta-desc" => "Kombinasikan kata dengan keyword combination tool untuk membantu persingkat waktu riset",
     "lang" => "id",
-    "title" => "Keyword Permutation",
+    "title" => "KEYWORD PERMUTATION",
     "sub-title" => "Penghasil Ratusan Keyword dalam Waktu Singkat",
     "one-per-line" => "satu kata perbaris",
     "broad-match" => "Broad match - contoh",

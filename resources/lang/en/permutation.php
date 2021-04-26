@@ -3,7 +3,7 @@ return [
     "meta-title" =>"Keyword Combination SEO Tool - Quickly Generate Hundreds Word",
     "meta-desc" => "Combine words with  SEO keyword combination tool to help shorten research time",
     "lang" => "en",
-    "title" => "Keyword Permutation",
+    "title" => "KEYWORD PERMUTATION",
     "sub-title" => "Quickly Generate Hundreads of Keywords",
     "one-per-line" => "one per line",
     "broad-match" => "Broad match - example",
