@@ -1,10 +1,10 @@
 <?php
 return [
-    "meta-title" =>"Keyword Combination SEO Tool - Quickly Generate Hundreds Word",
+    "meta-title" =>"Keyword Combination SEO Tool Generator - Quickly Generate Hundreds Word",
     "meta-desc" => "Combine words with  SEO keyword combination tool to help shorten research time",
     "lang" => "en",
-    "title" => "Keyword Permutation",
-    "sub-title" => "Quickly Generate Hundreads of Keywords",
+    "title" => "KEYWORD PERMUTATION",
+    "sub-title" => "SEO keyword permutation generator",
     "one-per-line" => "one per line",
     "broad-match" => "Broad match - example",
     "phrase-match" => 'Phrase match - “example”',

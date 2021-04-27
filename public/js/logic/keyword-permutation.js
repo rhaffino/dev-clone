@@ -1,6 +1,6 @@
 $(document).ready(function () {
     $('#generator').click(function(){
-        
+
         // takes value from each boxes
         var box1 = $('#box1').val().split('\n');
         var box2 = $('#box2').val().split('\n');
@@ -18,7 +18,7 @@ $(document).ready(function () {
     })
 
     function generateKeyword(box1, box2, box3, option) {
-            
+
             var keywords = []
 
             //pushing box value into array
@@ -40,7 +40,7 @@ $(document).ready(function () {
             })
             return keywords
     }
-    
+
     //count keywords for boxes
     $('#box1').keyup(function() {
         var box1 = $(this).val().split('\n')
@@ -67,3 +67,27 @@ $(document).ready(function () {
     })
 })
 
+$("#copy-text").click(function () {
+    const textarea = $('#permutation-textarea-result');
+    textarea.select();
+    document.execCommand("copy");
+    toastr.success('Copied to Clipboard', 'Information');
+});
+$("#reset").click(function () {
+    const textarea = $('#permutation-textarea-result');
+    const box1 = $('#box1');
+    const box2 = $('#box2');
+    const box3 = $('#box3');
+    const counter1 = $('#count-keyword-box1');
+    const counter2 = $('#count-keyword-box2');
+    const counter3 = $('#count-keyword-box3');
+    const counterResult = $('#count-keyword');
+    textarea.val('');
+    box1.val('');
+    box2.val('');
+    box3.val('');
+    counter1.text(0);
+    counter2.text(0);
+    counter3.text(0);
+    counterResult.text(0);
+});
