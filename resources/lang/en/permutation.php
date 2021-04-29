@@ -9,6 +9,8 @@ return [
     "broad-match" => "Broad match - example",
     "phrase-match" => 'Phrase match - “example”',
     "exact-match" => "Exact match - [example]",
+    "comma-match" => "Comma match - example,",
+    "custom-match" => "Custom match",
     "permutation-btn" => "Generate Permutation",
     "permutation-result" => "Results",
     "textarea-placeholder" => "Type your text here",

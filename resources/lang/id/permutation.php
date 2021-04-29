@@ -9,6 +9,8 @@ return [
     "broad-match" => "Broad match - contoh",
     "phrase-match" => 'Phrase match - “contoh”',
     "exact-match" => "Exact match - [contoh]",
+    "comma-match" => "Comma match - contoh,",
+    "custom-match" => "Custom match",
     "permutation-btn" => "Mulai Permutasi",
     "permutation-result" => "Hasil",
     "textarea-placeholder" => "Ketik teks anda disini",
