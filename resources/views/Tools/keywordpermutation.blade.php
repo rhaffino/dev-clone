@@ -86,15 +86,27 @@ id/keyword-permutation
                     <div class="card card-custom mb-5">
                         <div class="card-body px-3 pt-3 pb-0">
                             <div class="row">
-                                <div class="col-md-7 col-lg-8 mb-3">
-                                    <select id="option" class="form-control picker" name="">
+                                <div class="col-md-8 col-lg-8 mb-3">
+                                    <select id="select-mode" class="form-control picker" name="">
                                         <option value="normal">@lang('permutation.broad-match')</option>
                                         <option value="quotes">@lang('permutation.phrase-match')</option>
                                         <option value="square">@lang('permutation.exact-match')</option>
+                                        <option value="comma">@lang('permutation.comma-match')</option>
+                                        <option value="custom">@lang('permutation.custom-match')</option>
                                     </select>
                                 </div>
-                                <div class="col-md-5 col-lg-4 mb-3">
-                                        <button id="generator" type="button" class="btn btn-generate-permutation btn-block" name="button">@lang('permutation.permutation-btn')</button>
+                                <div class="col-md-4 col-lg-4 mb-3">
+                                    <button id="generator" type="button" class="btn btn-generate-permutation btn-block" name="button">@lang('permutation.permutation-btn')</button>
+                                </div>
+                                <div class="col-12" id="custom-text-container" style="display: none">
+                                    <div class="row">
+                                        <div class="col-md-4 col-lg-4 mb-3">
+                                            <input type="text" class="form-control" id="custom-start-text" placeholder="Start Character">
+                                        </div>
+                                        <div class="col-md-4 col-lg-4 mb-3">
+                                            <input type="text" class="form-control" id="custom-end-text" placeholder="End Character">
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
