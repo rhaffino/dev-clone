@@ -276,6 +276,9 @@ id/keyword-permutation
 
 @push('script')
 <script src="{{asset('/js/logic/keyword-permutation.js')}}"></script>
+<script type="text/javascript">
+    $('#toggle_button_webmaster').click();
+</script>
 <script type="application/ld+json">
     {
         "@context": "https://schema.org/",
