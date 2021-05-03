@@ -43,6 +43,9 @@
                             <a class="dropdown-item @yield('technology-lookup')" href="/{{ $local }}/technology-lookup">Technology Lookup</a>
                         </div>
                     </li>
+                    <li class="nav-item ml-7">
+                        <a class="nav-link @yield('keyword-permutation')" href="/{{ $local }}/keyword-permutation">Keyword Permutation</a>
+                    </li>
                 </ul>
                 <ul class="nav custom-nav" id="menu_tools_writer">
                     <li class="nav-item">
@@ -53,9 +56,6 @@
                     </li>
                     <li class="nav-item ml-7">
                         <a class="nav-link @yield('title-checker')" href="/{{ $local }}/page-title-meta-description-checker">Title and Meta Checker</a>
-                    </li>
-                    <li class="nav-item ml-7">
-                        <a class="nav-link @yield('keyword-permutation')" href="/{{ $local }}/keyword-permutation">Keyword Permutation</a>
                     </li>
                 </ul>
             </div>
