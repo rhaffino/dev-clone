@@ -202,7 +202,7 @@
                                                                            style="color: #4D5156; vertical-align: text-bottom;"></i></span>
                                         </div>
                                         <div class="title-meta mb-2">
-                                            18 SEO Tools (Free) English Version \ cmlabs
+                                            19 SEO Tools (Free) English Version \ cmlabs
                                         </div>
                                         <div class="desc-meta">
                                             The cmlabs tool is an online tool developed to help content writers, SEO
@@ -279,7 +279,7 @@
                                                                            style="color: #4D5156; vertical-align: text-bottom;"></i></span>
                                         </div>
                                         <div class="title-meta mb-2">
-                                            18 SEO Tools (Free) English Version \ cmlabs
+                                            19 SEO Tools (Free) English Version \ cmlabs
                                         </div>
                                         <div class="desc-meta">
                                             The cmlabs tool is an online tool developed to help content writers, SEO

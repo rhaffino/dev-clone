@@ -1,7 +1,7 @@
 <?php
 $data = count(json_decode(file_get_contents(base_path('resources/js/json/tools.json')),true));
 return [
-    "meta-title" => "18 SEO Tools (Free) English Version \ cmlabs",
+    "meta-title" => "19 SEO Tools (Free) English Version \ cmlabs",
     "meta-desc" => "Check your website with Free SEO tools cmlabs: Page Speed Test, Sitemap Generator, Word Counter, Title & Meta Desc Checker, etc.",
     "lang" => "en",
     "title" => "SEO Tools by CMLABS",
@@ -19,6 +19,7 @@ return [
     "link-analyzer-desc" => "Track all the URLs that link to your site from external or internal. Input the link you want to review on the link analyzer, manage the list and get a better SEO performance.",
     "hreflang-checker-desc" => "The Hreflang Checker is a tool for the process of automatically implementing the site's hreflang tag. Help Google target the correct content on your site to expand the market.",
     "keyword-search-desc" => "A keyword research tool for writers is a place for keyword research to make an SEO-friendly article. Help analyze, compare, and prioritize keyword opportunities for your website.",
+    "keyword-permutation-desc" => "The SEO keyword permutation tool helps you to generates a series of data from the process of word combinations. Shorten typing time for maximum and optimal research results.",
     "last-update" => "Last Update",
     "desc-1" => "Important Note",
     "desc-1-1" => "In using some tools that require you to enter a URL, make sure it is valid. Otherwise, the tool will not function properly.",

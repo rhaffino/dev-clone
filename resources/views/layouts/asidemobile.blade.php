@@ -125,6 +125,11 @@
                         </ul>
                     </div>
                 </li>
+                <li class="menu-item" aria-haspopup="true">
+                    <a href="/{{ $local }}/keyword-permutation" class="menu-link">
+                        <span class="menu-text">Keyword Permutation</span>
+                    </a>
+                </li>
 
             </ul>
             <ul class="menu-nav custom-menu-sidebar" id="mobilemenu_tools_writer">
