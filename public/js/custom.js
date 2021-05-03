@@ -464,3 +464,13 @@ window.onscroll = function() {
         // $('#subheader_logo_mobile').removeClass('d-none');
     }
 }
+
+    var showCTA = false;
+    function showCTAForm() {
+        showCTA = !showCTA
+        if (showCTA) {
+            $("#cta-danger .cta-border").removeClass("cta-border-bottom");
+        } else {
+            $("#cta-danger .cta-border").addClass("cta-border-bottom");
+        }
+    }
