@@ -2410,6 +2410,12 @@ input.input-url-meta-checker:focus {
     border-top-right-radius: 5px;
 }
 
+.cta-grey {
+    background: var(--grey);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
 .cta-border-bottom {
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;

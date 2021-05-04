@@ -474,3 +474,7 @@ window.onscroll = function() {
             $("#cta-danger .cta-border").addClass("cta-border-bottom");
         }
     }
+
+    function openPricing() {
+        window.open('https://cmlabs.co/en-id/pricing/seo-consultant', '_blank');
+    }
