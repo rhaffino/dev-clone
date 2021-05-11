@@ -31,6 +31,7 @@ return [
     "footer-link-2" => "Privacy Policy",
     "footer-link-3" => "Disclaimer",
     "footer-link-4" => "Homepage",
+    "footer-link-5" => "Career",
     "title" => "SEO Tools",
     "web-master" => "for Webmaster",
     "writers" => "for Writers",
