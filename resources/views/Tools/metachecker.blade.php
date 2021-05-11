@@ -152,7 +152,7 @@
                         </div>
                     </div>
                     <div class="row mb-5">
-                        <div id="DesktopResult" class="col-lg-7">
+                        <div id="DesktopResult" class="col-md-7">
                             <div class="card card-custom mb-5">
                                 <div class="card-body px-0">
                                     <div class="d-flex flex-column px-10 py-3">
@@ -212,7 +212,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="local-collection">
+                            <div class="local-collection metachecker-local">
                                 <div class="local-collection-header d-flex justify-content-between px-2 mb-3">
                                     <div class="d-flex flex-row align-items-center">
                                         <i class='bx bxs-collection bx-sm text-darkgrey mr-2'></i>
@@ -228,7 +228,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div id="MobileResult" class="col-lg-5">
+                        <div id="MobileResult" class="col-md-5">
                             <div class="card card-custom mb-5">
                                 <div class="card-body px-0">
                                     <div class="d-flex flex-column px-10 py-3">

@@ -152,25 +152,10 @@ $('#textarea').on('input', function () {
     start();
 })
 
-$('#textarea').keypress(function (e) {
-    if (e.key === " ") {
-        saveState()
-    }
-})
-
-$(window).keydown(function (e) {
-    if ((e.metaKey || e.ctrlKey) && e.key === "z") {
-        $('#textarea').val(State.undo())
-        e.preventDefault()
-    }
-})
-
 const getData = function (key) {
     if (localStorage.getItem(key)) {
-        State.reset()
         $('#textarea').val(localStorage.getItem(key));
         $('#textarea').data('key', key)
-        saveState()
         start();
     }
 }
@@ -218,19 +203,15 @@ $('#new-text').click(function () {
         window.localStorage.setItem('keys', JSON.stringify(temp));
         window.localStorage.setItem(key, $('#textarea').val());
     }
-    State.reset()
     $('#textarea').data('key', new Date().getTime())
     $('#textarea').val('')
-    saveState();
     refreshLocalStorage();
 })
 
 jQuery('#reset').click(function () {
     sessionStorage.clear();
-    saveState()
     jQuery('#textarea').val('');
     jQuery('.collapse').collapse('hide');
-    saveState()
     start();
 
     characterCount.innerHTML = 0;
@@ -250,11 +231,11 @@ jQuery('#reset').click(function () {
 
 function start() {
 
-    characterCount.innerHTML = input.value.length;
+    characterCount.innerHTML = numberWithCommas(input.value.length);
 
     var words = input.value.replace(/['";:,.?\xbf\-!\xa1]+/g, "").match(/\S+/g);
     if (words) {
-        wordCount.innerHTML = words.length;
+        wordCount.innerHTML = numberWithCommas(words.length);
     } else {
         wordCount.innerHTML = 0;
     }
@@ -786,12 +767,11 @@ const lastData = function () {
         if (localStorage.getItem(data.wc[data.wc.length - 1])) {
             $('#textarea').val(localStorage.getItem(data.wc[data.wc.length - 1]));
             $('#textarea').data('key', data.wc[data.wc.length - 1])
-            saveState()
             start();
         }
     }
 }
 
-const saveState = function () {
-    State.save($('#textarea').val())
+function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
