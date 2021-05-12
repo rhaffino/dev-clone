@@ -146,8 +146,8 @@
                     <img alt="Logo" src="{{ asset('media/logos/new/new-logo-default.png') }}" class="max-h-45px mr-3"/>
                     <span class="h1 text-custom-darkgrey mb-2">cmlabs</span>
                 </a>
-                <div class="h5 text-custom-darkgrey font-weight-light mb-4">Jakarta <b>(021) 666 044 70</b></div>
-                <div class="h5 text-custom-darkgrey font-weight-light mb-4">Malang <b>(0341) 475 665</b></div>
+                <div class="h5 text-custom-darkgrey font-weight-light mb-4">Jakarta <b>(+62) 21-666-044-70</b></div>
+                <div class="h5 text-custom-darkgrey font-weight-light mb-4">Malang <b>(+62) 341-475-665</b></div>
                 <div class="h5 text-custom-darkgrey font-weight-light mb-4"><b>business</b>@cmlabs.co</div>
                 <div class="d-flex align-items-center justify-content-start mt-7 mb-10">
                     <a rel="noopener noreferrer nofollow external" href="https://www.linkedin.com/company/cmlabs/" class="footer-new-icon mr-3" target="_blank"><i class="bx bxl-linkedin-square icon-xl"></i></a>
@@ -158,6 +158,7 @@
                 <div class="h6 footer-new-link mb-4"><a href="https://cmlabs.co/{{ $local }}-id/terms-and-condition">@lang('layout.footer-link-1')</a></div>
                 <div class="h6 footer-new-link mb-4"><a href="https://cmlabs.co/{{ $local }}-id/privacy-policy">@lang('layout.footer-link-2')</a></div>
                 <div class="h6 footer-new-link mb-4"><a href="https://cmlabs.co/{{ $local }}-id/disclaimer">@lang('layout.footer-link-3')</a></div>
+                <div class="h6 footer-new-link mb-4"><a href="https://cmlabs.co/{{ $local }}-id/career">@lang('layout.footer-link-5')</a></div>
                 <div class="h6 footer-new-link mb-10"><a href="https://cmlabs.co/{{ $local }}-id/">@lang('layout.footer-link-4')</a></div>
                 <div class="h6 footer-new-copyright text-custom-grey font-weight-light">Copyright &copy;2021</div>
             </div>

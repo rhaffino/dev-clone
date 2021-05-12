@@ -31,6 +31,7 @@ return [
     "footer-link-2" => "Kebijakan Privasi",
     "footer-link-3" => "Disclaimer",
     "footer-link-4" => "Laman Utama",
+    "footer-link-5" => "Karir",
     "title" => "SEO Tool",
     "web-master" => "untuk Webmaster",
     "writers" => "untuk Writers",
