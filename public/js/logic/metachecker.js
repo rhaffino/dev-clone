@@ -26,6 +26,7 @@ jQuery('#crawlURL').click(function () {
             url: url
         },
         success: (res) => {
+            $('#cta-warning').hide()
             if (res.statusCode === 200) {
                 $('#resulttitle').text(ellipsis(res.data.title, 'title'));
                 $('#resultdesc').text(ellipsis(res.data.description, 'description'));
@@ -313,6 +314,14 @@ const fillTitleBar = function (param) {
         $('#titlebar' + i).removeClass("active")
         $('#titlebar' + i).addClass("blank")
     }
+
+    //cta
+    if (param.rate >= 3){
+        $('#cta-warning').hide()
+    }else {
+        $('#cta-warning').show()
+    }
+
     $('#title-char').text(param.char)
     $('#title-pixel').text(param.pixel + 'px')
     $('#title-word').text(param.word)
@@ -342,6 +351,7 @@ const fillTitleBar = function (param) {
             $('#title-bad-pixel').addClass('d-none')
         }
     } else {
+        $('#cta-warning').hide()
         $('#title-bad-char').removeClass('d-flex')
         $('#title-bad-char').addClass('d-none')
         $('#title-bad-pixel').removeClass('d-flex')
@@ -358,6 +368,14 @@ const fillDescBar = function (param) {
         $('#descbar' + i).removeClass("active")
         $('#descbar' + i).addClass("blank")
     }
+
+    //cta
+    if (param.rate >= 3){
+        $('#cta-warning').hide()
+    }else {
+        $('#cta-warning').show()
+    }
+
     $('#desc-char').text(param.char)
     $('#desc-pixel').text(param.pixel + 'px')
     $('#desc-word').text(param.word)
@@ -387,6 +405,7 @@ const fillDescBar = function (param) {
             $('#desc-bad-pixel').addClass('d-none')
         }
     } else {
+        $('#cta-warning').hide()
         $('#desc-bad-char').removeClass('d-flex')
         $('#desc-bad-char').addClass('d-none')
         $('#desc-bad-pixel').removeClass('d-flex')

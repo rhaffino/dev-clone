@@ -24,7 +24,7 @@ id/ssl-checker
             <h1 class="text-darkgrey font-weight-normal">@lang('sslchecker.title')</h1>
             <p class="text-darkgrey h4 font-weight-normal mb-10">@lang('sslchecker.subtitle')</p>
 
-            <div class="mb-5" id="cta-danger">
+            <div class="mb-5" id="cta-danger" style="display: none">
                 <div class="cta-yellow px-5 py-1 cta-border-bottom cta-border">
                     <div class="row d-flex align-items-center">
                         <div class="col-sm-9 col-md-10 col-lg-9 col-xl-10 d-flex align-items-center py-1">
@@ -60,7 +60,7 @@ id/ssl-checker
                 </div>
 
             </div>
-            <div id="notif-form-success" class="alert alert-custom fade show cta-grey px-5 py-3 cta-border-bottom mb-5" role="alert">
+            <div id="notif-form-success" class="alert alert-custom fade show cta-grey px-5 py-3 cta-border-bottom mb-5" role="alert" style="display: none">
                 <div class="alert-text">
                     <div class="d-flex align-items-center">
                         <i class='bx bxs-check-circle bx-md mr-3 text-black'></i>
