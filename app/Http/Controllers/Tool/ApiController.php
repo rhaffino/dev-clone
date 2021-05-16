@@ -69,7 +69,7 @@ class ApiController extends Controller
         }
 
         $response = $this->requestHreflangChecker($url);
-        return new BaseApiResource($response['data'], $response['statusText'], $response['statusCode']);
+        return new BaseApiResource($response['data'] ?? [], $response['statusText'], $response['statusCode']);
     }
 
     public function analyzeLink(Request $request)
