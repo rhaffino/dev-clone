@@ -35,3 +35,24 @@ const checkCounter = function (key, callback){
         callback()
     }
 }
+
+const mailMarketing = function (email, message) {
+    $.post('/api/cta', {
+        email : email,
+        mail : message
+    }, function (response) {
+        if (response.statusCode === 200){
+            $('#cta-danger').hide()
+            $('#notif-form-success').show()
+        }else {
+            toastr.error(response.message)
+        }
+    })
+}
+
+function mailToMarketing() {
+    var email = $('#email').val()
+    var message = $('#message').val()
+    mailMarketing(email, message)
+    openPricing()
+}
