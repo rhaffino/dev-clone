@@ -159,7 +159,7 @@
 <script>
 
 </script>
-<script src="{{asset('js/logic/counter.js')}}"></script>
+<script src="{{asset('js/logic/cta-function.js')}}"></script>
 @stack('script')
 <!--end::Page Scripts-->
 </body>
