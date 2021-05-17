@@ -1,3 +1,6 @@
+var WORDS_LENGTH = 0
+var TOP_DENSITY = 0
+
 if (lang == "en") {
     var created_at = "Created at "
     var localStorageNone = "This is your first impressions, no history yet!"
@@ -165,6 +168,13 @@ $(window).keydown(function (e) {
     }
 })
 
+$(window).keydown(function (e) {
+    if ((e.metaKey || e.ctrlKey) && e.key === "v") {
+        increaseCounter('word-counter-count')
+        checkCounter('word-counter-count', () => showCta())
+    }
+})
+
 const getData = function (key) {
     if (localStorage.getItem(key)) {
         State.reset()
@@ -255,8 +265,10 @@ function start() {
     var words = input.value.replace(/['";:,.?\xbf\-!\xa1]+/g, "").match(/\S+/g);
     if (words) {
         wordCount.innerHTML = words.length;
+        WORDS_LENGTH = words.length
     } else {
         wordCount.innerHTML = 0;
+        WORDS_LENGTH = 0
     }
 
     if (words) {
@@ -321,6 +333,17 @@ function start() {
             sortedKeywords.sort(function (a, b) {
                 return b[1] - a[1]
             });
+
+            let density = 0
+            if (j === 2 || j === 3){
+                if (sortedKeywords[0]){
+                    density = sortedKeywords[0]
+                }
+
+                if (density > TOP_DENSITY)
+                    TOP_DENSITY = density
+            }
+
             topKeyword[j - 1].innerHTML = "";
             for (var i = 0; i < sortedKeywords.length && i < 10; i++) {
                 var div = document.createElement('div');
@@ -794,4 +817,10 @@ const lastData = function () {
 
 const saveState = function () {
     State.save($('#textarea').val())
+}
+
+const showCta = function () {
+    if (WORDS_LENGTH > 700 && (TOP_DENSITY < 1 || TOP_DENSITY > 3)){
+        $('#cta-warning').show()
+    }
 }
