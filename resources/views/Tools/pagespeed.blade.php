@@ -53,7 +53,7 @@ id/pagespeed-test
                 </div>
             </div>
 
-            @include('components.cta_form')
+            @include('components.cta_form', ["message" => "Ouch! Turns out your website speed is still not good. But you can discuss with us to maximize your website performance."])
 
             <div class="header-blue mb-5 px-5 py-1">
                 <div class="row d-flex align-items-center">
