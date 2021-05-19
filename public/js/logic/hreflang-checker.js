@@ -172,6 +172,7 @@ function renderAllData(data) {
     $('#cta-warning').hide();
     $("#hreflang-result-list").empty();
     let _counter = 1;
+
     if(data.length === 0) {
         // if no result
         $('#no-crawl-result').show();
@@ -180,10 +181,7 @@ function renderAllData(data) {
         );
         $('#hreflang-result-header').attr('style', 'display: none !important;');
         checkCounter(HREFLANG_CHECKER_COUNTER_KEY, () => {
-            if (data.length === 0) {
-                $('#cta-warning').show();
-                return;
-            }
+            $('#cta-warning').show();
         })
     } else {
         $('#hreflang-result-header').removeAttr('style');

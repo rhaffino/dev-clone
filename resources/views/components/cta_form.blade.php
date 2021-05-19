@@ -3,7 +3,7 @@
         <div class="row d-flex align-items-center">
             <div class="col-sm-9 col-md-10 col-lg-9 col-xl-10 d-flex align-items-center py-1">
                 <i class='bx bxs-shield-x bx-md mr-3 text-black'></i>
-                <p class="mb-0 text-black">It seems like your website link is not secure. If you need help to enable SSL on your website.</p>
+                <p class="mb-0 text-black">{{$message}}</p>
             </div>
             <div class="col-sm-3 col-md-2 col-lg-3 col-xl-2 d-flex justify-content-end py-1">
                 <a onclick="showCTAForm()"  data-toggle="collapse" href="#CTAForm" role="button" aria-expanded="false" aria-controls="CTAForm" type="button" class="btn btn-cta" name="button">Contact Marketing</a>

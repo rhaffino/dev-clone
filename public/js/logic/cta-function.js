@@ -38,6 +38,7 @@ const checkCounter = function (key, callback){
 
 const mailMarketing = function (email, message) {
     $.post('/api/cta', {
+        _token: $('meta[name=csrf-token]').attr('content'),
         email : email,
         mail : message
     }, function (response) {

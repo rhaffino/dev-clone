@@ -23,7 +23,7 @@ id/mobile-test
         <div class="container-fluid px-0">
             <h1 class="text-darkgrey font-weight-normal">@lang('mobiletest.title')</h1>
             <p class="text-darkgrey h4 font-weight-normal mb-10">@lang('mobiletest.sub-title')</p>
-            @include('components.cta_form')
+            @include('components.cta_form', ["message" => "It seems like your website still hasn't passed our mobile-friendly test. You can discuss your problem with our team by fulfilling your problem here."])
             <div class="header-blue mb-5 px-5 py-1">
                 <div class="row d-flex align-items-center">
                     <div class="col-sm-9 col-md-10 col-lg-9 col-xl-10 d-flex align-items-center py-1">
