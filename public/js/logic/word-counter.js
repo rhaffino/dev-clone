@@ -169,9 +169,10 @@ $(window).keydown(function (e) {
 })
 
 const pasteListener = function () {
+    $('#cta-warning').hide()
     setTimeout(function() {
         increaseCounter('word-counter-count')
-        checkCounter('word-counter-count', () => showCta())
+        checkCounterForWordCounter('word-counter-count', () => showCta())
     }, 100);
 }
 
