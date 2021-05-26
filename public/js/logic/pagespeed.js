@@ -600,7 +600,6 @@ let getData = function (index) {
     $('#url').val(local[index].id)
     closeCta()
     renderResult(local[index])
-    showCta(local[index])
 }
 
 let clearAll = function () {

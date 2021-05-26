@@ -40,9 +40,9 @@ jQuery('#crawlURL').click(function () {
                 $('#desc').attr('disabled', 'disabled');
                 $('#title').attr('disabled', 'disabled');
                 var rateTitle = titleChecker(res.data.title);
-                fillTitleBar(rateTitle);
+                fillTitleBar(rateTitle, true);
                 var rateDesc = descChecker(res.data.description);
-                fillDescBar(rateDesc);
+                fillDescBar(rateDesc, true);
                 save(url, res.data.title, res.data.description)
                 refreshLocalStorage();
             } else {
@@ -305,7 +305,7 @@ const descChecker = function (desc) {
     };
 }
 
-const fillTitleBar = function (param) {
+const fillTitleBar = function (param, cta=false) {
     for (let i = 1; i < param.rate + 1; i++) {
         $('#titlebar' + i).removeClass("blank")
         $('#titlebar' + i).addClass("active")
@@ -316,10 +316,14 @@ const fillTitleBar = function (param) {
     }
 
     //cta
-    if (param.rate >= 3){
-        $('#cta-warning').hide()
+    if (cta){
+        if (param.rate >= 3){
+            $('#cta-warning').hide()
+        }else {
+            $('#cta-warning').show()
+        }
     }else {
-        $('#cta-warning').show()
+        $('#cta-warning').hide()
     }
 
     $('#title-char').text(param.char)
@@ -359,7 +363,7 @@ const fillTitleBar = function (param) {
     }
 }
 
-const fillDescBar = function (param) {
+const fillDescBar = function (param, cta=false) {
     for (let i = 1; i < param.rate + 1; i++) {
         $('#descbar' + i).removeClass("blank")
         $('#descbar' + i).addClass("active")
@@ -370,10 +374,14 @@ const fillDescBar = function (param) {
     }
 
     //cta
-    if (param.rate >= 3){
-        $('#cta-warning').hide()
+    if (cta){
+        if (param.rate >= 3){
+            $('#cta-warning').hide()
+        }else {
+            $('#cta-warning').show()
+        }
     }else {
-        $('#cta-warning').show()
+        $('#cta-warning').hide()
     }
 
     $('#desc-char').text(param.char)
