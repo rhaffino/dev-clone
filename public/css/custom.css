@@ -24,12 +24,12 @@ body {
     color: var(--primaryblue);
 }
 
-.text-black {
-    color: var(--black);
-}
-
 .text-darkgrey {
     color: var(--darkgrey);
+}
+
+.text-black {
+    color: var(--black);
 }
 
 .text-grey {
@@ -49,14 +49,14 @@ body {
     color: var(--primaryblue) !important;
 }
 
-.text-hover-black:hover {
-    cursor: pointer;
-    color: var(--black) !important;
-}
-
 .text-hover-darkgrey:hover {
     cursor: pointer;
     color: var(--darkgrey) !important;
+}
+
+.text-hover-black:hover {
+    cursor: pointer;
+    color: var(--black) !important;
 }
 
 .text-hover-grey:hover {
@@ -526,49 +526,31 @@ a:hover {
 /* Custom New Footer */
 .custom-footer-new {
     background: var(--white);
-    padding-bottom: 50px;
+    padding: 50px 0;
 }
-
 .footer-new-logo {
     width: fit-content;
 }
-
 .footer-new-logo span {
     font-weight: 900;
     font-family: 'Noto Sans TC', sans-serif;
 }
-
 .footer-new-icon i {
     color: var(--black) !important;
 }
-
 .footer-new-link a {
     color: var(--black);
-    font-weight: 400;
     text-decoration: underline !important;
+    font-weight: 400;
 }
-
 .footer-new-link:hover a {
     color: var(--primaryblue);
     font-weight: 400;
 }
-
-.seo-footer-list {
-    background-color: var(--lightgrey);
-    box-shadow: none !important;
-    border-radius: 10px;
-    transition: .3s;
-}
-
-.seo-footer-list:hover {
-    background-color: var(--primaryblue);
-    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-}
-
 .card-footer-office {
-    background-color: var(--black);
+    background-color: rgba(102, 117, 127, 0.05);
     border-radius: 10px;
-    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25) !important;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.05) !important;
 }
 
 .office-footer .office-detail {
@@ -584,7 +566,7 @@ a:hover {
 
 .office-detail .office-label,
 .office-detail .office-address {
-    color: var(--white);
+    color: var(--black);
 }
 
 .office-detail .office-hours {
@@ -599,8 +581,8 @@ a:hover {
 }
 
 .btn-open-map {
-    background-color: var(--white);
-    color: var(--grey);
+    background-color: var(--darkgrey);
+    color: var(--white);
     border-radius: 30px;
     transition: .3s;
 }
@@ -610,82 +592,87 @@ a:hover {
 }
 
 .card-footer-office:hover .card-body .office-footer .office-detail .office-hours {
-    color: #ffde68;
+    color: var(--primaryblue);
 }
 
 .card-footer-office:hover .card-body .office-footer .office-map .btn-open-map {
-    color: var(--black);
+    background-color: var(--primaryblue);
+    color: var(--white) !important;
 }
-
-.footer-company-list {
-    background-color: var(--lightgrey);
+.seo-footer-list {
+    background-color: rgba(102, 117, 127, 0.05);
     box-shadow: none !important;
     border-radius: 10px;
     transition: .3s;
 }
-
+.seo-footer-list:hover {
+    background-color: var(--primaryblue);
+}
+.footer-company-list {
+    background-color: rgba(102, 117, 127, 0.05);
+    border-radius: 10px;
+    transition: .3s;
+    text-align: center;
+    box-shadow: none !important;
+}
 .seo-footer-list .card-body span {
-    color: var(--darkgrey);
+    color: var(--black);
     font-weight: 500;
     transition: .3s;
-    text-decoration: underline;
 }
-
 .seo-footer-list:hover .card-body span {
     color: var(--white);
+    text-decoration: underline;
 }
-
 .footer-company-list:hover {
     background-color: var(--primaryblue);
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25) !important;
 }
-
 .footer-company-list .card-body .footer-company-cat,
 .footer-company-list .card-body .footer-company-title {
     color: var(--black);
 }
-
 .footer-company-list:hover .card-body .footer-company-cat,
 .footer-company-list:hover .card-body .footer-company-title {
     color: var(--white);
 }
-
 .footer-company-list .card-body .footer-company-title,
 .footer-company-list:hover .card-body .footer-company-title {
     text-decoration: underline;
 }
-
 .footer-resource-list {
     max-width: 50%;
     border-radius: 10px;
-    background-color: var(--darkgrey);
+    background-color: rgba(102, 117, 127, 0.05);
     transition: .3s;
+    box-shadow: none !important;
 }
-
 .footer-resource-icon {
     flex: 25%;
 }
-
-.footer-resource-icon i,
-.footer-resource-icon span {
-    color: var(--white);
+.footer-resource-icon i {
+    color: var(--darkgrey);
 }
-
+.footer-resource-icon span {
+    color: var(--black);
+}
 .footer-resource-text {
     flex: 75%;
-    color: var(--white);
-}
-
-.footer-resource-list:hover {
-    background-color: var(--black);
-    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-}
-
-.footer-resource-list .card-body .footer-resource-text,
-.footer-resource-list:hover .card-body .footer-resource-text {
+    color: var(--black);
     text-decoration: underline;
 }
-
+.footer-resource-list:hover {
+    background-color: var(--primaryblue);
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25) !important;
+}
+.footer-resource-list:hover .card-body .footer-resource-text {
+    text-decoration: underline;
+    color: var(--white);
+}
+.footer-resource-list:hover .card-body .footer-resource-icon i,
+.footer-resource-list:hover .card-body .footer-resource-icon span {
+    color: var(--white);
+}
 @media (max-width: 575px) {
     .footer-resource-list {
         max-width: 100%;
@@ -1139,8 +1126,8 @@ a:hover {
     font-weight: bold;
 }
 
-.font-size-10px {
-    font-size: 10px !important;
+.font-size-18px {
+    font-size: 18px !important;
 }
 
 .font-size-12px {
@@ -1229,16 +1216,21 @@ a:hover {
 }
 
 @media only screen and (min-width: 1400px) {
-    #local-collection-desktop.word-counter-local .local-collection-title {
+    .local-collection .local-collection-title {
         max-width: 70%;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
     }
-}
 
-@media only screen and (min-width: 1200px) and (max-width:1399px) {
-    #local-collection-desktop.word-counter-local .local-collection-title {
+    .local-collection.word__counter-local .local-collection-title {
+        max-width: 70%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .local-collection.metachecker-local .local-collection-title {
         max-width: 65%;
         white-space: nowrap;
         overflow: hidden;
@@ -1246,8 +1238,22 @@ a:hover {
     }
 }
 
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-    #local-collection-desktop.word-counter-local .local-collection-title {
+@media only screen and (min-width: 1200px) and (max-width:1399px) {
+    .local-collection .local-collection-title {
+        max-width: 65%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .local-collection.word__counter-local .local-collection-title {
+        max-width: 65%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .local-collection.metachecker-local .local-collection-title {
         max-width: 60%;
         white-space: nowrap;
         overflow: hidden;
@@ -1255,13 +1261,57 @@ a:hover {
     }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-    #local-collection-desktop.word-counter-local .local-collection-title {
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .local-collection .local-collection-title {
+        max-width: 60%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .local-collection.word__counter-local .local-collection-title {
+        max-width: 60%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .local-collection.metachecker-local .local-collection-title {
         max-width: 55%;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
     }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .local-collection .local-collection-title {
+        max-width: 55%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .local-collection.word__counter-local .local-collection-title {
+        max-width: 55%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .local-collection.metachecker-local .local-collection-title {
+        max-width: 50%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+#resulturl {
+    max-width: 80%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .bx-lg {

@@ -23,7 +23,7 @@ id/hreflang-checker
         <div class="container-fluid px-0">
             <h1 class="text-darkgrey font-weight-normal">@lang('hreflang.title')</h1>
             <p class="text-darkgrey h4 font-weight-normal mb-10 ">@lang('hreflang.sub-title')</p>
-            <div class="mb-5" id="cta-warning">
+            <div class="mb-5" id="cta-warning" style="display: none">
                 <div class="cta-yellow px-5 py-1 cta-border-bottom">
                     <div class="row d-flex align-items-center">
                         <div class="col-sm-9 col-md-10 col-lg-9 col-xl-10 d-flex align-items-center py-1">

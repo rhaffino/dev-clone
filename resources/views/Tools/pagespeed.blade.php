@@ -130,7 +130,7 @@ id/pagespeed-test
                                                 </div>
                                             </div>
                                         </div>
-                                        <h2 class=" font-weight-bold text-center mb-4 h6 text-black">Best Practies</h2>
+                                        <h2 class=" font-weight-bold text-center mb-4 h6 text-black">Best Practices</h2>
                                     </div>
                                 </div>
                                 <div class="col-6 col-sm-4 col-md-4 col-lg-4 col-xl">
@@ -244,7 +244,7 @@ id/pagespeed-test
                             </div>
                             <div class="d-none" id="best-practices">
                                 <div class="mx-5">
-                                    <p class="h4">Best Practies</p>
+                                    <p class="h4">Best Practices</p>
                                     <div class="col">
                                         <div class="">
                                             <div class="progress progress-red best-practices result" data-percentage="0">
