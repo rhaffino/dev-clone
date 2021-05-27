@@ -148,10 +148,6 @@ function analyze(_url) {
                         toastr.error(err.responseJSON.message, 'Error')
                     }
                 } else {
-                    increaseCounter(REDIRECT_CHAIN_CHECKER_COUNTER_KEY);
-                    checkCounter(REDIRECT_CHAIN_CHECKER_COUNTER_KEY, () => {
-                        $('#cta-danger').show();
-                    })
                     toastr.error(err.statusText, 'Error');
                 }
 
@@ -182,10 +178,7 @@ function renderAllData(data){
     $('#cta-danger').hide();
 
     if(data.redirects.length > 3) {
-        increaseCounter(REDIRECT_CHAIN_CHECKER_COUNTER_KEY);
-        checkCounter(REDIRECT_CHAIN_CHECKER_COUNTER_KEY, () => {
-            $('#cta-danger').show();
-        })
+        $('#cta-danger').show();
     }
 
     for (let redirect of data.redirects) {
