@@ -168,12 +168,13 @@ $(window).keydown(function (e) {
     }
 })
 
-$(window).keydown(function (e) {
-    if ((e.metaKey || e.ctrlKey) && e.key === "v") {
+const pasteListener = function () {
+    $('#cta-warning').hide()
+    setTimeout(function() {
         increaseCounter('word-counter-count')
-        checkCounter('word-counter-count', () => showCta())
-    }
-})
+        checkCounterForWordCounter('word-counter-count', () => showCta())
+    }, 100);
+}
 
 const getData = function (key) {
     if (localStorage.getItem(key)) {
@@ -264,6 +265,7 @@ function start() {
         wordCount.innerHTML = 0;
         WORDS_LENGTH = 0
     }
+    console.log("WOrd", WORDS_LENGTH)
 
     if (words) {
         var sentences = input.value.match(/\w([^.?!;\u2026]+[.?!;\u2026]+)/g);
@@ -813,6 +815,8 @@ function numberWithCommas(x) {
 }
 
 const showCta = function () {
+    console.log(WORDS_LENGTH)
+    console.log(TOP_DENSITY)
     if (WORDS_LENGTH > 700 && (TOP_DENSITY < 1 || TOP_DENSITY > 3)){
         $('#cta-warning').show()
     }

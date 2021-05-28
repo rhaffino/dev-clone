@@ -208,7 +208,7 @@ check_url.click(function() {
         success: function(result) {
             if (result.testStatus.status === 'COMPLETE') {
                 closeCta()
-                resultdata(result.mobileFriendliness, result.screenshot.data)
+                resultdata(result.mobileFriendliness, result.screenshot.data, true)
                 mobileissues(result.mobileFriendlyIssues)
                 resourceissues(result.resourceIssues)
 
@@ -308,7 +308,7 @@ function renderAllData(result){
     after_crawl_preview.removeClass('d-none')
 }
 
-function resultdata(titledata, imagedata) {
+function resultdata(titledata, imagedata, cta=false) {
     let title, subtitle
     let title_friendly = lang === 'en' ? 'Page is mobile friendly' : 'Halaman mobile friendly';
     let subtitle_friendly = lang === 'en' ? 'This page is easy to use on a mobile device' : 'Halaman ini mudah digunakan di perangkat seluler';
@@ -330,15 +330,23 @@ function resultdata(titledata, imagedata) {
 
         mobile_indicator_1.addClass('d-none')
         mobile_indicator_2.addClass('d-none')
-        increaseCounter(MOBILE_TEST_COUNTER_KEY)
-        checkCounter(MOBILE_TEST_COUNTER_KEY, () => showCta())
+        if (cta){
+            increaseCounter(MOBILE_TEST_COUNTER_KEY)
+            checkCounter(MOBILE_TEST_COUNTER_KEY, () => showCta())
+        }else {
+            closeCta()
+        }
     } else if (titledata === 'NOT_MOBILE_FRIENDLY') {
         title = title_not_friendly
         subtitle = subtitle_not_friendly
 
         mobile_indicator_1.addClass('d-none')
-        increaseCounter(MOBILE_TEST_COUNTER_KEY)
-        checkCounter(MOBILE_TEST_COUNTER_KEY, () => showCta())
+        if (cta){
+            increaseCounter(MOBILE_TEST_COUNTER_KEY)
+            checkCounter(MOBILE_TEST_COUNTER_KEY, () => showCta())
+        }else {
+            closeCta()
+        }
     }
 
     result_title.html(title)

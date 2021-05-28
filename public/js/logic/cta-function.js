@@ -36,6 +36,13 @@ const checkCounter = function (key, callback){
     }
 }
 
+const checkCounterForWordCounter = function (key, callback){
+    const counter = getCounter(key)
+    if (counter.count % 2 === 0 && counter.count !== 0){
+        callback()
+    }
+}
+
 const mailMarketing = function (email, message) {
     $.post('/api/cta', {
         _token: $('meta[name=csrf-token]').attr('content'),
