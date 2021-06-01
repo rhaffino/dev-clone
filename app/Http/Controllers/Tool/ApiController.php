@@ -26,7 +26,7 @@ class ApiController extends Controller
         $sessionCookie = Cookie::get("tl_session");
         if(!$sessionCookie){
             $sessionCookie = Session::getId();
-            Cookie::forever("tl_session", encrypt($sessionCookie));
+            Cookie::queue(Cookie::forever("tl_session", encrypt($sessionCookie)));
             $cacheKey = "$sessionCookie-$url";
         } else {
             $cacheKey = "$sessionCookie-$url";
