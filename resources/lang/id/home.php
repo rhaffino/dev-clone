@@ -4,7 +4,7 @@ return [
     "meta-title" => "19 SEO Tools (Gratis) Versi Bahasa Indonesia \ cmlabs",
     "meta-desc" => "Cek website dengan Free SEO Tools cmlabs: Page Speed Test, Sitemap Generator, Word Counter, Title & Meta Desc Checker, dll",
     "lang" => "id",
-    "title" => "SEO Tool oleh CMLABS",
+    "title" => "SEO Tool Gratis oleh CMLABS",
     "sub-title" => "Permudah praktik SEO dan tingkatkan performa website dengan banyak tool di satu tempat. Optimalkan SERP Anda sekarang!",
     "word-counter-desc" => "Tak hanya untuk menghitung jumlah kata, paragraf, dan waktu baca, tool ini memiliki fitur untuk melihat keyword density. Gunakan Word Counter dan tingkatkan skill menulis Anda.",
     "meta-checker-desc" => "Panjang meta judul dan deskripsi haruslah ideal agar tidak terpotong di Search Engine. Gunakan tool Page Title and Meta Lengths Checker untuk mengetahui pratinjau tampilan meta.",
