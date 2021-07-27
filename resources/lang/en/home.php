@@ -4,7 +4,7 @@ return [
     "meta-title" => "19 SEO Tools (Free) English Version \ cmlabs",
     "meta-desc" => "Check your website with Free SEO tools cmlabs: Page Speed Test, Sitemap Generator, Word Counter, Title & Meta Desc Checker, etc.",
     "lang" => "en",
-    "title" => "SEO Tools by CMLABS",
+    "title" => "Free SEO Tools by CMLABS",
     "sub-title" => "Simplify SEO practices and improve website performance with many tools in one site. Optimize your SERP now!",
     "word-counter-desc" => "cmlabs Wordcounter tool has features to view keyword density,  calculate the number of words, paragraphs, and reading time. Use the Word Counter and improve your writing skills.",
     "meta-checker-desc" => "The length of meta-information must be ideal. So, it will display fully in SERP. Use the Page Title & Meta Length Checker to check your meta lengths and preview the display.",
