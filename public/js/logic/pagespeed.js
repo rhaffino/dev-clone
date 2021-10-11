@@ -128,9 +128,17 @@ function renderResult(data) {
     // jQuery('#spinner').removeClass('spinner spinner-success spinner-right');
     jQuery('#performance').css('display', 'block');
     for (let j = 0; j < 5; j++) {
-        // console.log('real score : '+data.lighthouseResult.categories[categories[j]].score);
-        let score = (data.lighthouseResult.categories[categories[j]].score * 100).toFixed(0);
-        // console.log('multiple score : '+data.lighthouseResult.categories[categories[j]].score * 100);
+
+        let score;
+
+        if ( data.lighthouseResult.categories[categories[j]].score == null ) {
+            score = 0
+        } else {
+            // console.log('real score : '+data.lighthouseResult.categories[categories[j]].score);
+            score = (data.lighthouseResult.categories[categories[j]].score * 100).toFixed(0);
+            // console.log('multiple score : '+data.lighthouseResult.categories[categories[j]].score * 100);
+        }
+
         strokeValue(score, j + 1, categories[j]);
         displayAuditsResult(data, categories[j])
     }
@@ -483,18 +491,28 @@ function regexHttps(url) {
 }
 
 function animateValue(id, start, end, duration) {
-    var range = end - start;
-    var current = start;
-    var increment = end > start ? 1 : -1;
-    var stepTime = Math.abs(Math.floor(duration / range));
-    var obj = jQuery('.' + id);
-    var timer = setInterval(function () {
-        current += increment;
+    var obj = jQuery('.' + id), range, current, increment, stepTime, timer
+
+    if (start == end) {
+        range = 0;
+        current = start;
+        increment = 0;
+        stepTime = 0;
+        timer = 0
         obj.html(current + '%');
-        if (current == end) {
-            clearInterval(timer);
-        }
-    }, stepTime);
+    } else {
+        range = end - start;
+        current = start;
+        increment = end > start ? 1 : -1;
+        stepTime = Math.abs(Math.floor(duration / range));
+        timer = setInterval(function () {
+            current += increment;
+            obj.html(current + '%');
+            if (current == end) {
+                clearInterval(timer);
+            }
+        }, stepTime);
+    }
 }
 
 function refreshAuditsResult() {

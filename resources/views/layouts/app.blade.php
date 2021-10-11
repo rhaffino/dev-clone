@@ -18,16 +18,22 @@
     <meta property="og:image:height" content="1142" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
     @if(env('APP_ENV')==='production')
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-            <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156389913-2"></script>
-            <script>
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-
-                gtag('config', 'UA-156389913-2');
-            </script>
-        @endif
+        {{--<!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156389913-2"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-156389913-2');
+        </script>--}}
+        <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-NRKQD67');</script>
+        <!-- End Google Tag Manager -->
+    @endif
     @if(env('APP_ENV')==='development')
         <meta name="robots" content="noindex,nofollow">
     @endif
@@ -54,6 +60,7 @@
 
     <!-- Custom Page CSS -->
     <link href="{{ asset('css/custom.css') }}" rel="stylesheet" type="text/css"/>
+    <link href="{{ asset('css/header_general.css') }}" rel="stylesheet" type="text/css"/>
 
 
     <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
@@ -71,24 +78,30 @@
 <!--begin::Body-->
 
 <body id="kt_body" class="header-fixed header-mobile-fixed subheader-enabled subheader-fixed">
+@if (env('APP_ENV') == 'production')
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NRKQD67"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+@endif
 <!--begin::Main-->
 <!--begin::Header Mobile-->
-@include('layouts.headermobile')
+@include('layouts.headermobile_general')
 <!--end::Header Mobile-->
 <div class="d-flex flex-column flex-root">
     <!--begin::Page-->
     <div class="d-flex flex-row flex-column-fluid page">
         <!--begin::Aside-->
-        @include('layouts.asidemobile')
+        @include('layouts.asidemobile_general')
         <!--end::Aside-->
         <!--begin::Wrapper-->
         <div class="d-flex flex-column flex-row-fluid wrapper custom-wrapper" id="kt_wrapper">
             <!--begin::Header-->
-            @include('layouts.header')
+            @include('layouts.header_general')
             <!--end::Header-->
             <!--begin::Content-->
             <div class="content d-flex flex-column flex-row-fluid custom-data-content pb-0" id="kt_content">
-              @include('layouts.subheader')
+              @include('layouts.subheader_general')
                 <!--begin::Entry-->
                 <div class="d-flex flex-column-fluid">
                     <!--begin::Container-->
