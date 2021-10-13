@@ -1,0 +1,8 @@
+.header-general .nav-header {
+    align-items: center;
+    justify-content: center;
+}
+.header-general .nav-header .dropdown-toggle.nav-link:after, 
+.header-general .nav-header .dropdown-toggle.btn:after {
+    content: none;
+}

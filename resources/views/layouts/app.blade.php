@@ -60,6 +60,7 @@
 
     <!-- Custom Page CSS -->
     <link href="{{ asset('css/custom.css') }}" rel="stylesheet" type="text/css"/>
+    <link href="{{ asset('css/header_general.css') }}" rel="stylesheet" type="text/css"/>
 
 
     <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
@@ -85,22 +86,22 @@
 @endif
 <!--begin::Main-->
 <!--begin::Header Mobile-->
-@include('layouts.headermobile')
+@include('layouts.headermobile_general')
 <!--end::Header Mobile-->
 <div class="d-flex flex-column flex-root">
     <!--begin::Page-->
     <div class="d-flex flex-row flex-column-fluid page">
         <!--begin::Aside-->
-        @include('layouts.asidemobile')
+        @include('layouts.asidemobile_general')
         <!--end::Aside-->
         <!--begin::Wrapper-->
         <div class="d-flex flex-column flex-row-fluid wrapper custom-wrapper" id="kt_wrapper">
             <!--begin::Header-->
-            @include('layouts.header')
+            @include('layouts.header_general')
             <!--end::Header-->
             <!--begin::Content-->
             <div class="content d-flex flex-column flex-row-fluid custom-data-content pb-0" id="kt_content">
-              @include('layouts.subheader')
+              @include('layouts.subheader_general')
                 <!--begin::Entry-->
                 <div class="d-flex flex-column-fluid">
                     <!--begin::Container-->
