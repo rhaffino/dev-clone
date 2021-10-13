@@ -55,8 +55,30 @@
                         </ul>
                     </div>
                 </li>
-                <li class="menu-item">
-                    <a href="https://cmlabs.co/{{ $local }}-id/pricing" class="menu-link"><span class="menu-text">Pricing</span></a>
+                <li class="menu-item menu-item-submenu" aria-haspopup="true">
+                    <a href="" class="menu-link menu-toggle">
+                        <span class="menu-text">@lang('layout.nav-pricing')</span>
+                    </a>
+                    <div class="menu-submenu">
+                        <i class="menu-arrow"></i>
+                        <ul class="menu-subnav">
+                            <li class="menu-item menu-item-parent" aria-haspopup="true">
+                                <span class="menu-link"><span class="menu-text">@lang('layout.nav-pricing')</span></span>
+                            </li>
+                            <li class="menu-item menu-item-children" aria-haspopup="true">
+                                <a href="https://cmlabs.co/{{ $local }}-id/serp-tracker" class="menu-link"><span class="menu-text">@lang('layout.nav-pricing-serp')</span></a>
+                            </li>
+                            <li class="menu-item menu-item-children" aria-haspopup="true">
+                                <a href="https://cmlabs.co/{{ $local }}-id/seo-consultant" class="menu-link"><span class="menu-text">@lang('layout.nav-pricing-seo')</span></a>
+                            </li>
+                            <li class="menu-item menu-item-children" aria-haspopup="true">
+                                <a href="https://cmlabs.co/{{ $local }}-id/content-writing" class="menu-link"><span class="menu-text">@lang('layout.nav-pricing-writing')</span></a>
+                            </li>
+                            <li class="menu-item menu-item-children" aria-haspopup="true">
+                                <a href="https://cmlabs.co/{{ $local }}-id/content-marketing" class="menu-link"><span class="menu-text">@lang('layout.nav-pricing-marketing')</span></a>
+                            </li>
+                        </ul>
+                    </div>
                 </li>
                 <li class="menu-item menu-item-submenu menu-item-open" aria-haspopup="true">
                     <a href="" class="menu-link menu-toggle">
