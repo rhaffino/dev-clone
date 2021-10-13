@@ -75,4 +75,12 @@ return [
     "maintenance-desc-1" => "Tim kami sedang meningkatkan kinerja tool.",
     "maintenance-desc-2" => "Mohon tunggu update selanjutnya!",
     "maintenance-button" => "Kembali ke Beranda",
+    "button-register" => "Daftar",
+    "button-signin-1" => "Masuk",
+    "button-signin-2" => "ke SERP Tracker",
+    "nav-pricing" => "Harga",
+    "nav-pricing-serp" => "Pelacak Keyword di Google",
+    "nav-pricing-seo" => "Konsultan SEO",
+    "nav-pricing-writing" => "Jasa Tulis Konten SEO",
+    "nav-pricing-marketing" => "Content Marketing",
 ];

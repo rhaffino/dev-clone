@@ -2,7 +2,7 @@
     <div class="container-fluid d-flex align-items-center justify-content-between flex-wrap flex-sm-nowrap">
         <div class="d-flex align-items-center flex-wrap mr-1">
             <div class="d-flex align-items-baseline flex-wrap mr-5">
-                <ul class="nav custom-nav d-none" id="menu_tools_webmaster">
+                <ul class="nav custom-nav" id="menu_tools_webmaster">
                     <li class="nav-item">
                         <a class="nav-link @yield('json-ld')" href="/{{ $local }}/json-ld-schema-generator">JSON-LD</a>
                     </li>
@@ -35,9 +35,7 @@
                     <li class="nav-item ml-7">
                         <a class="nav-link @yield('keyword-permutation')" href="/{{ $local }}/keyword-permutation">Keyword Permutation</a>
                     </li>
-                </ul>
-                <ul class="nav custom-nav" id="menu_tools_writer">
-                    <li class="nav-item">
+                    <li class="nav-item ml-7">
                         <a class="nav-link @yield('word-counter')" href="/{{ $local }}/word-counter">Word Counter</a>
                     </li>
                     <li class="nav-item ml-7">
@@ -47,9 +45,8 @@
             </div>
         </div>
         <div class="d-flex align-items-center">
-            @lang('layout.switch-to')
-            <button class="btn btn-custom-login ml-3" id="toggle_button_webmaster"><b>@lang('layout.for-web-master')</b></button>
-            <button class="btn btn-custom-login ml-3 d-none" id="toggle_button_writer"><b>@lang('layout.for-writers')</b></button>
+            <a href="{{ env('ANALYTICS_URL', 'https://analytics.cmlabs.co') . '/register' }}" class="btn btn-custom-credit font-weight-bold mr-1">@lang('layout.button-register')</a>
+            <a href="{{ env('ANALYTICS_URL', 'https://analytics.cmlabs.co') . '/login' }}" class="btn btn-custom-login ml-3"><b>@lang('layout.button-signin-1')</b> @lang('layout.button-signin-2')</a>
         </div>
     </div>
 </div>

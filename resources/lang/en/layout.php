@@ -75,4 +75,12 @@ return [
     "maintenance-desc-1" => "Our team is currently improving the tool’s performance.",
     "maintenance-desc-2" => "Please wait for the next update!",
     "maintenance-button" => "Back to Home",
+    "button-register" => "Register",
+    "button-signin-1" => "Sign in",
+    "button-signin-2" => "to SERP Tracker",
+    "nav-pricing" => "Pricing",
+    "nav-pricing-serp" => "Keyword Ranking Tracker",
+    "nav-pricing-seo" => "SEO Consultant",
+    "nav-pricing-writing" => "SEO Content Writing",
+    "nav-pricing-marketing" => "Content Marketing",
 ];
