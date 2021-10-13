@@ -26,8 +26,22 @@
                             <a class="dropdown-item" href="https://cmlabs.co/{{ $local }}-id/seo-guidelines">SEO Guidelines</a>                            
                         </div>
                     </li>
-                    <li class="nav-item ml-9">
-                        <a class="nav-link" href="https://cmlabs.co/{{ $local }}-id/pricing">Pricing</a>
+                    <li class="nav-item dropdown ml-9">
+                        <a class="nav-link dropdown-toggle @yield('pricing-menu-active')" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                            <div class="d-flex align-items-center">
+                                @lang('layout.nav-pricing')
+                                <i class="bx bxs-down-arrow text-custom-softgrey icon-sm-xs ml-1"></i>
+                            </div>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="https://cmlabs.co/{{ $local }}-id/serp-tracker">@lang('layout.nav-pricing-serp')</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="https://cmlabs.co/{{ $local }}-id/seo-consultant">@lang('layout.nav-pricing-seo')</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="https://cmlabs.co/{{ $local }}-id/content-writing">@lang('layout.nav-pricing-writing')</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="https://cmlabs.co/{{ $local }}-id/content-marketing">@lang('layout.nav-pricing-marketing')</a>
+                        </div>
                     </li>
                     <li class="nav-item dropdown ml-9">
                         <a class="nav-link active" href="/{{ $local }}">SEO Tools</a>
