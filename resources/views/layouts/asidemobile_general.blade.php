@@ -66,16 +66,16 @@
                                 <span class="menu-link"><span class="menu-text">@lang('layout.nav-pricing')</span></span>
                             </li>
                             <li class="menu-item menu-item-children" aria-haspopup="true">
-                                <a href="https://cmlabs.co/{{ $local }}-id/serp-tracker" class="menu-link"><span class="menu-text">@lang('layout.nav-pricing-serp')</span></a>
+                                <a href="https://cmlabs.co/{{ $local }}-id/pricing/serp-tracker" class="menu-link"><span class="menu-text">@lang('layout.nav-pricing-serp')</span></a>
                             </li>
                             <li class="menu-item menu-item-children" aria-haspopup="true">
-                                <a href="https://cmlabs.co/{{ $local }}-id/seo-consultant" class="menu-link"><span class="menu-text">@lang('layout.nav-pricing-seo')</span></a>
+                                <a href="https://cmlabs.co/{{ $local }}-id/pricing/seo-consultant" class="menu-link"><span class="menu-text">@lang('layout.nav-pricing-seo')</span></a>
                             </li>
                             <li class="menu-item menu-item-children" aria-haspopup="true">
-                                <a href="https://cmlabs.co/{{ $local }}-id/content-writing" class="menu-link"><span class="menu-text">@lang('layout.nav-pricing-writing')</span></a>
+                                <a href="https://cmlabs.co/{{ $local }}-id/pricing/content-writing" class="menu-link"><span class="menu-text">@lang('layout.nav-pricing-writing')</span></a>
                             </li>
                             <li class="menu-item menu-item-children" aria-haspopup="true">
-                                <a href="https://cmlabs.co/{{ $local }}-id/content-marketing" class="menu-link"><span class="menu-text">@lang('layout.nav-pricing-marketing')</span></a>
+                                <a href="https://cmlabs.co/{{ $local }}-id/pricing/content-marketing" class="menu-link"><span class="menu-text">@lang('layout.nav-pricing-marketing')</span></a>
                             </li>
                         </ul>
                     </div>
