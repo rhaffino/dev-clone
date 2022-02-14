@@ -446,18 +446,24 @@ $('#togglemobile_button_webmaster').click(function() {
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
     var currentScrollPos = window.pageYOffset;
+    var width = window.innerWidth > 0 ? window.innerWidth : screen.width;
+    const promo = document.getElementById("promoHeader");
+    var top = promo ? "102" : "64";
     if (prevScrollpos >= currentScrollPos) {
         // document.getElementById('kt_header_mobile').style.top = "0";
         // document.getElementById('kt_subheader_mobile').style.top = "55px";
         // $('#subheader_logo_mobile').addClass('d-none');
-
-        document.getElementById('kt_header').style.top = "0";
-        document.getElementById('kt_subheader').style.top = "64px";
-        $('#subheader_logo').addClass('d-none');
+        if (width > 1010) {
+            document.getElementById('kt_header').style.top = "0";
+            document.getElementById('kt_subheader').style.top = `${top}px`;
+            $('#subheader_logo').addClass('d-none');
+        }
     } else {
-        document.getElementById('kt_header').style.top = "-64px";
-        document.getElementById('kt_subheader').style.top = "0";
-        $('#subheader_logo').removeClass('d-none');
+        if (width > 1010) {
+            document.getElementById('kt_header').style.top = `-${top}px`;
+            document.getElementById('kt_subheader').style.top = "0";
+            $('#subheader_logo').removeClass('d-none');
+        }
 
         // document.getElementById('kt_header_mobile').style.top = "-54px";
         // document.getElementById('kt_subheader_mobile').style.top = "0";

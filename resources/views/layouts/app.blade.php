@@ -47,6 +47,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <!--end::Fonts-->
     <!--begin::Page Vendors Styles(used by this page)-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <link href="{{asset('plugins/custom/fullcalendar/fullcalendar.bundle.css?v=7.0.5')}}" rel="stylesheet" type="text/css" />
     <!--end::Page Vendors Styles-->
     <!--begin::Global Theme Styles(used by all pages)-->
@@ -61,6 +62,7 @@
     <!-- Custom Page CSS -->
     <link href="{{ asset('css/custom.css') }}" rel="stylesheet" type="text/css"/>
     <link href="{{ asset('css/header_general.css') }}" rel="stylesheet" type="text/css"/>
+    <link href="{{ asset('css/header_v2.css') }}" rel="stylesheet" type="text/css"/>
 
 
     <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
@@ -86,9 +88,10 @@
 @endif
 <!--begin::Main-->
 <!--begin::Header Mobile-->
-@include('layouts.headermobile_general')
+{{-- @include('layouts.headermobile_general') --}}
 <!--end::Header Mobile-->
 <div class="d-flex flex-column flex-root">
+    @include('layouts.header_general')
     <!--begin::Page-->
     <div class="d-flex flex-row flex-column-fluid page">
         <!--begin::Aside-->
@@ -97,11 +100,11 @@
         <!--begin::Wrapper-->
         <div class="d-flex flex-column flex-row-fluid wrapper custom-wrapper" id="kt_wrapper">
             <!--begin::Header-->
-            @include('layouts.header_general')
+            {{-- @include('layouts.header_general') --}}
             <!--end::Header-->
             <!--begin::Content-->
+            @include('layouts.subheader_general')
             <div class="content d-flex flex-column flex-row-fluid custom-data-content pb-0" id="kt_content">
-              @include('layouts.subheader_general')
                 <!--begin::Entry-->
                 <div class="d-flex flex-column-fluid">
                     <!--begin::Container-->
@@ -152,7 +155,7 @@
 
 <!-- Custom JS -->
 <script src="{{ asset('js/custom.js?v=20210116213500')}}"></script>
-
+<script src="{{ asset('js/header.js?v=20210116213500')}}"></script>
 <!--end::Global Theme Bundle-->
 <!--begin::Page Vendors(used by this page)-->
 <script src="{{asset('plugins/custom/fullcalendar/fullcalendar.bundle.js?v=7.0.5')}}"></script>
