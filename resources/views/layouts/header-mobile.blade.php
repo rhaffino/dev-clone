@@ -42,10 +42,10 @@
                 </div>
             </li>
             <li class="nav-item dropdown active">
-                <button class="btn nav-link" id="seoToolsDropdownMobile" type="button"
+                <button class="btn nav-link active" id="seoToolsDropdownMobile" type="button"
                     aria-expanded="false"><span>@lang('v2_navbar.free_seo')</span> <i
                         class="bx bx-chevron-down"></i></button>
-                <div class="dropdown-menu seo-tools-mobile fz-13 p-0" aria-labelledby="seoToolsDropdownMobile">
+                <div class="dropdown-menu seo-tools-mobile fz-13 p-0 show" aria-labelledby="seoToolsDropdownMobile">
                     @include('layouts.dropdown.mobile-seo-tools')
                 </div>
             </li>
