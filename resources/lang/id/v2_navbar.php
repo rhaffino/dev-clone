@@ -18,6 +18,7 @@ return [
     "saved_resources" => "Sumber tersimpan",
     "back" => "Kembali",
     "promos" => "Promo Lainnya",
+    "career" => "Karir",
 
     "ranktrack_reason_title" => "Kenapa memilih keyword rank tracker cmlabs?",
     "ranktrack_reasons" => [

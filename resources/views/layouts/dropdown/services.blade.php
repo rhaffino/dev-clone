@@ -7,7 +7,7 @@
                 </div>
                 <div class="service-card__body">
                     <div class="service-card__title mb-4">
-                        <a href="https://cmlabs.co/en-id/pricing/seo-consultant" class="txt-bold">@lang('v2_navbar.seo_consultant')</a>
+                        <a href="https://cmlabs.co/{{ $local }}-id/pricing/seo-consultant" class="txt-bold">@lang('v2_navbar.seo_consultant')</a>
                         <p class="txt-light-100">Starting from USD 698 /month</p>
                     </div>
                     <div class="list-container d-flex">
@@ -27,7 +27,7 @@
                 </div>
                 <div class="service-card__body">
                     <div class="service-card__title mb-4">
-                        <a href="https://cmlabs.co/en-id/pricing/content-writing" class="txt-bold">@lang('v2_navbar.content_writing')</a>
+                        <a href="https://cmlabs.co/{{ $local }}-id/pricing/content-writing" class="txt-bold">@lang('v2_navbar.content_writing')</a>
                         <p class="txt-light-100">Starting from USD 471 /month</p>
                     </div>
                     <div class="list-container d-flex">
@@ -47,7 +47,7 @@
                 </div>
                 <div class="service-card__body">
                     <div class="service-card__title mb-4">
-                        <a href="https://cmlabs.co/en-id/pricing/content-marketing" class="txt-bold">@lang('v2_navbar.content_marketing')</a>
+                        <a href="https://cmlabs.co/{{ $local }}-id/pricing/content-marketing" class="txt-bold">@lang('v2_navbar.content_marketing')</a>
                         <p class="txt-light-100">@lang('v2_navbar.content_marketing_start')</p>
                     </div>
                     <div class="list-container d-flex">

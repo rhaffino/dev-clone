@@ -28,7 +28,7 @@
                 <button class="btn nav-link" id="keywordTrackerDropdownMobile" type="button"
                     aria-expanded="false"><span>@lang('v2_navbar.keyword_tracker')</span> <i
                         class="bx bx-chevron-down"></i></button>
-                <div class="dropdown-menu keyword-tracker-mobile fz-13 p-0"
+                <div class="dropdown-menu keyword-tracker-mobile fz-13 p-0 w-100"
                     aria-labelledby="keywordTrackerDropdownMobile">
                     @include('layouts.dropdown.mobile-keyword-tracker')
                 </div>
@@ -37,7 +37,7 @@
                 <button class="btn nav-link" id="servicesDropdownMobile" type="button"
                     aria-expanded="false"><span>@lang('v2_navbar.services')</span> <i
                         class="bx bx-chevron-down"></i></button>
-                <div class="dropdown-menu service-mobile fz-13 p-0" aria-labelledby="servicesDropdownMobile">
+                <div class="dropdown-menu service-mobile fz-13 p-0 w-100" aria-labelledby="servicesDropdownMobile">
                     @include('layouts.dropdown.mobile-services')
                 </div>
             </li>
@@ -45,7 +45,7 @@
                 <button class="btn nav-link active" id="seoToolsDropdownMobile" type="button"
                     aria-expanded="false"><span>@lang('v2_navbar.free_seo')</span> <i
                         class="bx bx-chevron-down"></i></button>
-                <div class="dropdown-menu seo-tools-mobile fz-13 p-0 show" aria-labelledby="seoToolsDropdownMobile">
+                <div class="dropdown-menu seo-tools-mobile fz-13 p-0 show w-100" aria-labelledby="seoToolsDropdownMobile">
                     @include('layouts.dropdown.mobile-seo-tools')
                 </div>
             </li>
@@ -53,13 +53,13 @@
                 <button class="btn nav-link" id="resourcesDropdownMobile" type="button"
                     aria-expanded="false"><span>@lang('v2_navbar.resources')</span> <i
                         class="bx bx-chevron-down"></i></button>
-                <div class="dropdown-menu resource-mobile fz-13 p-0" aria-labelledby="resourcesDropdownMobile">
+                <div class="dropdown-menu resource-mobile fz-13 p-0 w-100" aria-labelledby="resourcesDropdownMobile">
                     @include('layouts.dropdown.mobile-resource')
                 </div>
             </li>
             <li class="nav-item">
                 <a href="https://career.cmlabs.co"
-                    class="btn nav-link d-flex align-items-center gap-1">Career</a>
+                    class="btn nav-link d-flex align-items-center gap-1">@lang('v2_navbar.career')</a>
             </li>
         </ul>
         <div class="navbar-last d-flex align-items-center gap-3">

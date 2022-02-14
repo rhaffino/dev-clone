@@ -1,6 +1,6 @@
 <header id="kt_header" class="cmlabs_header bg-white" id="navbarHome">
     @include('layouts.promo_header')
-    <div class="container-fluid pm-0">
+    <div class="container-fluid">
         @include('layouts.header-mobile')
         <nav class="navbar navbar-expand-lg bg-white desktop-navbar">
             <a class="navbar-brand brand d-flex align-items-center gtm-header-logo" href="">
@@ -37,7 +37,7 @@
                     </li>
                     <li class="nav-item">
                         <a href="https://career.cmlabs.co"
-                            class="btn nav-link d-flex align-items-center gap-1">Career</a>
+                            class="btn nav-link d-flex align-items-center gap-1">@lang('v2_navbar.career')</a>
                     </li>
                 </ul>
                 <div class="navbar-last d-flex align-items-center">

@@ -24,7 +24,7 @@
                         </div>
                     </div>
                     <div class="d-flex gap-3 align-items-center">
-                        <a href="https://cmlabs.co/en-id/pricing/serp-tracker"
+                        <a href="https://cmlabs.co/{{ $local }}-id/pricing/serp-tracker"
                             class="btn text-decoration-underline txt-primary-100 txt-bold px-2 py-1 rouned-md h-auto lh-base">@lang('v2_navbar.open_pricing')</a>
                         <a href="{{ env('ANALYTICS_URL', 'https://analytics.cmlabs.co') . '/login' }}" class="btn btn-dashboard outline txt-bold px-2 py-1 rounded-md h-auto lh-base d-flex align-items-center txt-primary-100 gap-2">@lang('v2_navbar.analytics') <i class='bx bx-link-external txt-primary-100 fz-16'></i> </a>                            
                     </div>

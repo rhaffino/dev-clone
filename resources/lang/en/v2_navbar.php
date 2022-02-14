@@ -10,6 +10,7 @@ return [
     "choose_country" => "Choose Country and Language",
     "back" => "Back",
     "promos" => "More Promos",
+    "career" => "Career",
 
     "acount_profile" => "Account & profile",
     "sign_out" => "Sign out",

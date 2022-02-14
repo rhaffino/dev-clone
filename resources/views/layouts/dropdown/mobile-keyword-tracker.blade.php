@@ -12,7 +12,7 @@
                             id="paygButtonMobile">@lang('v2_navbar.payg')</button>
                     </div>
                     <div class="d-flex gap-3 align-items-center my-3">
-                        <a href="https://cmlabs.co/en-id/pricing/serp-tracker"
+                        <a href="https://cmlabs.co/{{ $local }}-id/pricing/serp-tracker"
                             class="fz-13 txt-bold text-decoration-underline">@lang('v2_navbar.open_pricing')</a>
                     </div>                    
                 </div>
