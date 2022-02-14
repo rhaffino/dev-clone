@@ -1,6 +1,6 @@
 <header id="kt_header" class="cmlabs_header bg-white" id="navbarHome">
     @include('layouts.promo_header')
-    <div class="container-fluid">
+    <div class="container-fluid pm-0">
         @include('layouts.header-mobile')
         <nav class="navbar navbar-expand-lg bg-white desktop-navbar">
             <a class="navbar-brand brand d-flex align-items-center gtm-header-logo" href="">
