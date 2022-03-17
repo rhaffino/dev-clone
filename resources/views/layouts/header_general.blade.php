@@ -41,6 +41,10 @@
                             <a class="dropdown-item" href="https://cmlabs.co/{{ $local }}-id/pricing/content-writing">@lang('layout.nav-pricing-writing')</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="https://cmlabs.co/{{ $local }}-id/pricing/content-marketing">@lang('layout.nav-pricing-marketing')</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="https://cmlabs.co/{{ $local }}-id/pricing/backlink">@lang('layout.nav-pricing-backlink')</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="https://cmlabs.co/{{ $local }}-id/pricing/backlink-media-nasional">@lang('layout.nav-pricing-backlink-media-nasional')</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown ml-9">
