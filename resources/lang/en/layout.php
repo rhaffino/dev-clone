@@ -83,4 +83,6 @@ return [
     "nav-pricing-seo" => "SEO Consultant",
     "nav-pricing-writing" => "SEO Content Writing",
     "nav-pricing-marketing" => "Content Marketing",
+    "nav-pricing-backlink" => "Backlink",
+    "nav-pricing-backlink-media-nasional" => "Backlink to Indonesian Online Publishers",
 ];
