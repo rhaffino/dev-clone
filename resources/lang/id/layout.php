@@ -83,4 +83,6 @@ return [
     "nav-pricing-seo" => "Konsultan SEO",
     "nav-pricing-writing" => "Jasa Tulis Konten SEO",
     "nav-pricing-marketing" => "Content Marketing",
+    "nav-pricing-backlink" => "Backlink",
+    "nav-pricing-backlink-media-nasional" => "Backlink ke Media Nasional",
 ];

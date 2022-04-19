@@ -77,6 +77,12 @@
                             <li class="menu-item menu-item-children" aria-haspopup="true">
                                 <a href="https://cmlabs.co/{{ $local }}-id/pricing/content-marketing" class="menu-link"><span class="menu-text">@lang('layout.nav-pricing-marketing')</span></a>
                             </li>
+                            <li class="menu-item menu-item-children" aria-haspopup="true">
+                                <a href="https://cmlabs.co/{{ $local }}-id/pricing/backlink" class="menu-link"><span class="menu-text">@lang('layout.nav-pricing-backlink')</span></a>
+                            </li>
+                            <li class="menu-item menu-item-children" aria-haspopup="true">
+                                <a href="https://cmlabs.co/{{ $local }}-id/pricing/backlink-media-nasional" class="menu-link"><span class="menu-text">@lang('layout.nav-pricing-backlink-media-nasional')</span></a>
+                            </li>
                         </ul>
                     </div>
                 </li>

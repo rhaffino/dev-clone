@@ -77,6 +77,15 @@ return [
         "5 Media Berkualitas Tinggi di Indonesia",
         "5 Media Besar Indonesia"
     ],
+    "backlink" => "BACKLINK",
+    "backlink_start" => "Dapatkan lebih banyak trafik dari tautan balik ke situs Anda. Diskusikan referensi situs web referensi Anda dengan kami. Jika Anda membutuhkan rekomendasi penuh, kami akan senang membantu.",
+    "backlink_national" => "BACKLINK KE MEDIA NASIONAL",
+    "backlink_national_start" => "Dapatkan brand mention dan backlink untuk brand Anda oleh penerbit terkemuka",
+    "backlink_national_packages" => [
+        "10 Penerbit Online Indonesia Teratas berdasarkan Kunjungan",
+        "5 Media Berkualitas Tinggi di Indonesia",
+        "5 Media Besar Indonesia"
+    ],
     "service_desc" => "Jasa Konsultan SEO dan Penulisan Konten <strong>cmlabs</strong> tersedia untuk beberapa negara Asia Tenggara, yaitu : Indonesia, Malaysia, Singapura, Thailand, Filipina, Vietnam, dan Australia. Ada satu layanan khusus yang tidak tersedia untuk negara lain selain Indonesia, yaitu layanan Advertorial/Content Marketing. Namun terlepas dari semua itu, layanan SEO cmlabs berlaku untuk brand dan profesional yang memiliki tujuan untuk membidik pasar Indonesia. Pelajari lebih lanjut tentang layanan SEO cmlabs",
     "here" => "di sini.",
     "service_promo" => "(Jasa SEO + Jasa Tulis) Februari-Oktober 2021 ekstra balance Rp1.000.000 (setiap bulan) untuk Keyword Rank Tracker!!",

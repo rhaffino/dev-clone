@@ -14,7 +14,7 @@
                 <button class="btn py-4 btn-language d-flex align-items-center justify-content-between p-0 w-100 gtm-header-language"
                     type="button" id="dropdownMenuLanguage" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
                     <div class="d-flex align-items-center">
-                        <i class="cmicon language me-3"></i>
+                        <i class="cmicon language mr-3"></i>
                         <span class="me-4">@lang('layout.language')</strong></span>
                     </div>
                     <i class="bx bx-chevron-down"></i>

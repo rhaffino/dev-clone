@@ -61,6 +61,38 @@
             </div>
         </div>
 
+        <div class="service-card-container d-flex mt-5 justify-content-start">
+            <div class="service-card">
+                <div class="icon mr-4">
+                    <img class="lozad" src="{{ asset('assets/images/header/link-icon.svg') }}" alt="Backlink icon">
+                </div>
+                <div class="service-card__body">
+                    <div class="service-card__title mb-4">
+                        <a href="https://cmlabs.co/{{ $local }}-id/pricing/backlink" class="txt-bold d-flex">@lang('v2_navbar.backlink')</a>
+                        <p class="txt-light-100 w-280"> {{ __('v2_navbar.backlink_start') }} </p>
+                    </div>
+                </div>
+            </div>
+            <div class="service-card ml-170">
+                <div class="icon mr-4">
+                    <img class="lozad" src="{{ asset('assets/images/header/link-icon.svg') }}" alt="Backlink icon">
+                </div>
+                <div class="service-card__body">
+                    <div class="service-card__title mb-4">
+                        <a href="https://cmlabs.co/{{ $local }}-id/pricing/backlink-media-nasional" class="txt-bold d-flex">@lang('v2_navbar.backlink_national')</a>
+                        <p class="txt-light-100 w-280"> {{__('v2_navbar.backlink_national_start') }} </p>
+                    </div>
+                    <div class="list-container d-flex">
+                        <ul>
+                            @for ($i = 0; $i < 3; $i++)
+                                <li class="tool-list fz-13">{{ __('v2_navbar.backlink_national_packages')[$i] }}</li>
+                            @endfor
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <p class="service__desc fz-12 mt-4 mx-auto">
             @lang('v2_navbar.service_desc')
         </p>
