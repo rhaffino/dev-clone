@@ -233,6 +233,25 @@
                                         <i class='bx bx-check bx-sm'></i>
                                     </td>
                                 </tr>
+                                {{-- <tr>
+                                    <th></th>
+                                    <td class="recommended-bg grey text-center">
+                                        <button type="button"
+                                            class="serp-cta-btn text-uppercase btn-add-to-list" data-category="serp" data-type="standard" data-cost="{{$local == 'id' ? 'Rp.180.000' : '12,7 USD'}}" data-name="{{__('v2_your-list.krt-title')}}">@lang('v2_pricing_serp.add_to_list')</button>
+                                    </td>
+                                    <td class="recommended-bg grey text-center">
+                                        <button type="button"
+                                            class="serp-cta-btn primary text-uppercase btn-add-to-list" data-category="serp" data-type="professional" data-cost="{{$local == 'id' ? 'Rp.9.000.000' : '630 USD'}}" data-name="{{__('v2_your-list.krt-title')}}">@lang('v2_pricing_serp.add_to_list')</button>
+                                    </td>
+                                    <td class="recommended-bg grey text-center">
+                                        <button type="button"
+                                            class="serp-cta-btn text-uppercase btn-add-to-list" data-category="serp" data-type="advanced" data-cost="{{$local == 'id' ? 'Rp.18.000.000' : '1260 USD'}}" data-name="{{__('v2_your-list.krt-title')}}">@lang('v2_pricing_serp.add_to_list')</button>
+                                    </td>
+                                    <td class="recommended-bg grey text-center">
+                                        <a href="https://cmlabs.co/{{ $local }}-id/company/contact"
+                                            class="serp-cta-btn text-uppercase">@lang('v2_pricing_serp.call_us')</a>
+                                    </td>
+                                </tr> --}}
                             </tbody>
                         </table>
                         <input type="hidden" id="alertTitleAddToList" value="@lang('v2_your-list.modal_confirm-title')">

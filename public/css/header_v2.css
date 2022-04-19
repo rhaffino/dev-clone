@@ -728,6 +728,7 @@
 }
 .cmlabs_header .dropdown-menu .container.keyword-tracker .serp .serp__package table thead tr th {
     border-bottom: none;
+    vertical-align: top;
 }
 .cmlabs_header .dropdown-menu .container.keyword-tracker .serp .serp__package table thead tr th small.serp__suitable {
     color: rgba(34, 34, 34, 1);
@@ -875,6 +876,12 @@
 }
 .cmlabs_header .dropdown-menu .services .service-card-container .service-card__body .service-card__title a:hover {
     color: #0a58ca;
+}
+.cmlabs_header .dropdown-menu .services .service-card-container .service-card__body .service-card__title p.w-280 {
+    width: 280px;
+}
+.cmlabs_header .dropdown-menu .services .service-card-container .service-card.ml-170 {
+    margin-left: 170px;
 }
 .cmlabs_header .dropdown-menu .list-container ul {
     padding: 0;

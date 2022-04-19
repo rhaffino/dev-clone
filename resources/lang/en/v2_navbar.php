@@ -78,6 +78,15 @@ return [
         "Top 5 Indonesia High Quality Media",
         "Top 5 Indonesia Big Media"
     ],
+    "backlink" => "BACKLINK",
+    "backlink_start" => "Gain more traffic from backlink to your site. Clients can discuss the referential websites with our team. If the clients need any recommendations, cmlabs will happily assist them.",
+    "backlink_national" => "BACKLINK TO ONLINE PUBLISHERS",
+    "backlink_national_start" => "Get mention and backlink to your brand by reputable publishers.",
+    "backlink_national_packages" => [
+        "Top-10 Indonesia Online Publisher by Visits",
+        "Top 5 Indonesia High Quality Media",
+        "Top 5 Indonesia Big Media"
+    ],
     "service_desc" => "<strong>cmlabs</strong> SEO Services and Content Writing services are available for several South East Asia countries, which are : Indonesia, Malaysia, Singapore, Thailand, Philipines, Vietnam, and Australia.  There is one particular service that is unavailable for other country but Indonesia, which is Advertorial/Content Marketing service. But despite all that, cmlabs SEO services are applicable for brands and professionals who have intentions to target Indonesian market. Learn more about cmlabs SEO services",
     "here" => "here.",
     "service_promo" => "(SEO Services + Writing Services) February-October 2021 extra balance of IDR 1,000,000 (every month) for Keyword Rank Tracker!!",
