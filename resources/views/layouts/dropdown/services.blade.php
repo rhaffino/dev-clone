@@ -8,7 +8,7 @@
                 <div class="service-card__body">
                     <div class="service-card__title mb-4">
                         <a href="https://cmlabs.co/{{ $local }}-id/pricing/seo-consultant" class="txt-bold">@lang('v2_navbar.seo_consultant')</a>
-                        <p class="txt-light-100">Starting from USD 698 /month</p>
+                        <p class="txt-light-100">@lang('v2_navbar.seo_consultant_start')</p>
                     </div>
                     <div class="list-container d-flex">
                         <ul>
@@ -28,7 +28,7 @@
                 <div class="service-card__body">
                     <div class="service-card__title mb-4">
                         <a href="https://cmlabs.co/{{ $local }}-id/pricing/content-writing" class="txt-bold">@lang('v2_navbar.content_writing')</a>
-                        <p class="txt-light-100">Starting from USD 471 /month</p>
+                        <p class="txt-light-100">@lang('v2_navbar.content_writing_start')</p>
                     </div>
                     <div class="list-container d-flex">
                         <ul>
@@ -61,7 +61,7 @@
             </div>
         </div>
 
-        <div class="service-card-container d-flex mt-5 justify-content-start">
+        <div class="service-card-container d-flex mt-5 justify-content-between">
             <div class="service-card">
                 <div class="icon mr-4">
                     <img class="lozad" src="{{ asset('assets/images/header/link-icon.svg') }}" alt="Backlink icon">
@@ -73,7 +73,7 @@
                     </div>
                 </div>
             </div>
-            <div class="service-card ml-170">
+            <div class="service-card">
                 <div class="icon mr-4">
                     <img class="lozad" src="{{ asset('assets/images/header/link-icon.svg') }}" alt="Backlink icon">
                 </div>
@@ -91,6 +91,7 @@
                     </div>
                 </div>
             </div>
+            <div class="service-card" style="width: 341px"></div>
         </div>
 
         <p class="service__desc fz-12 mt-4 mx-auto">
