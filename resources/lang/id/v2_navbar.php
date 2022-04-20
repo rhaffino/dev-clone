@@ -64,7 +64,7 @@ return [
         "Perusahaan"
     ],
     "content_writing" => "PENULISAN KONTEN SEO",
-    "content_writing_start" => "Mulai dari 400K /bulan",
+    "content_writing_start" => "Mulai dari Rp400K /artikel",
     "content_writing_packages" => [
         "500-750 Kata",
         "750-1000 Kata",

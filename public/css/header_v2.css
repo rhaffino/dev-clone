@@ -854,6 +854,9 @@
     border: none;
     padding: 0;
 }
+.cmlabs_header .dropdown-menu .services .service-card-container {
+    max-width: 1440px;
+}
 .cmlabs_header .dropdown-menu .services .service-card-container .service-card {
     display: flex;
 }
@@ -879,9 +882,6 @@
 }
 .cmlabs_header .dropdown-menu .services .service-card-container .service-card__body .service-card__title p.w-280 {
     width: 280px;
-}
-.cmlabs_header .dropdown-menu .services .service-card-container .service-card.ml-170 {
-    margin-left: 170px;
 }
 .cmlabs_header .dropdown-menu .list-container ul {
     padding: 0;

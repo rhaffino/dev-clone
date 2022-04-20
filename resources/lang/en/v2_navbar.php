@@ -65,7 +65,7 @@ return [
         "Enterprises"
     ],
     "content_writing" => "SEO CONTENT WRITING",
-    "content_writing_start" => "Starting from Rp400k /month",
+    "content_writing_start" => "Starting from Rp400k /article",
     "content_writing_packages" => [
         "500-750 Words",
         "750-1000 Words",
