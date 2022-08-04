@@ -77,7 +77,7 @@ return [
     "maintenance-button" => "Back to Home",
     "button-register" => "Register",
     "button-signin-1" => "Sign in",
-    "button-signin-2" => "to SERP Tracker",
+    "button-signin-2" => "to cmlabs 3.0",
     "nav-pricing" => "Pricing",
     "nav-pricing-serp" => "Keyword Ranking Tracker",
     "nav-pricing-seo" => "SEO Consultant",
