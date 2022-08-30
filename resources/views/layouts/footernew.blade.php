@@ -36,7 +36,7 @@
                 </div>
                 <div class="h3 text-custom-grey font-weight-bolder mb-5">@lang('layout.footer-company-title')</div>
                 <div class="d-flex flex-wrap mb-10">
-                    <a href="https://cmlabs.co/{{ $local }}-id/pricing/serp-tracker" class="mb-2">
+                    <!-- <a href="https://cmlabs.co/{{ $local }}-id/pricing/serp-tracker" class="mb-2">
                         <div class="card card-custom card-stretch footer-company-list mr-2">
                             <div class="card-body px-3 py-5">
                                 <span class="footer-company-cat font-weight-normal">@lang('layout.footer-company-link-1-1')</span>
@@ -44,7 +44,7 @@
                                 <span class="h6 footer-company-title font-weight-bolder">@lang('layout.footer-company-link-1-2')</span>
                             </div>
                         </div>
-                    </a>
+                    </a> -->
                     <a href="https://cmlabs.co/{{ $local }}-id/pricing" class="mb-2">
                         <div class="card card-custom card-stretch footer-company-list mr-2">
                             <div class="card-body px-3 py-5">
@@ -139,7 +139,7 @@
                             </div>
                         </div>
                     </a>
-                    <a href="https://analytics.cmlabs.co/reference">
+                    <!-- <a href="https://analytics.cmlabs.co/reference">
                         <div class="card card-custom footer-resource-list">
                             <div class="card-body d-flex flex-wrap align-items-center w-100 p-3">
                                 <div class="footer-resource-icon d-flex align-items-center">
@@ -149,7 +149,7 @@
                                 <div class="h6 footer-resource-text font-weight-normal mb-0">@lang('layout.footer-resource-link-6')</div>
                             </div>
                         </div>
-                    </a>
+                    </a> -->
                 </div>
             </div>
             <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">

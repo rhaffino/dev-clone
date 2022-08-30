@@ -77,7 +77,7 @@ return [
     "maintenance-button" => "Kembali ke Beranda",
     "button-register" => "Daftar",
     "button-signin-1" => "Masuk",
-    "button-signin-2" => "ke SERP Tracker",
+    "button-signin-2" => "ke cmlabs 3.0",
     "nav-pricing" => "Harga",
     "nav-pricing-serp" => "Pelacak Keyword di Google",
     "nav-pricing-seo" => "Konsultan SEO",
