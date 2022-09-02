@@ -34,8 +34,8 @@
                             </div>
                         </a>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="https://cmlabs.co/{{ $local }}-id/pricing/serp-tracker">@lang('layout.nav-pricing-serp')</a>
-                            <div class="dropdown-divider"></div>
+                            {{-- <a class="dropdown-item" href="https://cmlabs.co/{{ $local }}-id/pricing/serp-tracker">@lang('layout.nav-pricing-serp')</a>
+                            <div class="dropdown-divider"></div> --}}
                             <a class="dropdown-item" href="https://cmlabs.co/{{ $local }}-id/pricing/seo-consultant">@lang('layout.nav-pricing-seo')</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="https://cmlabs.co/{{ $local }}-id/pricing/content-writing">@lang('layout.nav-pricing-writing')</a>
