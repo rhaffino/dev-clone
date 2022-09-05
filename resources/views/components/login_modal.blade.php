@@ -27,7 +27,6 @@
                 <div class="row justify-content-end">
                     <div class="col-sm-5">
                         <button
-                            href="https://cmlabs.co/en-id/login"
                             onclick="location.href='https://cmlabs.co/en-id/login'"
                             type="button"
                             class="btn btn-primary btn-sm btn-block font-weight-bolder"
