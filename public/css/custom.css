@@ -2546,3 +2546,17 @@ input.input-url-meta-checker:focus {
 .z-index-9 {
     z-index: 9;
 }
+
+.alert-limit {
+    background-color: rgba(200, 159, 13, 0.1);
+    color: #c89f0d;
+    border-radius: 8px;
+    border: 1px solid #c89f0d;
+}
+.alert-limit .icon {
+    color: #c89f0d;
+}
+.alert-limit a {
+    text-decoration: none;
+    color: inherit;
+}
