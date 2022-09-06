@@ -2559,4 +2559,5 @@ input.input-url-meta-checker:focus {
 .alert-limit a {
     text-decoration: none;
     color: inherit;
+    font-weight: bold;
 }
