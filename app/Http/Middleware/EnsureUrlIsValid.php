@@ -26,7 +26,7 @@ class EnsureUrlIsValid
             else 
                 return abort(404);
 
-            return redirect($segment1 . '/' . $segment2);
+            return redirect($segment1 . '/' . $segment2, 301);
         }
 
         return $next($request);
