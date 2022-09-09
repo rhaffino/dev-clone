@@ -18,7 +18,7 @@ class ManualAuth
         if (env('APP_ENV','local')=='development'){
             if (session()->exists('logged_in')){
                 if (session('logged_in')===false){
-                    return edirect('/login');
+                    return redirect('/login');
                 }else{
                     return $next($request);
                 }
