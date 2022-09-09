@@ -20,10 +20,26 @@
                             id="keywordTrackerDropdown"><span>@lang('v2_navbar.keyword_tracker')</span> <i
                                 class="bx bx-chevron-down"></i></button>
                     </li>
-                    <li class="nav-item">
-                        <button class="btn nav-link d-flex align-items-center gap-1"
-                            id="servicesDropdown"><span>@lang('v2_navbar.services')</span> <i
-                                class="bx bx-chevron-down"></i></button>
+                    <li class="nav-item dropdown ml-9">
+                        <a class="nav-link dropdown-toggle @yield('pricing-menu-active')" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                            <div class="d-flex align-items-center">
+                                @lang('layout.nav-pricing')
+                                <i class="bx bxs-down-arrow text-custom-softgrey icon-sm-xs ml-1"></i>
+                            </div>
+                        </a>
+                        <div class="dropdown-menu">
+                            {{-- <a class="dropdown-item" href="https://cmlabs.co/{{ $local }}-id/pricing/serp-tracker">@lang('layout.nav-pricing-serp')</a>
+                            <div class="dropdown-divider"></div> --}}
+                            <a class="dropdown-item" href="https://cmlabs.co/{{ $local }}-id/pricing/seo-consultant">@lang('layout.nav-pricing-seo')</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="https://cmlabs.co/{{ $local }}-id/pricing/content-writing">@lang('layout.nav-pricing-writing')</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="https://cmlabs.co/{{ $local }}-id/pricing/content-marketing">@lang('layout.nav-pricing-marketing')</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="https://cmlabs.co/{{ $local }}-id/pricing/backlink">@lang('layout.nav-pricing-backlink')</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="https://cmlabs.co/{{ $local }}-id/pricing/backlink-media-nasional">@lang('layout.nav-pricing-backlink-media-nasional')</a>
+                        </div>
                     </li>
                     <li class="nav-item">
                         <a href="/"

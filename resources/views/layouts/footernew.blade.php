@@ -168,7 +168,7 @@
                 <hr class="bg-custom-softgrey">
                 <div class="h6 footer-new-link mb-4"><a href="https://cmlabs.co/{{ $local }}-id/terms-and-condition">@lang('layout.footer-link-1')</a></div>
                 <div class="h6 footer-new-link mb-4"><a href="https://cmlabs.co/{{ $local }}-id/privacy-policy">@lang('layout.footer-link-2')</a></div>
-                <div class="h6 footer-new-link mb-4"><a href="https://cmlabs.co/{{ $local }}-id/disclaimer">@lang('layout.footer-link-3')</a></div>
+                {{-- <div class="h6 footer-new-link mb-4"><a href="https://cmlabs.co/{{ $local }}-id/disclaimer">@lang('layout.footer-link-3')</a></div> --}}
                 <div class="h6 footer-new-link mb-4"><a href="https://cmlabs.co/{{ $local }}-id/career">@lang('layout.footer-link-5')</a></div>
                 <div class="h6 footer-new-link mb-10"><a href="https://cmlabs.co/{{ $local }}-id/">@lang('layout.footer-link-4')</a></div>
                 <div class="h6 footer-new-copyright text-custom-grey font-weight-light">Copyright &copy;2021</div>

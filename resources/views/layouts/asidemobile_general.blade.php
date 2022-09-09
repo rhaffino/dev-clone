@@ -65,9 +65,9 @@
                             <li class="menu-item menu-item-parent" aria-haspopup="true">
                                 <span class="menu-link"><span class="menu-text">@lang('layout.nav-pricing')</span></span>
                             </li>
-                            <li class="menu-item menu-item-children" aria-haspopup="true">
+                            {{-- <li class="menu-item menu-item-children" aria-haspopup="true">
                                 <a href="https://cmlabs.co/{{ $local }}-id/pricing/serp-tracker" class="menu-link"><span class="menu-text">@lang('layout.nav-pricing-serp')</span></a>
-                            </li>
+                            </li> --}}
                             <li class="menu-item menu-item-children" aria-haspopup="true">
                                 <a href="https://cmlabs.co/{{ $local }}-id/pricing/seo-consultant" class="menu-link"><span class="menu-text">@lang('layout.nav-pricing-seo')</span></a>
                             </li>
