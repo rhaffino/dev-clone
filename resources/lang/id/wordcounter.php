@@ -19,7 +19,7 @@ return [
     "keyword-density" => "KATA",
     "textarea-placeholder" => "Ketik atau tempel teks Anda..",
     "highlight" => "Update versi terbaru ini menyediakan fitur autosave dan copy & adjust font. Dengan fitur autosave, anda tidak perlu khawatir jika tulisan hilang karena masalah teknis, sistem akan menyimpan tulisanmu dengan aman. Sedangkan fitur copy & adjust font akan memudahkan Anda untuk menyalin tulisan dan menyesuaikan ukurannya sesuai keinginan. Ini saatnya menulis dengan aman untuk hasil tulisan yang lebih baik.",
-    "desc-1"=>"Tingkatkan Tulisan Anda dengan Word Counter",
+    "desc-1"=>"What is cmlabs Word Counter? | SEO Tools - Guidelines",
     "desc-1-1"=>"Penulisan konten sudah menjadi rutinitas baik bagi penulis konten online maupun copywriter. Penulis online umumnya diharapkan mampu untuk memaksimalkan konten yang mereka tulis dengan sejumlah kata atau kalimat tertentu. Oleh karena itu, jumlah kata merupakan aspek yang sangat penting. Anda dapat mengintegrasikan penghitung kata cmlabs ini untuk menambah pengalaman menulis konten Anda!",
     "desc-2"=>"Tahapan Umum Menulis Konten",
     "desc-2-1"=>"Lalu, apa saja tahapan dalam mengembangkan menulis konten yang baik? Di sini kami memiliki tujuh fase umum yang bisa diterapkan dalam penulisan online. Namun, langkah-langkah ini harus disesuaikan terlebih dahulu dengan tujuan proyeknya. Proyek yang berbeda kemungkinan memiliki skema dan pendekatan yang berbeda pula. Ketujuh fase tersebut adalah sebagai berikut:",

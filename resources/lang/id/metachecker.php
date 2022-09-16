@@ -11,7 +11,7 @@ return [
     "tooltip-bot-off" => "mode BOT NONAKTIF",
     "tooltip-bot-on" => "mode BOT AKTIF",
     "highlight" => "Pada versi terbaru di Title & Length Checker ini kami menambahkan fitur bot dan preview untuk mobile & desktop. Fitur bot terbaru ini berfungsi untuk memeriksa meta title dan meta desc dari website manapun. Sedangkan fitur preview mobile & desktop, memberikan Anda keuntungan untuk mellihat bagaimana meta title dan meta desc Anda tayang di mesin pencari.",
-    "desc-1" => "Pentingnya Tool Ini",
+    "desc-1" => "What is cmlabs Title & Meta Checker?  | SEO Tools - Guidelines",
     "desc-1-1" => "SERP, yang merupakan singkatan dari Search Engine Results Page, merupakan media penting untuk hasil kegiatan SEO (Search Engine Optimization). Pekerjaan ini menuntut perhatian khusus dari setiap pemasar, dari level junior hingga senior. URL, Judul Halaman, dan Meta Definisi adalah tiga atribut terpenting untuk SERP.",
     "desc-2" => "Mengapa 3 atribut ini penting?",
     "desc-2-1" => "The simplest response is that on SERPs such as Google, Bing, and Yahoo, they appear. These 3 attributes will be seen by the user. Of course, this is the result of search engine bot crawling and indexing. Let us discuss this further in the following paragraphs.",

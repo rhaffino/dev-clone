@@ -11,7 +11,7 @@ return [
     "tooltip-bot-off" => "BOT mode is OFF",
     "tooltip-bot-on" => "BOT mode is ON",
     "highlight" => "In the latest version of the Title & Length Checker, we are adding a bot and preview feature for mobile & desktop. This newest bot feature allows you to check meta titles and meta desc from any website. Meanwhile, the mobile & desktop preview feature gives you the advantage of seeing how your meta title and meta desc appear on search engines.",
-    "desc-1" => "The Importance of This Tool",
+    "desc-1" => "What is cmlabs Title & Meta Checker?  | SEO Tools - Guidelines",
     "desc-1-1" => "SERP, which stands for Search Engine Results Page, is an important medium for the results of SEO (Search Engine Optimization) activities. This job demands special attention from every marketer, from junior to senior level. URL, Page Title, and Meta Definition are the three most critical attributes for SERP.",
     "desc-2" => "Why are these 3 attributes important?",
     "desc-2-1" => "The simplest response is that on SERPs such as Google, Bing, and Yahoo, they appear. These 3 attributes will be seen by the user. Of course, this is the result of search engine bot crawling and indexing. Let us discuss this further in the following paragraphs.",
