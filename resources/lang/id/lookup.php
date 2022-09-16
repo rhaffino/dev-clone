@@ -9,7 +9,7 @@ return [
     "lookup-btn-tooltip" => "Anda hanya dapat mencari 5 kali dalam 1 jam",
     "technologies" => "Teknologi",
     "result-none" => "Tidak ada teknologi yang terdeteksi, harap masukkan domain Anda di atas!",
-    "desc-1" => "Identifikasi teknologi di situs web",
+    "desc-1" => "Apa itu Technology Lookup dari cmlabs?",
     "desc-1-1" => "Temukan tumpukan teknologi dari situs web manapun. Buat daftar situs web yang menggunakan teknologi tertentu, dengan alamat email dan nomor telepon. Gunakan tool kami untuk menghasilkan prospek, analisis pasar, dan penelitian pesaing.",
     "desc-2" => "Cari tahu dengan apa situs web dibuat",
     "desc-2-1" => "Seketika mengungkapkan tumpukan teknologi dan detail kontak dari situs web apapun, seperti platform e-niaga, sistem manajemen konten, atau tool otomatisasi pemasaran.",

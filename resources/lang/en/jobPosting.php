@@ -63,7 +63,7 @@ return [
     "unitText-opt-2"=>"Week",
     "unitText-opt-3"=>"Month",
     "unitText-opt-4"=>"Year",
-    "desc-1"=>"How To Post Jobs On Google",
+    "desc-1"=>"What is JSON-LD Job Posting Generator?",
     "desc-1-1"=>"The first thing you need to understand is that you cannot post jobs to Google directly. The word \"job posting\" is therefore a little misleading. Instead, here's how everything else works: You post a job listing on your site and use Structured Data so Google (and other search engines) know that the page is about Job Posting.",
     "desc-1-2"=>"First of all, let's see how we can build a job post on our site:",
     "desc-2"=>"Write about a job",

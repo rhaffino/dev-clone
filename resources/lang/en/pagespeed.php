@@ -6,7 +6,7 @@ return [
     "title" => "PAGE SPEED TEST",
     "sub-title" => "Check Up Page Speed And Web Issues",
     "generate-btn" => "GENERATE",
-    "desc-1" => "About PageSpeed ​​Test",
+    "desc-1" => "What is cmlabs Page Speed Test?",
     "desc-1-1" => "CMLABS PageSpeed ​​tool reviews the overall performance of a web page on each mobile gadget and laptop, and provides hints on how the web page can be improved.",
     "desc-1-2" => "The PageSpeed ​​tool from CMLABS shows every laboratory and discipline record of a web page. Lab records are useful for debugging overall performance issues, because miles are accumulated in a managed environment. However, now it can no longer solve real world congestion. Field notes are useful for capturing correct, international consumer delight - but have a more restrained set of metrics.",
     "desc-2" => "Performance Ratings",

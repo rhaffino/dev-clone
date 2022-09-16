@@ -21,7 +21,7 @@ return [
     "label-directive" => "Pengarahan",
     "btn-add" => "TAMBAH DIRECTIVE",
     "highlight" => "Pada versi terbaru ini kami melengkapi tools Robot TXT Generator dengan fittur export dan fitur useragent. Fitur export akan memudahkan Anda dalam memeriksa kode di Google Rich Result. Sedangkan fitur useragent akan memungkinkan Anda untuk menambah lebih banyak perintah di Robot TXT Generator. Hal ini memudahkan Robot txt lebih spesifik memilah mana konten yang ingin Anda tutup dan mana yang ditampilkan.",
-    "desc-1" => "Apa itu Generator Robots.txt?",
+    "desc-1" => "Apa itu Robots.txt Generator dari cmlabs?",
     "desc-1-1" => "Standar robot exclusion, juga disebut protokol robot exclusion atau robot.txt, adalah tren yang digunakan oleh situs web untuk berbicara dengan web crawler dan robot web lainnya. Ini menentukan cara memberi tahu robot web tentang area mana di situs internet yang sekarang tidak boleh diproses atau dipindai.",
     "desc-1-2" => "Dalam praktiknya, file robots.txt adalah protokol yang memutuskan apakah agen pengguna tertentu (software crawler internet) diizinkan atau dilarang untuk merayapi elemen situs web. Perintah crawler ini dipastikan dengan \"melarang\" atau \"mengizinkan\" (atau semua) dari agen konsumen.",
     "desc-2" => "Mengapa Situs Anda Membutuhkan Robots.txt?",

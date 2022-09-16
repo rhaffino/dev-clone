@@ -10,7 +10,7 @@ return [
     "result-none" => "Tidak ada URL yang diuji, harap masukkan domain Anda di atas!",
     "status-codes" => "Kode Status",
     "date" => "Tanggal",
-    "desc-1" => "Apa yang Dilakukan tool Pemeriksa redirect?",
+    "desc-1" => "Apa Itu Redirect Chain Checker?",
     "desc-1-1" => "HTTP 301 dan 302 URL Redirect Checker memungkinkan pengguna untuk memeriksa apakah URL dialihkan. Pemeriksa redirect 301 akan menampilkan kode status HTTP dan URL tujuan.",
     "desc-1-2" => "Tool tersebut memeriksa pengalihan secara mendalam, hingga 5 redirect chain.",
     "desc-2" => "Beberapa fitur Redirect Checker:",

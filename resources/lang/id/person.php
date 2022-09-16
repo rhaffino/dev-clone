@@ -14,7 +14,7 @@ return [
     "placeholder-pictureUrl"=> "Ketik URL gambar Anda di sini..",
     "placeholder-jobTitle"=> "Ketik pekerjaan Anda di sini..",
     "placeholder-company"=> "Ketik perusahaan Anda di sini..",
-    "desc-1" => "Person",
+    "desc-1" => "Apa Itu JSON-LD Person Generator",
     "desc-1-1" => "Variasi jenis \"People\" JSON-LD tidak terbatas, jadi kami melakukan yang terbaik untuk menyertakan beberapa properti yang lebih populer. Berikut contoh lain dari JSON-LD Person. Seperti pada jenis data terstruktur lainnya, tidak ada hasil yang dijamin. Jika Anda berdedikasi pada upaya Anda dan memiliki otoritas yang memadai, Google dapat membuat panel Pengetahuan. Google mengambil kotak dan kutipan tanggapan dari berbagai outlet, termasuk situs data yang terorganisir (dan tidak terstruktur), Wikipedia, Wikidata, Freebase, dan sejumlah sumber pengetahuan publik lainnya.",
     "desc-1-2" => "Ada hasil lain yang mungkin atau mungkin tidak dihasilkan sebagai hasil dari markup skema JSON-LD untuk seseorang seperti tinggi badan, tanggal lahir, tempat lahir, dan lainnya. Variasi jenis \"People\" JSON-LD tidak terbatas, jadi kami melakukan yang terbaik untuk menyertakan beberapa properti yang lebih populer.",
     "desc-2" => "Hasil",

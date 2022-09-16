@@ -10,7 +10,7 @@ return [
     "no-test-result" => "No URL tested, please input your domain above!",
     "label-mobile-preview" => "Mobile Preview",
     "highlight" => "Currently, with the latest version of the Mobile-Friendly tool, users can use our additional feature, namely the Robot Progress Bar, and see a website that can be checked by mobile. The Robot Progress Bar is useful for seeing the percentage of crawled processes. While other additional features provide the advantage to preview more detail during the website builder.",
-    "desc-1" => "Mobile Friendly Test Tool",
+    "desc-1" => "What is cmlabs Mobile Friendly Test?",
     "desc-1-1" => "Having a mobile-friendly site is a fundamental part of your online brand awareness. In many countries, mobile traffic currently exceeds desktop traffic. If you haven't made your site well portable, you should. CMLABS's Mobile Friendly Test Tool is a quick and simple approach to testing whether the pages on your site are mobile friendly.",
     "desc-2" => "How to Use This Tool",
     "desc-2-1" => "The Mobile-Friendly Test is not at all difficult to use; basically type in the full URL of the site page you need to test. Each sidetrack the page runs will be followed by testing. The test usually takes a short time to run.",

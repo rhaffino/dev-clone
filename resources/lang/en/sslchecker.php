@@ -10,7 +10,7 @@ return [
     "desc-1" => "Check SSL on Your Site",
     "desc-1-1" => "Installing an SSL certificate can be a pain for the developer. You're not only tasked with getting the right type of certificate, the challenges come when you have to issue it, install it and then configure your Web server properly and migrate your entire website to HTTPS.",
     "desc-1-2" => "You can ease this burden and have an expert handle the SSL certificate installation. But if you're feeling challenged and want to try out the installation and configuration yourself, we're here to help.",
-    "desc-2" => "CMLABS SSL Checker Tool",
+    "desc-2" => "What is SSL Certificate Checker?",
     "desc-2-1" => "The SSL Checker tool from CMLABS can verify to check if the SSL certificate on your web server is installed properly and is trusted. SSL Checker will display the Common Name, server type, issuer, validity, certificate chain, along with additional certificate details.",
     "desc-2-2" => "By simply entering your host name or server IP address in the box below and clicking \"Check\", you can immediately view the details associated with your SSL certificate.",
     "desc-3" => "Importance of an SSL Certificate on Your Website",

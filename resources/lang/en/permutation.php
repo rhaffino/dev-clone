@@ -19,7 +19,7 @@ return [
     "clear-btn" => "Clear",
     "input-card-title" => "Word",
     "input-card-counter" => "words",
-    "desc-1" => "What is Keyword Permutation Tool?",
+    "desc-1" => "What is cmlabs Keyword Permutation?",
     "desc-1-1" => "Keyword permutation is a tool to permute keywords. The tool results several keyword combination in two to three words. The method is done by combining keywords that have been input on the keyword column. Those keywords on the column can be in the form of three-word sentences. In short time, the tool will do the keyword permutation.",
     "desc-1-2" => "The keyword permutation tool functions to create a group of keyword that are adjustable to a certain root and text format. On the dropdown menu, you can choose a specific match type for data and SEO needs. Then, copy the keyword combination and paste it on Adwords or any data processes that require keywords.",
     "desc-2" => "Features of the keyword permutation tool",

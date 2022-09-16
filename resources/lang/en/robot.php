@@ -21,7 +21,7 @@ return [
     "label-directive" => "Directive",
     "btn-add" => "ADD DIRECTIVE",
     "highlight" => "In this latest version, we develop the Robot TXT Generator tool with export features and useragent features. The export feature will make it easier for you to check the code on Google Rich Result. Meanwhile, the useragent feature will allow you to add more commands to the Robot TXT Generator. This makes it easier for the txt Robot to specifically sort out which content you want to cover and which ones are displayed.",
-    "desc-1" => "What is the Robots.txt Generator?",
+    "desc-1" => "What Is Robot.txt Generator from cmlabs?",
     "desc-1-1" => "The robot exclusion standard, also called the robot exclusion protocol or nearly robot.txt, is a trend used by websites to talk to web crawlers and other web robots. Popular determines how to notify web robots about which areas of the internet site should not now be processed or scanned.",
     "desc-1-2" => "In practice, the robots.txt file is a protocol that decides whether a certain user agent (internet crawling software) is allowed or prohibited to crawl website elements. This crawl command is ensured by \"prohibiting\" or \"permitting\" positive (or all) behavior of consumer agents.",
     "desc-2" => "Why Does Your Website Need Robots.txt?",

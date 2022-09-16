@@ -6,7 +6,7 @@ return [
     "title" => "PAGE SPEED TEST",
     "sub-title" => "Periksa Kecepatan Situs Dan Masalah Web",
     "generate-btn" => "HASILKAN",
-    "desc-1" => "Tentang PageSpeed Test",
+    "desc-1" => "Apa Itu Pagespeed Test cmlabs?",
     "desc-1-1" => "Tool PageSpeed cmlabs meninjau kinerja keseluruhan halaman web pada setiap gadget ponsel maupun laptop, dan memberikan petunjuk tentang bagaimana laman web dapat ditingkatkan.",
     "desc-1-2" => "Tool PageSpeed dari cmlabs menunjukkan setiap isi lab dan catatan dari laman website. Catatan lab berguna untuk men-debug masalah kinerja secara keseluruhan, karena data dikumpulkan dari lingkungan yang dikelola. Namun, sekarang ini tidak bisa lagi menyelesaikan permasalahan pada dunia nyata. Catatan lapangan ini tidak hanya berguna untuk menangkap kesenangan konsumen internasional yang benar, tetapi memiliki seperangkat metrik yang lebih terkendali.",
     "desc-2" => "Peringkat Kinerja",

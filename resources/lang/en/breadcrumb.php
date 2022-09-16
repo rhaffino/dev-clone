@@ -10,7 +10,7 @@ return [
     "placeholder-pageName" => "Type your page name here..",
     "placeholder-url" => "Type your page URL here..",
     "highlight" => "In the latest version of JSON LD, we added Breadcrumb Schema Generator. This tool is useful for allowing users to grab clicks from a page that is ranked above it if you have breadcrumb markup and competitors don't. Now users can add schemas. This scheme serves to test your implementation at page or code level with Google's Rich Snippet Testing Tool and ask it to crawl the modified pages of your website. With this tool, you can see your CTR and traffic levels soar.",
-    "desc-1" => "What Is a Breadcrumb Trace?",
+    "desc-1" => "What is JSON-LD Breadcrumb Schema Generator by cmlabs?",
     "desc-1-1" => "You may already know this, but link tracing is applied to websites to assist users in navigating and finding their way around the site using the links at the top of the page, indicating your current position in the site hierarchy.",
     "desc-1-2" => "You can see breadcrumbs in action on every page throughout this website. If you want to navigate back to the main blog index page, simply click \"Blog\". If you want to go to your home page and find non-blogging content related to technical SEO, click \"home\" (but wait until you finish reading the rest of this post first).",
     "desc-1-3" => "They are very useful, for example, on e-commerce sites where if you go to a product page by clicking on a search result, you can easily navigate back up through the relevant categories and subcategories to find content similar to your page. landed on.",

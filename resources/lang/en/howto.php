@@ -26,7 +26,7 @@ return [
     "placeholder-imageStep" => "Type image URL here..",
     "placeholder-nameStep" => "Type name here..",
     "placeholder-urlStep" => "Type URL here..",
-    "desc-1" => "HowTo",
+    "desc-1" => "What is JSON-LD How-To Generator?",
     "desc-1-1" => "Use HowTo structured data to explicitly tell Google that your content is a guide. How to guide users through a series of steps to successfully complete a task, and can display videos, images, and text. For instance, \"How to tie a tie\" or \"How to tile a backsplash in the kitchen\". If each step in the instructions can be read in order, that's a good sign that the content will benefit from the organized data of HowTo. HowTo structured data is appropriate when hints are the main focus of the page.",
     "desc-1-2" => "Correctly marked up hint pages may be eligible for rich results on Search and Actions on the Google Assistant, which can help your site reach the right users.",
     "desc-1-3" => "A How-to Action for Smart Displays can be automatically created by adding structured HowTo data to your website. If you want to provide your users with the best visual experience on this device, including the image specified in the markup, fill in the interest form.",

@@ -14,7 +14,7 @@ return [
     "placeholder-pictureUrl"=> "Type your image URL here..",
     "placeholder-jobTitle"=> "Type your job title here..",
     "placeholder-company"=> "Type your company here..",
-    "desc-1" => "Person",
+    "desc-1" => "What is JSON-LD Person Generator?",
     "desc-1-1" => "JSON LD Person Schema Generator is a tool that helps you to create JSON-LD for individuals - yourself, alive, dead, or fictional. Embed JSON created in HTML to improve the SEO of your website. The variety of JSON-LD \"People\" types is endless so you can check out the repo here which has some more awesome examples of the JSON-LD type. As with any structured data type, no results are guaranteed. If you are dedicated to your efforts and have sufficient authority, Google can create a Knowledge panel.",
     "desc-1-2" => "Google retrieves response boxes and excerpts from a range of outlets, including organized (and unstructured) data websites, Wikipedia, Wikidata, Freebase, and a host of other sources of public knowledge. There are other comes about which will or may not be created as a result of the JSON-LD construction markup for a individual such as height, date of birth, place of birth, and more.",
     "desc-2" => "Result",

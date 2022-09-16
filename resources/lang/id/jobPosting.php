@@ -63,7 +63,7 @@ return [
     "unitText-opt-2"=>"Minggu",
     "unitText-opt-3"=>"Bulan",
     "unitText-opt-4"=>"Tahun",
-    "desc-1"=>"Cara Memposting Pekerjaan di Google",
+    "desc-1"=>"Apa Itu JSON-LD Job Posting Schema Generator",
     "desc-1-1"=>"Hal pertama yang perlu Anda pahami adalah Anda tidak dapat memposting pekerjaan ke Google secara langsung. Oleh karena itu, kata \"job posting\" agak menyesatkan. Berikut cara kerja lainnya: Anda memposting daftar pekerjaan di situs Anda dan menggunakan Data Terstruktur sehingga Google (dan mesin telusur lainnya) tahu bahwa halaman tersebut berisi Lowongan Pekerjaan.",
     "desc-1-2"=>"Pertama-tama, mari kita lihat bagaimana kita dapat membuat postingan pekerjaan di situs kita:",
     "desc-2"=>"Menulis tentang suatu pekerjaan",

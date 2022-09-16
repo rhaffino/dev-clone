@@ -19,7 +19,7 @@ return [
     "desc-2-list-2" => "You are targeting different geographical regions within the same language",
     "desc-3" => "What happens if the hreflang goes wrong",
     "desc-3-1" => "Since hreflang gives Google a signal about what page it should serve, then an incorrect hreflang can lead to incorrect results for users who search for your product or services. Therefore, this tool is here to help you regularly check your hreflang tags to make sure it is in the right status.",
-    "desc-4" => "Why is it important to check your hreflang tags",
+    "desc-4" => "What is Hreflang Checker?",
     "desc-4-1" => "hreflang implementation is a complex process, however, some mistakes might still exist. That is why it is important to regularly check it using hreflang checker to immediately spot the issues and fix them faster.",
     "desc-5" => "How do you use this tool",
     "desc-5-1" => "To use cmlabs hreflang checker is very easy. You only need to copy your URL on the available field and then the robot will check that URL in no time. You can see the result including the list of URLs, the hreflang tags, the language used, and the target region.",

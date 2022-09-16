@@ -10,7 +10,7 @@ return [
     "desc-1" => "Periksa SSL di Situs Anda",
     "desc-1-1" => "Memasang sertifikat SSL bisa menjadi hal yang merepotkan developer. Anda tidak hanya ditugaskan untuk mendapatkan jenis sertifikat yang tepat, tantangan lebih lanjut datang ketika Anda harus mempublikasi, menginstalnya dan kemudian mengkonfigurasi server Web Anda dengan benar dan migrasi seluruh situs web Anda ke HTTPS.",
     "desc-1-2" => "Anda dapat meringankan beban ini dan meminta seorang ahli menangani pemasangan sertifikat SSL. Tetapi jika Anda merasa tertantang dan ingin mencoba sendiri penginstalan dan konfigurasi, kami siap membantu.",
-    "desc-2" => "Tool Pemeriksa SSL CMLABS",
+    "desc-2" => "Apa Itu SSL Certificate Checker?",
     "desc-2-1" => "Tool Pemeriksa SSL dari cmlabs dapat memverifikasi untuk memeriksa apakah sertifikat SSL di server web Anda dipasang dengan benar dan terpercaya. SSL Checker akan menampilkan Nama Umum, jenis server, publikasi, validitas, rantai sertifikat, bersama dengan detail sertifikat tambahan.",
     "desc-2-2" => "Dengan hanya memasukkan nama host atau alamat IP server Anda di kotak di bawah ini dan mengklik \"Periksa\", Anda dapat langsung melihat detail yang terkait dengan sertifikat SSL.",
     "desc-3" => "Pentingnya Sertifikat SSL di Situs Web Anda",

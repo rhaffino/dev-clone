@@ -9,7 +9,7 @@ return [
     "label-answer" => "Jawaban",
     "placeholder-question" => "Ketik pertanyaan Anda di sini..",
     "placeholder-answer" => "Ketik jawaban Anda di sini..",
-    "desc-1" => "Apa itu Skema FAQ?",
+    "desc-1" => "Apa itu JSON- LD FAQ Schema Generator?",
     "desc-1-1" => "Pertanyaan yang Sering Diajukan (FAQ) adalah halaman yang berisi pertanyaan dan jawaban terkait topik, produk, dan layanan perusahaan tertentu. Menariknya, mesin pencari seperti Google mendukung tampilan FAQ agar situs web Anda muncul di SERPs. Tentunya Anda harus mengikuti prosedur dan ketentuan yang telah dibuat.",
     "desc-1-2" => "Sekarang, aktivitas Anda di SEO akan lebih mudah dengan tool cmlabs: FAQ Schema JSON Generator. Anda dapat mengizinkan rich snippets di SERP dengan prosedur sederhana yang bahkan tidak memerlukan pengetahuan pengkodean bahasa pemrograman tertentu.",
     "desc-2" => "Mengapa Situs Anda Membutuhkan Skema FAQ?",

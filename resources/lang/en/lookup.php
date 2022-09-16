@@ -9,7 +9,7 @@ return [
     "lookup-btn-tooltip" => "You can only search 5 times in 1 hour",
     "technologies" => "Technologies",
     "result-none" => "No technology detected, please input your domain above!",
-    "desc-1" => "Technology identification on the website",
+    "desc-1" => "What Is Technology Lookup from cmlabs?",
     "desc-1-1" => "Find tech stacks from any website. List the websites that use a particular technology, with email addresses and phone numbers. Use our tools for lead generation, market analysis and competitor research.",
     "desc-2" => "Find out what websites are built with",
     "desc-2-1" => "Instantly reveals the tech stack and contact details of any website, such as an e-commerce platform, content management system, or marketing automation tool.",

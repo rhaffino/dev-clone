@@ -59,7 +59,7 @@ return [
     "condition-opt-3" => "Diperbaharui",
     "condition-opt-4" => "Rusak",
     "condition-opt-5" => "Pre-order",
-    "desc-1" => "Produk",
+    "desc-1" => "Apa itu JSON-LD Product Generator",
     "desc-1-1" => "Tambahkan markup ke halaman produk Anda sehingga Google dapat memberikan informasi produk yang mendetail di hasil rich search result - termasuk Gambar Google. Pengguna dapat melihat harga, ketersediaan, dan ulasan peringkat langsung di hasil Penelusuran.",
     "desc-1-2" => "Saat mencari hal yang akan dibeli di Google Penelusuran atau foto yang menyertakan barang yang Anda jual, penggunaan markup untuk memungkinkan hasil produk yang kaya membantu Anda menarik calon pelanggan. Pertahankan informasi yang akurat dan segar tentang produk Anda, sehingga pelanggan Anda menemukan item yang relevan dan terkini yang mereka cari.",
     "desc-1-3" => "Halaman ini menjelaskan cara memarkup informasi produk Anda sehingga Google Penelusuran dapat menampilkan rich result di Google Penelusuran. Markup produk juga membuat produk Anda memenuhi syarat untuk ditampilkan dengan lencana pada Gambar Google, yang dapat mendorong lebih banyak pengguna untuk mengklik konten Anda.",

@@ -10,7 +10,7 @@ return [
     "no-test-result" => "Tidak ada URL yang diuji, harap masukkan domain Anda di atas!",
     "label-mobile-preview" => "Pratinjau Seluler",
     "highlight" => "Saat ini dengan versi terbaru dari tool Mobile Friendly, pengguna bisa menggunakan fitur tambahan kami yaitu Robot Progress Bar dan melihat tampilan website yang dapat dicek secara mobile. Robot Progress Bar berguna untuk melihat persentase proses crawl yang dilakukan. Sedangkan fitur tambahan lainnya memberikan keuntungan untuk melakukan preview lebih detail selama pembuat website.",
-    "desc-1" => "Tool Mobile Friendly Test",
+    "desc-1" => "Apa itu Mobile Friendly Test cmlabs?",
     "desc-1-1" => "Memiliki situs yang sesuai untuk seluler adalah bagian mendasar dari online brand awareness Anda. Di banyak negara, lalu lintas seluler saat ini melebihi lalu lintas desktop. Jika Anda belum menjadikan situs Anda portabel dengan baik, Anda harus melakukannya. tool Mobile Friendly Test milik CMLABS adalah pendekatan cepat dan sederhana untuk menguji apakah laman di situs Anda sudah mobile-friendly.",
     "desc-2" => "Cara Menggunakan Tool Ini",
     "desc-2-1" => "Mobile Friendly Test sama sekali tidak sulit untuk digunakan; Anda hanya perlu mengetik URL lengkap halaman situs yang perlu Anda tes. Setiap sidetrack yang dijalankan halaman akan diikuti dengan pengujian. Tes biasanya membutuhkan waktu singkat untuk dijalankan.",

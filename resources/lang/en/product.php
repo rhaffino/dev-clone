@@ -59,7 +59,7 @@ return [
     "condition-opt-3" => "Refurbished",
     "condition-opt-4" => "Damaged",
     "condition-opt-5" => "Pre-order",
-    "desc-1" => "Product",
+    "desc-1" => "What is JSON-LD Product Generator?",
     "desc-1-1" => "Add markup to your product pages so that Google can provide detailed product information in rich Search results - including Google Images. Users can see prices, availability, and ranking reviews directly in Search results.",
     "desc-1-2" => "When looking for things to purchase on Google Search or photos that include the goods you sell, the use of markup to allow rich product results helps you to draw potential customers. Maintain accurate and fresh information on your products, so that your customers find the relevant and current items they are looking for.",
     "desc-1-3" => "This page explains how to markup your product information so that Google Search can display rich results on Google Search. Product markup also qualifies your products for display with a badge on Google Images, which can encourage more users to click on your content.",

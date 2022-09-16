@@ -9,7 +9,7 @@ return [
     "label-answer" => "Answer",
     "placeholder-question" => "Type your question here..",
     "placeholder-answer" => "Type your answer here..",
-    "desc-1" => "What is the Schema FAQ?",
+    "desc-1" => "What is JSON L-D FAQ Schema Generator?",
     "desc-1-1" => "Frequently Asked Questions (FAQ) is a page that contains questions and answers related to specific company topics, products and services. Interestingly, search engines like Google support an FAQ display for your website to appear on the SERPs. Of course you have to follow the procedures and conditions that have been made.",
     "desc-1-2" => "Now, your activity in SEO will be easier with the cmlabs tool: FAQ Schema JSON Generator. You can allow rich snippets in the SERP with a simple procedure that doesn't even require coding knowledge of a particular programming language.",
     "desc-2" => "Why Does Your Site Need a Schema FAQ?",

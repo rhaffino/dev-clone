@@ -26,7 +26,7 @@ return [
     "placeholder-imageStep" => "Ketik URL gambar di sini..",
     "placeholder-nameStep" => "Ketik nama di sini..",
     "placeholder-urlStep" => "Ketik URL di sini..",
-    "desc-1" => "HowTo",
+    "desc-1" => "Apa Itu JSON-LD How-To Generator?",
     "desc-1-1" => "Gunakan data terstruktur HowTo untuk memberitahu Google secara eksplisit bahwa konten Anda adalah panduan. Cara memandu pengguna melalui serangkaian langkah agar berhasil menyelesaikan tugas, dan dapat menampilkan video, gambar, dan teks. Misalnya, \"Cara mengikat dasi\" atau \"Cara memasang ubin backsplash di dapur\". Jika setiap langkah dalam instruksi dapat dibaca secara berurutan, itu pertanda baik bahwa konten Anda akan mendapat manfaat dari data HowTo yang terorganisir. Data terstruktur HowTo cocok jika petunjuk Anda adalah fokus utama halaman.",
     "desc-1-2" => "Halaman petunjuk yang diberi markup dengan benar mungkin memenuhi syarat untuk Rich Snippet di Penelusuran dan Tindakan di Asisten Google, yang dapat membantu situs Anda menjangkau pengguna yang tepat.",
     "desc-1-3" => "Tindakan Cara Kerja untuk Smart Display dapat dibuat secara otomatis dengan menambahkan data HowTo terstruktur ke situs Anda. Jika Anda ingin memberikan pengalaman visual terbaik kepada pengguna di perangkat ini, termasuk gambar yang ditentukan di markup, isi di formulir minat.",

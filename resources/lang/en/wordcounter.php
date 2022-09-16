@@ -18,7 +18,7 @@ return[
     "keyword-density" => "WORDS",
     "textarea-placeholder" => "Type or paste your text..",
     "highlight" => "This latest version update provides autosave and copy & adjust font features. With the autosave feature, you don't have to worry if your writing is lost due to technical problems, the system will store your writing safely. Meanwhile, the copy & adjust font feature will make it easier for you to copy text and adjust the size as desired. It's time to write safely for better writing results.",
-    "desc-1"=>"Improve Your Writing with a Word Counter",
+    "desc-1"=>"What is cmlabs Word Counter? | SEO Tools - Guidelines",
     "desc-1-1"=>"Content writing has become a routine for both online content writers and copywriters. Online writers are generally expected to maximize their written content with a certain number of words or sentences. Therefore, the number of words is a very important aspect. Accommodates this cmlabs word counter to add up your content writing experience!",
     "desc-2"=>"General Phases In Content Writing",
     "desc-2-1"=>"Then, what are the stages in developing good content writing? Here we have seven general phases that can be applied to online writing. However, these steps must first be adapted to the project's objectives as different projects may come with different schemes and approaches as well. The seven phases are as follows:",

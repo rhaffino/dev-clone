@@ -10,7 +10,7 @@ return [
     "result-none" => "No URL tested, please input your domain above!",
     "status-codes" => "Status Codes",
     "date" => "Date",
-    "desc-1" => "What Does the Redirect Checker Tool Do?",
+    "desc-1" => "What is Redirect Chain Checker?",
     "desc-1-1" => "HTTP 301 and 302 URL Redirect Checker enables a user to check if a URL is redirected. The 301 redirect checker will display the HTTP status code and the destination URL.",
     "desc-1-2" => "The tool checks redirection in depth, up to 5 redirect chain.",
     "desc-2" => "Several features of the Redirect Checker:",
