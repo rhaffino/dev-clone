@@ -196,12 +196,8 @@ id/hreflang-checker
                     <h2 class="text-black">@lang('hreflang.desc-2')</h2>
                     <p class="text-black">@lang('hreflang.desc-2-1')</p>
                     <ul>
-                        <li>
-                            <p class="text-black">@lang('hreflang.desc-2-list-1')</p>
-                        </li>
-                        <li>
-                            <p class="text-black">@lang('hreflang.desc-2-list-2')</p>
-                        </li>
+                        <li><p class="text-black">@lang('hreflang.desc-2-1-1')</p></li>
+                        <li><p class="text-black">@lang('hreflang.desc-2-1-2')</p></li>
                     </ul>
                 </div>
                 <div class="d-none" id="description-tab-3">
@@ -215,6 +211,12 @@ id/hreflang-checker
                 <div class="d-none" id="description-tab-5">
                     <h2 class="text-black">@lang('hreflang.desc-5')</h2>
                     <p class="text-black">@lang('hreflang.desc-5-1')</p>
+                    <ul>
+                        <li><p class="text-black">@lang('hreflang.desc-5-1-1')</p></li>
+                        <li><p class="text-black">@lang('hreflang.desc-5-1-2')</p></li>
+                        <li><p class="text-black">@lang('hreflang.desc-5-1-3')</p></li>
+                        <li><p class="text-black">@lang('hreflang.desc-5-1-4')</p></li>
+                    </ul>
                     <p class="text-black">@lang('hreflang.desc-5-2')</p>
                 </div>
             </div>

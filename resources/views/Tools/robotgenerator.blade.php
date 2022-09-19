@@ -180,20 +180,19 @@
                 <div class="" id="description-tab-1">
                     <h2>@lang('robot.desc-1')</h2>
                     <p>@lang('robot.desc-1-1')</p>
-                    <p>@lang('robot.desc-1-2')</p>
                 </div>
                 <div class="d-none" id="description-tab-2">
                     <h2>@lang('robot.desc-2')</h2>
                     <p>@lang('robot.desc-2-1')</p>
-                    <p>@lang('robot.desc-2-2')</p>
                 </div>
                 <div class="d-none" id="description-tab-3">
                     <h2>@lang('robot.desc-3')</h2>
                     <p>@lang('robot.desc-3-1')</p>
-                    <p>@lang('robot.desc-3-2')</p>
-                    <p>@lang('robot.desc-3-3')</p>
-                    <p>@lang('robot.desc-3-4')</p>
-                    <p>@lang('robot.desc-3-5')</p>
+                    <ul>
+                        <li>@lang('robot.desc-3-1-1')</li>
+                        <li>@lang('robot.desc-3-1-2')</li>
+                        <li>@lang('robot.desc-3-1-3')</li>
+                    </ul>
                 </div>
                 <div class="d-none" id="description-tab-4">
                     <h2>@lang('robot.desc-4')</h2>
@@ -203,13 +202,46 @@
                 <div class="d-none" id="description-tab-5">
                     <h2>@lang('robot.desc-5')</h2>
                     <p>@lang('robot.desc-5-1')</p>
-                    <ol>
-                        <li>@lang('robot.desc-5-1-1')</li>
-                        <li>@lang('robot.desc-5-1-2')</li>
-                        <li>@lang('robot.desc-5-1-3')</li>
-                        <li>@lang('robot.desc-5-1-4')</li>
-                    </ol>
-                    <p>@lang('robot.desc-5-2')</p>
+                    <h3 class="sub-titles">@lang('robot.desc-5-1-1')</h3>
+                    <p>@lang('robot.desc-5-1-2')</p>
+                    <p>@lang('robot.desc-5-1-3')</p>
+                    <h3 class="sub-titles">@lang('robot.desc-5-2-1')</h3>
+                    <p>@lang('robot.desc-5-2-2')</p>
+                    <h3 class="sub-titles">@lang('robot.desc-5-3-1')</h3>
+                    <p>@lang('robot.desc-5-3-2')</p>
+                    <h3 class="sub-titles">@lang('robot.desc-5-4-1')</h3>
+                    <p>@lang('robot.desc-5-4-2')</p>
+                    <h3 class="sub-titles">@lang('robot.desc-5-5-1')</h3>
+                    <p>@lang('robot.desc-5-5-2')</p>
+                </div>
+                <div class="d-none" id="description-tab-6">
+                    <h2>@lang('robot.desc-6')</h2>
+                    <p>@lang('robot.desc-6-1')</p>
+                    <pre class="language-html mb-4">
+                        <code class="language-html">
+                        User-agent: *
+                         Allow: /
+
+                         Sitemap: https://example.com/sitemap.xml
+
+                         User-agent: Googlebot
+                         Disallow: /nogooglebot
+
+                        </code>
+                      </pre>
+                    <p>@lang('robot.desc-6-2')</p>
+                    <p>@lang('robot.desc-6-3')</p>
+                </div>
+                <div class="d-none" id="description-tab-7">
+                    <h2>@lang('robot.desc-7')</h2>
+                    <p>@lang('robot.desc-7-1')</p>
+                    <h3 class="sub-titles">@lang('robot.desc-7-1-1')</h3>
+                    <p>@lang('robot.desc-7-1-2')</p>
+                    <h3 class="sub-titles">@lang('robot.desc-7-2-1')</h3>
+                    <p>@lang('robot.desc-7-2-2')</p>
+                    <h3 class="sub-titles">@lang('robot.desc-7-3-1')</h3>
+                    <p>@lang('robot.desc-7-3-2')</p>
+                    <p>@lang('robot.desc-7-3-3')</p>
                 </div>
             </div>
             <div class="col-md-3">
@@ -242,6 +274,18 @@
                         <span class="label label-lg label-tools-description" id="nav-label-tab-5">5</span>
                     </div>
                     <a class="">@lang('robot.desc-5')</a>
+                </div>
+                <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-6">
+                    <div class="mr-2" style="width:24px !important; height: 24px !important;">
+                        <span class="label label-lg label-tools-description" id="nav-label-tab-6">6</span>
+                    </div>
+                    <a class="">@lang('robot.desc-6')</a>
+                </div>
+                <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-7">
+                    <div class="mr-2" style="width:24px !important; height: 24px !important;">
+                        <span class="label label-lg label-tools-description" id="nav-label-tab-7">7</span>
+                    </div>
+                    <a class="">@lang('robot.desc-7')</a>
                 </div>
             </div>
         </div>

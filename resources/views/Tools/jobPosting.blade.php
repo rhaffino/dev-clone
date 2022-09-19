@@ -335,19 +335,26 @@ id/json-ld-jobPosting-schema-generator
             <div class="col-md-9">
                 <div class="" id="description-tab-1">
                     <h2>@lang('jobPosting.desc-1')</h2>
-                    <img class="mb-4" src="{{asset('/media/images/jobPosting-instruction-1.png')}}" alt="jobPosting-instruction-1" width="400">
                     <p>@lang('jobPosting.desc-1-1')</p>
                     <p>@lang('jobPosting.desc-1-2')</p>
+                    <p>@lang('jobPosting.desc-1-3')</p>
                 </div>
                 <div class="d-none" id="description-tab-2">
                     <h2>@lang('jobPosting.desc-2')</h2>
                     <p>@lang('jobPosting.desc-2-1')</p>
                     <p>@lang('jobPosting.desc-2-2')</p>
+                    <p>@lang('jobPosting.desc-2-3')</p>
                 </div>
                 <div class="d-none" id="description-tab-3">
                     <h2>@lang('jobPosting.desc-3')</h2>
                     <p>@lang('jobPosting.desc-3-1')</p>
+                    <img class="mb-4" src="{{asset('/media/images/jobposting-1.png')}}" alt="jobposting-1" width="60%">
                     <p>@lang('jobPosting.desc-3-2')</p>
+                    <p>@lang('jobPosting.desc-3-3')</p>
+                </div>
+                <div class="d-none" id="description-tab-4">
+                    <h2>@lang('jobPosting.desc-4')</h2>
+                    <p>@lang('jobPosting.desc-4-1')</p>
                     <pre class="language-html mb-4">
                         <code class="language-html">
                             &lt;script type="application/ld+json"&gt;
@@ -395,15 +402,10 @@ id/json-ld-jobPosting-schema-generator
                                     "educationRequirements": "Bachelor Degree",
                                     "experienceRequirements": "min. 4 years experience"
                                 }
-                            &lt;/script&gt;
+                             &lt;/script&gt;
                         </code>
                     </pre>
-                </div>
-                <div class="d-none" id="description-tab-4">
-                    <h2>@lang('jobPosting.desc-4')</h2>
-                    <p>@lang('jobPosting.desc-4-1')</p>
                     <p>@lang('jobPosting.desc-4-2')</p>
-                    <img class="mb-4" src="{{asset('/media/images/jobPosting-instruction-2.png')}}" alt="jobPosting-instruction-2" width="500">
                 </div>
             </div>
             <div class="col-md-3">
