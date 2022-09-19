@@ -392,7 +392,7 @@
                     <div class="d-none" id="description-tab-3">
                         <h2>@lang('metachecker.desc-3')</h2>
                         <p>@lang('metachecker.desc-3-1')</p>
-                        <h3>@lang('metachecker.desc-3-2')</h3>
+                        <p>@lang('metachecker.desc-3-2')</p>
                         <ul>
                             <li>@lang('metachecker.desc-3-1-1')</li>
                             <li>@lang('metachecker.desc-3-1-2')</li>
