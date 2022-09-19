@@ -419,7 +419,7 @@ id/pagespeed-test
                 <div class="d-none" id="description-tab-2">
                     <h2 class="text-black">@lang('pagespeed.desc-2')</h2>
                     <p class="text-black">@lang('pagespeed.desc-2-1')</p>
-                    <h2 class="sub-titles" class="text-black">@lang('pagespeed.desc-2-1-1')</h2>
+                    <h4 class="sub-titles" class="text-black">@lang('pagespeed.desc-2-1-1')</h4>
                     <p class="text-black">@lang('pagespeed.desc-2-1-2')</p>
                     <p class="text-black">@lang('pagespeed.desc-2-1-2-1')</p>
                     <p class="text-black">@lang('pagespeed.desc-2-1-2-2')</p>
@@ -434,30 +434,30 @@ id/pagespeed-test
                     <p class="text-black">@lang('pagespeed.desc-2-1-4-2')</p>
                     <p class="text-black">@lang('pagespeed.desc-2-1-5-1')</p>
                     <p class="text-black">@lang('pagespeed.desc-2-1-5-2')</p>
-                    <h2 class="sub-titles">@lang('pagespeed.desc-2-2-1')</h2>
+                    <h4 class="sub-titles">@lang('pagespeed.desc-2-2-1')</h4>
                     <p class="text-black">@lang('pagespeed.desc-2-2-2')</p>
-                    <h2 class="sub-titles">@lang('pagespeed.desc-2-3-1')</h2>
+                    <h4 class="sub-titles">@lang('pagespeed.desc-2-3-1')</h4>
                     <p class="text-black">@lang('pagespeed.desc-2-3-2')</p>
-                    <h2 class="sub-titles">@lang('pagespeed.desc-2-4-1')</h2>
+                    <h4 class="sub-titles">@lang('pagespeed.desc-2-4-1')</h4>
                     <p class="text-black">@lang('pagespeed.desc-2-4-2')</p>
                     <ul>
                         <li>@lang('pagespeed.desc-2-4-1-1')</li>
                         <li>@lang('pagespeed.desc-2-4-1-2')</li>
                         <li>@lang('pagespeed.desc-2-4-1-3')</li>
                     </ul>
-                    <h2 class="sub-titles">@lang('pagespeed.desc-2-5-1')</h2>
+                    <h4 class="sub-titles">@lang('pagespeed.desc-2-5-1')</h4>
                     <p class="text-black">@lang('pagespeed.desc-2-5-2')</p>
                 </div>
                 <div class="d-none" id="description-tab-3">
                     <h2 class="text-black">@lang('pagespeed.desc-3')</h2>
                     <p class="text-black">@lang('pagespeed.desc-3-1')</p>
                     <p class="text-black">@lang('pagespeed.desc-3-2')</p>
-                    <h2 class="sub-titles">@lang('pagespeed.desc-3-3-1')</h2>
+                    <h4 class="sub-titles">@lang('pagespeed.desc-3-3-1')</h4>
                     <p class="text-black">@lang('pagespeed.desc-3-3-2')</p>
-                    <h2 class="sub-titles">@lang('pagespeed.desc-3-4-1')</h2>
+                    <h4 class="sub-titles">@lang('pagespeed.desc-3-4-1')</h4>
                     <p class="text-black">@lang('pagespeed.desc-3-4-2')</p>
                     <p class="text-black">@lang('pagespeed.desc-3-4-3')</p>
-                    <h2 class="sub-titles">@lang('pagespeed.desc-3-5-1')</h2>
+                    <h4 class="sub-titles">@lang('pagespeed.desc-3-5-1')</h4>
                     <p class="text-black">@lang('pagespeed.desc-3-5-2')</p>
                 </div>
             </div>

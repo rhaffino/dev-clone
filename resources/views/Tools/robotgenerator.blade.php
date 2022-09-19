@@ -202,16 +202,16 @@
                 <div class="d-none" id="description-tab-5">
                     <h2>@lang('robot.desc-5')</h2>
                     <p>@lang('robot.desc-5-1')</p>
-                    <h3 class="sub-titles">@lang('robot.desc-5-1-1')</h3>
+                    <h4 class="sub-titles">@lang('robot.desc-5-1-1')</h4>
                     <p>@lang('robot.desc-5-1-2')</p>
                     <p>@lang('robot.desc-5-1-3')</p>
-                    <h3 class="sub-titles">@lang('robot.desc-5-2-1')</h3>
+                    <h4 class="sub-titles">@lang('robot.desc-5-2-1')</h4>
                     <p>@lang('robot.desc-5-2-2')</p>
-                    <h3 class="sub-titles">@lang('robot.desc-5-3-1')</h3>
+                    <h4 class="sub-titles">@lang('robot.desc-5-3-1')</h4>
                     <p>@lang('robot.desc-5-3-2')</p>
-                    <h3 class="sub-titles">@lang('robot.desc-5-4-1')</h3>
+                    <h4 class="sub-titles">@lang('robot.desc-5-4-1')</h4>
                     <p>@lang('robot.desc-5-4-2')</p>
-                    <h3 class="sub-titles">@lang('robot.desc-5-5-1')</h3>
+                    <h4 class="sub-titles">@lang('robot.desc-5-5-1')</h4>
                     <p>@lang('robot.desc-5-5-2')</p>
                 </div>
                 <div class="d-none" id="description-tab-6">
@@ -235,11 +235,11 @@
                 <div class="d-none" id="description-tab-7">
                     <h2>@lang('robot.desc-7')</h2>
                     <p>@lang('robot.desc-7-1')</p>
-                    <h3 class="sub-titles">@lang('robot.desc-7-1-1')</h3>
+                    <h4 class="sub-titles">@lang('robot.desc-7-1-1')</h4>
                     <p>@lang('robot.desc-7-1-2')</p>
-                    <h3 class="sub-titles">@lang('robot.desc-7-2-1')</h3>
+                    <h4 class="sub-titles">@lang('robot.desc-7-2-1')</h4>
                     <p>@lang('robot.desc-7-2-2')</p>
-                    <h3 class="sub-titles">@lang('robot.desc-7-3-1')</h3>
+                    <h4 class="sub-titles">@lang('robot.desc-7-3-1')</h4>
                     <p>@lang('robot.desc-7-3-2')</p>
                     <p>@lang('robot.desc-7-3-3')</p>
                 </div>
