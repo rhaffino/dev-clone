@@ -166,30 +166,47 @@ id/sitemap-generator
                 <div class="" id="description-tab-1">
                     <h2>@lang('sitemap.desc-1')</h2>
                     <p>@lang('sitemap.desc-1-1')</p>
+                    <p>@lang('sitemap.desc-1-2')</p>
                 </div>
                 <div class="d-none" id="description-tab-2">
                     <h2>@lang('sitemap.desc-2')</h2>
                     <p>@lang('sitemap.desc-2-1')</p>
+                    <ul>
+                        <li>@lang('sitemap.desc-2-2')</li>
+                        <li>@lang('sitemap.desc-2-3')</li>
+                        <li>@lang('sitemap.desc-2-4')</li>
+                        <li>@lang('sitemap.desc-2-5')</li>
+                        <li>@lang('sitemap.desc-2-6')</li>
+                    </ul>
                 </div>
                 <div class="d-none" id="description-tab-3">
                     <h2>@lang('sitemap.desc-3')</h2>
                     <p>@lang('sitemap.desc-3-1')</p>
-                    <p>@lang('sitemap.desc-3-2')</p>
+                    <ul>
+                        <li>@lang('sitemap.desc-3-1-1')</li>
+                        <li>@lang('sitemap.desc-3-1-2')</li>
+                        <li>@lang('sitemap.desc-3-1-3')</li>
+                        <li>@lang('sitemap.desc-3-1-4')</li>
+                    </ul>
                 </div>
                 <div class="d-none" id="description-tab-4">
                     <h2>@lang('sitemap.desc-4')</h2>
                     <p>@lang('sitemap.desc-4-1')</p>
-                    <p>@lang('sitemap.desc-4-2')</p>
-                    <p>@lang('sitemap.desc-4-3')</p>
-                    <p>@lang('sitemap.desc-4-4')</p>
-                    <p>@lang('sitemap.desc-4-5')</p>
-                    <p>@lang('sitemap.desc-4-6')</p>
-                    <p>@lang('sitemap.desc-4-7')</p>
-                    <p>@lang('sitemap.desc-4-8')</p>
+                    <ul>
+                        <li>@lang('sitemap.desc-4-1-1')</li>
+                        <li>@lang('sitemap.desc-4-1-2')</li>
+                        <li>@lang('sitemap.desc-4-1-3')</li>
+                        <li>@lang('sitemap.desc-4-1-4')</li>
+                    </ul>
                 </div>
                 <div class="d-none" id="description-tab-5">
                     <h2>@lang('sitemap.desc-5')</h2>
                     <p>@lang('sitemap.desc-5-1')</p>
+                    <ul>
+                        <li>@lang('sitemap.desc-5-1-1')</li>
+                        <li>@lang('sitemap.desc-5-1-2')</li>
+                        <li>@lang('sitemap.desc-5-1-3')</li>
+                    </ul>
                 </div>
                 <div class="d-none" id="description-tab-6">
                     <h2>@lang('sitemap.desc-6')</h2>

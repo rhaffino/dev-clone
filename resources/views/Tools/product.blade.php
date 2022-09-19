@@ -317,26 +317,37 @@ id/json-ld-product-schema-generator
                     <p>@lang('product.desc-1-1')</p>
                     <p>@lang('product.desc-1-2')</p>
                     <p>@lang('product.desc-1-3')</p>
-                    <img class="mb-4" src="{{asset('/media/images/product-instruction-1.png')}}" alt="product-instruction-1" width="300">
+                    <img class="mb-4" src="{{asset('/media/images/product-instruction-3.png')}}" alt="product-instruction-3" width="60%">
                     <p>@lang('product.desc-1-4')</p>
-                    <ul>
-                        <li>@lang('product.desc-1-4-1')</li>
-                        <li>@lang('product.desc-1-4-2')</li>
-                    </ul>
-                    <p>@lang('product.desc-1-5')</p>
                 </div>
                 <div class="d-none" id="description-tab-2">
                     <h2>@lang('product.desc-2')</h2>
                     <p>@lang('product.desc-2-1')</p>
-                    <p>@lang('product.desc-2-2')</p>
-                    <p>@lang('product.desc-2-3')</p>
-                    <img class="mb-4" src="{{asset('/media/images/product-instruction-2.png')}}" alt="product-instruction-2" width="300">
+                    <ul>
+                        <li>@lang('product.desc-2-2')</li>
+                        <li>@lang('product.desc-2-3')</li>
+                    </ul>
+                    <p>@lang('product.desc-2-4')</p>
                 </div>
                 <div class="d-none" id="description-tab-3">
                     <h2>@lang('product.desc-3')</h2>
                     <p>@lang('product.desc-3-1')</p>
-                    <p>@lang('product.desc-3-2')</p>
-                    <p>@lang('product.desc-3-3')</p>
+                    <h4 class="sub-titles">@lang('product.desc-3-2-1')</h4>
+                    <p>@lang('product.desc-3-2-2')</p>
+                    <p>@lang('product.desc-3-2-3')</p>
+                    <h4 class="sub-titles">@lang('product.desc-3-3-1')</h4>
+                    <p>@lang('product.desc-3-3-2')</p>
+                    <ul>
+                        <li>@lang('product.desc-3-3-3')</li>
+                        <li>@lang('product.desc-3-3-4')</li>
+                    </ul>
+                    <h4 class="sub-titles">@lang('product.desc-3-4-1')</h4>
+                    <p>@lang('product.desc-3-4-2')</p>
+                    <ul>
+                        <li>@lang('product.desc-3-4-3')</li>
+                        <li>@lang('product.desc-3-4-4')</li>                        
+                    </ul>
+
                 </div>
                 <div class="d-none" id="description-tab-4">
                     <h2>@lang('product.desc-4')</h2>
@@ -370,6 +381,7 @@ id/json-ld-product-schema-generator
                             &lt;/html&gt;
                         </code>
                     </pre>
+                    <p>@lang('product.desc-4-2')</p>
                 </div>
             </div>
             <div class="col-md-3">

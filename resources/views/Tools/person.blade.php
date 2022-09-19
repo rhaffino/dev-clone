@@ -211,50 +211,49 @@ id/json-ld-person-schema-generator
                     <h2>@lang('person.desc-1')</h2>
                     <p>@lang('person.desc-1-1')</p>
                     <p>@lang('person.desc-1-2')</p>
-                    <pre class="language-html">
-                        <code class="language-html">
-                            &lt;script type="application/ld+json"&gt;
-                                {
-                                    "@context": "https://schema.org",
-                                    "@type": "Person",
-                                    "address": {
-                                      "@type": "PostalAddress",
-                                      "addressLocality": "Freetown",
-                                      "addressRegion": "MA",
-                                      "postalCode": "02702",
-                                      "streetAddress": "3394 Randolph Street"
-                                    },
-                                    "colleague": [
-                                      "http://www.example.com/BestColleague.html",
-                                      "http://www.example.com/BestColleague.html"
-                                    ],
-                                    "email": "info@example.com",
-                                    "image": "DonABest.jpg",
-                                    "jobTitle": "Cardiographic technician",
-                                    "name": "Don A. Best",
-                                    "alumniOf": "Dartmouth",
-                                    "birthPlace": "Philadelphia, PA",
-                                    "birthDate": "1997-13-20",
-                                    "height": "72 inches",
-                                    "gender": "Male",
-                                    "memberOf": "Republican Party",
-                                    "nationality": "Albanian",
-                                    "telephone": "508-644-7231",
-                                    "url": "http://www.example.com",
-                                    "sameAs" : [ "https://www.facebook.com/",
-                                    "https://www.linkedin.com/",
-                                    "http://twitter.com/",
-                                    "http://instagram.com/",
-                                    "https://plus.google.com/"]
-                                }
-                            &lt;/script&gt;
-                        </code>
-                    </pre>
+                    <p>@lang('person.desc-1-3')</p>
                 </div>
                 <div class="d-none" id="description-tab-2">
                     <h2>@lang('person.desc-2')</h2>
                     <p>@lang('person.desc-2-1')</p>
-                    <img class="mb-4" src="{{asset('/media/images/person-instruction-1.png')}}" alt="person-instruction-1" width="300">
+                    <p>@lang('person.desc-2-2')</p>
+                    <p>@lang('person.desc-2-3')</p>
+                    <ul>
+                        <li>@lang('person.desc-2-3-1')</li>
+                        <li>@lang('person.desc-2-3-2')</li>
+                        <li>@lang('person.desc-2-3-3')</li>
+                    </ul>
+                </div>
+                <div class="d-none" id="description-tab-3">
+                    <h2>@lang('person.desc-3')</h2>
+                    <p>@lang('person.desc-3-1')</p>
+                    <p>@lang('person.desc-3-2')</p>
+                </div>
+                <div class="d-none" id="description-tab-4">
+                    <h2>@lang('person.desc-4')</h2>
+                    <p>@lang('person.desc-4-1')</p>
+                    <pre class="language-html">
+                        <code class="language-html">
+                            &lt;script type="application/ld+json"&gt;
+                                {
+                                    "@context": "https://schema.org/",
+                                    "@type": "Person",
+                                    "name": "Jane",
+                                    "url": "https://www.linkedin.com/",
+                                    "image": "https://images.unsplash.com",
+                                    "sameAs": [
+                                        "jane_isme"
+                                    ],
+                                    "jobTitle": "SEO specialist",
+                                    "worksFor": {
+                                        "@type": "Organization",
+                                        "name": "SEO organizataion"
+                                    }
+                                }                            
+                            &lt;/script&gt;
+                        </code>
+                    </pre>
+                    <p>@lang('person.desc-4-2')</p>
                 </div>
             </div>
             <div class="col-md-3">
@@ -269,6 +268,18 @@ id/json-ld-person-schema-generator
                         <span class="label label-lg label-tools-description" id="nav-label-tab-2">2</span>
                     </div>
                     <a class="">@lang('person.desc-2')</a>
+                </div>
+                <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-3">
+                    <div class="mr-2" style="width:24px !important; height: 24px !important;">
+                        <span class="label label-lg label-tools-description" id="nav-label-tab-3">3</span>
+                    </div>
+                    <a class="">@lang('person.desc-3')</a>
+                </div>
+                <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-4">
+                    <div class="mr-2" style="width:24px !important; height: 24px !important;">
+                        <span class="label label-lg label-tools-description" id="nav-label-tab-4">4</span>
+                    </div>
+                    <a class="">@lang('person.desc-4')</a>
                 </div>
             </div>
         </div>
