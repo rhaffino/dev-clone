@@ -275,6 +275,61 @@ id/json-ld-how-to-schema-generator
                         <img class="mb-4" src="{{asset('/media/images/howto-1.jpg')}}" alt="howto-1" width="60%">
                         <p>@lang('howto.desc-4-2')</p>
                         <p>@lang('howto.desc-4-3')</p>
+                        <pre class="language-html mb-4">
+                            <code class="language-html">
+                              &lt;script type="application/ld+json"&gt;
+                                {
+                                "description": "Berikut adalah cara memasak nasi dengan mudah menggunakan rice cooker",
+                                "totalTime": "PT30M",
+                                "supply": [
+                                    {
+                                        "@type": "HowToSupply",
+                                        "name": "Beras"
+                                    },
+                                    {
+                                        "@type": "HowToSupply",
+                                        "name": "air"
+                                    }
+                                ],
+                                "tools": {
+                                    "@type": "HowToTool",
+                                    "name": "rice cooker"
+                                },
+                                "estimateCost": {
+                                    "@type": "MonetaryAmount",
+                                    "currency": "IDR",
+                                    "value": "12000"
+                                },
+                                "step": [
+                                    {
+                                        "@type": "HowToStep",
+                                        "text": "Siapkan beras untuk dicuci"
+                                    },
+                                    {
+                                        "@type": "HowToStep",
+                                        "text": "Cuci beras, namun jangan terlalu bersih agar nutrisi tetap ada."
+                                    },
+                                    {
+                                        "@type": "HowToStep",
+                                        "text": "Tambahkan air sebanyak 2x takaran beras."
+                                    },
+                                    {
+                                        "@type": "HowToStep",
+                                        "text": "Masukkan dalam rice cooker"
+                                    },
+                                    {
+                                        "@type": "HowToStep",
+                                        "text": "Nyalakan tombol cook"
+                                    },
+                                    {
+                                        "@type": "HowToStep",
+                                        "text": "Tunggu hingga status atau tombol berubah menjadi warm"
+                                    }
+                                    ]
+                                }                          
+                              &lt;/script&gt;
+                            </code>
+                          </pre>
                         <p>@lang('howto.desc-4-4')</p>
                 </div>
             </div>
