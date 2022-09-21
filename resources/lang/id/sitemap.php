@@ -8,7 +8,7 @@ return [
     "no-crawl-result" => "Tidak ada sitemap yang dibuat, masukkan domain Anda di atas!",
     "generating" => "Membuat sitemap Anda...",
     "highlight" => "Sekarang, pengguna dapat menggunakan fitur download sitemap dan menguploadnya langsung di website. Sehingga mesin pencari akan dengan mudah mengidentifikasi halaman secara langsung. Kami juga menambagkan fitur Robot Progress Bar. Robot ini berguna untuk melihat berapa jumlah persentara dari proses indeks halaman atau proses crawl. Versi terbaru ini memberi keuntungan bagi developer untuk membuat sitemap dalam waktu singkat.",
-    "desc-1" => "Sitemap Generator oleh CMLABS",
+    "desc-1" => "Apa itu Sitemap Generator?",
     "desc-1-1" => "Sitemap generator adalah tool yang berguna untuk mendukung webmaster dalam pembuatan sitemap XML yang sesuai standar kebutuhan search engine. Dengan tool ini, Anda bisa merayapi (crawl) semua URL yang tertaut pada suatu website dan menghasilkan sitemap tanpa harus mendata URL secara manual.",
     "desc-1-2" => "Cara penggunaan sitemap generator pun cukup mudah dan bisa diakses secara gratis. Hanya dengan memasukkan alamat URL tertentu, robot kami akan membantu Anda menemukan semua URL yang terhubung dengan URL yang dijelajahi tersebut.",
     "desc-2" => "Mengapa Anda Perlu Menggunakan Sitemap Generator?",

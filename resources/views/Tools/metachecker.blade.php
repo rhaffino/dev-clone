@@ -376,6 +376,12 @@
                         <p>@lang('metachecker.desc-1-2')</p>
                         <p>@lang('metachecker.desc-1-3')</p>
                         <p>@lang('metachecker.desc-1-4')</p>
+                        <ul>
+                            <li>@lang('metachecker.desc-1-1-1')</li>
+                            <li>@lang('metachecker.desc-1-1-2')</li>
+                            <li>@lang('metachecker.desc-1-1-3')</li>
+                            <li>@lang('metachecker.desc-1-1-4')</li>
+                        </ul>
                     </div>
                     <div class="d-none" id="description-tab-2">
                         <h2>@lang('metachecker.desc-2')</h2>

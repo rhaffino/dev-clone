@@ -26,7 +26,7 @@ return [
     "placeholder-imageStep" => "Ketik URL gambar di sini..",
     "placeholder-nameStep" => "Ketik nama di sini..",
     "placeholder-urlStep" => "Ketik URL di sini..",
-    "desc-1" => "Apa Itu JSON-LD How-To Generator?",
+    "desc-1" => "Apa itu JSON-LD How-to Schema Generator?",
     "desc-1-1" => "How-to schema generator adalah tool yang bisa Anda gunakan untuk membuat how-to schema markup secara gratis. Data terstruktur How-To berfungsi untuk memberitahu Google secara eksplisit bahwa konten Anda adalah panduan. Memandu pengguna dalam melakukan serangkaian langkah agar berhasil menyelesaikan suatu aksi adalah salah satu contohnya.",
     "desc-1-2" => "Misalnya, &#34;Cara mengikat dasi&#34; atau &#34;Cara memasang ubin di dapur&#34;. Jika setiap langkah dalam instruksi dapat dibaca secara berurutan dengan tampilan yang menarik, maka Anda dapat menarik lebih banyak user untuk berkunjung. ",
     "desc-1-3" => "Halaman panduan atau petunjuk dengan schema markup tepat dapat memenuhi syarat untuk mendapatkan rich snippet di halaman hasil penelusuran Google. Fitur ini juga dapat membantu situs Anda menjangkau pengguna yang tepat.",
