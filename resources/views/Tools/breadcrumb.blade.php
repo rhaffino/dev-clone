@@ -206,82 +206,32 @@ id/json-ld-breadcrumb-schema-generator
                     <h2>@lang('breadcrumb.desc-1')</h2>
                     <p>@lang('breadcrumb.desc-1-1')</p>
                     <p>@lang('breadcrumb.desc-1-2')</p>
-                    <p>@lang('breadcrumb.desc-1-3')</p>
                 </div>
                 <div class="d-none" id="description-tab-2">
                     <h2>@lang('breadcrumb.desc-2')</h2>
                     <p>@lang('breadcrumb.desc-2-1')</p>
-                    <p>@lang('breadcrumb.desc-2-2')</p>
-                    <div class="d-flex flex-column px-3 py-3">
-                        <div class="title-meta mb-1">
-                            Informasi Perusahaan - PT CMLABS INDONESIA DIGITAL
-                        </div>
-                        <div class="link-meta d-flex flex-row align-items-center color-green mb-1">
-                            <span>cmlabs.co › about-us <i class='bx bx-caret-down ml-1' style="color: #4D5156; vertical-align: text-bottom;"></i></span>
-                        </div>
-                        <div class="desc-meta mb-4">
-                            CMLABS. PT CMLABS INDONESIA DIGITAL is a company specializing in SEO services, Digital<br>Marketing and tools to support SEO activities ...
-                        </div>
-                    </div>
-                    <p>@lang('breadcrumb.desc-2-3')</p>
-                    <div class="d-flex flex-column px-3 py-3">
-                        <div class="title-meta mb-1">
-                            Informasi Perusahaan - PT CMLABS INDONESIA DIGITAL
-                        </div>
-                        <div class="link-meta d-flex flex-row align-items-center color-green mb-1">
-                            <span>https://cmlabs.co/about-us/ <i class='bx bx-caret-down ml-1' style="color: #4D5156; vertical-align: text-bottom;"></i></span>
-                        </div>
-                        <div class="desc-meta mb-4">
-                            CMLABS. PT CMLABS INDONESIA DIGITAL is a company specializing in SEO services, Digital<br>Marketing and tools to support SEO activities ...
-                        </div>
-                    </div>
+                    <h4 class="sub-titles">@lang('breadcrumb.desc-2-2-1')</h4>
+                    <p>@lang('breadcrumb.desc-2-2-2')</p>
+                    <h4 class="sub-titles">@lang('breadcrumb.desc-2-3-1')</h4>
+                    <p>@lang('breadcrumb.desc-2-3-2')</p>
+                    <h4 class="sub-titles">@lang('breadcrumb.desc-2-4-1')</h4>
+                    <p>@lang('breadcrumb.desc-2-4-2')</p>
                 </div>
                 <div class="d-none" id="description-tab-3">
                     <h2>@lang('breadcrumb.desc-3')</h2>
                     <p>@lang('breadcrumb.desc-3-1')</p>
-                    <p>@lang('breadcrumb.desc-3-2')</p>
-                    <p>@lang('breadcrumb.desc-3-3')</p>
-                    <img src="{{asset('/media/images/breadcrumb-instruction-1.png')}}" alt="breadcrumb-instruction">
-                    <p>@lang('breadcrumb.desc-3-4')</p>
-                    <p>@lang('breadcrumb.desc-3-5')</p>
-                    <p>@lang('breadcrumb.desc-3-6')</p>
+                    <h4 class="sub-titles">@lang('breadcrumb.desc-3-2-1')</h4>
+                    <p>@lang('breadcrumb.desc-3-2-2')</p>
+                    <h4 class="sub-titles">@lang('breadcrumb.desc-3-3-1')</h4>
+                    <p>@lang('breadcrumb.desc-3-3-2')</p>
+                    <h4 class="sub-titles">@lang('breadcrumb.desc-3-4-1')</h4>
+                    <p>@lang('breadcrumb.desc-3-4-2')</p>
                 </div>
                 <div class="d-none" id="description-tab-4">
                     <h2>@lang('breadcrumb.desc-4')</h2>
                     <p>@lang('breadcrumb.desc-4-1')</p>
-                    <h3>@lang('breadcrumb.desc-4-1-1')</h3>
-                    <p>@lang('breadcrumb.desc-4-1-1-1')</p>
-                    <pre class="language-html mb-4">
-            <code class="language-html">
-              &lt;ul id="breadcrumblist"&gt;
-                 &lt;li&gt;&lt;a href="https://cmlabs.co/"&gt;Home&lt;/a&gt;/&lt;/li&gt;
-                 &lt;li&gt;&lt;a href="https://cmlabs.co/about-us/"&gt;About Us&lt;/a&gt;/&lt;/li&gt;
-               &lt;/ul&gt;
-            </code>
-          </pre>
-                    <p>@lang('breadcrumb.desc-4-1-1-2')</p>
-                    <p>@lang('breadcrumb.desc-4-1-1-3')</p>
-                    <p>@lang('breadcrumb.desc-4-1-1-4')</p>
-                    <ul>
-                        <li>@lang('breadcrumb.desc-4-1-1-4-1')</li>
-                    </ul>
-                    <p>@lang('breadcrumb.desc-4-1-1-5')</p>
-                    <ul>
-                        <li>@lang('breadcrumb.desc-4-1-1-5-1')</li>
-                        <li>@lang('breadcrumb.desc-4-1-1-5-2')</li>
-                        <li>@lang('breadcrumb.desc-4-1-1-5-3')</li>
-                    </ul>
-                    <p>@lang('breadcrumb.desc-4-1-1-6')</p>
-                    <pre class="language-html mb-4">
-            <code class="language-html">
-              &lt;ul id="breadcrumblist" itemscope itemtype="http://schema.org/BreadcrumbList"&gt;
-                &lt;li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"&gt;&lt;a itemprop="item" href="https://cmlabs.co/"&gt;&lt;span itemprop="name"&gt;Home&lt;/span&gt;&lt;/a&gt;/&lt;meta itemprop="position" content="1" /&gt;&lt;/li&gt;
-                &lt;li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"&gt;&lt;a itemprop="item" href="https://cmlabs.co/about-us/"&gt;&lt;span itemprop="name"&gt;About Us&lt;/span&gt;&lt;/a&gt;&lt;meta itemprop="position" content="2" /&gt;/&lt;/li&gt;
-              &lt;/ul&gt;
-            </code>
-          </pre>
-                    <h3>@lang('breadcrumb.desc-4-1-2')</h3>
-                    <p>@lang('breadcrumb.desc-4-1-2-1')</p>
+                    <p>@lang('breadcrumb.desc-4-2')</p>
+                    <p>@lang('breadcrumb.desc-4-3')</p>
                     <pre class="language-html mb-4">
             <code class="language-html">
               &lt;script type="application/ld+json"&gt;
@@ -291,17 +241,13 @@ id/json-ld-breadcrumb-schema-generator
                 "itemListElement": [{
                   "@type": "ListItem",
                   "position": 1,
-                  "item": {
-                    "@id": "https://cmlabs.co/",
-                    "name": "Home"
-                  }
+                  "name": "Home",
+                  "item": "https://cmlabs.co/"
                 },{
                   "@type": "ListItem",
                   "position": 2,
-                  "item": {
-                    "@id": "https://cmlabs.co/about-us/",
-                    "name": "About Us"
-                  }
+                  "name": "About Us",
+                  "item": "https://cmlabs.co/about-us/"
                 }]
               }
               &lt;/script&gt;

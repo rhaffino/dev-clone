@@ -269,13 +269,36 @@ id/link-analyzer
                 <div class="d-none" id="description-tab-2">
                     <h2 class="text-black">@lang('analyzer.desc-2')</h2>
                     <p class="text-black">@lang('analyzer.desc-2-1')</p>
-                    <p class="text-black">@lang('analyzer.desc-2-2')</p>
-                    <p class="text-black">@lang('analyzer.desc-2-3')</p>
+                    <ul>
+                        <li><p class="text-black">@lang('analyzer.desc-2-1-1')</p></li>
+                        <li><p class="text-black">@lang('analyzer.desc-2-1-2')</p></li>
+                        <li><p class="text-black">@lang('analyzer.desc-2-1-3')</p></li>
+                        <li><p class="text-black">@lang('analyzer.desc-2-1-4')</p></li>
+                        <li><p class="text-black">@lang('analyzer.desc-2-1-5')</p></li>
+                    </ul>
                 </div>
                 <div class="d-none" id="description-tab-3">
-                    <h2 class="text-black">@lang('analyzer.desc-3')</h2>
+                    <h2>@lang('analyzer.desc-3')</h2>
                     <p class="text-black">@lang('analyzer.desc-3-1')</p>
-                    <p class="text-black">@lang('analyzer.desc-3-2')</p>
+                    <ul>
+                        <li><p class="text-black">@lang('analyzer.desc-3-1-1')</p></li>
+                        <li><p class="text-black">@lang('analyzer.desc-3-1-2')</p></li>
+                        <li><p class="text-black">@lang('analyzer.desc-3-1-3')</p></li>
+                        <li><p class="text-black">@lang('analyzer.desc-3-1-4')</p></li>
+                    </ul>
+                </div>
+                <div class="d-none" id="description-tab-4">
+                    <h4 class="sub-titles">@lang('analyzer.desc-4')</h4>
+                    <p class="text-black">@lang('analyzer.desc-4-1-1')</p>
+                    <p class="text-black">@lang('analyzer.desc-4-1-2')</p>
+                    <p class="text-black">@lang('analyzer.desc-4-1-3')</p>
+                    <ul>
+                        <li><p class="text-black">@lang('analyzer.desc-4-1-1-1')</p></li>
+                        <li><p class="text-black">@lang('analyzer.desc-4-1-1-2')</p></li>
+                        <li><p class="text-black">@lang('analyzer.desc-4-1-1-3')</p></li>
+                        <li><p class="text-black">@lang('analyzer.desc-4-1-1-4')</p></li>
+                        <li><p class="text-black">@lang('analyzer.desc-4-1-1-5')</p></li>
+                    </ul>
                 </div>
             </div>
             <div class="col-md-3">
@@ -296,6 +319,12 @@ id/link-analyzer
                         <span class="label label-lg label-tools-description" id="nav-label-tab-3">3</span>
                     </div>
                     <a class="">@lang('analyzer.desc-3')</a>
+                </div>
+                <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-4">
+                    <div class="mr-2" style="width:24px !important; height: 24px !important;">
+                        <span class="label label-lg label-tools-description" id="nav-label-tab-4">4</span>
+                    </div>
+                    <a class="">@lang('analyzer.desc-4')</a>
                 </div>
             </div>
         </div>

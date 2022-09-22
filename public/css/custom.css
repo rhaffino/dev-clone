@@ -989,6 +989,10 @@ a:hover {
     padding-bottom: 5rem;
 }
 
+.sub-titles{
+    font-weight: 500;
+}
+
 .custom-features-accordion .card .card-header .card-title.collapsed,
 .custom-features-accordion .card .card-header .card-title::after {
     color: var(--darkgrey) !important;

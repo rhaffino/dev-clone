@@ -176,56 +176,70 @@ id/json-ld-faq-schema-generator
                     <h2>@lang('faq.desc-1')</h2>
                     <p>@lang('faq.desc-1-1')</p>
                     <p>@lang('faq.desc-1-2')</p>
+                    <p>@lang('faq.desc-1-3')</p>
                 </div>
                 <div class="d-none" id="description-tab-2">
                     <h2>@lang('faq.desc-2')</h2>
                     <p>@lang('faq.desc-2-1')</p>
-                    <p>@lang('faq.desc-2-2')</p>
-                    <p>@lang('faq.desc-2-3')</p>
-                    <p>@lang('faq.desc-2-4')</p>
-                    <ul>
-                        <li>@lang('faq.desc-2-4-1')</li>
-                        <li>@lang('faq.desc-2-4-2')</li>
-                        <li>@lang('faq.desc-2-4-3')</li>
-                    </ul>
-                    <p>@lang('faq.desc-2-5')</p>
+                    <h4 class="sub-titles">@lang('faq.desc-2-2-1')</h4>
+                    <p>@lang('faq.desc-2-2-2')</p>
+                    <h4 class="sub-titles">@lang('faq.desc-2-3-1')</h4>
+                    <p>@lang('faq.desc-2-3-2')</p>
+                    <h4 class="sub-titles">@lang('faq.desc-2-4-1')</h4>
+                    <p>@lang('faq.desc-2-4-2')</p>
                 </div>
                 <div class="d-none" id="description-tab-3">
                     <h2>@lang('faq.desc-3')</h2>
                     <p>@lang('faq.desc-3-1')</p>
                     <p>@lang('faq.desc-3-2')</p>
-                    <p>@lang('faq.desc-3-3')</p>
-                    <p>@lang('faq.desc-3-4')</p>
-                    <p>@lang('faq.desc-3-5')</p>
-                    <p>@lang('faq.desc-3-6')</p>
-                    <p>@lang('faq.desc-3-7')</p>
-                    <p>@lang('faq.desc-3-8')</p>
-                    <p>@lang('faq.desc-3-9')</p>
                 </div>
                 <div class="d-none" id="description-tab-4">
                     <h2>@lang('faq.desc-4')</h2>
                     <p>@lang('faq.desc-4-1')</p>
-                    <p>@lang('faq.desc-4-2')</p>
-                    <h3>@lang('faq.desc-4-3')</h3>
-                    <p>@lang('faq.desc-4-3-1')</p>
+                    <h4 class="sub-titles">@lang('faq.desc-4-2-1')</h4>
+                    <p>@lang('faq.desc-4-2-2')</p>
+                    <h4 class="sub-titles">@lang('faq.desc-4-3-1')</h4>
                     <p>@lang('faq.desc-4-3-2')</p>
-                    <p>@lang('faq.desc-4-3-3')</p>
-                    <h3>@lang('faq.desc-4-4')</h3>
-                    <p>@lang('faq.desc-4-4-1')</p>
+                    <h4 class="sub-titles">@lang('faq.desc-4-4-1')</h4>
                     <p>@lang('faq.desc-4-4-2')</p>
-                    <p>@lang('faq.desc-4-4-3')</p>
-                    <p>@lang('faq.desc-4-4-4')</p>
-                    <h3>@lang('faq.desc-4-5')</h3>
-                    <p>@lang('faq.desc-4-5-1')</p>
-                    <p>@lang('faq.desc-4-5-2')</p>
-                    <p>@lang('faq.desc-4-5-3')</p>
-                    <p>@lang('faq.desc-4-5-4')</p>
-                    <h3>@lang('faq.desc-4-6')</h3>
-                    <p>@lang('faq.desc-4-6-1')</p>
-                    <p>@lang('faq.desc-4-6-2')</p>
-                    <p>@lang('faq.desc-4-6-3')</p>
-                    <p>@lang('faq.desc-4-6-4')</p>
-                    <p>@lang('faq.desc-4-6-5')</p>
+                </div>
+                <div class="d-none" id="description-tab-5">
+                    <h2>@lang('faq.desc-5')</h2>
+                    <p>@lang('faq.desc-5-1')</p>
+                    <pre class="language-html mb-4">
+                        <code class="language-html">
+                          &lt;script type="application/ld+json"&gt;
+                          {
+                            "@context": "https://schema.org",
+                            "@type": "FAQPage",
+                            "mainEntity": [{
+                              "@type": "Question",
+                              "name": "Apa Itu JSON-LD FAQ Schema Generator?",
+                              "acceptedAnswer": {
+                              "@type": "Answer",
+                              "text": "JSON-LD FAQ schema generator adalah sebuah tool gratis dari cmlabs yang dapat membantu webmaster membuat skema FAQ dengan lebih cepat dan praktis."
+                              }
+                            },{
+                              "@type": "Question",
+                              "name": "Apa saja fitur yang tersedia?",
+                              "acceptedAnswer": {
+                              "@type": "Answer",
+                              "text": "Alat ini menyediakan berbagai fitur seperti, copy, check, reset, dan add question"
+                              }
+                            },{
+                                "@type": "Question",
+                                "name": "Alat ini dapat digunakan oleh siapa?",
+                                "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Alat ini dapat digunakan oleh siapa saja yang membutuhkan dengan gratis"
+                                }
+                              }
+                            ]
+                          }
+                          &lt;/script&gt;
+                        </code>
+                      </pre>
+                    <p>@lang('faq.desc-5-2')</p>
                 </div>
             </div>
             <div class="col-md-3">
@@ -252,6 +266,12 @@ id/json-ld-faq-schema-generator
                         <span class="label label-lg label-tools-description" id="nav-label-tab-4">4</span>
                     </div>
                     <a class="">@lang('faq.desc-4')</a>
+                </div>
+                <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-5">
+                    <div class="mr-2" style="width:24px !important; height: 24px !important;">
+                        <span class="label label-lg label-tools-description" id="nav-label-tab-5">5</span>
+                    </div>
+                    <a class="">@lang('faq.desc-5')</a>
                 </div>
             </div>
         </div>
