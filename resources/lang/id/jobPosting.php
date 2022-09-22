@@ -63,7 +63,7 @@ return [
     "unitText-opt-2"=>"Minggu",
     "unitText-opt-3"=>"Bulan",
     "unitText-opt-4"=>"Tahun",
-    "desc-1"=>"Apa Itu JSON-LD Job Posting Schema Generator",
+    "desc-1"=>"Apa Itu JSON-LD Job Posting Schema Generator?",
     "desc-1-1"=>"JSON-LD Job Posting Schema Generator adalah salah satu tools gratis dari cmlabs yang berfungsi untuk membuat skema lowongan pekerjaan. Tool ini dapat digunakan secara gratis oleh siapapun. ",
     "desc-1-2"=>"Dalam tool ini, Anda dapat membuat skema lowongan pekerjaan dengan lengkap. Anda hanya perlu memasukkan data-data yang dibutuhkan seperti judul pekerjaan, deskripsi pekerjaan, informasi perusahaan Anda, rentang waktu, hingga spesifikasi lengkap pekerjaan yang dimaksud.",
     "desc-1-3" => "Dengan tool ini, Anda tidak perlu bersusah payah membuat skema secara manual. Hasil yang muncul setelah Anda melengkapi data lowongan pekerjaan dapat disalin dan diaplikasikan pada website Anda.",
