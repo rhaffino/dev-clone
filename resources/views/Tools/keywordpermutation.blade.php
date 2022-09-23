@@ -186,6 +186,7 @@ id/keyword-permutation
                     <p class="text-black">@lang('permutation.desc-3-1')</p>
                     <h4 class="sub-titles">@lang('permutation.desc-3-1-1')</h4>
                     <p class="text-black">@lang('permutation.desc-3-1-2')</p>
+                    <p class="text-black">@lang('permutation.desc-3-1-3')</p>
                     <h4 class="sub-titles">@lang('permutation.desc-3-2-1')</h4>
                     <p class="text-black">@lang('permutation.desc-3-2-2')</p>
                     <h4 class="sub-titles">@lang('permutation.desc-3-3-1')</h4>

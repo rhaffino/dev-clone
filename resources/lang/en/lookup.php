@@ -17,7 +17,7 @@ return [
     "desc-2-1-1" => "<b>Curiosity -</b> some people find the technology of a website out of curiosity and want to learn about the technology used in developing a website.",
     "desc-2-1-2" => "<b>Website Monitoring -</b> others monitor the technology of a website with the aim of taking security or surveillance measures in order to improve the technology used.",
     "desc-2-1-3" => "<b>Market Research -</b> You may be doing market research because you want to know the technology used by your competitors.",
-    "desc-2-1-4" => "<b> Technology changes -</b> Monitor changes in competitor technologies such as new CMS, e-commerce platforms or other technologies.",
+    "desc-2-1-4" => "<b>Monitor Technology changes -</b> Monitor changes in competitor technologies such as new CMS, e-commerce platforms or other technologies.",
     "desc-3" => "The Benefits of Technology Lookup",
     "desc-3-1" => "In addition, Technology Lookup also provides several benefits for you. Starting from benefits for personal websites or to monitoring competitor websites. Check out the following explanation:",
     "desc-3-1-1" => "Identify Technology On Your Website",

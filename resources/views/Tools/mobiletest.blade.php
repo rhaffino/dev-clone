@@ -236,7 +236,7 @@ id/mobile-test
                     <p>@lang('mobiletest.desc-6-4-2')</p>
                     <h4 class="sub-titles">@lang('mobiletest.desc-6-5-1')</h4>
                     <p>@lang('mobiletest.desc-6-5-2')</p>
-                    <p>@lang('mobiletest.desc-6-5-2')</p>
+                    <p>@lang('mobiletest.desc-6-5-3')</p>
                 </div>
             </div>
             <div class="col-md-3">

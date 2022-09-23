@@ -250,6 +250,7 @@ id/redirect-checker
                         <li class="text-black">@lang('redirectchecker.desc-2-3-1-2')</li>
                         <li class="text-black">@lang('redirectchecker.desc-2-3-1-3')</li>
                         <li class="text-black">@lang('redirectchecker.desc-2-3-1-4')</li>
+                        <li class="text-black">@lang('redirectchecker.desc-2-3-1-5')</li>
                     </ul>
                     <h4 class="sub-titles">@lang('redirectchecker.desc-2-4-1')</h4>
                     <p class="text-black">@lang('redirectchecker.desc-2-4-2')</p>

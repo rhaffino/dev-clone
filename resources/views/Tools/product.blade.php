@@ -346,6 +346,7 @@ id/json-ld-product-schema-generator
                     <ul>
                         <li>@lang('product.desc-3-4-3')</li>
                         <li>@lang('product.desc-3-4-4')</li>                        
+                        <li>@lang('product.desc-3-4-5')</li>                        
                     </ul>
 
                 </div>
