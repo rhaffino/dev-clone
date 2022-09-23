@@ -68,7 +68,7 @@ return [
     "desc-2-1" => "Product schema markup tentu tidak dapat diaplikasikan pada sembarang halaman. Penggunaan skema jenis ini memungkinkan pemilik bisnis untuk memasarkan halaman produknya dengan lebih mudah. Maka, Anda akan memerlukan product schema markup pada:",
     "desc-2-2" => "Halaman produk yang mendeskripsikan satu produk",
     "desc-2-3" => "Halaman aggregator belanja yang mencantumkan satu produk, beserta informasi tentang berbagai penjual yang menawarkan produk tersebut.",
-    "desc-2-4" => "Jika Anda dapat memenuhi syarat penggunaan markup, maka besar kemungkinan search engine akan menampilkannya dalam bentuk yang menarik, seperti contoh hasil penelusuran di atas.",
+    "desc-2-4" => "Jika Anda dapat memenuhi syarat penggunaan markup, maka besar kemungkinan <i style='font-size: 13px!important; color:black;'>search engine</i> akan menampilkannya dalam bentuk yang menarik, seperti contoh hasil penelusuran di atas.",
     "desc-3" => "Praktik Terbaik Penggunaan Product Schema Markup",
     "desc-3-1" => "Berikut adalah aksi yang kami sarankan untuk mengoptimalkan penggunaan product schema markup agar halaman produk Anda dapat menarik lebih banyak penjualan:",
     "desc-3-2-1" => "Implementasikan pada Satu Produk Spesifik",

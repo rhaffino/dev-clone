@@ -198,6 +198,7 @@ id/json-ld-faq-schema-generator
                     <p>@lang('faq.desc-4-1')</p>
                     <h4 class="sub-titles">@lang('faq.desc-4-2-1')</h4>
                     <p>@lang('faq.desc-4-2-2')</p>
+                    <p>@lang('faq.desc-4-2-3')</p>
                     <h4 class="sub-titles">@lang('faq.desc-4-3-1')</h4>
                     <p>@lang('faq.desc-4-3-2')</p>
                     <h4 class="sub-titles">@lang('faq.desc-4-4-1')</h4>
