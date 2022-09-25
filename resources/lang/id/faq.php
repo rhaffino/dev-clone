@@ -19,7 +19,7 @@ return [
     "desc-2-2-2" => "Anda sebagai <i style='font-size: 13px!important; color:black;'>user</i> hanya perlu memasukkan pertanyaan dan jawaban pada kolom yang telah disediakan. Sistem kami akan secara otomatis menghasilkan kode yang tepat. Kode yang dihasilkan dapat disalin menggunakan fitur <b>Salin</b> untuk menghindari kesalahan <i style='font-size: 13px!important; color:black;'>copy-paste</i> secara manual.",
     "desc-2-3-1" => "Tersedia Pemeriksaan Kode yang Dihasilkan",
     "desc-2-3-2" => "Dengan alat ini, Anda dapat mengetahui format FAQ yang tepat. Fitur Cek pada alat ini dapat digunakan untuk memeriksa kebenaran dari kode yang dihasilkan. Jadi, Anda tak perlu khawatir akan terjadi kesalahan pada code yang dihasilkan.",
-    "desc-2-4-1" => "Dapat Memasukkan Multiple <i style='font-size: 13px!important; color:black;'>Question and Answer</i>",
+    "desc-2-4-1" => "Dapat Memasukkan Multiple <i style='font-size: 1.35rem !important; color:black;'>Question and Answer</i>",
     "desc-2-4-2" => "Alat ini memungkinkan Anda untuk memasukkan lebih dari 1 pertanyaan dan jawaban. Dengan kemudahan ini, Anda dapat memaksimalkan daftar pertanyaan yang berpotensi ditelusuri oleh pengguna.",
     "desc-3" => "Mengapa Situs Anda Membutuhkan Skema FAQ?",
     "desc-3-1" => "Sejalan dengan visi <i style='font-size: 13px!important; color:black;'>search engine</i> dalam menyediakan hasil paling relevan dengan waktu yang singkat, maka, fitur FAQ ini dapat menjadi informasi paling cepat yang dapat diakses oleh pengguna. ",
