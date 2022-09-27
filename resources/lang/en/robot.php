@@ -59,6 +59,47 @@ return [
     "desc-7-3-1" => "Pages that are not allowed on robots.txt can still be indexed if they are linked to other pages",
     "desc-7-3-2" => "While Google doesn't crawl or index content that robots.txt doesn't allow, Google can still find and index those URLs if they're linked from other websites. Thus, URL addresses and publicly available information can appear in Google search results.",
     "desc-7-3-3" => "Thus the discussion about the <a href='https://tools.cmlabs.co/id/robotstxt-generator'>robots.txt generator from cmlabs</a>. Using this tool, you can simplify the workflow of creating robots.txt files. With just a few clicks, you can add configurations to the new robots.txt file.",
+    "howto-title" => 'How to Use Robots.txt Generator',
+    "howto1" => '<h2>How to Use Robots.txt Generator</h2>
+                    <p>To create a robots.txt file using this tool, follow these steps:</p>
+                    <h4 class="sub-titles">Go to Robots.txt Generator Page</h4>
+                    <p>One way to create a robots.txt file is to visit the robots.txt generator page. On that page, you can set the commands you will give the web crawler.</p>',
+    "howto2" => '<p>Figure 1: The robot.txt generator page view from cmlabs</p>
+                    <h4 class="sub-titles">Select Access Permission For Default Robot</h4>
+                    <p>Specify access permissions for the default web crawlers, whether they are allowed to crawl URLs or not. There are two options that you can choose, namely, allow and disallow.</p>',
+    "howto3" => '<p>Figure 2: Dropdown view of the permission options granted to the default robot</p>
+                    <h4 class="sub-titles">Set Crawl Delay</h4>
+                    <p>You can set how long the crawl delay will be for the web crawler. If you set crawl-delay then the web crawler will wait for some time before crawling your URL. Robots.txt generator allows you to choose without crawl delay or delay for 5 to 120 seconds.</p>',
+    "howto4" => '<p>Figure 3: A dropdown view of the crawl delay options provided to the default robot</p>
+                    <h4 class="sub-titles">Enter Sitemap (If Any)</h4>
+                    <p>A sitemap is a file that lists the URLs of your website, with this file, web crawlers will find it easier to crawl and index your site. You can enter the sitemap path into the field provided.</p>
+                    <p>Make sure you have entered the correct sitemap path because this command is case sensitive (eg “/Sitemap.xml” and “/sitemap.xml” are considered different paths).</p>',
+    "howto5" => '<p>Figure 4: The display field for entering the sitemap path associated with your URL</p>
+                    <h4 class="sub-titles">Add Directive In Robots.txt</h4>
+                    <p>You can add directives to the robots.txt file by pressing the <b>&#34;Add Directive&#34;</b> button. Directives are commands given to web crawlers to tell you whether you allow or deny them to crawl certain URLs.</p>',
+    "howto6" => '<p>Figure 5: Button for adding commands to be executed by the web crawler</p>
+                    <p>In the robots.txt generator, there are three rules that you need to adjust in the directive section, namely:</p>
+                    <h6 class="sub-titles">Set Access Permission</h6>
+                    <p>You can set the access permissions granted to web crawlers, whether you allow or disallow them from crawling your web pages. The options that can be used allow and disallow.</p>',
+    "howto7" => '<p>Figure 6: Choice of access permissions to be granted to web crawlers</p>
+                    <h6 class="sub-titles">Select User-Agent</h6>
+                    <p>A user-agent is the type of web crawler that you will instruct to crawl. The choice of this web crawler depends on the search engine used, such as Baiduspider, Bingbot, Googlebot, and others. The web crawler option can be selected via the available user-agent dropdown.</p>',
+    "howto8" => '<p>Figure 7: User-agent options available in cmlabs robots.txt generator</p>
+                    <h6 class="sub-titles">Enter Directory / File Path</h6>
+                    <p>A directory or file path is a specific location of a page that web crawlers may or may not crawl. You must pay close attention to writing the path because this command distinguishes between upper and lower case letters (eg "/File" and "/file" are considered different paths).</p>',
+    "howto9" => '<p>Figure 8: Field to add the path to be crawled by the crawler</p>
+                    <h4 class="sub-titles">Copy Robot.txt</h4>
+                    <p>After entering the command for the web crawler in the field provided, you will see a preview of the robots.txt file in the right section. You can copy the generated syntax and paste it into the robots.txt file that you have created.</p>',
+    "howto10" => '<p>Figure 9: Syntax copy options in the robots.txt generator.</p>
+                    <h4 class="sub-titles">Export Syntax Robots.txt</h4>
+                    <p>If you don&#39;t know how to create your own robots.txt file, you can export the file that cmlabs has generated. Downloading the robots file is quite easy. You can select the <b>&#34;Export&#34;</b> option contained in the robots.text generator tools. Next, the tool will start the download and you will receive a robots.txt file.</p>',
+    "howto11" => '<p>Figure 10: Data export options in the robots.txt generator.</p>
+                    <h4 class="sub-titles">Remove Unnecessary Directives</h4>
+                    <p>If you want to delete unneeded directives, then you can click the cross icon to the right of the field to enter the directive. Please note that deleted fields cannot be recovered.</p>',
+    "howto12" => '<p>Figure 11: The delete data directive option in the robots.txt generator</p>
+                    <h4 class="sub-titles">Reset Robots.txt Generator</h4>
+                    <p>This tool has options that make it easier for you to find out how to create another robots.txt file. Click the <b>&#34;Reset&#34;</b> option to delete all the commands you set in robots.txt earlier. Next, you can create a new robots.txt configuration file.</p>',
+    "howto13" => '<p>Figure 12: Data reset options in the robots.txt generator.</p>',
     "whats-new-1" => "In this latest version, cmlabs added the export feature in the Robot TXT Generator tool. This feature is useful for users to directly check the code on Google Rich Result. The process of crawling websites and reviewing all content is now faster and more precise. You can learn more about this feature by trying it in person.",
     "whats-new-2" => "In this latest version update, cmlabs added more useragent features. This feature allows more commands that the TXT Generator Robot can receive. So, Robot.txt is more specific in sorting out which content you want to cover and which ones you want to display. Better update for better work.",
 ];

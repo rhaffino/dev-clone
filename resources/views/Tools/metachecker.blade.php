@@ -393,7 +393,6 @@
                         <p>@lang('metachecker.desc-2-1-3')</p>
                         <h4 class="sub-titles">@lang('metachecker.desc-2-2-1')</h4>
                         <p>@lang('metachecker.desc-2-2-2')</p>
-
                     </div>
                     <div class="d-none" id="description-tab-3">
                         <h2>@lang('metachecker.desc-3')</h2>
@@ -411,6 +410,23 @@
                             <li>@lang('metachecker.desc-3-1-6')</li>
                         </ul>
                         <p>@lang('metachecker.desc-3-4')</p>
+                    </div>
+                    <div class="d-none" id="description-tab-4"><i class="italics"></i>
+                        @lang('metachecker.howto1')
+                        <img class="mb-4" src="{{asset('/media/images/metachecker_instruction_1.webp')}}" alt="HowTo-metachecker-1" width="80%">
+                        @lang('metachecker.howto2')
+                        <img class="mb-4" src="{{asset('/media/images/metachecker_instruction_2.webp')}}" alt="HowTo-metachecker-2" width="80%">
+                        @lang('metachecker.howto3')
+                        <img class="mb-4" src="{{asset('/media/images/metachecker_instruction_3.webp')}}" alt="HowTo-metachecker-3" width="80%">
+                        @lang('metachecker.howto4')
+                        <img class="mb-4" src="{{asset('/media/images/metachecker_instruction_4.webp')}}" alt="HowTo-metachecker-4" width="80%">
+                        @lang('metachecker.howto5')
+                        <img class="mb-4" src="{{asset('/media/images/metachecker_instruction_5.webp')}}" alt="HowTo-metachecker-5" width="80%">
+                        @lang('metachecker.howto6')
+                        <img class="mb-4" src="{{asset('/media/images/metachecker_instruction_6.webp')}}" alt="HowTo-metachecker-6" width="80%">
+                        @lang('metachecker.howto7')
+                        <img class="mb-4" src="{{asset('/media/images/metachecker_instruction_7.webp')}}" alt="HowTo-metachecker-7" width="80%">
+                        @lang('metachecker.howto8')
                     </div>
                 </div>
                 <div class="col-md-3">
@@ -431,6 +447,12 @@
                             <span class="label label-lg label-tools-description" id="nav-label-tab-3">3</span>
                         </div>
                         <a class="">@lang('metachecker.desc-3')</a>
+                    </div>
+                    <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-4">
+                        <div class="mr-2" style="width:24px !important; height: 24px !important;">
+                            <span class="label label-lg label-tools-description" id="nav-label-tab-4">4</span>
+                        </div>
+                        <a class="">@lang('metachecker.howto-title')</a>
                     </div>
                 </div>
             </div>

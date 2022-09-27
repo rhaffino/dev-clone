@@ -163,6 +163,21 @@ id/technology-lookup
                     <p class="text-black">@lang('lookup.desc-3-2-2')</p>
                     <p class="text-black">@lang('lookup.desc-3-2-3')</p>
                 </div>
+                <div class="d-none" id="description-tab-4">
+                    @lang('lookup.howto1')
+                    <img class="mb-4" src="{{asset('/media/images/lookup_instruction_1.webp')}}" alt="HowTo-lookup-1" width="80%">
+                    @lang('lookup.howto2')
+                    <img class="mb-4" src="{{asset('/media/images/lookup_instruction_2.webp')}}" alt="HowTo-lookup-2" width="80%">
+                    @lang('lookup.howto3')
+                    <img class="mb-4" src="{{asset('/media/images/lookup_instruction_3.webp')}}" alt="HowTo-lookup-3" width="80%">
+                    @lang('lookup.howto4')
+                    <img class="mb-4" src="{{asset('/media/images/lookup_instruction_4.webp')}}" alt="HowTo-lookup-4" width="80%">
+                    @lang('lookup.howto5')
+                    <img class="mb-4" src="{{asset('/media/images/lookup_instruction_5.webp')}}" alt="HowTo-lookup-5" width="80%">
+                    @lang('lookup.howto6')
+                    <img class="mb-4" src="{{asset('/media/images/lookup_instruction_6.webp')}}" alt="HowTo-lookup-6" width="80%">
+                    @lang('lookup.howto7')
+                </div>
             </div>
             <div class="col-md-3">
                 <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-1">
@@ -182,6 +197,12 @@ id/technology-lookup
                         <span class="label label-lg label-tools-description" id="nav-label-tab-3">3</span>
                     </div>
                     <a class="">@lang('lookup.desc-3')</a>
+                </div>
+                <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-4">
+                    <div class="mr-2" style="width:24px !important; height: 24px !important;">
+                        <span class="label label-lg label-tools-description" id="nav-label-tab-4">4</span>
+                    </div>
+                    <a class="">@lang('lookup.howto-title')</a>
                 </div>
             </div>
         </div>

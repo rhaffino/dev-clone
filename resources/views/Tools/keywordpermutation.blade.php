@@ -193,6 +193,20 @@ id/keyword-permutation
                     <p class="text-black">@lang('permutation.desc-3-3-2')</p>
                     <p class="text-black">@lang('permutation.desc-3-3-3')</p>
                 </div>
+                <div class="d-none" id="description-tab-4"><i class="italics"></i>
+                    
+                    @lang('permutation.howto1')
+                    <img class="mb-4" src="{{asset('/media/images/permutation_instruction_1.webp')}}" alt="HowTo-permutation-1" width="80%">
+                    @lang('permutation.howto2')
+                    <img class="mb-4" src="{{asset('/media/images/permutation_instruction_2.webp')}}" alt="HowTo-permutation-2" width="80%">
+                    @lang('permutation.howto3')
+                    <img class="mb-4" src="{{asset('/media/images/permutation_instruction_3.webp')}}" alt="HowTo-permutation-3" width="80%">
+                    @lang('permutation.howto4')
+                    <img class="mb-4" src="{{asset('/media/images/permutation_instruction_4.webp')}}" alt="HowTo-permutation-4" width="80%">
+                    @lang('permutation.howto5')
+                    <img class="mb-4" src="{{asset('/media/images/permutation_instruction_5.webp')}}" alt="HowTo-permutation-5" width="80%">
+                    @lang('permutation.howto6')
+                </div>
             </div>
             <div class="col-md-3">
                 <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-1">
@@ -212,6 +226,12 @@ id/keyword-permutation
                         <span class="label label-lg label-tools-description" id="nav-label-tab-3">3</span>
                     </div>
                     <a class="">@lang('permutation.desc-3')</a>
+                </div>
+                <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-4">
+                    <div class="mr-2" style="width:24px !important; height: 24px !important;">
+                        <span class="label label-lg label-tools-description" id="nav-label-tab-4">4</span>
+                    </div>
+                    <a class="">@lang('permutation.howto-title')</a>
                 </div>
             </div>
         </div>

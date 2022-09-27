@@ -993,6 +993,11 @@ a:hover {
     font-weight: 500;
 }
 
+body .italics{
+    font-size: inherit;
+    color: inherit;
+}
+
 .custom-features-accordion .card .card-header .card-title.collapsed,
 .custom-features-accordion .card .card-header .card-title::after {
     color: var(--darkgrey) !important;

@@ -56,6 +56,32 @@ return[
     "desc-5-1-3" =>"Add keywords that match with the context",
     "desc-5-4" =>"It is worth noting that you should not use too many keywords within an article. Avoid keyword stuffing so that your content looks natural for readers. Use the keyword appropriately in each section to increase the performance of an SEO website organically.",
     "desc-5-5" =>"That was the information about what Word Counter is, its features, as well as its functions. Visit <a href='https://tools.cmlabs.co/en/word-counter'>this page</a> to use this cmlabs tool for free and check the keyword density needed to optimize your content.  ",
+    "howto-title" => 'How to Use Word Counter',
+    "howto1" => '<h2>How to Use Word Counter</h2>
+                    <p>In writing articles based on SEO rules, you need to pay attention to the number of words and the use of keywords. Word Counter from cmlabs can help ease your workload in evaluating content and adapting it to your SEO needs.</p>
+                    <p>This online counter from cmlabs is free and can be used anytime. There is no word limit so you can use it to evaluate a wide variety of text forms in a practical and automatic way.</p>
+                    <p>To use this free SEO tool from cmlabs, follow these steps:</p>
+                    <h4 class="sub-titles">Go to the cmlabs Word Counter Page</h4>',
+    "howto2" => '<p>Figure 1: Word Counter front page view from cmlabs</p>
+                    <p>Start the word counting process automatically by opening the Word Counter page from cmlabs. On this main page, you can see the box view to copy text from the draft that you have created or write it directly.</p>
+                    <p>There are several specifications that you need to pay attention to when using this tool. Each counter gives an indication of whether the text has met the writing requirements you set or not.</p>
+                    <h4 class="sub-titles">Write or Copy Text in the Designated Box</h4>',
+    "howto3" => '<p>Figure 2: Copy or write the text in the designated box</p>
+                    <p>After entering the destination page, you can copy the text or write it directly in the designated box. If the font size is not clearly visible on the device screen, set it accordingly by adjusting the size at the top of the box.</p>
+                    <p>To count words from the new text, click the <b>Create New</b> button at the top right of the box. The text will be deleted instantly and moved automatically to the history section or <b>Your Local History</b>.</p>
+                    <p>Don&#39;t forget to turn on <b>Autosave</b> so that your data is saved even if the tab is accidentally closed. You can click the icon on the top right side of the text box. If the icon is blue, it means that the autosave system has been activated.</p>',
+    "howto4" => '<p>Figure 3:  Create New and Autosave icon display</p>
+                    <h4 class="sub-titles">Check Character, Word, and Sentence Count</h4>',
+    "howto5" => '<p>Figure 4: Illustration of counter specifications</p>
+                    <p>The text entered in the field will be analyzed by the cmlabs counter system. The calculation results can be seen directly by the user. In other words, this tool does not require any time at all to perform data processing.</p>
+                    <p>Details of the results of the calculation of characters, words, and sentences can be seen at the top of the text box. In addition, you can see how many paragraphs there are and how long it takes to read on the same line.</p>
+                    <h4 class="sub-titles">Check Keyword Density</h4>',
+    "howto6" => '<p>Figure 5: Display of keyword density column in Word Counter from cmlabs</p>
+                    <p>In addition to the number of words, writing articles based on SEO rules must be done by paying attention to keyword density. The counter tool from cmlabs can quickly display reports and details of keyword density.</p>
+                    <p>You can check the density of each keyword by looking at the percentage on the right side of the column. The data is sorted by the number of words and the amount of volume or density in the text.</p>
+                    <p>Horizontally, there are five sequences arranged according to the number of keywords in the text found by the counter. The order is arranged vertically according to the number of keywords and their percentage.</p>
+                    <p>From this data, you can see whether the keyword density has met the SEO requirements you specified or not. If you think that the percentage is not up to standard, then you can make adjustments by using the keyword according to your SEO needs.</p>
+                    <p>That was the information about how to use the text counter from cmlabs. The number of words is important in writing content according to SEO rules. Of course, this has something to do with the keyword density in the text. To use this tool, visit the <a href="https://tools.cmlabs.co/en/word-counter">Word Counter</a> page and make sure your content optimization needs are met.</p>',
     "whats-new-1"=>"Now users can use the Word Counter tool with the autosave feature. With these updates and additional features, you don't have to worry if your writing gets lost when a technical problem occurs. Your writing would be saved safely on our system. It's time to write securely for better writing results.",
     "whats-new-2"=>"The latest version update supports copy and adjusts font features. With this, you can adjust the appearance of the font according to what you need. Copy text easily and organize it in any way you like. We support more creative writing in this latest update. It's the right time to upgrade your writing result.",
 ];
