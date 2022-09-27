@@ -332,6 +332,26 @@ id/json-ld-how-to-schema-generator
                           </pre>
                         <p>@lang('howto.desc-4-4')</p>
                 </div>
+                <div class="d-none" id="description-tab-5"><i class="italics"></i>
+                    
+                    @lang('howto.howto1')
+                    <img class="mb-4" src="{{asset('/media/images/howto_instruction_1.webp')}}" alt="HowTo-howto-1" width="80%">
+                    @lang('howto.howto2')
+                    <img class="mb-4" src="{{asset('/media/images/howto_instruction_2.webp')}}" alt="HowTo-howto-2" width="80%">
+                    @lang('howto.howto3')
+                    <img class="mb-4" src="{{asset('/media/images/howto_instruction_3.webp')}}" alt="HowTo-howto-3" width="80%">
+                    @lang('howto.howto4')
+                    <img class="mb-4" src="{{asset('/media/images/howto_instruction_4.webp')}}" alt="HowTo-howto-4" width="80%">
+                    @lang('howto.howto5')
+                    <img class="mb-4" src="{{asset('/media/images/howto_instruction_5.webp')}}" alt="HowTo-howto-5" width="80%">
+                    @lang('howto.howto6')
+                    <img class="mb-4" src="{{asset('/media/images/howto_instruction_6.webp')}}" alt="HowTo-howto-6" width="80%">
+                    @lang('howto.howto7')
+                    <img class="mb-4" src="{{asset('/media/images/howto_instruction_7.webp')}}" alt="HowTo-howto-7" width="80%">
+                    @lang('howto.howto8')
+                    <img class="mb-4" src="{{asset('/media/images/howto_instruction_8.webp')}}" alt="HowTo-howto-8" width="80%">
+                    @lang('howto.howto9')
+                </div>
             </div>
             <div class="col-md-3">
                 <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-1">
@@ -357,6 +377,12 @@ id/json-ld-how-to-schema-generator
                         <span class="label label-lg label-tools-description" id="nav-label-tab-4">4</span>
                     </div>
                     <a class="">@lang('howto.desc-4')</a>
+                </div>
+                <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-5">
+                    <div class="mr-2" style="width:24px !important; height: 24px !important;">
+                        <span class="label label-lg label-tools-description" id="nav-label-tab-5">5</span>
+                    </div>
+                    <a class="">@lang('howto.howto-title')</a>
                 </div>
             </div>
         </div>

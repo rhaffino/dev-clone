@@ -242,6 +242,23 @@ id/json-ld-faq-schema-generator
                       </pre>
                     <p>@lang('faq.desc-5-2')</p>
                 </div>
+                <div class="d-none" id="description-tab-6">
+                    @lang('faq.howto1')
+                    <img class="mb-4" src="{{asset('/media/images/faq_instruction_1.svg')}}" alt="HowTo-faq-1" width="80%">
+                    @lang('faq.howto2')
+                    <img class="mb-4" src="{{asset('/media/images/faq_instruction_2.svg')}}" alt="HowTo-faq-2" width="80%">
+                    @lang('faq.howto3')
+                    <img class="mb-4" src="{{asset('/media/images/faq_instruction_3.svg')}}" alt="HowTo-faq-3" width="80%">
+                    @lang('faq.howto4')
+                    <img class="mb-4" src="{{asset('/media/images/faq_instruction_4.svg')}}" alt="HowTo-faq-4" width="80%">
+                    @lang('faq.howto5')
+                    <img class="mb-4" src="{{asset('/media/images/faq_instruction_5.svg')}}" alt="HowTo-faq-5" width="80%">
+                    @lang('faq.howto6')
+                    <img class="mb-4" src="{{asset('/media/images/faq_instruction_6.svg')}}" alt="HowTo-faq-6" width="80%">
+                    @lang('faq.howto7')
+                    <img class="mb-4" src="{{asset('/media/images/faq_instruction_7.svg')}}" alt="HowTo-faq-7" width="80%">
+                    @lang('faq.howto8')
+                </div>
             </div>
             <div class="col-md-3">
                 <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-1">
@@ -273,6 +290,12 @@ id/json-ld-faq-schema-generator
                         <span class="label label-lg label-tools-description" id="nav-label-tab-5">5</span>
                     </div>
                     <a class="">@lang('faq.desc-5')</a>
+                </div>
+                <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-6">
+                    <div class="mr-2" style="width:24px !important; height: 24px !important;">
+                        <span class="label label-lg label-tools-description" id="nav-label-tab-6">6</span>
+                    </div>
+                    <a class="">@lang('faq.howto-title')</a>
                 </div>
             </div>
         </div>

@@ -219,6 +219,21 @@ id/hreflang-checker
                     </ul>
                     <p class="text-black">@lang('hreflang.desc-5-2')</p>
                 </div>
+                <div class="d-none" id="description-tab-6">
+                    @lang('hreflang.howto1')
+                    <img class="mb-4" src="{{asset('/media/images/hreflang_instruction_1.webp')}}" alt="HowTo-hreflang-1" width="80%">
+                    @lang('hreflang.howto2')
+                    <img class="mb-4" src="{{asset('/media/images/hreflang_instruction_2.webp')}}" alt="HowTo-hreflang-2" width="80%">
+                    @lang('hreflang.howto3')
+                    <img class="mb-4" src="{{asset('/media/images/hreflang_instruction_3.webp')}}" alt="HowTo-hreflang-3" width="80%">
+                    @lang('hreflang.howto4')
+                    <img class="mb-4" src="{{asset('/media/images/hreflang_instruction_4.webp')}}" alt="HowTo-hreflang-4" width="80%">
+                    @lang('hreflang.howto5')
+                    <img class="mb-4" src="{{asset('/media/images/hreflang_instruction_5.webp')}}" alt="HowTo-hreflang-5" width="80%">
+                    @lang('hreflang.howto6')
+                    <img class="mb-4" src="{{asset('/media/images/hreflang_instruction_6.webp')}}" alt="HowTo-hreflang-6" width="80%">
+                    @lang('hreflang.howto7')
+                </div>
             </div>
             <div class="col-md-3">
                 <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-1">
@@ -250,6 +265,12 @@ id/hreflang-checker
                         <span class="label label-lg label-tools-description" id="nav-label-tab-5">5</span>
                     </div>
                     <a class="">@lang('hreflang.desc-5')</a>
+                </div>
+                <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-6">
+                    <div class="mr-2" style="width:24px !important; height: 24px !important;">
+                        <span class="label label-lg label-tools-description" id="nav-label-tab-6">6</span>
+                    </div>
+                    <a class="">@lang('hreflang.howto-title')</a>
                 </div>
             </div>
         </div>

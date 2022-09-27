@@ -85,6 +85,44 @@ return [
     "desc-10-14" => "The Chrome User Experience report collects real-world speed records of opt-in customers and calls to it URLs must be public (crawlable and indexable) and displays quite a nice sample variation that offers a representative and anonymous view of overall URL performance.",
     "desc-10-15" => "Why is the real international Chrome User Experience Report speed record now no longer available for a single source?",
     "desc-10-16" => "The Chrome User Experience report collects real-world speed records from opt-in customers and requests that the originating root web page should be public (crawlable and indexable) and display sufficiently good sample variations that offer a representative and anonymous view of the origin of overall performance across all possible URLs visited at that origin.",
+    "howto-title" => 'How to Use PageSpeed ​​Test?',
+    "howto1" => '<h2>How to Use PageSpeed ​​Test?</h2>
+                    <p>The following guide contains how to use PageSpeed ​​Test you can do. Follow each step to the end.</p>
+                    <h4 class="sub-titles">Go to PageSpeed ​​Test Page</h4>
+                    <p>As a first step in starting a website page speed check, you need to open the PageSpeed ​​Test page. On that page, you will see some of the features that the tool has. Starting from adding the URL to be checked for page speed, displaying the results of the page speed check, to the page speed checking history that you have done before.</p>',
+    "howto2" => '<p>Figure 1: PageSpeed ​​Test page view from cmlabs</p>
+                    <h4 class="sub-titles">Enter Website URL</h4>
+                    <p>In order to be able to check page speed, you must first enter the website URL in the field provided. Make sure you have entered the URL in the correct format (e.g https://example.com). Next, click the <b>&#34;Generate&#34;</b> button to give the command to this tool to start checking pagespeed on the website.</p>',
+    "howto3" => '<p>Figure 2: The display when the user has entered the website URL in the provided field.</p>
+                    <h4 class="sub-titles">PageSpeed ​​Check Result Analysis</h4>
+                    <p>You need to wait a while until the pagespeed check process is complete. Although this tool can be accessed for free, the pagespeed checking data displayed is quite complete. Some of the metrics you can find in your PageSpeed ​​Test results are:</p>
+                    <h6 class="sub-titles">Performance</h6>
+                    <p>This metric displays the results of testing the overall website performance. Starting from the test results of core web vitals metrics, time to interactive, total blocking time, to speed index. The value categories are divided into good (90-100), need improvement (50-89), and bad (0-49).</p>',
+    "howto4" => '<p>Figure 3: Performance assessment results from websites tracked using PageSpeed ​​Test</p>
+                    <h6 class="sub-titles">Accessibility</h6>
+                    <p>This metric displays the results of your web page accessibility assessment. The accessibility of a website is assessed based on how easily the website can be accessed by users.</p>',
+    "howto5" => '<p>Figure 4: Detailed page accessibility assessment of websites tracked using PageSpeed ​​Test</p>
+                    <h6 class="sub-titles">Best Practice</h6>
+                    <p>This metric will display a report containing information on whether your website has implemented best practices in website creation. If the assessment results still need improvement, this is the right time for you to improve website performance.</p>',
+    "howto6" => '<p>Figure 5: Best practice metrics assessment results on tracked websites</p>
+                    <h6 class="sub-titles">SEO</h6>
+                    <p>You will also find the results of the SEO assessment of your website. The following report will contain information on whether your website has been optimized on search engines or not. With this report, you can find elements that need to be improved on your website.</p>',
+    "howto7" => '<p>Figure 6: Detailed results of Search Engine Optimization (SEO) quality assessments on tracked websites
+                    </p>
+                    <h6 class="sub-titles">PWA</h6>
+                    <P>In the following assessment results, you will see whether your website has met the Progressive Web App (PWA) criteria. If the website has not implemented PWA optimally, this can be a sign that you have found a space that needs to be improved on your website. That way, the website can provide a better user experience.</P>',
+    "howto8" => '<p>Figure 7: Detailed Progressive Web App (PWA) assessment results on tracked websites</p>
+                    <h4 class="sub-titles">View PageSpeed ​​Test Usage History</h4>
+                    <p>The last thing you can do using PageSpeed ​​Test is look at your history of using the tool. In the list, you will see a list of website URLs that you have checked using the PageSpeed ​​Test tool from cmlabs.
+                    </p>',
+    "howto9" => '<p>Figure 8: List of pagespeed test usage history</p>
+                    <h4 class="sub-titles">Login After 5 Times of Usage</h4>
+                    <p>Some cmlabs  free tools require login after 5 times of use, Pagespeed test is one of them. If you have used it 5 times, our system will automatically display a message stating that you have reached the usage limit.</p>',
+    "howto10" => '<p>Figure 9: Warning usage has reached the limit. In this warning, there is a login button that directs to the login page.</p>
+                    <p>You can log in by clicking the login button on the warning message that appears. Next, you will be directed to the cmlabs login page. Please enter the required data, or you can log in via Google.</p>',
+    "howto11" => '<p>Figure 10: cmlabs login page</p>
+                    <p>Once you&#39;ve successfully logged in, you&#39;ll be able to go back to using this tool to do page speed testing for free. By logging in, the system can save historical data on the use of this tool in the last a year.
+                    </p>',
     "highlight" => 'In the latest version of the Pagespeed Test tool, users can view the search history with the "local history" feature and check the SEO score using the Progressive Web APP feature. We specialize in these two additional features for you to use in optimizing your website to be faster and able to provide an experience like using a mobile application.',
     "whats-new-1" => 'Now users can see the search history. With this latest version update, the page speed test is provided with a "local history" feature. You are no longer need to enter the page URL twice if you want to check the previous website, all you need to do is click the search history list. An efficient breakthrough with this latest change.',
     "whats-new-2" => "In this latest version, we have combined a Progressive Web App and SEO score checker. Optimization that is carried out will not only make the website faster but also be able to provide an experience like using a mobile application. With this version update, you'd know what to improve right away.",

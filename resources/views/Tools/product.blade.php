@@ -384,6 +384,29 @@ id/json-ld-product-schema-generator
                     </pre>
                     <p>@lang('product.desc-4-2')</p>
                 </div>
+                <div class="" id="description-tab-5">
+                    @lang('product.howto1')
+                    <img class="mb-4" src="{{asset('/media/images/product_instruction_1.webp')}}" alt="HowTo-product-1" width="80%">
+                    @lang('product.howto2')
+                    <img class="mb-4" src="{{asset('/media/images/product_instruction_2.webp')}}" alt="HowTo-product-2" width="80%">
+                    @lang('product.howto3')
+                    <img class="mb-4" src="{{asset('/media/images/product_instruction_3.webp')}}" alt="HowTo-product-3" width="80%">
+                    @lang('product.howto4')
+                    <img class="mb-4" src="{{asset('/media/images/product_instruction_4.webp')}}" alt="HowTo-product-4" width="80%">
+                    @lang('product.howto5')
+                    <img class="mb-4" src="{{asset('/media/images/product_instruction_5.webp')}}" alt="HowTo-product-5" width="80%">
+                    @lang('product.howto6')
+                    <img class="mb-4" src="{{asset('/media/images/product_instruction_6.webp')}}" alt="HowTo-product-6" width="80%">
+                    @lang('product.howto7')
+                    <img class="mb-4" src="{{asset('/media/images/product_instruction_7.webp')}}" alt="HowTo-product-7" width="80%">
+                    @lang('product.howto8')
+                    <img class="mb-4" src="{{asset('/media/images/product_instruction_8.webp')}}" alt="HowTo-product-8" width="80%">
+                    @lang('product.howto9')
+                    <img class="mb-4" src="{{asset('/media/images/product_instruction_9.webp')}}" alt="HowTo-product-9" width="80%">
+                    @lang('product.howto10')
+                    <img class="mb-4" src="{{asset('/media/images/product_instruction_10.webp')}}" alt="HowTo-product-10" width="80%">
+                    @lang('product.howto11')
+                </div>
             </div>
             <div class="col-md-3">
                 <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-1">
@@ -409,6 +432,12 @@ id/json-ld-product-schema-generator
                         <span class="label label-lg label-tools-description" id="nav-label-tab-4">4</span>
                     </div>
                     <a class="">@lang('product.desc-4')</a>
+                </div>
+                <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-5">
+                    <div class="mr-2" style="width:24px !important; height: 24px !important;">
+                        <span class="label label-lg label-tools-description" id="nav-label-tab-5">5</span>
+                    </div>
+                    <a class="">@lang('product.howto-title')</a>
                 </div>
             </div>
         </div>

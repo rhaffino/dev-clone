@@ -458,6 +458,29 @@ id/pagespeed-test
                     <p class="text-black">@lang('pagespeed.desc-3-5-2')</p>
                     <p class="text-black">@lang('pagespeed.desc-3-5-3')</p>
                 </div>
+                <div class="d-none" id="description-tab-4">
+                    @lang('pagespeed.howto1')
+                    <img class="mb-4" src="{{asset('/media/images/pagespeed_instruction_1.webp')}}" alt="HowTo-pagespeed-1" width="80%">
+                    @lang('pagespeed.howto2')
+                    <img class="mb-4" src="{{asset('/media/images/pagespeed_instruction_2.webp')}}" alt="HowTo-pagespeed-2" width="80%">
+                    @lang('pagespeed.howto3')
+                    <img class="mb-4" src="{{asset('/media/images/pagespeed_instruction_3.webp')}}" alt="HowTo-pagespeed-3" width="80%">
+                    @lang('pagespeed.howto4')
+                    <img class="mb-4" src="{{asset('/media/images/pagespeed_instruction_4.webp')}}" alt="HowTo-pagespeed-4" width="80%">
+                    @lang('pagespeed.howto5')
+                    <img class="mb-4" src="{{asset('/media/images/pagespeed_instruction_5.webp')}}" alt="HowTo-pagespeed-5" width="80%">
+                    @lang('pagespeed.howto6')
+                    <img class="mb-4" src="{{asset('/media/images/pagespeed_instruction_6.webp')}}" alt="HowTo-pagespeed-6" width="80%">
+                    @lang('pagespeed.howto7')
+                    <img class="mb-4" src="{{asset('/media/images/pagespeed_instruction_7.webp')}}" alt="HowTo-pagespeed-7" width="80%">
+                    @lang('pagespeed.howto8')
+                    <img class="mb-4" src="{{asset('/media/images/pagespeed_instruction_8.webp')}}" alt="HowTo-pagespeed-8" width="80%">
+                    @lang('pagespeed.howto9')
+                    <img class="mb-4" src="{{asset('/media/images/pagespeed_instruction_9.webp')}}" alt="HowTo-pagespeed-9" width="80%">
+                    @lang('pagespeed.howto10')
+                    <img class="mb-4" src="{{asset('/media/images/pagespeed_instruction_10.webp')}}" alt="HowTo-pagespeed-10" width="80%">
+                    @lang('pagespeed.howto11')
+                </div>
             </div>
             <div class="col-md-3">
                 <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-1">
@@ -477,6 +500,12 @@ id/pagespeed-test
                         <span class="label label-lg label-tools-description" id="nav-label-tab-3">3</span>
                     </div>
                     <a class="">@lang('pagespeed.desc-3')</a>
+                </div>
+                <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-4">
+                    <div class="mr-2" style="width:24px !important; height: 24px !important;">
+                        <span class="label label-lg label-tools-description" id="nav-label-tab-4">4</span>
+                    </div>
+                    <a class="">@lang('pagespeed.howto-title')</a>
                 </div>
             </div>
         </div>
