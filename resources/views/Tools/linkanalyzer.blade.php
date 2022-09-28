@@ -300,6 +300,23 @@ id/link-analyzer
                         <li><p class="text-black">@lang('analyzer.desc-4-1-1-5')</p></li>
                     </ul>
                 </div>
+                <div class="d-none" id="description-tab-5"><i class="italics"></i>
+                    @lang('analyzer.howto1')
+                    <img class="mb-4" src="{{asset('/media/images/analyzer_instruction_1.webp')}}" alt="HowTo-analyzer-1" width="80%">
+                    @lang('analyzer.howto2')
+                    <img class="mb-4" src="{{asset('/media/images/analyzer_instruction_2.webp')}}" alt="HowTo-analyzer-2" width="80%">
+                    @lang('analyzer.howto3')
+                    <img class="mb-4" src="{{asset('/media/images/analyzer_instruction_3.webp')}}" alt="HowTo-analyzer-3" width="80%">
+                    @lang('analyzer.howto4')
+                    <img class="mb-4" src="{{asset('/media/images/analyzer_instruction_4.webp')}}" alt="HowTo-analyzer-4" width="80%">
+                    @lang('analyzer.howto5')
+                    <img class="mb-4" src="{{asset('/media/images/analyzer_instruction_5.webp')}}" alt="HowTo-analyzer-5" width="80%">
+                    @lang('analyzer.howto6')
+                    <img class="mb-4" src="{{asset('/media/images/analyzer_instruction_6.webp')}}" alt="HowTo-analyzer-6" width="80%">
+                    @lang('analyzer.howto7')
+                    <img class="mb-4" src="{{asset('/media/images/analyzer_instruction_7.webp')}}" alt="HowTo-analyzer-7" width="80%">
+                    @lang('analyzer.howto8')
+                </div>
             </div>
             <div class="col-md-3">
                 <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-1">
@@ -325,6 +342,12 @@ id/link-analyzer
                         <span class="label label-lg label-tools-description" id="nav-label-tab-4">4</span>
                     </div>
                     <a class="">@lang('analyzer.desc-4')</a>
+                </div>
+                <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-5">
+                    <div class="mr-2" style="width:24px !important; height: 24px !important;">
+                        <span class="label label-lg label-tools-description" id="nav-label-tab-5">5</span>
+                    </div>
+                    <a class="">@lang('analyzer.howto-title')</a>
                 </div>
             </div>
         </div>

@@ -77,7 +77,7 @@ return [
                 <p>Anda bisa menambahkan beberapa langkah tambahan dengan menekan tombol <b>&#34;Tambah URL&#34;</b>. Tidak hanya itu, Anda juga bisa menghapus langkah yang tidak diperlukan dengan menekan <b>ikon silang</b> yang ada di samping kanan field instruksi.</p>',
     "howto6" => '<p>Gambar 5: Tambahkan serangkaian langkah atau instruksi pada field yang tersedia di how to schema generator.</p>
                 <h4 class="sub-titles">Salin How-to Schema Markup Yang Dihasilkan</h4>
-                <p>Jika Anda telah melengkapi atribut yang dibutuhkan untuk membuat how to schema markup, maka Anda akan melihat preview schema markup di bagian kanan. Anda dapat menyalin schema markup secara langsung dengan tombol &<>b#34;salin&#34;</b> dan pasang ke dalam kode program Anda.</p>',
+                <p>Jika Anda telah melengkapi atribut yang dibutuhkan untuk membuat how to schema markup, maka Anda akan melihat preview schema markup di bagian kanan. Anda dapat menyalin schema markup secara langsung dengan tombol <b>&#34;salin&#34;</b> dan pasang ke dalam kode program Anda.</p>',
     "howto7" => '<p>Gambar 6: Opsi salin <i class="italics">How-to schema markup</i></p>
                 <h4 class="sub-titles">Cek Validasi Script JSON-LD How-to Schema</h4>
                 <p>Dengan How-to schema generator, Anda juga bisa memeriksa validitas <i class="italics">script</i> JSON-LD yang Anda gunakan. Cara mengeceknya pun cukup mudah, cukup tekan opsi cek yang terdapat di bagian pratinjau <i class="italics">script</i> yang dihasilkan.</p>

@@ -93,7 +93,7 @@ return [
     "howto3" => '<p>Gambar 2: Masukkan nama resep, keyword, dan deskripsi resep untuk membuat recipe schema markup.</p>
                     <h4 class="sub-titles">Tambah Gambar</h4>
                     <p>Secara default, tool ini menyediakan 1 field yang dapat digunakan untuk menambahkan gambar. Jika Anda ingin menambahkan gambar lain, maka Anda bisa menekan tombol <b>&#34;Tambah Gambar&#34;</b> dan tool ini akan menampilkan field baru yang bisa Anda gunakan untuk memasukkan URL gambar lainnya.</p>',
-    "howto4" => '<p>Gambar 3: Tombol “Tambah Gambar” pada recipe <i class="italics">schema generator</i> dari cmlabs.</p>
+    "howto4" => '<p>Gambar 3: Tombol <b>&#34;Tambah Gambar&#34;</b> pada recipe <i class="italics">schema generator</i> dari cmlabs.</p>
                     <h4 class="sub0titles">Masukkan Informasi Pendukung</h4>
                     <p>Selanjutnya, Anda bisa menambahkan informasi pendukung yang terdiri dari URL konten video, URL sematan video, kreator resep, tanggal publikasi, waktu persiapan, waktu memasak, kategori masakan, nama masakan, dan porsi masakan. Data ini bersifat opsional, dimana Anda bisa melewatinya jika tidak perlu mencantumkan informasi pendukung.</p>',
     "howto5" => '<p>Gambar 4: Tampilan form untuk memasukkan informasi pendukung dalam membuat recipe schema markup.</p>

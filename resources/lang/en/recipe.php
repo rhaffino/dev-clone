@@ -92,10 +92,10 @@ return [
     "howto3" => '<p>Figure 2: Enter the recipe name, keywords, and recipe description to create a recipe schema markup.</p>
                     <h4 class="sub-titles">Add Image</h4>
                     <p>By default, this tool provides 1 field that can be used to add an image. If you want to add another image, then you can press the <b>&#34;Add Image&#34;</b> button and this tool will display a new field that you can use to enter the URL of another image.</p>',
-    "howto4" => '<h4 class="sub-titles">Input Supporting Information</h4>
+    "howto4" => '<p>Figure 3: &#34;Add Image&#34; button on the recipe schema generator from cmlabs.</p>
+                    <h4 class="sub-titles">Input Supporting Information</h4>
                     <p>Next, you can add supporting information consisting of video content URL, video embed URL, recipe creator, publication date, preparation time, cooking time, category of the dish, name of a dish, and the portion of the dish. This data is optional, which you can skip if you don&#39;t need to include supporting information.</p>',
-    "howto5" => '<p>Figure 3: &#34;Add Image&#34; button on the recipe schema generator from cmlabs.</p>
-                    <p>Figure 4: Display form to enter supporting information in creating recipe schema markup.</p>
+    "howto5" => '<p>Figure 4: Display form to enter supporting information in creating recipe schema markup.</p>
                     <h4 class="sub-titles">Add Ingredients</h4>
                     <p>After inputting supporting information, you can add cooking ingredients. The method is quite easy, you can do it by clicking the <b>&#34;Add Material&#34;</b> button. Next, enter the name of the ingredient in the column provided in the recipe schema generator.</p>',
     "howto6" => '<p>Figure 5: Option to add ingredients to recipe schema markup</p>

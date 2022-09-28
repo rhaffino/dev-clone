@@ -408,7 +408,6 @@ id/json-ld-jobPosting-schema-generator
                     <p>@lang('jobPosting.desc-4-2')</p>
                 </div>
                 <div class="d-none" id="description-tab-5">
-                    
                     @lang('jobPosting.howto1')
                     <img class="mb-4" src="{{asset('/media/images/jobposting_instruction_1.webp')}}" alt="HowTo-jobPosting-1" width="80%">
                     @lang('jobPosting.howto2')

@@ -36,15 +36,32 @@ return [
     "desc-5" => "Contoh Hasil Schema Markup yang Dihasilkan",
     "desc-5-1" => "Berikut adalah contoh hasil script yang dihasilkan dari JSON-LD FAQ Schema Markup setelah Anda memasukkan beberapa pertanyaan dan jawabannya.",
     "desc-5-2" => 'Demikian pembahasan lengkap mengenai tool cmlabs JSON-LD FAQ Schema Generator. Kunjungi <a href="https://tools.cmlabs.co/id/json-ld-faq-schema-generator">laman tool ini</a> untuk memulai pembuatan skema FAQ untuk menunjang performa bisnis Anda di <i class="italics">search engine.</i>',
-    "howto-title" => '',
-    "howto1" => '',
-    "howto2" => '',
-    "howto3" => '',
-    "howto4" => '',
-    "howto5" => '',
-    "howto6" => '',
-    "howto7" => '',
-    "howto8" => '',
+    "howto-title" => 'Cara Menggunakan FAQ Schema Generator?',
+    "howto1" => '<h2>Cara Menggunakan FAQ Schema Generator?</h2>
+                    <p>FAQ schema generator adalah tool gratis dari cmlabs yang bisa Anda gunakan untuk membuat <i class="italics">FAQ schema markup</i> secara otomatis. Adapun cara membuat FAQ schema menggunakan tool ini adalah sebagai berikut:</p>
+                    <h4 class="sub-titles">Buka Halaman JSON-LD FAQ Schema Generator</h4>
+                    <p>Pertama-tama buka laman <a href="https://tools.cmlabs.co/en/json-ld-faq-schema-generator">JSON-LD FAQ Schema Generator</a> untuk memulai perjalanan Anda dalam membuat FAQ schema markup secara otomatis. Tool ini menawarkan kemudahan bagi Anda yang memiliki kendala dalam membuat FAQ schema secara manual. Terlebih lagi, schema markup yang dihasilkan oleh tool ini telah mengikuti pedoman penelusuran Google.</p>',
+    "howto2" => '<p>Gambar 1: Tampilan halaman FAQ <i class="italics">schema generator</i> dari cmlabs.</p>
+                    <h4 class="sub-titles">Masukkan Data yang Dibutuhkan</h4>
+                    <p>Tool JSON-LD generator dari cmlabs ini menghadirkan cara membuat FAQ schema yang sangat mudah. Dengan memasukkan data yang dibutuhkan seperti pertanyaan dan jawaban, Anda bisa langsung melihat FAQ schema markup yang berhasil dibuat. Sebelumnya, pastikan Anda telah memilih opsi FAQ page pada opsi skema yang ingin dibuat.</p>',
+    "howto3" => '<p>Gambar 2: Masukkan data yang dibutuhkan untuk membuat FAQ schema markup.</p>
+                    <h4 class="sub-titles">Tambah Pertanyaan Baru</h4>
+                    <p>Secara default, tool ini menyediakan 1 field yang dapat digunakan untuk membuat JSON-LD FAQ schema. Jika Anda ingin menambah pertanyaan lain, maka Anda bisa menekan tombol <b>&#34;Add Question&#34;</b> dan tool ini akan menampilkan field baru yang bisa Anda gunakan untuk menambah pertanyaan baru beserta jawaban dari pertanyaan tersebut.</p>',
+    "howto4" => '<p>Gambar 3: Tombol <b>&#34;Add Question&#34;</b> pada FAQ <i class="italics">schema generator</i> dari cmlabs.</p>
+                    <h4 class="sub-titles">Hapus Pertanyaan</h4>
+                    <p>Apabila Anda ingin menghapus pertanyaan yang tidak dibutuhkan, maka Anda bisa menekan ikon silang yang ada di sebelah kanan field untuk memasukkan draft FAQ. Perlu diperhatikan, field yang dihapus tidak dapat dipulihkan kembali.</p>',
+    "howto5" => '<p>Gambar 4: Tombol <b>ikon silang</b> untuk menghapus FAQ pada JSON-LD FAQ schema generator dari cmlabs.</p>
+                    <h4 class="sub-titles">Salin FAQ Schema Markup Yang Dihasilkan</h4>
+                    <p>Setelah menginputkan pertanyaan dan jawaban ke dalam field yang disediakan, Anda akan melihat pratinjau FAQ schema markup pada bagian kanan. Untuk menambahkan FAQ schema pada website, Anda bisa menekan opsi salin dan tempel <i class="italics">script</i> tersebut ke dalam kode program Anda.</p>',
+    "howto6" => '<p>Gambar 5: Opsi salin <i class="italics">FAQ schema markup</i></p>
+                    <h4 class="sub-titles">Cek Validasi Script JSON-LD FAQ Schema</h4>
+                    <p>Dengan FAQ schema generator, Anda juga bisa memeriksa validitas <i class="italics">script</i> JSON-LD yang Anda gunakan untuk membuat FAQ. Cara mengeceknya pun cukup mudah, cukup tekan opsi cek yang terdapat di bagian pratinjau <i class="italics">script</i> yang dihasilkan.</p>
+                    <p>Ketika Anda menekan tombol tersebut, maka Anda akan dialihkan menuju laman <a href="https://search.google.com/test/rich-results">Rich Result Test</a> milik Google. Pada halaman tersebut, Anda dapat mengecek apakah <i class="italics">schema markup</i> yang dihasilkan dapat berfungsi dengan baik di penelusuran Google.</p>',
+    "howto7" => '<p>Gambar 6: Opsi cek validasi FAQ schema markup</p>
+                    <h4 class="sub-titles">Reset FAQ Schema Generator</h4>
+                    <p>Tool ini memiliki opsi yang memudahkan Anda dalam menemukan cara membuat FAQ schema lainnya. Cukup klik opsi <b>&#34;Reset&#34;</b> dan menghapus seluruh data FAQ yang telah ditambahkan sebelumnya. Selanjutnya, Anda bisa membuat script FAQ baru.</p>',
+    "howto8" => '<p>Gambar 7: Opsi reset data yang ditambahkan pada FAQ schema generator.</p>
+                    <p>Itulah pembahasan singkat mengenai cara membuat FAQ schema menggunakan tools <a href="https://tools.cmlabs.co/en/json-ld-faq-schema-generator">JSON-LD FAQ schema markup generator</a> dari cmlabs. Tools ini dapat membantu Anda menghasilkan schema markup secara cepat dan efisien. Coba tool ini sekarang!</p>',
     "highlight" => "Pada tool FAQ Schema Generator di versi terbaru ini, Anda dapat memasukkan konten berkualitas tinggi yang akan membantu pelanggan memahami produk dan layanan dengan cepat. Sehingga, skema FAQ Anda dapat memainkan peran penting dalam mengarahkan audiens untuk menjadi pelanggan potensial.  pengguna dapat membuat skema pertanyaan yang paling sering diajukan dengan tool FAQ Schema Generator dari JSON LD.",
     "whats-new-1" => "Sekarang, pengguna dapat membuat skema pertanyaan yang paling sering diajukan dengan tool FAQ Schema Generator dari JSON LD. Skema ini akan membantu situs Anda untuk menarik lalu lintas besar-besaran dan mengonversi lebih banyak pelanggan. Ini adalah cara terbaik untuk mengoptimasi laman Anda.",
     "whats-new-2" => "Pada tool FAQ Schema Generator di versi terbaru ini, Anda dapat memasukkan konten berkualitas tinggi yang akan membantu pelanggan memahami produk dan layanan dengan cepat. Sehingga, skema FAQ Anda dapat memainkan peran penting dalam mengarahkan audiens untuk menjadi pelanggan potensial. Kami berharap tool ini dapat membantu bisnis Anda berkembang.",

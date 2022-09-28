@@ -194,7 +194,6 @@ id/keyword-permutation
                     <p class="text-black">@lang('permutation.desc-3-3-3')</p>
                 </div>
                 <div class="d-none" id="description-tab-4"><i class="italics"></i>
-                    
                     @lang('permutation.howto1')
                     <img class="mb-4" src="{{asset('/media/images/permutation_instruction_1.webp')}}" alt="HowTo-permutation-1" width="80%">
                     @lang('permutation.howto2')
