@@ -119,7 +119,8 @@ return [
                     <p>If you have completed the required attributes to create the Product schema markup, then you will see a preview of the schema markup on the right. You can copy the schema markup directly with the <b>&#34;copy&#34;</b> button and paste it into your program code.</p>',
     "howto9" => '<p>Figure 8: Product schema markup copy options</p>
                     <h4 class="sub-titles">Check JSON-LD Product Schema Script Validation</h4>
-                    <p>With the Person schema generator, you can also check the validity of the JSON-LD script you are using. How to check it is quite easy, just press the <b>check</b> option contained in the preview of the resulting script.</p>',
+                    <p>With the Person schema generator, you can also check the validity of the JSON-LD script you are using. How to check it is quite easy, just press the <b>check</b> option contained in the preview of the resulting script.</p>
+                    <p>When you press the button, you will be redirected to <a href="https://search.google.com/test/rich-results">Google&#39;s Rich Result Test</a> page. On that page, you can check if the generated schema markup is working properly in Google search.</p>',
     "howto10" => '<p>Figure 9: Product schema markup validation check options</p>
                     <h4 class="sub-titles">Reset Schema Generator</h4>
                     <p>This tool has options that make it easier for you to create a new Product schema. Just click the <b>&#34;Reset&#34;</b> option and delete all the data that was added previously. Next, you can create a new script.</p>',

@@ -311,7 +311,7 @@ id/json-ld-breadcrumb-schema-generator
                     <div class="mr-2" style="width:24px !important; height: 24px !important;">
                         <span class="label label-lg label-tools-description" id="nav-label-tab-6">6</span>
                     </div>
-                    <a class="">@lang('breadcrumb.howto1-title')</a>
+                    <a class="">@lang('breadcrumb.howto-title')</a>
                 </div>
             </div>
         </div>

@@ -38,7 +38,7 @@ return [
     "desc-4-3" => "An example of the JSON-LD code that you will receive from the breadcrumb schema generator is as follows:",
     "desc-5" => "What Happens After the Schema Is Implemented?",
     "desc-5-1" => "Once implemented, you can test your implementation at the page or code level using Google's Rich Snippet Testing Tool. Once it is live, you can ask Google to crawl your modified page. Next, monitor your CTR and traffic levels after the implementation.",
-    "howto1-title" =>'How to Use the Breadcrumb Schema Generator?',
+    "howto-title" =>'How to Use the Breadcrumb Schema Generator?',
     "howto1" => '<h2>How to Use the Breadcrumb Schema Generator?</h2>
                 <p>Breadcrumb schema generator is a tool that can help you to generate breadcrumb schema markup more easily. Here&#39;s how to make breadcrumbs that you can do with this tool:</p>
                 <h4 class="sub-titles">Open JSON-LD Breadcrumb Schema Generator Page</h4>
@@ -63,7 +63,7 @@ return [
                     <h4 class="sub-titles">Reset Breadcrumb Schema Generator</h4>
                     <p>This tool also provides options that make it easier for you to delete all the data that you have previously entered. You just need to select the <b>&#34;Reset&#34;</b> option and this tool will display a new field, so you can create another breadcrumb schema.</p>',
     "howto8" => '<p>Figure 7: Data reset option added to breadcrumb schema generator.</p>
-                    <p>That&#39;s a brief discussion about how to use the <a href="https://tools.cmlabs.co/en/json-ld-breadcrumb-schema-generator"> breadcrumb schema markup generator</a> from cmlabs. These tools are easy to use and help you generate schema markup in a relatively short time. Try this tool now!</p>',
+                    <p>That&#39;s a brief discussion about how to use the <a href="https://tools.cmlabs.co/en/json-ld-breadcrumb-schema-generator">JSON-LD breadcrumb schema markup generator</a> from cmlabs. These tools are easy to use and help you generate schema markup in a relatively short time. Try this tool now!</p>',
     "whats-new-1" => "In the newest version of JSON LD, we added Breadcrumb Schema Generator. This tool is useful for allowing users to grab clicks from a page that is ranked above it if you have breadcrumb markup and competitors don't. So that your website page will appear on the rich snippet. We hope that with this new tool, you can create a website page that is superior to competitors.",
     "whats-new-2" => "Toward JSON LD - Breadcrumb Schema Generator, now users can add schemas. This scheme serves to test your implementation at page or code level with Google's Rich Snippet Testing Tool and ask it to crawl the modified pages of your website. With this tool, you can see your CTR and traffic levels soar.",
 ];
