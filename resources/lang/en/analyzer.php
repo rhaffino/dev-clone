@@ -45,7 +45,8 @@ return [
                     <p>After you press the Analyze URL button, the system will immediately display the results. The Result field can display some information such as:</p>
                     <h6 class="sub-titles">Graph of Total Links</h6>
                     <p>This tool is capable of displaying a graphic of the links with a pie chart. In this section, you can find out the number of internal links, external links, nofollow, and dofollow along with the percentage.</p>',
-    "howto4" => '<h6 class="sub-titles">List of Internal and External Links</h6>
+    "howto4" => '<p>Figure 3: Pie chart of link analysis results</p>
+                    <h6 class="sub-titles">List of Internal and External Links</h6>
                     <p>At the bottom of the pie chart, you can see a list of internal links and external links of the URL you are checking. The results displayed are in accordance with the amount listed on the pie chart above. You can select one of the menus (internal link/external link) to display the results. After that, you will see a list of links and the anchor text of the link.</p>',
     "howto5" => '<p>Figure 4: List of Internal Links and External Links</p>
                     <h6 class="sub-titles">View Usage History</h6>
