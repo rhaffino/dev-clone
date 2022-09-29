@@ -83,43 +83,43 @@ return [
     "desc-4-2" => 'Setelah Anda memahami apa itu <a href="https://tools.cmlabs.co/en/json-ld-recipe-schema-generator">JSON-LD Recipe Schema markup</a> beserta manfaatnya pada SEO, kini, Anda dapat menggunakannya dengan mudah dan gratis melalui tool yang disediakan oleh cmlabs.',
     "howto-title" => 'Cara Menggunakan Recipe Schema Generator?',
     "howto1" => '<h2>Cara Menggunakan Recipe Schema Generator?</h2>
-                    <p>Dengan menambahkan schema markup, tampilan resep akan jadi lebih menarik di SERP. Adapun cara menghasilkan recipe schema menggunakan tool ini adalah sebagai berikut:</p>
-                    <h4 class="sub-titles">Buka Halaman JSON-LD Recipe Schema Generator</h4>
+                    <p>Dengan menambahkan schema markup, tampilan resep akan jadi lebih menarik di SERP. Adapun cara menghasilkan recipe schema menggunakan tool ini adalah sebagai berikut:</p>',
+    "howto2" => '<h4 class="sub-titles">Buka Halaman JSON-LD Recipe Schema Generator</h4>
                     <p>Pertama-tama, buka laman <a href="https://tools.cmlabs.co/id/json-ld-recipe-schema-generator">JSON-LD Recipe Schema Generator</a> untuk membuat recipeschema markup secara otomatis.</p>',
-    "howto2" => '<p>Gambar 1: Tampilan halaman <i class="italics">recipe schema generator</i> dari cmlabs.</p>
+    "howto3" => '<p>Gambar 1: Tampilan halaman <i class="italics">recipe schema generator</i> dari cmlabs.</p>
                     <h4 class="sub-titles">Masukkan Informasi Utama</h4>
                     <p>Memasukkan informasi utama yang terdiri dari nama resep, keyword (jika perlu), dan deskripsi resep. Selanjutnya, Anda bisa menambahkan data yang dibutuhkan lainnya.
                     </p>',
-    "howto3" => '<p>Gambar 2: Masukkan nama resep, keyword, dan deskripsi resep untuk membuat recipe schema markup.</p>
+    "howto4" => '<p>Gambar 2: Masukkan nama resep, keyword, dan deskripsi resep untuk membuat recipe schema markup.</p>
                     <h4 class="sub-titles">Tambah Gambar</h4>
                     <p>Secara default, tool ini menyediakan 1 field yang dapat digunakan untuk menambahkan gambar. Jika Anda ingin menambahkan gambar lain, maka Anda bisa menekan tombol <b>&#34;Tambah Gambar&#34;</b> dan tool ini akan menampilkan field baru yang bisa Anda gunakan untuk memasukkan URL gambar lainnya.</p>',
-    "howto4" => '<p>Gambar 3: Tombol <b>&#34;Tambah Gambar&#34;</b> pada recipe <i class="italics">schema generator</i> dari cmlabs.</p>
+    "howto5" => '<p>Gambar 3: Tombol <b>&#34;Tambah Gambar&#34;</b> pada recipe <i class="italics">schema generator</i> dari cmlabs.</p>
                     <h4 class="sub0titles">Masukkan Informasi Pendukung</h4>
                     <p>Selanjutnya, Anda bisa menambahkan informasi pendukung yang terdiri dari URL konten video, URL sematan video, kreator resep, tanggal publikasi, waktu persiapan, waktu memasak, kategori masakan, nama masakan, dan porsi masakan. Data ini bersifat opsional, dimana Anda bisa melewatinya jika tidak perlu mencantumkan informasi pendukung.</p>',
-    "howto5" => '<p>Gambar 4: Tampilan form untuk memasukkan informasi pendukung dalam membuat recipe schema markup.</p>
+    "howto6" => '<p>Gambar 4: Tampilan form untuk memasukkan informasi pendukung dalam membuat recipe schema markup.</p>
                     <h4 class="sub-titles">Tambah Bahan</h4>
                     <p>Setelah menginputkan informasi pendukung, Anda bisa menambahkan bahan masakan. Caranya cukup mudah yaitu dengan mengklik tombol <b>&#34;Tambah Bahan&#34;</b>. Selanjutnya, masukkan nama bahan pada kolom yang tersedia di recipe schema generator.</p>',
-    "howto6" => '<p>Gambar 5: Opsi untuk menambahkan bahan pada <i class="italics">recipe schema markup</i></p>
+    "howto7" => '<p>Gambar 5: Opsi untuk menambahkan bahan pada <i class="italics">recipe schema markup</i></p>
                     <h4 class="sub-titles">Masukkan Informasi Nutrisi</h4>
                     <p>Dengan recipe schema generator, Anda juga bisa memasukkan informasi nutrisi yang terdiri dari ukuran porsi, jumlah kalori, dan lemak yang terkandung pada tiap gram masakan Anda. Untuk menambahkan informasi, silahkan masukkan data pada kolom yang tersedia.</p>',
-    "howto7" => '<p>Gambar 6: Form untuk menambahkan informasi nutrisi pada <i class="italics">recipe schema markup</i></p>
+    "howto8" => '<p>Gambar 6: Form untuk menambahkan informasi nutrisi pada <i class="italics">recipe schema markup</i></p>
                     <h4 class="sub-titles">Tambah Instruksi Pembuatan</h4>
                     <p>Selanjutnya, memasukkan langkah-langkah pembuatan. Klik tombol <b>&#34;Tambah Langkah&#34;</b> untuk menambahkan instruksi. Pada bagian ini, Anda akan diminta untuk memasukkan kalimat instruksi, nama atau judul instruksi, URL instruksi, dan URL Gambar (jika ada).</p>',
-    "howto8" => '<p>Gambar 7: Form untuk menambahkan instruksi pembuatan resep pada <i class="italics">recipe schema markup</i></p>
+    "howto9" => '<p>Gambar 7: Form untuk menambahkan instruksi pembuatan resep pada <i class="italics">recipe schema markup</i></p>
                     <h4 class="sub-titles">Tambah Rating dan Review</h4>
                     <p>Terakhir, Anda bisa menambahkan rating pada resep Anda. Terdapat beberapa jenis rating yang bisa diberikan yaitu <i class="italics">aggregate ratings</i>, nomor rating, nilai tertinggi yang diperbolehkan, dan nilai terendah yang diperbolehkan.</p>
                     <p>Selain itu, Anda juga bisa menambahkan review dengan menekan tombol <b>&#34;Review&#34;</b>. Ketika Anda menekan tombol tersebut, maka Anda bisa menambahkan data yang dibutuhkan untuk membuat review. Mulai dari nama ulasan, peringkat, tanggal ulasan, isi ulasan, nama penulis ulasan, hingga penerbit.</p>',
-    "howto9" => '<p>Gambar 8: Form untuk menambahkan rating dan review pada <i class="italics">recipe schema markup</i></p>
+    "howto10" => '<p>Gambar 8: Form untuk menambahkan rating dan review pada <i class="italics">recipe schema markup</i></p>
                     <h4 class="sub-titles">Salin FAQ Schema Markup Yang Dihasilkan</h4>
                     <p>Setelah menginputkan semua informasi ke dalam field yang disediakan, Anda akan melihat pratinjau Recipe schema markup pada bagian kanan. Untuk menambahkan schema tersebut pada website, Anda bisa menekan opsi salin dan tempel <i class="italics">script</i> tersebut ke dalam kode program Anda.</p>',
-    "howto10" => '<p>Gambar 9: Opsi salin <i class="italics">Recipe schema markup</i></p>
+    "howto11" => '<p>Gambar 9: Opsi salin <i class="italics">Recipe schema markup</i></p>
                     <h4 class="sub-titles">Cek Validasi Script JSON-LD Recipe Schema</h4>
                     <p>Dengan Recipe schema generator, Anda juga bisa memeriksa validitas <i class="italics">script</i> JSON-LD yang Anda gunakan untuk membuat halaman Recipe. Cara mengeceknya pun cukup mudah, cukup tekan opsi cek yang terdapat di bagian pratinjau <i class="italics">script</i> yang dihasilkan.</p>
                     <p>Ketika Anda menekan tombol tersebut, maka Anda akan dialihkan menuju laman <a href="https://search.google.com/test/rich-results">Rich Result Test</a> milik Google. Pada halaman tersebut, Anda dapat mengecek apakah <i class="italics">schema markup</i> yang dihasilkan dapat berfungsi dengan baik di penelusuran Google.</p>',
-    "howto11" => '<p>Gambar 10: Opsi cek validasi Recipe schema markup</p>
+    "howto12" => '<p>Gambar 10: Opsi cek validasi Recipe schema markup</p>
                     <h4 class="sub-titles">Reset Recipe Schema Generator</h4>
                     <p>Tool ini memiliki opsi yang memudahkan Anda dalam membuat Recipe schema lainnya. Cukup klik opsi <b>&#34;Reset&#34;</b> dan menghapus seluruh data yang telah ditambahkan sebelumnya. Selanjutnya, Anda bisa membuat script Recipe baru.</p>',
-    "howto12" => '<p>Gambar 11: Opsi reset data yang ditambahkan pada Recipe schema generator.</p>
+    "howto13" => '<p>Gambar 11: Opsi reset data yang ditambahkan pada Recipe schema generator.</p>
                     <p>Itulah pembahasan singkat mengenai cara membuat recipe schema markup menggunakan tools <a href="https://tools.cmlabs.co/en/json-ld-recipe-schema-generator">JSON-LD Recipe Schema Generator</a> dari cmlabs. Tools ini dapat membantu Anda menampilkan konten resep menjadi lebih menarik di SERP. Coba tool ini sekarang!
                     </p>',
 ];

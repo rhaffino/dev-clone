@@ -80,8 +80,8 @@ return [
     "desc-4-2"=>'Thus a brief explanation of what the <a href="https://tools.cmlabs.co/en/json-ld-job-posting-schema-generator">JSON-LD Job Posting Schema Generator</a> is complete with the advantages of using this schema for your website. Visit this tool page and start generating job posting schemes for free now.',
     "howto-title" =>'How to Use the Job Posting Schema Generator?',
     "howto1" =>'<h2>How to Use the Job Posting Schema Generator?</h2>
-                    <p>The steps to generate a job posting schema using this tool is as follows:</p>
-                    <h4 class="sub-titles">Go to the JSON-LD Job Posting Schema Generator Page</h4>
+                    <p>The steps to generate a job posting schema using this tool is as follows:</p>',
+    "howto1-1" => '<h4 class="sub-titles">Go to the JSON-LD Job Posting Schema Generator Page</h4>
                     <p>Go to the JSON-LD Job Posting Schema Generator page to create a job posting using schema markup.</p>',
     "howto2" =>'<p>Figure 1: The job posting schema generator page display from cmlabs.</p>
                     <h4 class="sub-titles">Input Job Title</h4>

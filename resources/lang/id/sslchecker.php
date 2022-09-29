@@ -82,16 +82,16 @@ return [
     "desc-6-4-1-3-2" => "Sebagai contoh sederhana, jika situs web cmlabs.co menggunakan sertifikat Domain Tunggal dan memilih untuk melindungi domain primer, maka situs web subdomain tools.cmlabs.co tidak akan dilindungi. Demikian juga, jika Anda memilih untuk melindungi sub-domain, domain cmlabs.co utama tidak akan dilindungi.",
     "howto-title" => 'Cara Menggunakan SSL Certificate Checker',
     "howto1" => '<h2>Cara Menggunakan SSL Certificate Checker</h2>
-                    <p>Untuk mengoperasikan SSL Certificate Checker secara gratis, simak langkah-langkah berikut ini.</p>
-                    <h4 class="sub-titles">Buka Halaman SSL Certificate Checker cmlabs</h4>
+                    <p>Untuk mengoperasikan SSL Certificate Checker secara gratis, simak langkah-langkah berikut ini.</p>',
+    "howto2" => '<h4 class="sub-titles">Buka Halaman SSL Certificate Checker cmlabs</h4>
                     <p>Sebagai langkah utama, tentunya Anda harus membuka halaman dari tool ini. Setelah itu, Anda akan melihat beberapa fitur yang tersedia seperti kolom URL, tampilan hasil, riwayat pengecekan, hingga penjelasan singkat mengenai tools ini.</p>',
-    "howto2" => '<p>Gambar 1: Tampilan awal SSL Certificate Checker cmlabs</p>
+    "howto3" => '<p>Gambar 1: Tampilan awal SSL Certificate Checker cmlabs</p>
                     <h4 class="sub-titles">Masukkan URL Website</h4>
                     <p>Untuk melihat status dan detail informasi sertifikat SSL suatu website, Anda harus memasukkan URL website pada <i class="italics">field</i> yang tersedia. Pastikan Anda telah memasukkan URL dalam format yang benar (e.g https://example.com). Selanjutnya, klik tombol <b>&#34;Cek URL&#34;</b> untuk memberikan perintah pada tool ini agar memulai pengecekan pada website tersebut.</p>',
-    "howto3" => '<p>Gambar 2: Memasukkan URL website untuk mengetahui informasi sertifikat SSL</p>
+    "howto4" => '<p>Gambar 2: Memasukkan URL website untuk mengetahui informasi sertifikat SSL</p>
                     <h4 class="sub-titles">Melihat Hasil Cek Sertifikat SSL</h4>
                     <p>Setelah Anda menekan tombol Cek URL, sistem alat ini akan segera memunculkan hasil cek sertifikat SSL dengan cepat. Field Hasil/Result dapat menampilkan beberapa informasi seperti:</p>',
-    "howto4" => '<p>Gambar 3: Hasil cek sertifikat ssl</p>
+    "howto5" => '<p>Gambar 3: Hasil cek sertifikat ssl</p>
                     <h6 class="sub-titles">SSL Certificate</h6>
                     <p>Dalam field hasil, hal utama yang dimunculkan adalah informasi TLS Certificate (SSL Certificate) seperti</p>
                     <ul>
@@ -108,12 +108,12 @@ return [
                         <h6 class="sub-titles">Lihat Riwayat Pengecekan</h6>
                         <p>Fitur terakhir dari alat ini adalah Local History atau Riwayat Anda. Tool ini memungkinkan Anda untuk melihat semua riwayat URL yang pernah diperiksa menggunakan tool ini. </p>
                         <p>Dengan Adanya fitur ini, Anda tidak perlu mengetikkan kembali URL yang pernah dicek jika ingin melakukan pengecekan ulang. Anda juga dapat menghapus riwayat penggunaan menggunakan tombol &#34;Hapus&#34; pada bagian kanan fitur riwayat penggunaan.</p>',
-    "howto5" => '<p>Gambar 4: Fitur Local History untuk melihat riwayat pengecekan pada SSL certificate checker.</p>
+    "howto6" => '<p>Gambar 4: Fitur Local History untuk melihat riwayat pengecekan pada SSL certificate checker.</p>
                     <h4 class="sub-titles">Login Setelah 5 Kali Penggunaaan</h4>
                     <p>Beberapa alat gratis cmlabs membutuhkah proses login setelah pemakaian sebanyak 5 kali, SSL Certificate Checker adalah salah satunya. Jika Anda telah menggunakannya sebanyak 5 kali, sistem kami akan secara otomatis menampilkan pesan yang menyatakan bahwa Anda telah mencapai batas pemakaian.</p>',
-    "howto6" => '<p>Gambar 5: Peringatan pemakaian telah mencapai batas. Pada peringatan ini, terdapat tombol login yang mengarahkan pada login page.</p>
+    "howto7" => '<p>Gambar 5: Peringatan pemakaian telah mencapai batas. Pada peringatan ini, terdapat tombol login yang mengarahkan pada login page.</p>
                     <p>Anda dapat melakukan login dengan mengklik tombol login pada pesan peringatan yang muncul. Selanjutnya, Anda akan diarahkan menuju halaman login cmlabs. Silahkan masukkan data yang dibutuhkan, atau Anda dapat melakukan login melalui Google.</p>',
-    "howto7" => '<p>Gambar 6: Halaman login cmlabs</p>
+    "howto8" => '<p>Gambar 6: Halaman login cmlabs</p>
                     <p>Setelah Anda berhasil melakukan login, Anda akan dapat kembali menggunakan alat ini untuk memeriksa sertifikat SSL secara gratis. Dengan melakukan login, sistem dapat menyimpan data riwayat penggunaan tool ini dalam satu tahun terakhir.</p>',
     "whats-new-1"=> "Pada versi terbaru ini, Pengguna dapat melihat riwayat pencarian. Tool SSL checker kini dilengkapi dengan fitur \"local history\". Anda tidak perlu lagi memasukkan SSL dua kali jika ingin memeriksa hasil sebelumnya, yang perlu Anda lakukan hanya melihat di daftar riwayat pencarian. Jadikan pekerjaan Anda lebih efisien dengan perubahan terbaru ini.",
     "whats-new-2"=> "Sekarang, dengan tool SSL Checker ini, Anda dapat memeriksa apakah sertifikat SSL di server web Anda dipasang dengan benar dan terpercaya. Hanya dengan memasukkan nama host atau alamat IP server, Anda dapat langsung melihat detail yang terkait dengan sertifikat SSL. Tingkatkan performa keamaan website Anda.",

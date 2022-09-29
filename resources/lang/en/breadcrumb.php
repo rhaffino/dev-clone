@@ -40,8 +40,8 @@ return [
     "desc-5-1" => "Once implemented, you can test your implementation at the page or code level using Google's Rich Snippet Testing Tool. Once it is live, you can ask Google to crawl your modified page. Next, monitor your CTR and traffic levels after the implementation.",
     "howto-title" =>'How to Use the Breadcrumb Schema Generator?',
     "howto1" => '<h2>How to Use the Breadcrumb Schema Generator?</h2>
-                <p>Breadcrumb schema generator is a tool that can help you to generate breadcrumb schema markup more easily. Here&#39;s how to make breadcrumbs that you can do with this tool:</p>
-                <h4 class="sub-titles">Open JSON-LD Breadcrumb Schema Generator Page</h4>
+                <p>Breadcrumb schema generator is a tool that can help you to generate breadcrumb schema markup more easily. Here&#39;s how to make breadcrumbs that you can do with this tool:</p>',
+    "howto1-1" => '<h4 class="sub-titles">Open JSON-LD Breadcrumb Schema Generator Page</h4>
                 <p>As a first step in creating breadcrumbs, you need to open the <a href="https://tools.cmlabs.co/en/json-ld-breadcrumb-schema-generator">JSON-LD Breadcrumb Schema Generator</a> page first. With this tool, you don&#39;t have to worry about experiencing problems in breadcrumb creation, because this tool will present a breadcrumb schema markup that complies with Google search guidelines.</p>',
     "howto2" => '<p>Figure 1: Breadcrumb schema generator page view from cmlabs.</p>
                     <h4 class="sub-titles">Input The  Required Data</h4>

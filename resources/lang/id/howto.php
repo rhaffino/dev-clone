@@ -51,8 +51,8 @@ return [
     "desc-4-4" => 'Dengan keuntungan yang ditawarkan, kini Anda tak perlu repot membuat skema How-to secara manual. Kunjungi laman <a href="https://tools.cmlabs.co/en/json-ld-how-to-schema-generator">JSON-LD How-To Schema Generator</a> untuk mendapatkan code akurat untuk mendukung website panduan Anda.',
     "howto-title" => "Cara Menggunakan How-To Schema Generator",
     "howto1" => '<h2>Cara Menggunakan How-To Schema Generator</h2>
-                    <p>How-to schema generator adalah tool yang bisa Anda gunakan untuk membuat how-to schema markup secara gratis. How to adalah jenis konten yang berfungsi untuk memberikan petunjuk atau panduan kepada pengguna melalui serangkaian langkah guna menyelesaikan suatu tugas atau kegiatan tertentu.</p>
-                    <p>Langkah-langkah yang bisa Anda tempuh untuk menghasilkan how to schema markup menggunakan tool ini adalah sebagai berikut:</p>
+                    <p>How-to schema generator adalah tool yang bisa Anda gunakan untuk membuat how-to schema markup secara gratis. How to adalah jenis konten yang berfungsi untuk memberikan petunjuk atau panduan kepada pengguna melalui serangkaian langkah guna menyelesaikan suatu tugas atau kegiatan tertentu.</p>',
+    "howto1-1" => '<p>Langkah-langkah yang bisa Anda tempuh untuk menghasilkan how to schema markup menggunakan tool ini adalah sebagai berikut:</p>
                     <h4 class="sub-titles">Buka Halaman JSON-LD How-To Schema Generator</h4>
                     <p>Pertama-tama buka <a href="https://tools.cmlabs.co/id/json-ld-how-to-schema-generator">laman JSON-LD How-To Schema Generator</a> untuk memulai perjalanan Anda dalam membuat schema markup secara otomatis. Tool ini akan memudahkan Anda membuat konten yang berisi petunjuk memiliki tampilan yang lebih menarik di SERP. Schema markup yang dihasilkan oleh tool ini juga sudah sesuai dengan pedoman penelusuran Google.</p>',
     "howto2" => '<p>Gambar 1: Tampilan halaman <i class="italics">how to schema generator</i> dari cmlabs.</p>

@@ -198,22 +198,6 @@ id/ssl-checker
                     <h4 class="sub-titles">@lang('sslchecker.desc-5-3-1')</h4>
                     <p>@lang('sslchecker.desc-5-3-2')</p>
                 </div>
-                <div class="d-none" id="description-tab-6"><i class="italics"></i>
-                    
-                    @lang('sslchecker.howto1')
-                    <img class="mb-4" src="{{asset('/media/images/sslchecker_instruction_1.webp')}}" alt="HowTo-sslchecker-1" width="80%">
-                    @lang('sslchecker.howto2')
-                    <img class="mb-4" src="{{asset('/media/images/sslchecker_instruction_2.webp')}}" alt="HowTo-sslchecker-2" width="80%">
-                    @lang('sslchecker.howto3')
-                    <img class="mb-4" src="{{asset('/media/images/sslchecker_instruction_3.webp')}}" alt="HowTo-sslchecker-3" width="80%">
-                    @lang('sslchecker.howto4')
-                    <img class="mb-4" src="{{asset('/media/images/sslchecker_instruction_4.webp')}}" alt="HowTo-sslchecker-4" width="80%">
-                    @lang('sslchecker.howto5')
-                    <img class="mb-4" src="{{asset('/media/images/sslchecker_instruction_5.webp')}}" alt="HowTo-sslchecker-5" width="80%">
-                    @lang('sslchecker.howto6')
-                    <img class="mb-4" src="{{asset('/media/images/sslchecker_instruction_6.webp')}}" alt="HowTo-sslchecker-6" width="80%">
-                    @lang('sslchecker.howto7')
-                </div>
             </div>
             <div class="col-md-3">
                 <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-1">
@@ -246,14 +230,29 @@ id/ssl-checker
                     </div>
                     <a class="">@lang('sslchecker.desc-5')</a>
                 </div>
-                <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-6">
-                    <div class="mr-2" style="width:24px !important; height: 24px !important;">
-                        <span class="label label-lg label-tools-description" id="nav-label-tab-6">6</span>
-                    </div>
-                    <a class="">@lang('sslchecker.howto-title')</a>
-                </div>
             </div>
         </div>
+        @lang('sslchecker.howto1')
+        <div class="expand-text">
+            @lang('sslchecker.howto2')
+            <img class="mb-4" src="{{asset('/media/images/sslchecker_instruction_1.webp')}}" alt="HowTo-sslchecker-1" width="80%">
+            @lang('sslchecker.howto3')
+            <img class="mb-4" src="{{asset('/media/images/sslchecker_instruction_2.webp')}}" alt="HowTo-sslchecker-2" width="80%">
+            @lang('sslchecker.howto4')
+            <img class="mb-4" src="{{asset('/media/images/sslchecker_instruction_3.webp')}}" alt="HowTo-sslchecker-3" width="80%">
+            @lang('sslchecker.howto5')
+            <img class="mb-4" src="{{asset('/media/images/sslchecker_instruction_4.webp')}}" alt="HowTo-sslchecker-4" width="80%">
+            @lang('sslchecker.howto6')
+            <img class="mb-4" src="{{asset('/media/images/sslchecker_instruction_5.webp')}}" alt="HowTo-sslchecker-5" width="80%">
+            @lang('sslchecker.howto7')
+            <img class="mb-4" src="{{asset('/media/images/sslchecker_instruction_6.webp')}}" alt="HowTo-sslchecker-6" width="80%">
+            @lang('sslchecker.howto8')
+        </div>
+        @if($local == 'en')
+                <a class="moreless-button" href="#/">Read more</a>
+                @else
+                <a class="moreless-buttonid" href="#/">Baca Selengkapnya</a>
+                @endif
         @include('layouts.roboDesc')
         {{--
         <div class="row mb-10">
