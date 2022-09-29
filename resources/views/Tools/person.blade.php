@@ -255,29 +255,6 @@ id/json-ld-person-schema-generator
                     </pre>
                     <p>@lang('person.desc-4-2')</p>
                 </div>
-                <div class="d-none" id="description-tab-5">
-                    @lang('person.howto1')
-                    <img class="mb-4" src="{{asset('/media/images/person_instruction_1.webp')}}" alt="HowTo-person-1" width="80%">
-                    @lang('person.howto2')
-                    <img class="mb-4" src="{{asset('/media/images/person_instruction_2.webp')}}" alt="HowTo-person-2" width="80%">
-                    @lang('person.howto3')
-                    <img class="mb-4" src="{{asset('/media/images/person_instruction_3.webp')}}" alt="HowTo-person-3" width="80%">
-                    @lang('person.howto4')
-                    <img class="mb-4" src="{{asset('/media/images/person_instruction_4.webp')}}" alt="HowTo-person-4" width="80%">
-                    @lang('person.howto5')
-                    <img class="mb-4" src="{{asset('/media/images/person_instruction_5.webp')}}" alt="HowTo-person-5" width="80%">
-                    @lang('person.howto6')
-                    <img class="mb-4" src="{{asset('/media/images/person_instruction_6.webp')}}" alt="HowTo-person-6" width="80%">
-                    @lang('person.howto7')
-                    <img class="mb-4" src="{{asset('/media/images/person_instruction_7.webp')}}" alt="HowTo-person-7" width="80%">
-                    @lang('person.howto8')
-                    <img class="mb-4" src="{{asset('/media/images/person_instruction_8.webp')}}" alt="HowTo-person-8" width="80%">
-                    @lang('person.howto9')
-                    <img class="mb-4" src="{{asset('/media/images/person_instruction_9.webp')}}" alt="HowTo-person-9" width="80%">
-                    @lang('person.howto10')
-                    <img class="mb-4" src="{{asset('/media/images/person_instruction_10.webp')}}" alt="HowTo-person-10" width="80%">
-                    @lang('person.howto11')
-                </div>
             </div>
             <div class="col-md-3">
                 <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-1">
@@ -304,14 +281,37 @@ id/json-ld-person-schema-generator
                     </div>
                     <a class="">@lang('person.desc-4')</a>
                 </div>
-                <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-5">
-                    <div class="mr-2" style="width:24px !important; height: 24px !important;">
-                        <span class="label label-lg label-tools-description" id="nav-label-tab-5">5</span>
-                    </div>
-                    <a class="">@lang('person.howto-title')</a>
-                </div>
             </div>
         </div>
+        @lang('person.howto1')
+        <div class="expand-text">
+        @lang('person.howto1-1')
+            <img class="mb-4" src="{{asset('/media/images/person_instruction_1.webp')}}" alt="HowTo-person-1" width="80%">
+            @lang('person.howto2')
+            <img class="mb-4" src="{{asset('/media/images/person_instruction_2.webp')}}" alt="HowTo-person-2" width="80%">
+            @lang('person.howto3')
+            <img class="mb-4" src="{{asset('/media/images/person_instruction_3.webp')}}" alt="HowTo-person-3" width="80%">
+            @lang('person.howto4')
+            <img class="mb-4" src="{{asset('/media/images/person_instruction_4.webp')}}" alt="HowTo-person-4" width="80%">
+            @lang('person.howto5')
+            <img class="mb-4" src="{{asset('/media/images/person_instruction_5.webp')}}" alt="HowTo-person-5" width="80%">
+            @lang('person.howto6')
+            <img class="mb-4" src="{{asset('/media/images/person_instruction_6.webp')}}" alt="HowTo-person-6" width="80%">
+            @lang('person.howto7')
+            <img class="mb-4" src="{{asset('/media/images/person_instruction_7.webp')}}" alt="HowTo-person-7" width="80%">
+            @lang('person.howto8')
+            <img class="mb-4" src="{{asset('/media/images/person_instruction_8.webp')}}" alt="HowTo-person-8" width="80%">
+            @lang('person.howto9')
+            <img class="mb-4" src="{{asset('/media/images/person_instruction_9.webp')}}" alt="HowTo-person-9" width="80%">
+            @lang('person.howto10')
+            <img class="mb-4" src="{{asset('/media/images/person_instruction_10.webp')}}" alt="HowTo-person-10" width="80%">
+            @lang('person.howto11')
+        </div>
+        @if($local == 'en')
+                <a class="moreless-button" href="#/">Read more</a>
+                @else
+                <a class="moreless-buttonid" href="#/">Baca Selengkapnya</a>
+                @endif
         @include('layouts.roboDesc')
         {{-- <div class="row mb-10">
       <div class="col-md-6">

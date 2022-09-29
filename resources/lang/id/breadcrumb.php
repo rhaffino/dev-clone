@@ -37,8 +37,8 @@ return [
     "desc-5-1" => "Setelah diterapkan, Anda dapat menguji implementasi Anda di halaman atau tingkat kode menggunakan Rich Snippet Testing Tool Google. Setelah aktif, Anda dapat meminta Google untuk merayapi halaman Anda yang dimodifikasi. Selanjutnya, pantau CTR dan perform dari halaman tersebut.",
     "howto-title" => 'Cara Menggunakan Breadcrumb Schema Generator',
     "howto1" => '<h2>Cara Menggunakan Breadcrumb Schema Generator</h2>
-                    <p><i class="italics">Breadcrumb schema generator</i> adalah tool yang dapat membantu Anda untuk menghasilkan <i class="italics"">breadcrumb schema markup</i> dengan lebih mudah. Berikut adalah cara membuat <i class="italics"">breadcrumb</i> yang dapat Anda lakukan melalui tool ini:</p>
-                    <h4 class="sub-titles">Buka Halaman JSON-LD Breadcrumb Schema Generator</h4>
+                    <p><i class="italics">Breadcrumb schema generator</i> adalah tool yang dapat membantu Anda untuk menghasilkan <i class="italics"">breadcrumb schema markup</i> dengan lebih mudah. Berikut adalah cara membuat <i class="italics"">breadcrumb</i> yang dapat Anda lakukan melalui tool ini:</p>',
+    "howto1-1" => '<h4 class="sub-titles">Buka Halaman JSON-LD Breadcrumb Schema Generator</h4>
                     <p>Sebagai langkah awal dalam membuat <i class="italics"">breadcrumb</i>, Anda perlu membuka halaman <a href="https://tools.cmlabs.co/id/json-ld-breadcrumb-schema-generator">JSON-LD Breadcrumb Schema Generator</a> terlebih dahulu. Dengan tool ini, Anda tidak perlu khawatir mengalami kendala dalam pembuatan <i class="italics"">breadcrumb</i>, sebab tool ini akan menyajikan <i class="italics"">breadcrumb schema markup</i> yang sesuai dengan pedoman penelusuran Google.</p>',
     "howto2" => '<p>Gambar 1: Tampilan halaman <i class="italics">breadcrumb</i> schema generator dari cmlabs.</p>
                     <h4 class="sub-titles">Masukkan Data Yang Dibutuhkan</h4>

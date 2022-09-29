@@ -58,16 +58,16 @@ return [
     "desc-3-2-5" => "Therefore, you can take advantage of the cmlabs <a href='Therefore, you can take advantage of the cmlabs Redirect Checker Tool to check and troubleshoot possible problems with your web pages.'>Redirect Checker</a> Tool to check and troubleshoot possible problems with your web pages.",
     "howto-title" => 'How to Use Redirect Chain Checker from cmlabs',
     "howto1" => '<h2>How to Use Redirect Chain Checker from cmlabs</h2>
-                    <p>Here are the steps to use this tool.</p>
-                    <h4 class="sub-titles">Go to the Redirect Chain Checker Page</h4>
+                    <p>Here are the steps to use this tool.</p>',
+    "howto2" => '<h4 class="sub-titles">Go to the Redirect Chain Checker Page</h4>
                     <p>First of all, to use this tool you can go to the Redirect Chain Checker page. On that page, you will see some of the features offered by this tool. Starting from adding the URL to be checked, displaying the results of the redirect check, to the history of checking the redirect link that you have done before.</p>',
-    "howto2" => '<p>Figure 1: Redirect Chain Checker page view</p>
+    "howto3" => '<p>Figure 1: Redirect Chain Checker page view</p>
                     <h4 class="sub-titles">Enter URL</h4>
                     <p>In order to be able to do a redirect check, you must enter the URL in the field provided. Make sure you have entered the URL in the correct format (e.g https://example.com). Next, click the <b>&#34;Check URL&#34;</b> button to give this tool a command to start checking redirects on that link.</p>',
-    "howto3" => '<p>Figure 2: The display when the user has entered the website URL in the provided field.</p>
+    "howto4" => '<p>Figure 2: The display when the user has entered the website URL in the provided field.</p>
                     <h4 class="sub-titles">Select User Agent</h4>
                     <p>After entering the URL correctly, the next step is to select a user agent to check the redirect link entered. This feature provides a variety of User Agent options that can be selected according to your needs. To select it, click <b>&#34;Select User Agent&#34;</b> and a dropdown list of User Agents will appear.</p>',
-    "howto4" => '<p>Figure 3: Select the user agent feature in the redirect chain checker</p>
+    "howto5" => '<p>Figure 3: Select the user agent feature in the redirect chain checker</p>
                     <h4 class="sub-titles">Viewing Redirect Check Results</h4>
                     <p>You need to wait a while until the redirect check process is complete. Although this tool is free, the checking data displayed is quite clear. Some of the metrics you can find in your check results are:</p>
                     <h6 class="sub-titles">Status Code</h6>
@@ -81,12 +81,12 @@ return [
                     <p>In addition to the status code, you will also see the date the URL was checked. With the checking date data, you can re-check whether the results of the check and the status presented are based on the latest data.</p>
                     <h4 class="sub-titles">View Usage History</h4>
                     <p>The last thing you can do with Redirect Chain Checker is view the history of this tool. In the list, you will see a list of website URLs that you have checked before.</p>',
-    "howto5" => '<p>Figure 4: Redirect chain checker usage history menu</p>
+    "howto6" => '<p>Figure 4: Redirect chain checker usage history menu</p>
                     <h4 class="sub-titles">Login After 5 Times Usage</h4>
                     <p>Some cmlabs free tools require login after 5 times use, Redirect Checker is one of them. If you have used it 5 times, our system will automatically display a message stating that you have reached the usage limit.</p>',
-    "howto6" => '<p>Figure 5: Usage warning has reached the limit. In this warning, there is a login button that directs to the login page.</p>
+    "howto7" => '<p>Figure 5: Usage warning has reached the limit. In this warning, there is a login button that directs to the login page.</p>
                     <p>You can log in by clicking the login button on the warning message that appears. Next, you will be directed to the cmlabs login page. Please enter the required data, or you can log in via Google.</p>',
-    "howto7" => '<p>Figure 6: cmlabs login page</p>
+    "howto8" => '<p>Figure 6: cmlabs login page</p>
                     <p>Once you have successfully logged in, you will be able to return to using this tool to check the redirect chain for free. By logging in, the system can save historical data on the use of this tool in the last one year.</p>
                     <p>These are the steps to use Redirect Chain Checker from cmlabs. You can use the displayed data as a reference for improvements to the link. Therefore, using this free tool can help the optimization process of your website. Please visit the Redirect Chain Checker page to try it out now.
                     </p>',

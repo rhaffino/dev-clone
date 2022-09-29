@@ -33,8 +33,8 @@ return [
     "desc-4-2" => 'Demikian penjelasan singkat mengenai apa itu <a href="https://tools.cmlabs.co/en/json-ld-person-schema-generator">JSON-LD Person Schema Generator</a> dari cmlabs. Kami telah memaparkan definisi, fungsi, hingga bagaimana skema markup dapat berperan bagi implementasi SEO Anda. Coba sekarang!',
     "howto-title" => 'Bagaimana Cara Menggunakan Person Schema Generator?',
     "howto1" => '<h2>Bagaimana Cara Menggunakan Person Schema Generator?</h2>
-                    <p>Adapun cara menghasilkan person schema menggunakan tool ini adalah sebagai berikut:</p>
-                    <h4 class="sub-titles">Buka Halaman JSON-LD Person Schema Generator</h4>
+                    <p>Adapun cara menghasilkan person schema menggunakan tool ini adalah sebagai berikut:</p>',
+    "howto1-1" => '<h4 class="sub-titles">Buka Halaman JSON-LD Person Schema Generator</h4>
                     <p>Silahkan buka laman <a href="https://tools.cmlabs.co/id/json-ld-person-schema-generator">JSON-LD Person Schema Generator</a> untuk mengawali langkah Anda dalam membuat person schema markup secara otomatis. Pastikan Anda telah memilih <b>&#34;Person&#34;</b> pada jenis schema markup yang ingin dibuat.</p>',
     "howto2" => '<p>Gambar 1: Tampilan halaman <i class="italics">person schema generator</i> dari cmlabs.</p>
                     <h4 class="sub-titles">Masukkan Nama</h4>

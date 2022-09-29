@@ -58,16 +58,16 @@ return [
     "desc-3-2-5" => "Oleh karena itu, Anda dapat memanfaatkan <a href='https://tools.cmlabs.co/id/redirect-checker'>Redirect Checker Tool</a> cmlabs untuk memeriksa dan mengatasi masalah yang mungkin terjadi pada halaman web Anda.",
     "howto-title" => 'Cara Menggunakan Redirect Chain Checker dari cmlabs',
     "howto1" => '<h2>Cara Menggunakan Redirect Chain Checker dari cmlabs</h2>
-                    <p>Berikut adalah langkah-langkah menggunakan tool ini.</p>
-                    <h4 class="sub-titles">Buka Halaman Redirect Chain Checker</h4>
-                    <p>Pertama-tama, untuk menggunakan tool ini Anda dapat membuka halaman Redirect Chain Checker. Pada halaman tersebut, Anda akan melihat beberapa fitur yang ditawarkan oleh alat ini. Mulai dari penambahan URL yang akan diperiksa, tampilan hasil cek redirect, hingga riwayat pengecekan link redirect yang telah Anda lakukan sebelumnya. </p>',
-    "howto2" => '<p>Gambar 1: Tampilan halaman Redirect Chain Checker</p>
+                    <p>Berikut adalah langkah-langkah menggunakan tool ini.</p>',
+    "howto2" => '<h4 class="sub-titles">Buka Halaman Redirect Chain Checker</h4>
+                    <p>Pertama-tama, untuk menggunakan tool ini Anda dapat membuka halaman Redirect Chain Checker. Pada halaman tersebut, Anda akan melihat beberapa fitur yang ditawarkan oleh alat ini. Mulai dari penambahan URL yang akan diperiksa, tampilan hasil cek redirect, hingga riwayat pengecekan link redirect yang telah Anda lakukan sebelumnya.</p>',
+    "howto3" => '<p>Gambar 1: Tampilan halaman Redirect Chain Checker</p>
                     <h4 class="sub-titles">Masukkan URL</h4>
                     <p>Agar bisa melakukan cek redirect, Anda harus memasukkan URL  pada field yang disediakan. Pastikan Anda telah memasukkan URL dalam format yang benar (e.g https://example.com). Selanjutnya, klik tombol &#34;Cek URL&#34; untuk memberikan perintah pada tool ini agar memulai pengecekan redirect pada link tersebut.</p>',
-    "howto3" => '<p>Gambar 2: Tampilan ketika user telah memasukkan URL website pada field yang disediakan.</p>
+    "howto4" => '<p>Gambar 2: Tampilan ketika user telah memasukkan URL website pada field yang disediakan.</p>
                     <h4 class="sub-titles">Pilih User Agent</h4>
                     <p>Setelah memasukkan URL dengan benar, langkah selanjutnya adalah memilih user agent untuk memeriksa link redirect yang dimasukkan. Fitur ini menyediakan pilihan User Agent bervariasi yang dapat dipilih sesuai kebutuhan Anda. Untuk memilihnya, klik <b>&#34;Pilih User Agent&#34;</b> lalu akan muncul dropdown daftar User Agent. </p>',
-    "howto4" => '<p>Gambar 3: Fitur pilih user agent pada redirect chain checker</p>
+    "howto5" => '<p>Gambar 3: Fitur pilih user agent pada redirect chain checker</p>
                     <h4 class="sub-titles">Melihat Hasil Cek Redirect</h4>
                     <p>Anda perlu menunggu beberapa saat hingga proses cek redirect selesai dilakukan. Meskipun tool ini gratis, namun data pengecekan  yang ditampilkan cukup jelas. Beberapa metrik yang bisa Anda temukan pada hasil  cek adalah:</p>
                     <h6 class="sub-titles"></h6>
@@ -81,12 +81,12 @@ return [
                     <p>Selain status code, Anda juga akan melihat tanggal pengecekan URL tersebut. Dengan adanya data tanggal pengecekan, Anda dapat memeriksa kembali apakah hasil cek dan status yang disajikan berdasarkan data terkini. </p>
                     <h4 class="sub-titles">Melihat Riwayat Penggunaan</h4>
                     <p>Hal terakhir yang bisa Anda lakukan pada Redirect Chain Checker adalah melihat riwayat penggunaan tool ini. Dalam daftar tersebut, Anda akan melihat daftar URL website yang telah Anda periksa sebelumnya.</p>',
-    "howto5" => '<p>Gambar 4: Menu riwayat penggunaan Redirect chain checker</p>
+    "howto6" => '<p>Gambar 4: Menu riwayat penggunaan Redirect chain checker</p>
                     <h4 class="sub-titles">Login Setelah 5 Kali Penggunaaan</h4>
                     <p>Beberapa alat gratis cmlabs membutuhkah proses login setelah pemakaian sebanyak 5 kali, Redirect Checker adalah salah satunya. Jika Anda telah menggunakannya sebanyak 5 kali, sistem kami akan secara otomatis menampilkan pesan yang menyatakan bahwa Anda telah mencapai batas pemakaian</p>',
-    "howto6" => '<p>Gambar 5: Peringatan pemakaian telah mencapai batas. Pada peringatan ini, terdapat tombol login yang mengarahkan pada login page</p>
+    "howto7" => '<p>Gambar 5: Peringatan pemakaian telah mencapai batas. Pada peringatan ini, terdapat tombol login yang mengarahkan pada login page</p>
                     <p>Anda dapat melakukan login dengan mengklik tombol login pada pesan peringatan yang muncul. Selanjutnya, Anda akan diarahkan menuju halaman login cmlabs. Silahkan masukkan data yang dibutuhkan, atau Anda dapat melakukan login melalui Google.</p>',
-    "howto7" => '<p>Gambar 6: Halaman login cmlabs</p>
+    "howto8" => '<p>Gambar 6: Halaman login cmlabs</p>
                     <p>Setelah Anda berhasil melakukan login, Anda akan dapat kembali menggunakan alat ini untuk memeriksa redirect chain secara gratis. Dengan melakukan login, sistem dapat menyimpan data riwayat penggunaan tool ini dalam satu tahun terakhir.</p>
                     <p>Demikian langkah-langkah untuk menggunakan Redirect Chain Checker dari cmlabs. Data yang ditampilkan dapat Anda gunakan sebagai acuan perbaikan pada link tersebut. Oleh karena itu, menggunakan tool gratis ini dapat membantu proses optimasi website Anda. Silahkan kunjungi halaman <a href="https://tools.cmlabs.co/id/redirect-checker">Redirect Chain Checker</a> untuk mencobanya sekarang.</p>',
     "highlight" => "Pada versi terbaru di tool Redirect Chain Checker ini, memungkinkan pengguna untuk memeriksa halaman not founf dan mencari tahu kemana link mengarah (301 atau 302). Redirect Chain Checker akan menampilkan kode status HTTP dan URL tujuan. Anda dapat melihat tautan afiliasi tanpa mengkliknya. Kami berharap tool terbaru dari cmlabs ini dapat memudahkan pekerjaan Anda.",

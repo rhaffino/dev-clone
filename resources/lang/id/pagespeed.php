@@ -85,38 +85,38 @@ return [
     "desc-10-16" => "Laporan Pengalaman Pengguna Chrome mengumpulkan catatan kecepatan dunia nyata dari pelanggan yang ikut serta dan meminta agar laman web akar asal harus publik (dapat di-crawl dan diindeks) dan menampilkan variasi sampel yang cukup baik yang menawarkan tampilan representatif dan anonim dari keseluruhan kinerja di semua kemungkinan URL yang dikunjungi di asal itu.",
     "howto-title" => 'Cara Menggunakan PageSpeed Test',
     "howto1" => '<h2>Cara Menggunakan PageSpeed Test</h2>
-                    <p>Panduan berikut memuat cara penggunaan PageSpeed Test yang dapat Anda lakukan. Ikuti tiap langkahnya hingga akhir.</p>
-                    <h4 class="sub-titles">Buka Halaman PageSpeed Test</h4>
+                    <p>Panduan berikut memuat cara penggunaan PageSpeed Test yang dapat Anda lakukan. Ikuti tiap langkahnya hingga akhir.</p>',
+    "howto2" => '<h4 class="sub-titles">Buka Halaman PageSpeed Test</h4>
                     <p>Sebagai langkah awal dalam memulai cek pagespeed website, Anda perlu membuka halaman <a href="https://tools.cmlabs.co/id/pagespeed-test">PageSpeed Test</a>. Pada halaman tersebut, Anda akan melihat beberapa fitur yang dimiliki tool tersebut. Mulai dari penambahan URL yang akan diperiksa pagespeednya, tampilan hasil cek pagespeed, hingga riwayat pengecekan pagespeed yang telah Anda lakukan sebelumnya.</p>',
-    "howto2" => '<p>Gambar 1: Tampilan halaman PageSpeed Test dari cmlabs</p>
+    "howto3" => '<p>Gambar 1: Tampilan halaman PageSpeed Test dari cmlabs</p>
                     <h4 class="sub-titles">Masukkan URL Website</h4>
                     <p>Agar bisa melakukan cek pagespeed, pertama-tama Anda harus memasukkan URL website pada field yang tersedia. Pastikan Anda telah memasukkan URL dalam format yang benar (e.g https://example.com). Selanjutnya, klik tombol <b>&#34;Generate&#34;</b> untuk memberikan perintah pada tool ini agar memulai pengecekan pagespeed pada website tersebut.</p>',
-    "howto3" => '<p>Gambar 2: Tampilan ketika user telah memasukkan URL website pada field yang disediakan.</p>
+    "howto4" => '<p>Gambar 2: Tampilan ketika user telah memasukkan URL website pada field yang disediakan.</p>
                     <h4 class="sub-titles">Analisa Hasil Cek PageSpeed</h4>
                     <p>Anda perlu menunggu beberapa saat hingga proses cek pagespeed selesai dilakukan. Meskipun tool ini dapat diakses secara gratis, namun data pengecekan pagespeed yang ditampilkan cukup lengkap. Beberapa metrik yang bisa Anda temukan pada hasil PageSpeed Test adalah:</p>
                     <h6 class="sub-titles">Performance</h6>
                     <p>Metrik ini menampilkan hasil pengujian performa website secara keseluruhan. Mulai dari hasil pengujian metrik <a href="https://cmlabs.co/id-id/seo-guidelines/core-web-vitals">core web vitals</a>, <i class="italics">time to interactive, total blocking time,</i> hingga <i class="italics">speed index</i>. Kategori nilai dibagi menjadi baik (90-100), perlu peningkatan (50-89), dan buruk (0-49). Dengan mengetahui hasil ini, Anda akan memperoleh petunjuk tentang cara meningkatkan website yang bisa diterapkan.</p>',
-    "howto4" => '<p>Gambar 3: Hasil penilaian performa dari website yang dilacak menggunakan PageSpeed Test</p>
+    "howto5" => '<p>Gambar 3: Hasil penilaian performa dari website yang dilacak menggunakan PageSpeed Test</p>
                     <h6 class="sub-titles">Accessibility</h6>
                     <p>Metrik ini menampilkan hasil penilaian aksesibilitas halaman web Anda. Aksesibilitas suatu website dinilai berdasarkan seberapa mudah website dapat diakses oleh pengguna. Hal ini bertujuan agar website yang dibangun tidak memberikan hambatan bagi pengguna yang menyandang disabilitas dalam mengakses informasi.</p>',
-    "howto5" => '<p>Gambar 4: Detail penilaian aksesibilitas halaman dari website yang dilacak menggunakan PageSpeed Test</p>
+    "howto6" => '<p>Gambar 4: Detail penilaian aksesibilitas halaman dari website yang dilacak menggunakan PageSpeed Test</p>
                     <h6 class="sub-titles">Best Practice</h6>
                     <p>Metrik ini akan menampilkan laporan yang memuat informasi apakah website Anda telah menerapkan praktik terbaik dalam pembuatan website. Jika hasil penilaian masih belum optimal, ini adalah waktu yang tepat bagi Anda untuk meningkatkan performa website.</p>',
-    "howto6" => '<p>Gambar 5: Hasil penilaian metrik <i class="italics">best practice</i> pada website yang dilacak</p>
+    "howto7" => '<p>Gambar 5: Hasil penilaian metrik <i class="italics">best practice</i> pada website yang dilacak</p>
                     <h6 class="sub-titles">SEO</h6>
                     <p>Anda juga akan menemukan hasil penilaian SEO dari website Anda. Laporan berikut akan memuat informasi apakah website yang Anda miliki telah dioptimalkan di search engine atau belum. Dengan laporan ini, Anda bisa menemukan elemen yang perlu ditingkatkan dari website Anda.</p>',
-    "howto7" => '<p>Gambar 6: Detail hasil penilaian kualitas Search Engine Optimization (SEO) pada website yang dilacak</p>
+    "howto8" => '<p>Gambar 6: Detail hasil penilaian kualitas Search Engine Optimization (SEO) pada website yang dilacak</p>
                     <h6 class="sub-titles">PWA</h6>
                     <p>Pada hasil penilaian berikut, Anda akan melihat apakah website Anda telah memenuhi kriteria Progressive Web App (PWA). Jika website belum menerapkan PWA secara optimal, ini bisa menjadi pertanda bahwa Anda telah menemukan ruang yang perlu ditingkatkan dari website Anda. Dengan begitu, website bisa menyajikan pengalaman pengguna yang lebih baik.</p>',
-    "howto8" => '<p>Gambar 7: Detail hasil penilaian Progressive Web App (PWA) pada website yang dilacak</p>
+    "howto9" => '<p>Gambar 7: Detail hasil penilaian Progressive Web App (PWA) pada website yang dilacak</p>
                     <h4 class="sub-titles">Lihat Riwayat Penggunaan PageSpeed Test</h4>
                     <p>Hal terakhir yang bisa Anda lakukan menggunakan PageSpeed Test adalah melihat riwayat penggunaan tool ini. Dalam daftar tersebut, Anda akan melihat daftar URL website yang telah Anda periksa menggunakan tool PageSpeed Test dari cmlabs.</p>',
-    "howto9" => '<p>Gambar 8: Daftar riwayat penggunaan pagespeed test</p>
+    "howto10" => '<p>Gambar 8: Daftar riwayat penggunaan pagespeed test</p>
                     <h4 class="sub-titles">Login Setelah 5 Kali Penggunaaan </h4>
                     <p>Beberapa alat gratis cmlabs membutuhkah proses login setelah pemakaian sebanyak 5 kali, Pagespeed test adalah salah satunya. Jika Anda telah menggunakannya sebanyak 5 kali, sistem kami akan secara otomatis menampilkan pesan yang menyatakan bahwa Anda telah mencapai batas pemakaian.</p>',
-    "howto10" => '<p>Gambar 9: Peringatan pemakaian telah mencapai batas. Pada peringatan ini, terdapat tombol login yang mengarahkan pada login page.</p>
+    "howto11" => '<p>Gambar 9: Peringatan pemakaian telah mencapai batas. Pada peringatan ini, terdapat tombol login yang mengarahkan pada login page.</p>
                     <p>Anda dapat melakukan login dengan mengklik tombol login pada pesan peringatan yang muncul. Selanjutnya, Anda akan diarahkan menuju halaman login cmlabs. Silahkan masukkan data yang dibutuhkan, atau Anda dapat melakukan login melalui Google.</p>',
-    "howto11" => '<p>Gambar 10: Halaman login cmlabs</p>
+    "howto12" => '<p>Gambar 10: Halaman login cmlabs</p>
                     <p>Setelah Anda berhasil melakukan login, Anda akan dapat kembali menggunakan alat ini untuk melakukan pengujian kecepatan halaman secara gratis. Dengan melakukan login, sistem dapat menyimpan data riwayat penggunaan tool ini dalam satu tahun terakhir.</p>',
     "highlight" => 'Pada versi terbaru dari tool Pagespeed Test, pengguna bisa melihat riwayat pencarian dengan fitur "local history" dan memeriksa score SEO menggunakan fitur Progressive Web APP. Dua fitur tambahan ini kami khususkan untuk Anda gunakan dalam mengoptimasi website agar lebih cepat dan mampu memberikan pengalaman layaknya menggunakan aplikasi mobile.',
     "whats-new-1" => 'Sekarang pengguna bisa melihat riwayat pencarian. Dengan update versi terbaru ini, pagespeed test dilengkapi dengan fitur "local history". Anda tidak perlu lagi memasukkan URL page dua kali jika ingin memeriksa score sebelumnya, yang perlu Anda lakukan hanya melihat di daftar riwayat pencarian. Jadikan pekerjaan Anda lebih efisien dengan perubahan terbaru ini.',

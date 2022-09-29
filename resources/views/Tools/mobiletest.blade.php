@@ -238,23 +238,6 @@ id/mobile-test
                     <p>@lang('mobiletest.desc-6-5-2')</p>
                     <p>@lang('mobiletest.desc-6-5-3')</p>
                 </div>
-                <div class="d-none" id="description-tab-7">
-                    @lang('mobiletest.howto1')
-                    <img class="mb-4" src="{{asset('/media/images/mobiletest_instruction_1.webp')}}" alt="HowTo-mobiletest-1" width="80%">
-                    @lang('mobiletest.howto2')
-                    <img class="mb-4" src="{{asset('/media/images/mobiletest_instruction_2.webp')}}" alt="HowTo-mobiletest-2" width="80%">
-                    @lang('mobiletest.howto3')
-                    <img class="mb-4" src="{{asset('/media/images/mobiletest_instruction_3.webp')}}" alt="HowTo-mobiletest-3" width="80%">
-                    @lang('mobiletest.howto4')
-                    <img class="mb-4" src="{{asset('/media/images/mobiletest_instruction_4.webp')}}" alt="HowTo-mobiletest-4" width="80%">
-                    @lang('mobiletest.howto5')
-                    <img class="mb-4" src="{{asset('/media/images/mobiletest_instruction_5.webp')}}" alt="HowTo-mobiletest-5" width="80%">
-                    @lang('mobiletest.howto6')
-                    <img class="mb-4" src="{{asset('/media/images/mobiletest_instruction_6.webp')}}" alt="HowTo-mobiletest-6" width="80%">
-                    @lang('mobiletest.howto7')
-                    <img class="mb-4" src="{{asset('/media/images/mobiletest_instruction_7.webp')}}" alt="HowTo-mobiletest-7" width="80%">
-                    @lang('mobiletest.howto8')
-                </div>
             </div>
             <div class="col-md-3">
                 <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-1">
@@ -293,14 +276,31 @@ id/mobile-test
                     </div>
                     <a class="">@lang('mobiletest.desc-6')</a>
                 </div>
-                <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-7">
-                    <div class="mr-2" style="width:24px !important; height: 24px !important;">
-                        <span class="label label-lg label-tools-description" id="nav-label-tab-7">7</span>
-                    </div>
-                    <a class="">@lang('mobiletest.howto-title')</a>
-                </div>
             </div>
         </div>
+        @lang('mobiletest.howto1')
+        <div class="expand-text">
+            @lang('mobiletest.howto2')
+            <img class="mb-4" src="{{asset('/media/images/mobiletest_instruction_1.webp')}}" alt="HowTo-mobiletest-1" width="80%">
+            @lang('mobiletest.howto3')
+            <img class="mb-4" src="{{asset('/media/images/mobiletest_instruction_2.webp')}}" alt="HowTo-mobiletest-2" width="80%">
+            @lang('mobiletest.howto4')
+            <img class="mb-4" src="{{asset('/media/images/mobiletest_instruction_3.webp')}}" alt="HowTo-mobiletest-3" width="80%">
+            @lang('mobiletest.howto5')
+            <img class="mb-4" src="{{asset('/media/images/mobiletest_instruction_4.webp')}}" alt="HowTo-mobiletest-4" width="80%">
+            @lang('mobiletest.howto6')
+            <img class="mb-4" src="{{asset('/media/images/mobiletest_instruction_5.webp')}}" alt="HowTo-mobiletest-5" width="80%">
+            @lang('mobiletest.howto7')
+            <img class="mb-4" src="{{asset('/media/images/mobiletest_instruction_6.webp')}}" alt="HowTo-mobiletest-6" width="80%">
+            @lang('mobiletest.howto8')
+            <img class="mb-4" src="{{asset('/media/images/mobiletest_instruction_7.webp')}}" alt="HowTo-mobiletest-7" width="80%">
+            @lang('mobiletest.howto9')
+        </div>
+        @if($local == 'en')
+                <a class="moreless-button" href="#/">Read more</a>
+                @else
+                <a class="moreless-buttonid" href="#/">Baca Selengkapnya</a>
+                @endif
         @include('layouts.roboDesc')
         {{--
         <div class="row mb-10">

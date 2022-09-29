@@ -38,8 +38,8 @@ return [
     "desc-5-2" => 'Demikian pembahasan lengkap mengenai tool cmlabs JSON-LD FAQ Schema Generator. Kunjungi <a href="https://tools.cmlabs.co/id/json-ld-faq-schema-generator">laman tool ini</a> untuk memulai pembuatan skema FAQ untuk menunjang performa bisnis Anda di <i class="italics">search engine.</i>',
     "howto-title" => 'Cara Menggunakan FAQ Schema Generator?',
     "howto1" => '<h2>Cara Menggunakan FAQ Schema Generator?</h2>
-                    <p>FAQ schema generator adalah tool gratis dari cmlabs yang bisa Anda gunakan untuk membuat <i class="italics">FAQ schema markup</i> secara otomatis. Adapun cara membuat FAQ schema menggunakan tool ini adalah sebagai berikut:</p>
-                    <h4 class="sub-titles">Buka Halaman JSON-LD FAQ Schema Generator</h4>
+                    <p>FAQ schema generator adalah tool gratis dari cmlabs yang bisa Anda gunakan untuk membuat <i class="italics">FAQ schema markup</i> secara otomatis. Adapun cara membuat FAQ schema menggunakan tool ini adalah sebagai berikut:</p>',
+    "howto1-1" => '<h4 class="sub-titles">Buka Halaman JSON-LD FAQ Schema Generator</h4>
                     <p>Pertama-tama buka laman <a href="https://tools.cmlabs.co/en/json-ld-faq-schema-generator">JSON-LD FAQ Schema Generator</a> untuk memulai perjalanan Anda dalam membuat FAQ schema markup secara otomatis. Tool ini menawarkan kemudahan bagi Anda yang memiliki kendala dalam membuat FAQ schema secara manual. Terlebih lagi, schema markup yang dihasilkan oleh tool ini telah mengikuti pedoman penelusuran Google.</p>',
     "howto2" => '<p>Gambar 1: Tampilan halaman FAQ <i class="italics">schema generator</i> dari cmlabs.</p>
                     <h4 class="sub-titles">Masukkan Data yang Dibutuhkan</h4>

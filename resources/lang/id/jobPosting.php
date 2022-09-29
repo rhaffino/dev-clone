@@ -80,8 +80,8 @@ return [
     "desc-4-2"=>'Demikian penjelasan singkat mengenai apa itu <a href="https://tools.cmlabs.co/id/json-ld-job-posting-schema-generator">JSON-LD Job Posting Schema Generator</a>. Kunjungi laman tool ini dan mulai hasilkan skema job posting secara gratis sekarang.',
     "howto-title" =>'Cara Menggunakan Job Posting Schema Generator?',
     "howto1" =>'<h2>Cara Menggunakan Job Posting Schema Generator?</h2>
-                    <p>Job Posting schema generator adalah tool yang bisa Anda gunakan untuk membuat job posting schema secara gratis. Adapun cara menghasilkan job posting schema menggunakan tool ini adalah sebagai berikut:</p>
-                    <h4 class="sub-titles">Buka Halaman JSON-LD Job Posting Schema Generator</h4>
+                    <p>Job Posting schema generator adalah tool yang bisa Anda gunakan untuk membuat job posting schema secara gratis. Adapun cara menghasilkan job posting schema menggunakan tool ini adalah sebagai berikut:</p>',
+    "howto1-1" => '<h4 class="sub-titles">Buka Halaman JSON-LD Job Posting Schema Generator</h4>
                     <p>Buka laman <a href="https://tools.cmlabs.co/en/json-ld-job-posting-schema-generator">JSON-LD Job Posting Schema Generator</a> untuk membuat lowongan pekerjaan menggunakan schema markup.</p>',
     "howto2" =>'<p>Gambar 1: Tampilan halaman <i class="italics">job posting schema generator</i> dari cmlabs.</p>
                     <h4 class="sub-titles">Masukkan Judul Pekerjaan</h4>

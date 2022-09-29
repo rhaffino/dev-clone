@@ -411,23 +411,6 @@
                         </ul>
                         <p>@lang('metachecker.desc-3-4')</p>
                     </div>
-                    <div class="d-none" id="description-tab-4"><i class="italics"></i>
-                        @lang('metachecker.howto1')
-                        <img class="mb-4" src="{{asset('/media/images/metachecker_instruction_1.webp')}}" alt="HowTo-metachecker-1" width="80%">
-                        @lang('metachecker.howto2')
-                        <img class="mb-4" src="{{asset('/media/images/metachecker_instruction_2.webp')}}" alt="HowTo-metachecker-2" width="80%">
-                        @lang('metachecker.howto3')
-                        <img class="mb-4" src="{{asset('/media/images/metachecker_instruction_3.webp')}}" alt="HowTo-metachecker-3" width="80%">
-                        @lang('metachecker.howto4')
-                        <img class="mb-4" src="{{asset('/media/images/metachecker_instruction_4.webp')}}" alt="HowTo-metachecker-4" width="80%">
-                        @lang('metachecker.howto5')
-                        <img class="mb-4" src="{{asset('/media/images/metachecker_instruction_5.webp')}}" alt="HowTo-metachecker-5" width="80%">
-                        @lang('metachecker.howto6')
-                        <img class="mb-4" src="{{asset('/media/images/metachecker_instruction_6.webp')}}" alt="HowTo-metachecker-6" width="80%">
-                        @lang('metachecker.howto7')
-                        <img class="mb-4" src="{{asset('/media/images/metachecker_instruction_7.webp')}}" alt="HowTo-metachecker-7" width="80%">
-                        @lang('metachecker.howto8')
-                    </div>
                 </div>
                 <div class="col-md-3">
                     <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-1">
@@ -448,14 +431,31 @@
                         </div>
                         <a class="">@lang('metachecker.desc-3')</a>
                     </div>
-                    <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-4">
-                        <div class="mr-2" style="width:24px !important; height: 24px !important;">
-                            <span class="label label-lg label-tools-description" id="nav-label-tab-4">4</span>
-                        </div>
-                        <a class="">@lang('metachecker.howto-title')</a>
-                    </div>
                 </div>
             </div>
+            @lang('metachecker.howto1')
+            <div class="expand-text">
+                @lang('metachecker.howto2')
+                <img class="mb-4" src="{{asset('/media/images/metachecker_instruction_1.webp')}}" alt="HowTo-metachecker-1" width="80%">
+                @lang('metachecker.howto3')
+                <img class="mb-4" src="{{asset('/media/images/metachecker_instruction_2.webp')}}" alt="HowTo-metachecker-2" width="80%">
+                @lang('metachecker.howto4')
+                <img class="mb-4" src="{{asset('/media/images/metachecker_instruction_3.webp')}}" alt="HowTo-metachecker-3" width="80%">
+                @lang('metachecker.howto5')
+                <img class="mb-4" src="{{asset('/media/images/metachecker_instruction_4.webp')}}" alt="HowTo-metachecker-4" width="80%">
+                @lang('metachecker.howto6')
+                <img class="mb-4" src="{{asset('/media/images/metachecker_instruction_5.webp')}}" alt="HowTo-metachecker-5" width="80%">
+                @lang('metachecker.howto7')
+                <img class="mb-4" src="{{asset('/media/images/metachecker_instruction_6.webp')}}" alt="HowTo-metachecker-6" width="80%">
+                @lang('metachecker.howto8')
+                <img class="mb-4" src="{{asset('/media/images/metachecker_instruction_7.webp')}}" alt="HowTo-metachecker-7" width="80%">
+                @lang('metachecker.howto9')
+            </div>
+                @if($local == 'en')
+                <a class="moreless-button" href="#/">Read more</a>
+                @else
+                <a class="moreless-buttonid" href="#/">Baca Selengkapnya</a>
+                @endif
             @include('layouts.roboDesc')
             {{--
                     <div class="row mb-10">

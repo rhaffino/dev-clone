@@ -33,8 +33,8 @@ return [
     "desc-4-2" => 'That&#39;s a brief explanation of what the <a href="https://tools.cmlabs.co/en/json-ld-person-schema-generator">JSON-LD Person Schema Generator</a> from cmlabs is. We have explained the definition, function, and how the markup schema can play a role in your SEO implementation. Try now!',
     "howto-title" => 'How to Use Person Schema Generator?',
     "howto1" => '<h2>How to Use Person Schema Generator?</h2>
-                    <p>The steps to generate a person schema using this tool is as follows:</p>
-                    <h4 class="sub-titles">Go to JSON-LD Person Schema Generator Page</h4>
+                    <p>The steps to generate a person schema using this tool is as follows:</p>',
+    "howto1-1" =>'<h4 class="sub-titles">Go to JSON-LD Person Schema Generator Page</h4>
                     <p>Please open the <a href="https://tools.cmlabs.co/en/json-ld-person-schema-generator">JSON-LD Person Schema Generator</a> page to start your steps in automatically creating a person schema markup. Make sure you have selected <b>&#34;Person&#34;</b> in the type of schema markup you want to create.</p>',
     "howto2" => '<p>Figure 1: Display of the person schema generator page from cmlabs.</p>
                     <h4 class="sub-titles">Input Your Name</h4>
@@ -64,7 +64,7 @@ return [
     "howto10" => '<p>Figure 9: Person schema markup validation check options</p>
                     <h4 class="sub-titles">Reset Schema Generator</h4>
                     <p>This tool has options that make it easier for you to create a new Person schema. Just click the <b>&#34;Reset&#34;</b> option and delete all the data that was added previously. Next, you can create a new script.</p>',
-    "howto11" => '<p>Figure 13: Data reset option added to Person schema generator.</p>
+    "howto11" => '<p>Figure 10: Data reset option added to Person schema generator.</p>
                     <p>That&#39;s a brief discussion on how to create a person schema using the <a href="https://tools.cmlabs.co/en/json-ld-person-schema-generator">JSON-LD person schema generator</a> tool from cmlabs. These tools can help you generate schema markup quickly and efficiently. Try this tool now!</p>',
     "highlight" => "In this latest version, with the Person schema in JSON LD, you can add schema markup for a person. The schemes that can be displayed include height, date of birth, place of birth, and more. This is the right time to optimize your web page which contains detailed information about a person or popular figure. This makes it easier for you to show complete info about someone with some of the more popular properties. With this, we hope that optimization regarding the types of people on your page can appear on Google&#39;s Rich Results.",
     "whats-new-1" => "Now, in this newest version, you can use the Person tool from JSON LD. This makes it easier for you to show complete info about someone with some of the more popular properties. With this, we hope that optimization regarding the types of people on your page can appear on Google's Rich Results.",

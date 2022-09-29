@@ -28,24 +28,24 @@ return [
     "desc-3-2-3" => "Thus the discussion of what Technology Lookup is. You have nothing to lose using this tool. The reason is that the method of use is quite easy, can be accessed for free, and of course, can reveal the technology of a website as a whole. Explore website technology now!",
     "howto-title" => 'How to Use Technology Lookup cmlabs',
     "howto1" => '<h2>How to Use Technology Lookup cmlabs</h2>
-                    <p>The following guide was created to assist you in using this tool. Follow these steps:</p>
-                    <h4 class="sub-titles">Go to Technology Lookup Page</h4>
+                    <p>The following guide was created to assist you in using this tool. Follow these steps:</p>',
+    "howto2" => '<h4 class="sub-titles">Go to Technology Lookup Page</h4>
                     <p>Please open the Technology Lookup page from cmlabs first. On that page, you can add the URL you want to see the technology for, identify the technology on the website being tracked, and view the history of Technology Lookup usage.</p>',
-    "howto2" => '<p>Figure 1: View of the Technology Lookup tool page from cmlabs</p>
+    "howto3" => '<p>Figure 1: View of the Technology Lookup tool page from cmlabs</p>
                     <h4 class="sub-titles">Enter Website URL</h4>
                     <p>In order to identify the technology on a website, you must enter the website URL in the field provided. Make sure you have entered the URL in the correct format (e.g https://example.com). Then, click the <b>&#34;LOOKUP URL&#34;</b> button to give the command to this tool to start checking the technology on the website.</p>',
-    "howto3" => '<p>Figure 2: The display when the user has entered the website URL in the provided field.</p>
+    "howto4" => '<p>Figure 2: The display when the user has entered the website URL in the provided field.</p>
                     <h4 class="sub-titles">Identify Technology Stacks on Websites</h4>
                     <p>After a while, you can see the stack of technology used on the website in the Technology section. The Technology Lookup tool allows you to view widgets, operating systems, javascript libraries, web servers, and identify the full version of the technology a site uses.</p>',
-    "howto4" => '<p>Figure 3: Display of the results of monitoring the technology stack used on the tracked website.</p>
+    "howto5" => '<p>Figure 3: Display of the results of monitoring the technology stack used on the tracked website.</p>
                     <h4 class="sub-titles">Monitor Technology Lookup Usage History</h4>
                     <p>Finally, you can also view a list of Technology Lookup usage history. In the list, you will see a list of website URLs that you have monitored through the Technology Lookup from cmlabs.</p>',
-    "howto5" => '<p>Figure 4: A list of history using technology lookup from cmlabs.</p>
+    "howto6" => '<p>Figure 4: A list of history using technology lookup from cmlabs.</p>
                     <h4 class="sub-titles">Login After 5 Times Usage</h4>
                     <p>Some cmlabs free tools require a login process after 5 times use, Technology Lookup is one of them. If you have used it 5 times, our system will automatically display a message stating that you have reached the usage limit.</p>',
-    "howto6" => '<p>Figure 5: Usage warning has reached the limit. In this warning, there is a login button that directs to the login page.</p>
+    "howto7" => '<p>Figure 5: Usage warning has reached the limit. In this warning, there is a login button that directs to the login page.</p>
                     <p>You can log in by clicking the login button on the warning message that appears. Next, you will be directed to the cmlabs login page. Please enter the required data, or you can log in via Google.</p>',
-    "howto7" => '<p>Figure 6: cmlabs login page</p>
+    "howto8" => '<p>Figure 6: cmlabs login page</p>
                     <p>Once you have successfully logged in, you will be able to return to using this tool for free checking. By logging in, the system can save historical data on the use of this tool in the last one year.</p>',
     "highlight" => "In this latest version, the Technology Lookup tool in this latest version helps users identify technology on certain websites. Apart from that, it can also help users to list websites that use a particular technology and browse several websites at once. With this, you can find new prospects with the technology used by your competitors.",
     "whats-new-1" => "Currently, we are adding the Technology Lookup tool. With this tool, users can identify the technology on the website and find out what the website was created with. So that it can generate prospects, market analysis, and competitor research. With this tool, we hope to help you to build the best website possible.",

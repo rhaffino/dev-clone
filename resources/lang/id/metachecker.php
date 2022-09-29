@@ -43,30 +43,30 @@ return [
     "desc-3-4" => "Sekian pembahasan singkat mengenai apa itu Title and Meta Checker dari cmlabs. Untuk menggunakannya, kunjungi <a href='https://tools.cmlabs.co/en/page-title-meta-description-checker'>laman ini</a> dan buatlah judul sesuai dengan ketentuan SEO untuk meningkatkan performa website Anda di SERP secara organik.",
     "howto-title" => 'Cara Menggunakan Title and Meta Checker',
     "howto1" => '<h2>Cara Menggunakan Title and Meta Checker</h2>
-                        <p>Penulisan tag judul dan <i class="italics">meta description</i> umumnya perlu disesuaikan dengan keperluan optimasi website. Untuk melihat apakah judul dan deskripsi konten yang Anda buat sesuai dengan kaidah SEO, gunakan Title and Meta Checker dari cmlabs.</p>
-                        <p>Berikut merupakan langkah-langkah untuk menggunakan Title and Meta Checker dari cmlabs yang perlu Anda ketahui:</p>
+                        <p>Penulisan tag judul dan <i class="italics">meta description</i> umumnya perlu disesuaikan dengan keperluan optimasi website. Untuk melihat apakah judul dan deskripsi konten yang Anda buat sesuai dengan kaidah SEO, gunakan Title and Meta Checker dari cmlabs.</p>',
+    "howto2" => '<p>Berikut merupakan langkah-langkah untuk menggunakan Title and Meta Checker dari cmlabs yang perlu Anda ketahui:</p>
                         <h4 class="sub-titles">Masuk ke Halaman Title and Meta Checker</h4>',
-    "howto2" => '<p>Gambar 1: Tampilan halaman Title and Meta Checker</p>
+    "howto3" => '<p>Gambar 1: Tampilan halaman Title and Meta Checker</p>
                         <p>Untuk melakukan penyesuaian teks judul dan deskripsi, Anda dapat mengakses laman <a href="https://tools.cmlabs.co/id/page-title-meta-description-checker">Title and Meta Checker</a> dari cmlabs terlebih dahulu. Setelah masuk, Anda akan disambut dengan tampilan dua kolom utama, yaitu Page Title dan Meta Description. Adapun di bagian atas, terlihat kolom untuk mengisi URL website.</p>
                         <h4 class="sub-titles">Pilih Mode Manual atau Bot</h4>',
-    "howto3" => '<p>Gambar 2: Gambar mode Manual dan Bot di Title and Meta Checker cmlabs</p>
+    "howto4" => '<p>Gambar 2: Gambar mode Manual dan Bot di Title and Meta Checker cmlabs</p>
                         <p>Terdapat dua macam mode yang tersedia di Title and Meta Checker dari cmlabs, yaitu manual dan bot. Mode manual dapat digunakan untuk menyesuaikan judul dan deskripsi sesuai yang Anda inginkan. Di mode ini, Anda bisa menulis atau menyalin teks dan mengaturnya sesuai dengan ketentuan SEO.</p>
                         <p>Sebaliknya, mode bot akan menampilkan judul dan deskripsi berdasarkan data dari URL website yang dimasukkan. Caranya cukup dengan menyalin URL website atau halaman di kolom yang tersedia. Setelah itu, klik <b>Crawl URL</b> untuk mendapatkan hasil tag judul dan <i class="italics">meta description</i> secara otomatis.</p>
                         <h4 class="sub-titles">Masukkan Teks di Kolom Judul dan Meta Description</h4>',
-    "howto4" => '<p>Gambar 3: Penulisan judul dan deskripsi di Title and Meta Checker cmlabs</p>
+    "howto5" => '<p>Gambar 3: Penulisan judul dan deskripsi di Title and Meta Checker cmlabs</p>
                         <p>Setelah memilih mode, Anda bisa memasukkan teks di kolom yang tersedia. Anda bisa menyalin teks dan memasangnya di masing-masing tempat untuk judul dan deskripsi. Di samping itu, Anda juga bisa menuliskan dan melakukan proses <i class="italics">editing</i> teks secara langsung. </p>
                         <h4 class="sub-titles">Atur Tag Judul dan Meta Description</h4>
                         <p>Untuk penulisan judul, kriteria karakter yang umumnya sesuai kaidah SEO adalah sejumlah 50-60. Adapun untuk pixelnya sendiri setidaknya sebesar 500 pixel.</p>
                         <p>Untuk <i class="italics">meta description</i>, teks yang dimasukkan harus memenuhi kriteria SEO yaitu sejumlah 50-150 karakter. Adapun besar pixel deskripsi juga disarankan untuk tidak melebihi angka 900. </p>
                         <p>Apabila penulisan judul dan deskripsi sesuai dengan ketentuan yang diterapkan, indikator akan berubah warna menjadi hijau. Namun jika tidak sesuai, indikator akan tetap berwarna putih.</p>',
-    "howto5" => '<p>Gambar 4: Tag judul dan meta description kekurangan karakter</p>
+    "howto6" => '<p>Gambar 4: Tag judul dan meta description kekurangan karakter</p>
                         <p>Jika karakter atau pixel melebihi ketentuan, maka akan muncul peringatan di samping indikator dan di bawah teks. Peringatan atau pemberitahuan juga ditampilkan ketika karakter atau pixel kurang dari ketentuan yang diaplikasikan oleh sistem.</p>',
-    "howto6" => '<p>Gambar 5: Kelebihan karakter dan pixel di judul dan meta description</p>
+    "howto7" => '<p>Gambar 5: Kelebihan karakter dan pixel di judul dan meta description</p>
                         <h4 class="sub-titles">Login Setelah 5 Kali Penggunaan pada Mode Bot</h4>
                         <p>Beberapa alat gratis cmlabs membutuhkah proses login setelah pemakaian sebanyak 5 kali, Title and Meta Checker mode bot adalah salah satunya. Jika Anda telah menggunakannya sebanyak 5 kali pada mode bot, sistem kami akan secara otomatis menampilkan pesan yang menyatakan bahwa Anda telah mencapai batas pemakaian.</p>',
-    "howto7" => '<p>Gambar 6: Peringatan pemakaian telah mencapai batas. Pada peringatan ini, terdapat tombol login yang mengarahkan pada login page.</p>
+    "howto8" => '<p>Gambar 6: Peringatan pemakaian telah mencapai batas. Pada peringatan ini, terdapat tombol login yang mengarahkan pada login page.</p>
                         <p>Anda dapat melakukan login dengan mengklik tombol login pada pesan peringatan yang muncul. Selanjutnya, Anda akan diarahkan menuju halaman login cmlabs. Silahkan masukkan data yang dibutuhkan, atau Anda dapat melakukan login melalui Google.</p>',
-    "howto8" => '<p>Gambar 7: Halaman login cmlabs</p>
+    "howto9" => '<p>Gambar 7: Halaman login cmlabs</p>
                         <p>Setelah Anda berhasil melakukan login, Anda akan dapat kembali menggunakan alat ini untuk memeriksa judul dan meta description Anda secara gratis. Dengan melakukan login, sistem dapat menyimpan data riwayat penggunaan tool ini dalam satu tahun terakhir.</p>
                         <p>Demikian penjelasan singkat mengenai cara penggunaan Title and Meta Checker dari cmlabs. Penulisan tag judul dan <i class="italics">meta description</i> yang sesuai dengan kaidah SEO dapat meningkatkan performa halaman website Anda.</p>
                         <p>Oleh karena itu, pastikan setiap judul dan deskripsi halaman dapat menyampaikan informasi konten dengan informatif dan lugas. Anda dapat menggunakan tool ini dengan mengunjungi halaman <a href="https://tools.cmlabs.co/id/page-title-meta-description-checker">Title and Meta Description Checker</a> dan memastikan penulisan judul dan deskripsi sesuai dengan kebutuhan optimasi SEO.</p>',

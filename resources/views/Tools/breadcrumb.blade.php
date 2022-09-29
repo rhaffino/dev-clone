@@ -258,23 +258,6 @@ id/json-ld-breadcrumb-schema-generator
                     <h2>@lang('breadcrumb.desc-5')</h2>
                     <p>@lang('breadcrumb.desc-5-1')</p>
                 </div>
-                <div class="d-none" id="description-tab-6">
-                    @lang('breadcrumb.howto1')
-                    <img class="mb-4" src="{{asset('/media/images/breadcrumb_instruction_1.svg')}}" alt="HowTo-Breadcrumb-1" width="80%">
-                    @lang('breadcrumb.howto2')
-                    <img class="mb-4" src="{{asset('/media/images/breadcrumb_instruction_2.svg')}}" alt="HowTo-Breadcrumb-2" width="80%">
-                    @lang('breadcrumb.howto3')
-                    <img class="mb-4" src="{{asset('/media/images/breadcrumb_instruction_3.svg')}}" alt="HowTo-Breadcrumb-3" width="80%">
-                    @lang('breadcrumb.howto4')
-                    <img class="mb-4" src="{{asset('/media/images/breadcrumb_instruction_4.svg')}}" alt="HowTo-Breadcrumb-4" width="80%">
-                    @lang('breadcrumb.howto5')
-                    <img class="mb-4" src="{{asset('/media/images/breadcrumb_instruction_5.svg')}}" alt="HowTo-Breadcrumb-5" width="80%">
-                    @lang('breadcrumb.howto6')
-                    <img class="mb-4" src="{{asset('/media/images/breadcrumb_instruction_6.svg')}}" alt="HowTo-Breadcrumb-6" width="80%">
-                    @lang('breadcrumb.howto7')
-                    <img class="mb-4" src="{{asset('/media/images/breadcrumb_instruction_7.svg')}}" alt="HowTo-Breadcrumb-7" width="80%">
-                    @lang('breadcrumb.howto8')
-                </div>
             </div>
             <div class="col-md-3">
                 <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-1">
@@ -307,14 +290,31 @@ id/json-ld-breadcrumb-schema-generator
                     </div>
                     <a class="">@lang('breadcrumb.desc-5')</a>
                 </div>
-                <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-6">
-                    <div class="mr-2" style="width:24px !important; height: 24px !important;">
-                        <span class="label label-lg label-tools-description" id="nav-label-tab-6">6</span>
-                    </div>
-                    <a class="">@lang('breadcrumb.howto-title')</a>
-                </div>
             </div>
         </div>
+        @lang('breadcrumb.howto1')
+        <div class="expand-text">
+            @lang('breadcrumb.howto1-1')
+            <img class="mb-4" src="{{asset('/media/images/breadcrumb_instruction_1.webp')}}" alt="HowTo-Breadcrumb-1" width="80%">
+            @lang('breadcrumb.howto2')
+            <img class="mb-4" src="{{asset('/media/images/breadcrumb_instruction_2.webp')}}" alt="HowTo-Breadcrumb-2" width="80%">
+            @lang('breadcrumb.howto3')
+            <img class="mb-4" src="{{asset('/media/images/breadcrumb_instruction_3.webp')}}" alt="HowTo-Breadcrumb-3" width="80%">
+            @lang('breadcrumb.howto4')
+            <img class="mb-4" src="{{asset('/media/images/breadcrumb_instruction_4.webp')}}" alt="HowTo-Breadcrumb-4" width="80%">
+            @lang('breadcrumb.howto5')
+            <img class="mb-4" src="{{asset('/media/images/breadcrumb_instruction_5.webp')}}" alt="HowTo-Breadcrumb-5" width="80%">
+            @lang('breadcrumb.howto6')
+            <img class="mb-4" src="{{asset('/media/images/breadcrumb_instruction_6.webp')}}" alt="HowTo-Breadcrumb-6" width="80%">
+            @lang('breadcrumb.howto7')
+            <img class="mb-4" src="{{asset('/media/images/breadcrumb_instruction_7.webp')}}" alt="HowTo-Breadcrumb-7" width="80%">
+            @lang('breadcrumb.howto8')
+        </div>
+            @if($local == 'en')
+            <a class="moreless-button" href="#/">Read more</a>
+            @else
+            <a class="moreless-buttonid" href="#/">Baca Selengkapnya</a>
+            @endif
         @include('layouts.roboDesc')
         {{-- <div class="row mb-10">
       <div class="col-md-6">
