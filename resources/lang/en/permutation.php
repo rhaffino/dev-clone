@@ -44,6 +44,33 @@ return [
     "desc-3-3-1" => "Exact Match",
     "desc-3-3-2" => "As for the highest match level, you can use Exact Match. Google will automatically show the ads according to the keyword target that has the exact same meaning. Exact Match can be recognized by its square brackets ([...]) that separate each keyword.",
     "desc-3-3-3" => "Thus, the short information about Keyword Permutation Generator from cmlabs. You may visit <a href'https://tools.cmlabs.co/en/keyword-permutation'>this page</a> to use the service for free and get the result of keywords that you want easily and practically.",
+    "howto-title" => 'How to Use Keyword Permutation Generator',
+    "howto1" => '<h2>How to Use Keyword Permutation Generator</h2>
+                    <p>Keyword Permutation Generator is a tool that helps you permutate words easily and practically. This free tool from cmlabs generates a list of keyword combinations entered by the user. The keyword generator system will display the results of the permutations in the designated column. To use this tool, follow these steps:</p>',
+    "howto2" => '<h4 class="sub-titles">Go to Keyword Permutation Generator Page</h4>
+                    <p>The first step in using this free tool from cmlabs is to go to the <a href="">Keyword Permutation Generator page</a>. Once you enter the page, you will be presented with a three-column view with the headings Word 1, Word 2, and Word 3 on the left side. Then on the right side, there is the Match option, the Permutation button, along with the Permutation Result column.</p>',
+    "howto3" => '<p>Figure 1: Keyword Permutation Generator page view</p>
+                    <h4 class="sub-titles">Enter Keywords</h4>
+                    <p>To permutate words, you can enter each word of the sentence in the column on the left. In order to do that, make sure to type one word per line. You can enter keywords in the Word 1 field first. Next, you can enter other keywords, respectively in the Word 2 and Word 3 fields.</p>',
+    "howto4" => '<p>Figure 2: The display after entering keywords in the Word 1, Word 2, and Word 3 fields</p>
+                    <h4 class="sub-titles">Click the Permutation Button</h4>
+                    <p>The next step after entering keywords is to perform permutations. As the name implies, this free tool from cmlabs will generate combinations of words that have been entered in the Permutation Result column.</p>
+                    <p>To do so, simply select the Match you want and click the Start Permutation button. The result of the combination will be displayed in the Permutation Result column.</p>',
+    "howto5" => '<p>Figure 3: Click the Start Permutation button in the Keyword Permutation Generator from cmlabs</p>
+                    <h4 class="sub-titles">Know the Match Type</h4>
+                    <p>In general, there are three kinds of matches that are used to determine keyword combinations on the Adwords display on Google. The combination results obtained from the permutation of words can determine the reach of the ad based on its compatibility with the user&#39;s search intent.</p>
+                    <p>The three matches are as follows:</p>
+                    <ul>
+                        <li><b>Broad match:</b> wide range with general intent</li>
+                        <li><b>Phrase match:</b> more specific than broad match</li>
+                        <li><b>Exact match:</b> only appears if the search matches the keyword</li>
+                    </ul>',
+    "howto6" => '<p>Figure 4: Match types in the Keyword Permutation Generator from cmlabs</p>
+                    <h4 class="sub-titles">Check Permutation Results</h4>
+                    <p>In the Permutation Results column, you will see a list of combinations of permutations based on the type of match you selected. To use it, simply copy the results and paste them in Adwords or any other platform you use for keyword research.</p>
+                    <p>There are no word usage restrictions in this free word permutation tool from cmlabs. You can permute new words by clicking the <b>&#39;Clear&#39;</b> option to delete the existing combination results. Then start entering new keywords as you did before.</p>',
+    "howto7" => '<p>Figure 5: Check the results of the permutations in the respective columns</p>
+                    <p>That&#39;s the procedure for using the permutation generator from cmlabs. You can use the results of these keyword combinations to get traffic according to the search intent match. To use this tool, visit the Keyword Permutation Generator page and permutate as many words as you need.</p>',
     "highlight" => "This keyword permutation is the first version that was developed by our team. This generator can shorten users’ time to create a keyword. The tool has three columns to input keywords that are going to be combined. There are also three kinds of keyword matching outputs to ease users to adjust the results.",
     "whats-new-1" => "whats new 1",
     "whats-new-2" => "whats new 2",

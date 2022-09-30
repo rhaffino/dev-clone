@@ -360,6 +360,31 @@ id/json-ld-how-to-schema-generator
                 </div>
             </div>
         </div>
+        @lang('howto.howto1')
+        <div class="expand-text">
+        @lang('howto.howto1-1')
+            <img class="mb-4" src="{{asset('/media/images/howto_instruction_1.webp')}}" alt="HowTo-howto-1" width="80%">
+            @lang('howto.howto2')
+            <img class="mb-4" src="{{asset('/media/images/howto_instruction_2.webp')}}" alt="HowTo-howto-2" width="80%">
+            @lang('howto.howto3')
+            <img class="mb-4" src="{{asset('/media/images/howto_instruction_3.webp')}}" alt="HowTo-howto-3" width="80%">
+            @lang('howto.howto4')
+            <img class="mb-4" src="{{asset('/media/images/howto_instruction_4.webp')}}" alt="HowTo-howto-4" width="80%">
+            @lang('howto.howto5')
+            <img class="mb-4" src="{{asset('/media/images/howto_instruction_5.webp')}}" alt="HowTo-howto-5" width="80%">
+            @lang('howto.howto6')
+            <img class="mb-4" src="{{asset('/media/images/howto_instruction_6.webp')}}" alt="HowTo-howto-6" width="80%">
+            @lang('howto.howto7')
+            <img class="mb-4" src="{{asset('/media/images/howto_instruction_7.webp')}}" alt="HowTo-howto-7" width="80%">
+            @lang('howto.howto8')
+            <img class="mb-4" src="{{asset('/media/images/howto_instruction_8.webp')}}" alt="HowTo-howto-8" width="80%">
+            @lang('howto.howto9')
+        </div>
+            @if($local == 'en')
+                <a class="moreless-button" href="#/">Read more</a>
+                @else
+                <a class="moreless-buttonid" href="#/">Baca Selengkapnya</a>
+                @endif
         @include('layouts.roboDesc')
         {{-- <div class="row mb-10">
       <div class="col-md-6">

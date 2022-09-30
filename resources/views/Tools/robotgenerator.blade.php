@@ -289,6 +289,39 @@
                 </div>
             </div>
         </div>
+        @lang('robot.howto1')
+        <div class="expand-text">
+        @lang('robot.howto2')
+            <img class="mb-4" src="{{asset('/media/images/robot_instruction_1.webp')}}" alt="HowTo-robot-1" width="80%">
+            @lang('robot.howto3')
+            <img class="mb-4" src="{{asset('/media/images/robot_instruction_2.webp')}}" alt="HowTo-robot-2" width="80%">
+            @lang('robot.howto4')
+            <img class="mb-4" src="{{asset('/media/images/robot_instruction_3.webp')}}" alt="HowTo-robot-3" width="80%">
+            @lang('robot.howto5')
+            <img class="mb-4" src="{{asset('/media/images/robot_instruction_4.webp')}}" alt="HowTo-robot-4" width="80%">
+            @lang('robot.howto6')
+            <img class="mb-4" src="{{asset('/media/images/robot_instruction_5.webp')}}" alt="HowTo-robot-5" width="80%">
+            @lang('robot.howto7')
+            <img class="mb-4" src="{{asset('/media/images/robot_instruction_6.webp')}}" alt="HowTo-robot-6" width="80%">
+            @lang('robot.howto8')
+            <img class="mb-4" src="{{asset('/media/images/robot_instruction_7.webp')}}" alt="HowTo-robot-7" width="80%">
+            @lang('robot.howto9')
+            <img class="mb-4" src="{{asset('/media/images/robot_instruction_8.webp')}}" alt="HowTo-robot-8" width="80%">
+            @lang('robot.howto10')
+            <img class="mb-4" src="{{asset('/media/images/robot_instruction_9.webp')}}" alt="HowTo-robot-9" width="80%">
+            @lang('robot.howto11')
+            <img class="mb-4" src="{{asset('/media/images/robot_instruction_10.webp')}}" alt="HowTo-robot-10" width="80%">
+            @lang('robot.howto12')
+            <img class="mb-4" src="{{asset('/media/images/robot_instruction_11.webp')}}" alt="HowTo-robot-11" width="80%">
+            @lang('robot.howto13')
+            <img class="mb-4" src="{{asset('/media/images/robot_instruction_12.webp')}}" alt="HowTo-robot-12" width="80%">
+            @lang('robot.howto14')
+        </div>
+        @if($local == 'en')
+                <a class="moreless-button" href="#/">Read more</a>
+                @else
+                <a class="moreless-buttonid" href="#/">Baca Selengkapnya</a>
+                @endif
         @include('layouts.roboDesc')
         {{--
         <div class="row mb-10">

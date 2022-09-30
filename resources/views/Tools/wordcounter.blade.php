@@ -389,6 +389,25 @@
                     </div>
                 </div>
             </div>
+            @lang('wordcounter.howto1')
+            <div class="expand-text">
+                @lang('wordcounter.howto2')
+                <img class="mb-4" src="{{asset('/media/images/wordcounter_instruction_1.webp')}}" alt="HowTo-wordcounter-1" width="80%">
+                @lang('wordcounter.howto3')
+                <img class="mb-4" src="{{asset('/media/images/wordcounter_instruction_2.webp')}}" alt="HowTo-wordcounter-2" width="80%">
+                @lang('wordcounter.howto4')
+                <img class="mb-4" src="{{asset('/media/images/wordcounter_instruction_3.webp')}}" alt="HowTo-wordcounter-3" width="80%">
+                @lang('wordcounter.howto5')
+                <img class="mb-4" src="{{asset('/media/images/wordcounter_instruction_4.webp')}}" alt="HowTo-wordcounter-4" width="80%">
+                @lang('wordcounter.howto6')
+                <img class="mb-4" src="{{asset('/media/images/wordcounter_instruction_5.webp')}}" alt="HowTo-wordcounter-5" width="80%">
+                @lang('wordcounter.howto7')
+            </div>
+                @if($local == 'en')
+                <a class="moreless-button" href="#/">Read more</a>
+                @else
+                <a class="moreless-buttonid" href="#/">Baca Selengkapnya</a>
+                @endif
             @include('layouts.roboDesc')
             {{--
             <div class="row mb-10">

@@ -8,16 +8,16 @@ return [
     "no-test-result" => "Tidak ada SSL yang diperiksa, harap masukkan domain Anda di atas!",
     "highlight" => "Pada versi terbaru ini, Pengguna dapat melihat riwayat pencarian. Tool SSL checker kini dilengkapi dengan fitur \"local history\". Anda tidak perlu lagi memasukkan SSL dua kali jika ingin memeriksa hasil sebelumnya, yang perlu Anda lakukan hanya melihat di daftar riwayat pencarian. Jadikan pekerjaan Anda lebih efisien dengan perubahan terbaru ini.",
     "desc-1" => "Apa Itu SSL Certificate Checker?",
-    "desc-1-1" => "SSL certificate checker adalah 1 dari 13 tools gratis yang disediakan oleh cmlabs. Alat ini berfungsi untuk melakukan pengecekan apakah sertifikat SSL (Secure Socket Layer) di server web Anda dipasang dengan benar dan valid.",
+    "desc-1-1" => 'SSL certificate checker adalah 1 dari 13 tools gratis yang disediakan oleh cmlabs. Alat ini berfungsi untuk melakukan pengecekan apakah sertifikat SSL (<i class="italics">Secure Socket Layer</i>) di server web Anda dipasang dengan benar dan valid.',
     "desc-1-2" => "SSL Checker dapat menampilkan Nama Umum, jenis server, publikasi, validitas, rantai sertifikat, serta detail sertifikat tambahan. Hanya dengan memasukkan nama host atau alamat IP server Anda di kotak yang disediakan dan mengklik <b>&#34;Periksa&#34;</b>, Anda dapat langsung melihat detail terkait dengan sertifikat SSL.",
     "desc-2" => "Pentingnya Sertifikat SSL untuk Situs Web Anda",
-    "desc-2-1" => "Secure Socket Layer atau SSL adalah protokol keamanan yang digunakan untuk melindungi data yang ada di internet. Secara umum, protokol ini berfungsi untuk mengamankan proses pertukaran data pribadi pengguna website, seperti alamat email, nomor kartu kredit, dan informasi sensitif lainnya.",
+    "desc-2-1" => '<i class="italics">Secure Socket Layer</i> atau SSL adalah protokol keamanan yang digunakan untuk melindungi data yang ada di internet. Secara umum, protokol ini berfungsi untuk mengamankan proses pertukaran data pribadi pengguna website, seperti alamat email, nomor kartu kredit, dan informasi sensitif lainnya.',
     "desc-2-2" => "Cara kerja SSL adalah dengan mengenkripsi data sehingga pihak ketiga tidak bisa mencuri informasi selama proses pertukaran data terjadi. SSL memerlukan private key dan public key untuk membuat session key yang digunakan dalam proses enkripsi dan deskripsi data. ",
     "desc-2-3" => "Keberadaan sertifikat SSL adalah bukti bahwa suatu website telah terjamin keamanannya. Oleh karena itu, penting untuk memiliki SSL yang valid untuk menjaga keamanan website. ",
     "desc-3" => "Fungsi Penggunaan SSL",
     "desc-3-1" => "Salah satu fungsi SSL yang paling utama yaitu untuk mendukung keamanan data website Anda maupun pengunjung. Adapun beberapa fungsi SSL adalah sebagai berikut:",
     "desc-3-2-1" => "Memperkuat Identitas Website",
-    "desc-3-2-2" => "Website yang telah menggunakan sertifikat SSL memiliki reputasi yang baik di mata pengguna maupun search engine. Adanya sertifikat SSL juga dapat meminimalisir kekhawatiran pengguna mengenai keamanan data pribadi yang mereka masukkan pada website Anda. ",
+    "desc-3-2-2" => 'Website yang telah menggunakan sertifikat SSL memiliki reputasi yang baik di mata pengguna maupun <i class="italics">search engine</i>. Adanya sertifikat SSL juga dapat meminimalisir kekhawatiran pengguna mengenai keamanan data pribadi yang mereka masukkan pada website Anda.',
     "desc-3-3-1" => "Melindungi Data dan Informasi Penting Website",
     "desc-3-3-2" => "Sertifikat SSL berguna untuk melindungi website dari kejahatan dunia maya. Jika website Anda memerlukan email, kata sandi, atau data sensitif lainnya untuk login, tentu Anda perlu melindungi data tersebut menggunakan sertifikat SSL. Dengan begitu, kepercayaan pengguna pun akan meningkat.",
     "desc-3-4-1" => "Mengoptimalkan Kinerja Website di Search Engine",
@@ -80,6 +80,41 @@ return [
     "desc-6-4-1-3" => "SSL Domain Tunggal",
     "desc-6-4-1-3-1" => "Hanya satu domain atau satu subdomain yang dapat dicakup oleh sertifikat ini. Dalam menggunakan SSL Domain Tunggal, Anda harus memilih untuk memberikan perlindungan ke domain primer atau subdomain.",
     "desc-6-4-1-3-2" => "Sebagai contoh sederhana, jika situs web cmlabs.co menggunakan sertifikat Domain Tunggal dan memilih untuk melindungi domain primer, maka situs web subdomain tools.cmlabs.co tidak akan dilindungi. Demikian juga, jika Anda memilih untuk melindungi sub-domain, domain cmlabs.co utama tidak akan dilindungi.",
+    "howto-title" => 'Cara Menggunakan SSL Certificate Checker',
+    "howto1" => '<h2>Cara Menggunakan SSL Certificate Checker</h2>
+                    <p>Untuk mengoperasikan SSL Certificate Checker secara gratis, simak langkah-langkah berikut ini.</p>',
+    "howto2" => '<h4 class="sub-titles">Buka Halaman SSL Certificate Checker cmlabs</h4>
+                    <p>Sebagai langkah utama, tentunya Anda harus membuka halaman dari tool ini. Setelah itu, Anda akan melihat beberapa fitur yang tersedia seperti kolom URL, tampilan hasil, riwayat pengecekan, hingga penjelasan singkat mengenai tools ini.</p>',
+    "howto3" => '<p>Gambar 1: Tampilan awal SSL Certificate Checker cmlabs</p>
+                    <h4 class="sub-titles">Masukkan URL Website</h4>
+                    <p>Untuk melihat status dan detail informasi sertifikat SSL suatu website, Anda harus memasukkan URL website pada <i class="italics">field</i> yang tersedia. Pastikan Anda telah memasukkan URL dalam format yang benar (e.g https://example.com). Selanjutnya, klik tombol <b>&#34;Cek URL&#34;</b> untuk memberikan perintah pada tool ini agar memulai pengecekan pada website tersebut.</p>',
+    "howto4" => '<p>Gambar 2: Memasukkan URL website untuk mengetahui informasi sertifikat SSL</p>
+                    <h4 class="sub-titles">Melihat Hasil Cek Sertifikat SSL</h4>
+                    <p>Setelah Anda menekan tombol Cek URL, sistem alat ini akan segera memunculkan hasil cek sertifikat SSL dengan cepat. Field Hasil/Result dapat menampilkan beberapa informasi seperti:</p>',
+    "howto5" => '<p>Gambar 3: Hasil cek sertifikat ssl</p>
+                    <h6 class="sub-titles">SSL Certificate</h6>
+                    <p>Dalam field hasil, hal utama yang dimunculkan adalah informasi TLS Certificate (SSL Certificate) seperti</p>
+                    <ul>
+                        <li><b>Common Name:</b> nama domain</li>
+                        <li><b>Subject Alternative Name:</b> menunjukkan semua nama domain dan alamat IP yang diamankan oleh sertifikat</li>
+                        <li><b>Issuer:</b> lembaga penerbit sertifikat</li>
+                        <li><b>Serial Number:</b> nomor sertifikat</li>
+                        <li><b>SHA1 Thumbprint:</b> thumbprint unik yang dimiliki setiap sertifikat</li>
+                    </ul>
+                        <h6 class="sub-titles">Tanggal Kedaluwarsa Sertifikat</h6>
+                        <p>Dengan alat ini, Anda juga dapat mengetahui kapan sertifikat dari website yang Anda cek akan kedaluwarsa. Hal ini dapat memudahkan Anda untuk tetap menjaga instalasi SSL dengan baik. </p>
+                        <h6 class="sub-titles">Status Instalasi SSL</h6>
+                        <p>Selain informasi detail sertifikat, alat ini mampu menampilkan status instalasi sertifikat pada website. Instalasi SSL harus dilakukan dengan benar karena Anda bertanggung jawab atas informasi pengunjung website. </p>
+                        <h6 class="sub-titles">Lihat Riwayat Pengecekan</h6>
+                        <p>Fitur terakhir dari alat ini adalah Local History atau Riwayat Anda. Tool ini memungkinkan Anda untuk melihat semua riwayat URL yang pernah diperiksa menggunakan tool ini. </p>
+                        <p>Dengan Adanya fitur ini, Anda tidak perlu mengetikkan kembali URL yang pernah dicek jika ingin melakukan pengecekan ulang. Anda juga dapat menghapus riwayat penggunaan menggunakan tombol &#34;Hapus&#34; pada bagian kanan fitur riwayat penggunaan.</p>',
+    "howto6" => '<p>Gambar 4: Fitur Local History untuk melihat riwayat pengecekan pada SSL certificate checker.</p>
+                    <h4 class="sub-titles">Login Setelah 5 Kali Penggunaaan</h4>
+                    <p>Beberapa alat gratis cmlabs membutuhkah proses login setelah pemakaian sebanyak 5 kali, SSL Certificate Checker adalah salah satunya. Jika Anda telah menggunakannya sebanyak 5 kali, sistem kami akan secara otomatis menampilkan pesan yang menyatakan bahwa Anda telah mencapai batas pemakaian.</p>',
+    "howto7" => '<p>Gambar 5: Peringatan pemakaian telah mencapai batas. Pada peringatan ini, terdapat tombol login yang mengarahkan pada login page.</p>
+                    <p>Anda dapat melakukan login dengan mengklik tombol login pada pesan peringatan yang muncul. Selanjutnya, Anda akan diarahkan menuju halaman login cmlabs. Silahkan masukkan data yang dibutuhkan, atau Anda dapat melakukan login melalui Google.</p>',
+    "howto8" => '<p>Gambar 6: Halaman login cmlabs</p>
+                    <p>Setelah Anda berhasil melakukan login, Anda akan dapat kembali menggunakan alat ini untuk memeriksa sertifikat SSL secara gratis. Dengan melakukan login, sistem dapat menyimpan data riwayat penggunaan tool ini dalam satu tahun terakhir.</p>',
     "whats-new-1"=> "Pada versi terbaru ini, Pengguna dapat melihat riwayat pencarian. Tool SSL checker kini dilengkapi dengan fitur \"local history\". Anda tidak perlu lagi memasukkan SSL dua kali jika ingin memeriksa hasil sebelumnya, yang perlu Anda lakukan hanya melihat di daftar riwayat pencarian. Jadikan pekerjaan Anda lebih efisien dengan perubahan terbaru ini.",
     "whats-new-2"=> "Sekarang, dengan tool SSL Checker ini, Anda dapat memeriksa apakah sertifikat SSL di server web Anda dipasang dengan benar dan terpercaya. Hanya dengan memasukkan nama host atau alamat IP server, Anda dapat langsung melihat detail yang terkait dengan sertifikat SSL. Tingkatkan performa keamaan website Anda.",
 ];

@@ -344,10 +344,10 @@ id/json-ld-recipe-schema-generator
                 <div class="d-none" id="description-tab-3">
                     <h2 class="text-black">@lang('recipe.desc-3')</h2>
                     <p class="text-black">@lang('recipe.desc-3-1')</p>
-                    <h4 class="sub-titles">@lang('recipe.desc-2-2-1')</h4>
+                    <h4 class="sub-titles">@lang('recipe.desc-3-2-1')</h4>
                     <p class="text-black">@lang('recipe.desc-3-2-2')</p>
                     <p class="text-black">@lang('recipe.desc-3-2-3')</p>
-                    <h4 class="sub-titles">@lang('recipe.desc-2-3-1')</h4>
+                    <h4 class="sub-titles">@lang('recipe.desc-3-3-1')</h4>
                     <p class="text-black">@lang('recipe.desc-3-3-2')</p>
                     <p class="text-black">@lang('recipe.desc-3-3-3')</p>
 
@@ -423,6 +423,37 @@ id/json-ld-recipe-schema-generator
                 </div>
             </div>
         </div>
+        @lang('recipe.howto1')
+        <div class="expand-text">
+            @lang('recipe.howto2')
+            <img class="mb-4" src="{{asset('/media/images/recipe_instruction_1.webp')}}" alt="HowTo-recipe-1" width="80%">
+            @lang('recipe.howto3')
+            <img class="mb-4" src="{{asset('/media/images/recipe_instruction_2.webp')}}" alt="HowTo-recipe-2" width="80%">
+            @lang('recipe.howto4')
+            <img class="mb-4" src="{{asset('/media/images/recipe_instruction_3.webp')}}" alt="HowTo-recipe-3" width="80%">
+            @lang('recipe.howto5')
+            <img class="mb-4" src="{{asset('/media/images/recipe_instruction_4.webp')}}" alt="HowTo-recipe-4" width="80%">
+            @lang('recipe.howto6')
+            <img class="mb-4" src="{{asset('/media/images/recipe_instruction_5.webp')}}" alt="HowTo-recipe-5" width="80%">
+            @lang('recipe.howto7')
+            <img class="mb-4" src="{{asset('/media/images/recipe_instruction_6.webp')}}" alt="HowTo-recipe-6" width="80%">
+            @lang('recipe.howto8')
+            <img class="mb-4" src="{{asset('/media/images/recipe_instruction_7.webp')}}" alt="HowTo-recipe-7" width="80%">
+            @lang('recipe.howto9')
+            <img class="mb-4" src="{{asset('/media/images/recipe_instruction_8.webp')}}" alt="HowTo-recipe-8" width="80%">
+            @lang('recipe.howto10')
+            <img class="mb-4" src="{{asset('/media/images/recipe_instruction_9.webp')}}" alt="HowTo-recipe-9" width="80%">
+            @lang('recipe.howto11')
+            <img class="mb-4" src="{{asset('/media/images/recipe_instruction_10.webp')}}" alt="HowTo-recipe-10" width="80%">
+            @lang('recipe.howto12')
+            <img class="mb-4" src="{{asset('/media/images/recipe_instruction_11.webp')}}" alt="HowTo-recipe-11" width="80%">
+            @lang('recipe.howto13')
+        </div>
+            @if($local == 'en')
+                <a class="moreless-button" href="#/">Read more</a>
+                @else
+                <a class="moreless-buttonid" href="#/">Baca Selengkapnya</a>
+                @endif
         @include('layouts.roboDesc')
         {{-- <div class="row mb-10">
       <div class="col-md-6">

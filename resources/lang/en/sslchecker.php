@@ -80,6 +80,41 @@ return [
     "desc-6-4-1-3" => "Single Domain SSL",
     "desc-6-4-1-3-1" => "Only one domain or one subdomain can be covered by this certificate. In using Single Domain SSL, you must choose to provide protection to the primary domain or subdomain.",
     "desc-6-4-1-3-2" => "As a simple example, if the cmlabs.co website uses a Single Domain certificate and chooses to protect the primary domain, then the tools.cmlabs.co subdomain website will not be protected. Likewise, if you choose to protect a sub domain, the main cmlabs.co domain will not be protected.",
+    "howto-title" => 'How to Use SSL Certificate Checker',
+    "howto1" => '<h2>How to Use SSL Certificate Checker</h2>
+                    <p>To operate SSL Certificate Checker for free, here are steps.</p>',
+    "howto2" => '<h4 class="sub-titles">Open SSL Certificate Checker page</h4>
+                    <p>First of all, you have to open the page of this tool. After that, you will see several available features such as the URL column, display results, checking history, to a brief explanation of this tool.</p>',
+    "howto3" => '<p>Figure 1: Initial view of cmlabs SSL Certificate Checker</p>
+                    <h4 class="sub-titles">Enter Website URL</h4>
+                    <p>To view the status and detailed information of a website&#39;s SSL certificate, you must enter the website&#39;s URL in the field provided. Make sure you have entered the URL in the correct format (e.g https://example.com). Next, click the <b>&#34;Check URL&#34;</b> button to give the command to this tool to start checking the website.</p>',
+    "howto4" => '<p>Figure 2: Entering the website URL to find out the SSL certificate information</p>
+                    <h4 class="sub-titles">View SSL Certificate Check Results</h4>
+                    <p>After you press the Check URL button, the system will immediately display the results of the SSL certificate check quickly. The Result field can display some information such as</p>',
+    "howto5" => '<p>Figure 3: SSL certificate check results</p>
+                    <h6 class="sub-titles">SSL Certificate</h6>
+                    <p>In the results field, the main thing that appears is TLS Certificate (SSL Certificate) information such as:</p>
+                    <ul>
+                        <li><b>Common Name:</b> domain name</li>
+                        <li><b>Subject Alternative Name:</b> shows all domain names and IP addresses secured by the certificate</li>
+                        <li><b>Issuer:</b> certificate issuing agency</li>
+                        <li><b>Serial Number:</b> certificate number</li>
+                        <li><b>SHA1 Thumbprint:</b> the unique thumbprint each certificate has</li>
+                    </ul>
+                    <h6 class="sub-titles">Certificate Expiration Date</h6>
+                    <p>With this tool, you can also find out when the certificate from the website you are checking will expire. This can make it easier for you to maintain a good SSL installation.</p>
+                    <h6 class="sub-titles">SSL Installation Status</h6>
+                    <p>In addition to certificate details, this tool can display the certificate installation status on the website. SSL installation must be done properly because you are responsible for website visitor information.</p>
+                    <h6 class="sub-titles">View Checking History</h6>
+                    <p>The last feature of this tool is your Local History. This tool allows you to view all URL history that has been checked using this tool.</p>
+                    <p>With this feature, you don&#39;t need to re-type the URL that was checked if you want to re-check it. You can also delete usage history using the <b>&#34;Clear&#34;</b> button on the right side of the usage history feature.</p>',
+    "howto6" => '<p>Figure 4: Local History feature to view the history of checking the SSL certificate checker.</p>
+                    <h4 class="sub-titles">Login After 5 Times Usage</h4>
+                    <p>Some of the cmlabs tools require a login process after 5 times of use, SSL Certificate Checker is one of them. If you have used it for 5 times, our system will automatically display a message stating that you have reached the usage limit.</p>',
+    "howto7" => '<p>Figure 5: Usage warning has reached the limit. In this warning, there is a login button that directs to the login page.</p>
+                    <p>You can log in by clicking the login button on the warning message that appears. Next, you will be directed to the cmlabs login page. Please enter the required data, or you can log in via Google.</p>',
+    "howto8" => '<p>Figure 6: cmlabs login page</p>
+                    <p>Once you have successfully logged in, you will be able to return to using this tool to check SSL certificates for free. By logging in, the system can save historical data on the use of this tool in the last one year.</p>',
     "whats-new-1"=> "In this latest version, users can view the search history. The SSL checker tool is now equipped with a \"local history\" feature. You don't need to enter SSL twice if you want to check the previous results, all you need to do is look in the search history list. Make your work more efficient with this latest change.",
     "whats-new-2"=> "Now, with this SSL Checker tool, you can check if the SSL certificate on your web server is installed properly and does trust. Just by entering the hostname or server IP address, you can immediately view the details associated with the SSL certificate. Improve the security performance of your website.",
 ];

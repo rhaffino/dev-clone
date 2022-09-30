@@ -345,7 +345,7 @@ id/json-ld-jobPosting-schema-generator
                     <p>@lang('jobPosting.desc-2-2')</p>
                     <p>@lang('jobPosting.desc-2-3')</p>
                 </div>
-                <div class="d-none" id="description-tab-3">
+                <div class="d-none" id="description-tab-3"><i class="italics"></i>
                     <h2>@lang('jobPosting.desc-3')</h2>
                     <p>@lang('jobPosting.desc-3-1')</p>
                     <img class="mb-4" src="{{asset('/media/images/jobposting-1.png')}}" alt="jobposting-1" width="60%">
@@ -435,6 +435,41 @@ id/json-ld-jobPosting-schema-generator
                 </div>
             </div>
         </div>
+        @lang('jobPosting.howto1')
+        <div class="expand-text">
+        @lang('jobPosting.howto1-1')
+            <img class="mb-4" src="{{asset('/media/images/jobposting_instruction_1.webp')}}" alt="HowTo-jobPosting-1" width="80%">
+            @lang('jobPosting.howto2')
+            <img class="mb-4" src="{{asset('/media/images/jobposting_instruction_2.webp')}}" alt="HowTo-jobPosting-2" width="80%">
+            @lang('jobPosting.howto3')
+            <img class="mb-4" src="{{asset('/media/images/jobposting_instruction_3.webp')}}" alt="HowTo-jobPosting-3" width="80%">
+            @lang('jobPosting.howto4')
+            <img class="mb-4" src="{{asset('/media/images/jobposting_instruction_4.webp')}}" alt="HowTo-jobPosting-4" width="80%">
+            @lang('jobPosting.howto5')
+            <img class="mb-4" src="{{asset('/media/images/jobposting_instruction_5.webp')}}" alt="HowTo-jobPosting-5" width="80%">
+            @lang('jobPosting.howto6')
+            <img class="mb-4" src="{{asset('/media/images/jobposting_instruction_6.webp')}}" alt="HowTo-jobPosting-6" width="80%">
+            @lang('jobPosting.howto7')
+            <img class="mb-4" src="{{asset('/media/images/jobposting_instruction_7.webp')}}" alt="HowTo-jobPosting-7" width="80%">
+            @lang('jobPosting.howto8')
+            <img class="mb-4" src="{{asset('/media/images/jobposting_instruction_8.webp')}}" alt="HowTo-jobPosting-8" width="80%">
+            @lang('jobPosting.howto9')
+            <img class="mb-4" src="{{asset('/media/images/jobposting_instruction_9.webp')}}" alt="HowTo-jobPosting-9" width="80%">
+            @lang('jobPosting.howto10')
+            <img class="mb-4" src="{{asset('/media/images/jobposting_instruction_10.webp')}}" alt="HowTo-jobPosting-10" width="80%">
+            @lang('jobPosting.howto11')
+            <img class="mb-4" src="{{asset('/media/images/jobposting_instruction_11.webp')}}" alt="HowTo-jobPosting-11" width="80%">
+            @lang('jobPosting.howto12')
+            <img class="mb-4" src="{{asset('/media/images/jobposting_instruction_12.webp')}}" alt="HowTo-jobPosting-12" width="80%">
+            @lang('jobPosting.howto13')
+            <img class="mb-4" src="{{asset('/media/images/jobposting_instruction_13.webp')}}" alt="HowTo-jobPosting-13" width="80%">
+            @lang('jobPosting.howto14')
+        </div>
+        @if($local == 'en')
+                <a class="moreless-button" href="#/">Read more</a>
+                @else
+                <a class="moreless-buttonid" href="#/">Baca Selengkapnya</a>
+                @endif
         @include('layouts.roboDesc')
         {{-- <div class="row mb-10">
       <div class="col-md-6">

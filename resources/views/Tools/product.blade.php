@@ -346,6 +346,7 @@ id/json-ld-product-schema-generator
                     <ul>
                         <li>@lang('product.desc-3-4-3')</li>
                         <li>@lang('product.desc-3-4-4')</li>                        
+                        <li>@lang('product.desc-3-4-5')</li>                        
                     </ul>
 
                 </div>
@@ -411,6 +412,35 @@ id/json-ld-product-schema-generator
                 </div>
             </div>
         </div>
+        @lang('product.howto1')
+            @lang('product.howto2')
+            <div class="expand-text">
+            <img class="mb-4" src="{{asset('/media/images/product_instruction_1.webp')}}" alt="HowTo-product-1" width="80%">
+            @lang('product.howto3')
+            <img class="mb-4" src="{{asset('/media/images/product_instruction_2.webp')}}" alt="HowTo-product-2" width="80%">
+            @lang('product.howto4')
+            <img class="mb-4" src="{{asset('/media/images/product_instruction_3.webp')}}" alt="HowTo-product-3" width="80%">
+            @lang('product.howto5')
+            <img class="mb-4" src="{{asset('/media/images/product_instruction_4.webp')}}" alt="HowTo-product-4" width="80%">
+            @lang('product.howto6')
+            <img class="mb-4" src="{{asset('/media/images/product_instruction_5.webp')}}" alt="HowTo-product-5" width="80%">
+            @lang('product.howto7')
+            <img class="mb-4" src="{{asset('/media/images/product_instruction_6.webp')}}" alt="HowTo-product-6" width="80%">
+            @lang('product.howto8')
+            <img class="mb-4" src="{{asset('/media/images/product_instruction_7.webp')}}" alt="HowTo-product-7" width="80%">
+            @lang('product.howto9')
+            <img class="mb-4" src="{{asset('/media/images/product_instruction_8.webp')}}" alt="HowTo-product-8" width="80%">
+            @lang('product.howto10')
+            <img class="mb-4" src="{{asset('/media/images/product_instruction_9.webp')}}" alt="HowTo-product-9" width="80%">
+            @lang('product.howto11')
+            <img class="mb-4" src="{{asset('/media/images/product_instruction_10.webp')}}" alt="HowTo-product-10" width="80%">
+            @lang('product.howto12')
+        </div>
+            @if($local == 'en')
+            <a class="moreless-button" href="#/">Read more</a>
+            @else
+            <a class="moreless-buttonid" href="#/">Baca Selengkapnya</a>
+            @endif
         @include('layouts.roboDesc')
         {{-- <div class="row mb-10">
       <div class="col-md-6">

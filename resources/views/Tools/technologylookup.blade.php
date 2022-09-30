@@ -185,6 +185,27 @@ id/technology-lookup
                 </div>
             </div>
         </div>
+        @lang('lookup.howto1')
+        <div class="expand-text">
+            @lang('lookup.howto2')
+            <img class="mb-4" src="{{asset('/media/images/lookup_instruction_1.webp')}}" alt="HowTo-lookup-1" width="80%">
+            @lang('lookup.howto3')
+            <img class="mb-4" src="{{asset('/media/images/lookup_instruction_2.webp')}}" alt="HowTo-lookup-2" width="80%">
+            @lang('lookup.howto4')
+            <img class="mb-4" src="{{asset('/media/images/lookup_instruction_3.webp')}}" alt="HowTo-lookup-3" width="80%">
+            @lang('lookup.howto5')
+            <img class="mb-4" src="{{asset('/media/images/lookup_instruction_4.webp')}}" alt="HowTo-lookup-4" width="80%">
+            @lang('lookup.howto6')
+            <img class="mb-4" src="{{asset('/media/images/lookup_instruction_5.webp')}}" alt="HowTo-lookup-5" width="80%">
+            @lang('lookup.howto7')
+            <img class="mb-4" src="{{asset('/media/images/lookup_instruction_6.webp')}}" alt="HowTo-lookup-6" width="80%">
+            @lang('lookup.howto8')
+        </div>
+            @if($local == 'en')
+            <a class="moreless-button" href="#/">Read more</a>
+            @else
+            <a class="moreless-buttonid" href="#/">Baca Selengkapnya</a>
+            @endif
         @include('layouts.roboDesc')
         {{--
         <div class="row mb-10">

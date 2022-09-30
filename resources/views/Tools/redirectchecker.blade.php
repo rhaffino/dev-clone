@@ -222,8 +222,8 @@ id/redirect-checker
                     <p class="text-black">@lang('redirectchecker.desc-2-1')</p>
                     <h4 class="sub-titles">@lang('redirectchecker.desc-2-1-1')</h4>
                     <p class="text-black">@lang('redirectchecker.desc-2-1-2')</p>
-                    <p class="text-black">@lang('redirectchecker.desc-2-1-3')</p>
                     <ul>
+                        <li class="text-black">@lang('redirectchecker.desc-2-1-3')</li>
                         <li class="text-black">@lang('redirectchecker.desc-2-1-1-1')</li>
                         <li class="text-black">@lang('redirectchecker.desc-2-1-1-2')</li>
                         <li class="text-black">@lang('redirectchecker.desc-2-1-1-3')</li>
@@ -250,6 +250,7 @@ id/redirect-checker
                         <li class="text-black">@lang('redirectchecker.desc-2-3-1-2')</li>
                         <li class="text-black">@lang('redirectchecker.desc-2-3-1-3')</li>
                         <li class="text-black">@lang('redirectchecker.desc-2-3-1-4')</li>
+                        <li class="text-black">@lang('redirectchecker.desc-2-3-1-5')</li>
                     </ul>
                     <h4 class="sub-titles">@lang('redirectchecker.desc-2-4-1')</h4>
                     <p class="text-black">@lang('redirectchecker.desc-2-4-2')</p>
@@ -288,6 +289,27 @@ id/redirect-checker
                 </div>
             </div>
         </div>
+        @lang('redirectchecker.howto1')
+        <div class="expand-text">
+        @lang('redirectchecker.howto2')
+            <img class="mb-4" src="{{asset('/media/images/redirectchecker_instruction_1.webp')}}" alt="HowTo-redirectchecker-1" width="80%">
+            @lang('redirectchecker.howto3')
+            <img class="mb-4" src="{{asset('/media/images/redirectchecker_instruction_2.webp')}}" alt="HowTo-redirectchecker-2" width="80%">
+            @lang('redirectchecker.howto4')
+            <img class="mb-4" src="{{asset('/media/images/redirectchecker_instruction_3.webp')}}" alt="HowTo-redirectchecker-3" width="80%">
+            @lang('redirectchecker.howto5')
+            <img class="mb-4" src="{{asset('/media/images/redirectchecker_instruction_4.webp')}}" alt="HowTo-redirectchecker-4" width="80%">
+            @lang('redirectchecker.howto6')
+            <img class="mb-4" src="{{asset('/media/images/redirectchecker_instruction_5.webp')}}" alt="HowTo-redirectchecker-5" width="80%">
+            @lang('redirectchecker.howto7')
+            <img class="mb-4" src="{{asset('/media/images/redirectchecker_instruction_6.webp')}}" alt="HowTo-redirectchecker-6" width="80%">
+            @lang('redirectchecker.howto8')
+        </div>
+                @if($local == 'en')
+                <a class="moreless-button" href="#/">Read more</a>
+                @else
+                <a class="moreless-buttonid" href="#/">Baca Selengkapnya</a>
+                @endif
         @include('layouts.roboDesc')
         {{--
         <div class="row mb-10">

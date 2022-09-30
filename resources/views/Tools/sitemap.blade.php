@@ -253,6 +253,29 @@ id/sitemap-generator
                 </div>
             </div>
         </div>
+        @lang('sitemap.howto1')
+        <div class="expand-text">
+            @lang('sitemap.howto2')
+            <img class="mb-4" src="{{asset('/media/images/sitemap_instruction_1.webp')}}" alt="HowTo-sitemap-1" width="80%">
+            @lang('sitemap.howto3')
+            <img class="mb-4" src="{{asset('/media/images/sitemap_instruction_2.webp')}}" alt="HowTo-sitemap-2" width="80%">
+            @lang('sitemap.howto4')
+            <img class="mb-4" src="{{asset('/media/images/sitemap_instruction_3.webp')}}" alt="HowTo-sitemap-3" width="80%">
+            @lang('sitemap.howto5')
+            <img class="mb-4" src="{{asset('/media/images/sitemap_instruction_4.webp')}}" alt="HowTo-sitemap-4" width="80%">
+            @lang('sitemap.howto6')
+            <img class="mb-4" src="{{asset('/media/images/sitemap_instruction_5.webp')}}" alt="HowTo-sitemap-5" width="80%">
+            @lang('sitemap.howto7')
+            <img class="mb-4" src="{{asset('/media/images/sitemap_instruction_6.webp')}}" alt="HowTo-sitemap-6" width="80%">
+            @lang('sitemap.howto8')
+            <img class="mb-4" src="{{asset('/media/images/sitemap_instruction_7.webp')}}" alt="HowTo-sitemap-7" width="80%">
+            @lang('sitemap.howto9')
+        </div>
+        @if($local == 'en')
+                <a class="moreless-button" href="#/">Read more</a>
+                @else
+                <a class="moreless-buttonid" href="#/">Baca Selengkapnya</a>
+                @endif
         @include('layouts.roboDesc')
         {{--
         <div class="row mb-10">

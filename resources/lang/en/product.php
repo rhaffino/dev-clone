@@ -87,6 +87,45 @@ return [
     "desc-4" => "Example of Generated Schema Markup",
     "desc-4-1" => "After filling in the required data, here is an example script generated using the JSON-LD Product Schema Generator.",
     "desc-4-2" => 'That is an explanation of <a href="https://tools.cmlabs.co/id/json-ld-product-schema-generator">JSON-LD Product Schema Generator</a> from cmlabs with the best practices you can do for your website. Optimize your product pages using the right markup schema with this tool. Also, follow some of the best practices we have suggested for maximum results.',
+    "howto-title" => 'How to Use the Product Schema Generator?',
+    "howto1" => '<h2>How to Use the Product Schema Generator?</h2>
+                    <p>Adding schema markup to product pages can make your product information appear in rich results in Google SERPs. The way to generate product schema markup using this tool is as follows:</p>',
+    "howto2" => '<h4 class="sub-titles">Go to JSON-LD Product Schema Generator Page</h4>
+                    <p>First of all, go to the <a href="https://tools.cmlabs.co/en/json-ld-product-schema-generator">JSON-LD Product Schema Generator</a> page to start automatically generating product schema markup. The schema markup generated also complies with Google search guidelines.
+                    </p>',
+    "howto3" => '<p>Figure 1: Display of the product schema generator page from cmlabs.</p>
+                    <h4 class="sub-titles">Input General Information</h4>
+                    <p>First, input general information such as product name, product image URL, and the name of the brand that issued the product in the fields provided.</p>
+                    <p>Then, you can add any other required information. It would be better if you describe the product in detail. However, if you feel you don&#39;t need to add information, you can skip filling in the data in that column.</p>',
+    "howto4" => '<p>Figure 2: Enter the product name, product image URL, and brand name into the product schema generator.</p>
+                    <h4 class="sub-titles">Property Identification</h4>
+                    <p>Next, you can add property identification. There are several property options such as sku, gtin8, gtin13, gtin14, and mpn. In this section, you can add multiple properties to one product. Next, you will be asked to fill in the data according to the type of property you choose.</p>',
+    "howto5" => '<p>Figure 3: Select the identification type and enter the required data into the product schema generator.</p>
+                    <h4 class="sub-titles">Add Product Description</h4>
+                    <p>Next, you can add a description of the products you offer. Make a description that really describes the benefits of the product and contains information that users may need. </p>',
+    "howto6" => '<p>Figure 4: Enter the product description into the product schema generator.</p>
+                    <h4 class="sub-title">Add Offer</h4>
+                    <p>Then, you can add offers. There are two offer options to choose from, namely Offer or Aggregate offer. Check out the following explanation:</p>
+                    <h6 class="sub-titles">Offer</h6>
+                    <p>An offer is a type of offer given to a single product. For example, offers to rent a car, sell movie tickets, and more. There is some data that you need to add, namely the type of offer, product URL, currency, price, and other information that you feel you need to add.</p>',
+    "howto7" => '<p>Figure 5: Enter the type, product URL, currency, price, and other required information into the product schema generator.</p>
+                    <h4 class="sub-titles">Aggregate Offer</h4>
+                    <p>Aggregate can be used when a product has multiple offers. For example, the offer of the same shoe by several different merchants. There is some data that you need to add, namely the type of offer, product URL, currency, highest price, number, and other information that you feel you need to add.</p>',
+    "howto8" => '<p>Figure 6: Enter the bid type, product url, currency, highest price, bid amount, and other required information into the product schema generator.</p> 
+                    <h4 class="sub-titles">Add Product Review</h4>
+                    <p>With the product schema generator, you can also add product reviews so that potential buyers can trust your product more. There is some data that you need to add, namely the name of the review, the content of the review, rating, date, author of the review, and other information that you feel is necessary to add.</p>',
+    "howto9" => '<p>Figure 7: Enter the review name, review content, rating, date, review author, and other required information into the product schema generator.</p>
+                    <h4 class="sub-titles">Copy Generated Product Schema Markup</h4>
+                    <p>If you have completed the required attributes to create the Product schema markup, then you will see a preview of the schema markup on the right. You can copy the schema markup directly with the <b>&#34;copy&#34;</b> button and paste it into your program code.</p>',
+    "howto10" => '<p>Figure 8: Product schema markup copy options</p>
+                    <h4 class="sub-titles">Check JSON-LD Product Schema Script Validation</h4>
+                    <p>With the Person schema generator, you can also check the validity of the JSON-LD script you are using. How to check it is quite easy, just press the <b>check</b> option contained in the preview of the resulting script.</p>
+                    <p>When you press the button, you will be redirected to <a href="https://search.google.com/test/rich-results">Google&#39;s Rich Result Test</a> page. On that page, you can check if the generated schema markup is working properly in Google search.</p>',
+    "howto11" => '<p>Figure 9: Product schema markup validation check options</p>
+                    <h4 class="sub-titles">Reset Schema Generator</h4>
+                    <p>This tool has options that make it easier for you to create a new Product schema. Just click the <b>&#34;Reset&#34;</b> option and delete all the data that was added previously. Next, you can create a new script.</p>',
+    "howto12" => '<p>Figure 10: Data reset option added to the Product schema generator.</p>
+                    <p>That is an explanation regarding how to create a product schema markup using the <a href="https://tools.cmlabs.co/en/json-ld-product-schema-generator">JSON-LD Product Schema Generator</a> tool from cmlabs. These tools can help you generate schema markup quickly and efficiently. Try this tool now!</p>',
     "highlight" => "In this latest version of JSON LD, we are developing the Product Schema Generator tool. This tool will make your page appear on Google's Rich Result SERP in detail. Users can add a markup to product pages so that Google can provide detailed information on Rich Result. You can create a single product page for sales. With this Schema Generator Product, we hope that you will have the opportunity to appear on the rich snippet SERP on Google.",
     "whats-new-1" => "In this newest version of JSON LD, we are developing the Product Schema Generator tool. This tool will make your page appear on Google's Rich Result SERP in detail. Using markup allows your product to attract potential customers. This is a good time to push your page for the better.",
     "whats-new-2" => "In this latest version, users can add a markup to product pages so that Google can provide detailed information on Rich Results. You can create a single product page for sales. With this Schema Generator Product, we hope that you will have the opportunity to appear on the rich snippet SERP on Google.",

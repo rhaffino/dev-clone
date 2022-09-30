@@ -38,6 +38,30 @@ return [
     "desc-6" => "Sitemap Plugins vs. Sitemap Generator",
     "desc-6-1" => "There are many plugins that can be downloaded and installed on your CMS. Then, what is the difference between a plugin and a generator sitemap? Actually, these two tools provide the same results. However, sitemap plugins usually are paid tools so you will need to pay some fees to use them. Whereas Sitemap Generator cmlabs is a free tool that you can use widely.",
     "desc-6-2" => "That's the discussion about the sitemap generator from cmlabs. By utilizing this tool, you no longer need to manually create a list of URLs. Because you can crawl entire URLs and generate an XML sitemap file in no time. Try the <a href='https://tools.cmlabs.co/en/sitemap-generator'>sitemap generator</a> now!",
+    "howto-title" => 'How to Use a Sitemap Generator?',
+    "howto1" => '<h2>How to Use a Sitemap Generator?</h2>
+                    <p>A sitemap is a file containing a list of URLs on a website that is useful for making it easier for search engines to understand the structure of your website. Follow a few easy steps to use the following generator sitemap:</p>',
+    "howto2" => '<h4 class="sub-titles">Go to Sitemap Generator Page</h4>
+                    <p>To start creating a sitemap, please open the Sitemap Generator page from cmlabs first. On that page, you can add the URL you want to create a sitemap for, view a list of URLs linked to the website, and view the history of using the sitemap generator.</p>',
+    "howto3" => '<p>Figure 1: Sitemap Generator page view from cmlabs</p>
+                    <h4 class="sub-titles">Enter Website URL</h4>
+                    <p>The first thing you need to do is enter the URL of the website. After adding the website URL in the field provided, then you need to press the <b>&#34;Generate&#34;</b> button. Thus, this tool will execute the command to generate the sitemap.</p>',
+    "howto4" => '<p>Figure 2: The display when the user has entered the website URL in the provided field.</p>
+                    <h4 class="sub-titles">Wait Until the Sitemap Is Created Successfully</h4>
+                    <p>Next, you need to wait a while until the sitemap is displayed. This is because this tool takes time to get a list of URLs that are linked to the website URLs that you typed earlier.</p>',
+    "howto5" => '<p>Figure 3: Display of information that the generator sitemap is crawling data.</p>
+                    <h4 class="sub-titles">Check Sitemap Results In Results Section</h4>
+                    <p>After this tool has successfully crawled the website URL you entered, you will see a list of URLs that are linked to that website. You can add this list of URLs to your current sitemap file. If you do not have a sitemap file, then you can click the <b>&#34;Download Sitemap&#34;</b> button and the generated sitemap will be saved on your device.</p>',
+    "howto6" => '<p>Figure 4: List of linked URLs on tracked websites.</p>
+                    <h4 class="sub-titles">View Your Sitemap Creation History</h4>
+                    <p>Sitemap Generator allows you to view the history of using this tool. In the history data, you will see a list of website URLs that you have added when using the Sitemap Generator tool from cmlabs.</p>',
+    "howto7" => '<p>Figure 5: List of sitemap generator usage history.</p>
+                    <h4 class="sub-titles">Login After 5 Times Usage</h4>
+                    <p>Some free cmlabs tools require login after 5 times of use, Sitemap Generator is one of them. If you have used it 5 times, our system will automatically display a message stating that you have reached the usage limit.</p>',
+    "howto8" => '<p>Figure 6: The usage warning has reached the limit. In this warning, there is a login button that directs to the login page.</p>
+                    <p>You can log in by clicking the login button on the warning message that appears. Next, you will be directed to the cmlabs login page. Please enter the required data, or you can log in via Google.</p>',
+    "howto9" => '<p>Figure 7: cmlabs login page</p>
+                    <p>Once you have successfully logged in, you will be able to return to using this tool to create XML sitemaps for free. By logging in, the system can save historical data on the use of this tool in the within last year.</p>',
     "whats-new-1"=>"In this latest version, users can use the sitemap download feature. This update works to assist you in uploading it on your website. This will make it easier for search engines to identify your page directly. Hopefully, these changes are better for your business goals.",
     "whats-new-2"=>"In this latest update, we introduce a Robot Progress Bar. This robot is useful for seeing what percentage of the page indexing process is or what is commonly called the crawling process. The more complete features in this latest version bring benefits for developers to create a sitemap in a quick time.",
 ];

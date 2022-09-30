@@ -198,6 +198,7 @@ id/json-ld-faq-schema-generator
                     <p>@lang('faq.desc-4-1')</p>
                     <h4 class="sub-titles">@lang('faq.desc-4-2-1')</h4>
                     <p>@lang('faq.desc-4-2-2')</p>
+                    <p>@lang('faq.desc-4-2-3')</p>
                     <h4 class="sub-titles">@lang('faq.desc-4-3-1')</h4>
                     <p>@lang('faq.desc-4-3-2')</p>
                     <h4 class="sub-titles">@lang('faq.desc-4-4-1')</h4>
@@ -275,6 +276,29 @@ id/json-ld-faq-schema-generator
                 </div>
             </div>
         </div>
+        @lang('faq.howto1')
+        <div class="expand-text">
+        @lang('faq.howto1-1')
+            <img class="mb-4" src="{{asset('/media/images/faq_instruction_1.webp')}}" alt="HowTo-faq-1" width="80%">
+            @lang('faq.howto2')
+            <img class="mb-4" src="{{asset('/media/images/faq_instruction_2.webp')}}" alt="HowTo-faq-2" width="80%">
+            @lang('faq.howto3')
+            <img class="mb-4" src="{{asset('/media/images/faq_instruction_3.webp')}}" alt="HowTo-faq-3" width="80%">
+            @lang('faq.howto4')
+            <img class="mb-4" src="{{asset('/media/images/faq_instruction_4.webp')}}" alt="HowTo-faq-4" width="80%">
+            @lang('faq.howto5')
+            <img class="mb-4" src="{{asset('/media/images/faq_instruction_5.webp')}}" alt="HowTo-faq-5" width="80%">
+            @lang('faq.howto6')
+            <img class="mb-4" src="{{asset('/media/images/faq_instruction_6.webp')}}" alt="HowTo-faq-6" width="80%">
+            @lang('faq.howto7')
+            <img class="mb-4" src="{{asset('/media/images/faq_instruction_7.webp')}}" alt="HowTo-faq-7" width="80%">
+            @lang('faq.howto8')
+        </div>
+            @if($local == 'en')
+                <a class="moreless-button" href="#/">Read more</a>
+                @else
+                <a class="moreless-buttonid" href="#/">Baca Selengkapnya</a>
+                @endif
         @include('layouts.roboDesc')
         {{-- <div class="row mb-10">
       <div class="col-md-6">

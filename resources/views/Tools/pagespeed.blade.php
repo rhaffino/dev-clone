@@ -419,21 +419,17 @@ id/pagespeed-test
                 <div class="d-none" id="description-tab-2">
                     <h2 class="text-black">@lang('pagespeed.desc-2')</h2>
                     <p class="text-black">@lang('pagespeed.desc-2-1')</p>
-                    <h4 class="sub-titles" class="text-black">@lang('pagespeed.desc-2-1-1')</h4>
-                    <p class="text-black">@lang('pagespeed.desc-2-1-2')</p>
-                    <p class="text-black">@lang('pagespeed.desc-2-1-2-1')</p>
-                    <p class="text-black">@lang('pagespeed.desc-2-1-2-2')</p>
+                    <h4 class="sub-titles" class="text-black">@lang('pagespeed.desc-2-1-1-1')</h4>
+                    <p class="text-black">@lang('pagespeed.desc-2-1-1-2')</p>
+                    <p class="text-black">@lang('pagespeed.desc-2-1-1-3')</p>
                     <ul>
                         <li>@lang('pagespeed.desc-2-1-2-3')</li>
                         <li>@lang('pagespeed.desc-2-1-2-4')</li>
                         <li>@lang('pagespeed.desc-2-1-2-5')</li>
                     </ul>
                     <p class="text-black">@lang('pagespeed.desc-2-1-3-1')</p>
-                    <p class="text-black">@lang('pagespeed.desc-2-1-3-2')</p>
                     <p class="text-black">@lang('pagespeed.desc-2-1-4-1')</p>
-                    <p class="text-black">@lang('pagespeed.desc-2-1-4-2')</p>
                     <p class="text-black">@lang('pagespeed.desc-2-1-5-1')</p>
-                    <p class="text-black">@lang('pagespeed.desc-2-1-5-2')</p>
                     <h4 class="sub-titles">@lang('pagespeed.desc-2-2-1')</h4>
                     <p class="text-black">@lang('pagespeed.desc-2-2-2')</p>
                     <h4 class="sub-titles">@lang('pagespeed.desc-2-3-1')</h4>
@@ -444,6 +440,7 @@ id/pagespeed-test
                         <li>@lang('pagespeed.desc-2-4-1-1')</li>
                         <li>@lang('pagespeed.desc-2-4-1-2')</li>
                         <li>@lang('pagespeed.desc-2-4-1-3')</li>
+                        <li>@lang('pagespeed.desc-2-4-1-4')</li>
                     </ul>
                     <h4 class="sub-titles">@lang('pagespeed.desc-2-5-1')</h4>
                     <p class="text-black">@lang('pagespeed.desc-2-5-2')</p>
@@ -459,6 +456,7 @@ id/pagespeed-test
                     <p class="text-black">@lang('pagespeed.desc-3-4-3')</p>
                     <h4 class="sub-titles">@lang('pagespeed.desc-3-5-1')</h4>
                     <p class="text-black">@lang('pagespeed.desc-3-5-2')</p>
+                    <p class="text-black">@lang('pagespeed.desc-3-5-3')</p>
                 </div>
             </div>
             <div class="col-md-3">
@@ -482,6 +480,35 @@ id/pagespeed-test
                 </div>
             </div>
         </div>
+        @lang('pagespeed.howto1')
+        <div class="expand-text">
+            @lang('pagespeed.howto2')
+            <img class="mb-4" src="{{asset('/media/images/pagespeed_instruction_1.webp')}}" alt="HowTo-pagespeed-1" width="80%">
+            @lang('pagespeed.howto3')
+            <img class="mb-4" src="{{asset('/media/images/pagespeed_instruction_2.webp')}}" alt="HowTo-pagespeed-2" width="80%">
+            @lang('pagespeed.howto4')
+            <img class="mb-4" src="{{asset('/media/images/pagespeed_instruction_3.webp')}}" alt="HowTo-pagespeed-3" width="80%">
+            @lang('pagespeed.howto5')
+            <img class="mb-4" src="{{asset('/media/images/pagespeed_instruction_4.webp')}}" alt="HowTo-pagespeed-4" width="80%">
+            @lang('pagespeed.howto6')
+            <img class="mb-4" src="{{asset('/media/images/pagespeed_instruction_5.webp')}}" alt="HowTo-pagespeed-5" width="80%">
+            @lang('pagespeed.howto7')
+            <img class="mb-4" src="{{asset('/media/images/pagespeed_instruction_6.webp')}}" alt="HowTo-pagespeed-6" width="80%">
+            @lang('pagespeed.howto8')
+            <img class="mb-4" src="{{asset('/media/images/pagespeed_instruction_7.webp')}}" alt="HowTo-pagespeed-7" width="80%">
+            @lang('pagespeed.howto9')
+            <img class="mb-4" src="{{asset('/media/images/pagespeed_instruction_8.webp')}}" alt="HowTo-pagespeed-8" width="80%">
+            @lang('pagespeed.howto10')
+            <img class="mb-4" src="{{asset('/media/images/pagespeed_instruction_9.webp')}}" alt="HowTo-pagespeed-9" width="80%">
+            @lang('pagespeed.howto11')
+            <img class="mb-4" src="{{asset('/media/images/pagespeed_instruction_10.webp')}}" alt="HowTo-pagespeed-10" width="80%">
+            @lang('pagespeed.howto12')
+        </div>
+            @if($local == 'en')
+                <a class="moreless-button" href="#/">Read more</a>
+                @else
+                <a class="moreless-buttonid" href="#/">Baca Selengkapnya</a>
+                @endif
         @include('layouts.roboDesc')
         {{--
         <div class="row mb-10">
