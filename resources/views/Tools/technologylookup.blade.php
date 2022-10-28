@@ -22,7 +22,9 @@ id/technology-lookup
     <div class="d-flex flex-column-fluid">
         <div class="container-fluid px-0">
             <h1 class="text-darkgrey font-weight-normal">@lang('lookup.title')</h1>
-            <span class="text-darkgrey h4 font-weight-normal">@lang('lookup.sub-title')</span>
+            <span class="text-darkgrey h4 font-weight-normal mb-10">@lang('lookup.sub-title')</span>
+
+            @include('components.alert_limit')
 
             <div class="header-blue mt-10 mb-5 px-5 py-1">
                 <div class="row d-flex align-items-center">
@@ -33,7 +35,11 @@ id/technology-lookup
                         <input type="url" class="form-control lookup-url" name="" value="" placeholder="http://example.com" id="input-url" autocomplete="off">
                     </div>
                     <div class="col-sm-4 col-md-3 col-lg-4 col-xl-3 d-flex justify-content-end py-1">
-                        <button id="crawl-btn" type="button" class="btn btn-crawl" name="button" data-toggle="tooltip" data-theme="dark" title="@lang('lookup.lookup-btn-tooltip')">@lang('lookup.lookup-btn')</button>
+                        @if (isset($access_limit) && $access_limit > 0)
+                            <button disabled="disabled" type="button" class="btn btn-crawl" name="button" data-toggle="tooltip" data-theme="dark" title="@lang('lookup.lookup-btn-tooltip')">@lang('lookup.lookup-btn')</button>
+                        @else 
+                            <button id="crawl-btn" type="button" class="btn btn-crawl" name="button" data-toggle="tooltip" data-theme="dark" title="@lang('lookup.lookup-btn-tooltip')">@lang('lookup.lookup-btn')</button>
+                        @endif
                         {{-- <button id="crawlButtonDisabled" type="button" class="btn btn-crawl-disabled" name="button" data-toggle="tooltip" data-theme="dark" title="Currently your are reached the limit!">PLEASE WAIT 59:12</button>--}}
                     </div>
                 </div>

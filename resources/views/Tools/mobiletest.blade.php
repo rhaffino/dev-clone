@@ -24,6 +24,9 @@ id/mobile-test
             <h1 class="text-darkgrey font-weight-normal">@lang('mobiletest.title')</h1>
             <p class="text-darkgrey h4 font-weight-normal mb-10">@lang('mobiletest.sub-title')</p>
             @include('components.cta_form', ["message" => "It seems like your website still hasn't passed our mobile-friendly test. You can discuss your problem with our team by fulfilling your problem here."])
+            
+            @include('components.alert_limit')
+            
             <div class="header-blue mb-5 px-5 py-1">
                 <div class="row d-flex align-items-center">
                     <div class="col-sm-9 col-md-10 col-lg-9 col-xl-10 d-flex align-items-center py-1">
@@ -33,7 +36,11 @@ id/mobile-test
                         <input type="url" class="form-control sitemap-url" name="" value="" autocomplete="off" placeholder="https://example.com" id="tested_url">
                     </div>
                     <div class="col-sm-3 col-md-2 col-lg-3 col-xl-2 d-flex justify-content-end py-1">
-                        <button id="generateButton" type="button" class="btn btn-crawl" name="button">@lang('mobiletest.btn-check')</button>
+                        @if (isset($access_limit) && $access_limit > 0)
+                            <button disabled="disabled" type="button" class="btn btn-crawl" name="button">@lang('mobiletest.btn-check')</button>
+                        @else 
+                            <button id="generateButton" type="button" class="btn btn-crawl" name="button">@lang('mobiletest.btn-check')</button>
+                        @endif
                     </div>
                 </div>
             </div>

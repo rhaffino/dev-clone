@@ -26,16 +26,20 @@
             <div class="p-7">
                 <div class="row justify-content-end">
                     <div class="col-sm-5">
-                        <button
-                            onclick="location.href='https://cmlabs.co/en-id/login'"
-                            type="button"
+                        <a
+                            href="{{ env('MAIN_URL', 'https://cmlabs.co') }}/{{ App::isLocale('id') ? 'id-id' : 'en' }}/login/?logged_target={{ request()->url() }}"
                             class="btn btn-primary btn-sm btn-block font-weight-bolder"
                         >
                             Continue
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+<script>
+    $(function(){
+        $('#login-modal').modal('show');
+    });
+</script>

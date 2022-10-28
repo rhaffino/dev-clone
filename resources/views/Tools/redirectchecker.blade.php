@@ -24,6 +24,9 @@ id/redirect-checker
             <h1 class="text-darkgrey font-weight-normal">@lang('redirectchecker.title')</h1>
             <p class="text-darkgrey h4 font-weight-normal mb-10">@lang('redirectchecker.sub-title')</p>
             @include('components.cta_form', ["message" => "Oops, we can’t see your targeted URL. Fix your targeted URL here."])
+
+            @include('components.alert_limit')
+
             <div class="header-blue mb-5 px-5 py-1">
                 <div class="row d-flex align-items-center">
                     <div class="col-sm-6 col-md-7 col-lg-6 col-xl-7 d-flex align-items-center py-1">
@@ -63,9 +66,11 @@ id/redirect-checker
                             <option value="Specify">Specify</option>
                         </select>
 
-                        <button id="analyze-btn" type="button" class="btn btn-crawl" name="button">@lang('redirectchecker.check-btn')
-                        </button>
-
+                        @if (isset($access_limit) && $access_limit > 0)
+                            <button disabled="disabled" type="button" class="btn btn-crawl" name="button">@lang('redirectchecker.check-btn')</button>
+                        @else 
+                            <button id="analyze-btn" type="button" class="btn btn-crawl" name="button">@lang('redirectchecker.check-btn')</button>
+                        @endif
                     </div>
                 </div>
             </div>

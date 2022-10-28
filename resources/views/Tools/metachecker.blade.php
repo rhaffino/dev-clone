@@ -38,6 +38,8 @@
                         </div>
                     </div>
 
+                    @include('components.alert_limit')
+
                     <div class="header-blue py-3 mb-5 px-4">
                         <div class="row d-flex align-items-center">
                             <div class="col-md-2 text-left pl-0 col-mobile">
@@ -77,8 +79,11 @@
                                        placeholder="https://example.com" value="" autocomplete="off">
                             </div>
                             <div class="col-md-3 text-right col-mobile">
-                                <button id="crawlURL"
-                                        class="btn btn-crawl px-10">@lang('metachecker.btn-crawl')</button>
+                                @if (isset($access_limit) && $access_limit > 0)
+                                    <button disabled="disabled" class="btn btn-crawl px-10">@lang('metachecker.btn-crawl')</button>
+                                @else 
+                                    <button id="crawlURL" class="btn btn-crawl px-10">@lang('metachecker.btn-crawl')</button>
+                                @endif
                             </div>
                         </div>
                     </div>

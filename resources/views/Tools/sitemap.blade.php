@@ -22,9 +22,11 @@ id/sitemap-generator
     <div class="d-flex flex-column-fluid">
         <div class="container-fluid px-0">
             <h1 class="text-darkgrey font-weight-normal">@lang('sitemap.title')</h1>
-            <span class="text-darkgrey h4 font-weight-normal">@lang('sitemap.sub-title')</span>
+            <span class="text-darkgrey h4 font-weight-normal mb-10">@lang('sitemap.sub-title')</span>
 
-            <div class="header-blue mt-10 mb-5 px-5 py-1">
+            @include('components.alert_limit')
+
+            <div class="header-blue mb-5 px-5 py-1">
                 <div class="row d-flex align-items-center">
                     <div class="col-sm-9 col-md-10 col-lg-9 col-xl-10 d-flex align-items-center py-1">
                         <i id="noCrawl" class='bx bxs-shield text-white bx-md mr-3'></i>
@@ -33,7 +35,11 @@ id/sitemap-generator
                         <input id="url" type="url" class="form-control sitemap-url" name="" value="" autocomplete="off" placeholder="https://example.com">
                     </div>
                     <div class="col-sm-3 col-md-2 col-lg-3 col-xl-2 d-flex justify-content-end py-1">
-                        <button id="generate" type="button" class="btn btn-crawl" name="button">@lang('sitemap.btn-generate')</button>
+                        @if (isset($access_limit) && $access_limit > 0)
+                            <button disabled="disabled" type="button" class="btn btn-crawl" name="button">@lang('sitemap.btn-generate')</button>
+                        @else 
+                            <button id="generate" type="button" class="btn btn-crawl" name="button">@lang('sitemap.btn-generate')</button>
+                        @endif
                     </div>
                 </div>
             </div>

@@ -24,6 +24,9 @@ id/ssl-checker
             <h1 class="text-darkgrey font-weight-normal">@lang('sslchecker.title')</h1>
             <p class="text-darkgrey h4 font-weight-normal mb-10">@lang('sslchecker.subtitle')</p>
             @include('components.cta_form', ["message" => "It seems like your website link is not secure. If you need help to enable SSL on your website."])
+
+            @include('components.alert_limit')
+
             <div class="header-blue mb-5 px-5 py-1">
                 <div class="row d-flex align-items-center">
                     <div class="col-sm-9 col-md-10 col-lg-9 col-xl-10 d-flex align-items-center py-1">
@@ -33,7 +36,11 @@ id/ssl-checker
                         <input id="url" type="url" class="form-control lookup-url" name="" value="" autocomplete="off" placeholder="example.com">
                     </div>
                     <div class="col-sm-3 col-md-2 col-lg-3 col-xl-2 d-flex justify-content-end py-1">
-                        <button id="crawlButton" type="button" class="btn btn-crawl" name="button">@lang('sslchecker.btn-check')</button>
+                        @if (isset($access_limit) && $access_limit > 0)
+                            <button disabled="disabled" type="button" class="btn btn-crawl" name="button">@lang('sslchecker.btn-check')</button>
+                        @else 
+                            <button id="crawlButton" type="button" class="btn btn-crawl" name="button">@lang('sslchecker.btn-check')</button>
+                        @endif
                     </div>
                 </div>
             </div>

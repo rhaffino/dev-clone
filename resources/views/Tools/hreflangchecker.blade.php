@@ -36,6 +36,9 @@ id/hreflang-checker
                     </div>
                 </div>
             </div>
+
+            @include('components.alert_limit')
+
             <div class="header-blue mb-5 px-5 py-1">
                 <div class="row d-flex align-items-center">
                     <div class="col-sm-9 col-md-10 col-lg-9 col-xl-10 d-flex align-items-center py-1">
@@ -45,7 +48,12 @@ id/hreflang-checker
                         <input type="url" class="form-control hreflang-url" name="" value="" placeholder="http://example.com" id="input-url" autocomplete="off">
                     </div>
                     <div class="col-sm-3 col-md-2 col-lg-3 col-xl-2 d-flex justify-content-end py-1">
-                        <button id="check-btn" type="button" class="btn btn-crawl" name="button">@lang('hreflang.check-btn')</button>
+
+                        @if (isset($access_limit) && $access_limit > 0)
+                            <button disabled="disabled" type="button" class="btn btn-crawl" name="button">@lang('hreflang.check-btn')</button>
+                        @else 
+                            <button id="check-btn" type="button" class="btn btn-crawl" name="button">@lang('hreflang.check-btn')</button>
+                        @endif
                     </div>
                 </div>
             </div>
