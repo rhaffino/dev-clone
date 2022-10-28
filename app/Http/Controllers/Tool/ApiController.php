@@ -169,7 +169,7 @@ class ApiController extends Controller
         $access_count += 1;
         session()->put('access_count', $access_count);
 
-        $access_limit = $access_count >= 5 ? 1 : 0;
+        $access_limit = $access_count > 5 ? 1 : 0;
 
         $message = $access_limit ? Lang::get("alert.alert-limit") : 'recorded';
 

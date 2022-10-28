@@ -82,7 +82,8 @@
                                 @if (isset($access_limit) && $access_limit > 0)
                                     <button disabled="disabled" class="btn btn-crawl px-10">@lang('metachecker.btn-crawl')</button>
                                 @else 
-                                    <button id="crawlURL" class="btn btn-crawl px-10">@lang('metachecker.btn-crawl')</button>
+                                    <button id="crawlURL" class="next-button" style="display: none"></button>
+                                    <button id="process-button" class="btn btn-crawl px-10 check-limit-button">@lang('metachecker.btn-crawl')</button>
                                 @endif
                             </div>
                         </div>
@@ -543,33 +544,66 @@
 @endsection
 
 @push('script')
-    <script type="application/ld+json">
-  {
+<script type="application/ld+json">
+{
     "@context": "https://schema.org/",
     "@type": "BreadcrumbList",
     "itemListElement": [{
-      "@type": "ListItem",
-      "position": 1,
-      "name": "@lang('layout.home')",
-      "item": "{{url('/')}}/{{$local}}"
+        "@type": "ListItem",
+        "position": 1,
+        "name": "@lang('layout.home')",
+        "item": "{{url('/')}}/{{$local}}"
     }, {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Title & Meta Description Checker",
-      "item": "{{url('/')}}/{{$local}}/page-title-meta-description-checker"
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Title & Meta Description Checker",
+        "item": "{{url('/')}}/{{$local}}/page-title-meta-description-checker"
     }]
-  }
-
-
-    </script>
+}
+</script>
+<script>
+    const META_CHECKER_URL = '{{route('api.analyze-meta')}}'
+</script>
+<script src="{{asset('js/logic/predifine-localstorage.js')}}"></script>
+<script src="{{asset('js/logic/metachecker.js')}}"></script>
+<script type="text/javascript">
+    $('#toggle_button_writer').click();
+</script>
+@if (Auth::guest() && $access_limit <= 0)
     <script>
-        const META_CHECKER_URL = '{{route('api.analyze-meta')}}'
+        $(function(){
+            var process_clicked = false;
+            $('.check-limit-button').on('click', function(e) {
+                if (process_clicked) {
+                    process_clicked = false;
+                    $('.next-button').trigger('click');
+                    return;
+                }
+                e.preventDefault();
+                $.post('{{ route("api.limit") }}', {
+                    logged_target: '{{ request()->url() }}',
+                    _token: $('meta[name=csrf-token]').attr('content'),
+                }, function (response) {
+                    if (response.statusCode === 200) {
+                        if (response.data.limit == 1) {
+                            var alert_html = '<div class="alert alert-limit d-flex justify-content-between align-items-center" role="alert" style="border-color: #C29C13; background-color: #FFF8DF; margin-bottom: 32px;">' + 
+                                '<div class="d-flex align-items-center mr-2" style="color: #C29C13;">'+ 
+                                    '<i class="icon pr-2 bx bxs-error-circle bx-sm"  style="color: #C29C13;"></i>' + 
+                                    response.data.message + 
+                                '</div>' + 
+                                '<a href="'+ response.data.logged_target +'" style="color: #C29C13; font-weight: 700;">Login</a>' +
+                            '</div>';
+                            $('#alert-limit').html(alert_html);
+                        } else {
+                            process_clicked = true; 
+                            $('.check-limit-button').trigger('click');
+                        }
+                    }
+                });
+            });
+        });
     </script>
-    <script src="{{asset('js/logic/predifine-localstorage.js')}}"></script>
-    <script src="{{asset('js/logic/metachecker.js')}}"></script>
-    <script type="text/javascript">
-        $('#toggle_button_writer').click();
-    </script>
+@endif
 @endpush
 
 @section('title-checker')

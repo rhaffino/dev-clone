@@ -38,7 +38,8 @@ id/sitemap-generator
                         @if (isset($access_limit) && $access_limit > 0)
                             <button disabled="disabled" type="button" class="btn btn-crawl" name="button">@lang('sitemap.btn-generate')</button>
                         @else 
-                            <button id="generate" type="button" class="btn btn-crawl" name="button">@lang('sitemap.btn-generate')</button>
+                            <button id="generate" class="next-button" style="display: none"></button>
+                            <button id="process-button" type="button" class="btn btn-crawl check-limit-button" name="button">@lang('sitemap.btn-generate')</button>
                         @endif
                     </div>
                 </div>
@@ -413,6 +414,41 @@ id/sitemap-generator
         }]
     }
 </script>
+@if (Auth::guest() && $access_limit <= 0)
+    <script>
+        $(function(){
+            var process_clicked = false;
+            $('.check-limit-button').on('click', function(e) {
+                if (process_clicked) {
+                    process_clicked = false;
+                    $('.next-button').trigger('click');
+                    return;
+                }
+                e.preventDefault();
+                $.post('{{ route("api.limit") }}', {
+                    logged_target: '{{ request()->url() }}',
+                    _token: $('meta[name=csrf-token]').attr('content'),
+                }, function (response) {
+                    if (response.statusCode === 200) {
+                        if (response.data.limit == 1) {
+                            var alert_html = '<div class="alert alert-limit d-flex justify-content-between align-items-center" role="alert" style="border-color: #C29C13; background-color: #FFF8DF; margin-bottom: 32px;">' + 
+                                '<div class="d-flex align-items-center mr-2" style="color: #C29C13;">'+ 
+                                    '<i class="icon pr-2 bx bxs-error-circle bx-sm"  style="color: #C29C13;"></i>' + 
+                                    response.data.message + 
+                                '</div>' + 
+                                '<a href="'+ response.data.logged_target +'" style="color: #C29C13; font-weight: 700;">Login</a>' +
+                            '</div>';
+                            $('#alert-limit').html(alert_html);
+                        } else {
+                            process_clicked = true; 
+                            $('.check-limit-button').trigger('click');
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+@endif
 @endpush
 
 @section('sitemap')
