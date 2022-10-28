@@ -170,7 +170,23 @@
   };
 </script>
 <script>
+    $('.moreless-button').click(function() {
+    $('.expand-text').slideToggle();
+    if ($('.moreless-button').text() == "Read more") {
+      $(this).text("Read less")
+    } else {
+      $(this).text("Read more")
+    }
+  });
 
+  $('.moreless-buttonid').click(function() {
+    $('.expand-text').slideToggle();
+    if ($('.moreless-buttonid').text() == "Baca Selengkapnya") {
+      $(this).text("Tutup")
+    } else {
+      $(this).text("Baca Selengkapnya")
+    }
+  });
 </script>
 <script src="{{asset('js/logic/cta-function.js')}}"></script>
 @stack('script')

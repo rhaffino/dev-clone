@@ -300,6 +300,7 @@
                     <div class="" id="description-tab-1">
                         <h2>@lang('wordcounter.desc-1')</h2>
                         <p>@lang('wordcounter.desc-1-1')</p>
+                        <p>@lang('wordcounter.desc-1-2')</p>
                     </div>
 
                     <div class="d-none" id="description-tab-2">
@@ -318,123 +319,41 @@
 
                     <div class="d-none" id="description-tab-3">
                         <h2>@lang('wordcounter.desc-3')</h2>
-                        <table class="table">
-                            <tr>
-                                <td scope="col">@lang('wordcounter.desc-3-1')</td>
-                                <td>@lang('wordcounter.desc-3-1-1')</td>
-                            </tr>
-                            <tr>
-                                <td scope="col">@lang('wordcounter.desc-3-2')</td>
-                                <td>@lang('wordcounter.desc-3-2-1')</td>
-                            </tr>
-                            <tr>
-                                <td scope="col">@lang('wordcounter.desc-3-3')</td>
-                                <td>@lang('wordcounter.desc-3-3-1')</td>
-                            </tr>
-                            <tr>
-                                <td scope="col">@lang('wordcounter.desc-3-4')</td>
-                                <td>@lang('wordcounter.desc-3-4-1')</td>
-                            </tr>
-                            <tr>
-                                <td scope="col">@lang('wordcounter.desc-3-5')</td>
-                                <td>@lang('wordcounter.desc-3-5-1')</td>
-                            </tr>
-                        </table>
+                        <p>@lang('wordcounter.desc-3-1')</p>
+                        <h4 class="sub-titles">@lang('wordcounter.desc-3-1-1')</h4>
+                        <p>@lang('wordcounter.desc-3-1-2')</p>
+                        <p>@lang('wordcounter.desc-3-1-3')</p>
+                        <p>@lang('wordcounter.desc-3-1-4')</p>
+                        <h4 class="sub-titles">@lang('wordcounter.desc-3-2-1')</h4>
+                        <p>@lang('wordcounter.desc-3-2-2')</p>
+                        <h4 class="sub-titles">@lang('wordcounter.desc-3-3-1')</h4>
+                        <p>@lang('wordcounter.desc-3-3-2')</p>
                     </div>
 
                     <div class="d-none" id="description-tab-4">
                         <h2>@lang('wordcounter.desc-4')</h2>
                         <p>@lang('wordcounter.desc-4-1')</p>
+                        <ul>
+                            <li><p>@lang('wordcounter.desc-4-1-1')</p></li>
+                            <li><p>@lang('wordcounter.desc-4-1-2')</p></li>
+                            <li><p>@lang('wordcounter.desc-4-1-3')</p></li>
+                            <li><p>@lang('wordcounter.desc-4-1-4')</p></li>
+                            <li><p>@lang('wordcounter.desc-4-1-5')</p></li>
+                        </ul>
                     </div>
 
                     <div class="d-none" id="description-tab-5">
                         <h2>@lang('wordcounter.desc-5')</h2>
                         <p>@lang('wordcounter.desc-5-1')</p>
                         <p>@lang('wordcounter.desc-5-2')</p>
-                    </div>
-                    <div class="d-none" id="description-tab-6">
-                        <h2>@lang('wordcounter.desc-6')</h2>
-                        <p>@lang('wordcounter.desc-6-1')</p>
-                        <p>@lang('wordcounter.desc-6-2')</p>
-                        <table class="table">
-                            <tr>
-                                <td scope="col">@lang('wordcounter.desc-6-3')</td>
-                                <td>@lang('wordcounter.desc-6-3-1')</td>
-                            </tr>
-                            <tr>
-                                <td scope="col">@lang('wordcounter.desc-6-4')</td>
-                                <td>@lang('wordcounter.desc-6-4-1')</td>
-                            </tr>
-                            <tr>
-                                <td scope="col">@lang('wordcounter.desc-6-5')</td>
-                                <td>@lang('wordcounter.desc-6-5-1')</td>
-                            </tr>
-                        </table>
-                        <h3>@lang('wordcounter.desc-6-6-1')</h3>
-                        <p>@lang('wordcounter.desc-6-6-1-1')</p>
-                        <p>@lang('wordcounter.desc-6-6-1-2')</p>
-                        <p>@lang('wordcounter.desc-6-6-1-3')</p>
-                        <p>@lang('wordcounter.desc-6-6-1-4')</p>
-                        <p>@lang('wordcounter.desc-6-6-1-5')</p>
-                        <h3>@lang('wordcounter.desc-6-6-2')</h3>
-                        <p>@lang('wordcounter.desc-6-6-2-1')</p>
-                        <p>@lang('wordcounter.desc-6-6-2-2')</p>
-                    </div>
-
-                    <div class="d-none" id="description-tab-7">
-                        <h2>@lang('wordcounter.desc-7')</h2>
-                        <p>@lang('wordcounter.desc-7-1')</p>
-                        <p>@lang('wordcounter.desc-7-2')</p>
-                        <p>@lang('wordcounter.desc-7-3')</p>
-                    </div>
-
-                    <div class="d-none" id="description-tab-8">
-                        <h2>@lang('wordcounter.desc-8')</h2>
-                        <p>@lang('wordcounter.desc-8-1')</p>
-                        <p>@lang('wordcounter.desc-8-2')</p>
-                        <h3>@lang('wordcounter.desc-8-2-1')</h3>
-                        <p>@lang('wordcounter.desc-8-2-1-1')</p>
-                        <h3>@lang('wordcounter.desc-8-2-2')</h3>
-                        <p>@lang('wordcounter.desc-8-2-2-1')</p>
-                        <p>@lang('wordcounter.desc-8-2-2-2')</p>
-                        <h3>@lang('wordcounter.desc-8-2-3')</h3>
-                        <p>@lang('wordcounter.desc-8-2-3-1')</p>
-                        <p>@lang('wordcounter.desc-8-2-3-2')</p>
-                        <h3>@lang('wordcounter.desc-8-2-4')</h3>
-                        <p>@lang('wordcounter.desc-8-2-4-1')</p>
-                    </div>
-
-                    <div class="d-none" id="description-tab-9">
-                        <h2>@lang('wordcounter.desc-9')</h2>
-                        <p>@lang('wordcounter.desc-9-1')</p>
-                    </div>
-
-                    <div class="d-none" id="description-tab-10">
-                        <h2>@lang('wordcounter.desc-10')</h2>
-                        <p>@lang('wordcounter.desc-10-1')</p>
-                    </div>
-
-                    <div class="d-none" id="description-tab-11">
-                        <h2>@lang('wordcounter.desc-11')</h2>
-                        <p>@lang('wordcounter.desc-11-1')</p>
-                        <div class="row">
-                            <div class="col-sm-6 mb-5">
-                                <div class="card card-word-counter card-custom  card-stretch">
-                                    <div class="card-body">
-                                        <p class="h4">@lang('wordcounter.desc-11-2')</p>
-                                        <p>@lang('wordcounter.desc-11-3')</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 mb-5">
-                                <div class="card card-word-counter card-custom card-stretch">
-                                    <div class="card-body">
-                                        <p class="h4">@lang('wordcounter.desc-11-4')</p>
-                                        <p>@lang('wordcounter.desc-11-5')</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <p>@lang('wordcounter.desc-5-3')</p>
+                        <ul>
+                            <li><p>@lang('wordcounter.desc-5-1-1')</p></li>
+                            <li><p>@lang('wordcounter.desc-5-1-2')</p></li>
+                            <li><p>@lang('wordcounter.desc-5-1-3')</p></li>
+                        </ul>
+                        <p>@lang('wordcounter.desc-5-4')</p>
+                        <p>@lang('wordcounter.desc-5-5')</p>
                     </div>
                 </div>
                 <div class="col-md-3">
@@ -468,44 +387,27 @@
                         </div>
                         <a class="">@lang('wordcounter.desc-5')</a>
                     </div>
-                    <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-6">
-                        <div class="mr-2" style="width:24px !important; height: 24px !important;">
-                            <span class="label label-lg label-tools-description" id="nav-label-tab-6">6</span>
-                        </div>
-                        <a class="">@lang('wordcounter.desc-6')</a>
-                    </div>
-                    <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-7">
-                        <div class="mr-2" style="width:24px !important; height: 24px !important;">
-                            <span class="label label-lg label-tools-description" id="nav-label-tab-7">7</span>
-                        </div>
-                        <a class="">@lang('wordcounter.desc-7')</a>
-                    </div>
-                    <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-8">
-                        <div class="mr-2" style="width:24px !important; height: 24px !important;">
-                            <span class="label label-lg label-tools-description" id="nav-label-tab-8">8</span>
-                        </div>
-                        <a class="">@lang('wordcounter.desc-8')</a>
-                    </div>
-                    <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-9">
-                        <div class="mr-2" style="width:24px !important; height: 24px !important;">
-                            <span class="label label-lg label-tools-description" id="nav-label-tab-9">9</span>
-                        </div>
-                        <a class="">@lang('wordcounter.desc-9')</a>
-                    </div>
-                    <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-10">
-                        <div class="mr-2" style="width:24px !important; height: 24px !important;">
-                            <span class="label label-lg label-tools-description" id="nav-label-tab-10">10</span>
-                        </div>
-                        <a class="">@lang('wordcounter.desc-10')</a>
-                    </div>
-                    <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-11">
-                        <div class="mr-2" style="width:24px !important; height: 24px !important;">
-                            <span class="label label-lg label-tools-description" id="nav-label-tab-11">11</span>
-                        </div>
-                        <a class="">@lang('wordcounter.desc-11')</a>
-                    </div>
                 </div>
             </div>
+            @lang('wordcounter.howto1')
+            <div class="expand-text">
+                @lang('wordcounter.howto2')
+                <img class="mb-4" src="{{asset('/media/images/wordcounter_instruction_1.webp')}}" alt="HowTo-wordcounter-1" width="80%">
+                @lang('wordcounter.howto3')
+                <img class="mb-4" src="{{asset('/media/images/wordcounter_instruction_2.webp')}}" alt="HowTo-wordcounter-2" width="80%">
+                @lang('wordcounter.howto4')
+                <img class="mb-4" src="{{asset('/media/images/wordcounter_instruction_3.webp')}}" alt="HowTo-wordcounter-3" width="80%">
+                @lang('wordcounter.howto5')
+                <img class="mb-4" src="{{asset('/media/images/wordcounter_instruction_4.webp')}}" alt="HowTo-wordcounter-4" width="80%">
+                @lang('wordcounter.howto6')
+                <img class="mb-4" src="{{asset('/media/images/wordcounter_instruction_5.webp')}}" alt="HowTo-wordcounter-5" width="80%">
+                @lang('wordcounter.howto7')
+            </div>
+                @if($local == 'en')
+                <a class="moreless-button" href="#/">Read more</a>
+                @else
+                <a class="moreless-buttonid" href="#/">Baca Selengkapnya</a>
+                @endif
             @include('layouts.roboDesc')
             {{--
             <div class="row mb-10">

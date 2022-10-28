@@ -317,26 +317,38 @@ id/json-ld-product-schema-generator
                     <p>@lang('product.desc-1-1')</p>
                     <p>@lang('product.desc-1-2')</p>
                     <p>@lang('product.desc-1-3')</p>
-                    <img class="mb-4" src="{{asset('/media/images/product-instruction-1.png')}}" alt="product-instruction-1" width="300">
+                    <img class="mb-4" src="{{asset('/media/images/product-instruction-3.png')}}" alt="product-instruction-3" width="60%">
                     <p>@lang('product.desc-1-4')</p>
-                    <ul>
-                        <li>@lang('product.desc-1-4-1')</li>
-                        <li>@lang('product.desc-1-4-2')</li>
-                    </ul>
-                    <p>@lang('product.desc-1-5')</p>
                 </div>
                 <div class="d-none" id="description-tab-2">
                     <h2>@lang('product.desc-2')</h2>
                     <p>@lang('product.desc-2-1')</p>
-                    <p>@lang('product.desc-2-2')</p>
-                    <p>@lang('product.desc-2-3')</p>
-                    <img class="mb-4" src="{{asset('/media/images/product-instruction-2.png')}}" alt="product-instruction-2" width="300">
+                    <ul>
+                        <li>@lang('product.desc-2-2')</li>
+                        <li>@lang('product.desc-2-3')</li>
+                    </ul>
+                    <p>@lang('product.desc-2-4')</p>
                 </div>
                 <div class="d-none" id="description-tab-3">
                     <h2>@lang('product.desc-3')</h2>
                     <p>@lang('product.desc-3-1')</p>
-                    <p>@lang('product.desc-3-2')</p>
-                    <p>@lang('product.desc-3-3')</p>
+                    <h4 class="sub-titles">@lang('product.desc-3-2-1')</h4>
+                    <p>@lang('product.desc-3-2-2')</p>
+                    <p>@lang('product.desc-3-2-3')</p>
+                    <h4 class="sub-titles">@lang('product.desc-3-3-1')</h4>
+                    <p>@lang('product.desc-3-3-2')</p>
+                    <ul>
+                        <li>@lang('product.desc-3-3-3')</li>
+                        <li>@lang('product.desc-3-3-4')</li>
+                    </ul>
+                    <h4 class="sub-titles">@lang('product.desc-3-4-1')</h4>
+                    <p>@lang('product.desc-3-4-2')</p>
+                    <ul>
+                        <li>@lang('product.desc-3-4-3')</li>
+                        <li>@lang('product.desc-3-4-4')</li>                        
+                        <li>@lang('product.desc-3-4-5')</li>                        
+                    </ul>
+
                 </div>
                 <div class="d-none" id="description-tab-4">
                     <h2>@lang('product.desc-4')</h2>
@@ -370,6 +382,7 @@ id/json-ld-product-schema-generator
                             &lt;/html&gt;
                         </code>
                     </pre>
+                    <p>@lang('product.desc-4-2')</p>
                 </div>
             </div>
             <div class="col-md-3">
@@ -399,6 +412,35 @@ id/json-ld-product-schema-generator
                 </div>
             </div>
         </div>
+        @lang('product.howto1')
+            @lang('product.howto2')
+            <div class="expand-text">
+            <img class="mb-4" src="{{asset('/media/images/product_instruction_1.webp')}}" alt="HowTo-product-1" width="80%">
+            @lang('product.howto3')
+            <img class="mb-4" src="{{asset('/media/images/product_instruction_2.webp')}}" alt="HowTo-product-2" width="80%">
+            @lang('product.howto4')
+            <img class="mb-4" src="{{asset('/media/images/product_instruction_3.webp')}}" alt="HowTo-product-3" width="80%">
+            @lang('product.howto5')
+            <img class="mb-4" src="{{asset('/media/images/product_instruction_4.webp')}}" alt="HowTo-product-4" width="80%">
+            @lang('product.howto6')
+            <img class="mb-4" src="{{asset('/media/images/product_instruction_5.webp')}}" alt="HowTo-product-5" width="80%">
+            @lang('product.howto7')
+            <img class="mb-4" src="{{asset('/media/images/product_instruction_6.webp')}}" alt="HowTo-product-6" width="80%">
+            @lang('product.howto8')
+            <img class="mb-4" src="{{asset('/media/images/product_instruction_7.webp')}}" alt="HowTo-product-7" width="80%">
+            @lang('product.howto9')
+            <img class="mb-4" src="{{asset('/media/images/product_instruction_8.webp')}}" alt="HowTo-product-8" width="80%">
+            @lang('product.howto10')
+            <img class="mb-4" src="{{asset('/media/images/product_instruction_9.webp')}}" alt="HowTo-product-9" width="80%">
+            @lang('product.howto11')
+            <img class="mb-4" src="{{asset('/media/images/product_instruction_10.webp')}}" alt="HowTo-product-10" width="80%">
+            @lang('product.howto12')
+        </div>
+            @if($local == 'en')
+            <a class="moreless-button" href="#/">Read more</a>
+            @else
+            <a class="moreless-buttonid" href="#/">Baca Selengkapnya</a>
+            @endif
         @include('layouts.roboDesc')
         {{-- <div class="row mb-10">
       <div class="col-md-6">

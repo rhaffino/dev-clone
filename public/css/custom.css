@@ -15,7 +15,9 @@ html, body {
 body {
     background: #e1e8ed;
 }
-
+.container-description .expand-text{
+    display: none;
+}
 .custom-mb {
     margin-bottom: 35px;
 }
@@ -987,6 +989,19 @@ a:hover {
 .container-description {
     padding-top: 5rem;
     padding-bottom: 5rem;
+}
+
+.container-description .sub-titles{
+    font-weight: 500;
+}
+
+.container-description .expand-text{
+    display: none;
+}
+
+body .container-description .italics{
+    font-size: inherit;
+    color: inherit;
 }
 
 .custom-features-accordion .card .card-header .card-title.collapsed,

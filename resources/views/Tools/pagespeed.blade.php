@@ -419,183 +419,44 @@ id/pagespeed-test
                 <div class="d-none" id="description-tab-2">
                     <h2 class="text-black">@lang('pagespeed.desc-2')</h2>
                     <p class="text-black">@lang('pagespeed.desc-2-1')</p>
+                    <h4 class="sub-titles" class="text-black">@lang('pagespeed.desc-2-1-1-1')</h4>
+                    <p class="text-black">@lang('pagespeed.desc-2-1-1-2')</p>
+                    <p class="text-black">@lang('pagespeed.desc-2-1-1-3')</p>
+                    <ul>
+                        <li>@lang('pagespeed.desc-2-1-2-3')</li>
+                        <li>@lang('pagespeed.desc-2-1-2-4')</li>
+                        <li>@lang('pagespeed.desc-2-1-2-5')</li>
+                    </ul>
+                    <p class="text-black">@lang('pagespeed.desc-2-1-3-1')</p>
+                    <p class="text-black">@lang('pagespeed.desc-2-1-4-1')</p>
+                    <p class="text-black">@lang('pagespeed.desc-2-1-5-1')</p>
+                    <h4 class="sub-titles">@lang('pagespeed.desc-2-2-1')</h4>
+                    <p class="text-black">@lang('pagespeed.desc-2-2-2')</p>
+                    <h4 class="sub-titles">@lang('pagespeed.desc-2-3-1')</h4>
+                    <p class="text-black">@lang('pagespeed.desc-2-3-2')</p>
+                    <h4 class="sub-titles">@lang('pagespeed.desc-2-4-1')</h4>
+                    <p class="text-black">@lang('pagespeed.desc-2-4-2')</p>
+                    <ul>
+                        <li>@lang('pagespeed.desc-2-4-1-1')</li>
+                        <li>@lang('pagespeed.desc-2-4-1-2')</li>
+                        <li>@lang('pagespeed.desc-2-4-1-3')</li>
+                        <li>@lang('pagespeed.desc-2-4-1-4')</li>
+                    </ul>
+                    <h4 class="sub-titles">@lang('pagespeed.desc-2-5-1')</h4>
+                    <p class="text-black">@lang('pagespeed.desc-2-5-2')</p>
                 </div>
                 <div class="d-none" id="description-tab-3">
                     <h2 class="text-black">@lang('pagespeed.desc-3')</h2>
                     <p class="text-black">@lang('pagespeed.desc-3-1')</p>
-                </div>
-                <div class="d-none" id="description-tab-4">
-                    <h2 class="text-black">@lang('pagespeed.desc-4')</h2>
-                    <p class="text-black">@lang('pagespeed.desc-4-1')</p>
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th></th>
-                                <th>@lang('pagespeed.desc-4-2')</th>
-                                <th>@lang('pagespeed.desc-4-3')</th>
-                                <th>@lang('pagespeed.desc-4-4')</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td scope="col">FCP</td>
-                                <td>[0, 1000ms]</td>
-                                <td>(1000ms, 3000ms)</td>
-                                <td>Over 3000ms</td>
-                            </tr>
-                            <tr>
-                                <td scope="col">FID</td>
-                                <td>[0, 100ms]</td>
-                                <td>(100ms, 300ms)</td>
-                                <td>Over 300ms</td>
-                            </tr>
-                            <tr>
-                                <td scope="col">LCP</td>
-                                <td>[0, 2500ms]</td>
-                                <td>(2500ms, 4000ms)</td>
-                                <td>Over from 4000ms</td>
-                            </tr>
-                            <tr>
-                                <td scope="col">CLS</td>
-                                <td>[0, 0,1]</td>
-                                <td>(0,1, 0,25)</td>
-                                <td>Over from 0,25</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="d-none" id="description-tab-5">
-                    <h2 class="text-black">@lang('pagespeed.desc-5')</h2>
-                    <p class="text-black">@lang('pagespeed.desc-5-1')</p>
-                    <p class="text-black">@lang('pagespeed.desc-5-2')</p>
-                </div>
-                <div class="d-none" id="description-tab-6">
-                    <h2 class="text-black">@lang('pagespeed.desc-6')</h2>
-                    <p class="text-black">@lang('pagespeed.desc-6-1')</p>
-                </div>
-                <div class="d-none" id="description-tab-7">
-                    <h2 class="text-black">@lang('pagespeed.desc-7')</h2>
-                    <p class="text-black">@lang('pagespeed.desc-7-1')</p>
-                </div>
-                <div class="d-none" id="description-tab-8">
-                    <h2 class="text-black">@lang('pagespeed.desc-8')</h2>
-                    <p class="text-black">@lang('pagespeed.desc-8-1')</p>
-                    <p class="text-black">@lang('pagespeed.desc-8-2')</p>
-                    <ul>
-                        <li>@lang('pagespeed.desc-8-3')</li>
-                        <li>@lang('pagespeed.desc-8-4')</li>
-                        <li>@lang('pagespeed.desc-8-5')</li>
-                    </ul>
-                </div>
-                <div class="d-none" id="description-tab-9">
-                    <h2 class="text-black">@lang('pagespeed.desc-9')</h2>
-                    <p class="text-black">@lang('pagespeed.desc-9-1')</p>
-                    <ul>
-                        <li>@lang('pagespeed.desc-9-2')</li>
-                        <li>@lang('pagespeed.desc-9-3')</li>
-                        <li>@lang('pagespeed.desc-9-4')</li>
-                    </ul>
-                </div>
-                <div class="d-none" id="description-tab-10">
-                    <h2 class="text-black">@lang('pagespeed.desc-10')</h2>
-                    <div class="accordion accordion-light accordion-toggle-arrow" id="accordionExample2">
-                        <div class="card">
-                            <div class="card-header" id="headingOne2">
-                                <div class="card-title" data-toggle="collapse" data-target="#collapseOne2">
-                                    @lang('pagespeed.desc-10-1')
-                                </div>
-                            </div>
-                            <div id="collapseOne2" class="collapse show" data-parent="#accordionExample2">
-                                <div class="card-body">
-                                    @lang('pagespeed.desc-10-2')
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header" id="headingTwo2">
-                                <div class="card-title collapsed" data-toggle="collapse" data-target="#collapseTwo2">
-                                    @lang('pagespeed.desc-10-3')
-                                </div>
-                            </div>
-                            <div id="collapseTwo2" class="collapse" data-parent="#accordionExample2">
-                                <div class="card-body">
-                                    @lang('pagespeed.desc-10-4')
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header" id="headingThree2">
-                                <div class="card-title collapsed" data-toggle="collapse" data-target="#collapseThree2">
-                                    @lang('pagespeed.desc-10-5')
-                                </div>
-                            </div>
-                            <div id="collapseThree2" class="collapse" data-parent="#accordionExample2">
-                                <div class="card-body">
-                                    @lang('pagespeed.desc-10-6')
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header" id="headingFour2">
-                                <div class="card-title collapsed" data-toggle="collapse" data-target="#collapseFour2">
-                                    @lang('pagespeed.desc-10-7')
-                                </div>
-                            </div>
-                            <div id="collapseFour2" class="collapse" data-parent="#accordionExample2">
-                                <div class="card-body">
-                                    @lang('pagespeed.desc-10-8')
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header" id="headingFive2">
-                                <div class="card-title collapsed" data-toggle="collapse" data-target="#collapseFive2">
-                                    @lang('pagespeed.desc-10-9')
-                                </div>
-                            </div>
-                            <div id="collapseFive2" class="collapse" data-parent="#accordionExample2">
-                                <div class="card-body">
-                                    @lang('pagespeed.desc-10-10')
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header" id="headingSix2">
-                                <div class="card-title collapsed" data-toggle="collapse" data-target="#collapseSix2">
-                                    @lang('pagespeed.desc-10-11')
-                                </div>
-                            </div>
-                            <div id="collapseSix2" class="collapse" data-parent="#accordionExample2">
-                                <div class="card-body">
-                                    @lang('pagespeed.desc-10-12')
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header" id="headingSeven2">
-                                <div class="card-title collapsed" data-toggle="collapse" data-target="#collapseSeven2">
-                                    @lang('pagespeed.desc-10-13')
-                                </div>
-                            </div>
-                            <div id="collapseSeven2" class="collapse" data-parent="#accordionExample2">
-                                <div class="card-body">
-                                    @lang('pagespeed.desc-10-14')
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header" id="headingEight2">
-                                <div class="card-title collapsed" data-toggle="collapse" data-target="#collapseEight2">
-                                    @lang('pagespeed.desc-10-15')
-                                </div>
-                            </div>
-                            <div id="collapseEight2" class="collapse" data-parent="#accordionExample2">
-                                <div class="card-body">
-                                    @lang('pagespeed.desc-10-16')
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <p class="text-black">@lang('pagespeed.desc-3-2')</p>
+                    <h4 class="sub-titles">@lang('pagespeed.desc-3-3-1')</h4>
+                    <p class="text-black">@lang('pagespeed.desc-3-3-2')</p>
+                    <h4 class="sub-titles">@lang('pagespeed.desc-3-4-1')</h4>
+                    <p class="text-black">@lang('pagespeed.desc-3-4-2')</p>
+                    <p class="text-black">@lang('pagespeed.desc-3-4-3')</p>
+                    <h4 class="sub-titles">@lang('pagespeed.desc-3-5-1')</h4>
+                    <p class="text-black">@lang('pagespeed.desc-3-5-2')</p>
+                    <p class="text-black">@lang('pagespeed.desc-3-5-3')</p>
                 </div>
             </div>
             <div class="col-md-3">
@@ -617,50 +478,37 @@ id/pagespeed-test
                     </div>
                     <a class="">@lang('pagespeed.desc-3')</a>
                 </div>
-                <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-4">
-                    <div class="mr-2" style="width:24px !important; height: 24px !important;">
-                        <span class="label label-lg label-tools-description" id="nav-label-tab-4">4</span>
-                    </div>
-                    <a class="">@lang('pagespeed.desc-4')</a>
-                </div>
-                <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-5">
-                    <div class="mr-2" style="width:24px !important; height: 24px !important;">
-                        <span class="label label-lg label-tools-description" id="nav-label-tab-5">5</span>
-                    </div>
-                    <a class="">@lang('pagespeed.desc-5')</a>
-                </div>
-                <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-6">
-                    <div class="mr-2" style="width:24px !important; height: 24px !important;">
-                        <span class="label label-lg label-tools-description" id="nav-label-tab-6">6</span>
-                    </div>
-                    <a class="">@lang('pagespeed.desc-6')</a>
-                </div>
-                <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-7">
-                    <div class="mr-2" style="width:24px !important; height: 24px !important;">
-                        <span class="label label-lg label-tools-description" id="nav-label-tab-7">7</span>
-                    </div>
-                    <a class="">@lang('pagespeed.desc-7')</a>
-                </div>
-                <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-8">
-                    <div class="mr-2" style="width:24px !important; height: 24px !important;">
-                        <span class="label label-lg label-tools-description" id="nav-label-tab-8">8</span>
-                    </div>
-                    <a class="">@lang('pagespeed.desc-8')</a>
-                </div>
-                <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-9">
-                    <div class="mr-2" style="width:24px !important; height: 24px !important;">
-                        <span class="label label-lg label-tools-description" id="nav-label-tab-9">9</span>
-                    </div>
-                    <a class="">@lang('pagespeed.desc-9')</a>
-                </div>
-                <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-10">
-                    <div class="mr-2" style="width:24px !important; height: 24px !important;">
-                        <span class="label label-lg label-tools-description" id="nav-label-tab-10">10</span>
-                    </div>
-                    <a class="">@lang('pagespeed.desc-10')</a>
-                </div>
             </div>
         </div>
+        @lang('pagespeed.howto1')
+        <div class="expand-text">
+            @lang('pagespeed.howto2')
+            <img class="mb-4" src="{{asset('/media/images/pagespeed_instruction_1.webp')}}" alt="HowTo-pagespeed-1" width="80%">
+            @lang('pagespeed.howto3')
+            <img class="mb-4" src="{{asset('/media/images/pagespeed_instruction_2.webp')}}" alt="HowTo-pagespeed-2" width="80%">
+            @lang('pagespeed.howto4')
+            <img class="mb-4" src="{{asset('/media/images/pagespeed_instruction_3.webp')}}" alt="HowTo-pagespeed-3" width="80%">
+            @lang('pagespeed.howto5')
+            <img class="mb-4" src="{{asset('/media/images/pagespeed_instruction_4.webp')}}" alt="HowTo-pagespeed-4" width="80%">
+            @lang('pagespeed.howto6')
+            <img class="mb-4" src="{{asset('/media/images/pagespeed_instruction_5.webp')}}" alt="HowTo-pagespeed-5" width="80%">
+            @lang('pagespeed.howto7')
+            <img class="mb-4" src="{{asset('/media/images/pagespeed_instruction_6.webp')}}" alt="HowTo-pagespeed-6" width="80%">
+            @lang('pagespeed.howto8')
+            <img class="mb-4" src="{{asset('/media/images/pagespeed_instruction_7.webp')}}" alt="HowTo-pagespeed-7" width="80%">
+            @lang('pagespeed.howto9')
+            <img class="mb-4" src="{{asset('/media/images/pagespeed_instruction_8.webp')}}" alt="HowTo-pagespeed-8" width="80%">
+            @lang('pagespeed.howto10')
+            <img class="mb-4" src="{{asset('/media/images/pagespeed_instruction_9.webp')}}" alt="HowTo-pagespeed-9" width="80%">
+            @lang('pagespeed.howto11')
+            <img class="mb-4" src="{{asset('/media/images/pagespeed_instruction_10.webp')}}" alt="HowTo-pagespeed-10" width="80%">
+            @lang('pagespeed.howto12')
+        </div>
+            @if($local == 'en')
+                <a class="moreless-button" href="#/">Read more</a>
+                @else
+                <a class="moreless-buttonid" href="#/">Baca Selengkapnya</a>
+                @endif
         @include('layouts.roboDesc')
         {{--
         <div class="row mb-10">

@@ -166,30 +166,47 @@ id/sitemap-generator
                 <div class="" id="description-tab-1">
                     <h2>@lang('sitemap.desc-1')</h2>
                     <p>@lang('sitemap.desc-1-1')</p>
+                    <p>@lang('sitemap.desc-1-2')</p>
                 </div>
                 <div class="d-none" id="description-tab-2">
                     <h2>@lang('sitemap.desc-2')</h2>
                     <p>@lang('sitemap.desc-2-1')</p>
+                    <ul>
+                        <li>@lang('sitemap.desc-2-2')</li>
+                        <li>@lang('sitemap.desc-2-3')</li>
+                        <li>@lang('sitemap.desc-2-4')</li>
+                        <li>@lang('sitemap.desc-2-5')</li>
+                        <li>@lang('sitemap.desc-2-6')</li>
+                    </ul>
                 </div>
                 <div class="d-none" id="description-tab-3">
                     <h2>@lang('sitemap.desc-3')</h2>
                     <p>@lang('sitemap.desc-3-1')</p>
-                    <p>@lang('sitemap.desc-3-2')</p>
+                    <ul>
+                        <li>@lang('sitemap.desc-3-1-1')</li>
+                        <li>@lang('sitemap.desc-3-1-2')</li>
+                        <li>@lang('sitemap.desc-3-1-3')</li>
+                        <li>@lang('sitemap.desc-3-1-4')</li>
+                    </ul>
                 </div>
                 <div class="d-none" id="description-tab-4">
                     <h2>@lang('sitemap.desc-4')</h2>
                     <p>@lang('sitemap.desc-4-1')</p>
-                    <p>@lang('sitemap.desc-4-2')</p>
-                    <p>@lang('sitemap.desc-4-3')</p>
-                    <p>@lang('sitemap.desc-4-4')</p>
-                    <p>@lang('sitemap.desc-4-5')</p>
-                    <p>@lang('sitemap.desc-4-6')</p>
-                    <p>@lang('sitemap.desc-4-7')</p>
-                    <p>@lang('sitemap.desc-4-8')</p>
+                    <ul>
+                        <li>@lang('sitemap.desc-4-1-1')</li>
+                        <li>@lang('sitemap.desc-4-1-2')</li>
+                        <li>@lang('sitemap.desc-4-1-3')</li>
+                        <li>@lang('sitemap.desc-4-1-4')</li>
+                    </ul>
                 </div>
                 <div class="d-none" id="description-tab-5">
                     <h2>@lang('sitemap.desc-5')</h2>
                     <p>@lang('sitemap.desc-5-1')</p>
+                    <ul>
+                        <li>@lang('sitemap.desc-5-1-1')</li>
+                        <li>@lang('sitemap.desc-5-1-2')</li>
+                        <li>@lang('sitemap.desc-5-1-3')</li>
+                    </ul>
                 </div>
                 <div class="d-none" id="description-tab-6">
                     <h2>@lang('sitemap.desc-6')</h2>
@@ -236,6 +253,29 @@ id/sitemap-generator
                 </div>
             </div>
         </div>
+        @lang('sitemap.howto1')
+        <div class="expand-text">
+            @lang('sitemap.howto2')
+            <img class="mb-4" src="{{asset('/media/images/sitemap_instruction_1.webp')}}" alt="HowTo-sitemap-1" width="80%">
+            @lang('sitemap.howto3')
+            <img class="mb-4" src="{{asset('/media/images/sitemap_instruction_2.webp')}}" alt="HowTo-sitemap-2" width="80%">
+            @lang('sitemap.howto4')
+            <img class="mb-4" src="{{asset('/media/images/sitemap_instruction_3.webp')}}" alt="HowTo-sitemap-3" width="80%">
+            @lang('sitemap.howto5')
+            <img class="mb-4" src="{{asset('/media/images/sitemap_instruction_4.webp')}}" alt="HowTo-sitemap-4" width="80%">
+            @lang('sitemap.howto6')
+            <img class="mb-4" src="{{asset('/media/images/sitemap_instruction_5.webp')}}" alt="HowTo-sitemap-5" width="80%">
+            @lang('sitemap.howto7')
+            <img class="mb-4" src="{{asset('/media/images/sitemap_instruction_6.webp')}}" alt="HowTo-sitemap-6" width="80%">
+            @lang('sitemap.howto8')
+            <img class="mb-4" src="{{asset('/media/images/sitemap_instruction_7.webp')}}" alt="HowTo-sitemap-7" width="80%">
+            @lang('sitemap.howto9')
+        </div>
+        @if($local == 'en')
+                <a class="moreless-button" href="#/">Read more</a>
+                @else
+                <a class="moreless-buttonid" href="#/">Baca Selengkapnya</a>
+                @endif
         @include('layouts.roboDesc')
         {{--
         <div class="row mb-10">

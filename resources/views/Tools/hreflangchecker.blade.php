@@ -196,12 +196,8 @@ id/hreflang-checker
                     <h2 class="text-black">@lang('hreflang.desc-2')</h2>
                     <p class="text-black">@lang('hreflang.desc-2-1')</p>
                     <ul>
-                        <li>
-                            <p class="text-black">@lang('hreflang.desc-2-list-1')</p>
-                        </li>
-                        <li>
-                            <p class="text-black">@lang('hreflang.desc-2-list-2')</p>
-                        </li>
+                        <li><p class="text-black">@lang('hreflang.desc-2-1-1')</p></li>
+                        <li><p class="text-black">@lang('hreflang.desc-2-1-2')</p></li>
                     </ul>
                 </div>
                 <div class="d-none" id="description-tab-3">
@@ -215,6 +211,12 @@ id/hreflang-checker
                 <div class="d-none" id="description-tab-5">
                     <h2 class="text-black">@lang('hreflang.desc-5')</h2>
                     <p class="text-black">@lang('hreflang.desc-5-1')</p>
+                    <ul>
+                        <li><p class="text-black">@lang('hreflang.desc-5-1-1')</p></li>
+                        <li><p class="text-black">@lang('hreflang.desc-5-1-2')</p></li>
+                        <li><p class="text-black">@lang('hreflang.desc-5-1-3')</p></li>
+                        <li><p class="text-black">@lang('hreflang.desc-5-1-4')</p></li>
+                    </ul>
                     <p class="text-black">@lang('hreflang.desc-5-2')</p>
                 </div>
             </div>
@@ -251,6 +253,27 @@ id/hreflang-checker
                 </div>
             </div>
         </div>
+        @lang('hreflang.howto1')
+        <div class="expand-text">
+            <img class="mb-4" src="{{asset('/media/images/hreflang_instruction_1.webp')}}" alt="HowTo-hreflang-1" width="80%">
+            @lang('hreflang.howto2')
+            @lang('hreflang.howto3')
+            <img class="mb-4" src="{{asset('/media/images/hreflang_instruction_2.webp')}}" alt="HowTo-hreflang-2" width="80%">
+            @lang('hreflang.howto4')
+            <img class="mb-4" src="{{asset('/media/images/hreflang_instruction_3.webp')}}" alt="HowTo-hreflang-3" width="80%">
+            @lang('hreflang.howto5')
+            <img class="mb-4" src="{{asset('/media/images/hreflang_instruction_4.webp')}}" alt="HowTo-hreflang-4" width="80%">
+            @lang('hreflang.howto6')
+            <img class="mb-4" src="{{asset('/media/images/hreflang_instruction_5.webp')}}" alt="HowTo-hreflang-5" width="80%">
+            @lang('hreflang.howto7')
+            <img class="mb-4" src="{{asset('/media/images/hreflang_instruction_6.webp')}}" alt="HowTo-hreflang-6" width="80%">
+            @lang('hreflang.howto8')
+        </div>
+        @if($local == 'en')
+                <a class="moreless-button" href="#/">Read more</a>
+                @else
+                <a class="moreless-buttonid" href="#/">Baca Selengkapnya</a>
+                @endif
         @include('layouts.roboDesc')
         {{--
         <div class="row mb-10">

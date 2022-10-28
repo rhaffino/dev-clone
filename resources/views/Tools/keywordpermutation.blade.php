@@ -166,26 +166,32 @@ id/keyword-permutation
                     <h2 class="text-black">@lang('permutation.desc-1')</h2>
                     <p class="text-black">@lang('permutation.desc-1-1')</p>
                     <p class="text-black">@lang('permutation.desc-1-2')</p>
+                    <p class="text-black">@lang('permutation.desc-1-3')</p>
+                    <p class="text-black">@lang('permutation.desc-1-4')</p>
+                    <p class="text-black">@lang('permutation.desc-1-5')</p>
                 </div>
                 <div class="d-none" id="description-tab-2">
                     <h2 class="text-black">@lang('permutation.desc-2')</h2>
                     <p class="text-black">@lang('permutation.desc-2-1')</p>
-                    <h3 class="text-black">@lang('permutation.desc-2-2')</h3>
-                    <p class="text-black">@lang('permutation.desc-2-2-1')</p>
-                    <h3 class="text-black">@lang('permutation.desc-2-3')</h3>
-                    <p class="text-black">@lang('permutation.desc-2-3-1')</p>
-                    <h3 class="text-black">@lang('permutation.desc-2-4')</h3>
-                    <p class="text-black">@lang('permutation.desc-2-4-1')</p>
+                    <h4 class="sub-titles">@lang('permutation.desc-2-1-1')</h4>
+                    <p class="text-black">@lang('permutation.desc-2-1-2')</p>
+                    <h4 class="sub-titles">@lang('permutation.desc-2-2-1')</h4>
+                    <p class="text-black">@lang('permutation.desc-2-2-2')</p>
+                    <h4 class="sub-titles">@lang('permutation.desc-2-3-1')</h4>
+                    <p class="text-black">@lang('permutation.desc-2-3-2')</p>
+                    <p class="text-black">@lang('permutation.desc-2-3-3')</p>
                 </div>
                 <div class="d-none" id="description-tab-3">
                     <h2 class="text-black">@lang('permutation.desc-3')</h2>
                     <p class="text-black">@lang('permutation.desc-3-1')</p>
-                    <h3 class="text-black">@lang('permutation.desc-3-2')</h3>
-                    <p class="text-black">@lang('permutation.desc-3-2-1')</p>
-                    <h3 class="text-black">@lang('permutation.desc-3-3')</h3>
-                    <p class="text-black">@lang('permutation.desc-3-3-1')</p>
-                    <h3 class="text-black">@lang('permutation.desc-3-4')</h3>
-                    <p class="text-black">@lang('permutation.desc-3-4-1')</p>
+                    <h4 class="sub-titles">@lang('permutation.desc-3-1-1')</h4>
+                    <p class="text-black">@lang('permutation.desc-3-1-2')</p>
+                    <p class="text-black">@lang('permutation.desc-3-1-3')</p>
+                    <h4 class="sub-titles">@lang('permutation.desc-3-2-1')</h4>
+                    <p class="text-black">@lang('permutation.desc-3-2-2')</p>
+                    <h4 class="sub-titles">@lang('permutation.desc-3-3-1')</h4>
+                    <p class="text-black">@lang('permutation.desc-3-3-2')</p>
+                    <p class="text-black">@lang('permutation.desc-3-3-3')</p>
                 </div>
             </div>
             <div class="col-md-3">
@@ -209,6 +215,25 @@ id/keyword-permutation
                 </div>
             </div>
         </div>
+            @lang('permutation.howto1')
+            <div class="expand-text">
+                @lang('permutation.howto2')
+                <img class="mb-4" src="{{asset('/media/images/permutation_instruction_1.webp')}}" alt="HowTo-permutation-1" width="80%">
+                @lang('permutation.howto3')
+                <img class="mb-4" src="{{asset('/media/images/permutation_instruction_2.webp')}}" alt="HowTo-permutation-2" width="80%">
+                @lang('permutation.howto4')
+                <img class="mb-4" src="{{asset('/media/images/permutation_instruction_3.webp')}}" alt="HowTo-permutation-3" width="80%">
+                @lang('permutation.howto5')
+                <img class="mb-4" src="{{asset('/media/images/permutation_instruction_4.webp')}}" alt="HowTo-permutation-4" width="80%">
+                @lang('permutation.howto6')
+                <img class="mb-4" src="{{asset('/media/images/permutation_instruction_5.webp')}}" alt="HowTo-permutation-5" width="80%">
+                @lang('permutation.howto7')
+            </div>
+            @if($local == 'en')
+                <a class="moreless-button" href="#/">Read more</a>
+                @else
+                <a class="moreless-buttonid" href="#/">Baca Selengkapnya</a>
+                @endif
         @include('layouts.roboDesc')
         {{--
         <div class="row mb-10">

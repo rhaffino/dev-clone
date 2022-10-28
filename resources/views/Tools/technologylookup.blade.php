@@ -141,26 +141,27 @@ id/technology-lookup
                 <div class="" id="description-tab-1">
                     <h2 class="text-black">@lang('lookup.desc-1')</h2>
                     <p class="text-black">@lang('lookup.desc-1-1')</p>
+                    <p class="text-black">@lang('lookup.desc-1-2')</p>
                 </div>
                 <div class="d-none" id="description-tab-2">
                     <h2 class="text-black">@lang('lookup.desc-2')</h2>
                     <p class="text-black">@lang('lookup.desc-2-1')</p>
+                    <ul>
+                        <li><p class="text-black">@lang('lookup.desc-2-1-1')</p></li>
+                        <li><p class="text-black">@lang('lookup.desc-2-1-2')</p></li>
+                        <li><p class="text-black">@lang('lookup.desc-2-1-3')</p></li>
+                        <li><p class="text-black">@lang('lookup.desc-2-1-4')</p></li>
+                    </ul>
                 </div>
                 <div class="d-none" id="description-tab-3">
                     <h2 class="text-black">@lang('lookup.desc-3')</h2>
                     <p class="text-black">@lang('lookup.desc-3-1')</p>
-                </div>
-                <div class="d-none" id="description-tab-4">
-                    <h2 class="text-black">@lang('lookup.desc-4')</h2>
-                    <p class="text-black">@lang('lookup.desc-4-1')</p>
-                </div>
-                <div class="d-none" id="description-tab-5">
-                    <h2 class="text-black">@lang('lookup.desc-5')</h2>
-                    <p class="text-black">@lang('lookup.desc-5-1')</p>
-                </div>
-                <div class="d-none" id="description-tab-6">
-                    <h2 class="text-black">@lang('lookup.desc-6')</h2>
-                    <p class="text-black">@lang('lookup.desc-6-1')</p>
+                    <h4 class="sub-titles">@lang('lookup.desc-3-1-1')</h4>
+                    <p class="text-black">@lang('lookup.desc-3-1-2')</p>
+                    <p class="text-black">@lang('lookup.desc-3-1-3')</p>
+                    <h4 class="sub-titles">@lang('lookup.desc-3-2-1')</h4>
+                    <p class="text-black">@lang('lookup.desc-3-2-2')</p>
+                    <p class="text-black">@lang('lookup.desc-3-2-3')</p>
                 </div>
             </div>
             <div class="col-md-3">
@@ -182,26 +183,29 @@ id/technology-lookup
                     </div>
                     <a class="">@lang('lookup.desc-3')</a>
                 </div>
-                <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-4">
-                    <div class="mr-2" style="width:24px !important; height: 24px !important;">
-                        <span class="label label-lg label-tools-description" id="nav-label-tab-4">4</span>
-                    </div>
-                    <a class="">@lang('lookup.desc-4')</a>
-                </div>
-                <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-5">
-                    <div class="mr-2" style="width:24px !important; height: 24px !important;">
-                        <span class="label label-lg label-tools-description" id="nav-label-tab-5">5</span>
-                    </div>
-                    <a class="">@lang('lookup.desc-5')</a>
-                </div>
-                <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-6">
-                    <div class="mr-2" style="width:24px !important; height: 24px !important;">
-                        <span class="label label-lg label-tools-description" id="nav-label-tab-6">6</span>
-                    </div>
-                    <a class="">@lang('lookup.desc-6')</a>
-                </div>
             </div>
         </div>
+        @lang('lookup.howto1')
+        <div class="expand-text">
+            @lang('lookup.howto2')
+            <img class="mb-4" src="{{asset('/media/images/lookup_instruction_1.webp')}}" alt="HowTo-lookup-1" width="80%">
+            @lang('lookup.howto3')
+            <img class="mb-4" src="{{asset('/media/images/lookup_instruction_2.webp')}}" alt="HowTo-lookup-2" width="80%">
+            @lang('lookup.howto4')
+            <img class="mb-4" src="{{asset('/media/images/lookup_instruction_3.webp')}}" alt="HowTo-lookup-3" width="80%">
+            @lang('lookup.howto5')
+            <img class="mb-4" src="{{asset('/media/images/lookup_instruction_4.webp')}}" alt="HowTo-lookup-4" width="80%">
+            @lang('lookup.howto6')
+            <img class="mb-4" src="{{asset('/media/images/lookup_instruction_5.webp')}}" alt="HowTo-lookup-5" width="80%">
+            @lang('lookup.howto7')
+            <img class="mb-4" src="{{asset('/media/images/lookup_instruction_6.webp')}}" alt="HowTo-lookup-6" width="80%">
+            @lang('lookup.howto8')
+        </div>
+            @if($local == 'en')
+            <a class="moreless-button" href="#/">Read more</a>
+            @else
+            <a class="moreless-buttonid" href="#/">Baca Selengkapnya</a>
+            @endif
         @include('layouts.roboDesc')
         {{--
         <div class="row mb-10">

@@ -189,40 +189,54 @@ id/mobile-test
                 <div class="" id="description-tab-1">
                     <h2>@lang('mobiletest.desc-1')</h2>
                     <p>@lang('mobiletest.desc-1-1')</p>
+                    <p>@lang('mobiletest.desc-1-2')</p>
+                    <p>@lang('mobiletest.desc-1-3')</p>
                 </div>
-                <div class="d-none" id="description-tab-2">
+                <div class="d-none" id="description-tab-2"><i class="italics"></i>
                     <h2>@lang('mobiletest.desc-2')</h2>
                     <p>@lang('mobiletest.desc-2-1')</p>
                     <p>@lang('mobiletest.desc-2-2')</p>
-                    <h3>@lang('mobiletest.desc-2-3')</h3>
-                    <p>@lang('mobiletest.desc-2-3-1')</p>
-                    <p>@lang('mobiletest.desc-2-3-2')</p>
-                    <h3>@lang('mobiletest.desc-2-4')</h3>
-                    <p>@lang('mobiletest.desc-2-4-1')</p>
-                    <ul>
-                        <li>@lang('mobiletest.desc-2-4-1-1')</li>
-                        <li>@lang('mobiletest.desc-2-4-1-2')</li>
-                        <li>@lang('mobiletest.desc-2-4-1-3')</li>
-                        <li>@lang('mobiletest.desc-2-4-1-4')</li>
-                    </ul>
-                    <h3>@lang('mobiletest.desc-2-5')</h3>
-                    <p>@lang('mobiletest.desc-2-5-1')</p>
-                    <h3>@lang('mobiletest.desc-2-6')</h3>
-                    <p>@lang('mobiletest.desc-2-6-1')</p>
                 </div>
                 <div class="d-none" id="description-tab-3">
                     <h2>@lang('mobiletest.desc-3')</h2>
                     <p>@lang('mobiletest.desc-3-1')</p>
-                    <h3>@lang('mobiletest.desc-3-1-1')</h3>
-                    <p>@lang('mobiletest.desc-3-1-1-1')</p>
-                    <h3>@lang('mobiletest.desc-3-1-2')</h3>
-                    <p>@lang('mobiletest.desc-3-1-2-1')</p>
-                    <h3>@lang('mobiletest.desc-3-1-3')</h3>
-                    <p>@lang('mobiletest.desc-3-1-3-1')</p>
-                    <h3>@lang('mobiletest.desc-3-1-4')</h3>
-                    <p>@lang('mobiletest.desc-3-1-4-1')</p>
-                    <h3>@lang('mobiletest.desc-3-1-5')</h3>
-                    <p>@lang('mobiletest.desc-3-1-5-1')</p>
+                    <ul>
+                        <li>@lang('mobiletest.desc-3-1-1')</li>
+                        <li>@lang('mobiletest.desc-3-1-2')</li>
+                        <li>@lang('mobiletest.desc-3-1-3')</li>
+                        <li>@lang('mobiletest.desc-3-1-4')</li>
+                    </ul>
+
+                </div>
+                <div class="d-none" id="description-tab-4">
+                    <h2>@lang('mobiletest.desc-4')</h2>
+                    <p>@lang('mobiletest.desc-4-1')</p>
+                </div>
+                <div class="d-none" id="description-tab-5">
+                    <h2>@lang('mobiletest.desc-5')</h2>
+                    <p>@lang('mobiletest.desc-5-1')</p>
+                    <ul>
+                        <li>@lang('mobiletest.desc-5-1-1')</li>
+                        <li>@lang('mobiletest.desc-5-1-2')</li>
+                        <li>@lang('mobiletest.desc-5-1-3')</li>
+                        <li>@lang('mobiletest.desc-5-1-4')</li>
+                    </ul>
+                </div>
+                <div class="d-none" id="description-tab-6">
+                    <h2>@lang('mobiletest.desc-6')</h2>
+                    <p>@lang('mobiletest.desc-6-1')</p>
+                    <h4 class="sub-titles">@lang('mobiletest.desc-6-1-1')</h4>
+                    <p>@lang('mobiletest.desc-6-1-2')</p>
+                    <p>@lang('mobiletest.desc-6-1-3')</p>
+                    <h4 class="sub-titles">@lang('mobiletest.desc-6-2-1')</h4>
+                    <p>@lang('mobiletest.desc-6-2-2')</p>
+                    <h4 class="sub-titles">@lang('mobiletest.desc-6-3-1')</h4>
+                    <p>@lang('mobiletest.desc-6-3-2')</p>
+                    <h4 class="sub-titles">@lang('mobiletest.desc-6-4-1')</h4>
+                    <p>@lang('mobiletest.desc-6-4-2')</p>
+                    <h4 class="sub-titles">@lang('mobiletest.desc-6-5-1')</h4>
+                    <p>@lang('mobiletest.desc-6-5-2')</p>
+                    <p>@lang('mobiletest.desc-6-5-3')</p>
                 </div>
             </div>
             <div class="col-md-3">
@@ -244,8 +258,49 @@ id/mobile-test
                     </div>
                     <a class="">@lang('mobiletest.desc-3')</a>
                 </div>
+                <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-4">
+                    <div class="mr-2" style="width:24px !important; height: 24px !important;">
+                        <span class="label label-lg label-tools-description" id="nav-label-tab-4">4</span>
+                    </div>
+                    <a class="">@lang('mobiletest.desc-4')</a>
+                </div>
+                <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-5">
+                    <div class="mr-2" style="width:24px !important; height: 24px !important;">
+                        <span class="label label-lg label-tools-description" id="nav-label-tab-5">5</span>
+                    </div>
+                    <a class="">@lang('mobiletest.desc-5')</a>
+                </div>
+                <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-6">
+                    <div class="mr-2" style="width:24px !important; height: 24px !important;">
+                        <span class="label label-lg label-tools-description" id="nav-label-tab-6">6</span>
+                    </div>
+                    <a class="">@lang('mobiletest.desc-6')</a>
+                </div>
             </div>
         </div>
+        @lang('mobiletest.howto1')
+        <div class="expand-text">
+            @lang('mobiletest.howto2')
+            <img class="mb-4" src="{{asset('/media/images/mobiletest_instruction_1.webp')}}" alt="HowTo-mobiletest-1" width="80%">
+            @lang('mobiletest.howto3')
+            <img class="mb-4" src="{{asset('/media/images/mobiletest_instruction_2.webp')}}" alt="HowTo-mobiletest-2" width="80%">
+            @lang('mobiletest.howto4')
+            <img class="mb-4" src="{{asset('/media/images/mobiletest_instruction_3.webp')}}" alt="HowTo-mobiletest-3" width="80%">
+            @lang('mobiletest.howto5')
+            <img class="mb-4" src="{{asset('/media/images/mobiletest_instruction_4.webp')}}" alt="HowTo-mobiletest-4" width="80%">
+            @lang('mobiletest.howto6')
+            <img class="mb-4" src="{{asset('/media/images/mobiletest_instruction_5.webp')}}" alt="HowTo-mobiletest-5" width="80%">
+            @lang('mobiletest.howto7')
+            <img class="mb-4" src="{{asset('/media/images/mobiletest_instruction_6.webp')}}" alt="HowTo-mobiletest-6" width="80%">
+            @lang('mobiletest.howto8')
+            <img class="mb-4" src="{{asset('/media/images/mobiletest_instruction_7.webp')}}" alt="HowTo-mobiletest-7" width="80%">
+            @lang('mobiletest.howto9')
+        </div>
+        @if($local == 'en')
+                <a class="moreless-button" href="#/">Read more</a>
+                @else
+                <a class="moreless-buttonid" href="#/">Baca Selengkapnya</a>
+                @endif
         @include('layouts.roboDesc')
         {{--
         <div class="row mb-10">

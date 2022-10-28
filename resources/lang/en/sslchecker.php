@@ -7,41 +7,54 @@ return [
     "btn-check" => "CHECK URL",
     "no-test-result" => "No SSL checked, please input your domain above!",
     "highlight" => "In this latest version, Users can view the search history. The SSL checker tool is now equipped with a \"local history\" feature. You don't need to enter SSL twice if you want to check the previous results, all you need to do is look in the search history list. Make your work more efficient with this latest change.",
-    "desc-1" => "Check SSL on Your Site",
-    "desc-1-1" => "Installing an SSL certificate can be a pain for the developer. You're not only tasked with getting the right type of certificate, the challenges come when you have to issue it, install it and then configure your Web server properly and migrate your entire website to HTTPS.",
-    "desc-1-2" => "You can ease this burden and have an expert handle the SSL certificate installation. But if you're feeling challenged and want to try out the installation and configuration yourself, we're here to help.",
-    "desc-2" => "CMLABS SSL Checker Tool",
-    "desc-2-1" => "The SSL Checker tool from CMLABS can verify to check if the SSL certificate on your web server is installed properly and is trusted. SSL Checker will display the Common Name, server type, issuer, validity, certificate chain, along with additional certificate details.",
-    "desc-2-2" => "By simply entering your host name or server IP address in the box below and clicking \"Check\", you can immediately view the details associated with your SSL certificate.",
-    "desc-3" => "Importance of an SSL Certificate on Your Website",
-    "desc-3-1" => "It is one of the important things for a website to have an SSL certificate. By having a certificate, the website is guaranteed to be safe from hackers and thieves who want to steal important website data.",
-    "desc-3-2" => "Google will label unsafe websites without a certificate and may be subject to penalties. Users also need to be vigilant when entering personal data on websites without a padlock icon in the website address section.",
-    "desc-3-3" => "The lock icon is one of the easiest markers to refer to whether a website is certified or not. To be more confident, you can search the SSL Certificate for the free tools offered online, one of which is the CMLABS SSL Checker App.",
-    "desc-3-4" => "The use of SSL on the website has several advantages in improving the quality of the website. Here are some key points for using an SSL Certificate on a website:",
-    "desc-3-4-1" => "Useful As An Affirmation Of Website Identity",
-    "desc-3-4-1-1" => "Website data theft or cybercrime attacking data on websites is a thread for users. They will doubt whether the data they enter on the website is safe or not.",
-    "desc-3-4-1-2" => "The use of SSL Certificate on the website can provide authentication on the website to present a good reputation for the user. In this way, we can minimize users' concerns about the personal data they enter on the website.",
-    "desc-3-4-2" => "Maximizing the ranking of the website on the SERP",
-    "desc-3-4-2-1" => "Google has set up websites with SSL Certificates to be preferred in search engine rankings. Since this provision, most websites have started switching from HTTP to HTTPS. According to SEO experts, many don't know that HTTPS has a big role in website ranking on search engines.",
-    "desc-3-4-2-2" => "Google can penalize websites without certificates, it affects the ranking of websites in SERP. In addition to the potential to increase rankings on search engines, certified websites are considered to be far safer from various online crimes or cyber crimes that are increasingly happening.",
-    "desc-3-4-3" => "Ensuring Website Data Security",
-    "desc-3-4-3-1" => "The use of an SSL Certificate is very important to ensure the level of data security on a website. If a website uses an email, password, or other important information to log in, it is necessary to use SSL on that website.",
-    "desc-3-4-3-2" => "The data is at risk of being compromised if the website is not fitted with a certificate. The existence of an SSL Certificate will increase the user's trust with the data they enter on the website.",
-    "desc-4" => "How SSL Certificates Work on Websites",
-    "desc-4-1" => "SSL works by encrypting data in a very fast process with a count per millisecond. SSL certificate serves to secure the data exchange process between one server and another server and the data transfer process that occurs between a web server and a client or web browser.",
-    "desc-4-2" => "As a description and encryption of the data transport mechanism, SSL operates using 2 simple methods. The basic methods are:",
-    "desc-4-2-1" => "Public Key",
-    "desc-4-2-1-1" => "Public key cryptography, also known as asymmetric cryptographic key, is a method that encrypts and describes data using two paired keys. In the asymmetric cryptography method, data that has been sent using the private key will only be opened using the public key, so in this method the data security process requires two connected keys.",
-    "desc-4-2-2" => "Private Key",
-    "desc-4-2-2-1" => "Private Key Cryptography or also known as symmetric cryptography key is an SSL working method which encrypts data with only one private key. If you want to decrypt data, both sender and recipient must have an unlock key.",
-    "desc-5" => "Stages of SSL Certificate",
-    "desc-5-1" => "In the perspective of broad terms, SSL Certificates work using 3 important steps. The stages of working with an SSL Certificate include:",
-    "desc-5-1-1" => "Handshake Protocol",
-    "desc-5-1-1-1" => "The Handshake Protocol stage often precedes the SSL work process. At this stage, the encryption algorithm negotiation process and the server authentication process occur. The Handshake protocol stage will usually use a private key or symmetric cryptography to encrypt the data. The Handshake Protocol is also the stage where the client will enable the first connection to the server by accessing the website and also making an SSL connection request.",
-    "desc-5-1-2" => "Recording Protocol",
-    "desc-5-1-2-1" => "Record Protocol is a work stage where the data encryption process takes place. Record Protocol is also known as record protocol because this protocol will store all types, versions and lengths of data that has been transmitted. Apart from that, the Record Protocol also provides digital signatures and message digest (MD) records relating to data security. At this point, the validation process between the client and server takes place.",
-    "desc-5-1-3" => "Warning Protocol",
-    "desc-5-1-3-1" => "SSL can filter or filter data that has been submitted by the client at this point. This protocol will select data from clients that are considered suspicious or do not meet standards. If an error occurs during the data transmission process, the server will automatically send an error warning message. Warnings issued by servers are usually divided into 3 types, namely warning signs, critical alerts, and finally fatal alerts.",
+    "desc-1" => "What is SSL Certificate Checker?",
+    "desc-1-1" => "SSL certificate checker is 1 of 13 free tools provided by cmlabs. This tool is used to check whether the SSL (Secure Socket Layer) certificate on your web server is installed correctly and is valid.",
+    "desc-1-2" => "SSL Checker can display Common Name, server type, publication, validity, certificate chain, and additional certificate details. Just by inputting the hostname or IP address of your server in the box provided and clicking <b>&#34;Check&#34;</b>, you can immediately see the details related to the SSL certificate.",
+    "desc-2" => "Importance of SSL Certificate for Your Website",
+    "desc-2-1" => "Secure Socket Layer or SSL is a security protocol used to protect data on the internet. In general, this protocol serves to secure the process of exchanging personal data of website users, such as email addresses, credit card numbers, and other sensitive information.",
+    "desc-2-2" => "SSL works by encrypting data so that third parties cannot steal information during the data exchange process. SSL requires a private key and a public key to create a session key which is used in the encryption and data decryption process.",
+    "desc-2-3" => "The existence of an SSL certificate is proof that a website has guaranteed security. Therefore, it is important to have a valid SSL to maintain website security.",
+    "desc-3" => "SSL Usage",
+    "desc-3-1" => "One of the most important functions of SSL is to support the security of your website data and visitors. Some of the functions of SSL are as follows:",
+    "desc-3-2-1" => "Strengthening Website Identity",
+    "desc-3-2-2" => "Websites that have used an SSL certificate has a good reputation in the eyes of users and search engines. The existence of an SSL certificate can also minimize user concerns about the security of the personal data they enter on your website.",
+    "desc-3-3-1" => "Protecting Important Website Data and Information",
+    "desc-3-3-2" => "SSL certificates are useful for protecting websites from cybercrimes. If your website requires an email, password, or other sensitive data to log in, of course, you need to protect that data using an SSL certificate. In this way, user trust will increase.",
+    "desc-3-4-1" => "Optimizing Website Performance on Search Engines",
+    "desc-3-4-2" => "The use of HTTPS which is characterized by ownership of an SSL certificate is one of Google's ranking factors. Therefore, websites that already have an SSL certificate will certainly have better performance in organic search.",
+    "desc-3-5-1" => "Comply with Online Transaction Rules",
+    "desc-3-5-2" => "For e-commerce websites that provide online payment systems, SSL is a must-have. Because there is a Payment Card Industry Data Security Standard rule that requires websites to use an SSL certificate.",
+    "desc-4" => "SSL Certificate Types",
+    "desc-4-1" => "The selection of an SSL Certificate requires careful consideration based on the results of the analysis related to the needs and budget of the website. Consider the type of SSL certificate to choose before you buy it.",
+    "desc-4-2" => "We recommend that you choose an SSL certificate according to the core needs of each web. These certificates are divided into two types, certificates based on the validation process and certificates based on the number of domains.",
+    "desc-4-2-1" => "SSL Certificate Based on Validation Process",
+    "desc-4-2-2" => "Determine the intent or purpose of the website before deciding on the type of certificate. This is necessary because SSL is very influential on the authentication and encryption process of a website. The types of certificates according to the validation process are as follows:",
+    "desc-4-2-1-1" => "Extended Validation (EV)",
+    "desc-4-2-1-2" => "Extended Validation is an SSL certificate type with the highest level of encryption. For websites with sensitive data transmission activities that require more legitimacy, such as online payments that require a lot of user confidential data, it is recommended to use Extended Validation.",
+    "desc-4-2-1-3" => "The feature provided by Extended Validation is the green address bar along with the company name, which makes the website look more classy. However, if a website wishes to have an Extended Validation Certificate, there are some special conditions.",
+    "desc-4-2-2-1" => "Organizational Validation (OV)",
+    "desc-4-2-2-2" => "Organization Validation is an SSL certificate with a moderate level of encryption. This type of certificate is perfect for public websites such as government agency websites, as well as for websites that perform simple transmissions of sensitive data such as entering emails, usernames, and passwords.",
+    "desc-4-2-2-3" => "The OV type certificate will also protect the user's sensitive data during the data transmission process.",
+    "desc-4-2-3-1" => "Domain Validation (DV)",
+    "desc-4-2-3-2" => "This is a basic SSL certificate with the lowest level of encryption. This type of certificate is recommended for blog or web owners who do not require sensitive data transmission processes.",
+    "desc-4-2-3-3" => "How to get this certificate is very easy, the validation process only requires a domain email address.",
+    "desc-4-3-1" => "SSL Certificate Based on Number of Domains",
+    "desc-4-3-2" => "In choosing an SSL Certificate, you need to consider the number of domains and subdomains to protect. By choosing the right certificate, you can save a lot of money. The following explains the types of SSL certificates by domain:",
+    "desc-4-3-2-1" => "Multi-Domain SSL",
+    "desc-4-3-2-2" => "Is a type of certificate that is much sought after because the price is relatively cheap. The multi-domain type of SSL provides configuration for multiple domains and sub-domains in a single host.",
+    "desc-4-3-2-3" => "One of the features of Multi-Domain SSL is access to add, delete, and also change the Subject Alternative Name (SAN) according to the needs of the website.",
+    "desc-4-3-3-1" => "Wildcard SSL",
+    "desc-4-3-3-2" => "Wildcard SSL is a type of certificate that can protect one primary domain and protect unlimited subdomains. Wildcard SSL certificates are suitable for websites with many subdomains.",
+    "desc-4-3-3-3" => "This certificate is considered more effective and also saves on administrative costs because you do not need to buy certificates for one domain separately. If the website has a Wildcard certificate, the subdomains within it will also be protected by SSL automatically.",
+    "desc-4-3-4-1" => "Single Domain SSL",
+    "desc-4-3-4-2" => "Only one domain or one subdomain can be covered by this certificate. In using Single Domain SSL, you must choose to provide protection to a primary domain or a subdomain.",
+    "desc-4-3-4-3" => "As a simple example, if the cmlabs.co website uses a Single Domain certificate and chooses to protect the primary domain, the tools.cmlabs.co subdomain website will not be protected. Likewise, if you choose to protect a sub-domain, the main cmlabs.co domain will not be protected.",
+    "desc-5" => "How SSL Certificates Work",
+    "desc-5-1" => "SSL works by encrypting data in a very fast process per millisecond. As a description and encryption of the data transport mechanism, SSL operates using 2 simple methods. The basic methods are:",
+    "desc-5-2-1" => "Public Key",
+    "desc-5-2-2" => "Public key cryptography, also known as an asymmetric cryptographic key, is a method that encrypts and describes data using two paired keys. In the asymmetric cryptography method, data that has been sent using the private key will only be opened using the public key, so in this method, the data security process requires two connected keys.",
+    "desc-5-3-1" => "Private Key",
+    "desc-5-3-2" => "Private Key Cryptography or also known as symmetric cryptography key is an SSL working method that encrypts data with only one private key. If you want to decrypt data, both the sender and recipient must have an unlock key.",
     "desc-6" => "Website SSL Certificate Type",
     "desc-6-1" => "Selection of an SSL Certificate requires careful consideration based on the results of an analysis related to the needs and budget of the website. Consider the type of SSL certificate to choose before buying it.",
     "desc-6-2" => "We recommend that you choose an SSL certificate according to the core needs of every web. Certificates are divided into two types, certificates based on the validation process and certificates based on the number of domains.",
@@ -67,6 +80,41 @@ return [
     "desc-6-4-1-3" => "Single Domain SSL",
     "desc-6-4-1-3-1" => "Only one domain or one subdomain can be covered by this certificate. In using Single Domain SSL, you must choose to provide protection to the primary domain or subdomain.",
     "desc-6-4-1-3-2" => "As a simple example, if the cmlabs.co website uses a Single Domain certificate and chooses to protect the primary domain, then the tools.cmlabs.co subdomain website will not be protected. Likewise, if you choose to protect a sub domain, the main cmlabs.co domain will not be protected.",
+    "howto-title" => 'How to Use SSL Certificate Checker',
+    "howto1" => '<h2>How to Use SSL Certificate Checker</h2>
+                    <p>To operate SSL Certificate Checker for free, here are steps.</p>',
+    "howto2" => '<h4 class="sub-titles">Open SSL Certificate Checker page</h4>
+                    <p>First of all, you have to open the page of this tool. After that, you will see several available features such as the URL column, display results, checking history, to a brief explanation of this tool.</p>',
+    "howto3" => '<p>Figure 1: Initial view of cmlabs SSL Certificate Checker</p>
+                    <h4 class="sub-titles">Enter Website URL</h4>
+                    <p>To view the status and detailed information of a website&#39;s SSL certificate, you must enter the website&#39;s URL in the field provided. Make sure you have entered the URL in the correct format (e.g https://example.com). Next, click the <b>&#34;Check URL&#34;</b> button to give the command to this tool to start checking the website.</p>',
+    "howto4" => '<p>Figure 2: Entering the website URL to find out the SSL certificate information</p>
+                    <h4 class="sub-titles">View SSL Certificate Check Results</h4>
+                    <p>After you press the Check URL button, the system will immediately display the results of the SSL certificate check quickly. The Result field can display some information such as</p>',
+    "howto5" => '<p>Figure 3: SSL certificate check results</p>
+                    <h6 class="sub-titles">SSL Certificate</h6>
+                    <p>In the results field, the main thing that appears is TLS Certificate (SSL Certificate) information such as:</p>
+                    <ul>
+                        <li><b>Common Name:</b> domain name</li>
+                        <li><b>Subject Alternative Name:</b> shows all domain names and IP addresses secured by the certificate</li>
+                        <li><b>Issuer:</b> certificate issuing agency</li>
+                        <li><b>Serial Number:</b> certificate number</li>
+                        <li><b>SHA1 Thumbprint:</b> the unique thumbprint each certificate has</li>
+                    </ul>
+                    <h6 class="sub-titles">Certificate Expiration Date</h6>
+                    <p>With this tool, you can also find out when the certificate from the website you are checking will expire. This can make it easier for you to maintain a good SSL installation.</p>
+                    <h6 class="sub-titles">SSL Installation Status</h6>
+                    <p>In addition to certificate details, this tool can display the certificate installation status on the website. SSL installation must be done properly because you are responsible for website visitor information.</p>
+                    <h6 class="sub-titles">View Checking History</h6>
+                    <p>The last feature of this tool is your Local History. This tool allows you to view all URL history that has been checked using this tool.</p>
+                    <p>With this feature, you don&#39;t need to re-type the URL that was checked if you want to re-check it. You can also delete usage history using the <b>&#34;Clear&#34;</b> button on the right side of the usage history feature.</p>',
+    "howto6" => '<p>Figure 4: Local History feature to view the history of checking the SSL certificate checker.</p>
+                    <h4 class="sub-titles">Login After 5 Times Usage</h4>
+                    <p>Some of the cmlabs tools require a login process after 5 times of use, SSL Certificate Checker is one of them. If you have used it for 5 times, our system will automatically display a message stating that you have reached the usage limit.</p>',
+    "howto7" => '<p>Figure 5: Usage warning has reached the limit. In this warning, there is a login button that directs to the login page.</p>
+                    <p>You can log in by clicking the login button on the warning message that appears. Next, you will be directed to the cmlabs login page. Please enter the required data, or you can log in via Google.</p>',
+    "howto8" => '<p>Figure 6: cmlabs login page</p>
+                    <p>Once you have successfully logged in, you will be able to return to using this tool to check SSL certificates for free. By logging in, the system can save historical data on the use of this tool in the last one year.</p>',
     "whats-new-1"=> "In this latest version, users can view the search history. The SSL checker tool is now equipped with a \"local history\" feature. You don't need to enter SSL twice if you want to check the previous results, all you need to do is look in the search history list. Make your work more efficient with this latest change.",
     "whats-new-2"=> "Now, with this SSL Checker tool, you can check if the SSL certificate on your web server is installed properly and does trust. Just by entering the hostname or server IP address, you can immediately view the details associated with the SSL certificate. Improve the security performance of your website.",
 ];

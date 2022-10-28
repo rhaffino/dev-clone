@@ -26,34 +26,67 @@ return [
     "placeholder-imageStep" => "Type image URL here..",
     "placeholder-nameStep" => "Type name here..",
     "placeholder-urlStep" => "Type URL here..",
-    "desc-1" => "HowTo",
-    "desc-1-1" => "Use HowTo structured data to explicitly tell Google that your content is a guide. How to guide users through a series of steps to successfully complete a task, and can display videos, images, and text. For instance, \"How to tie a tie\" or \"How to tile a backsplash in the kitchen\". If each step in the instructions can be read in order, that's a good sign that the content will benefit from the organized data of HowTo. HowTo structured data is appropriate when hints are the main focus of the page.",
-    "desc-1-2" => "Correctly marked up hint pages may be eligible for rich results on Search and Actions on the Google Assistant, which can help your site reach the right users.",
-    "desc-1-3" => "A How-to Action for Smart Displays can be automatically created by adding structured HowTo data to your website. If you want to provide your users with the best visual experience on this device, including the image specified in the markup, fill in the interest form.",
-    "desc-2" => "How to add structured data",
-    "desc-2-1" => "Structured data is a standard format for providing information about a page and classifying page content. If you are new to structured data, you can learn more about how structured data works.",
-    "desc-2-2" => "Here's an overview of how to create, test, and release structured data. For a step-by-step guide on adding structured data to web pages, see structured data codelabs.",
-    "desc-2-3" => "Add the required properties. See JSON-LD Structured Data: Where to insert on a website for information on where to place structured data on the page.",
-    "desc-3" => "Follow the guidelines.",
-    "desc-3-1" => "<b>Validate your code using the Rich Results Test.</b>",
-    "desc-3-1-1" => "Implement multiple pages that include your structured data and use the URL Inspection tool to test how Google sees the page. Make sure that your page is accessible to Google and isn't blocked by a robots.txt file, noindex tags, or login requirements. If the page looks okay, you can ask Google to re-crawl your URL.",
-    "desc-3-1-2" => "Note: Allow time for re-crawling and re-indexing. Keep in mind that it may take several days after publishing a page for Google to find and crawl it.",
-    "desc-3-1-3" => "To keep Google informed of future changes, we recommend submitting a sitemap. You can automate it with the Search Console Sitemap API.",
-    "desc-3-2" => "<b>Feature availability</b>",
-    "desc-3-2-1" => "Rich result instructions are currently available in all languages ​​and countries where Google Search is available. This feature is only available on mobile devices, not desktops.",
-    "desc-3-2-2" => "Example",
-    "desc-3-2-3" => "Here are some examples of how your content might look like in the rich How-to results. A more visual variant can be shown if your instructions contain a complete instruction picture and a step-by-step image. Make sure to add as many required and recommended properties as possible so that your instructions can most effectively appear on Google Search.",
-    "desc-3-2-4" => "Rich result Standard hint:",
-    "desc-3-2-5" => "Here is an example of a text based instruction page using JSON-LD. This example has only one image that represents the end state of the instruction. In this result, the user can preview the content for several steps.",
-    "desc-4" => "Content guidelines",
-    "desc-4-1" => "Advertising: Don't use HowTo structured data for advertising purposes.",
-    "desc-4-2" => "Ineligible Content: How-to rich results may not be displayed if the content is obscene, profane, sexually explicit, or graphically violent; or if it promotes dangerous or illegal activities or has hateful or harassing language.",
-    "desc-4-3" => "Source: All HowTo content must be visible to the user on the source page. The key objective of the source page should be the How-to. Don't include more than one HowTo for a certain page.",
-    "desc-4-4" => "Materials and Tools: To complete the job, add organized data to all the materials and tools required.",
-    "desc-4-5" => "Steps: Each HowToStep must include the entire contents of the source step. Don't mark up non-step data such as a summary or introduction section as a step.",
-    "desc-4-6" => "Step images: If the steps are best represented visually, ensure the images in these steps are marked up for each HowToStep. Only mark up the instructional step images that are specific for each step and don't use the same image in multiple steps for the same how-to. Use the same images that correspond to the content on your page. Don't use images that don't reflect the how-to content, or use different images to optimize the rich-result.",
-    "desc-4-7" => "Final image: If the end result can be accurately described by an image, ensure this image is present on the page, and your HowTo markup includes it using the image property. This image may be the same as the one marked up for the last step.",
-    "desc-4-8" => "Content: Don't use HowTo markup for recipes. Recipes should use the Recipe structured data instead. Articles and general advice content that is not a specific set of instructions are not appropriate for HowTo markup.",
+    "desc-1" => "What is JSON-LD How-to Schema Generator?",
+    "desc-1-1" => "How-to schema generator is a tool that you can use to create how-to schema markup for free. How-To structured data serves to explicitly tell Google that your content is a guide. Guiding the user through a series of steps to successfully complete an action is one example.",
+    "desc-1-2" => "For example, &#34;How to tie a tie&#34; or &#34;How to put tiles in the kitchen&#34;. If each step in the instructions can be read sequentially with an attractive visualization, then you can attract more users to read it.",
+    "desc-1-3" => "A guide page with a proper markup schema may be eligible for rich snippets on Google search results pages. This feature can also help your site reach the right users.",
+    "desc-2" => "JSON-LD How-to Schema Generator Features",
+    "desc-2-1" => "The cmlabs team has developed this tool complete with features that will make it easier for users to do the job. Here are some of the features offered by this tool.",
+    "desc-2-2-1" => "Easy to Understand Interface",
+    "desc-2-2-2" => "All the free SEO tools from cmlabs have an easy-to-understand interface. This feature can make it easier for users to operate it, even beginners. The simple user interface makes the JSON-LD How-to Schema Generator easy to operate by anyone.",
+    "desc-2-3-1" => "Accurate Code Results",
+    "desc-2-3-2" => "Using this tool can avoid code generation errors. You as a user only need to input the required data. Our system will automatically generate the right code and can be applied immediately.",
+    "desc-2-4-1" => "Rich Result TestFeature is available",
+    "desc-2-4-2" => "Although the code generated by the JSON-LD How-To Schema Generator is automated, we provide a <b>Check</b> feature where you can test the code using Google Rich Resuslt Test. This feature is here to ensure that the generated code is valid.",
+    "desc-2-5-1" => "Quick Guide",
+    "desc-2-5-2" => "If you have problems using this tool, you can read the quick guide on the JSON-LD How-To Schema Generator page. We have compiled this short guide to help users understand the usefulness of this tool for their website.",
+    "desc-3" => "Advantages of Using How-to Schema Markup",
+    "desc-3-1" => "Basically, getting rich snippets or even featured snippets brings a number of benefits to your website. The most common is to bring in more traffic. This is because your website has excellent features that other websites don't have.",
+    "desc-3-2" => "However, many webmasters avoid schema markup because it requires HTML and coding skills. By using the JSON-LD How to Schema Generator, you don't need any special skills to create a schematic guide or steps.",
+    "desc-3-3" => "Using schema markup in your content is an effective way to help search engines understand your website. If Google understands the content, then you have a higher chance to rank higher on SERP.",
+    "desc-4" => "How-to Schema Markup Example",
+    "desc-4-1" => "You may ask, how a How-to schema looks like in the search results. The following is an example of implementing the How To scheme on the Mobile version of the SERP page.",
+    "desc-4-2" => "Figure 1: Example rich snippet of the How-to schema implementation. The image above is the search result of the query “How to drive the automatic car” in mobile search results.",
+    "desc-4-3" => "Below is the example of How-to schema markup script generated form this tool:",
+    "desc-4-4" => 'With the benefits offered, now you don&#39;t have to creating a How-to the schema markup manually. Go to the <a href="https://tools.cmlabs.co/en/json-ld-how-to-schema-generator">JSON-LD How-To Schema Generator</a> page for accurate script making to support your guide page.',
+    "howto-title" => "How to Use How-To Schema Generator?",
+    "howto1" => '<h2>How to Use How-To Schema Generator?</h2>
+                    <p>How-to schema generator is a tool that you can use to create how-to schema markup for free. How to is a type of content that provide instructions or guidance to users through a series of steps to complete a particular task or activity.</p>',
+    "howto1-1" => '<p>The steps you can take to generate how-to schema markup using this tool are as follows:</p>
+                    <h4 class="sub-titles">Go to the JSON-LD How-To Schema Generator Page</h4>
+                    <p>First, head over to the <a href="https://tools.cmlabs.co/en/json-ld-how-to-schema-generator">JSON-LD How-To Schema Generator</a> page to start your journey in creating schema markup automatically. This tool will make it easier for you to create content that contains instructions to have a more attractive appearance on the SERP. The schema markup generated by this tool also complies with Google search guidelines.</p>',
+    "howto2" => '<p>Figure 1: How to schema generator page display from cmlabs.</p>
+                    <h4 class="sub-titles">Input General Information</h4>
+                    <p>By inputting the data needed to create a how-to schema markup, you can immediately preview the schema markup that was successfully created. In general information, there are some data that you need to add including</p>
+                    <ul>
+                        <li><b>Name:</b> the title of the hint or instruction created.</li>
+                        <li><b>Total Time:</b> the duration required to execute all instructions (including the time used to prepare materials), written in ISO 8601 format.</li>
+                        <li><b>Estimated Cost:</b> the total estimated cost to prepare the materials needed to carry out the instructions.</li>
+                        <li><b>Currency:</b> the type of currency used in the cost estimate.</li>
+                        <li><b>Image URL:</b> the location or file path where you saved the image to be used in the content of the hint.</li>
+                    </ul>',
+    "howto3" => '<p>Figure 2: Enter general information in the fields provided in the how-to schema generator.</p>
+                    <h4 class="sub-titles">Add Supply</h4>
+                    <p>Next, you can add some ingredients in the column provided. Materials are items or things that are needed when the user carries out the instructions that you provide. It should be noted that the input received by this tool is text.</p>',
+    "howto4" => '<p>Figure 3: Add supply to the fields provided in the how-to schema generator.</p>
+                    <h4 class="sub-titles">Add Tool</h4>
+                    <p>You also need to add some tools that users need to carry out the instructions that you provide in the fields provided. It should be noted that the input received by this tool is text.</p>',
+    "howto5" => '<p>Figure 4: Add tools used to perform instructions in the fields provided in the how-to schema generator.</p>
+                    <h4 class="sub-titles">Input The Instructions</h4>
+                    <p>After inputting supply/material and tools into the fields provided, then you need to enter a series of steps or instructions that must be done to get something done. You need to enter some data such as instruction description, image URL, instruction name or title, and instruction URL.</p>
+                    <p>You can add some additional steps by pressing the <b>&#34;Add URL&#34;</b> button. Not only that, but you can also delete unnecessary steps by pressing the cross icon on the right side of the instruction field.</p>',
+    "howto6" => '<p>Figure 5: Add a series of steps or instructions to the fields provided in the how-to schema generator.</p>
+                    <h4 class="sub-titles">Copy The Result</h4>
+                    <p>If you have completed the required attributes to create how to schema markup, then you will see a preview of schema markup on the right side of the page. You can copy the schema markup directly with the “copy” button and paste it into your program code.</p>',
+    "howto7" => '<p>Figure 6: How-to schema markup copy options</p>
+                    <h4 class="sub-titles">Check JSON-LD  How-to Schema Validity</h4>
+                    <p>With the How-to schema generator, you can also check the validity of the JSON-LD script you are using. How to check it is quite easy, just press the check option contained in the preview of the resulting script.</p>
+                    <p>When you press the button, you will be redirected to <a href="https://search.google.com/test/rich-results">Google&#39;s Rich Result Test</a> page. On that page, you can check if the generated schema markup is working properly in Google search.</p>',
+    "howto8" => '<p>Figure 7: How-to schema markup validation check options</p>
+                    <h4 class="sub-titles">Reset Schema Generator</h4>
+                    <p>This tool has options that make it easy for you to create a new How-to schema. Just click the <b>&#34;Reset&#34;</b> option and delete all the data that was added previously. Next, you can create a new script.</p>',
+    "howto9" => '<p>Figure 8: Data reset option added to How-to schema generator.</p>
+                    <p>That&#39;s a brief discussion on how to create a how-to schema markup using the <a href="https://tools.cmlabs.co/en/json-ld-how-to-schema-generator">JSON-LD How To Schema Generator</a> tool from cmlabs. These tools can help you generate schema markup quickly and efficiently. Try this tool now!</p>',
     "highlight" => "In this latest version, we developed the How To Schema Generator tool. This tool serves to tell Google explicitly that your content is a guide. Now, users can add structured data for this How To Schema Generator from JSON LD. This structured data will provide information about your page and classify the content of your page. By adding as many required and recommended properties as possible, your page can appear on Google Search effectively.",
     "whats-new-1" => "In this newest version, we developed the How To Schema Generator tool. This tool serves to tell Google explicitly that your content is a guide. How To will use structural data that will allow you to qualify for Rich Snippets on Search and Actions on the Google Assistant.",
     "whats-new-2" => "Now, users can add structured data for this How To Schema Generator from JSON LD. This structured data will provide information about your page and classify the content of your page. By adding as many required and recommended properties as possible, your page can appear on Google Search effectively.",
