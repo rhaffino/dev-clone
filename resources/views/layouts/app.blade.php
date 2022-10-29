@@ -18,15 +18,6 @@
     <meta property="og:image:height" content="1142" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
     @if(env('APP_ENV')==='production')
-        {{--<!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156389913-2"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'UA-156389913-2');
-        </script>--}}
-        <!-- Google Tag Manager -->
         <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
         new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
         j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
@@ -64,7 +55,6 @@
     <link href="{{ asset('css/header_general.css') }}" rel="stylesheet" type="text/css"/>
     <link href="{{ asset('css/header_v2.css') }}" rel="stylesheet" type="text/css"/>
 
-
     <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@2.4.14/dist/css/splide.min.css">
@@ -76,9 +66,6 @@
     <!--end::Layout Themes-->
     <link rel="shortcut icon" href="{{ asset('media/logos/cmlabs.ico') }}"/>
 </head>
-<!--end::Head-->
-<!--begin::Body-->
-
 <body id="kt_body" class="header-fixed header-mobile-fixed subheader-enabled subheader-fixed">
 @if (env('APP_ENV') == 'production')
     <!-- Google Tag Manager (noscript) -->
@@ -125,17 +112,17 @@
 <!--end::Main-->
 <!--begin::Scrolltop-->
 <div id="kt_scrolltop" class="scrolltop">
-			<span class="svg-icon">
-				<!--begin::Svg Icon | path:assets/media/svg/icons/Navigation/Up-2.svg-->
-				<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-					<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-						<polygon points="0 0 24 0 24 24 0 24" />
-						<rect fill="#000000" opacity="0.3" x="11" y="10" width="2" height="10" rx="1" />
-						<path d="M6.70710678,12.7071068 C6.31658249,13.0976311 5.68341751,13.0976311 5.29289322,12.7071068 C4.90236893,12.3165825 4.90236893,11.6834175 5.29289322,11.2928932 L11.2928932,5.29289322 C11.6714722,4.91431428 12.2810586,4.90106866 12.6757246,5.26284586 L18.6757246,10.7628459 C19.0828436,11.1360383 19.1103465,11.7686056 18.7371541,12.1757246 C18.3639617,12.5828436 17.7313944,12.6103465 17.3242754,12.2371541 L12.0300757,7.38413782 L6.70710678,12.7071068 Z" fill="#000000" fill-rule="nonzero" />
-					</g>
-				</svg>
-                <!--end::Svg Icon-->
-			</span>
+    <span class="svg-icon">
+        <!--begin::Svg Icon | path:assets/media/svg/icons/Navigation/Up-2.svg-->
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <polygon points="0 0 24 0 24 24 0 24" />
+                <rect fill="#000000" opacity="0.3" x="11" y="10" width="2" height="10" rx="1" />
+                <path d="M6.70710678,12.7071068 C6.31658249,13.0976311 5.68341751,13.0976311 5.29289322,12.7071068 C4.90236893,12.3165825 4.90236893,11.6834175 5.29289322,11.2928932 L11.2928932,5.29289322 C11.6714722,4.91431428 12.2810586,4.90106866 12.6757246,5.26284586 L18.6757246,10.7628459 C19.0828436,11.1360383 19.1103465,11.7686056 18.7371541,12.1757246 C18.3639617,12.5828436 17.7313944,12.6103465 17.3242754,12.2371541 L12.0300757,7.38413782 L6.70710678,12.7071068 Z" fill="#000000" fill-rule="nonzero" />
+            </g>
+        </svg>
+        <!--end::Svg Icon-->
+    </span>
 </div>
 <!--end::Scrolltop-->
 <!--end::Demo Panel-->
@@ -193,7 +180,9 @@
 </script>
 <script src="{{asset('js/logic/cta-function.js')}}"></script>
 @stack('script')
-<!--end::Page Scripts-->
+@if (Auth::guest() && !session()->has('new_user')) 
+    @php session()->put('new_user', md5(time())) @endphp 
+    @include('components.login_modal')
+@endif
 </body>
-<!--end::Body-->
 </html>

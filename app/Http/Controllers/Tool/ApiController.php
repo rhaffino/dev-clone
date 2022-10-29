@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 use App\Traits\ApiHelper;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Cookie;
+use Illuminate\Support\Facades\Lang;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Redis;
 use Illuminate\Support\Facades\Session;
@@ -160,5 +161,26 @@ class ApiController extends Controller
 
         //return success response
         return new BaseApiResource(null, "Success send email", 200);
+    }
+
+    public function accessLimit(Request $request)
+    {
+        $access_count = session()->has('access_count') ? session()->get('access_count') : 0;
+        $access_count += 1;
+        session()->put('access_count', $access_count);
+
+        $access_limit = $access_count > 5 ? 1 : 0;
+
+        $message = $access_limit ? Lang::get("alert.alert-limit") : 'recorded';
+
+        $data = [
+            'count' => $access_count,
+            'limit' => $access_limit,
+            'message' => $message,
+            'logged_target' => $request->logged_target ? : env('MAIN_URL', 'https://cmlabs.co') . '/' . (App::isLocale('id') ? 'id-id' : 'en')
+        ];
+
+        //return success response
+        return new BaseApiResource($data, $message, 200);
     }
 }

@@ -22,8 +22,8 @@ id/json-ld-product-schema-generator
     <div class="d-flex flex-column-fluid">
         <div class="container-fluid px-0">
             <h1 class="text-darkgrey font-weight-normal">@lang('product.title')</h1>
-            <span class="text-darkgrey h4 font-weight-normal">@lang('product.subtitle')</span>
-            <div class="card card-custom mb-5 mt-10">
+            <span class="text-darkgrey h4 font-weight-normal mb-10">@lang('product.subtitle')</span>
+            <div class="card card-custom mb-5">
                 <div class="card-body">
                     <div class="row">
                         <div class="col-md-8 mb-5">

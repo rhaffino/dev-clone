@@ -13,22 +13,14 @@
 
 use App\Http\Middleware\EnsureUrlIsValid;
 use App\Http\Middleware\ManualAuth;
-use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/login', 'Auth\LoginController@loginView');
 Route::post('/validate','Auth\LoginController@validateLogin');
 Route::get('/logout','Auth\LoginController@logout');
 
-Route::redirect('/here', '/there', 301);
-Route::redirect('/here', '/there', 301);
-Route::redirect('/here', '/there', 301);
-Route::redirect('/here', '/there', 301);
-
-
 Route::middleware([ManualAuth::class])->group(function (){
     Route::redirect('/', '/en');
-    //Route::resource('/', 'HomeController');
     
     Route::get('/analytics', function (){
         return view('premiumtools');
@@ -74,3 +66,4 @@ Route::middleware([ManualAuth::class])->group(function (){
 });
 
 Route::post('/api/cta', 'Tool\ApiController@ctaEmail')->name('api.cta-email');
+Route::post('/api/limit', 'Tool\ApiController@accessLimit')->name('api.limit');
