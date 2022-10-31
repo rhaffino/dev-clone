@@ -66,7 +66,9 @@ id/redirect-checker
                             <option value="Specify">Specify</option>
                         </select>
 
-                        @if (isset($access_limit) && $access_limit > 0)
+                        @if (Auth::check())
+                            <button id="analyze-btn" type="button" class="btn btn-crawl" name="button">@lang('redirectchecker.check-btn')</button>
+                        @elseif (isset($access_limit) && $access_limit > 0)
                             <button disabled="disabled" type="button" class="btn btn-crawl" name="button">@lang('redirectchecker.check-btn')</button>
                         @else 
                             <button id="analyze-btn" class="next-button" style="display: none"></button>

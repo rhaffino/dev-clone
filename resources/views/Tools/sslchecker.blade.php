@@ -36,7 +36,9 @@ id/ssl-checker
                         <input id="url" type="url" class="form-control lookup-url" name="" value="" autocomplete="off" placeholder="example.com">
                     </div>
                     <div class="col-sm-3 col-md-2 col-lg-3 col-xl-2 d-flex justify-content-end py-1">
-                        @if (isset($access_limit) && $access_limit > 0)
+                        @if (Auth::check())
+                            <button id="crawlButton" type="button" class="btn btn-crawl" name="button">@lang('sslchecker.btn-check')</button>
+                        @elseif (isset($access_limit) && $access_limit > 0)
                             <button disabled="disabled" type="button" class="btn btn-crawl" name="button">@lang('sslchecker.btn-check')</button>
                         @else 
                             <button id="crawlButton" class="next-button" style="display: none"></button>

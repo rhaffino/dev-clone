@@ -66,7 +66,9 @@ id/pagespeed-test
                         <input type="url" id="url" class="form-control pagespeed-url" name="" value="" autocomplete="off" placeholder="https://example.com">
                     </div>
                     <div class="col-sm-3 col-md-2 col-lg-3 col-xl-2 d-flex justify-content-end py-1">
-                        @if (isset($access_limit) && $access_limit > 0)
+                        @if (Auth::check())
+                            <button id="analysis-button" class="btn btn-crawl" name="button" disabled="disabled">@lang('pagespeed.generate-btn')</button>
+                        @elseif (isset($access_limit) && $access_limit > 0)
                             <button type="button" class="btn btn-crawl" name="button" disabled="disabled">@lang('pagespeed.generate-btn')</button>
                         @else 
                             <button id="analysis-button" class="next-button" style="display: none"></button>

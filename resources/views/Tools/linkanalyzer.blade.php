@@ -36,7 +36,9 @@ id/link-analyzer
                         <input type="url" class="form-control analyzer-url" name="" value="" placeholder="http://example.com" id="input-url" autocomplete="off">
                     </div>
                     <div class="col-sm-3 col-md-2 col-lg-3 col-xl-2 d-flex justify-content-end py-1">
-                        @if (isset($access_limit) && $access_limit > 0)
+                        @if (Auth::check())
+                            <button id="analyze-btn" type="button" class="btn btn-crawl" name="button">@lang('analyzer.analyze-btn')</button>
+                        @elseif (isset($access_limit) && $access_limit > 0)
                             <button disabled="disabled" type="button" class="btn btn-crawl" name="button">@lang('analyzer.analyze-btn')</button>
                         @else 
                             <button id="analyze-btn" class="next-button" style="display: none"></button>

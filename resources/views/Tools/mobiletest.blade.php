@@ -36,7 +36,9 @@ id/mobile-test
                         <input type="url" class="form-control sitemap-url" name="" value="" autocomplete="off" placeholder="https://example.com" id="tested_url">
                     </div>
                     <div class="col-sm-3 col-md-2 col-lg-3 col-xl-2 d-flex justify-content-end py-1">
-                        @if (isset($access_limit) && $access_limit > 0)
+                        @if (Auth::check())
+                            <button id="generateButton" type="button" class="btn btn-crawl" name="button">@lang('mobiletest.btn-check')</button>
+                        @elseif (isset($access_limit) && $access_limit > 0)
                             <button disabled="disabled" type="button" class="btn btn-crawl" name="button">@lang('mobiletest.btn-check')</button>
                         @else 
                             <button id="generateButton" class="next-button" style="display: none"></button>
