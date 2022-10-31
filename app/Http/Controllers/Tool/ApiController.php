@@ -177,7 +177,7 @@ class ApiController extends Controller
             'count' => $access_count,
             'limit' => $access_limit,
             'message' => $message,
-            'logged_target' => $request->logged_target ? : env('MAIN_URL', 'https://cmlabs.co') . '/' . (App::isLocale('id') ? 'id-id' : 'en')
+            'logged_target' => (env('MAIN_URL', 'https://cmlabs.co') . '/' . (App::isLocale('id') ? 'id-id' : 'en')) . '?logged_target=' . ($request->logged_target ? $request->logged_target : '')
         ];
 
         //return success response
