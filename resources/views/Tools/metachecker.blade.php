@@ -79,7 +79,9 @@
                                        placeholder="https://example.com" value="" autocomplete="off">
                             </div>
                             <div class="col-md-3 text-right col-mobile">
-                                @if (isset($access_limit) && $access_limit > 0)
+                                @if (Auth::check())
+                                    <button id="crawlURL" class="btn btn-crawl px-10">@lang('metachecker.btn-crawl')</button>
+                                @elseif (isset($access_limit) && $access_limit > 0)
                                     <button disabled="disabled" class="btn btn-crawl px-10">@lang('metachecker.btn-crawl')</button>
                                 @else 
                                     <button id="crawlURL" class="next-button" style="display: none"></button>
