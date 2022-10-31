@@ -56,19 +56,6 @@
                             class="btn nav-link d-flex align-items-center gap-1">@lang('v2_navbar.career')</a>
                     </li>
                 </ul>
-                <div class="navbar-last d-flex align-items-center">
-                    <div class="navbar-last d-flex align-items-center">
-                        @if (Auth::user() && Auth::user()->hasRole('member'))
-                            <a href="{{ route('member.job.saved') }}" class="btn btn-topbar btn-saved-jobs">
-                                <i class="bx bxs-bookmark pr-1"></i>
-                                <span class="font-weight-normal">@lang('layouts.menu-saved-jobs')</span>
-                            </a>
-                            <a href="{{ route('member.job.applied') }}" class="btn btn-topbar btn-my-application">
-                                <i class="bx bxs-badge-check pr-1"></i>
-                                <span class="font-weight-normal">@lang('layouts.menu-application')</span>
-                            </a>
-                        @endauth
-                </div>
             </div>
             <div class="navbar-last d-flex align-items-center">
                 <div class="dropdown me-3">
