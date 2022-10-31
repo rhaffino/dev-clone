@@ -179,8 +179,6 @@
   });
 </script>
 <script src="{{asset('js/logic/cta-function.js')}}"></script>
-{{ Auth::check() ? 'logged' : '' }}
-{{ Auth::guard('client')->check() ? 'logged' : '' }}
 @stack('script')
 @if (Auth::guest() && !session()->has('new_user')) 
     @php session()->put('new_user', md5(time())) @endphp 
