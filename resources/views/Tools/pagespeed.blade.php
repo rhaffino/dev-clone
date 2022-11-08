@@ -55,6 +55,8 @@ id/pagespeed-test
 
             @include('components.cta_form', ["message" => "Ouch! Turns out your website speed is still not good. But you can discuss with us to maximize your website performance."])
 
+            @include('components.alert_limit')
+
             <div class="header-blue mb-5 px-5 py-1">
                 <div class="row d-flex align-items-center">
                     <div class="col-sm-9 col-md-10 col-lg-9 col-xl-10 d-flex align-items-center py-1">
@@ -64,7 +66,14 @@ id/pagespeed-test
                         <input type="url" id="url" class="form-control pagespeed-url" name="" value="" autocomplete="off" placeholder="https://example.com">
                     </div>
                     <div class="col-sm-3 col-md-2 col-lg-3 col-xl-2 d-flex justify-content-end py-1">
-                        <button id="analysis-button" type="button" class="btn btn-crawl" name="button">@lang('pagespeed.generate-btn')</button>
+                        @if (Auth::check())
+                            <button id="analysis-button" class="btn btn-crawl" name="button" disabled="disabled">@lang('pagespeed.generate-btn')</button>
+                        @elseif (isset($access_limit) && $access_limit > 0)
+                            <button type="button" class="btn btn-crawl" name="button" disabled="disabled">@lang('pagespeed.generate-btn')</button>
+                        @else 
+                            <button id="analysis-button" class="next-button" style="display: none"></button>
+                            <button id="process-button" type="button" class="btn btn-crawl check-limit-button" name="button">@lang('pagespeed.generate-btn')</button>
+                        @endif
                     </div>
                 </div>
             </div>
@@ -595,9 +604,41 @@ id/pagespeed-test
 <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js"></script>
 <script src="{{asset('js/logic/trigerEnterButton.js')}}"></script>
 <script src="{{asset('js/logic/pagespeed.js')}}"></script>
-<script type="text/javascript">
-    $('#toggle_button_webmaster').click();
-</script>
+@if (Auth::guest() && $access_limit <= 0)
+    <script>
+        $(function(){
+            var process_clicked = false;
+            $('.check-limit-button').on('click', function(e) {
+                if (process_clicked) {
+                    process_clicked = false;
+                    $('.next-button').trigger('click');
+                    return;
+                }
+                e.preventDefault();
+                $.post('{{ route("api.limit") }}', {
+                    logged_target: '{{ request()->url() }}',
+                    _token: $('meta[name=csrf-token]').attr('content'),
+                }, function (response) {
+                    if (response.statusCode === 200) {
+                        if (response.data.limit == 1) {
+                            var alert_html = '<div class="alert alert-limit d-flex justify-content-between align-items-center" role="alert" style="border-color: #C29C13; background-color: #FFF8DF; margin-bottom: 32px;">' + 
+                                '<div class="d-flex align-items-center mr-2" style="color: #C29C13;">'+ 
+                                    '<i class="icon pr-2 bx bxs-error-circle bx-sm"  style="color: #C29C13;"></i>' + 
+                                    response.data.message + 
+                                '</div>' + 
+                                '<a href="'+ response.data.logged_target +'" style="color: #C29C13; font-weight: 700;">Login</a>' +
+                            '</div>';
+                            $('#alert-limit').html(alert_html);
+                        } else {
+                            process_clicked = true; 
+                            $('.check-limit-button').trigger('click');
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+@endif
 @endpush
 
 @push('style')

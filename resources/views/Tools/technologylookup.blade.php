@@ -22,7 +22,9 @@ id/technology-lookup
     <div class="d-flex flex-column-fluid">
         <div class="container-fluid px-0">
             <h1 class="text-darkgrey font-weight-normal">@lang('lookup.title')</h1>
-            <span class="text-darkgrey h4 font-weight-normal">@lang('lookup.sub-title')</span>
+            <span class="text-darkgrey h4 font-weight-normal mb-10">@lang('lookup.sub-title')</span>
+
+            @include('components.alert_limit')
 
             <div class="header-blue mt-10 mb-5 px-5 py-1">
                 <div class="row d-flex align-items-center">
@@ -33,7 +35,14 @@ id/technology-lookup
                         <input type="url" class="form-control lookup-url" name="" value="" placeholder="http://example.com" id="input-url" autocomplete="off">
                     </div>
                     <div class="col-sm-4 col-md-3 col-lg-4 col-xl-3 d-flex justify-content-end py-1">
-                        <button id="crawl-btn" type="button" class="btn btn-crawl" name="button" data-toggle="tooltip" data-theme="dark" title="@lang('lookup.lookup-btn-tooltip')">@lang('lookup.lookup-btn')</button>
+                        @if (Auth::check())
+                            <button id="crawl-btn" type="button" class="btn btn-crawl" name="button" data-toggle="tooltip" data-theme="dark" title="@lang('lookup.lookup-btn-tooltip')">@lang('lookup.lookup-btn')</button>
+                        @elseif (isset($access_limit) && $access_limit > 0)
+                            <button disabled="disabled" type="button" class="btn btn-crawl" name="button" data-toggle="tooltip" data-theme="dark" title="@lang('lookup.lookup-btn-tooltip')">@lang('lookup.lookup-btn')</button>
+                        @else 
+                            <button id="crawl-btn" class="next-button" style="display: none"></button>
+                            <button id="process-button" type="button" class="btn btn-crawl check-limit-button" name="button" data-toggle="tooltip" data-theme="dark" title="@lang('lookup.lookup-btn-tooltip')">@lang('lookup.lookup-btn')</button>
+                        @endif
                         {{-- <button id="crawlButtonDisabled" type="button" class="btn btn-crawl-disabled" name="button" data-toggle="tooltip" data-theme="dark" title="Currently your are reached the limit!">PLEASE WAIT 59:12</button>--}}
                     </div>
                 </div>
@@ -315,6 +324,41 @@ id/technology-lookup
         }]
     }
 </script>
+@if (Auth::guest() && $access_limit <= 0)
+    <script>
+        $(function(){
+            var process_clicked = false;
+            $('.check-limit-button').on('click', function(e) {
+                if (process_clicked) {
+                    process_clicked = false;
+                    $('.next-button').trigger('click');
+                    return;
+                }
+                e.preventDefault();
+                $.post('{{ route("api.limit") }}', {
+                    logged_target: '{{ request()->url() }}',
+                    _token: $('meta[name=csrf-token]').attr('content'),
+                }, function (response) {
+                    if (response.statusCode === 200) {
+                        if (response.data.limit == 1) {
+                            var alert_html = '<div class="alert alert-limit d-flex justify-content-between align-items-center" role="alert" style="border-color: #C29C13; background-color: #FFF8DF; margin-bottom: 32px;">' + 
+                                '<div class="d-flex align-items-center mr-2" style="color: #C29C13;">'+ 
+                                    '<i class="icon pr-2 bx bxs-error-circle bx-sm"  style="color: #C29C13;"></i>' + 
+                                    response.data.message + 
+                                '</div>' + 
+                                '<a href="'+ response.data.logged_target +'" style="color: #C29C13; font-weight: 700;">Login</a>' +
+                            '</div>';
+                            $('#alert-limit').html(alert_html);
+                        } else {
+                            process_clicked = true; 
+                            $('.check-limit-button').trigger('click');
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+@endif
 @endpush
 
 @section('technology-lookup')

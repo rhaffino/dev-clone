@@ -553,9 +553,9 @@ id/keyword-research
   <div class="d-flex flex-column-fluid">
     <div class="container-fluid px-0">
       <h1 class="text-darkgrey font-weight-normal">KEYWORD RESEARCH</h1>
-      <span class="text-darkgrey h4 font-weight-normal">Login to unlock all features here, 100% free!</span>
+      <span class="text-darkgrey h4 font-weight-normal mb-10">Login to unlock all features here, 100% free!</span>
 
-      <div class="header-blue mt-10 mb-5 px-5 py-1">
+      <div class="header-blue mb-5 px-5 py-1">
         <div class="row d-flex align-items-center">
           <div class="col-sm-7 col-md-8 col-lg-7 col-xl-8 d-flex align-items-center py-1">
             <input type="text" class="form-control kwresearch-url" name="" value="" placeholder="INPUT / PASTE YOUR KEYWORD">

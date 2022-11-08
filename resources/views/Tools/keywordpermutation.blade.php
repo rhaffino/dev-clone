@@ -22,8 +22,8 @@ id/keyword-permutation
     <div class="d-flex flex-column-fluid">
         <div class="container-fluid px-0">
             <h1 class="text-darkgrey font-weight-normal">@lang('permutation.title')</h1>
-            <span class="text-darkgrey h4 font-weight-normal">@lang('permutation.sub-title')</span>
-            <div class="row mt-10">
+            <span class="text-darkgrey h4 font-weight-normal mb-10">@lang('permutation.sub-title')</span>
+            <div class="row">
                 <div class="col-md-4">
                     <div class="card card-custom mb-5">
                         <div class="card-body p-0">
