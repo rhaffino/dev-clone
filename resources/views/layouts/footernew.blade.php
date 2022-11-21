@@ -159,7 +159,7 @@
                 </a>
                 <div class="h5 text-custom-darkgrey font-weight-light mb-4">Jakarta <b>(+62) 21-666-044-70</b></div>
                 <div class="h5 text-custom-darkgrey font-weight-light mb-4">Malang <b>(+62) 341-475-665</b></div>
-                <div class="h5 text-custom-darkgrey font-weight-light mb-4"><b>business</b>@cmlabs.co</div>
+                <div class="h5 text-custom-darkgrey font-weight-light mb-4"><b>marketing</b>@cmlabs.co</div>
                 <div class="d-flex align-items-center justify-content-start mt-7 mb-10">
                     <a rel="noopener noreferrer nofollow external" href="https://www.linkedin.com/company/cmlabs/" class="footer-new-icon mr-3" target="_blank"><i class="bx bxl-linkedin-square icon-xl"></i></a>
                     <a rel="noopener noreferrer nofollow external" href="https://medium.com/cmlabs" class="footer-new-icon mr-3"><i class="bx bxl-medium icon-xl"></i></a>
