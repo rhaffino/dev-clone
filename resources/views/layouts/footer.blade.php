@@ -64,7 +64,7 @@
 					<a href="https://cmlabs.co/en/about-us/" class="footer-link" target="_blank">About us</a>
 					<a href="https://cmlabs.co/en/career/" class="footer-link" target="_blank">We are hiring</a>
 					<a href="/reference" class="footer-link" target="_blank">Reference for Analytics</a>
-					<a href="mailto:business@cmlabs.co" class="footer-link">Contact us</a>
+					<a href="mailto:marketing@cmlabs.co" class="footer-link">Contact us</a>
 					<a href="https://cmlabs.co/en/press-room/" class="footer-link" target="_blank">Press Release</a>
 					<a href="https://cmlabs.co/en/blog/" class="footer-link" target="_blank">Article</a>
 				</div>
