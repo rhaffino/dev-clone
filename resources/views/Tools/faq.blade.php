@@ -48,11 +48,13 @@ id/json-ld-faq-schema-generator
                                     <div class="col-10 col-sm-11">
                                         <div class="form-group mb-5">
                                             <label for="question-1" class="font-weight-bold text-black">@lang('faq.label-question') 1</label>
-                                            <input type="text" class="form-control question" name="" value="" placeholder="{{ Lang::get('faq.placeholder-question') }}" data-id="0">
+                                            <textarea name="" class="form-control question" rows="3" data-id="0" placeholder="{{ Lang::get('faq.placeholder-question') }}"></textarea>
+                                            {{-- <input type="text" class="form-control question" name="" value="" placeholder="{{ Lang::get('faq.placeholder-question') }}" data-id="0"> --}}
                                         </div>
                                         <div class="form-group mb-5">
                                             <label for="answer-1" class="font-weight-bold text-black">@lang('faq.label-answer') 1</label>
-                                            <input type="text" class="form-control answer" name="" value="" placeholder="{{ Lang::get('faq.placeholder-answer') }}" data-id="0" height="50px">
+                                            <textarea name="" class="form-control answer" rows="3" data-id="0" placeholder="{{ Lang::get('faq.placeholder-answer') }}"></textarea>
+                                            {{-- <input type="text" class="form-control answer" name="" value="" placeholder="{{ Lang::get('faq.placeholder-answer') }}" data-id="0" height="50px"> --}}
                                         </div>
                                     </div>
                                     <div class="col-2 col-sm-1">
@@ -386,7 +388,7 @@ id/json-ld-faq-schema-generator
 @endpush
 @push('script')
 <script src="{{asset('js/logic/predifine-localstorage.js')}}"></script>
-<script src="{{asset('js/logic/faq-json-ld.js')}}"></script>
+<script src="{{asset('js/logic/faq-json-ld.js?221122')}}"></script>
 @endpush
 @section('json-ld')
 active
