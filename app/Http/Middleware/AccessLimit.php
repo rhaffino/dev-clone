@@ -17,7 +17,7 @@ class AccessLimit
      */
     public function handle($request, Closure $next)
     {
-        if (!Auth::check()) {
+        if (session()->missing('logged_in') || session()->get('logged_in') != 'true') {
             $access_count = session()->get('access_count', 0);
             $access_limit = $access_count > 5 ? 1 : 0;
         } else {
