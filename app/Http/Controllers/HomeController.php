@@ -16,7 +16,7 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request, $lang)
+    public function index($lang)
     {
         if ($lang==='en'){
             App::setLocale('en');
@@ -27,14 +27,6 @@ class HomeController extends Controller
         $dataEN = $this->getBlogWordpressEn();
         $data = json_decode(file_get_contents(base_path('resources/js/json/tools.json')),true);
         $local = App::getLocale();
-        if ($request->get('token')) {
-            try {
-                $decrypted = Crypt::decryptString($request->get('token'));
-            } catch (DecryptException $e) {
-                session()->put("logged_in", "false");
-            }
-            session()->put("logged_in", "true");
-        }
         return view('home', compact('data','local'));
     }
 
