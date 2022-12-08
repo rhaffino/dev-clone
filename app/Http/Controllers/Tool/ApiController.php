@@ -163,6 +163,23 @@ class ApiController extends Controller
         return new BaseApiResource(null, "Success send email", 200);
     }
 
+    public function accessCount(Request $request)
+    {
+        $access_count = session()->has('access_count') ? session()->get('access_count') : 0;
+        $access_count += 1;
+        session()->put('access_count', $access_count);
+
+        $message = 'recorded';
+
+        $data = [
+            'count' => $access_count,
+            'message' => $message,
+        ];
+
+        //return success response
+        return new BaseApiResource($data, $message, 200);
+    }
+
     public function accessLimit(Request $request)
     {
         $access_count = session()->has('access_count') ? session()->get('access_count') : 0;

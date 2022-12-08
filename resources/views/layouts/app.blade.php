@@ -180,9 +180,11 @@
 </script>
 <script src="{{asset('js/logic/cta-function.js')}}"></script>
 @stack('script')
-@if (Auth::guest() && !session()->has('new_user')) 
+@if (Auth::guest() && !session()->has('new_user') && $access_count > 5) 
     @php session()->put('new_user', md5(time())) @endphp 
     @include('components.login_modal')
+@else
+<div id="loginModal"></div>
 @endif
 </body>
 </html>

@@ -27,6 +27,7 @@ id/technology-lookup
             @include('components.alert_limit')
 
             <div class="header-blue mt-10 mb-5 px-5 py-1">
+                <input type="hidden" id="#count-tools" autocomplete="off" value="{{ $access_count }}" >
                 <div class="row d-flex align-items-center">
                     <div class="col-sm-8 col-md-9 col-lg-8 col-xl-9 d-flex align-items-center py-1">
                         <i id="empty-url" class='bx bxs-shield text-white bx-md mr-3'></i>
@@ -35,13 +36,13 @@ id/technology-lookup
                         <input type="url" class="form-control lookup-url" name="" value="" placeholder="http://example.com" id="input-url" autocomplete="off">
                     </div>
                     <div class="col-sm-4 col-md-3 col-lg-4 col-xl-3 d-flex justify-content-end py-1">
-                        @if (Auth::check())
+                        @if (session()->has('logged_in') || session()->get('logged_in') == 'true')
                             <button id="crawl-btn" type="button" class="btn btn-crawl" name="button" data-toggle="tooltip" data-theme="dark" title="@lang('lookup.lookup-btn-tooltip')">@lang('lookup.lookup-btn')</button>
                         @elseif (isset($access_limit) && $access_limit > 0)
                             <button disabled="disabled" type="button" class="btn btn-crawl" name="button" data-toggle="tooltip" data-theme="dark" title="@lang('lookup.lookup-btn-tooltip')">@lang('lookup.lookup-btn')</button>
                         @else 
                             <button id="crawl-btn" class="next-button" style="display: none"></button>
-                            <button id="process-button" type="button" class="btn btn-crawl check-limit-button" name="button" data-toggle="tooltip" data-theme="dark" title="@lang('lookup.lookup-btn-tooltip')">@lang('lookup.lookup-btn')</button>
+                            <button id="process-button" type="button" class="btn btn-crawl check-limit-button analysist-button-guest" name="button" data-toggle="tooltip" data-theme="dark" title="@lang('lookup.lookup-btn-tooltip')">@lang('lookup.lookup-btn')</button>
                         @endif
                         {{-- <button id="crawlButtonDisabled" type="button" class="btn btn-crawl-disabled" name="button" data-toggle="tooltip" data-theme="dark" title="Currently your are reached the limit!">PLEASE WAIT 59:12</button>--}}
                     </div>
@@ -324,12 +325,87 @@ id/technology-lookup
         }]
     }
 </script>
-@if (Auth::guest() && $access_limit <= 0)
+@if (!session()->has('logged_in') || session()->get('logged_in') != 'true' && $access_limit <= 0)
     <script>
         $(function(){
-            var process_clicked = false;
             $('.check-limit-button').on('click', function(e) {
-                if (process_clicked) {
+                var process_clicked = false;
+                const submitbtn = document.querySelector(".analysist-button-guest");
+                const alertLimit = document.getElementById('alert-limit');
+                const toolsCount = document.getElementById("#count-tools");
+                const countValue = document.getElementById("#count-tools").value;
+                const loginModal = document.getElementById('loginModal');
+                let totalClicked = parseInt(countValue) + 1;
+
+                toolsCount.value = totalClicked;
+                if(toolsCount.value <= 5){
+                    e.preventDefault();
+                    $.post('{{ route("api.count") }}', {
+                        _token: $('meta[name=csrf-token]').attr('content'),
+                    });
+                    process_clicked = true; 
+                    $('.next-button').trigger('click');
+                    loginModal.innerHTML = `
+                    <div
+                        class="modal fade"
+                        id="login-modal"
+                        tabindex="-1"
+                        role="dialog"
+                        aria-hidden="true"
+                    >
+                        <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+                            <div class="modal-content" style="border-radius:16px">
+                                <div class="modal-header border-0 pb-2">
+                                    <h1 class="font-weight-bolder">
+                                        @lang('modal.modal-login-title')
+                                    </h1>
+                                    <button
+                                        type="button"
+                                        class="close"
+                                        data-dismiss="modal"
+                                        aria-label="Close"
+                                    >
+                                        <i class="pb-2 bx bx-x bx-md"></i>
+                                    </button>
+                                </div>
+                                <div class="modal-body py-2">
+                                    @lang('modal.modal-login-text')
+                                </div>
+                                <div class="p-7">
+                                    <div class="row justify-content-end">
+                                        <div class="col-sm-5">
+                                            <a
+                                                href="{{ env('MAIN_URL', 'https://cmlabs.co') }}/{{ App::isLocale('id') ? 'id-id' : 'en' }}/login/?logged_target={{ request()->url() }}"
+                                                class="btn btn-primary btn-sm btn-block font-weight-bolder"
+                                            >
+                                                Continue
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    `
+                }else if(toolsCount.value == 6){
+                    e.preventDefault();
+                    $.post('{{ route("api.count") }}', {
+                        _token: $('meta[name=csrf-token]').attr('content'),
+                    });
+                    submitbtn.disabled = true;
+                    alertLimit.innerHTML = `
+                    <div class="alert alert-limit d-flex justify-content-between align-items-center" role="alert" style="border-color: #C29C13; background-color: #FFF8DF; margin-bottom: 32px;">
+                    <div class=" d-flex align-items-center mr-2" style="color: #C29C13;">
+                        <i class="icon pr-2 bx bxs-error-circle bx-sm"  style="color: #C29C13;"></i> @lang('alert.alert-limit')
+                    </div>
+                        <a href="{{ env('MAIN_URL', 'https://cmlabs.co') }}/{{ App::isLocale('id') ? 'id-id' : 'en' }}/login/?logged_target={{ request()->url() }}" style="color: #C29C13; font-weight: 700;">Login</a>
+                    </div>`
+                    $(function(){
+                        $('#login-modal').modal('show');
+                    });
+                }
+                else{
+                    if (process_clicked) {
                     process_clicked = false;
                     $('.next-button').trigger('click');
                     return;
@@ -354,7 +430,7 @@ id/technology-lookup
                             $('.check-limit-button').trigger('click');
                         }
                     }
-                });
+                });}
             });
         });
     </script>
