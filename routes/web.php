@@ -19,7 +19,7 @@ Route::get('/login', 'Auth\LoginController@loginView');
 Route::post('/validate','Auth\LoginController@validateLogin');
 Route::get('/logout','Auth\LoginController@logout');
 
-Route::middleware([ManualAuth::class])->group(function (){
+// Route::middleware([ManualAuth::class])->group(function (){
     Route::redirect('/', '/en');
     
     Route::get('/analytics', function (){
@@ -63,7 +63,7 @@ Route::middleware([ManualAuth::class])->group(function (){
     });
     Route::get('/en/version', 'ToolsController@englishVersion');
     Route::get('/id/version', 'ToolsController@indonesiaVersion');
-});
+// });
 
 Route::post('/api/cta', 'Tool\ApiController@ctaEmail')->name('api.cta-email');
 Route::post('/api/count', 'Tool\ApiController@accessCount')->name('api.count');
