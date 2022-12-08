@@ -674,7 +674,7 @@ id/pagespeed-test
                     });
                     submitbtn.disabled = true;
                     alertLimit.innerHTML = `
-                    <div class="alert alert-limit d-flex justify-content-between align-items-center" role="alert" style="border-color: #C29C13; background-color: #FFF8DF; margin-bottom: 32px;">
+                    <div class="alert alert-limit d-flex justify-content-between align-items-center alert-javascript" role="alert" style="border-color: #C29C13; background-color: #FFF8DF; margin-bottom: 32px;">
                     <div class=" d-flex align-items-center mr-2" style="color: #C29C13;">
                         <i class="icon pr-2 bx bxs-error-circle bx-sm"  style="color: #C29C13;"></i> @lang('alert.alert-limit')
                     </div>

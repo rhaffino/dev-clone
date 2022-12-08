@@ -14,7 +14,7 @@
                 <button
                     type="button"
                     class="close"
-                    data-dismiss="modal"
+                    data-bs-dismiss="modal"
                     aria-label="Close"
                 >
                     <i class="pb-2 bx bx-x bx-md"></i>
