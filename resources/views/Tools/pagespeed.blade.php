@@ -697,7 +697,7 @@ id/pagespeed-test
                 }, function (response) {
                     if (response.statusCode === 200) {
                         if (response.data.limit == 1) {
-                            var alert_html = '<div class="alert alert-limit d-flex justify-content-between align-items-center" role="alert" style="border-color: #C29C13; background-color: #FFF8DF; margin-bottom: 32px;">' + 
+                            var alert_html = '<div class="alert alert-limit d-flex justify-content-between align-items-center alert-javascript" role="alert" style="border-color: #C29C13; background-color: #FFF8DF; margin-bottom: 32px;">' + 
                                 '<div class="d-flex align-items-center mr-2" style="color: #C29C13;">'+ 
                                     '<i class="icon pr-2 bx bxs-error-circle bx-sm"  style="color: #C29C13;"></i>' + 
                                     response.data.message + 
