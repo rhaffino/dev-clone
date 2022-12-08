@@ -41,6 +41,7 @@
                     @include('components.alert_limit')
 
                     <div class="header-blue py-3 mb-5 px-4">
+                        <input type="hidden" id="#count-tools" autocomplete="off" value="{{ $access_count }}" >
                         <div class="row d-flex align-items-center">
                             <div class="col-md-2 text-left pl-0 col-mobile">
                                 <div class="d-flex align-items-center metachecker-option">
@@ -79,13 +80,13 @@
                                        placeholder="https://example.com" value="" autocomplete="off">
                             </div>
                             <div class="col-md-3 text-right col-mobile">
-                                @if (Auth::check())
+                                @if (session()->has('logged_in') || session()->get('logged_in') == 'true')
                                     <button id="crawlURL" class="btn btn-crawl px-10">@lang('metachecker.btn-crawl')</button>
                                 @elseif (isset($access_limit) && $access_limit > 0)
                                     <button disabled="disabled" class="btn btn-crawl px-10">@lang('metachecker.btn-crawl')</button>
                                 @else 
                                     <button id="crawlURL" class="next-button" style="display: none"></button>
-                                    <button id="process-button" class="btn btn-crawl px-10 check-limit-button">@lang('metachecker.btn-crawl')</button>
+                                    <button id="process-button" class="btn btn-crawl px-10 check-limit-button analysist-button-guest">@lang('metachecker.btn-crawl')</button>
                                 @endif
                             </div>
                         </div>
@@ -571,12 +572,87 @@
 <script type="text/javascript">
     $('#toggle_button_writer').click();
 </script>
-@if (Auth::guest() && $access_limit <= 0)
+@if (!session()->has('logged_in') || session()->get('logged_in') != 'true' && $access_limit <= 0)
     <script>
         $(function(){
-            var process_clicked = false;
             $('.check-limit-button').on('click', function(e) {
-                if (process_clicked) {
+                var process_clicked = false;
+                const submitbtn = document.querySelector(".analysist-button-guest");
+                const alertLimit = document.getElementById('alert-limit');
+                const toolsCount = document.getElementById("#count-tools");
+                const countValue = document.getElementById("#count-tools").value;
+                const loginModal = document.getElementById('loginModal');
+                let totalClicked = parseInt(countValue) + 1;
+
+                toolsCount.value = totalClicked;
+                if(toolsCount.value <= 5){
+                    e.preventDefault();
+                    $.post('{{ route("api.count") }}', {
+                        _token: $('meta[name=csrf-token]').attr('content'),
+                    });
+                    process_clicked = true; 
+                    $('.next-button').trigger('click');
+                    loginModal.innerHTML = `
+                    <div
+                        class="modal fade"
+                        id="login-modal"
+                        tabindex="-1"
+                        role="dialog"
+                        aria-hidden="true"
+                    >
+                        <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+                            <div class="modal-content" style="border-radius:16px">
+                                <div class="modal-header border-0 pb-2">
+                                    <h1 class="font-weight-bolder">
+                                        @lang('modal.modal-login-title')
+                                    </h1>
+                                    <button
+                                        type="button"
+                                        class="close"
+                                        data-dismiss="modal"
+                                        aria-label="Close"
+                                    >
+                                        <i class="pb-2 bx bx-x bx-md"></i>
+                                    </button>
+                                </div>
+                                <div class="modal-body py-2">
+                                    @lang('modal.modal-login-text')
+                                </div>
+                                <div class="p-7">
+                                    <div class="row justify-content-end">
+                                        <div class="col-sm-5">
+                                            <a
+                                                href="{{ env('MAIN_URL', 'https://cmlabs.co') }}/{{ App::isLocale('id') ? 'id-id' : 'en' }}/login/?logged_target={{ request()->url() }}"
+                                                class="btn btn-primary btn-sm btn-block font-weight-bolder"
+                                            >
+                                                Continue
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    `
+                }else if(toolsCount.value == 6){
+                    e.preventDefault();
+                    $.post('{{ route("api.count") }}', {
+                        _token: $('meta[name=csrf-token]').attr('content'),
+                    });
+                    submitbtn.disabled = true;
+                    alertLimit.innerHTML = `
+                    <div class="alert alert-limit d-flex justify-content-between align-items-center" role="alert" style="border-color: #C29C13; background-color: #FFF8DF; margin-bottom: 32px;">
+                    <div class=" d-flex align-items-center mr-2" style="color: #C29C13;">
+                        <i class="icon pr-2 bx bxs-error-circle bx-sm"  style="color: #C29C13;"></i> @lang('alert.alert-limit')
+                    </div>
+                        <a href="{{ env('MAIN_URL', 'https://cmlabs.co') }}/{{ App::isLocale('id') ? 'id-id' : 'en' }}/login/?logged_target={{ request()->url() }}" style="color: #C29C13; font-weight: 700;">Login</a>
+                    </div>`
+                    $(function(){
+                        $('#login-modal').modal('show');
+                    });
+                }
+                else{
+                    if (process_clicked) {
                     process_clicked = false;
                     $('.next-button').trigger('click');
                     return;
@@ -601,7 +677,7 @@
                             $('.check-limit-button').trigger('click');
                         }
                     }
-                });
+                });}
             });
         });
     </script>

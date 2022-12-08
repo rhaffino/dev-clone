@@ -3,6 +3,8 @@
 namespace App\Http\Middleware;
 
 use Closure;
+use Illuminate\Contracts\Encryption\DecryptException;
+use Illuminate\Support\Facades\Crypt;
 
 class EnsureUrlIsValid
 {
@@ -15,6 +17,14 @@ class EnsureUrlIsValid
      */
     public function handle($request, Closure $next)
     {
+        if ($request->get('token')) {
+            try {
+                $decrypted = Crypt::decryptString($request->get('token'));
+            } catch (DecryptException $e) {
+                session()->put("logged_in", "false");
+            }
+            session()->put("logged_in", "true");
+        }
         if (!in_array($request->segment(1), ['id', 'en'])) {
             $segment1 = "en";
             $segment2 = $request->segment(2);
