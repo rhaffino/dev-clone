@@ -238,10 +238,14 @@ function displayAuditsResult(data, category) {
                     addItem(allAudits, audit, category);
                 } else {
                     group.push(audit.group);
-                    if (data.lighthouseResult.categoryGroups[audit.group].hasOwnProperty('description')) {
-                        addSubTitle(data.lighthouseResult.categoryGroups[audit.group].title, audit.group, data.lighthouseResult.categoryGroups[audit.group].description, category);
+                    if (data.lighthouseResult.categoryGroups[audit.group]) {
+                        if (data.lighthouseResult.categoryGroups[audit.group].hasOwnProperty('description')) {
+                            addSubTitle(data.lighthouseResult.categoryGroups[audit.group].title, audit.group, data.lighthouseResult.categoryGroups[audit.group].description, category);
+                        } else {
+                            addSubTitle(data.lighthouseResult.categoryGroups[audit.group].title, audit.group, null, category);
+                        }
                     } else {
-                        addSubTitle(data.lighthouseResult.categoryGroups[audit.group].title, audit.group, null, category);
+                        addSubTitle(audit.group[0].toUpperCase() + audit.group.substring(1), audit.group, null, category)
                     }
                     addItem(allAudits, audit, category);
                 }
@@ -354,6 +358,67 @@ function addItem(allAudits, audit, category, group = null) {
                 table += traceTreeData(chains[chain]);
             }
             table += "</ul>"
+        } else if (allAudits[audit.id].details.type === 'debugdata') {
+            table = "<table style=\"width:100%;\">\n" +
+                    "<thead>\n" +
+                    "<tr>\n<th>Property</th>\n<th>Value</th>"+
+                    "\n</tr>\n" +
+                    "</thead>\n" +
+                    "<tbody>\n";
+            for (const property in allAudits[audit.id].details.items[0]) {
+                table += "\n<tr>";
+                table += "\n<td>" + property + "</td>";
+                table += "\n<td>" + allAudits[audit.id].details.items[0][property] + "</td>";
+                table += "\n<tr>"
+            }
+            table += "</tbody>\n" +
+                    "</table>";
+        } else if (allAudits[audit.id].details.type === 'filmstrip') {
+            table = "<table style=\"width:100%;\">\n" +
+                    "<thead>\n" +
+                    "<tr>\n<th>Timestamp</th>\n<th>Timing</th>\n<th>Data</th>"+
+                    "\n</tr>\n" +
+                    "</thead>\n" +
+                    "<tbody>\n";
+            for (const property of allAudits[audit.id].details.items) {
+                table += "\n<tr>";
+                table += "\n<td>" + property['timestamp'] + "</td>";
+                table += "\n<td>" + property['timing'] + "</td>";
+                table += "\n<td>" + "<img src=" + property['data'] + " >" + "</td>";
+                table += "\n<tr>"
+            }
+            table += "</tbody>\n" +
+                    "</table>";
+        } else if (allAudits[audit.id].details.type === 'screenshot') {
+            table = "<table style=\"width:100%;\">\n" +
+                    "<thead>\n" +
+                    "<tr>\n<th>Timestamp</th>\n<th>Timing</th>\n<th>Data</th>"+
+                    "\n</tr>\n" +
+                    "</thead>\n" +
+                    "<tbody>\n";
+            table += "\n<tr>";
+            table += "\n<td>" + allAudits[audit.id].details.timestamp + "</td>";
+            table += "\n<td>" + allAudits[audit.id].details.timing + "</td>";
+            table += "\n<td>" + "<img src=" + allAudits[audit.id].details.data + " >" + "</td>";
+            table += "\n<tr>"
+            table += "</tbody>\n" +
+                    "</table>";
+        } else if (allAudits[audit.id].details.type === 'treemap-data') {
+            table = "<table style=\"width:100%;\">\n" +
+                    "<thead>\n" +
+                    "<tr>\n<th>Name</th>\n<th>Resource Bytes</th>\n<th>Unused Bytes</th>"+
+                    "\n</tr>\n" +
+                    "</thead>\n" +
+                    "<tbody>\n";
+            for (const property of allAudits[audit.id].details.nodes) {
+                table += "\n<tr>";
+                table += "\n<td>" + property.name + "</td>";
+                table += "\n<td>" + property.resourceBytes + "</td>";
+                table += "\n<td>" + property.unusedBytes + "</td>";
+                table += "\n<tr>"
+            }
+            table += "</tbody>\n" +
+                    "</table>";
         }
     }
     let groupId = '';
