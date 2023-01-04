@@ -171,7 +171,7 @@
                 {{-- <div class="h6 footer-new-link mb-4"><a href="https://cmlabs.co/{{ $local }}-id/disclaimer">@lang('layout.footer-link-3')</a></div> --}}
                 <div class="h6 footer-new-link mb-4"><a href="https://cmlabs.co/{{ $local }}-id/career">@lang('layout.footer-link-5')</a></div>
                 <div class="h6 footer-new-link mb-10"><a href="https://cmlabs.co/{{ $local }}-id/">@lang('layout.footer-link-4')</a></div>
-                <div class="h6 footer-new-copyright text-custom-grey font-weight-light">Copyright &copy;2021</div>
+                <div class="h6 footer-new-copyright text-custom-grey font-weight-light">Copyright &copy;2023</div>
             </div>
         </div>
     </div>
