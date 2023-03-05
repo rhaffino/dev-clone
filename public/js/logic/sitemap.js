@@ -263,7 +263,7 @@ const refreshLocalStorage = function() {
 
 let removeLocal = function(index) {
     const keys = JSON.parse(localStorage.getItem('sitemap-generator'))
-    let hash = keys[index].hash
+    let hash = encodeURIComponent(keys[index].hash)
 
     $.ajax({
         url:`${URL_API+'/api/sitemap-generator/delete/'+hash}`,
@@ -304,6 +304,7 @@ let buttonOn = function(param, hash = null) {
     let download = $('#download-button')
     download.empty()
     if (param) {
+        hash = encodeURIComponent(hash)
         download.append(`<a href="${URL_API+'/api/sitemap-generator/download/'+hash}" id="downloadOn" type="button" class="btn btn-download-sitemap">` + btn_download + `</a>`)
     } else {
         download.append(`<button id="downloadOff" type="button" class="btn btn-download-sitemap-disabled"
