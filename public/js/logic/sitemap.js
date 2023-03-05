@@ -304,7 +304,7 @@ let buttonOn = function(param, hash = null) {
     let download = $('#download-button')
     download.empty()
     if (param) {
-        hash.replace(/([/])/g, "%2F")
+        hash = encodeURIComponent(hash)
         download.append(`<a href="${URL_API+'/api/sitemap-generator/download/'+hash}" id="downloadOn" type="button" class="btn btn-download-sitemap">` + btn_download + `</a>`)
     } else {
         download.append(`<button id="downloadOff" type="button" class="btn btn-download-sitemap-disabled"
