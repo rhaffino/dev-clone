@@ -181,7 +181,6 @@
                                 <div class="card-body px-0">
                                     <div class="d-flex flex-column px-10 py-3">
                                         <div class="link-meta d-flex flex-row align-items-center mb-2">
-                                            <strong class="mr-2">Ad</strong>
                                             <span>career.cmlabs.co<i class='bx bx-caret-down ml-1'
                                                                      style="color: #4D5156; vertical-align: text-bottom;"></i></span>
                                         </div>
@@ -192,20 +191,6 @@
                                             cmlabs opens opportunities for those of you who want to join our team. Find
                                             information about job vacancies, internal programs, and other collaborations
                                             at career cmlabs.
-                                        </div>
-                                    </div>
-                                    <div class="d-flex flex-column px-10 py-3">
-                                        <div class="link-meta d-flex flex-row align-items-center mb-2">
-                                            <span>analytics.cmlabs.co › en › member › dashboard<i
-                                                    class='bx bx-caret-down ml-1'
-                                                    style="color: #4D5156; vertical-align: text-bottom;"></i></span>
-                                        </div>
-                                        <div class="title-meta mb-2">
-                                            cmlabs Analytics, Search/SERPs Tracking
-                                        </div>
-                                        <div class="desc-meta">
-                                            Dec 2, 2020 — CMLABS Analytics is designed to work seamlessly with important
-                                            Google solutions and partner products (eg. Keyword Planner for Search ...
                                         </div>
                                     </div>
                                     <div class="d-flex flex-column px-10 py-3 bg-color-lightyellow">
@@ -257,7 +242,6 @@
                                 <div class="card-body px-0">
                                     <div class="d-flex flex-column px-10 py-3">
                                         <div class="link-meta d-flex align-items-center mb-2">
-                                            <strong class="mr-2">Ad</strong>
                                             <span>career.cmlabs.co<i class='bx bx-caret-down ml-1'
                                                                      style="color: #4D5156; vertical-align: text-bottom;"></i></span>
                                         </div>
@@ -268,20 +252,6 @@
                                             cmlabs opens opportunities for those of you who want to join our team. Find
                                             information about job vacancies, internal programs, and other collaborations
                                             at career cmlabs.
-                                        </div>
-                                    </div>
-                                    <div class="d-flex flex-column px-10 py-3">
-                                        <div class="link-meta d-flex flex-row align-items-center mb-2">
-                                            <span>analytics.cmlabs.co › en › member › dashboard<i
-                                                    class='bx bx-caret-down ml-1'
-                                                    style="color: #4D5156; vertical-align: text-bottom;"></i></span>
-                                        </div>
-                                        <div class="title-meta mb-2">
-                                            cmlabs Analytics, Search/SERPs Tracking
-                                        </div>
-                                        <div class="desc-meta">
-                                            Dec 2, 2020 — CMLABS Analytics is designed to work seamlessly with important
-                                            Google solutions and partner products (eg. Keyword Planner for Search ...
                                         </div>
                                     </div>
                                     <div class="d-flex flex-column px-10 py-3 bg-color-lightyellow">
