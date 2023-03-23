@@ -47,7 +47,7 @@
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="https://cmlabs.co/{{ $local }}-id/pricing/media-buying">@lang('layout.nav-pricing-media-buying')</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="https://cmlabs.co/{{ $local }}-id/pricing/political-campaign">@lang('layout.nav-pricing-marketing')</a>
+                                <a class="dropdown-item" href="https://cmlabs.co/{{ $local }}-id/pricing/political-campaign">@lang('layout.nav-pricing-political')</a>
                             @else
                                 <a class="dropdown-item" href="https://cmlabs.co/{{ $local }}-id/pricing/jasa-seo">@lang('layout.nav-pricing-seo')</a>
                                 <div class="dropdown-divider"></div>

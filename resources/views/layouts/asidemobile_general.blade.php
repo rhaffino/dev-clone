@@ -50,8 +50,16 @@
                                 <a href="https://cmlabs.co/{{ $local }}-id/seo-terms" class="menu-link"><span class="menu-text">SEO Terms</span></a>
                             </li>
                             <li class="menu-item menu-item-children" aria-haspopup="true">
-                                <a href="https://cmlabs.co/{{ $local }}-id/seo-guidelines" class="menu-link"><span class="menu-text">SEO Guidelines</span></a>
+                                <a href="https://cmlabs.co/{{ $local }}-id/seo-guidelines" class="menu-link"><span class="menu-text">SEO Guidelines</span></a>   
                             </li>
+                            @if ($local == "id")         
+                                <li class="menu-item menu-item-children" aria-haspopup="true">
+                                    <a class="dropdown-item" href="https://cmlabs.co/{{ $local }}-id/ebook" class="menu-link"><span class="menu-text">cmlabs E-Book</span></a>
+                                </li>
+                                <li class="menu-item menu-item-children" aria-haspopup="true">
+                                    <a class="dropdown-item" href="https://cmlabs.co/{{ $local }}-id/event" class="menu-link"><span class="menu-text">cmlabs Event</span></a>
+                                </li>
+                            @endif
                         </ul>
                     </div>
                 </li>
@@ -65,24 +73,30 @@
                             <li class="menu-item menu-item-parent" aria-haspopup="true">
                                 <span class="menu-link"><span class="menu-text">@lang('layout.nav-pricing')</span></span>
                             </li>
-                            {{-- <li class="menu-item menu-item-children" aria-haspopup="true">
-                                <a href="https://cmlabs.co/{{ $local }}-id/pricing/serp-tracker" class="menu-link"><span class="menu-text">@lang('layout.nav-pricing-serp')</span></a>
-                            </li> --}}
-                            <li class="menu-item menu-item-children" aria-haspopup="true">
-                                <a href="https://cmlabs.co/{{ $local }}-id/pricing/seo-consultant" class="menu-link"><span class="menu-text">@lang('layout.nav-pricing-seo')</span></a>
-                            </li>
-                            <li class="menu-item menu-item-children" aria-haspopup="true">
-                                <a href="https://cmlabs.co/{{ $local }}-id/pricing/content-writing" class="menu-link"><span class="menu-text">@lang('layout.nav-pricing-writing')</span></a>
-                            </li>
-                            <li class="menu-item menu-item-children" aria-haspopup="true">
-                                <a href="https://cmlabs.co/{{ $local }}-id/pricing/content-marketing" class="menu-link"><span class="menu-text">@lang('layout.nav-pricing-marketing')</span></a>
-                            </li>
-                            <li class="menu-item menu-item-children" aria-haspopup="true">
-                                <a href="https://cmlabs.co/{{ $local }}-id/pricing/backlink" class="menu-link"><span class="menu-text">@lang('layout.nav-pricing-backlink')</span></a>
-                            </li>
-                            <li class="menu-item menu-item-children" aria-haspopup="true">
-                                <a href="https://cmlabs.co/{{ $local }}-id/pricing/backlink-media-nasional" class="menu-link"><span class="menu-text">@lang('layout.nav-pricing-backlink-media-nasional')</span></a>
-                            </li>
+                            @if ($local == "en")
+                                <li class="menu-item menu-item-children" aria-haspopup="true">
+                                    <a href="https://cmlabs.co/{{ $local }}-id/pricing/seo-services" class="menu-link"><span class="menu-text">@lang('layout.nav-pricing-seo')</span></a>
+                                </li>
+                                <li class="menu-item menu-item-children" aria-haspopup="true">
+                                    <a href="https://cmlabs.co/{{ $local }}-id/pricing/content-writing" class="menu-link"><span class="menu-text">@lang('layout.nav-pricing-writing')</span></a>
+                                </li>
+                                <li class="menu-item menu-item-children" aria-haspopup="true">
+                                    <a href="https://cmlabs.co/{{ $local }}-id/pricing/media-buying" class="menu-link"><span class="menu-text">@lang('layout.nav-pricing-media-buying')</span></a>
+                                </li>
+                                <li class="menu-item menu-item-children" aria-haspopup="true">
+                                    <a href="https://cmlabs.co/{{ $local }}-id/pricing/political-campaign" class="menu-link"><span class="menu-text">@lang('layout.nav-pricing-media-buying')</span></a>
+                                </li>
+                            @else 
+                                <li class="menu-item menu-item-children" aria-haspopup="true">
+                                    <a href="https://cmlabs.co/{{ $local }}-id/pricing/jasa-seo" class="menu-link"><span class="menu-text">@lang('layout.nav-pricing-seo')</span></a>
+                                </li>
+                                <li class="menu-item menu-item-children" aria-haspopup="true">
+                                    <a href="https://cmlabs.co/{{ $local }}-id/pricing/content-writing" class="menu-link"><span class="menu-text">@lang('layout.nav-pricing-writing')</span></a>
+                                </li>
+                                <li class="menu-item menu-item-children" aria-haspopup="true">
+                                    <a href="https://cmlabs.co/{{ $local }}-id/pricing/media-buying" class="menu-link"><span class="menu-text">@lang('layout.nav-pricing-media-buying')</span></a>
+                                </li>
+                            @endif
                         </ul>
                     </div>
                 </li>
