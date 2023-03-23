@@ -89,7 +89,7 @@
                             <div class="card-body d-flex flex-wrap align-items-center w-100 p-3">
                                 <div class="footer-resource-icon d-flex align-items-center">
                                     <i class="bx bxs-help-circle icon-lg mr-2"></i>
-                                    <span class="h6 font-weight-normal mb-0">13</span>
+                                    <span class="h6 font-weight-normal mb-0">50+</span>
                                 </div>
                                 <div class="h6 footer-resource-text font-weight-normal mb-0">@lang('layout.footer-resource-link-1')</div>
                             </div>
@@ -100,7 +100,7 @@
                             <div class="card-body d-flex flex-wrap align-items-center w-100 p-3">
                                 <div class="footer-resource-icon d-flex align-items-center">
                                     <i class="bx bxs-book icon-lg mr-2"></i>
-                                    <span class="h6 font-weight-normal mb-0">150</span>
+                                    <span class="h6 font-weight-normal mb-0">150+</span>
                                 </div>
                                 <div class="h6 footer-resource-text font-weight-normal mb-0">@lang('layout.footer-resource-link-2')</div>
                             </div>
@@ -111,7 +111,7 @@
                             <div class="card-body d-flex flex-wrap align-items-center w-100 p-3">
                                 <div class="footer-resource-icon d-flex align-items-center">
                                     <i class="bx bxs-news icon-lg mr-2"></i>
-                                    <span class="h6 font-weight-normal mb-0">45</span>
+                                    <span class="h6 font-weight-normal mb-0">50+</span>
                                 </div>
                                 <div class="h6 footer-resource-text font-weight-normal mb-0">@lang('layout.footer-resource-link-3')</div>
                             </div>
@@ -133,23 +133,12 @@
                             <div class="card-body d-flex flex-wrap align-items-center w-100 p-3">
                                 <div class="footer-resource-icon d-flex align-items-center">
                                     <i class="bx bxl-google icon-lg mr-2"></i>
-                                    <span class="h6 font-weight-normal mb-0">18</span>
+                                    <span class="h6 font-weight-normal mb-0">19</span>
                                 </div>
                                 <div class="h6 footer-resource-text font-weight-normal mb-0">@lang('layout.footer-resource-link-5')</div>
                             </div>
                         </div>
                     </a>
-                    <!-- <a href="https://analytics.cmlabs.co/reference">
-                        <div class="card card-custom footer-resource-list">
-                            <div class="card-body d-flex flex-wrap align-items-center w-100 p-3">
-                                <div class="footer-resource-icon d-flex align-items-center">
-                                    <i class="bx bxs-book-content icon-lg mr-2"></i>
-                                    <span class="h6 font-weight-normal mb-0">11</span>
-                                </div>
-                                <div class="h6 footer-resource-text font-weight-normal mb-0">@lang('layout.footer-resource-link-6')</div>
-                            </div>
-                        </div>
-                    </a> -->
                 </div>
             </div>
             <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
