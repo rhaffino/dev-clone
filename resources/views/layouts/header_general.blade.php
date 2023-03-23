@@ -23,7 +23,13 @@
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="https://cmlabs.co/{{ $local }}-id/seo-terms">SEO Terms</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="https://cmlabs.co/{{ $local }}-id/seo-guidelines">SEO Guidelines</a>                            
+                            <a class="dropdown-item" href="https://cmlabs.co/{{ $local }}-id/seo-guidelines">SEO Guidelines</a>
+                            @if ($local == "id")         
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="https://cmlabs.co/{{ $local }}-id/ebook">cmlabs E-Book</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="https://cmlabs.co/{{ $local }}-id/event">cmlabs Event</a>
+                            @endif
                         </div>
                     </li>
                     <li class="nav-item dropdown ml-9">
@@ -34,17 +40,21 @@
                             </div>
                         </a>
                         <div class="dropdown-menu">
-                            {{-- <a class="dropdown-item" href="https://cmlabs.co/{{ $local }}-id/pricing/serp-tracker">@lang('layout.nav-pricing-serp')</a>
-                            <div class="dropdown-divider"></div> --}}
-                            <a class="dropdown-item" href="https://cmlabs.co/{{ $local }}-id/pricing/seo-consultant">@lang('layout.nav-pricing-seo')</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="https://cmlabs.co/{{ $local }}-id/pricing/content-writing">@lang('layout.nav-pricing-writing')</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="https://cmlabs.co/{{ $local }}-id/pricing/content-marketing">@lang('layout.nav-pricing-marketing')</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="https://cmlabs.co/{{ $local }}-id/pricing/backlink">@lang('layout.nav-pricing-backlink')</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="https://cmlabs.co/{{ $local }}-id/pricing/backlink-media-nasional">@lang('layout.nav-pricing-backlink-media-nasional')</a>
+                            @if ($local == "en")
+                                <a class="dropdown-item" href="https://cmlabs.co/{{ $local }}-id/pricing/seo-services">@lang('layout.nav-pricing-seo')</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="https://cmlabs.co/{{ $local }}-id/pricing/content-writing">@lang('layout.nav-pricing-writing')</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="https://cmlabs.co/{{ $local }}-id/pricing/media-buying">@lang('layout.nav-pricing-media-buying')</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="https://cmlabs.co/{{ $local }}-id/pricing/political-campaign">@lang('layout.nav-pricing-marketing')</a>
+                            @else
+                                <a class="dropdown-item" href="https://cmlabs.co/{{ $local }}-id/pricing/jasa-seo">@lang('layout.nav-pricing-seo')</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="https://cmlabs.co/{{ $local }}-id/pricing/content-writing">@lang('layout.nav-pricing-writing')</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="https://cmlabs.co/{{ $local }}-id/pricing/media-buying">@lang('layout.nav-pricing-media-buying')</a>
+                            @endif
                         </div>
                     </li>
                     <li class="nav-item dropdown ml-9">
