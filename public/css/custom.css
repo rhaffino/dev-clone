@@ -175,10 +175,17 @@ a:hover {
 .custom-header, .custom-header-mobile {
     left: 0 !important;
     transition: top 0.3s;
+    height: fit-content !important;
+    padding: 12px 0;
 }
 
-.custom-header, .brand-header {
+.custom-header {
     border-bottom: 0.5px solid #cfcfcf;
+}
+
+.back-to-cmlabs{
+    color: #A8AAAF;
+    font-size: 13px;
 }
 
 .custom-subheader {
@@ -224,6 +231,12 @@ a:hover {
 
 .title-logo-1 {
     color: var(--primaryblue);
+}
+
+.title-logo-name {
+    color: #92959C;
+    font-size: 20px;
+    font-weight: 500;
 }
 
 .title-logo-2 {

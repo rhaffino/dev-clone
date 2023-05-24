@@ -452,10 +452,10 @@ window.onscroll = function() {
         // $('#subheader_logo_mobile').addClass('d-none');
 
         document.getElementById('kt_header').style.top = "0";
-        document.getElementById('kt_subheader').style.top = "64px";
+        document.getElementById('kt_subheader').style.top = "90px";
         $('#subheader_logo').addClass('d-none');
     } else {
-        document.getElementById('kt_header').style.top = "-64px";
+        document.getElementById('kt_header').style.top = "-90px";
         document.getElementById('kt_subheader').style.top = "0";
         $('#subheader_logo').removeClass('d-none');
 
