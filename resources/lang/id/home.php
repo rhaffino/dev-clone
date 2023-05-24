@@ -6,6 +6,7 @@ return [
     "lang" => "id",
     "title" => "SEO Tool Gratis oleh CMLABS",
     "sub-title" => "Permudah praktik SEO dan tingkatkan performa website dengan banyak tool di satu tempat. Optimalkan SERP Anda sekarang!",
+    "back_to" => "Kembali ke cmlabs.co",
     "word-counter-desc" => "Tak hanya untuk menghitung jumlah kata, paragraf, dan waktu baca, tool ini memiliki fitur untuk melihat keyword density. Gunakan Word Counter dan tingkatkan skill menulis Anda.",
     "meta-checker-desc" => "Panjang meta judul dan deskripsi haruslah ideal agar tidak terpotong di Search Engine. Gunakan tool Page Title and Meta Lengths Checker untuk mengetahui pratinjau tampilan meta.",
     "json-ld-desc" => "JSON LD Generator adalah tool yang membantu Anda menghasilkan skrip markup untuk menampilkan skema pada artikel yang relevan. Cek dan sesuaikan jenisnya dengan artikel Anda.",

@@ -10,8 +10,15 @@
                         <span class="h4 title-logo-2 font-weight-light my-2 mt-2 d-none" id="asidemobile_webmaster_title">@lang('layout.web-master')</span>
                     </a>
                 </div>
-            </div>
+            </div>            
             <div class="row border-bottom pt-5 pb-5">
+                <a class="fz-13 back-to-cmlabs text-dark-30 pl-4" href="https://cmlabs.co/{{ $local }}-id/">
+                    <span class="text-dark-20">
+                        {{ __('home.back_to') }}
+                    </span>
+                </a>
+            </div>
+            <div class="row border-bottom pt-5 pb-5">                
                 <div class="col-12 d-flex justify-content-start align-items-center">
                     <div class="dropdown dropdown-inline">
                         <button type="button" class="btn font-weight-bold button-language-mobile dropdown-toggle pl-0 pr-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

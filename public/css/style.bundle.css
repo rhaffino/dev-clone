@@ -62066,7 +62066,7 @@ body {
   .header-fixed.subheader-fixed .subheader {
     position: fixed;
     height: 54px;
-    top: 65px;
+    top: 90px;
     left: 0;
     right: 0;
     -webkit-transition: top 0.3s ease;
@@ -62078,7 +62078,7 @@ body {
     border-top: 1px solid #EBEDF3;
     margin: 0; }
   .header-fixed.header-minimize.subheader-fixed .subheader {
-    top: 65px;
+    top: 90px;
     -webkit-transition: top 0.3s ease;
     transition: top 0.3s ease; }
   .aside-enabled.subheader-fixed .subheader {
