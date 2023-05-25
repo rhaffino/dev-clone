@@ -16,7 +16,7 @@
                         <img alt="Logo"
                             src="https://cmlabs-co.s3.ap-southeast-1.amazonaws.com/email/logo-cmlabs.png"
                             class="max-h-45px" />
-                        <span class="h2 title-logo-name ml-2 mt-3">Tools</span>
+                        <span class="h2 title-logo-name ml-2 mt-3">SEO Tools</span>
                     </a>
                 </div>
                 <ul class="nav custom-nav nav-header">
