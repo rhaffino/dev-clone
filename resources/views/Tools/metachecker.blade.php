@@ -470,7 +470,7 @@
                         <label class="checkbox checkbox-disabled checkbox-features features-disabled mb-1"><input type="checkbox" disabled="disabled" name="Checkboxes14" /><span></span>&nbsp;&nbsp;<bdi>Daily domain ranking on SERP. Version 0.1</bdi></label>
                     </div>
                     --}}
-            <h2 class="text-black">@lang('layout.whats-new-title') <span>@lang('metachecker.title')</span></h2>
+            {{--<h2 class="text-black">@lang('layout.whats-new-title') <span>@lang('metachecker.title')</span></h2>
             <div class="row my-5">
                 <div class="col-md-6 mb-5">
                     <div class="alert alert-custom alert-features-new fade show card card-custom card-stretch"
@@ -506,7 +506,7 @@
                         <span class="alert-features-text">@lang('metachecker.whats-new-2')</span>
                     </div>
                 </div>
-            </div>
+            </div>--}}
             {{--
                     <p class="text-black view-all-release">@lang('layout.view-web-release')</p>
                     --}}
@@ -535,7 +535,7 @@
 }
 </script>
 <script>
-    const META_CHECKER_URL = '{{route('api.analyze-meta')}}'
+    const META_CHECKER_URL = "{{route('api.analyze-meta')}}"
 </script>
 <script src="{{asset('js/logic/predifine-localstorage.js')}}"></script>
 <script src="{{asset('js/logic/metachecker.js')}}"></script>

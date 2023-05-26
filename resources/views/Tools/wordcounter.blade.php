@@ -54,7 +54,7 @@
 										<span>
 											<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                                                  viewBox="0 0 24 24"
-                                                 style="fill:rgba(0, 0, 0, 1);transform:;-ms-filter:">
+                                                 style="fill:rgba(0, 0, 0, 1);">
 												<path
                                                     d="M5 12L3 12 3 21 12 21 12 19 5 19zM12 5L19 5 19 12 21 12 21 3 12 3z"
                                                     style="fill:white"></path>
@@ -434,7 +434,7 @@
                 </div>
             </div>
             --}}
-            <h2 class="text-black">@lang('layout.whats-new-title') <span>@lang('wordcounter.title')</span></h2>
+            {{--<h2 class="text-black">@lang('layout.whats-new-title') <span>@lang('wordcounter.title')</span></h2>
             <div class="row my-5">
                 <div class="col-md-6 mb-5">
                     <div class="alert alert-custom alert-features-new fade show card card-custom card-stretch"
@@ -470,7 +470,7 @@
                         <span class="alert-features-text">@lang('wordcounter.whats-new-2')</span>
                     </div>
                 </div>
-            </div>
+            </div>--}}
             {{--
             <p class="text-black view-all-release">@lang('layout.view-web-release')</p>
             --}}

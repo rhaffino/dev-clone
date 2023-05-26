@@ -478,7 +478,7 @@ id/json-ld-recipe-schema-generator
         <label class="checkbox checkbox-disabled checkbox-features features-disabled mb-1"><input type="checkbox" disabled="disabled" name="Checkboxes14" /><span></span>&nbsp;&nbsp;<bdi>Daily domain ranking on SERP. Version 0.1</bdi></label>
       </div>
     </div> --}}
-        <h2 class="text-black">@lang('layout.whats-new-title') @lang('recipe.title')</h2>
+        {{--<h2 class="text-black">@lang('layout.whats-new-title') @lang('recipe.title')</h2>
         <div class="row my-5">
             <div class="col-md-6 mb-5">
                 <div class="alert alert-custom alert-features-new fade show card card-custom card-stretch" role="alert" style="background: var(--lightgrey); display:block">
@@ -510,7 +510,7 @@ id/json-ld-recipe-schema-generator
                     <span class="alert-features-text">@lang('recipe.whats-new-2')</span>
                 </div>
             </div>
-        </div>
+        </div>--}}
         {{-- <p class="text-black view-all-release">@lang('layout.view-web-release')</p> --}}
     </div>
 </div>
