@@ -544,7 +544,7 @@ id/pagespeed-test
             </div>
         </div>
         --}}
-        <h2 class="text-black">@lang('layout.whats-new-title') @lang('pagespeed.title')</h2>
+        {{--<h2 class="text-black">@lang('layout.whats-new-title') @lang('pagespeed.title')</h2>
         <div class="row my-5">
             <div class="col-md-6 mb-5">
                 <div class="alert alert-custom alert-features-new fade show card card-custom card-stretch" role="alert" style="background: var(--lightgrey); display:block">
@@ -576,7 +576,7 @@ id/pagespeed-test
                     <span class="alert-features-text">@lang('pagespeed.whats-new-2')</span>
                 </div>
             </div>
-        </div>
+        </div>--}}
         {{--
         <p class="text-black view-all-release">@lang('layout.view-web-release')</p>
         --}}

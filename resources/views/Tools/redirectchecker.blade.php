@@ -344,7 +344,7 @@ id/redirect-checker
             </div>
         </div>
         --}}
-        <h2 class="text-black">@lang('layout.whats-new-title') @lang('redirectchecker.title')</h2>
+        {{--<h2 class="text-black">@lang('layout.whats-new-title') @lang('redirectchecker.title')</h2>
         <div class="row my-5">
             <div class="col-md-6 mb-5">
                 <div class="alert alert-custom alert-features-new fade show card card-custom card-stretch" role="alert" style="background: var(--lightgrey); display:block">
@@ -376,7 +376,7 @@ id/redirect-checker
                     <span class="alert-features-text">@lang('redirectchecker.whats-new-2')</span>
                 </div>
             </div>
-        </div>
+        </div>--}}
         {{--
         <p class="text-black view-all-release">@lang('layout.view-web-release')</p>
         --}}
@@ -386,7 +386,7 @@ id/redirect-checker
 @endsection
 @push('script')
 <script>
-    const REDIRECT_CHAIN_CHECKER_API_URL = '{{ route('api.analyze-redirect-chain') }}';
+    const REDIRECT_CHAIN_CHECKER_API_URL = "{{ route('api.analyze-redirect-chain') }}";
     $('#toggle_button_webmaster').click();
 
     $('a[href*="#redirect-description"]:not([href="#"])').click(function() {

@@ -221,7 +221,7 @@ a:hover {
     }
 
     .custom-aside-menu {
-        height: calc(102vh - (220px + 2rem + 20px)) !important;
+        height: calc(100vh - (220px + 2rem + 20px)) !important;
     }
 
     .aside-overlay {
@@ -240,7 +240,7 @@ a:hover {
 }
 
 .title-logo-2 {
-    color: var(--grey);
+    color: var(--darkgrey);
 }
 
 .button-language, .button-language>span>i, .button-language-mobile, .button-language-mobile>span>i {
@@ -880,7 +880,7 @@ a:hover {
 
 .robo-img {
     height: 100%;
-    width: 60%;
+    width: 100%;
     vertical-align: middle;
 }
 
@@ -898,7 +898,7 @@ a:hover {
 
 @media (min-width: 576px) and (max-width: 767px) {
     .robo-img {
-        width: 40%;
+        width: 100%;
         vertical-align: middle;
     }
 
@@ -911,7 +911,6 @@ a:hover {
 @media (min-width: 768px) {
     .robo-container {
         display: flex;
-        justify-content: flex-end;
         vertical-align: middle;
     }
 }
@@ -2588,4 +2587,46 @@ input.input-url-meta-checker:focus {
     text-decoration: none;
     color: inherit;
     font-weight: bold;
+}
+
+.btn-cmlabs-login {
+    background-color: #f9f9f9;
+    border: 1px solid #f9f9f9;
+    color: var(--black);
+    font-weight: 700;
+    padding: 8px 10px;
+}
+
+.btn-cmlabs-login:hover {
+    background-color: transparent;
+    color: var(--primaryblue);
+    padding: 8px 10px;
+}
+
+.btn-cmlabs-consult {
+    background-color: var(--primaryblue);
+    border: 1px solid var(--primaryblue);
+    color: var(--white);
+    font-weight: 700;
+    padding: 8px 10px;
+}
+
+.btn-cmlabs-consult:hover {
+    color: var(--white) !important;
+    padding: 8px 10px;
+}
+
+.btn-cmlabs-consult.mobile {
+    padding: 4px 6px !important;
+}
+
+.header-mobile-title {
+    color: var(--darkgrey) !important;
+    font-weight: 400 !important;
+}
+
+.btn-cmlabs-back {
+    color: var(--darkgrey) !important;
+    font-weight: 700;
+    padding: 0 !important;
 }

@@ -5,9 +5,9 @@
                 <div class="col-12 d-flex justify-content-start align-items-center">
                     <a href="https://cmlabs.co/{{ $local }}-id" class="brand-logo d-flex align-items-center">
                         <img alt="Logo" src="{{ asset('media/logos/new/new-logo-default.png') }}" height="30px" width="30px" />
-                        <span class="h4 title-logo-1 font-weight-bold ml-3 my-2 mt-2">@lang('layout.title')</span>&nbsp;&nbsp;
-                        <span class="h4 title-logo-2 font-weight-light my-2 mt-2" id="asidemobile_writer_title">@lang('layout.writers')</span>
-                        <span class="h4 title-logo-2 font-weight-light my-2 mt-2 d-none" id="asidemobile_webmaster_title">@lang('layout.web-master')</span>
+                        <span class="h4 title-logo-1 font-weight-bold ml-3 my-2 mt-2">cmlabs</span>&nbsp;&nbsp;
+                        <span class="h4 title-logo-2 font-weight-light my-2 mt-2" id="asidemobile_writer_title">SEO Tools</span>
+                        {{--<span class="h4 title-logo-2 font-weight-light my-2 mt-2 d-none" id="asidemobile_webmaster_title">@lang('layout.web-master')</span>--}}
                     </a>
                 </div>
             </div>            
@@ -221,6 +221,15 @@
                     </a>
                 </li>
             </ul>
+        </div>
+        <div class="aside-footer d-flex flex-column flex-column-auto">
+            <div class="container-fluid">
+                <div class="row border-top p-5">
+                    <div class="col-12 text-center">
+                        <a href="{{ env('MAIN_URL', 'https://cmlabs.co') }}/{{ App::isLocale('id') ? 'id-id' : 'en' }}/login/?logged_target={{ request()->url() }}" class="btn btn-block btn-cmlabs-login mr-3">@lang('layout.button-login')</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

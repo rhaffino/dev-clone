@@ -387,7 +387,7 @@ id/link-analyzer
             </div>
         </div>
         --}}
-        <h2 class="text-black">@lang('layout.whats-new-title') @lang('analyzer.title')</h2>
+        {{--<h2 class="text-black">@lang('layout.whats-new-title') @lang('analyzer.title')</h2>
         <div class="row my-5">
             <div class="col-md-6 mb-5">
                 <div class="alert alert-custom alert-features-new fade show card card-custom card-stretch" role="alert" style="background: var(--lightgrey); display:block">
@@ -419,7 +419,7 @@ id/link-analyzer
                     <span class="alert-features-text">@lang('analyzer.whats-new-2')</span>
                 </div>
             </div>
-        </div>
+        </div>--}}
         {{--
         <p class="text-black view-all-release">@lang('layout.view-web-release')</p>
         --}}
@@ -429,7 +429,7 @@ id/link-analyzer
 @push('script')
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.bundle.min.js" integrity="sha512-SuxO9djzjML6b9w9/I07IWnLnQhgyYVSpHZx0JV97kGBfTIsUYlWflyuW4ypnvhBrslz1yJ3R+S14fdCWmSmSA==" crossorigin="anonymous"></script>
 <script>
-    const LINK_ANALYZER_API_URL = '{{ route('api.analyze-link') }}';
+    const LINK_ANALYZER_API_URL = "{{ route('api.analyze-link') }}";
     $('#toggle_button_webmaster').click();
     $('.links').click(function() {
         var offset = -80;
