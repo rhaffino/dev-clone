@@ -24,6 +24,7 @@ class EnsureUrlIsValid
                 session()->put("logged_in", "false");
             }
             session()->put("logged_in", "true");
+            return redirect()->to(url()->current().http_build_query($request->except("token")));
         }
         if (!in_array($request->segment(1), ['id', 'en'])) {
             $segment1 = "en";
