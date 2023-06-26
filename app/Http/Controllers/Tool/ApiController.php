@@ -182,22 +182,24 @@ class ApiController extends Controller
 
     public function accessLimit(Request $request)
     {
-        $access_count = session()->has('access_count') ? session()->get('access_count') : 0;
-        $access_count += 1;
-        session()->put('access_count', $access_count);
-
-        $access_limit = $access_count > 5 ? 1 : 0;
-
-        $message = $access_limit ? Lang::get("alert.alert-limit") : 'recorded';
-
-        $data = [
-            'count' => $access_count,
-            'limit' => $access_limit,
-            'message' => $message,
-            'logged_target' => (env('MAIN_URL', 'https://cmlabs.co') . '/' . (App::isLocale('id') ? 'id-id' : 'en')) . '?logged_target=' . ($request->logged_target ? $request->logged_target : '')
-        ];
-
-        //return success response
-        return new BaseApiResource($data, $message, 200);
+        if (Auth::guest()) {
+            $access_count = session()->has('access_count') ? session()->get('access_count') : 0;
+            $access_count += 1;
+            session()->put('access_count', $access_count);
+    
+            $access_limit = $access_count > 5 ? 1 : 0;
+    
+            $message = $access_limit ? Lang::get("alert.alert-limit") : 'recorded';
+    
+            $data = [
+                'count' => $access_count,
+                'limit' => $access_limit,
+                'message' => $message,
+                'logged_target' => (url('/' . (App::isLocale('id') ? 'id' : 'en') . '/login'))
+            ];
+    
+            //return success response
+            return new BaseApiResource($data, $message, 200);
+        }
     }
 }

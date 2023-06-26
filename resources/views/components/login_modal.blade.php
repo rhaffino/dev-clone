@@ -27,7 +27,7 @@
                 <div class="row justify-content-end">
                     <div class="col-sm-5">
                         <a
-                            href="{{ env('MAIN_URL', 'https://cmlabs.co') }}/{{ App::isLocale('id') ? 'id-id' : 'en' }}/login/?logged_target={{ request()->url() }}"
+                            href="{{url('/' . (App::isLocale('id') ? 'id' : 'en') . '/login')}}"
                             class="btn btn-primary btn-sm btn-block font-weight-bolder"
                         >
                             Continue

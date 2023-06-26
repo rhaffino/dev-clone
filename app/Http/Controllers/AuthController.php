@@ -45,8 +45,10 @@ class AuthController extends Controller
      */
     public function logout(Request $request)
     {
-        if (Auth::check())
+        if (Auth::check()) {
             Auth::logout();
+            session()->forget('logged_in');
+        }
             
         return redirect('/');
     }
@@ -125,6 +127,7 @@ class AuthController extends Controller
 
             // process auth
             $auth =  Auth::loginUsingId($getUser->id);
+            session(['logged_in' => 'true']);
             
             // jika authentikasi ditolak
             if (!$auth)

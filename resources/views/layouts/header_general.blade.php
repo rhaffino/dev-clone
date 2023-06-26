@@ -109,14 +109,14 @@
                 </div>
                 {{-- 
                     @if (session('logged_in') == 'false' || session('logged_in') === null)
-                        <a href="{{ env('MAIN_URL', 'https://cmlabs.co') }}/{{ App::isLocale('id') ? 'id-id' : 'en' }}/login/?logged_target={{ request()->url() }}" class="btn btn-cmlabs-login mr-3">@lang('layout.button-login')</a>
+                        <a href="{{url('/' . (App::isLocale('id') ? 'id' : 'en') . '/login')}}" class="btn btn-cmlabs-login mr-3">@lang('layout.button-login')</a>
                     @endif
                 --}}
                 @auth
-                    <a href="{{url('/en/logout')}}" class="btn btn-cmlabs-login mr-3">@lang('layout.button-logout')</a>
+                    <a href="{{url('/' . (App::isLocale('id') ? 'id' : 'en') . '/logout')}}" class="btn btn-cmlabs-login mr-3">@lang('layout.button-logout')</a>
                 @endauth
                 @guest
-                    <a href="{{url('/en/login')}}" class="btn btn-cmlabs-login mr-3">@lang('layout.button-login')</a>
+                    <a href="{{url('/' . (App::isLocale('id') ? 'id' : 'en') . '/login')}}" class="btn btn-cmlabs-login mr-3">@lang('layout.button-login')</a>
                 @endguest
                 <a href="https://cmlabs.co/{{$local}}-id/company/contact" class="btn btn-cmlabs-consult">@lang('layout.button-consult')</a>
             </div>
