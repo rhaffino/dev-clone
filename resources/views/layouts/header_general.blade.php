@@ -109,7 +109,7 @@
                 </div>
                 {{-- 
                     @if (session('logged_in') == 'false' || session('logged_in') === null)
-                        <a href="{{ env('MAIN_URL', 'https://cmlabs.co') }}/{{ App::isLocale('id') ? 'id-id' : 'en' }}/login/?logged_target={{ request()->url() }}" class="btn btn-cmlabs-login mr-3">@lang('layout.button-login')</a>
+                        <a href="{{url('/' . (App::isLocale('id') ? 'id' : 'en') . '/login/google')}}" class="btn btn-cmlabs-login mr-3">@lang('layout.button-login')</a>
                     @endif
                 --}}
                 @auth
