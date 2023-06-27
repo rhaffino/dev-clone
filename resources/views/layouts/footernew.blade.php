@@ -1,12 +1,12 @@
 <section id="footer" class="custom-footer-new">
     <div class="container container-footer-new">
         <div class="row">
-            <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+            {{--<div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
                 <div class="h3 text-custom-grey font-weight-bolder mb-5">@lang('layout.footer-office-title')</div>
             </div>
-            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12"></div>
+            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12"></div>--}}
             <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
-                <div class="card card-custom card-footer-office mb-4">
+                {{--<div class="card card-custom card-footer-office mb-4">
                     <div class="card-body px-10 py-7">
                         <div class="office-footer d-flex flex-wrap w-100">
                             <div class="office-detail">
@@ -33,7 +33,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>--}}
                 <div class="h3 text-custom-grey font-weight-bolder mb-5">@lang('layout.footer-company-title')</div>
                 <div class="d-flex flex-wrap mb-10">
                     <!-- <a href="https://cmlabs.co/{{ $local }}-id/pricing/serp-tracker" class="mb-2">
@@ -89,7 +89,7 @@
                             <div class="card-body d-flex flex-wrap align-items-center w-100 p-3">
                                 <div class="footer-resource-icon d-flex align-items-center">
                                     <i class="bx bxs-help-circle icon-lg mr-2"></i>
-                                    <span class="h6 font-weight-normal mb-0">13</span>
+                                    <span class="h6 font-weight-normal mb-0">50+</span>
                                 </div>
                                 <div class="h6 footer-resource-text font-weight-normal mb-0">@lang('layout.footer-resource-link-1')</div>
                             </div>
@@ -100,7 +100,7 @@
                             <div class="card-body d-flex flex-wrap align-items-center w-100 p-3">
                                 <div class="footer-resource-icon d-flex align-items-center">
                                     <i class="bx bxs-book icon-lg mr-2"></i>
-                                    <span class="h6 font-weight-normal mb-0">150</span>
+                                    <span class="h6 font-weight-normal mb-0">150+</span>
                                 </div>
                                 <div class="h6 footer-resource-text font-weight-normal mb-0">@lang('layout.footer-resource-link-2')</div>
                             </div>
@@ -111,13 +111,13 @@
                             <div class="card-body d-flex flex-wrap align-items-center w-100 p-3">
                                 <div class="footer-resource-icon d-flex align-items-center">
                                     <i class="bx bxs-news icon-lg mr-2"></i>
-                                    <span class="h6 font-weight-normal mb-0">45</span>
+                                    <span class="h6 font-weight-normal mb-0">50+</span>
                                 </div>
                                 <div class="h6 footer-resource-text font-weight-normal mb-0">@lang('layout.footer-resource-link-3')</div>
                             </div>
                         </div>
                     </a>
-                    <a href="https://tools.cmlabs.co">
+                    {{--<a href="https://tools.cmlabs.co">
                         <div class="card card-custom footer-resource-list mb-2">
                             <div class="card-body d-flex flex-wrap align-items-center w-100 p-3">
                                 <div class="footer-resource-icon d-flex align-items-center">
@@ -127,29 +127,18 @@
                                 <div class="h6 footer-resource-text font-weight-normal mb-0">@lang('layout.footer-resource-link-4')</div>
                             </div>
                         </div>
-                    </a>
-                    <a href="https://tools.cmlabs.co">
+                    </a>--}}
+                    {{--<a href="https://tools.cmlabs.co">
                         <div class="card card-custom footer-resource-list mb-2">
                             <div class="card-body d-flex flex-wrap align-items-center w-100 p-3">
                                 <div class="footer-resource-icon d-flex align-items-center">
                                     <i class="bx bxl-google icon-lg mr-2"></i>
-                                    <span class="h6 font-weight-normal mb-0">18</span>
+                                    <span class="h6 font-weight-normal mb-0">19</span>
                                 </div>
                                 <div class="h6 footer-resource-text font-weight-normal mb-0">@lang('layout.footer-resource-link-5')</div>
                             </div>
                         </div>
-                    </a>
-                    <!-- <a href="https://analytics.cmlabs.co/reference">
-                        <div class="card card-custom footer-resource-list">
-                            <div class="card-body d-flex flex-wrap align-items-center w-100 p-3">
-                                <div class="footer-resource-icon d-flex align-items-center">
-                                    <i class="bx bxs-book-content icon-lg mr-2"></i>
-                                    <span class="h6 font-weight-normal mb-0">11</span>
-                                </div>
-                                <div class="h6 footer-resource-text font-weight-normal mb-0">@lang('layout.footer-resource-link-6')</div>
-                            </div>
-                        </div>
-                    </a> -->
+                    </a>--}}
                 </div>
             </div>
             <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
@@ -171,7 +160,7 @@
                 {{-- <div class="h6 footer-new-link mb-4"><a href="https://cmlabs.co/{{ $local }}-id/disclaimer">@lang('layout.footer-link-3')</a></div> --}}
                 <div class="h6 footer-new-link mb-4"><a href="https://cmlabs.co/{{ $local }}-id/career">@lang('layout.footer-link-5')</a></div>
                 <div class="h6 footer-new-link mb-10"><a href="https://cmlabs.co/{{ $local }}-id/">@lang('layout.footer-link-4')</a></div>
-                <div class="h6 footer-new-copyright text-custom-grey font-weight-light">Copyright &copy;2021</div>
+                <div class="h6 footer-new-copyright text-custom-grey font-weight-light">Copyright &copy; 2019-2023<br>PT CMLABS INDONESIA DIGITAL</div>
             </div>
         </div>
     </div>

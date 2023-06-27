@@ -290,7 +290,7 @@ id/ssl-checker
             </div>
         </div>
         --}}
-        <h2 class="text-black">@lang('layout.whats-new-title') @lang('sslchecker.title')</h2>
+        {{--<h2 class="text-black">@lang('layout.whats-new-title') @lang('sslchecker.title')</h2>
         <div class="row my-5">
             <div class="col-md-6 mb-5">
                 <div class="alert alert-custom alert-features-new fade show card card-custom card-stretch" role="alert" style="background: var(--lightgrey); display:block">
@@ -322,7 +322,7 @@ id/ssl-checker
                     <span class="alert-features-text">@lang('sslchecker.whats-new-2')</span>
                 </div>
             </div>
-        </div>
+        </div>--}}
         {{--
         <p class="text-black view-all-release">@lang('layout.view-web-release')</p>
         --}}
@@ -417,7 +417,7 @@ id/ssl-checker
                                     <div class="row justify-content-end">
                                         <div class="col-sm-5">
                                             <a
-                                                href="{{ env('MAIN_URL', 'https://cmlabs.co') }}/{{ App::isLocale('id') ? 'id-id' : 'en' }}/login/?logged_target={{ request()->url() }}"
+                                                href="{{url('/' . (App::isLocale('id') ? 'id' : 'en') . '/login/google')}}"
                                                 class="btn btn-primary btn-sm btn-block font-weight-bolder"
                                             >
                                                 Continue
@@ -440,7 +440,7 @@ id/ssl-checker
                     <div class=" d-flex align-items-center mr-2" style="color: #C29C13;">
                         <i class="icon pr-2 bx bxs-error-circle bx-sm"  style="color: #C29C13;"></i> @lang('alert.alert-limit')
                     </div>
-                        <a href="{{ env('MAIN_URL', 'https://cmlabs.co') }}/{{ App::isLocale('id') ? 'id-id' : 'en' }}/login/?logged_target={{ request()->url() }}" style="color: #C29C13; font-weight: 700;">Login</a>
+                        <a href="{{url('/' . (App::isLocale('id') ? 'id' : 'en') . '/login/google')}}" style="color: #C29C13; font-weight: 700;">Login</a>
                     </div>`
                     $(function(){
                         $('#login-modal').modal('show');

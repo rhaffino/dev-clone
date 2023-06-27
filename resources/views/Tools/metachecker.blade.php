@@ -181,7 +181,6 @@
                                 <div class="card-body px-0">
                                     <div class="d-flex flex-column px-10 py-3">
                                         <div class="link-meta d-flex flex-row align-items-center mb-2">
-                                            <strong class="mr-2">Ad</strong>
                                             <span>career.cmlabs.co<i class='bx bx-caret-down ml-1'
                                                                      style="color: #4D5156; vertical-align: text-bottom;"></i></span>
                                         </div>
@@ -192,20 +191,6 @@
                                             cmlabs opens opportunities for those of you who want to join our team. Find
                                             information about job vacancies, internal programs, and other collaborations
                                             at career cmlabs.
-                                        </div>
-                                    </div>
-                                    <div class="d-flex flex-column px-10 py-3">
-                                        <div class="link-meta d-flex flex-row align-items-center mb-2">
-                                            <span>analytics.cmlabs.co › en › member › dashboard<i
-                                                    class='bx bx-caret-down ml-1'
-                                                    style="color: #4D5156; vertical-align: text-bottom;"></i></span>
-                                        </div>
-                                        <div class="title-meta mb-2">
-                                            cmlabs Analytics, Search/SERPs Tracking
-                                        </div>
-                                        <div class="desc-meta">
-                                            Dec 2, 2020 — CMLABS Analytics is designed to work seamlessly with important
-                                            Google solutions and partner products (eg. Keyword Planner for Search ...
                                         </div>
                                     </div>
                                     <div class="d-flex flex-column px-10 py-3 bg-color-lightyellow">
@@ -257,7 +242,6 @@
                                 <div class="card-body px-0">
                                     <div class="d-flex flex-column px-10 py-3">
                                         <div class="link-meta d-flex align-items-center mb-2">
-                                            <strong class="mr-2">Ad</strong>
                                             <span>career.cmlabs.co<i class='bx bx-caret-down ml-1'
                                                                      style="color: #4D5156; vertical-align: text-bottom;"></i></span>
                                         </div>
@@ -268,20 +252,6 @@
                                             cmlabs opens opportunities for those of you who want to join our team. Find
                                             information about job vacancies, internal programs, and other collaborations
                                             at career cmlabs.
-                                        </div>
-                                    </div>
-                                    <div class="d-flex flex-column px-10 py-3">
-                                        <div class="link-meta d-flex flex-row align-items-center mb-2">
-                                            <span>analytics.cmlabs.co › en › member › dashboard<i
-                                                    class='bx bx-caret-down ml-1'
-                                                    style="color: #4D5156; vertical-align: text-bottom;"></i></span>
-                                        </div>
-                                        <div class="title-meta mb-2">
-                                            cmlabs Analytics, Search/SERPs Tracking
-                                        </div>
-                                        <div class="desc-meta">
-                                            Dec 2, 2020 — CMLABS Analytics is designed to work seamlessly with important
-                                            Google solutions and partner products (eg. Keyword Planner for Search ...
                                         </div>
                                     </div>
                                     <div class="d-flex flex-column px-10 py-3 bg-color-lightyellow">
@@ -500,7 +470,7 @@
                         <label class="checkbox checkbox-disabled checkbox-features features-disabled mb-1"><input type="checkbox" disabled="disabled" name="Checkboxes14" /><span></span>&nbsp;&nbsp;<bdi>Daily domain ranking on SERP. Version 0.1</bdi></label>
                     </div>
                     --}}
-            <h2 class="text-black">@lang('layout.whats-new-title') <span>@lang('metachecker.title')</span></h2>
+            {{--<h2 class="text-black">@lang('layout.whats-new-title') <span>@lang('metachecker.title')</span></h2>
             <div class="row my-5">
                 <div class="col-md-6 mb-5">
                     <div class="alert alert-custom alert-features-new fade show card card-custom card-stretch"
@@ -536,7 +506,7 @@
                         <span class="alert-features-text">@lang('metachecker.whats-new-2')</span>
                     </div>
                 </div>
-            </div>
+            </div>--}}
             {{--
                     <p class="text-black view-all-release">@lang('layout.view-web-release')</p>
                     --}}
@@ -565,7 +535,7 @@
 }
 </script>
 <script>
-    const META_CHECKER_URL = '{{route('api.analyze-meta')}}'
+    const META_CHECKER_URL = "{{route('api.analyze-meta')}}"
 </script>
 <script src="{{asset('js/logic/predifine-localstorage.js')}}"></script>
 <script src="{{asset('js/logic/metachecker.js')}}"></script>
@@ -622,7 +592,7 @@
                                     <div class="row justify-content-end">
                                         <div class="col-sm-5">
                                             <a
-                                                href="{{ env('MAIN_URL', 'https://cmlabs.co') }}/{{ App::isLocale('id') ? 'id-id' : 'en' }}/login/?logged_target={{ request()->url() }}"
+                                                href="{{url('/' . (App::isLocale('id') ? 'id' : 'en') . '/login/google')}}"
                                                 class="btn btn-primary btn-sm btn-block font-weight-bolder"
                                             >
                                                 Continue
@@ -645,7 +615,7 @@
                     <div class=" d-flex align-items-center mr-2" style="color: #C29C13;">
                         <i class="icon pr-2 bx bxs-error-circle bx-sm"  style="color: #C29C13;"></i> @lang('alert.alert-limit')
                     </div>
-                        <a href="{{ env('MAIN_URL', 'https://cmlabs.co') }}/{{ App::isLocale('id') ? 'id-id' : 'en' }}/login/?logged_target={{ request()->url() }}" style="color: #C29C13; font-weight: 700;">Login</a>
+                        <a href="{{url('/' . (App::isLocale('id') ? 'id' : 'en') . '/login/google')}}" style="color: #C29C13; font-weight: 700;">Login</a>
                     </div>`
                     $(function(){
                         $('#login-modal').modal('show');
