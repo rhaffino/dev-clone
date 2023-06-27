@@ -87,5 +87,6 @@ return [
     "nav-pricing-media-buying" => "Media Buying",
     "nav-pricing-political" => "Political Campaign",
     "button-login" => "Masuk",
+    "button-logout" => "Keluar",
     "button-consult" => "Konsultasikan dengan kami"
 ];
