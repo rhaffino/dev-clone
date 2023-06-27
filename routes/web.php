@@ -36,12 +36,6 @@ Route::middleware([ManualAuth::class])->group(function (){
 
     Route::middleware([EnsureUrlIsValid::class])->group(function (){
         Route::get('/{lang}','HomeController@index');
-        // login
-        Route::group(['as' => 'auth.'], function () {
-            Route::get('/{lang}/login/google','AuthController@googleLogin')->name('login.google');
-            Route::get('/{lang}/login/google/callback','AuthController@googleCallback')->name('login.google.callback');
-            Route::get('/{lang}/logout','AuthController@logout');
-        });
         Route::get('/{lang}/strikethrough', 'ToolsController@strikethrough');
         Route::get('/{lang}/json-ld-schema-generator', 'ToolsController@jsonld');
         Route::get('/{lang}/json-ld-faq-schema-generator', 'ToolsController@FAQ');
