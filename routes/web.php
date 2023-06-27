@@ -66,6 +66,7 @@ Route::middleware([ManualAuth::class])->group(function (){
         Route::get('/{lang}/link-analyzer', 'ToolsController@linkanalyzer');
         Route::get('/{lang}/keyword-research', 'ToolsController@keywordresearch');
         Route::get('/{lang}/keyword-permutation', 'ToolsController@keywordpermutation');
+        Route::get('/{lang}/plagiarism-checker', 'ToolsController@plagiarismChecker');
     });
     Route::get('/en/version', 'ToolsController@englishVersion');
     Route::get('/id/version', 'ToolsController@indonesiaVersion');

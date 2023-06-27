@@ -65,4 +65,31 @@ trait ApiHelper
         $response = $this->request("api/meta-checker/check", 'POST', compact('url'));
         return \GuzzleHttp\json_decode($response, 1);
     }
+
+    protected function requestPlagiarismCheck($text)
+    {
+        try {
+            $data = [];
+            $apiPost = "http://www.copyscape.com/api/?u=" . env('COPYSCAPE_USERNAME') . "&k=" . env('COPYSCAPE_API_KEY') . "&o=csearch&f=json";
+            $dataPost = [
+                "e" => "UTF-8",
+                "t" => $text,
+            ];
+            $options = [];
+            $options['form_params'] = $dataPost;
+
+            $response = $this->client->request('POST', $apiPost, $options);
+            $responses = [];
+            $responses['data'] = json_decode($response->getBody()->getContents());
+            $responses['message'] = 'success';
+            $responses['statusCode'] = 200;
+            return $responses;
+        } catch (ClientException $exception) {
+            $exceptions = [];
+            $exceptions['data'] = $exception->getResponse()->getBody()->getContents();
+            $exceptions['message'] = 'failed';
+            $exceptions['statusCode'] = 500;
+            return $exceptions;
+        }
+    }
 }

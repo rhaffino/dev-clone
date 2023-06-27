@@ -312,6 +312,18 @@ class ToolsController extends Controller
         return view('Tools/keywordpermutation', compact('local', 'dataID', 'dataEN', 'is_maintenance'));
     }
 
+    public function plagiarismChecker($lang)
+    {
+        App::setLocale($lang);
+        $dataID = $this->HomeController->getBlogWordpressId();
+        $dataEN = $this->HomeController->getBlogWordpressEn();
+        $local = App::getLocale();
+
+        $is_maintenance = in_array('plagiarism-checker', explode(',', env('TOOLS_MAINTENANCE'))) && env('APP_ENV') === 'production';
+
+        return view('Tools/plagiarism-checker', compact('local', 'dataID', 'dataEN', 'is_maintenance'));
+    }
+
     public function englishVersion()
     {
         $previous = url()->previous();

@@ -23,3 +23,4 @@ Route::post('/analyze-link', 'Tool\ApiController@analyzeLink')->name('api.analyz
 Route::post('/analyze-redirect-chain', 'Tool\ApiController@analyzeRedirectChain')->name('api.analyze-redirect-chain');
 Route::post('/analyze-ssl', 'Tool\ApiController@analyzeSsl')->name('api.analyze-ssl');
 Route::post('/analyze-meta', 'Tool\ApiController@analyzeMeta')->name('api.analyze-meta');
+Route::post('/plagiarism-check', 'Tool\ApiController@plagiarismCheck')->name('api.plagiarism-check');

@@ -14,7 +14,6 @@ use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Redis;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Validator;
-use Illuminate\Support\Facades\Http;
 use Mockery\Exception;
 
 class ApiController extends Controller
@@ -201,18 +200,6 @@ class ApiController extends Controller
     
             //return success response
             return new BaseApiResource($data, $message, 200);
-        }
-    }
-
-    public function plagiarismCheck(Request $request)
-    {
-        $text = $request->get('text');
-
-        try {
-            $response = $this->requestPlagiarismCheck($text);
-            return new BaseApiResource($response['data'] ?? null, $response['message'], $response['statusCode']);
-        }catch (Exception $exception){
-            return new BaseApiResource($response['data'] ?? null, $response['message'], $response['statusCode']);
         }
     }
 }

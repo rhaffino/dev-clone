@@ -41,6 +41,9 @@
                     <li class="nav-item ml-7">
                         <a class="nav-link @yield('title-checker')" href="/{{ $local }}/page-title-meta-description-checker">Title and Meta Checker</a>
                     </li>
+                    <li class="nav-item ml-7">
+                        <a class="nav-link @yield('plagiarism-checker')" href="/{{ $local }}/plagiarism-checker">Plagiarism Checker</a>
+                    </li>
                 </ul>
             </div>
         </div>
