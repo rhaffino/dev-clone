@@ -196,7 +196,7 @@ a:hover {
 
 .subheader.custom-subheader-desktop {
     padding: 0px !important;
-    /* border-top: 0px !important; */
+    border-top: 0px !important;
 }
 
 @media (max-width: 991px) {
@@ -280,12 +280,12 @@ a:hover {
     color: var(--primaryblue) !important;
 }
 
-.dropdown-language.desktop {
+.dropdown-language {
     width: 140px !important;
 }
 
 .dropdown-language-mobile {
-    width: 100%;
+    width: 100px !important;
 }
 
 .slick-navbar {
@@ -347,31 +347,27 @@ a:hover {
 }
 
 .btn-custom-credit, .btn-custom-credit-1 {
-    background: #f8f9f9;
-    color: var(--black);
+    background: var(--primaryblue);
+    color: var(--white) !important;
     padding: 5px 20px !important;
-    border-radius: 4px; 
-    font-size: 13px;
+    border-radius: 50px;
     transition: .3s;
 }
 
 .btn-custom-credit:hover, .btn-custom-credit-1:hover {
-    background: #eaeaea;
-    color: var(--black) !important;
+    box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .btn-custom-login {
-    background: #ffcc16;
-    color: var(--black);
+    background: #f4f4f4;
+    color: var(--darkgrey);
     padding: 5px 20px !important;
-    border-radius: 4px; 
-    font-size: 13px;
+    border-radius: 50px;
     transition: .3s;
 }
 
 .btn-custom-login:hover {
-    background: #e7b914;
-    color: var(--black) !important;
+    box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 @media (min-width: 992px) and (max-width: 1009px) {
