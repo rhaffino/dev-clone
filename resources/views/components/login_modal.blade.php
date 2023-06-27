@@ -27,7 +27,7 @@
                 <div class="row justify-content-end">
                     <div class="col-sm-5">
                         <a
-                            href="{{url('/' . (App::isLocale('id') ? 'id' : 'en') . '/login')}}"
+                            href="{{url('/' . (App::isLocale('id') ? 'id' : 'en') . '/login/google')}}"
                             class="btn btn-primary btn-sm btn-block font-weight-bolder"
                         >
                             Continue

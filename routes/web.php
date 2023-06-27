@@ -38,7 +38,6 @@ Route::middleware([ManualAuth::class])->group(function (){
         Route::get('/{lang}','HomeController@index');
         // login
         Route::group(['as' => 'auth.'], function () {
-            Route::get('/{lang}/login','AuthController@index');
             Route::get('/{lang}/login/google','AuthController@googleLogin')->name('login.google');
             Route::get('/{lang}/login/google/callback','AuthController@googleCallback')->name('login.google.callback');
             Route::get('/{lang}/logout','AuthController@logout');

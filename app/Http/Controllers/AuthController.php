@@ -23,24 +23,6 @@ use Laravel\Socialite\Facades\Socialite;
 class AuthController extends Controller
 {
     /**
-     * GET: {base_url}/login
-     */
-    public function index(Request $request, $lang)
-    {   
-        if (Auth::check())
-            return redirect('/');
-
-        if ($request->get('logged_target'))
-            session()->put("logged_target", $request->get('logged_target'));
-        else 
-            session()->forget("logged_target");
-            
-        $data = json_decode(file_get_contents(base_path('resources/js/json/tools.json')),true);
-        $local = App::getLocale();
-        return view('login.index', compact('data','local'));
-    }
-
-    /**
      * GET: {base_url}/logout
      */
     public function logout(Request $request)

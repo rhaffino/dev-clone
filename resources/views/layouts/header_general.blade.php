@@ -109,14 +109,14 @@
                 </div>
                 {{-- 
                     @if (session('logged_in') == 'false' || session('logged_in') === null)
-                        <a href="{{url('/' . (App::isLocale('id') ? 'id' : 'en') . '/login')}}" class="btn btn-cmlabs-login mr-3">@lang('layout.button-login')</a>
+                        <a href="{{url('/' . (App::isLocale('id') ? 'id' : 'en') . '/login/google')}}" class="btn btn-cmlabs-login mr-3">@lang('layout.button-login')</a>
                     @endif
                 --}}
                 @auth
                     <a href="{{url('/' . (App::isLocale('id') ? 'id' : 'en') . '/logout')}}" class="btn btn-cmlabs-login mr-3">@lang('layout.button-logout')</a>
                 @endauth
                 @guest
-                    <a href="{{url('/' . (App::isLocale('id') ? 'id' : 'en') . '/login')}}" class="btn btn-cmlabs-login mr-3">@lang('layout.button-login')</a>
+                    <a href="{{url('/' . (App::isLocale('id') ? 'id' : 'en') . '/login/google')}}" class="btn btn-cmlabs-login mr-3">@lang('layout.button-login')</a>
                 @endguest
                 <a href="https://cmlabs.co/{{$local}}-id/company/contact" class="btn btn-cmlabs-consult">@lang('layout.button-consult')</a>
             </div>

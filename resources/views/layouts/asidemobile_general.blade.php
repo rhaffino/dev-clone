@@ -226,7 +226,7 @@
             <div class="container-fluid">
                 <div class="row border-top p-5">
                     <div class="col-12 text-center">
-                        <a href="{{url('/' . (App::isLocale('id') ? 'id' : 'en') . '/login')}}" class="btn btn-block btn-cmlabs-login mr-3">@lang('layout.button-login')</a>
+                        <a href="{{url('/' . (App::isLocale('id') ? 'id' : 'en') . '/login/google')}}" class="btn btn-block btn-cmlabs-login mr-3">@lang('layout.button-login')</a>
                     </div>
                 </div>
             </div>

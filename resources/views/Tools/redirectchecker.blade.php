@@ -490,7 +490,7 @@ id/redirect-checker
                                     <div class="row justify-content-end">
                                         <div class="col-sm-5">
                                             <a
-                                                href="{{url('/' . (App::isLocale('id') ? 'id' : 'en') . '/login')}}"
+                                                href="{{url('/' . (App::isLocale('id') ? 'id' : 'en') . '/login/google')}}"
                                                 class="btn btn-primary btn-sm btn-block font-weight-bolder"
                                             >
                                                 Continue
@@ -513,7 +513,7 @@ id/redirect-checker
                     <div class=" d-flex align-items-center mr-2" style="color: #C29C13;">
                         <i class="icon pr-2 bx bxs-error-circle bx-sm"  style="color: #C29C13;"></i> @lang('alert.alert-limit')
                     </div>
-                        <a href="{{url('/' . (App::isLocale('id') ? 'id' : 'en') . '/login')}}" style="color: #C29C13; font-weight: 700;">Login</a>
+                        <a href="{{url('/' . (App::isLocale('id') ? 'id' : 'en') . '/login/google')}}" style="color: #C29C13; font-weight: 700;">Login</a>
                     </div>`
                     $(function(){
                         $('#login-modal').modal('show');
