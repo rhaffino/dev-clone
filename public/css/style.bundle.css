@@ -59791,10 +59791,10 @@ body {
   background: #EEF0F8; }
 
 @media (min-width: 992px) {
-  /* .header-fixed .wrapper {
+  .header-fixed .wrapper {
     padding-top: 65px; }
   .header-fixed.subheader-fixed.subheader-enabled .wrapper {
-    padding-top: 119px; } */
+    padding-top: 119px; }
   .aside-fixed .wrapper {
     padding-left: 265px; }
   .aside-fixed.aside-minimize .wrapper {
@@ -62062,15 +62062,9 @@ body {
     border-top: 1px solid #EBEDF3;
     background-color: #ffffff; }
 
-@media (max-width: 1025px) {
+@media (min-width: 992px) {
   .header-fixed.subheader-fixed .subheader {
-    display: none !important;
-  }
-}    
-
-@media (min-width: 1025px) {
-  .header-fixed.subheader-fixed .subheader {
-    position: sticky;
+    position: fixed;
     height: 54px;
     top: 90px;
     left: 0;
