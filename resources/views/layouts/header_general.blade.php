@@ -96,7 +96,7 @@
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <span><i class="bx bx-world"></i>@lang('layout.language')</span>
                     </button>
-                    <div class="dropdown-menu dropdown-menu-sm dropdown-menu-right dropdown-language desktop">
+                    <div class="dropdown-menu dropdown-menu-sm dropdown-menu-right dropdown-language">
                         <ul class="navi flex-column navi-hover">
                             <li class="navi-item border-bottom">
                                 <a href="{{ url('/en/version') }}" class="navi-link">English</a>
