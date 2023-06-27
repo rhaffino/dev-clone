@@ -109,7 +109,7 @@
                 </div>
                 {{-- 
                     @if (session('logged_in') == 'false' || session('logged_in') === null)
-                        <a href="{{url('/' . (App::isLocale('id') ? 'id' : 'en') . '/login/google')}}" class="btn btn-cmlabs-login mr-3">@lang('layout.button-login')</a>
+                        <a href="{{ env('MAIN_URL', 'https://cmlabs.co') }}/{{ App::isLocale('id') ? 'id-id' : 'en' }}/login/?logged_target={{ request()->url() }}" class="btn btn-cmlabs-login mr-3">@lang('layout.button-login')</a>
                     @endif
                 --}}
                 @auth
@@ -121,12 +121,5 @@
                 <a href="https://cmlabs.co/{{$local}}-id/company/contact" class="btn btn-cmlabs-consult">@lang('layout.button-consult')</a>
             </div>
         </div>
-    </nav>
+    </div>
 </div>
-<div id="dropdownNav">
-    @include('layouts.dropdown.resource')
-    @include('layouts.dropdown.seo-tools')
-    @include('layouts.dropdown.services')
-    @include('layouts.dropdown.keyword-tracker')
-</div>
-</header>
