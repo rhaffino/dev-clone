@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Date;
 use Illuminate\Support\Facades\Queue;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Crypt;
 use App\Http\Controllers\HomeController;
 
 class ToolsController extends Controller
@@ -320,10 +321,11 @@ class ToolsController extends Controller
             $dataID = $this->HomeController->getBlogWordpressId();
             $dataEN = $this->HomeController->getBlogWordpressEn();
             $local = App::getLocale();
+            $userId = Crypt::encrypt(Auth::user()->id . '-' . time());
     
             $is_maintenance = in_array('plagiarism-checker', explode(',', env('TOOLS_MAINTENANCE'))) && env('APP_ENV') === 'production';
     
-            return view('Tools/plagiarism-checker', compact('local', 'dataID', 'dataEN', 'is_maintenance'));
+            return view('Tools/plagiarism-checker', compact('local', 'dataID', 'dataEN', 'is_maintenance', 'userId'));
         } else {
             return redirect('/');
         }

@@ -5,8 +5,10 @@ namespace App\Http\Controllers\Tool;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\BaseApiResource;
 use App\Mail\CtaMail;
+use App\Models\User;
 use Illuminate\Http\Request;
 use App\Traits\ApiHelper;
+use Illuminate\Contracts\Encryption\DecryptException;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\Facades\Lang;
@@ -15,6 +17,7 @@ use Illuminate\Support\Facades\Redis;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Crypt;
 use Mockery\Exception;
 
 class ApiController extends Controller
@@ -206,11 +209,18 @@ class ApiController extends Controller
 
     public function plagiarismCheck(Request $request)
     {
-        if (Auth::check()  && (Auth::check() ? Auth::user()->user_role_id == 3 : false)) {
+        try {
+            $userId = Crypt::decrypt($request->get('user_id'));
+            $userId = explode('-', $userId)[0];
+        } catch (DecryptException $e) {
+            return new BaseApiResource(null, "Not authorized access!", 403, "failed");
+        }
+        $user = User::find($userId);
+        if ($user && $user->user_role_id == 3) {
             $text = $request->get('text');
     
             try {
-                $response = $this->requestPlagiarismCheck($text);
+                $response = $this->requestPlagiarismCheck($text, $user->id);
                 return new BaseApiResource($response['data'] ?? null, $response['message'], $response['statusCode']);
             }catch (Exception $exception){
                 return new BaseApiResource($response['data'] ?? null, $response['message'], $response['statusCode']);

@@ -81,6 +81,7 @@ id/plagiarism-checker
 <script src="{{asset('/js/logic/plagiarism-checker.js')}}"></script>
 <script>
     const PLAGIARISM_CHECK_URL = "{{route('api.plagiarism-check')}}"
+    const USER_ID = "{{$userId}}"
 </script>
 <script type="application/ld+json">
     {

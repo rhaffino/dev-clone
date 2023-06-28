@@ -3,7 +3,8 @@ $( "#button-checker" ).on( "click", function() {
         url: PLAGIARISM_CHECK_URL,
         data: {
             _token: $('meta[name="csrf-token"]').attr('content'),
-            text: $('#text-check').val()
+            text: $('#text-check').val(),
+            user_id: USER_ID,
         },
         success: (res) => {
             if (res.statusCode === 200) {

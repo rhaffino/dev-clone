@@ -2,8 +2,10 @@
 
 namespace App\Traits;
 
+use App\Models\PlagiarismCheckLog;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\ClientException;
+use Illuminate\Support\Facades\Auth;
 
 trait ApiHelper
 {
@@ -66,7 +68,7 @@ trait ApiHelper
         return \GuzzleHttp\json_decode($response, 1);
     }
 
-    protected function requestPlagiarismCheck($text)
+    protected function requestPlagiarismCheck($text, $id)
     {
         try {
             $data = [];
@@ -77,10 +79,19 @@ trait ApiHelper
             ];
             $options = [];
             $options['form_params'] = $dataPost;
-
             $response = $this->client->request('POST', $apiPost, $options);
+            $data = json_decode($response->getBody()->getContents());
+
+            $log = new PlagiarismCheckLog;
+            $log->user_id = $id;
+            $log->content = $text;
+            $log->cost = $data->cost;
+            $log->result = $data->result;
+            $log->url = $data->allviewurl;
+            $log->save();
+            
             $responses = [];
-            $responses['data'] = json_decode($response->getBody()->getContents());
+            $responses['data'] = $data;
             $responses['message'] = 'success';
             $responses['statusCode'] = 200;
             return $responses;
