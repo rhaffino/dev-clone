@@ -19,10 +19,61 @@ id/plagiarism-checker
 @include('layouts.maintenance')
 @else
 <div class="container container-tools mb-10">
+    <div class="card card-custom mb-5">
+        <div class="card-body px-3 pt-3 pb-4">
+            <div class="row">
+                <div class="col-6">
+                    <h3>ACCOUNT USAGE</h3>
+                    <div class="row">
+                        <div class="col-4">
+                            <p>
+                                YOUR REQUEST <br> {{$userSummaryLogs->user_requests}} times
+                            </p>
+                        </div>
+                        <div class="col-4">
+                            <p>
+                                WORDS CHECKED <br> {{$userSummaryLogs->total_words}} WORDS
+                            </p>
+                        </div>
+                        <div class="col-4">
+                            <p>
+                                COST <br> ${{$userSummaryLogs->total_cost}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <h3>CUMMULATIVE USAGE</h3>
+                    <div class="row">
+                        <div class="col-3">
+                            <p>
+                                TEAM REQUEST <br> {{$cummulativeSummaryLogs->team_requests}} times
+                            </p>
+                        </div>
+                        <div class="col-3">
+                            <p>
+                                USERS <br> {{$cummulativeSummaryLogs->total_users}}
+                            </p>
+                        </div>
+                        <div class="col-3">
+                            <p>
+                                WORDS CHECKED <br> {{$cummulativeSummaryLogs->total_words}} WORDS
+                            </p>
+                        </div>
+                        <div class="col-3">
+                            <p>
+                                COST <br> ${{$cummulativeSummaryLogs->total_cost}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="d-flex flex-column-fluid">
         <div class="container-fluid px-0">
-            <h1 class="text-darkgrey font-weight-normal">@lang('permutation.title')</h1>
-            <span class="text-darkgrey h4 font-weight-normal mb-10">@lang('permutation.sub-title')</span>
+            <h1 class="text-darkgrey font-weight-normal">PLAGIARISM CHECKER</h1>
+            <span class="text-darkgrey h4 font-weight-normal mb-10">Plagiarism detection solution powered by CopyScape</span>
             <div class="row">
                 <div class="col-md-8">
                     <div class="card card-custom mb-5">
@@ -47,27 +98,53 @@ id/plagiarism-checker
                             <textarea id="text-check" data-autoresize name="name" placeholder="Text..." rows="25" style="resize:none;" class="form-control plagiarism-checker-text__area"></textarea>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="w-100">
-    <div class="local-collection-mobile bg-white py-5">
-        <div id="mobile-version" class="px-5 accordion accordion-light accordion-toggle-arrow custom-features-accordion" id="accordionExample2">
-            <div class="card bg-transparent" style="">
-                <div class="card-header" id="headingOne2">
-                    <div class="card-title collapsed" data-toggle="collapse" data-target="#collapseOne2">
-                        @lang('layout.version') 1.0
+                    <div class="mt-4">
+                        <h5>MY ACCOUNT</h5>
+                        @foreach ($userLogs as $log)
+                            <div class="card card-custom mb-5 mt-4">
+                                <div class="card-body px-3 pt-3 pb-0 row">
+                                    <div class="col-4">
+                                        {{substr($log->content, 0, 58)}}...
+                                    </div>
+                                    <div class="col-2">
+                                        ${{$log->cost}}
+                                    </div>
+                                    <div class="col-2">
+                                        {{$log->word_count}} words
+                                    </div>
+                                    <div class="col-2">
+                                        {{date_format(date_add($log->created_at, date_interval_create_from_date_string("7 hours")), "l, d F Y")}}
+                                    </div>
+                                    <div class="col-2">
+                                        {{date_format(date_add($log->created_at, date_interval_create_from_date_string("7 hours")), "H:i")}}
+                                    </div>
+                                </div>
+                            </div>
+                        @endforeach
                     </div>
-                </div>
-                <div id="collapseOne2" class="collapse" data-parent="#accordionExample2">
-                    <div class="card-body">
-                        <p>@lang('permutation.highlight')</p>
-                        <div class="d-flex align-items-center">
-                            <i class='bx bxs-check-circle text-darkgrey mr-1'></i>
-                            <span class="text-darkgrey h6 mb-0">@lang('layout.updated') 15 Mar, 2021</span>
-                        </div>
+                    <div class="mt-4">
+                        <h5>ALL ACCOUNTS</h5>
+                        @foreach ($cummulativeLogs as $log)
+                            <div class="card card-custom mb-5 mt-4">
+                                <div class="card-body px-3 pt-3 pb-0 row">
+                                    <div class="col-4">
+                                        {{substr($log->content, 0, 58)}}...
+                                    </div>
+                                    <div class="col-2">
+                                        ${{$log->cost}}
+                                    </div>
+                                    <div class="col-2">
+                                        {{$log->word_count}} words
+                                    </div>
+                                    <div class="col-2">
+                                        {{date_format(date_add($log->created_at, date_interval_create_from_date_string("7 hours")), "l, d F Y")}}
+                                    </div>
+                                    <div class="col-2">
+                                        {{date_format(date_add($log->created_at, date_interval_create_from_date_string("7 hours")), "H:i")}}
+                                    </div>
+                                </div>
+                            </div>
+                        @endforeach
                     </div>
                 </div>
             </div>

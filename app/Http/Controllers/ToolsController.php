@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\PlagiarismCheckLog;
 use GuzzleHttp\Client;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
@@ -317,15 +318,27 @@ class ToolsController extends Controller
     public function plagiarismChecker($lang)
     {
         if (Auth::check()  && (Auth::check() ? Auth::user()->user_role_id == 3 : false)) {
+            $data = [];
             App::setLocale($lang);
-            $dataID = $this->HomeController->getBlogWordpressId();
-            $dataEN = $this->HomeController->getBlogWordpressEn();
-            $local = App::getLocale();
-            $userId = Crypt::encrypt(Auth::user()->id . '-' . time());
-    
-            $is_maintenance = in_array('plagiarism-checker', explode(',', env('TOOLS_MAINTENANCE'))) && env('APP_ENV') === 'production';
-    
-            return view('Tools/plagiarism-checker', compact('local', 'dataID', 'dataEN', 'is_maintenance', 'userId'));
+            $data['dataID'] = $this->HomeController->getBlogWordpressId();
+            $data['dataEN'] = $this->HomeController->getBlogWordpressEn();
+            $data['local'] = App::getLocale();
+            $data['is_maintenance'] = in_array('plagiarism-checker', explode(',', env('TOOLS_MAINTENANCE'))) && env('APP_ENV') === 'production';
+            
+            // Get user data
+            $data['userId'] = Crypt::encrypt(Auth::user()->id . '-' . time());
+
+            // Get user plagiarism check logs
+            $data['userLogs'] = PlagiarismCheckLog::where('user_id', Auth::user()->id)
+                ->get();
+            $data['userSummaryLogs'] = PlagiarismCheckLog::selectRaw("COUNT(id) as 'user_requests', SUM(word_count) as 'total_words', SUM(cost) as 'total_cost'")
+                ->where('user_id', Auth::user()->id)
+                ->first();
+            $data['cummulativeLogs'] = PlagiarismCheckLog::get();
+            $data['cummulativeSummaryLogs'] = PlagiarismCheckLog::selectRaw("COUNT(id) as 'team_requests', COUNT(DISTINCT(user_id)) as 'total_users', SUM(word_count) as 'total_words', SUM(cost) as 'total_cost'")
+                ->first();
+
+            return view('Tools/plagiarism-checker', $data);
         } else {
             return redirect('/');
         }
