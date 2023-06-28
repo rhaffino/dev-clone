@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Date;
 use Illuminate\Support\Facades\Queue;
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\HomeController;
 
 class ToolsController extends Controller
@@ -314,14 +315,18 @@ class ToolsController extends Controller
 
     public function plagiarismChecker($lang)
     {
-        App::setLocale($lang);
-        $dataID = $this->HomeController->getBlogWordpressId();
-        $dataEN = $this->HomeController->getBlogWordpressEn();
-        $local = App::getLocale();
-
-        $is_maintenance = in_array('plagiarism-checker', explode(',', env('TOOLS_MAINTENANCE'))) && env('APP_ENV') === 'production';
-
-        return view('Tools/plagiarism-checker', compact('local', 'dataID', 'dataEN', 'is_maintenance'));
+        if (Auth::check()  && (Auth::check() ? Auth::user()->user_role_id == 3 : false)) {
+            App::setLocale($lang);
+            $dataID = $this->HomeController->getBlogWordpressId();
+            $dataEN = $this->HomeController->getBlogWordpressEn();
+            $local = App::getLocale();
+    
+            $is_maintenance = in_array('plagiarism-checker', explode(',', env('TOOLS_MAINTENANCE'))) && env('APP_ENV') === 'production';
+    
+            return view('Tools/plagiarism-checker', compact('local', 'dataID', 'dataEN', 'is_maintenance'));
+        } else {
+            return redirect('/');
+        }
     }
 
     public function englishVersion()

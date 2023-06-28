@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Redis;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Validator;
-use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Auth;
 use Mockery\Exception;
 
 class ApiController extends Controller
@@ -206,13 +206,17 @@ class ApiController extends Controller
 
     public function plagiarismCheck(Request $request)
     {
-        $text = $request->get('text');
-
-        try {
-            $response = $this->requestPlagiarismCheck($text);
-            return new BaseApiResource($response['data'] ?? null, $response['message'], $response['statusCode']);
-        }catch (Exception $exception){
-            return new BaseApiResource($response['data'] ?? null, $response['message'], $response['statusCode']);
+        if (Auth::check()  && (Auth::check() ? Auth::user()->user_role_id == 3 : false)) {
+            $text = $request->get('text');
+    
+            try {
+                $response = $this->requestPlagiarismCheck($text);
+                return new BaseApiResource($response['data'] ?? null, $response['message'], $response['statusCode']);
+            }catch (Exception $exception){
+                return new BaseApiResource($response['data'] ?? null, $response['message'], $response['statusCode']);
+            }
+        } else {
+            return new BaseApiResource(null, "Not authorized access!", 403, "failed");
         }
     }
 }
