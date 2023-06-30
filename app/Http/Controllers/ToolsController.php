@@ -12,6 +12,9 @@ use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Crypt;
 use App\Http\Controllers\HomeController;
+use PhpOffice\PhpSpreadsheet\Spreadsheet;
+use PhpOffice\PhpSpreadsheet\Writer\Csv;
+use PhpOffice\PhpSpreadsheet\Style\Border;
 
 class ToolsController extends Controller
 {
@@ -339,6 +342,39 @@ class ToolsController extends Controller
                 ->first();
 
             return view('Tools/plagiarism-checker/index', $data);
+        } else {
+            return redirect('/');
+        }
+    }
+
+    public function downloadPlagiarismCheckLogs($lang)
+    {
+        if (Auth::check()  && (Auth::check() ? Auth::user()->user_role_id == 3 : false)) {
+            $logs = PlagiarismCheckLog::get();
+            // Preparing csv file
+            $fileName = "plagiarism-check-logs-" . time() . ".csv";
+            $spreadsheet = new Spreadsheet();
+            $sheet = $spreadsheet->getActiveSheet();
+            $sheet->setCellValue('A1', 'Content');
+            $sheet->setCellValue('B1', 'Word Count');
+            $sheet->setCellValue('C1', 'Cost');
+            $sheet->setCellValue('D1', 'Result URL');
+            $sheet->setCellValue('E1', 'Created at');
+
+            // Insert data to csv
+            $index = 2;
+            foreach ($logs as $log) {
+                $sheet->setCellValue("A$index", $log->content);
+                $sheet->setCellValue("B$index", "$log->word_count words");
+                $sheet->setCellValue("C$index", "\$$log->cost");
+                $sheet->setCellValue("D$index", $log->url);
+                $sheet->setCellValue("E$index", date_format(date_add($log->created_at, date_interval_create_from_date_string('7 hours')), "l, d F Y H:i"));
+                $index++;
+            }
+
+            $csv = new Csv($spreadsheet);
+            $csv->save($fileName);
+            return response()->download($fileName)->deleteFileAfterSend();
         } else {
             return redirect('/');
         }
