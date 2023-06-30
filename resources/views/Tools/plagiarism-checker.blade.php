@@ -124,6 +124,7 @@
                                         class="form-control plagiarism-checker-text__area"></textarea>
                                 </div>
                             </div>
+                            <a href="/en/download-plagiarism-check-logs" target="_blank" rel="noopener noreferrer">Download (*csv) File</a>
                             <div class="mt-4">
                                 <h5>MY ACCOUNT</h5>
                                 @foreach ($userLogs as $log)
