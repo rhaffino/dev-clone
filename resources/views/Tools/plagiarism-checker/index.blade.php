@@ -125,58 +125,151 @@
                                     class="form-control plagiarism-checker-text__area py-6"></textarea>
                             </div>
 
-                            <div class="mt-4">
-                                <h5>MY ACCOUNT</h5>
-                                @foreach ($userLogs as $log)
-                                    <div class="card card-custom mb-5 mt-4">
-                                        <div class="card-body px-3 pt-3 pb-0 row">
-                                            <div class="col-4">
-                                                {{ substr($log->content, 0, 58) }}...
-                                            </div>
-                                            <div class="col-2">
-                                                ${{ $log->cost }}
-                                            </div>
-                                            <div class="col-2">
-                                                {{ $log->word_count }} words
-                                            </div>
-                                            <div class="col-2">
-                                                {{ date_format(date_add($log->created_at, date_interval_create_from_date_string('7 hours')), 'l, d F Y') }}
-                                            </div>
-                                            <div class="col-2">
-                                                {{ date_format(date_add($log->created_at, date_interval_create_from_date_string('7 hours')), 'H:i') }}
-                                            </div>
-                                        </div>
-                                    </div>
-                                @endforeach
-                            </div>
-                            <div class="mt-4">
-                                <h5>ALL ACCOUNTS</h5>
-                                @foreach ($cummulativeLogs as $log)
-                                    <div class="card card-custom mb-5 mt-4">
-                                        <div class="card-body px-3 pt-3 pb-0 row">
-                                            <div class="col-4">
-                                                {{ substr($log->content, 0, 58) }}...
-                                            </div>
-                                            <div class="col-2">
-                                                ${{ $log->cost }}
-                                            </div>
-                                            <div class="col-2">
-                                                {{ $log->word_count }} words
-                                            </div>
-                                            <div class="col-2">
-                                                {{ date_format(date_add($log->created_at, date_interval_create_from_date_string('7 hours')), 'l, d F Y') }}
-                                            </div>
-                                            <div class="col-2">
-                                                {{ date_format(date_add($log->created_at, date_interval_create_from_date_string('7 hours')), 'H:i') }}
-                                            </div>
-                                        </div>
-                                    </div>
-                                @endforeach
-                            </div>
+                            @include('Tools.plagiarism-checker.components.history')
                         </div>
 
                         {{-- right results --}}
-                        <div class="col-md-4"></div>
+                        <div class="col-md-4 right-results">
+                            {{-- empty state --}}
+                            <div class="card card-custom px-4 py-3">
+                                <p class="m-0 text-gray-100 b2-400 text-center">Enter the text you want to check and run to
+                                    see the result here...</p>
+                            </div>
+
+                            {{-- URL MODE --}}
+                            <div class="card card-custom mt-10">
+                                <div class="accordion accordion-embed" id="embedAccordion">
+                                    <div class="card">
+                                        <div class="card-header" id="headingOne">
+                                            <h2 class="mb-0">
+                                                <button class="btn btn-link background-white btn-block text-left"
+                                                    type="button" data-toggle="collapse" data-target="#collapseOne"
+                                                    aria-expanded="true" aria-controls="collapseOne">
+                                                    <div class="pill b2-700">URL is Valid</div>
+                                                </button>
+                                            </h2>
+                                        </div>
+                                        <hr class="mt-0 mb-5">
+                                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                                            data-parent="#embedAccordion">
+                                            <div class="card-body w-100">
+                                                <embed class="w-100" src="https://example.com">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {{-- END URL MODE --}}
+
+                            {{-- TEXT MODE --}}
+                            {{-- estiamtion box --}}
+                            <div class="card card-custom mt-10">
+                                <div class="px-4 py-3 estimation-box background-gray-70">
+                                    <div class="d-flex align-items-center text-purple-40 b2-500">
+                                        <i class='bx bxs-dollar-circle text-purple-40 b2-700 mr-2'></i>
+                                        <div>
+                                            EST.COST
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <p class="s-400 m-0">TOTAL WORDS</p>
+                                        <p class="m-0 b1-700">300</p>
+                                    </div>
+                                    <div>
+                                        <p class="s-400 m-0">COST</p>
+                                        <p class="m-0 b1-700">$0.04</p>
+                                    </div>
+                                </div>
+                                <div class="px-4 py-3 d-flex align-items-center">
+                                    <button class="btn py-2 mr-2 b2-700 text-dark-50">Cancel</button>
+                                    <button class="btn py-2 button-primary-70 b2-700">Run CopyScape</button>
+                                </div>
+                            </div>
+
+                            {{-- words box --}}
+                            <div class="card card-custom mt-10">
+                                <div
+                                    class="px-4 py-3 d-flex align-items-center justify-content-between b2-400 text-dark-60">
+                                    <div class="text-dark-30 b2-700">
+                                        WORDS
+                                    </div>
+
+                                    <div class="d-flex rounded-sm background-dark-20 overflow-hidden">
+                                        <label class="radio-tab">
+                                            <input type="radio" name="words" checked>
+                                            <span class="b2-400 text-white">1</span>
+                                        </label>
+                                        <label class="radio-tab">
+                                            <input type="radio" name="words">
+                                            <span class="b2-400 text-white">2</span>
+                                        </label>
+                                        <label class="radio-tab">
+                                            <input type="radio" name="words">
+                                            <span class="b2-400 text-white">3</span>
+                                        </label>
+                                        <label class="radio-tab">
+                                            <input type="radio" name="words">
+                                            <span class="b2-400 text-white">4</span>
+                                        </label>
+                                        <label class="radio-tab">
+                                            <input type="radio" name="words">
+                                            <span class="b2-400 text-white">5</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {{-- words details --}}
+                            <div class="card card-custom words-detail mt-10 px-4 py-3">
+                                <div class="words-detail-item">
+                                    <div class="d-flex align-items-center">
+                                        <div class="number background-gray-110 text-white mr-3">1</div>
+                                        <p class="m-0 b2-500 text-gray-110">phases</p>
+                                    </div>
+
+                                    <div class="d-flex align-items-center">
+                                        <p class="m-0 b2-700 mr-3">4</p>
+                                        <p class="m-0 b2-400">11.8%</p>
+                                    </div>
+                                </div>
+                                <div class="words-detail-item">
+                                    <div class="d-flex align-items-center">
+                                        <div class="number background-gray-110 text-white mr-3">2</div>
+                                        <p class="m-0 b2-500 text-gray-110">phases</p>
+                                    </div>
+
+                                    <div class="d-flex align-items-center">
+                                        <p class="m-0 b2-700 mr-3">4</p>
+                                        <p class="m-0 b2-400">11.8%</p>
+                                    </div>
+                                </div>
+                                <div class="words-detail-item">
+                                    <div class="d-flex align-items-center">
+                                        <div class="number background-gray-110 text-white mr-3">3</div>
+                                        <p class="m-0 b2-500 text-gray-110">phases</p>
+                                    </div>
+
+                                    <div class="d-flex align-items-center">
+                                        <p class="m-0 b2-700 mr-3">4</p>
+                                        <p class="m-0 b2-400">11.8%</p>
+                                    </div>
+                                </div>
+
+                                <div class="words-detail-item">
+                                    <div class="d-flex align-items-center">
+                                        <div class="number text-gray-110 background-gray-60 mr-3">4</div>
+                                        <p class="m-0 b2-500 text-gray-110">phases</p>
+                                    </div>
+
+                                    <div class="d-flex align-items-center">
+                                        <p class="m-0 b2-700 mr-3">4</p>
+                                        <p class="m-0 b2-400">11.8%</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {{-- END TEXT MODE --}}
+                        </div>
                     </div>
                 </div>
             </div>
