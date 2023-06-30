@@ -1,0 +1,119 @@
+@use "sass:map";
+@import "./color.scss";
+
+button {
+    background: none;
+    outline: none;
+    border: none;
+    transition: all 300ms;
+}
+
+.card-custom {
+    overflow: hidden;
+
+    &-card-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+}
+
+.top-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    .left-menu {
+        width: fit-content;
+        border-radius: 4px;
+        display: flex;
+        overflow: hidden;
+
+        button,
+        .font-size-container {
+            margin: 0;
+            display: flex;
+            align-items: center;
+            input {
+                display: none;
+            }
+            &.full-screen-btn {
+                padding: 8px 20px;
+                background: none;
+                outline: none;
+                border: none;
+            }
+            span {
+                padding: 8px 12px;
+                cursor: pointer;
+            }
+            input:checked ~ span {
+                background-color: map.get($colors, "dark-70");
+            }
+        }
+    }
+
+    .right-menu {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        .button-container {
+            cursor: pointer;
+
+            input {
+                display: none;
+
+                &:checked ~ span i {
+                    color: map.get($colors, "primary-70");
+                }
+            }
+
+            span i {
+                color: map.get($colors, "dark-30");
+                font-size: 24px;
+            }
+        }
+    }
+}
+
+.text-input {
+    .plagiarism-checker-text__area {
+        border: none;
+        background-color: map.get($colors, "gray-70");
+        transition: all 300ms;
+        height: 60px;
+        &:focus {
+            background-color: white;
+
+            &#text-check {
+                height: 800px;
+            }
+        }
+    }
+    .footer-section {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        .run-btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background-color: map.get($colors, "gray-70");
+            color: map.get($colors, "gray-120");
+            border-radius: 100px;
+            padding: 4px 16px;
+            font-weight: 700;
+
+            &:hover {
+                background-color: map.get($colors, "primary-70");
+                color: white !important;
+
+                i {
+                    color: white !important;
+                }
+            }
+        }
+    }
+}
