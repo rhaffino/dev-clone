@@ -73,10 +73,19 @@ trait ApiHelper
         try {
             $data = [];
             $apiPost = "http://www.copyscape.com/api/?u=" . env('COPYSCAPE_USERNAME') . "&k=" . env('COPYSCAPE_API_KEY') . "&o=csearch&f=json";
-            $dataPost = [
-                "e" => "UTF-8",
-                "t" => $text,
-            ];
+            if (env('APP_ENV') != 'production') {
+                $apiPost .= "&x=1";
+            }
+            if (filter_var($text, FILTER_VALIDATE_URL) == true) {
+                $dataPost = [
+                    "q" => $text,
+                ];
+            } else {
+                $dataPost = [
+                    "e" => "UTF-8",
+                    "t" => $text,
+                ];
+            }
             $options = [];
             $options['form_params'] = $dataPost;
             $response = $this->client->request('POST', $apiPost, $options);
