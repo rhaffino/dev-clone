@@ -338,7 +338,7 @@ class ToolsController extends Controller
             $data['cummulativeSummaryLogs'] = PlagiarismCheckLog::selectRaw("COUNT(id) as 'team_requests', COUNT(DISTINCT(user_id)) as 'total_users', SUM(word_count) as 'total_words', SUM(cost) as 'total_cost'")
                 ->first();
 
-            return view('Tools/plagiarism-checker', $data);
+            return view('Tools/plagiarism-checker/index', $data);
         } else {
             return redirect('/');
         }

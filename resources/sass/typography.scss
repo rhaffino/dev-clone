@@ -1,0 +1,584 @@
+@use "sass:map";
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;700&display=swap");
+
+@font-face {
+    font-family: Helvetica;
+    src: url("./../fonts/HelveticaNowDisplay-Light.otf");
+    font-weight: 300;
+    font-display: swap;
+}
+@font-face {
+    font-family: Helvetica;
+    src: url("./../fonts/HelveticaNowDisplay-Regular.otf");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Helvetica;
+    src: url("./../fonts/HelveticaNowDisplay-Bold.otf");
+    font-weight: 700;
+    font-display: swap;
+}
+
+.h1-700 {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 48px;
+    letter-spacing: 0px;
+}
+
+.h1-500 {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 48px;
+    letter-spacing: 0px;
+}
+
+.h2-700 {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 44px;
+    letter-spacing: 0px;
+}
+
+.h2-500 {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 44px;
+    letter-spacing: 0px;
+}
+
+.h3-700 {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: 0px;
+}
+
+.h3-500 {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 40px;
+    letter-spacing: 0px;
+}
+
+.h3-400 {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 40px;
+    letter-spacing: 0px;
+}
+
+.h4-700 {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 36px;
+    letter-spacing: 0px;
+}
+
+.h4-500 {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 36px;
+    letter-spacing: 0px;
+}
+
+.h5-700 {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: 0px;
+}
+
+.h5-500 {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 32px;
+    letter-spacing: 0px;
+}
+
+.h6-700 {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: 0px;
+}
+
+.h6-500 {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: 0px;
+}
+
+.p-300 {
+    font-family: Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 24px;
+    letter-spacing: 0px;
+}
+
+.p-400 {
+    font-family: Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0px;
+}
+
+.p-500 {
+    font-family: Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0px;
+}
+
+.p-700 {
+    font-family: Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0px;
+}
+
+.b1-300 {
+    font-family: Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 20px;
+    letter-spacing: 0px;
+}
+
+.b1-400 {
+    font-family: Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0px;
+}
+
+.b1-500 {
+    font-family: Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0px;
+}
+
+.b1-700 {
+    font-family: Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 0px;
+}
+
+.b2-300 {
+    font-family: Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 16px;
+    letter-spacing: 0px;
+}
+
+.b2-400 {
+    font-family: Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0px;
+}
+
+.b2-500 {
+    font-family: Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0px;
+}
+
+.b2-700 {
+    font-family: Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 0px;
+}
+
+.s-300 {
+    font-family: Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 16px;
+    letter-spacing: 0px;
+}
+
+.s-400 {
+    font-family: Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0px;
+}
+
+.s-400-i {
+    font-family: Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: Italic;
+    line-height: 16px;
+    letter-spacing: 0px;
+}
+
+.s-700 {
+    font-family: Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 0px;
+}
+
+.xs-300 {
+    font-family: Helvetica, sans-serif;
+    font-size: 10px;
+    font-weight: 300;
+    line-height: 12px;
+    letter-spacing: 0px;
+}
+
+.xs-400 {
+    font-family: Helvetica, sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 12px;
+    letter-spacing: 0px;
+}
+
+.xs-700 {
+    font-family: Helvetica, sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 12px;
+    letter-spacing: 0px;
+}
+
+@media only screen and(max-width: 767.98px) {
+    .h1-m-700 {
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 32px;
+        letter-spacing: 0px;
+    }
+
+    .h1-m-500 {
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 32px;
+        letter-spacing: 0px;
+    }
+
+    .h2-m-700 {
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 28px;
+        letter-spacing: 0px;
+    }
+
+    .h2-m-500 {
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 28px;
+        letter-spacing: 0px;
+    }
+
+    .h3-m-700 {
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 24px;
+        letter-spacing: 0px;
+    }
+
+    .h3-m-500 {
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 24px;
+        letter-spacing: 0px;
+    }
+
+    .h3-m-400 {
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0px;
+    }
+
+    .h4-m-700 {
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 20px;
+        letter-spacing: 0px;
+    }
+
+    .h4-m-500 {
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 20px;
+        letter-spacing: 0px;
+    }
+
+    .h5-m-700 {
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 16px;
+        letter-spacing: 0px;
+    }
+
+    .h5-m-500 {
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 16px;
+        letter-spacing: 0px;
+    }
+
+    .h6-m-700 {
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 16px;
+        letter-spacing: 0px;
+    }
+
+    .h6-m-500 {
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 16px;
+        letter-spacing: 0px;
+    }
+
+    .p-m-300 {
+        font-family: Helvetica, sans-serif;
+        font-size: 13px;
+        font-weight: 300;
+        line-height: 16px;
+        letter-spacing: 0px;
+    }
+
+    .p-m-400 {
+        font-family: Helvetica, sans-serif;
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 16px;
+        letter-spacing: 0px;
+    }
+
+    .p-m-500 {
+        font-family: Helvetica, sans-serif;
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 16px;
+        letter-spacing: 0px;
+    }
+
+    .p-m-400-i {
+        font-family: Helvetica, sans-serif;
+        font-size: 13px;
+        font-weight: italic;
+        line-height: 16px;
+        letter-spacing: 0px;
+    }
+
+    .p-m-700 {
+        font-family: Helvetica, sans-serif;
+        font-size: 13px;
+        font-weight: 700;
+        line-height: 16px;
+        letter-spacing: 0px;
+    }
+
+    .b1-m-300 {
+        font-family: Helvetica, sans-serif;
+        font-size: 12px;
+        font-weight: 300;
+        line-height: 16px;
+        letter-spacing: 0px;
+    }
+
+    .b1-m-400 {
+        font-family: Helvetica, sans-serif;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 16px;
+        letter-spacing: 0px;
+    }
+
+    .b1-m-500 {
+        font-family: Helvetica, sans-serif;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 16px;
+        letter-spacing: 0px;
+    }
+
+    .b1-m-400-i {
+        font-family: Helvetica, sans-serif;
+        font-size: 12px;
+        font-weight: italic;
+        line-height: 16px;
+        letter-spacing: 0px;
+    }
+
+    .b1-m-700 {
+        font-family: Helvetica, sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px;
+        letter-spacing: 0;
+    }
+
+    .b2-m-f-400 {
+        font-family: Helvetica, sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 0px;
+    }
+
+    .b2-m-f-700 {
+        font-family: Helvetica, sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 20px;
+        letter-spacing: 0px;
+    }
+
+    .b2-m-300 {
+        font-family: Helvetica, sans-serif;
+        font-size: 11px;
+        font-weight: 300;
+        line-height: 16px;
+        letter-spacing: 0;
+    }
+
+    .b2-m-400 {
+        font-family: Helvetica, sans-serif;
+        font-size: 11px;
+        font-weight: 400;
+        line-height: 16px;
+        letter-spacing: 0;
+    }
+
+    .b2-m-500 {
+        font-family: Helvetica, sans-serif;
+        font-size: 11px;
+        font-weight: 500;
+        line-height: 16px;
+        letter-spacing: 0;
+    }
+
+    .b2-m-400-i {
+        font-family: Helvetica, sans-serif;
+        font-size: 11px;
+        font-weight: italic;
+        line-height: 16px;
+        letter-spacing: 0;
+    }
+
+    .b2-m-700 {
+        font-family: Helvetica, sans-serif;
+        font-size: 11px;
+        font-weight: 700;
+        line-height: 16px;
+        letter-spacing: 0;
+    }
+
+    .s-m-300 {
+        font-family: Helvetica, sans-serif;
+        font-size: 10px;
+        font-weight: 300;
+        line-height: 12px;
+        letter-spacing: 0px;
+    }
+
+    .s-m-400 {
+        font-family: Helvetica, sans-serif;
+        font-size: 10px;
+        font-weight: 400;
+        line-height: 12px;
+        letter-spacing: 0px;
+    }
+
+    .s-m-400-i {
+        font-family: Helvetica, sans-serif;
+        font-size: 10px;
+        font-weight: Italic;
+        line-height: 12px;
+        letter-spacing: 0px;
+    }
+
+    .s-m-700 {
+        font-family: Helvetica, sans-serif;
+        font-size: 10px;
+        font-weight: 700;
+        line-height: 12px;
+        letter-spacing: 0px;
+    }
+
+    .xs-m-300 {
+        font-family: Helvetica, sans-serif;
+        font-size: 10px;
+        font-weight: 300;
+        line-height: 12px;
+        letter-spacing: 0px;
+    }
+
+    .xs-m-400 {
+        font-family: Helvetica, sans-serif;
+        font-size: 10px;
+        font-weight: 400;
+        line-height: 12px;
+        letter-spacing: 0px;
+    }
+
+    .xs-m-700 {
+        font-family: Helvetica, sans-serif;
+        font-size: 10px;
+        font-weight: 700;
+        line-height: 12px;
+        letter-spacing: 0px;
+    }
+}
+
+// additional var
+$tablet: 1024px;
+$mobile: 360px;
+
+$font-jakarta-sans: "Plus Jakarta Sans", sans-serif;
+$font-helvetica: Helvetica, sans-serif;
