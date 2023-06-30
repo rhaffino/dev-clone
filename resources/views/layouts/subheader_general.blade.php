@@ -43,7 +43,7 @@
                     </li>
                     @if (auth()->check() && (auth()->check() ? auth()->user()->user_role_id == 3 : false))
                         <li class="nav-item ml-7">
-                            <a class="nav-link @yield('plagiarism-checker')" href="/{{ $local }}/plagiarism-checker">Plagiarism Checker</a>
+                            <a class="nav-link plagiarism @yield('plagiarism-checker')" href="/{{ $local }}/plagiarism-checker">Plagiarism Checker <span class="font-weight-light ml-1">by CopyScape</span></a>
                         </li>
                     @endif
                 </ul>
