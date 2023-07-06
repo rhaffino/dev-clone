@@ -133,13 +133,13 @@
                         {{-- right results --}}
                         <div class="col-md-4 right-results">
                             {{-- empty state --}}
-                            <div class="card card-custom px-4 py-3">
+                            <div class="card card-custom px-4 py-3 mb-10" id="emptyState">
                                 <p class="m-0 text-gray-100 b2-400 text-center">Enter the text you want to check and run to
                                     see the result here...</p>
                             </div>
 
                             {{-- URL MODE --}}
-                            <div class="card card-custom mt-10">
+                            {{-- <div class="card card-custom mt-10">
                                 <div class="accordion accordion-embed" id="embedAccordion">
                                     <div class="card">
                                         <div class="card-header" id="headingOne">
@@ -160,12 +160,12 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> --}}
                             {{-- END URL MODE --}}
 
                             {{-- TEXT MODE --}}
-                            {{-- estiamtion box --}}
-                            <div class="card card-custom mt-10">
+                            {{-- estimation box --}}
+                            <div class="card card-custom estimation-card">
                                 <div class="px-4 py-3 estimation-box background-gray-70">
                                     <div class="d-flex align-items-center text-purple-40 b2-500">
                                         <i class='bx bxs-dollar-circle text-purple-40 b2-700 mr-2'></i>
@@ -175,7 +175,7 @@
                                     </div>
                                     <div>
                                         <p class="s-400 m-0">TOTAL WORDS</p>
-                                        <p class="m-0 b1-700">300</p>
+                                        <p class="m-0 b1-700" id="totalWordsEst">300</p>
                                     </div>
                                     <div>
                                         <p class="s-400 m-0">COST</p>
@@ -189,7 +189,7 @@
                             </div>
 
                             {{-- words box --}}
-                            <div class="card card-custom mt-10">
+                            <div class="card card-custom mt-10 estimation-card">
                                 <div
                                     class="px-4 py-3 d-flex align-items-center justify-content-between b2-400 text-dark-60">
                                     <div class="text-dark-30 b2-700">
@@ -198,23 +198,23 @@
 
                                     <div class="d-flex rounded-sm background-dark-20 overflow-hidden">
                                         <label class="radio-tab">
-                                            <input type="radio" name="words" checked>
+                                            <input value="1" type="radio" name="density" checked>
                                             <span class="b2-400 text-white">1</span>
                                         </label>
                                         <label class="radio-tab">
-                                            <input type="radio" name="words">
+                                            <input value="2" type="radio" name="density">
                                             <span class="b2-400 text-white">2</span>
                                         </label>
                                         <label class="radio-tab">
-                                            <input type="radio" name="words">
+                                            <input value="3" type="radio" name="density">
                                             <span class="b2-400 text-white">3</span>
                                         </label>
                                         <label class="radio-tab">
-                                            <input type="radio" name="words">
+                                            <input value="4" type="radio" name="density">
                                             <span class="b2-400 text-white">4</span>
                                         </label>
                                         <label class="radio-tab">
-                                            <input type="radio" name="words">
+                                            <input value="5" type="radio" name="density">
                                             <span class="b2-400 text-white">5</span>
                                         </label>
                                     </div>
@@ -222,57 +222,22 @@
                             </div>
 
                             {{-- words details --}}
-                            <div class="card card-custom words-detail mt-10 px-4 py-3">
-                                <div class="words-detail-item">
-                                    <div class="d-flex align-items-center">
-                                        <div class="number background-gray-110 text-white mr-3">1</div>
-                                        <p class="m-0 b2-500 text-gray-110">phases</p>
-                                    </div>
-
-                                    <div class="d-flex align-items-center">
-                                        <p class="m-0 b2-700 mr-3">4</p>
-                                        <p class="m-0 b2-400">11.8%</p>
-                                    </div>
+                            <div class="card card-custom words-detail mt-10 px-4 py-3 estimation-card">
+                                <div class="" id="top1">
                                 </div>
-                                <div class="words-detail-item">
-                                    <div class="d-flex align-items-center">
-                                        <div class="number background-gray-110 text-white mr-3">2</div>
-                                        <p class="m-0 b2-500 text-gray-110">phases</p>
-                                    </div>
-
-                                    <div class="d-flex align-items-center">
-                                        <p class="m-0 b2-700 mr-3">4</p>
-                                        <p class="m-0 b2-400">11.8%</p>
-                                    </div>
+                                <div class="" id="top2">
                                 </div>
-                                <div class="words-detail-item">
-                                    <div class="d-flex align-items-center">
-                                        <div class="number background-gray-110 text-white mr-3">3</div>
-                                        <p class="m-0 b2-500 text-gray-110">phases</p>
-                                    </div>
-
-                                    <div class="d-flex align-items-center">
-                                        <p class="m-0 b2-700 mr-3">4</p>
-                                        <p class="m-0 b2-400">11.8%</p>
-                                    </div>
+                                <div class="" id="top3">
                                 </div>
-
-                                <div class="words-detail-item">
-                                    <div class="d-flex align-items-center">
-                                        <div class="number text-gray-110 background-gray-60 mr-3">4</div>
-                                        <p class="m-0 b2-500 text-gray-110">phases</p>
-                                    </div>
-
-                                    <div class="d-flex align-items-center">
-                                        <p class="m-0 b2-700 mr-3">4</p>
-                                        <p class="m-0 b2-400">11.8%</p>
-                                    </div>
+                                <div class="" id="top4">
+                                </div>
+                                <div class="" id="top5">
                                 </div>
                             </div>
                             {{-- END TEXT MODE --}}
 
                             {{-- RESULT --}}
-                            <div class="card card-custom mt-10 overview py-3">
+                            <div class="card card-custom mt-10 overview py-3 result-card">
                                 <div
                                     class="px-4 py-3 d-flex align-items-center justify-content-between b2-400 text-dark-60">
                                     <div class="text-dark-70 b2-700">
@@ -315,7 +280,7 @@
                                 </div>
                             </div>
 
-                            <div class="card card-custom mt-10">
+                            <div class="card card-custom mt-10 result-card">
                                 <div
                                     class="px-4 py-3 d-flex align-items-center justify-content-between b2-400 text-dark-60">
                                     <div class="d-flex radio-tab-container-2 rounded-sm overflow-hidden">

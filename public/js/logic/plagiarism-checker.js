@@ -1,3 +1,6 @@
+var WORDS_LENGTH = 0
+var TOP_DENSITY = 0
+
 // WORD CHECKER
 function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -6,6 +9,7 @@ function numberWithCommas(x) {
 var input = document.querySelector('#text-check'),
     characterCount = document.querySelector('#characterCount'),
     wordCount = document.querySelector('#wordCount'),
+    totalWordsEst = document.querySelector('#totalWordsEst'),
     sentenceCount = document.querySelector('#sentenceCount'),
     paragraphCount = document.querySelector('#paragraphCount'),
     readingTime = document.querySelector('#readingTime'),
@@ -15,22 +19,92 @@ var input = document.querySelector('#text-check'),
 
 characterCount.innerHTML = 0;
 wordCount.innerHTML = 0;
+totalWordsEst.innerHTML = 0;
 sentenceCount.innerHTML = 0;
 paragraphCount.innerHTML = 0;
 readingTime.innerHTML = 0;
+$(".estimation-card").hide()
+$(".result-card").hide()
+
+let topKeyword = []
+for (let i = 1; i < 6; i++) {
+    topKeyword.push(document.querySelector('#top' + i))
+}
+
+const radioButtons = document.querySelectorAll('input[type="radio"][name="density"]');
+
+radioButtons.forEach((radioButton) => {
+    radioButton.addEventListener('change', (event) => {
+        const selectedValue = event.target.value;
+
+        switch (selectedValue) {
+            case "1":
+                $("#top1").show();
+                $("#top2").hide();
+                $("#top3").hide();
+                $("#top4").hide();
+                $("#top5").hide();
+                break;
+            case "2":
+                $("#top1").hide();
+                $("#top2").show();
+                $("#top3").hide();
+                $("#top4").hide();
+                $("#top5").hide();
+                break;
+            case "3":
+                $("#top1").hide();
+                $("#top2").hide();
+                $("#top3").show();
+                $("#top4").hide();
+                $("#top5").hide();
+                break;
+            case "4":
+                $("#top1").hide();
+                $("#top2").hide();
+                $("#top3").hide();
+                $("#top4").show();
+                $("#top5").hide();
+                break;
+            case "5":
+                $("#top1").hide();
+                $("#top2").hide();
+                $("#top3").hide();
+                $("#top4").hide();
+                $("#top5").show();
+                break;
+            default:
+                $("#top1").hide();
+                $("#top2").hide();
+                $("#top3").hide();
+                $("#top4").hide();
+                $("#top5").hide();
+                break;
+        }
+    });
+});
 
 function start() {
     characterCount.innerHTML = numberWithCommas(input.value.length);
 
     var words = input.value.replace(/['";:,.?\xbf\-!\xa1]+/g, "").match(/\S+/g);
+
+    if (input.value != "") {
+        $("#emptyState").hide();
+        $(".estimation-card").show()
+    } else {
+        $("#emptyState").show();
+        $(".estimation-card").hide()
+    }
+
     if (words) {
         wordCount.innerHTML = words.length;
+        totalWordsEst.innerHTML = words.length;
         WORDS_LENGTH = words.length
     } else {
         wordCount.innerHTML = 0;
         WORDS_LENGTH = 0
     }
-    console.log("WOrd", WORDS_LENGTH)
 
     if (words) {
         var sentences = input.value.match(/\w([^.?!;\u2026]+[.?!;\u2026]+)/g);
@@ -160,62 +234,6 @@ function start() {
                         "<hr class='my-2'>"
                 }
                 topKeyword[j - 1].appendChild(div);
-            }
-
-            topKeywordMobile[j - 1].innerHTML = "";
-            for (var i = 0; i < sortedKeywords.length && i < 10; i++) {
-                var div = document.createElement('div');
-                if (i == 9) {
-                    div.innerHTML = "<div class='row'>" +
-                        "<div class='col-8'>" +
-                        "<div class='d-flex justify-content-start align-items-center'>" +
-                        "<div class='container-label-top-keywords mr-3'>" +
-                        "<span class='label label-lg label-non-top-3'>" + (i + 1) + "</span>" +
-                        "</div>" + sortedKeywords[i][0] + "</div>" +
-                        "</div>" +
-                        "<div class='col-4 d-flex justify-content-end align-items-center'>" +
-                        "<div class='d-flex justify-content-end align-items-center'>" +
-                        "<span class='mr-3 font-weight-bolder mt-1'>" + sortedKeywords[i][1] + "</span>" +
-                        "<span class='mt-1'>" + ((sortedKeywords[i][1] / nonStopWords.length) * 100).toFixed(1) + "%</span>" +
-                        "</div>" +
-                        "</div>" +
-                        "</div>"
-                } else if (i > 2) {
-                    div.innerHTML = "<div class='row'>" +
-                        "<div class='col-8'>" +
-                        "<div class='d-flex justify-content-start align-items-center'>" +
-                        "<div class='container-label-top-keywords mr-3'>" +
-                        "<span class='label label-lg label-non-top-3'>" + (i + 1) + "</span>" +
-                        "</div>" + sortedKeywords[i][0] +
-                        "</div>" +
-                        "</div>" +
-                        "<div class='col-4 d-flex justify-content-end align-items-center'>" +
-                        "<div class='d-flex justify-content-end align-items-center'>" +
-                        "<span class='mr-3 font-weight-bolder mt-1'>" + sortedKeywords[i][1] + "</span>" +
-                        "<span class='mt-1'>" + ((sortedKeywords[i][1] / nonStopWords.length) * 100).toFixed(1) + "%</span>" +
-                        "</div>" +
-                        "</div>" +
-                        "</div>" +
-                        "<hr class='my-2'>"
-                } else {
-                    div.innerHTML = "<div class='row'>" +
-                        "<div class='col-8'>" +
-                        "<div class='d-flex justify-content-start align-items-center'>" +
-                        "<div class='container-label-top-keywords mr-3'>" +
-                        "<span class='label label-lg label-top-3'>" + (i + 1) + "</span>" +
-                        "</div>" + sortedKeywords[i][0] +
-                        "</div>" +
-                        "</div>" +
-                        "<div class='col-4 d-flex justify-content-end align-items-center'>" +
-                        "<div class='d-flex justify-content-end align-items-center'>" +
-                        "<span class='mr-3 font-weight-bolder mt-1'>" + sortedKeywords[i][1] + "</span>" +
-                        "<span class='mt-1'>" + ((sortedKeywords[i][1] / nonStopWords.length) * 100).toFixed(1) + "%</span>" +
-                        "</div>" +
-                        "</div>" +
-                        "</div>" +
-                        "<hr class='my-2'>"
-                }
-                topKeywordMobile[j - 1].appendChild(div);
             }
         }
     }

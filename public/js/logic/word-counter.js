@@ -82,7 +82,7 @@ const getMonth = function (index) {
     return month[index]
 }
 
-var input = document.querySelectorAll('.textarea-count')[0],
+var input = document.querySelectorAll('textarea')[0],
     characterCount = document.querySelector('#characterCount'),
     wordCount = document.querySelector('#wordCount'),
     sentenceCount = document.querySelector('#sentenceCount'),
