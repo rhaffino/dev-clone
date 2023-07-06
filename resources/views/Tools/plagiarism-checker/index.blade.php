@@ -16,6 +16,8 @@
 
 @push('style')
     <link rel="stylesheet" href="{{ mix('/assets/css/plagiarism.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/pagespeed.css') }}">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 @endpush
 
 @section('content')
@@ -84,23 +86,23 @@
                                 <div class="px-4 py-3 d-flex align-items-center justify-content-between">
                                     <div>
                                         <div class="text-dark-70 b2-400">Characters</div>
-                                        <div class="text-dark-70 p-700">423</div>
+                                        <div class="text-dark-70 p-700" id="characterCount">0</div>
                                     </div>
                                     <div>
                                         <div class="text-dark-70 b2-400">Words</div>
-                                        <div class="text-dark-70 p-700">423</div>
+                                        <div class="text-dark-70 p-700" id="wordCount">0</div>
                                     </div>
                                     <div>
                                         <div class="text-dark-70 b2-400">Sentences</div>
-                                        <div class="text-dark-70 p-700">423</div>
+                                        <div class="text-dark-70 p-700" id="sentenceCount">0</div>
                                     </div>
                                     <div>
                                         <div class="text-dark-70 b2-400">Paragraph</div>
-                                        <div class="text-dark-70 p-700">423</div>
+                                        <div class="text-dark-70 p-700" id="paragraphCount">0</div>
                                     </div>
                                     <div>
                                         <div class="text-dark-70 b2-400">Reading Time</div>
-                                        <div class="text-dark-70 p-700">423</div>
+                                        <div class="text-dark-70 p-700" id="readingTime">0</div>
                                     </div>
                                 </div>
 
@@ -267,8 +269,123 @@
                                     </div>
                                 </div>
                             </div>
-
                             {{-- END TEXT MODE --}}
+
+                            {{-- RESULT --}}
+                            <div class="card card-custom mt-10 overview py-3">
+                                <div
+                                    class="px-4 py-3 d-flex align-items-center justify-content-between b2-400 text-dark-60">
+                                    <div class="text-dark-70 b2-700">
+                                        Overview
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-center gap-3">
+                                    <div class="d-flex align-items-center flex-column gap-1 px-3">
+                                        <div class="progress progress-red performance" data-percentage="90">
+                                            <span class="progress-left">
+                                                <span class="progress-bar progress-bar-performance"></span>
+                                            </span>
+                                            <span class="progress-right">
+                                                <span class="progress-bar progress-bar-performance"></span>
+                                            </span>
+                                            <div class="progress-value" style="width:100%">
+                                                <div class="value-performance value-red">
+                                                    0
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="b2-400 b2-m-400">Menjiplak</div>
+                                    </div>
+                                    <div class="d-flex align-items-center flex-column gap-1 px-3">
+                                        <div class="progress progress-red performance" data-percentage="90">
+                                            <span class="progress-left">
+                                                <span class="progress-bar progress-bar-performance"></span>
+                                            </span>
+                                            <span class="progress-right">
+                                                <span class="progress-bar progress-bar-performance"></span>
+                                            </span>
+                                            <div class="progress-value" style="width:100%">
+                                                <div class="value-performance value-red">
+                                                    0
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="b2-400 b2-m-400">Unik</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card card-custom mt-10">
+                                <div
+                                    class="px-4 py-3 d-flex align-items-center justify-content-between b2-400 text-dark-60">
+                                    <div class="d-flex radio-tab-container-2 rounded-sm overflow-hidden">
+                                        <label class="radio-tab">
+                                            <input type="radio" name="words" checked>
+                                            <span class="b2-700">ALL</span>
+                                        </label>
+                                        <label class="radio-tab">
+                                            <input type="radio" name="words">
+                                            <span class="b2-700">1</span>
+                                        </label>
+                                        <label class="radio-tab">
+                                            <input type="radio" name="words">
+                                            <span class="b2-700">2</span>
+                                        </label>
+                                        <label class="radio-tab">
+                                            <input type="radio" name="words">
+                                            <span class="b2-700">3</span>
+                                        </label>
+                                        <label class="radio-tab">
+                                            <input type="radio" name="words">
+                                            <span class="b2-700">4</span>
+                                        </label>
+                                        <label class="radio-tab">
+                                            <input type="radio" name="words">
+                                            <span class="b2-700">5</span>
+                                        </label>
+                                    </div>
+
+                                    <div class="d-flex radio-tab-container-2 rounded-sm overflow-hidden">
+                                        <label class="radio-tab">
+                                            <input type="radio" name="words" checked>
+                                            <span class="b2-700">
+                                                <i class='bx bx-expand-vertical'></i>
+                                            </span>
+                                        </label>
+                                        <label class="radio-tab">
+                                            <input type="radio" name="words">
+                                            <span class="b2-700">
+                                                <i class='bx bx-collapse-vertical'></i>
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="word-counter-version-desktop">
+                                <div class="accordion accordion-light accordion-toggle-arrow custom-features-accordion"
+                                    id="accordionExample2">
+                                    <div class="card bg-transparent" style="">
+                                        <div class="card-header" id="headingOne2">
+                                            <div class="card-title collapsed" data-toggle="collapse"
+                                                data-target="#collapseOne2">
+                                                @lang('layout.version') 2.0
+                                            </div>
+                                        </div>
+                                        <div id="collapseOne2" class="collapse" data-parent="#accordionExample2">
+                                            <div class="card-body">
+                                                <p>@lang('wordcounter.highlight')</p>
+                                                <div class="d-flex align-items-center">
+                                                    <i class='bx bxs-check-circle text-darkgrey mr-1'></i>
+                                                    <span class="text-darkgrey h6 mb-0">@lang('layout.updated') 15 Mar,
+                                                        2021</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {{-- END RESULT --}}
                         </div>
                     </div>
                 </div>
