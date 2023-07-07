@@ -38,15 +38,15 @@
                                     <button class="full-screen-btn"><i class='bx bx-fullscreen'
                                             style='color:#ffffff'></i></button>
                                     <label class="font-size-container">
-                                        <input type="radio" name="font-size" id="12px" checked>
+                                        <input type="radio" value="font-size-12px" name="font-size" id="12px" checked>
                                         <span class="b2-400 text-white">12px</span>
                                     </label>
                                     <label class="font-size-container">
-                                        <input type="radio" name="font-size" id="15px">
+                                        <input type="radio" value="font-size-15px" name="font-size" id="15px">
                                         <span class="b2-400 text-white">15px</span>
                                     </label>
                                     <label class="font-size-container">
-                                        <input type="radio" name="font-size" id="18px">
+                                        <input type="radio" value="font-size-18zpx" name="font-size" id="18px">
                                         <span class="b2-400 text-white">18px</span>
                                     </label>
                                 </div>
@@ -110,10 +110,10 @@
                                     style="resize:none;" class="form-control plagiarism-checker-text__area py-6"></textarea>
 
                                 <div class="footer-section px-4 py-2">
-                                    <button>
+                                    <button class="remove-btn">
                                         <i class='bx bxs-trash b5-500'></i>
                                     </button>
-                                    <button class="run-btn b5-700">
+                                    <button class="run-btn b5-700" id="linkCheckerBtn">
                                         <i class='bx bx-play b5-500'></i>
                                         <span class="b5-700 font-bold">
                                             RUN
@@ -138,32 +138,6 @@
                                     see the result here...</p>
                             </div>
 
-                            {{-- URL MODE --}}
-                            {{-- <div class="card card-custom mt-10">
-                                <div class="accordion accordion-embed" id="embedAccordion">
-                                    <div class="card">
-                                        <div class="card-header" id="headingOne">
-                                            <h2 class="mb-0">
-                                                <button class="btn btn-link background-white btn-block text-left"
-                                                    type="button" data-toggle="collapse" data-target="#collapseOne"
-                                                    aria-expanded="true" aria-controls="collapseOne">
-                                                    <div class="pill b2-700">URL is Valid</div>
-                                                </button>
-                                            </h2>
-                                        </div>
-                                        <hr class="mt-0 mb-5">
-                                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
-                                            data-parent="#embedAccordion">
-                                            <div class="card-body w-100">
-                                                <embed class="w-100" src="https://example.com">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div> --}}
-                            {{-- END URL MODE --}}
-
-                            {{-- TEXT MODE --}}
                             {{-- estimation box --}}
                             <div class="card card-custom estimation-card">
                                 <div class="px-4 py-3 estimation-box background-gray-70">
@@ -179,14 +153,41 @@
                                     </div>
                                     <div>
                                         <p class="s-400 m-0">COST</p>
-                                        <p class="m-0 b1-700">$0.04</p>
+                                        <p class="m-0 b1-700">$<span id="costEst">0</span></p>
                                     </div>
                                 </div>
                                 <div class="px-4 py-3 d-flex align-items-center">
-                                    <button class="btn py-2 mr-2 b2-700 text-dark-50">Cancel</button>
+                                    <button class="btn py-2 mr-2 b2-700 text-dark-50 remove-btn">Cancel</button>
                                     <button class="btn py-2 button-primary-70 b2-700">Run CopyScape</button>
                                 </div>
                             </div>
+
+                            {{-- URL MODE --}}
+                            <div class="card card-custom url-mode-container mt-10" style="display: none">
+                                <div class="accordion accordion-embed" id="embedAccordion">
+                                    <div class="card">
+                                        <div class="card-header" id="headingOne">
+                                            <h2 class="mb-0">
+                                                <button class="btn btn-link background-white btn-block text-left"
+                                                    type="button" data-toggle="collapse" data-target="#collapseOne"
+                                                    aria-expanded="true" aria-controls="collapseOne">
+                                                    <div class="pill b2-700">URL is Valid</div>
+                                                </button>
+                                            </h2>
+                                        </div>
+                                        <hr class="mt-0 mb-5">
+                                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                                            data-parent="#embedAccordion">
+                                            <div class="card-body w-100">
+                                                <embed id="urlEmbedContainer" class="w-100" src="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {{-- END URL MODE --}}
+
+                            {{-- TEXT MODE --}}                            
 
                             {{-- words box --}}
                             <div class="card card-custom mt-10 estimation-card">

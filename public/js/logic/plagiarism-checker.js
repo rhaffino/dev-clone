@@ -7,11 +7,14 @@ function numberWithCommas(x) {
 }
 
 var input = document.querySelector('#text-check'),
+    inputLink = document.querySelector('#url-check'),
     characterCount = document.querySelector('#characterCount'),
     wordCount = document.querySelector('#wordCount'),
     totalWordsEst = document.querySelector('#totalWordsEst'),
     sentenceCount = document.querySelector('#sentenceCount'),
     paragraphCount = document.querySelector('#paragraphCount'),
+    costEst = document.querySelector('#costEst'),
+    linkCheckerBtn = document.querySelector('#linkCheckerBtn'),
     readingTime = document.querySelector('#readingTime'),
     topKeywordsMobile = document.querySelector('#topKeywordsMobile'),
     topKeywords2Mobile = document.querySelector('#top2Mobile'),
@@ -32,7 +35,22 @@ for (let i = 1; i < 6; i++) {
 }
 
 const radioButtons = document.querySelectorAll('input[type="radio"][name="density"]');
+const fontSizeButtons = document.querySelectorAll('input[type="radio"][name="font-size"]');
 
+$("#top1").show();
+$("#top2").hide();
+$("#top3").hide();
+$("#top4").hide();
+$("#top5").hide();
+
+const calculateCost = (words) => {
+    let cost = 0.03
+    const wordPerCost = words > 200 ? Math.ceil((words - 200) / 100) : 0
+
+    return cost + wordPerCost * 0.01
+}
+
+// listen for words density
 radioButtons.forEach((radioButton) => {
     radioButton.addEventListener('change', (event) => {
         const selectedValue = event.target.value;
@@ -84,7 +102,33 @@ radioButtons.forEach((radioButton) => {
     });
 });
 
-function start() {
+// function for change font size
+fontSizeButtons.forEach((fontSizeBtn) => {
+    fontSizeBtn.addEventListener('change', (event) => {
+        const selectedValue = event.target.value;
+        $("textarea").removeClass("font-size-12px")
+        $("textarea").removeClass("font-size-15px")
+        $("textarea").removeClass("font-size-18px")
+        $("textarea").addClass(selectedValue)
+    });
+});
+
+// function for remove content on text input
+$(".remove-btn").on("click", function () {
+    $("textarea").val("");
+    $(".url-mode-container").hide();
+    wordCounter()
+});
+
+// linkChecker
+$("#linkCheckerBtn").on("click", function () {
+    $("#urlEmbedContainer").attr("src", inputLink.value);
+    $("#emptyState").hide();
+    $(".url-mode-container").show();
+    $(".estimation-card").show()
+});
+
+function wordCounter() {
     characterCount.innerHTML = numberWithCommas(input.value.length);
 
     var words = input.value.replace(/['";:,.?\xbf\-!\xa1]+/g, "").match(/\S+/g);
@@ -101,6 +145,8 @@ function start() {
         wordCount.innerHTML = words.length;
         totalWordsEst.innerHTML = words.length;
         WORDS_LENGTH = words.length
+
+        costEst.innerHTML = calculateCost(words.length)
     } else {
         wordCount.innerHTML = 0;
         WORDS_LENGTH = 0
@@ -240,7 +286,7 @@ function start() {
 }
 
 input.addEventListener("input", () => {
-    start()
+    wordCounter()
 })
 
 // PLAGIARISM CHECKER
