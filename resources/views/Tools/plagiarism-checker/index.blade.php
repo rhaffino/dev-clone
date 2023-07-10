@@ -38,7 +38,8 @@
                                     <button class="full-screen-btn"><i class='bx bx-fullscreen'
                                             style='color:#ffffff'></i></button>
                                     <label class="font-size-container">
-                                        <input type="radio" value="font-size-12px" name="font-size" id="12px" checked>
+                                        <input type="radio" value="font-size-12px" name="font-size" id="12px"
+                                            checked>
                                         <span class="b2-400 text-white">12px</span>
                                     </label>
                                     <label class="font-size-container">
@@ -46,7 +47,7 @@
                                         <span class="b2-400 text-white">15px</span>
                                     </label>
                                     <label class="font-size-container">
-                                        <input type="radio" value="font-size-18zpx" name="font-size" id="18px">
+                                        <input type="radio" value="font-size-18px" name="font-size" id="18px">
                                         <span class="b2-400 text-white">18px</span>
                                     </label>
                                 </div>
@@ -67,11 +68,11 @@
                                 <p class="m-0 text-dark-30 s-400">RESULTS</p>
                                 <div class="left-menu background-dark-40">
                                     <label class="font-size-container">
-                                        <input type="radio" name="type">
+                                        <input value="plagiarism" type="radio" name="results" id="plagiarismBtn" disabled>
                                         <span class="s-400 text-white">PLAGIARISM</span>
                                     </label>
                                     <label class="font-size-container">
-                                        <input type="radio" name="type">
+                                        <input value="density" type="radio" name="results" checked id="densityBtn">
                                         <span class="s-400 text-white">WORDS DENSITY</span>
                                     </label>
                                 </div>
@@ -125,6 +126,7 @@
 
                                 <textarea id="text-check" data-autoresize name="name" placeholder="Type / paste any text here.." style="resize:none;"
                                     class="form-control plagiarism-checker-text__area py-6"></textarea>
+                                <div class="result-input" style="display: none"></div>
                             </div>
 
                             @include('Tools.plagiarism-checker.components.history')
@@ -139,7 +141,7 @@
                             </div>
 
                             {{-- estimation box --}}
-                            <div class="card card-custom estimation-card">
+                            <div class="card card-custom estimation-card" id="estimationCard">
                                 <div class="px-4 py-3 estimation-box background-gray-70">
                                     <div class="d-flex align-items-center text-purple-40 b2-500">
                                         <i class='bx bxs-dollar-circle text-purple-40 b2-700 mr-2'></i>
@@ -158,7 +160,8 @@
                                 </div>
                                 <div class="px-4 py-3 d-flex align-items-center">
                                     <button class="btn py-2 mr-2 b2-700 text-dark-50 remove-btn">Cancel</button>
-                                    <button class="btn py-2 button-primary-70 b2-700">Run CopyScape</button>
+                                    <button id="button-checker" class="btn py-2 button-primary-70 b2-700">Run
+                                        CopyScape</button>
                                 </div>
                             </div>
 
@@ -187,10 +190,10 @@
                             </div>
                             {{-- END URL MODE --}}
 
-                            {{-- TEXT MODE --}}                            
+                            {{-- TEXT MODE --}}
 
                             {{-- words box --}}
-                            <div class="card card-custom mt-10 estimation-card">
+                            <div class="card card-custom mt-10 estimation-card words-density">
                                 <div
                                     class="px-4 py-3 d-flex align-items-center justify-content-between b2-400 text-dark-60">
                                     <div class="text-dark-30 b2-700">
@@ -223,7 +226,7 @@
                             </div>
 
                             {{-- words details --}}
-                            <div class="card card-custom words-detail mt-10 px-4 py-3 estimation-card">
+                            <div class="card card-custom words-detail mt-10 px-4 py-3 estimation-card words-density">
                                 <div class="" id="top1">
                                 </div>
                                 <div class="" id="top2">
@@ -238,7 +241,7 @@
                             {{-- END TEXT MODE --}}
 
                             {{-- RESULT --}}
-                            <div class="card card-custom mt-10 overview py-3 result-card">
+                            <div class="card card-custom mt-10 overview py-3 result-card plagiarism-result" style="display: none">
                                 <div
                                     class="px-4 py-3 d-flex align-items-center justify-content-between b2-400 text-dark-60">
                                     <div class="text-dark-70 b2-700">
@@ -281,7 +284,7 @@
                                 </div>
                             </div>
 
-                            <div class="card card-custom mt-10 result-card">
+                            <div class="card card-custom mt-10 result-card" style="display: none">
                                 <div
                                     class="px-4 py-3 d-flex align-items-center justify-content-between b2-400 text-dark-60">
                                     <div class="d-flex radio-tab-container-2 rounded-sm overflow-hidden">
@@ -328,6 +331,9 @@
                                 </div>
                             </div>
 
+                            <div class="mt-10 result-container plagiarism-result">                                
+                            </div>
+
                             <div class="word-counter-version-desktop">
                                 <div class="accordion accordion-light accordion-toggle-arrow custom-features-accordion"
                                     id="accordionExample2">
@@ -350,7 +356,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div>                            
                             {{-- END RESULT --}}
                         </div>
                     </div>

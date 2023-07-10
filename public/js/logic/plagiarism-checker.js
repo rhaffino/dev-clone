@@ -1,6 +1,35 @@
 var WORDS_LENGTH = 0
 var TOP_DENSITY = 0
 
+function checkUrl(url) {
+    try {
+        let _url = new URL(url)
+        return _url.protocol === 'https:' || _url.protocol === 'http:';
+    } catch (e) {
+        // console.log(e)
+        return false
+    }
+}
+
+function checkUrlLevel(url) {
+    // Remove trailing slashes from the URL
+    url = url.replace(/\/+$/, '');
+
+    // Split the URL by slashes
+    var segments = url.split('/');
+
+    // Exclude empty segments
+    segments = segments.filter(function (segment) {
+        return segment !== '';
+    });
+
+    // Determine the level based on the number of segments
+    var level = segments.length;
+
+    // Return the level
+    return level;
+}
+
 // WORD CHECKER
 function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -36,6 +65,7 @@ for (let i = 1; i < 6; i++) {
 
 const radioButtons = document.querySelectorAll('input[type="radio"][name="density"]');
 const fontSizeButtons = document.querySelectorAll('input[type="radio"][name="font-size"]');
+const resultTypeButtons = document.querySelectorAll('input[type="radio"][name="results"]');
 
 $("#top1").show();
 $("#top2").hide();
@@ -113,6 +143,28 @@ fontSizeButtons.forEach((fontSizeBtn) => {
     });
 });
 
+const showDensity = () => {
+    $(".words-density").show()
+    $(".plagiarism-result").hide()
+}
+
+const showPlagiarism = () => {
+    $(".words-density").hide()
+    $(".plagiarism-result").show()
+}
+
+// function for change result mode
+resultTypeButtons.forEach((resultBtn) => {
+    resultBtn.addEventListener('change', (event) => {
+        const selectedValue = event.target.value;
+        if (selectedValue === "density") {
+            showDensity()
+        } else {
+            showPlagiarism()
+        }
+    });
+});
+
 // function for remove content on text input
 $(".remove-btn").on("click", function () {
     $("textarea").val("");
@@ -122,10 +174,15 @@ $(".remove-btn").on("click", function () {
 
 // linkChecker
 $("#linkCheckerBtn").on("click", function () {
-    $("#urlEmbedContainer").attr("src", inputLink.value);
-    $("#emptyState").hide();
-    $(".url-mode-container").show();
-    $(".estimation-card").show()
+    if (checkUrl(inputLink.value)) {
+
+        $("#urlEmbedContainer").attr("src", inputLink.value);
+        $("#emptyState").hide();
+        $(".url-mode-container").show();
+        $(".estimation-card").show()
+    } else {
+        toastr.error('URL Format is not valid', 'Error')
+    }
 });
 
 function wordCounter() {
@@ -289,18 +346,107 @@ input.addEventListener("input", () => {
     wordCounter()
 })
 
+const resultCards = (totalWords, data) => {
+    const percentage = Math.round(data.minwordsmatched / totalWords * 100)
+    const levelUrl = checkUrlLevel(data.url)
+
+    return `<div class="accordion accordion-light accordion-toggle-arrow custom-features-accordion" id="accordionResult${data.index}">
+    <div class="card bg-white px-3" style="">
+        <div class="card-header" id="headingOne2">
+            <div class="card-title collapsed pr-4 justify-content-between" data-toggle="collapse"
+                data-target="#accordion${data.index}One">
+                <div class="index-pill s-400">${data.index}</div>
+                <div class="d-flex align-items-center">
+                    <p class="m-0 s-400 text-primary-70 mr-3">${percentage}%</p>
+                    <p class="m-0 s-400">Text matched</p>
+                </div>
+            </div>
+        </div>
+        <div id="accordion${data.index}One" class="collapse" data-parent="#accordionResult${data.index}">
+            <div class="card-body py-2">
+                <div class="d-flex align-items-center flex-column">
+                    <hr class='my-2 w-100'>
+                    <div class="row w-100">
+                        <div class="col-7 s-400 text-ellipsis">${data.url}</div>
+                        <div class="col-3 s-400 flex-shrink-0 text-primary-70">${levelUrl} levels</div>
+                        <div class="col-2 s-400 flex-shrink-0 text-gray-100 text-right">URL</div>
+                    </div>
+                    <hr class='my-2 w-100'>
+                    <div class="row w-100">
+                        <div class="col-7 s-400 text-ellipsis">Common phase index writing</div>
+                        <div class="col-3 s-400 flex-shrink-0 text-primary-70">45 pixels</div>
+                        <div class="col-2 s-400 flex-shrink-0 text-gray-100 text-right">Title</div>
+                    </div>
+                    <hr class='my-2 w-100'>
+                    <div class="d-flex w-100 justify-content-end pr-3">
+                        <p class="m-0 mx-3 s-400 text-gray-100">(${data.minwordsmatched} of ${totalWords})</p>
+                        <p class="m-0 mx-3 s-400 text-primary-70">35%</p>
+                        <p class="m-0 ml-3 s-400 text-gray-100">Text matched</p>
+                    </div>
+                    <div class="my-3 w-100 py-2 px-3 background-gray-20 b2-400">
+                        ${data.textsnippet}
+                    </div>
+
+                    <div class="my-2 d-flex align-items-start justify-content-start w-100">
+                        <a href="${data.url}" target="_blank" rel="noopener noreferrer noindex" class="btn button-gray-20 b2-700"> <u>View "index" on CopyScape</u></a>
+                    </div>
+
+                    <hr class='my-2 w-100'>
+                    <div class="d-flex w-100 justify-content-end mb-3 pr-3">
+                        <p class="m-0 mx-3 s-400 text-gray-100">(${data.minwordsmatched} of ${totalWords})</p>
+                        <p class="m-0 mx-3 s-400 text-primary-70">${percentage}%</p>
+                        <p class="m-0 ml-3 s-400 text-gray-100">Minimum words matched limit</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>`
+}
+
 // PLAGIARISM CHECKER
 $("#button-checker").on("click", function () {
+    let text
+
+    if ($(".url-mode-container").css("display") === "none") {
+        text = $('#text-check').val()
+    } else {
+        text = $('#url-check').val()
+    }
+
     $.post({
         url: PLAGIARISM_CHECK_URL,
         data: {
             _token: $('meta[name="csrf-token"]').attr('content'),
-            text: $('#text-check').val(),
+            text: text,
             user_id: USER_ID,
+        },
+        beforeSend: () => {
+            $("#button-checker").prop("disabled", true);
         },
         success: (res) => {
             if (res.statusCode === 200) {
                 console.log(res.data)
+                $("#plagiarismBtn").prop("disabled", false);
+                $("#plagiarismBtn").prop("checked", true);
+                $("#densityBtn").prop("checked", false);
+                $("#estimationCard").hide()
+
+                showPlagiarism()
+
+                $("#button-checker").prop("disabled", false);
+
+                var textareaContent = ""
+                res.data.result.forEach(function (item) {
+                    textareaContent += item.htmlsnippet.replace(`color="#777777"`, `class="highlight-red"`);
+                });
+                $('.result-input').append(textareaContent)
+                $('.result-input').show()
+                $('#text-check').hide()
+
+                res.data.result.forEach((result) => {
+                    $(".result-container").append(resultCards(res.data.querywords, result));
+                });
             } else {
                 toastr.error(res.message)
             }
