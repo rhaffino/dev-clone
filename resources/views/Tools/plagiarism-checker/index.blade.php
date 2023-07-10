@@ -35,7 +35,7 @@
                         <div class="col-md-8">
                             <div class="card card-custom px-8 py-3 top-menu">
                                 <div class="left-menu background-dark-40">
-                                    <button class="full-screen-btn"><i class='bx bx-fullscreen'
+                                    <button class="full-screen-btn radio"><i class='bx bx-fullscreen'
                                             style='color:#ffffff'></i></button>
                                     <label class="font-size-container">
                                         <input type="radio" value="font-size-12px" name="font-size" id="12px"
@@ -53,11 +53,11 @@
                                 </div>
                                 <div class="right-menu">
                                     <label class="button-container">
-                                        <input type="radio" name="tools" value="calendar">
+                                        <input type="radio" name="history" value="calendar">
                                         <span class=""><i class='bx bxs-calendar'></i></span>
                                     </label>
                                     <label class="button-container">
-                                        <input type="radio" name="tools" value="calendar">
+                                        <input type="radio" name="history" value="list">
                                         <span class=""><i class='bx bxs-file-find'></i></span>
                                     </label>
                                 </div>
@@ -124,12 +124,13 @@
                                         $0.05 for 400-449 words)</p>
                                 </div>
 
-                                <textarea id="text-check" data-autoresize name="name" placeholder="Type / paste any text here.." style="resize:none;"
-                                    class="form-control plagiarism-checker-text__area py-6"></textarea>
+                                <textarea id="text-check" data-autoresize name="name" placeholder="Type / paste any text here.."
+                                    style="resize:none;" class="form-control plagiarism-checker-text__area py-6"></textarea>
                                 <div class="result-input" style="display: none"></div>
                             </div>
 
                             @include('Tools.plagiarism-checker.components.history')
+                            @include('Tools.plagiarism-checker.components.history-calendar')
                         </div>
 
                         {{-- right results --}}
@@ -176,12 +177,17 @@
                                                     aria-expanded="true" aria-controls="collapseOne">
                                                     <div class="pill b2-700">URL is Valid</div>
                                                 </button>
-                                            </h2>
+                                            </h2>                                            
                                         </div>
-                                        <hr class="mt-0 mb-5">
+                                        <hr>
                                         <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
                                             data-parent="#embedAccordion">
                                             <div class="card-body w-100">
+                                                <div class="d-flex justify-content-end w-100 url-viewer">
+                                                    <div class="levels b2-400 text-primary-70 mr-3">3 levels</div>
+                                                    <div class="url b2-400 text-gray-100 mr-3">https://example.com</div>
+                                                </div>
+                                                <hr class="mt-3 mb-3">
                                                 <embed id="urlEmbedContainer" class="w-100" src="">
                                             </div>
                                         </div>
@@ -241,7 +247,8 @@
                             {{-- END TEXT MODE --}}
 
                             {{-- RESULT --}}
-                            <div class="card card-custom mt-10 overview py-3 result-card plagiarism-result" style="display: none">
+                            <div class="card card-custom mt-10 overview py-3 result-card plagiarism-result"
+                                style="display: none">
                                 <div
                                     class="px-4 py-3 d-flex align-items-center justify-content-between b2-400 text-dark-60">
                                     <div class="text-dark-70 b2-700">
@@ -331,7 +338,7 @@
                                 </div>
                             </div>
 
-                            <div class="mt-10 result-container plagiarism-result">                                
+                            <div class="mt-10 result-container plagiarism-result">
                             </div>
 
                             <div class="word-counter-version-desktop">
@@ -356,7 +363,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>                            
+                            </div>
                             {{-- END RESULT --}}
                         </div>
                     </div>

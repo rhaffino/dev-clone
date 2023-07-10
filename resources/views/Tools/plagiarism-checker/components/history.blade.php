@@ -1,4 +1,4 @@
-<div class="history mt-10">
+<div class="history mt-10" id="history-list" style="display: none">
     <ul class="history-tabs nav nav-tabs" id="myTab" role="tablist">
         <div class="d-flex">
             <i class='bx bxs-collection b5-400'></i>

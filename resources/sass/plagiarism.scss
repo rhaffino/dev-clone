@@ -51,29 +51,6 @@ button {
         border-radius: 4px;
         display: flex;
         overflow: hidden;
-
-        button,
-        .font-size-container {
-            margin: 0;
-            display: flex;
-            align-items: center;
-            input {
-                display: none;
-            }
-            &.full-screen-btn {
-                padding: 8px 20px;
-                background: none;
-                outline: none;
-                border: none;
-            }
-            span {
-                padding: 8px 12px;
-                cursor: pointer;
-            }
-            input:checked ~ span {
-                background-color: map.get($colors, "dark-70");
-            }
-        }
     }
 
     .right-menu {
@@ -96,6 +73,30 @@ button {
                 font-size: 24px;
             }
         }
+    }
+}
+
+button.radio,
+.font-size-container {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    height: fit-content;
+    input {
+        display: none;
+    }
+    &.full-screen-btn {
+        padding: 8px 20px;
+        background: none;
+        outline: none;
+        border: none;
+    }
+    span {
+        padding: 8px 12px;
+        cursor: pointer;
+    }
+    input:checked ~ span {
+        background-color: map.get($colors, "dark-70");
     }
 }
 
@@ -260,5 +261,51 @@ button {
         background-color: #bcdffc;
         border-radius: 100px;
         padding: 2px 10px;
+    }
+}
+.calendar-container {
+    .type-container {
+        height: fit-content;
+    }
+
+    .calendar {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        gap: 12px;
+
+        .date-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: column;
+            gap: 4px;
+            padding: 8px;
+            border-radius: 3px;
+            background: #f1f5f8;
+            .date {
+                color: #90a6b9;
+                font-family: Helvetica, sans-serif;
+                font-size: 10px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 12px;
+            }
+
+            .value {
+                color: #90a6b9;
+                font-family: Helvetica, sans-serif;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 16px;
+            }
+
+            &.active {
+                background: #dbedfc;
+                .value {
+                    color: #204e74;
+                }
+            }
+        }
     }
 }

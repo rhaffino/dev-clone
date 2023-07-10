@@ -12,23 +12,20 @@ function checkUrl(url) {
 }
 
 function checkUrlLevel(url) {
-    // Remove trailing slashes from the URL
-    url = url.replace(/\/+$/, '');
+    var urlWithoutProtocol = url.replace(/^(https?:\/\/)?/, '');
+    urlWithoutProtocol = urlWithoutProtocol.replace(/\/+$/, '');
 
-    // Split the URL by slashes
-    var segments = url.split('/');
+    var segments = urlWithoutProtocol.split('/');
 
-    // Exclude empty segments
     segments = segments.filter(function (segment) {
         return segment !== '';
     });
 
-    // Determine the level based on the number of segments
     var level = segments.length;
 
-    // Return the level
     return level;
 }
+
 
 // WORD CHECKER
 function numberWithCommas(x) {
@@ -66,6 +63,7 @@ for (let i = 1; i < 6; i++) {
 const radioButtons = document.querySelectorAll('input[type="radio"][name="density"]');
 const fontSizeButtons = document.querySelectorAll('input[type="radio"][name="font-size"]');
 const resultTypeButtons = document.querySelectorAll('input[type="radio"][name="results"]');
+const historyTypeButtons = document.querySelectorAll('input[type="radio"][name="history"]');
 
 $("#top1").show();
 $("#top2").hide();
@@ -165,6 +163,20 @@ resultTypeButtons.forEach((resultBtn) => {
     });
 });
 
+// function for change history type
+historyTypeButtons.forEach((btn) => {
+    btn.addEventListener('change', (event) => {
+        const selectedValue = event.target.value;
+        if (selectedValue === "calendar") {
+            $("#history-calendar").show()
+            $("#history-list").hide()
+        } else {
+            $("#history-list").show()
+            $("#history-calendar").hide()
+        }
+    });
+});
+
 // function for remove content on text input
 $(".remove-btn").on("click", function () {
     $("textarea").val("");
@@ -175,11 +187,12 @@ $(".remove-btn").on("click", function () {
 // linkChecker
 $("#linkCheckerBtn").on("click", function () {
     if (checkUrl(inputLink.value)) {
-
         $("#urlEmbedContainer").attr("src", inputLink.value);
         $("#emptyState").hide();
         $(".url-mode-container").show();
         $(".estimation-card").show()
+        $(".url-viewer .levels").html(`${checkUrlLevel(inputLink.value)} levels`);
+        $(".url-viewer .url").html(inputLink.value);
     } else {
         toastr.error('URL Format is not valid', 'Error')
     }
