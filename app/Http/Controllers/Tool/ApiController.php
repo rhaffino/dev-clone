@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Resources\BaseApiResource;
 use App\Mail\CtaMail;
 use App\Models\User;
+use App\Models\PlagiarismCheckLog;
 use Illuminate\Http\Request;
 use App\Traits\ApiHelper;
 use Illuminate\Contracts\Encryption\DecryptException;
@@ -19,6 +20,7 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Crypt;
 use Mockery\Exception;
+use Carbon\Carbon;
 
 class ApiController extends Controller
 {
@@ -227,6 +229,102 @@ class ApiController extends Controller
             }
         } else {
             return new BaseApiResource(null, "Not authorized access!", 403, "failed");
+        }
+    }
+
+    public function plagiarismCheckCalendarLogs(Request $request)
+    {
+        try {
+            $today = Carbon::createFromDate($request->year, $request->month, $request->day);
+
+            if($request->has('order') && $request->order)
+            {
+                if($request->order == 'next')
+                {
+                    $today = $today->addMonth();
+                }
+                else if($request->order == 'prev')
+                {
+                    if(!($today->year == Carbon::now()->year && $today->month <= Carbon::now()->month))
+                    {
+                        $today = $today->subMonth();
+                    }
+                }
+            }
+
+            $first = Carbon::createFromDate($today->year, $today->month, 1);
+            $isTodayMonth = $today->month == Carbon::now()->month && $today->year == Carbon::now()->year;
+            $calendar = [];
+
+            for($i = $isTodayMonth ? Carbon::now()->day + 1 : 1; $i < $first->daysInMonth + 1; ++$i) {
+                $date = Carbon::createFromDate($first->year, $first->month, $i)->toDateString();
+                $day = Carbon::createFromDate($first->year, $first->month, $i)->dayOfWeek;
+                if ($day == 0 || $day == 6) {
+                    $calendar[$date] = ['cost' => 0, 'request' => 0, 'weekend' => true];
+                } else {
+                    $calendar[$date] = ['cost' => 0, 'request' => 0, 'weekend' => false];
+                }
+            }
+
+            if($first->dayOfWeek > 0) {
+                $sunday = $first->subDays($first->dayOfWeek);
+                for($i=$sunday->day; $i < $sunday->daysInMonth + 1; ++$i) {
+                    $prevDate = Carbon::createFromDate($sunday->year, $sunday->month, $i)->toDateString();
+                    $calendar[$prevDate] = ['cost' => 0, 'request' => 0, 'prevMonth' => true];
+                }
+            }
+
+            if($isTodayMonth){
+                for($i=1; $i < Carbon::now()->day + 1; ++$i) {
+                    $prevDateInMonth = Carbon::createFromDate($today->year, $today->month, $i)->toDateString();
+                    $day = Carbon::createFromDate($today->year, $today->month, $i)->dayOfWeek;
+                    if ($day == 0 || $day == 6) {
+                        $calendar[$prevDateInMonth] = ['cost' => 0, 'request' => 0, 'weekend' => true];
+                    } else {
+                        $calendar[$prevDateInMonth] = ['cost' => 0, 'request' => 0, 'weekend' => false];
+                    }
+                }
+            }
+
+            $last = Carbon::createFromDate($today->year, $today->month, $today->daysInMonth);
+            if($last->dayOfWeek < 6) {
+                $saturday = $last->addDays(6 - $last->dayOfWeek);
+                for($i=1; $i < $saturday->day + 1; ++$i) {
+                    $nextDate = Carbon::createFromDate($saturday->year, $saturday->month, $i)->toDateString();
+                    $calendar[$nextDate] = ['cost' => 0, 'request' => 0, 'nextMonth' => true];
+                }
+            }
+
+            $data['calendar'] =  $calendar;
+
+            $logs = null;
+            if (isset($prevDates) && isset($nextDates)) {
+                $logs = PlagiarismCheckLog::select('id', 'cost', 'created_at')
+                    ->whereBetween('created_at', [reset($prevDates), end($nextDates)])
+                    ->get();
+            } else if (isset($prevDates)) {
+                $logs = PlagiarismCheckLog::select('id', 'cost', 'created_at')
+                    ->where('created_at', '>=', reset($prevDates))
+                    ->get();
+            } else if (isset($nextDates)) {
+                $logs = PlagiarismCheckLog::select('id', 'cost', 'created_at')
+                    ->where('created_at', '<=', end($nextDates))
+                    ->get();
+            } else {
+                $logs = PlagiarismCheckLog::select('id', 'cost', 'created_at')
+                    ->get();
+            }
+            
+            foreach ($logs as $log) {
+                $createdAt = date_format($log->created_at, "Y-m-d");
+                $calendar[$createdAt]['cost'] += $log->cost; 
+                $calendar[$createdAt]['request'] += 1; 
+            }
+            
+            $data['calendar'] =  $calendar;
+            return new BaseApiResource($data, "success", 200);
+        } catch (Exception $exception){
+            return new BaseApiResource($response['data'] ?? null, $response['message'], $response['statusCode']);
         }
     }
 }

@@ -76,3 +76,4 @@ Route::middleware([ManualAuth::class])->group(function (){
 Route::post('/api/cta', 'Tool\ApiController@ctaEmail')->name('api.cta-email');
 Route::post('/api/count', 'Tool\ApiController@accessCount')->name('api.count');
 Route::post('/api/limit', 'Tool\ApiController@accessLimit')->name('api.limit');
+Route::get('/api/plagiarism-checker-calendar', 'Tool\ApiController@plagiarismCheckCalendarLogs')->name('api.plagiarism-check-calendar-logs');
