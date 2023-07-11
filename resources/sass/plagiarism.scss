@@ -278,7 +278,8 @@ button.radio,
 
     .calendar-btn {
         &:disabled {
-            opacity: 0.6;
+            opacity: 0.3;
+            cursor: default;
         }
     }
 

@@ -1,3 +1,8 @@
+let initDate = new Date().toISOString().slice(0, 10);
+let bookedDate = [];
+const currentDate = new Date();
+const currentMonth = currentDate.getMonth();
+
 function getFormattedMonthYear(dateString) {
     var date = new Date(dateString);
     var month = date.toLocaleString('en-US', { month: 'long' });
@@ -5,9 +10,6 @@ function getFormattedMonthYear(dateString) {
 
     return month + ' ' + year;
 }
-
-let initDate = new Date().toISOString().slice(0, 10);
-let bookedDate = [];
 
 $(document).ready(() => {
     getCalendar({}).then((result) => {
@@ -74,6 +76,8 @@ function getCalendar(data) {
             initDate = today
             $("#month").html(getFormattedMonthYear(today))
 
+            const givenMonth = new Date(today).getMonth();
+
             nowDate.forEach((date) => {
                 $('.calendar').append($(
                     `<div class="date-item ${date.weekend && "weekend"} ${(date.prevMonth || date.nextMonth) && "other"}">
@@ -83,6 +87,10 @@ function getCalendar(data) {
                 )
             })
             $('.calendar-btn').prop('disabled', false);
+
+            if (givenMonth === currentMonth) {
+                $(".calendar-btn.next").prop('disabled', true);
+            }
         },
         error: (e) => {
             console.log('error', e);

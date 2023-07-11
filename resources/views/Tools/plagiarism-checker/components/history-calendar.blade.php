@@ -25,7 +25,7 @@
                 <div class="d-flex align-items-center">
                     <button class="btn calendar-btn" onclick="prevDate()"><i class='bx bx-caret-left text-dark-70'></i></button>
                     <p class="m-0 text-dark-70 s-700" id="month">January 2023</p>
-                    <button class="btn calendar-btn" onclick="nextDate()"><i class='bx bx-caret-right text-dark-70'></i></button>
+                    <button class="btn calendar-btn next" onclick="nextDate()"><i class='bx bx-caret-right text-dark-70'></i></button>
                 </div>
             </div>
 
