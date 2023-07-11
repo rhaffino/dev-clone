@@ -181,6 +181,9 @@ historyTypeButtons.forEach((btn) => {
 $(".remove-btn").on("click", function () {
     $("textarea").val("");
     $(".url-mode-container").hide();
+    $(".result-input").hide();
+    $("#text-check").show();
+    $(".plagiarism-result").hide();
     wordCounter()
 });
 
@@ -362,6 +365,10 @@ input.addEventListener("input", () => {
 const resultCards = (totalWords, data) => {
     const percentage = Math.round(data.minwordsmatched / totalWords * 100)
     const levelUrl = checkUrlLevel(data.url)
+    var titlesizer = $("#titlesizer");
+    titlesizer.attr("style", "font-family: arial, sans-serif !important; font-size: 13px !important; position: absolute !important; visibility: hidden !important; white-space: nowrap !important;");
+    titlesizer.text(data.title);
+    var pixel = Math.floor(titlesizer.innerWidth());
 
     return `<div class="accordion accordion-light accordion-toggle-arrow custom-features-accordion" id="accordionResult${data.index}">
     <div class="card bg-white px-3" style="">
@@ -370,8 +377,9 @@ const resultCards = (totalWords, data) => {
                 data-target="#accordion${data.index}One">
                 <div class="index-pill s-400">${data.index}</div>
                 <div class="d-flex align-items-center">
-                    <p class="m-0 s-400 text-primary-70 mr-3">${percentage}%</p>
-                    <p class="m-0 s-400">Text matched</p>
+                    ${data.percentmatched != undefined ? `
+                    <p class="m-0 s-400 text-primary-70 mr-3">${data.percentmatched}%</p>
+                    <p class="m-0 s-400">Text matched</p>`: ''}
                 </div>
             </div>
         </div>
@@ -386,15 +394,13 @@ const resultCards = (totalWords, data) => {
                     </div>
                     <hr class='my-2 w-100'>
                     <div class="row w-100">
-                        <div class="col-7 s-400 text-ellipsis">Common phase index writing</div>
-                        <div class="col-3 s-400 flex-shrink-0 text-primary-70">45 pixels</div>
+                        <div class="col-7 s-400 text-ellipsis">${data.title}</div>
+                        <div class="col-3 s-400 flex-shrink-0 text-primary-70">${pixel} pixels</div>
                         <div class="col-2 s-400 flex-shrink-0 text-gray-100 text-right">Title</div>
                     </div>
                     <hr class='my-2 w-100'>
                     <div class="d-flex w-100 justify-content-end pr-3">
-                        <p class="m-0 mx-3 s-400 text-gray-100">(${data.minwordsmatched} of ${totalWords})</p>
-                        <p class="m-0 mx-3 s-400 text-primary-70">35%</p>
-                        <p class="m-0 ml-3 s-400 text-gray-100">Text matched</p>
+                        <p class="m-0 mx-3 s-400 text-gray-100">(${data.minwordsmatched} of ${totalWords})</p>                        
                     </div>
                     <div class="my-3 w-100 py-2 px-3 background-gray-20 b2-400">
                         ${data.textsnippet}
@@ -415,6 +421,67 @@ const resultCards = (totalWords, data) => {
         </div>
     </div>
 </div>`
+}
+
+// function to highlight the matched text
+function styleMatchedText(originalText, resultText) {
+    const splitted = resultText.split("... ").filter(item => item.trim() !== "");
+
+    for (var i = 0; i < splitted.length; i++) {
+        var match = splitted[i];
+        var regex = new RegExp(match, 'g');
+        originalText = originalText.replace(regex, '<span class="highlight-red">' + match + '</span>');
+    }
+
+    return originalText;
+}
+
+function animateValue(id, start, end, duration) {
+    var obj = jQuery('.' + id), range, current, increment, stepTime, timer
+
+    if (start == end) {
+        range = 0;
+        current = start;
+        increment = 0;
+        stepTime = 0;
+        timer = 0
+        obj.html(current + '%');
+    } else {
+        range = end - start;
+        current = start;
+        increment = end > start ? 1 : -1;
+        stepTime = Math.abs(Math.floor(duration / range));
+        timer = setInterval(function () {
+            current += increment;
+            obj.html(current + '%');
+            if (current == end) {
+                clearInterval(timer);
+            }
+        }, stepTime);
+    }
+}
+
+function strokeValue(score, category, isReverse) {
+    let card = jQuery('.' + category);
+    let value = jQuery('.value-' + category);
+    value.removeClass('value-green');
+    value.removeClass('value-orange');
+    value.removeClass('value-red');
+    card.removeClass('progress-green');
+    card.removeClass('progress-red');
+    card.removeClass('progress-orange');
+    if ((isReverse && score < 50) || (!isReverse && score >= 90)) {
+        card.addClass('progress-red');
+        value.addClass('value-red');
+    } else if ((isReverse && score < 90) || (!isReverse && score >= 50)) {
+        card.addClass('progress-orange');
+        value.addClass('value-orange');
+    } else {
+        card.addClass('progress-green');
+        value.addClass('value-green');
+    }
+    card.attr('data-percentage', score);
+    animateValue('value-' + category, 0, score, 3000);
 }
 
 // PLAGIARISM CHECKER
@@ -446,15 +513,16 @@ $("#button-checker").on("click", function () {
                 $("#plagiarismBtn").prop("checked", true);
                 $("#densityBtn").prop("checked", false);
                 $("#estimationCard").hide()
-
+                $("#fullUrl").prop("href", res.data.allviewurl)
                 showPlagiarism()
+
+                strokeValue(res.data.allpercentmatched, "duplicate", false)
+                strokeValue(100 - res.data.allpercentmatched, "unique", true)
 
                 $("#button-checker").prop("disabled", false);
 
-                var textareaContent = ""
-                res.data.result.forEach(function (item) {
-                    textareaContent += item.htmlsnippet.replace(`color="#777777"`, `class="highlight-red"`);
-                });
+                var textareaContent = styleMatchedText(text, res.data.alltextmatched)
+
                 $('.result-input').append(textareaContent)
                 $('.result-input').show()
                 $('#text-check').hide()

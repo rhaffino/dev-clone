@@ -26,6 +26,7 @@
     @else
         <div class="container container-tools mt-5 mb-10">
             @include('Tools.plagiarism-checker.components.stats')
+            <span id="titlesizer"></span>
             <div class="d-flex flex-column-fluid">
                 <div class="container-fluid px-0">
                     <h1 class="text-dark-70 h6-700 m-0">PLAGIARISM CHECKER</h1>
@@ -257,15 +258,15 @@
                                 </div>
                                 <div class="d-flex align-items-center justify-content-center gap-3">
                                     <div class="d-flex align-items-center flex-column gap-1 px-3">
-                                        <div class="progress progress-red performance" data-percentage="90">
+                                        <div class="progress progress-red duplicate" data-percentage="0">
                                             <span class="progress-left">
-                                                <span class="progress-bar progress-bar-performance"></span>
+                                                <span class="progress-bar progress-bar-duplicate"></span>
                                             </span>
                                             <span class="progress-right">
-                                                <span class="progress-bar progress-bar-performance"></span>
+                                                <span class="progress-bar progress-bar-duplicate"></span>
                                             </span>
                                             <div class="progress-value" style="width:100%">
-                                                <div class="value-performance value-red">
+                                                <div class="value-duplicate value-red">
                                                     0
                                                 </div>
                                             </div>
@@ -273,15 +274,15 @@
                                         <div class="b2-400 b2-m-400">Menjiplak</div>
                                     </div>
                                     <div class="d-flex align-items-center flex-column gap-1 px-3">
-                                        <div class="progress progress-red performance" data-percentage="90">
+                                        <div class="progress progress-red unique" data-percentage="0">
                                             <span class="progress-left">
-                                                <span class="progress-bar progress-bar-performance"></span>
+                                                <span class="progress-bar progress-bar-unique"></span>
                                             </span>
                                             <span class="progress-right">
-                                                <span class="progress-bar progress-bar-performance"></span>
+                                                <span class="progress-bar progress-bar-unique"></span>
                                             </span>
                                             <div class="progress-value" style="width:100%">
-                                                <div class="value-performance value-red">
+                                                <div class="value-unique value-red">
                                                     0
                                                 </div>
                                             </div>
@@ -289,6 +290,7 @@
                                         <div class="b2-400 b2-m-400">Unik</div>
                                     </div>
                                 </div>
+                                <a href="" id="fullUrl" target="_blank" rel="noopener noreferrer noindex" class="btn button-gray-20 b2-700 full-url-btn"> <u>View full result</u></a>
                             </div>
 
                             <div class="card card-custom mt-10 result-card" style="display: none">
