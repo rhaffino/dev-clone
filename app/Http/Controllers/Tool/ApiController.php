@@ -257,58 +257,70 @@ class ApiController extends Controller
             $calendar = [];
 
             for($i = $isTodayMonth ? Carbon::now()->day + 1 : 1; $i < $first->daysInMonth + 1; ++$i) {
-                $date = Carbon::createFromDate($first->year, $first->month, $i)->toDateString();
-                $day = Carbon::createFromDate($first->year, $first->month, $i)->dayOfWeek;
-                if ($day == 0 || $day == 6) {
-                    $calendar[$date] = ['cost' => 0, 'request' => 0, 'weekend' => true];
+                $date = Carbon::createFromDate($first->year, $first->month, $i);
+                $dateString = $date->toDateString();
+                $dayOfWeek = $date->dayOfWeek;
+                $dayString = strtoupper($date->shortEnglishDayOfWeek);
+                $dayDate = $date->day;
+                if ($dayOfWeek == 0 || $dayOfWeek == 6) {
+                    $calendar[$dateString] = ['cost' => 0, 'request' => 0, 'weekend' => true, 'date' => "$dayString, $dayDate"];
                 } else {
-                    $calendar[$date] = ['cost' => 0, 'request' => 0, 'weekend' => false];
+                    $calendar[$dateString] = ['cost' => 0, 'request' => 0, 'weekend' => false, 'date' => "$dayString, $dayDate"];
                 }
             }
 
-            if($first->dayOfWeek > 0) {
-                $sunday = $first->subDays($first->dayOfWeek);
-                for($i=$sunday->day; $i < $sunday->daysInMonth + 1; ++$i) {
-                    $prevDate = Carbon::createFromDate($sunday->year, $sunday->month, $i)->toDateString();
-                    $calendar[$prevDate] = ['cost' => 0, 'request' => 0, 'prevMonth' => true];
+            if($first->dayOfWeek > 1) {
+                $monday = $first->subDays($first->dayOfWeek-1);
+                for($i=$monday->day; $i < $monday->daysInMonth + 1; ++$i) {
+                    $prevDate = Carbon::createFromDate($monday->year, $monday->month, $i);
+                    $dateString = $prevDate->toDateString();
+                    $dayString = strtoupper($prevDate->shortEnglishDayOfWeek);
+                    $dayDate = $prevDate->day;
+                    $calendar[$dateString] = ['cost' => 0, 'request' => 0, 'prevMonth' => true, 'date' => "$dayString, $dayDate"];
                 }
             }
 
             if($isTodayMonth){
                 for($i=1; $i < Carbon::now()->day + 1; ++$i) {
-                    $prevDateInMonth = Carbon::createFromDate($today->year, $today->month, $i)->toDateString();
-                    $day = Carbon::createFromDate($today->year, $today->month, $i)->dayOfWeek;
-                    if ($day == 0 || $day == 6) {
-                        $calendar[$prevDateInMonth] = ['cost' => 0, 'request' => 0, 'weekend' => true];
+                    $prevDateInMonth = Carbon::createFromDate($today->year, $today->month, $i);
+                    $dateString = $prevDateInMonth->toDateString();
+                    $dayOfWeek = $prevDateInMonth->dayOfWeek;
+                    $dayString = strtoupper($prevDateInMonth->shortEnglishDayOfWeek);
+                    $dayDate = $prevDateInMonth->day;
+                    if ($dayOfWeek == 0 || $dayOfWeek == 6) {
+                        $calendar[$dateString] = ['cost' => 0, 'request' => 0, 'weekend' => true, 'date' => "$dayString, $dayDate"];
                     } else {
-                        $calendar[$prevDateInMonth] = ['cost' => 0, 'request' => 0, 'weekend' => false];
+                        $calendar[$dateString] = ['cost' => 0, 'request' => 0, 'weekend' => false, 'date' => "$dayString, $dayDate"];
                     }
                 }
             }
 
             $last = Carbon::createFromDate($today->year, $today->month, $today->daysInMonth);
             if($last->dayOfWeek < 6) {
-                $saturday = $last->addDays(6 - $last->dayOfWeek);
-                for($i=1; $i < $saturday->day + 1; ++$i) {
-                    $nextDate = Carbon::createFromDate($saturday->year, $saturday->month, $i)->toDateString();
-                    $calendar[$nextDate] = ['cost' => 0, 'request' => 0, 'nextMonth' => true];
+                $sunday = $last->addDays(7 - $last->dayOfWeek);
+                for($i=1; $i < $sunday->day + 1; ++$i) {
+                    $nextDate = Carbon::createFromDate($sunday->year, $sunday->month, $i);
+                    $dateString = $nextDate->toDateString();
+                    $dayString = strtoupper($nextDate->shortEnglishDayOfWeek);
+                    $dayDate = $nextDate->day;
+                    $calendar[$dateString] = ['cost' => 0, 'request' => 0, 'nextMonth' => true, 'date' => "$dayString, $dayDate"];
                 }
             }
 
             $data['calendar'] =  $calendar;
 
             $logs = null;
-            if (isset($prevDates) && isset($nextDates)) {
+            if (isset($prevDate) && isset($nextDate)) {
                 $logs = PlagiarismCheckLog::select('id', 'cost', 'created_at')
-                    ->whereBetween('created_at', [reset($prevDates), end($nextDates)])
+                    ->whereBetween('created_at', [$prevDate->toDateString(), $nextDate->toDateString()])
                     ->get();
-            } else if (isset($prevDates)) {
+            } else if (isset($prevDate)) {
                 $logs = PlagiarismCheckLog::select('id', 'cost', 'created_at')
-                    ->where('created_at', '>=', reset($prevDates))
+                    ->where('created_at', '>=', $prevDate->toDateString())
                     ->get();
-            } else if (isset($nextDates)) {
+            } else if (isset($nextDate)) {
                 $logs = PlagiarismCheckLog::select('id', 'cost', 'created_at')
-                    ->where('created_at', '<=', end($nextDates))
+                    ->where('created_at', '<=', $nextDate->toDateString())
                     ->get();
             } else {
                 $logs = PlagiarismCheckLog::select('id', 'cost', 'created_at')
