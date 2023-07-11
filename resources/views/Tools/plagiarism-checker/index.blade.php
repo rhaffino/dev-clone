@@ -58,7 +58,7 @@
                                         <span class=""><i class='bx bxs-calendar'></i></span>
                                     </label>
                                     <label class="button-container">
-                                        <input type="radio" name="history" value="list">
+                                        <input type="radio" name="history" value="list" checked>
                                         <span class=""><i class='bx bxs-file-find'></i></span>
                                     </label>
                                 </div>
@@ -382,6 +382,7 @@
         const USER_ID = "{{ $userId }}"
     </script>
     <script src="{{ asset('/js/logic/plagiarism-checker.js') }}"></script>
+    <script src="{{ asset('/js/logic/plagiarism-checker-calendar.js') }}"></script>
     <script type="application/ld+json">
     {
         "@context": "https://schema.org/",
