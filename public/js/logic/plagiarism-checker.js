@@ -471,3 +471,35 @@ $("#button-checker").on("click", function () {
         }
     });
 });
+
+function getCalendarApi() {
+    // For everyone
+    $.get({
+        url: `${PLAGIARISM_CALENDAR_API_URL}`,
+        success: (res) => {
+            if (res.statusCode === 200) {
+                console.log(res.data)
+            } else {
+                toastr.error(res.message)
+            }
+        },
+        error: (err) => {
+            toastr.error(err.responseJSON.message)
+        }
+    });
+    // For certain user only
+    $.get({
+        url: `${PLAGIARISM_CALENDAR_API_URL}?user_id=${USER_ID}`,
+        success: (res) => {
+            if (res.statusCode === 200) {
+                console.log(res.data)
+            } else {
+                toastr.error(res.message)
+            }
+        },
+        error: (err) => {
+            toastr.error(err.responseJSON.message)
+        }
+    });
+}
+// getCalendarApi()

@@ -374,11 +374,12 @@
 @endsection
 
 @push('script')
-    <script src="{{ asset('/js/logic/plagiarism-checker.js') }}"></script>
     <script>
         const PLAGIARISM_CHECK_URL = "{{ route('api.plagiarism-check') }}"
+        const PLAGIARISM_CALENDAR_API_URL = "{{ route('api.plagiarism-check-calendar-logs') }}"
         const USER_ID = "{{ $userId }}"
     </script>
+    <script src="{{ asset('/js/logic/plagiarism-checker.js') }}"></script>
     <script type="application/ld+json">
     {
         "@context": "https://schema.org/",

@@ -309,22 +309,23 @@ class ApiController extends Controller
 
             $data['calendar'] =  $calendar;
 
-            $logs = null;
+            $logs = PlagiarismCheckLog::select('id', 'cost', 'created_at');
+            if ($request->has('user_id')) {
+                $userId = Crypt::decrypt($request->get('user_id'));
+                $userId = explode('-', $userId)[0];
+                $logs->where('user_id', $userId);
+            }
             if (isset($prevDate) && isset($nextDate)) {
-                $logs = PlagiarismCheckLog::select('id', 'cost', 'created_at')
-                    ->whereBetween('created_at', [$prevDate->toDateString(), $nextDate->toDateString()])
+                $logs = $logs->whereBetween('created_at', [$prevDate->toDateString(), $nextDate->toDateString()])
                     ->get();
             } else if (isset($prevDate)) {
-                $logs = PlagiarismCheckLog::select('id', 'cost', 'created_at')
-                    ->where('created_at', '>=', $prevDate->toDateString())
+                $logs = $logs->where('created_at', '>=', $prevDate->toDateString())
                     ->get();
             } else if (isset($nextDate)) {
-                $logs = PlagiarismCheckLog::select('id', 'cost', 'created_at')
-                    ->where('created_at', '<=', $nextDate->toDateString())
+                $logs = $logs->where('created_at', '<=', $nextDate->toDateString())
                     ->get();
             } else {
-                $logs = PlagiarismCheckLog::select('id', 'cost', 'created_at')
-                    ->get();
+                $logs = $logs->get();
             }
             
             foreach ($logs as $log) {
