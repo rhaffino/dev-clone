@@ -440,6 +440,8 @@ $("#button-checker").on("click", function () {
         success: (res) => {
             if (res.statusCode === 200) {
                 console.log(res.data)
+                let text = res.data.text
+                res.data = res.data.response
                 $("#plagiarismBtn").prop("disabled", false);
                 $("#plagiarismBtn").prop("checked", true);
                 $("#densityBtn").prop("checked", false);

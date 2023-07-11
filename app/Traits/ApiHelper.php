@@ -89,8 +89,8 @@ trait ApiHelper
             $options = [];
             $options['form_params'] = $dataPost;
             $response = $this->client->request('POST', $apiPost, $options);
-            $data = json_decode($response->getBody()->getContents());
-
+            $data['response'] = json_decode($response->getBody()->getContents());
+            
             $log = new PlagiarismCheckLog;
             $log->user_id = $id;
             $log->content = $text;
@@ -98,6 +98,7 @@ trait ApiHelper
             $log->result = $data->result;
             $log->url = $data->allviewurl;
             $log->save();
+            $data['text'] = $text;
             
             $responses = [];
             $responses['data'] = $data;
