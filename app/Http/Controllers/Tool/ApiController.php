@@ -245,10 +245,7 @@ class ApiController extends Controller
                 }
                 else if($request->order == 'prev')
                 {
-                    if(!($today->year == Carbon::now()->year && $today->month <= Carbon::now()->month))
-                    {
-                        $today = $today->subMonth();
-                    }
+                    $today = $today->subMonth();
                 }
             }
 
@@ -259,18 +256,18 @@ class ApiController extends Controller
             for($i = $isTodayMonth ? Carbon::now()->day + 1 : 1; $i < $first->daysInMonth + 1; ++$i) {
                 $date = Carbon::createFromDate($first->year, $first->month, $i);
                 $dateString = $date->toDateString();
-                $dayOfWeek = $date->dayOfWeek;
+                $dayOfWeek = $date->dayOfWeekIso;
                 $dayString = strtoupper($date->shortEnglishDayOfWeek);
                 $dayDate = $date->day;
-                if ($dayOfWeek == 0 || $dayOfWeek == 6) {
+                if ($dayOfWeek == 6 || $dayOfWeek == 7) {
                     $calendar[$dateString] = ['cost' => 0, 'request' => 0, 'weekend' => true, 'date' => "$dayString, $dayDate"];
                 } else {
                     $calendar[$dateString] = ['cost' => 0, 'request' => 0, 'weekend' => false, 'date' => "$dayString, $dayDate"];
                 }
             }
 
-            if($first->dayOfWeek > 1) {
-                $monday = $first->subDays($first->dayOfWeek-1);
+            if($first->dayOfWeekIso > 1) {
+                $monday = $first->subDays($first->dayOfWeekIso-1);
                 for($i=$monday->day; $i < $monday->daysInMonth + 1; ++$i) {
                     $prevDate = Carbon::createFromDate($monday->year, $monday->month, $i);
                     $dateString = $prevDate->toDateString();
@@ -284,7 +281,7 @@ class ApiController extends Controller
                 for($i=1; $i < Carbon::now()->day + 1; ++$i) {
                     $prevDateInMonth = Carbon::createFromDate($today->year, $today->month, $i);
                     $dateString = $prevDateInMonth->toDateString();
-                    $dayOfWeek = $prevDateInMonth->dayOfWeek;
+                    $dayOfWeek = $prevDateInMonth->dayOfWeekIso;
                     $dayString = strtoupper($prevDateInMonth->shortEnglishDayOfWeek);
                     $dayDate = $prevDateInMonth->day;
                     if ($dayOfWeek == 0 || $dayOfWeek == 6) {
@@ -296,8 +293,8 @@ class ApiController extends Controller
             }
 
             $last = Carbon::createFromDate($today->year, $today->month, $today->daysInMonth);
-            if($last->dayOfWeek < 6) {
-                $sunday = $last->addDays(7 - $last->dayOfWeek);
+            if($last->dayOfWeekIso < 7) {
+                $sunday = $last->addDays(7 - $last->dayOfWeekIso);
                 for($i=1; $i < $sunday->day + 1; ++$i) {
                     $nextDate = Carbon::createFromDate($sunday->year, $sunday->month, $i);
                     $dateString = $nextDate->toDateString();
