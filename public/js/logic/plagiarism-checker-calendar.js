@@ -53,7 +53,6 @@ function getCalendar(data) {
         url: url,
         data: { year: dateSplited[0], month: dateSplited[1], day: 1, ...data, },
         success: (res) => {
-            console.log(res.data)
             $(".calendar").html("")
             const nowDateRes = res.data.calendar;
             var nowDate = [];

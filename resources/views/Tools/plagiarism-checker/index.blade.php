@@ -178,7 +178,7 @@
                                                     aria-expanded="true" aria-controls="collapseOne">
                                                     <div class="pill b2-700">URL is Valid</div>
                                                 </button>
-                                            </h2>                                            
+                                            </h2>
                                         </div>
                                         <hr>
                                         <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
@@ -290,7 +290,8 @@
                                         <div class="b2-400 b2-m-400">Unik</div>
                                     </div>
                                 </div>
-                                <a href="" id="fullUrl" target="_blank" rel="noopener noreferrer noindex" class="btn button-gray-20 b2-700 full-url-btn"> <u>View full result</u></a>
+                                <a href="" id="fullUrl" target="_blank" rel="noopener noreferrer noindex"
+                                    class="btn button-gray-20 b2-700 full-url-btn"> <u>View full result</u></a>
                             </div>
 
                             <div class="card card-custom mt-10 result-card" style="display: none">
@@ -380,6 +381,11 @@
         const PLAGIARISM_CHECK_URL = "{{ route('api.plagiarism-check') }}"
         const PLAGIARISM_CALENDAR_API_URL = "{{ route('api.plagiarism-check-calendar-logs') }}"
         const USER_ID = "{{ $userId }}"
+    </script>
+    <script>
+        $(function() {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
     </script>
     <script src="{{ asset('/js/logic/plagiarism-checker.js') }}"></script>
     <script src="{{ asset('/js/logic/plagiarism-checker-calendar.js') }}"></script>

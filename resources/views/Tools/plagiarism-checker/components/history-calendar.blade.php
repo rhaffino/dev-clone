@@ -13,11 +13,11 @@
                     </label>
                 </div>
                 <div class="right-menu">
-                    <label class="button-container">
+                    <label class="button-container" data-toggle="tooltip" data-placement="top" title="Team usage">
                         <input class="calendar-btn" type="radio" name="calendar-type" value="all" checked>
                         <span class=""><i class='bx bxs-group'></i></span>
                     </label>
-                    <label class="button-container">
+                    <label class="button-container" data-toggle="tooltip" data-placement="top" title="Account usage">
                         <input class="calendar-btn" type="radio" name="calendar-type" value="user">
                         <span class=""><i class='bx bxs-user'></i></span>
                     </label>

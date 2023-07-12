@@ -176,6 +176,10 @@ button.radio,
             }
         }
     }
+    &-container {
+        max-height: 400px;
+        overflow: auto;
+    }
 }
 
 .highlight-red {
