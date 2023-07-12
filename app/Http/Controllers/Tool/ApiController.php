@@ -312,18 +312,9 @@ class ApiController extends Controller
                 $userId = explode('-', $userId)[0];
                 $logs->where('user_id', $userId);
             }
-            if (isset($prevDate) && isset($nextDate)) {
-                $logs = $logs->whereBetween('created_at', [$prevDate->toDateString(), $nextDate->toDateString()])
-                    ->get();
-            } else if (isset($prevDate)) {
-                $logs = $logs->where('created_at', '>=', $prevDate->toDateString())
-                    ->get();
-            } else if (isset($nextDate)) {
-                $logs = $logs->where('created_at', '<=', $nextDate->toDateString())
-                    ->get();
-            } else {
-                $logs = $logs->get();
-            }
+            
+            $logs = $logs->whereBetween('created_at', [array_key_first($calendar), array_key_last($calendar)])
+                ->get();
             
             foreach ($logs as $log) {
                 $createdAt = date_format($log->created_at, "Y-m-d");
