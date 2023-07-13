@@ -1,6 +1,6 @@
 var WORDS_LENGTH = 0
 var TOP_DENSITY = 0
-
+let results, querywords;
 function checkUrl(url) {
     try {
         let _url = new URL(url)
@@ -64,6 +64,7 @@ const radioButtons = document.querySelectorAll('input[type="radio"][name="densit
 const fontSizeButtons = document.querySelectorAll('input[type="radio"][name="font-size"]');
 const resultTypeButtons = document.querySelectorAll('input[type="radio"][name="results"]');
 const historyTypeButtons = document.querySelectorAll('input[type="radio"][name="history"]');
+const resultSizeButtons = document.querySelectorAll('input[type="radio"][name="result-size"]');
 
 $("#top1").show();
 $("#top2").hide();
@@ -174,6 +175,23 @@ historyTypeButtons.forEach((btn) => {
             $("#history-list").show()
             $("#history-calendar").hide()
         }
+    });
+});
+
+// function for change size of result
+resultSizeButtons.forEach((btn) => {
+    btn.addEventListener('change', (event) => {
+        const selectedValue = event.target.value;
+
+        let count = 0
+        $(".result-container").html("")
+
+        results.forEach((result) => {
+            if (count < parseInt(selectedValue)) {
+                $(".result-container").append(resultCards(querywords, result));
+            }
+            count++;
+        });
     });
 });
 
@@ -525,10 +543,13 @@ $("#button-checker").on("click", function () {
 
                 $('.result-input').append(textareaContent)
                 $('.result-input').show()
+                $('.url-mode-container').hide()
                 $('#text-check').hide()
 
-                res.data.result.forEach((result) => {
-                    $(".result-container").append(resultCards(res.data.querywords, result));
+                results = res.data.result
+                querywords = res.data.querywords
+                results.forEach((result) => {
+                    $(".result-container").append(resultCards(querywords, result));
                 });
             } else {
                 toastr.error(res.message)

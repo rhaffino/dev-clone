@@ -248,7 +248,7 @@
                             {{-- END TEXT MODE --}}
 
                             {{-- RESULT --}}
-                            <div class="card card-custom mt-10 overview py-3 result-card plagiarism-result"
+                            <div class="card card-custom overview py-3 result-card plagiarism-result"
                                 style="display: none">
                                 <div
                                     class="px-4 py-3 d-flex align-items-center justify-content-between b2-400 text-dark-60">
@@ -294,37 +294,33 @@
                                     class="btn button-gray-20 b2-700 full-url-btn"> <u>View full result</u></a>
                             </div>
 
-                            <div class="card card-custom mt-10 result-card" style="display: none">
+                            <div class="card card-custom mt-10 result-card plagiarism-result" style="display: none">
                                 <div
                                     class="px-4 py-3 d-flex align-items-center justify-content-between b2-400 text-dark-60">
                                     <div class="d-flex radio-tab-container-2 rounded-sm overflow-hidden">
                                         <label class="radio-tab">
-                                            <input type="radio" name="words" checked>
+                                            <input value="Infinity" checked type="radio" name="result-size" checked>
                                             <span class="b2-700">ALL</span>
                                         </label>
                                         <label class="radio-tab">
-                                            <input type="radio" name="words">
-                                            <span class="b2-700">1</span>
-                                        </label>
-                                        <label class="radio-tab">
-                                            <input type="radio" name="words">
-                                            <span class="b2-700">2</span>
-                                        </label>
-                                        <label class="radio-tab">
-                                            <input type="radio" name="words">
-                                            <span class="b2-700">3</span>
-                                        </label>
-                                        <label class="radio-tab">
-                                            <input type="radio" name="words">
-                                            <span class="b2-700">4</span>
-                                        </label>
-                                        <label class="radio-tab">
-                                            <input type="radio" name="words">
+                                            <input value="5" type="radio" name="result-size">
                                             <span class="b2-700">5</span>
                                         </label>
+                                        <label class="radio-tab">
+                                            <input value="10" type="radio" name="result-size">
+                                            <span class="b2-700">10</span>
+                                        </label>
+                                        <label class="radio-tab">
+                                            <input value="20" type="radio" name="result-size">
+                                            <span class="b2-700">20</span>
+                                        </label>
+                                        <label class="radio-tab">
+                                            <input value="50" type="radio" name="result-size">
+                                            <span class="b2-700">50</span>
+                                        </label>                                        
                                     </div>
 
-                                    <div class="d-flex radio-tab-container-2 rounded-sm overflow-hidden">
+                                    {{-- <div class="d-flex radio-tab-container-2 rounded-sm overflow-hidden">
                                         <label class="radio-tab">
                                             <input type="radio" name="words" checked>
                                             <span class="b2-700">
@@ -337,7 +333,7 @@
                                                 <i class='bx bx-collapse-vertical'></i>
                                             </span>
                                         </label>
-                                    </div>
+                                    </div> --}}
                                 </div>
                             </div>
 

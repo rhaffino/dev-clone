@@ -153,6 +153,19 @@ button.radio,
     background-color: white;
     max-height: 400px;
     overflow-y: auto;
+
+    &::-webkit-scrollbar {
+        width: 0.5em;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: map.get($colors, "light-20");
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: map.get($colors, "dark-20");
+        border-radius: 8px;
+    }
 }
 
 .history {
@@ -179,6 +192,18 @@ button.radio,
     &-container {
         max-height: 400px;
         overflow: auto;
+        &::-webkit-scrollbar {
+            width: 0.5em;
+        }
+
+        &::-webkit-scrollbar-track {
+            background-color: map.get($colors, "light-20");
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: map.get($colors, "dark-20");
+            border-radius: 8px;
+        }
     }
 }
 
@@ -263,8 +288,20 @@ button.radio,
         display: flex;
         gap: 12px;
         flex-direction: column;
-        max-height: 600px;
+        max-height: 420px;
         overflow: auto;
+        &::-webkit-scrollbar {
+            width: 0.5em;
+        }
+
+        &::-webkit-scrollbar-track {
+            background-color: map.get($colors, "light-20");
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: map.get($colors, "dark-20");
+            border-radius: 8px;
+        }
     }
 
     .index-pill {
