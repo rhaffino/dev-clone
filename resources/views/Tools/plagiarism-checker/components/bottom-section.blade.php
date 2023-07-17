@@ -13,7 +13,7 @@
                             feature. With these updates and additional features, you don't have to worry if your writing
                             gets lost when a technical problem occurs. Your writing would be saved safely on our system.
                             It's time to write securely for better writing results.</p>
-                        <a href="#" class="text-primary-70 b2-700 b2-m-700 text-underline">Notification center</a>
+                        <a href="https://cmlabs.co/en-id/notification" class="text-primary-70 b2-700 b2-m-700 text-underline">Notification center</a>
                     </div>
                 </div>
 
@@ -24,7 +24,7 @@
                                 <h2 class="h6-700 h6-m-700">SEO Services</h2>
                                 <p class="b2-400 b2-m-400">Special SEO service package at the most reasonable price</p>
                             </div>
-                            <a href="" class="btn button-primary-130 b1-400 b1-m-400">Explore now</a>
+                            <a href="https://cmlabs.co/en-id/pricing/seo-services" class="btn button-primary-130 b1-400 b1-m-400">Explore now</a>
                         </div>
                     </div>
                     <div class="col-6">
@@ -34,7 +34,7 @@
                                 <p class="b2-400 b2-m-400">Get a personalized SEO service and give your business a
                                     treat.</p>
                             </div>
-                            <a href="" class="btn button-primary-130 b1-400 b1-m-400">Explore now</a>
+                            <a href="https://cmlabs.co/en-id/pricing/media-buying" class="btn button-primary-130 b1-400 b1-m-400">Explore now</a>
                         </div>
                     </div>
                 </div>
@@ -46,7 +46,7 @@
                                 <h2 class="h6-700 h6-m-700">SEO Content Writing</h2>
                                 <p class="b2-400 b2-m-400">Special SEO service package at the most reasonable price</p>
                             </div>
-                            <a href="" class="btn button-primary-130 b1-400 b1-m-400">Explore now</a>
+                            <a href="https://cmlabs.co/en-id/pricing/content-writing" class="btn button-primary-130 b1-400 b1-m-400">Explore now</a>
                         </div>
                     </div>
                     <div class="col-4">
@@ -56,7 +56,7 @@
                                 <p class="b2-400 b2-m-400">Get a personalized SEO service and give your business a
                                     treat.</p>
                             </div>
-                            <a href="" class="btn button-primary-130 b1-400 b1-m-400">Explore now</a>
+                            <a href="https://cmlabs.co/en-id/pricing/political-campaign" class="btn button-primary-130 b1-400 b1-m-400">Explore now</a>
                         </div>
                     </div>
                     <div class="col-4">
@@ -66,7 +66,7 @@
                                 <p class="b2-400 b2-m-400">Get a personalized SEO service and give your business a
                                     treat.</p>
                             </div>
-                            <a href="" class="btn button-primary-130 b1-400 b1-m-400">Explore now</a>
+                            <a href="https://cmlabs.co/en-id/pricing/media-buying" class="btn button-primary-130 b1-400 b1-m-400">Explore now</a>
                         </div>
                     </div>
                 </div>
