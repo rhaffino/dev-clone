@@ -58,7 +58,7 @@
                                         <span class=""><i class='bx bxs-calendar'></i></span>
                                     </label>
                                     <label class="button-container">
-                                        <input type="radio" name="history" value="list" checked>
+                                        <input type="radio" name="history" value="list">
                                         <span class=""><i class='bx bxs-file-find'></i></span>
                                     </label>
                                 </div>

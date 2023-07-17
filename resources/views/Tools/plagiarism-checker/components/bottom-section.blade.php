@@ -213,41 +213,41 @@
                     <div class="col-12 mt-6">
                         <div class="row">
                             <div class="col-4">
-                                <div class="resource-card">
+                                <a href="/" class="resource-card">
                                     <div class="card-header p-0 m-0">
                                         <img class="img-fluid w-100" src="{{asset("media/images/resources-example.png")}}" alt="">
                                     </div>
                                     <div class="card-body">
                                         <div class="text-purple-70 b2-700 b2-m-700">UPCOMING EVENT</div>
-                                        <h3 class="h6-700 h-6-m-700">Make Your Website Accessible for Everyone</h3>
+                                        <h3 class="h6-700 h-6-m-700 text-dark-70">Make Your Website Accessible for Everyone</h3>
                                         <p class="m-0 b2-400 b2-m-400 text-gray-90">Aug 24, 2023</p>
                                     </div>
-                                </div>
+                                </a>
                             </div>
                             <div class="col-4">
-                                <div class="resource-card">
+                                <a href="/" class="resource-card">
                                     <div class="card-header p-0 m-0">
                                         <img class="img-fluid w-100" src="{{asset("media/images/resources-example.png")}}" alt="">
                                     </div>
                                     <div class="card-body">
                                         <div class="text-purple-70 b2-700 b2-m-700">SEO TERMS</div>
-                                        <h3 class="h6-700 h-6-m-700">Accelerated Mobile Pages (AMP)</h3>
+                                        <h3 class="h6-700 h-6-m-700 text-dark-70">Accelerated Mobile Pages (AMP)</h3>
                                         <p class="m-0 b2-400 b2-m-400 text-gray-90">24 August 2022</p>
                                     </div>
-                                </div>
+                                </a>
                             </div>
                             <div class="col-4">
-                                <div class="resource-card">
+                                <a href="/" class="resource-card">
                                     <div class="card-header p-0 m-0">
                                         <img class="img-fluid w-100" src="{{asset("media/images/resources-example.png")}}" alt="">
                                     </div>
                                     <div class="card-body">
                                         <div class="text-purple-70 b2-700 b2-m-700">SEO GUIDELINES</div>
-                                        <h3 class="h6-700 h-6-m-700">Google Sandbox: What It Is and How to Get Out of
+                                        <h3 class="h6-700 h-6-m-700 text-dark-70">Google Sandbox: What It Is and How to Get Out of
                                             It</h3>
                                         <p class="m-0 b2-400 b2-m-400 text-gray-90">24 August 2022</p>
                                     </div>
-                                </div>
+                                </a>
                             </div>
                         </div>
                     </div>
