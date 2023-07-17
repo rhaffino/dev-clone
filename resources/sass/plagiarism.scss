@@ -372,3 +372,192 @@ button.radio,
         }
     }
 }
+
+.text-underline {
+    text-decoration: underline;
+}
+
+// bottom section
+.bottom-section {
+    .notification-center-card {
+        display: flex;
+        padding: 25px 16px;
+        align-items: flex-start;
+        gap: 16px;
+        align-self: stretch;
+        border-radius: 6px;
+        background: #f9f9f9;
+        .card-content {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+            flex: 1 0 0;
+        }
+    }
+    .service-card {
+        display: flex;
+        padding: 20px;
+        flex-direction: column;
+        align-items: start;
+        justify-content: space-between;
+        height: 100%;
+        gap: 20px;
+        flex: 1 0 0;
+        border-radius: 12px;
+        background: linear-gradient(
+            318deg,
+            rgba(188, 223, 252, 0.45) 0%,
+            rgba(186, 193, 252, 0.45) 100%
+        );
+        &.opt {
+            background: linear-gradient(
+                218deg,
+                rgba(255, 236, 198, 0.45) 0%,
+                rgba(188, 223, 252, 0.45) 100%
+            );
+        }
+    }
+    .tools-card {
+        display: flex;
+        gap: 12px;
+        .icon-container {
+            display: flex;
+            padding: 4px;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            border-radius: 90px;
+            border: 1px solid var(--variant-70, #a159ed);
+            height: fit-content;
+            color: 1px solid var(--variant-70, #a159ed);
+        }
+        &-body {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        a {
+            color: map.get($colors, "text-dark-70");
+        }
+    }
+    .carousel-indicators {
+        bottom: -48px;
+        opacity: 1;
+    }
+    .carousel-indicators li {
+        width: 8px;
+        height: 8px;
+        border-radius: 8px;
+        background-color: #bcdffc;
+        border-top: 0;
+        border-bottom: 0;
+        opacity: 1;
+    }
+    .carousel-indicators li.active {
+        background-color: #18a0fb;
+        opacity: 1;
+    }
+
+    .resource-card {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        flex: 1 0 0;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0px 0px 45px 0px rgba(0, 89, 149, 0.12);
+        .card-header {
+            height: 160px;
+            align-self: stretch;
+        }
+        .card-body {
+            display: flex;
+            padding: 20px 16px;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 18px;
+            align-self: stretch;
+            background: var(--white, #fff);
+        }
+    }
+
+    .seo-booster-container {
+        display: flex;
+        padding: 25px 50px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        align-self: stretch;
+        .author {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            color: map.get($colors, "gray-100");
+        }
+    }
+
+    .cmlabs-aliance-container {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        align-items: center;
+        .aliance-card {
+            display: flex;
+            padding: 32px 24px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 32px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, #0699f9 0%, #0872b7 100%);
+            &-body {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 8px;
+                align-self: stretch;
+                text-align: center;
+            }
+        }
+    }
+    .storylabs-container {
+        .green-story-labs {
+            color: #358874;
+        }
+        display: flex;
+        padding: 24px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        border-radius: 12px;
+        background: var(--gray-70, #eee);
+        &-head {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            align-self: stretch;
+        }
+        &-body {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 8px;
+            align-self: stretch;
+        }
+        .storylabs-button {
+            display: flex;
+            padding: 4px;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            align-self: stretch;
+            background-color: white;
+            width: 100%;
+        }
+    }
+}

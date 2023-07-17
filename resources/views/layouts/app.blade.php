@@ -101,6 +101,7 @@
                 <!--end::Entry-->
             </div>
             <!--end::Content-->
+            @yield('bottom-content')
             @include('layouts.footernew')
         </div>
         <!--end::Wrapper-->

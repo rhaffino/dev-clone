@@ -195,6 +195,20 @@ resultSizeButtons.forEach((btn) => {
     });
 });
 
+// function for change collapse behavior of result
+document.querySelectorAll('input[type="radio"][name="result-collapse"]').forEach((btn) => {
+    btn.addEventListener('change', (event) => {
+        const selectedValue = event.target.value;
+
+        if (selectedValue == "expand") {
+            $(".result-container").slideDown();
+        } else {
+            $(".result-container").slideUp();
+        }
+    });
+});
+
+
 // function for remove content on text input
 $(".remove-btn").on("click", function () {
     $("textarea").val("");

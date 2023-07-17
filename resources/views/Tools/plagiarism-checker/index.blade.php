@@ -299,7 +299,7 @@
                                     class="px-4 py-3 d-flex align-items-center justify-content-between b2-400 text-dark-60">
                                     <div class="d-flex radio-tab-container-2 rounded-sm overflow-hidden">
                                         <label class="radio-tab">
-                                            <input value="Infinity" checked type="radio" name="result-size" checked>
+                                            <input value="999999" checked type="radio" name="result-size" checked>
                                             <span class="b2-700">ALL</span>
                                         </label>
                                         <label class="radio-tab">
@@ -317,23 +317,23 @@
                                         <label class="radio-tab">
                                             <input value="50" type="radio" name="result-size">
                                             <span class="b2-700">50</span>
-                                        </label>                                        
+                                        </label>
                                     </div>
 
-                                    {{-- <div class="d-flex radio-tab-container-2 rounded-sm overflow-hidden">
+                                    <div class="d-flex radio-tab-container-2 rounded-sm overflow-hidden">
                                         <label class="radio-tab">
-                                            <input type="radio" name="words" checked>
+                                            <input value="expand" type="radio" name="result-collapse" checked>
                                             <span class="b2-700">
                                                 <i class='bx bx-expand-vertical'></i>
                                             </span>
                                         </label>
                                         <label class="radio-tab">
-                                            <input type="radio" name="words">
+                                            <input value="collapse" type="radio" name="result-collapse">
                                             <span class="b2-700">
                                                 <i class='bx bx-collapse-vertical'></i>
                                             </span>
                                         </label>
-                                    </div> --}}
+                                    </div>
                                 </div>
                             </div>
 
@@ -370,6 +370,10 @@
             </div>
         </div>
     @endif
+@endsection
+
+@section('bottom-content')
+    @include('Tools.plagiarism-checker.components.bottom-section')
 @endsection
 
 @push('script')
