@@ -420,7 +420,7 @@ button.radio,
     }
     .tools-card {
         display: flex;
-        gap: 12px;
+        gap: 12px;        
         .icon-container {
             display: flex;
             padding: 4px;
@@ -430,6 +430,7 @@ button.radio,
             border-radius: 90px;
             border: 1px solid var(--variant-70, #a159ed);
             height: fit-content;
+            width: fit-content;
             color: 1px solid var(--variant-70, #a159ed);
         }
         &-body {
@@ -439,6 +440,10 @@ button.radio,
         }
         a {
             color: map.get($colors, "text-dark-70");
+        }
+
+        @media screen and (max-width: 991px) {
+            flex-direction: column;
         }
     }
     .carousel-indicators {

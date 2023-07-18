@@ -18,7 +18,7 @@
                 </div>
 
                 <div class="row mt-8">
-                    <div class="col-6">
+                    <div class="col-12 col-lg-6 mt-4 mt-lg-0">
                         <div class="service-card">
                             <div class="text-primary-130">
                                 <h2 class="h6-700 h6-m-700">SEO Services</h2>
@@ -27,7 +27,7 @@
                             <a href="https://cmlabs.co/en-id/pricing/seo-services" class="btn button-primary-130 b1-400 b1-m-400">Explore now</a>
                         </div>
                     </div>
-                    <div class="col-6">
+                    <div class="col-12 col-lg-6 mt-4 mt-lg-0">
                         <div class="service-card opt">
                             <div class="text-primary-130">
                                 <h2 class="h6-700 h6-m-700">Digital Media Buying</h2>
@@ -39,8 +39,8 @@
                     </div>
                 </div>
 
-                <div class="row mt-8">
-                    <div class="col-4">
+                <div class="row mt-4 mt-lg-8">
+                    <div class="col-12 col-lg-4 mt-4 mt-lg-0">
                         <div class="service-card">
                             <div class="text-primary-130">
                                 <h2 class="h6-700 h6-m-700">SEO Content Writing</h2>
@@ -49,7 +49,7 @@
                             <a href="https://cmlabs.co/en-id/pricing/content-writing" class="btn button-primary-130 b1-400 b1-m-400">Explore now</a>
                         </div>
                     </div>
-                    <div class="col-4">
+                    <div class="col-12 col-lg-4 mt-4 mt-lg-0">
                         <div class="service-card opt">
                             <div class="text-primary-130">
                                 <h2 class="h6-700 h6-m-700">SEO Political Campaign</h2>
@@ -59,7 +59,7 @@
                             <a href="https://cmlabs.co/en-id/pricing/political-campaign" class="btn button-primary-130 b1-400 b1-m-400">Explore now</a>
                         </div>
                     </div>
-                    <div class="col-4">
+                    <div class="col-12 col-lg-4 mt-4 mt-lg-0">
                         <div class="service-card opt">
                             <div class="text-primary-130">
                                 <h2 class="h6-700 h6-m-700">Backlink Services</h2>
@@ -212,7 +212,7 @@
                     </div>
                     <div class="col-12 mt-6">
                         <div class="row">
-                            <div class="col-4">
+                            <div class="col-12 col-lg-4">
                                 <a href="/" class="resource-card">
                                     <div class="card-header p-0 m-0">
                                         <img class="img-fluid w-100" src="{{asset("media/images/resources-example.png")}}" alt="">
@@ -224,7 +224,7 @@
                                     </div>
                                 </a>
                             </div>
-                            <div class="col-4">
+                            <div class="col-12 col-lg-4">
                                 <a href="/" class="resource-card">
                                     <div class="card-header p-0 m-0">
                                         <img class="img-fluid w-100" src="{{asset("media/images/resources-example.png")}}" alt="">
@@ -236,7 +236,7 @@
                                     </div>
                                 </a>
                             </div>
-                            <div class="col-4">
+                            <div class="col-12 col-lg-4">
                                 <a href="/" class="resource-card">
                                     <div class="card-header p-0 m-0">
                                         <img class="img-fluid w-100" src="{{asset("media/images/resources-example.png")}}" alt="">
