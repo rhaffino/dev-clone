@@ -2,13 +2,19 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\PlagiarismCheckLog;
 use GuzzleHttp\Client;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Date;
 use Illuminate\Support\Facades\Queue;
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Crypt;
 use App\Http\Controllers\HomeController;
+use PhpOffice\PhpSpreadsheet\Spreadsheet;
+use PhpOffice\PhpSpreadsheet\Writer\Csv;
+use PhpOffice\PhpSpreadsheet\Style\Border;
 
 class ToolsController extends Controller
 {
@@ -310,6 +316,68 @@ class ToolsController extends Controller
         $is_maintenance = in_array('keyword-permutation', explode(',', env('TOOLS_MAINTENANCE'))) && env('APP_ENV') === 'production';
 
         return view('Tools/keywordpermutation', compact('local', 'dataID', 'dataEN', 'is_maintenance'));
+    }
+
+    public function plagiarismChecker($lang)
+    {
+        if (Auth::check()  && (Auth::check() ? Auth::user()->user_role_id == 3 : false)) {
+            $data = [];
+            App::setLocale($lang);
+            $data['dataID'] = $this->HomeController->getBlogWordpressId();
+            $data['dataEN'] = $this->HomeController->getBlogWordpressEn();
+            $data['local'] = App::getLocale();
+            $data['is_maintenance'] = in_array('plagiarism-checker', explode(',', env('TOOLS_MAINTENANCE'))) && env('APP_ENV') === 'production';
+            
+            // Get user data
+            $data['userId'] = Crypt::encrypt(Auth::user()->id . '-' . time());
+
+            // Get user plagiarism check logs
+            $data['userLogs'] = PlagiarismCheckLog::where('user_id', Auth::user()->id)
+                ->get();
+            $data['userSummaryLogs'] = PlagiarismCheckLog::selectRaw("COUNT(id) as 'user_requests', SUM(word_count) as 'total_words', SUM(cost) as 'total_cost'")
+                ->where('user_id', Auth::user()->id)
+                ->first();
+            $data['cummulativeLogs'] = PlagiarismCheckLog::get();
+            $data['cummulativeSummaryLogs'] = PlagiarismCheckLog::selectRaw("COUNT(id) as 'team_requests', COUNT(DISTINCT(user_id)) as 'total_users', SUM(word_count) as 'total_words', SUM(cost) as 'total_cost'")
+                ->first();
+
+            return view('Tools/plagiarism-checker/index', $data);
+        } else {
+            return redirect('/');
+        }
+    }
+
+    public function downloadPlagiarismCheckLogs($lang)
+    {
+        if (Auth::check()  && (Auth::check() ? Auth::user()->user_role_id == 3 : false)) {
+            $logs = PlagiarismCheckLog::get();
+            // Preparing csv file
+            $fileName = "plagiarism-check-logs-" . time() . ".csv";
+            $spreadsheet = new Spreadsheet();
+            $sheet = $spreadsheet->getActiveSheet();
+            $sheet->setCellValue('A1', 'Content');
+            $sheet->setCellValue('B1', 'Word Count');
+            $sheet->setCellValue('C1', 'Cost');
+            $sheet->setCellValue('D1', 'Result URL');
+            $sheet->setCellValue('E1', 'Created at');
+
+            // Insert data to csv
+            $index = 2;
+            foreach ($logs as $log) {
+                $sheet->setCellValue("A$index", $log->content);
+                $sheet->setCellValue("B$index", "$log->word_count words");
+                $sheet->setCellValue("C$index", "\$$log->cost");
+                $sheet->setCellValue("D$index", $log->url);
+                $sheet->setCellValue("E$index", date_format(date_add($log->created_at, date_interval_create_from_date_string('7 hours')), "l, d F Y H:i"));
+                $index++;
+            }
+
+            $csv = new Csv($spreadsheet);
+            $csv->save($fileName);
+            return response()->download($fileName)->deleteFileAfterSend();
+        } else {
+            return redirect('/');
+        }
     }
 
     public function englishVersion()

@@ -13,3 +13,7 @@ const mix = require('laravel-mix');
 
 mix.js('resources/js/app.js', 'public/js')
     .sass('resources/sass/app.scss', 'public/css');
+
+mix.sass('resources/sass/plagiarism.scss', 'public/assets/css/plagiarism.css').options({
+    autoprefixer: { remove: false }
+});
