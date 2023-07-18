@@ -420,7 +420,8 @@ button.radio,
     }
     .tools-card {
         display: flex;
-        gap: 12px;        
+        gap: 12px;
+        height: 100%;
         .icon-container {
             display: flex;
             padding: 4px;
@@ -437,6 +438,8 @@ button.radio,
             display: flex;
             flex-direction: column;
             gap: 8px;
+            justify-content: space-between;
+            height: 100%;
         }
         a {
             color: map.get($colors, "text-dark-70");
