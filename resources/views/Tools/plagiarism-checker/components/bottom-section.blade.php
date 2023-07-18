@@ -18,7 +18,7 @@
                 </div>
 
                 <div class="row mt-8">
-                    <div class="col-6">
+                    <div class="col-12 col-lg-6 mt-4 mt-lg-0">
                         <div class="service-card">
                             <div class="text-primary-130">
                                 <h2 class="h6-700 h6-m-700">SEO Services</h2>
@@ -27,7 +27,7 @@
                             <a href="https://cmlabs.co/en-id/pricing/seo-services" class="btn button-primary-130 b1-400 b1-m-400">Explore now</a>
                         </div>
                     </div>
-                    <div class="col-6">
+                    <div class="col-12 col-lg-6 mt-4 mt-lg-0">
                         <div class="service-card opt">
                             <div class="text-primary-130">
                                 <h2 class="h6-700 h6-m-700">Digital Media Buying</h2>
@@ -39,8 +39,8 @@
                     </div>
                 </div>
 
-                <div class="row mt-8">
-                    <div class="col-4">
+                <div class="row mt-4 mt-lg-8">
+                    <div class="col-12 col-lg-4 mt-4 mt-lg-0">
                         <div class="service-card">
                             <div class="text-primary-130">
                                 <h2 class="h6-700 h6-m-700">SEO Content Writing</h2>
@@ -49,7 +49,7 @@
                             <a href="https://cmlabs.co/en-id/pricing/content-writing" class="btn button-primary-130 b1-400 b1-m-400">Explore now</a>
                         </div>
                     </div>
-                    <div class="col-4">
+                    <div class="col-12 col-lg-4 mt-4 mt-lg-0">
                         <div class="service-card opt">
                             <div class="text-primary-130">
                                 <h2 class="h6-700 h6-m-700">SEO Political Campaign</h2>
@@ -59,7 +59,7 @@
                             <a href="https://cmlabs.co/en-id/pricing/political-campaign" class="btn button-primary-130 b1-400 b1-m-400">Explore now</a>
                         </div>
                     </div>
-                    <div class="col-4">
+                    <div class="col-12 col-lg-4 mt-4 mt-lg-0">
                         <div class="service-card opt">
                             <div class="text-primary-130">
                                 <h2 class="h6-700 h6-m-700">Backlink Services</h2>
@@ -75,135 +75,7 @@
                         <h2 class="h6-700">Other SEO Tools</h2>
                     </div>
                     <div class="col-12 mt-6">
-                        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                            <ol class="carousel-indicators">
-                                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                            </ol>
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <div class="row">
-                                        <div class="col-4">
-                                            <div class="tools-card">
-                                                <div class="icon-container">
-                                                    <i class="bx bx-globe bx-md text-purple-70"></i>
-                                                </div>
-                                                <div class="tools-card-body">
-                                                    <h3 class="h6-700 h6-m-700">Link Analyzer</h3>
-                                                    <p class="s-400 text-dark-40">Track all the URLs that link to your site from external or internal. Input the link you want to review on the link analyzer, manage the list and get a better SEO performance.</p>
-                                                    <a href="" class="mt-8 b2-700 b2-m-700 text-dark-70"><u>LAUNCH</u> <i class='bx bx-right-arrow-alt'></i></a>
-                                                </div>
-                                            </div>
-                                        </div>                                        
-                                        <div class="col-4">
-                                            <div class="tools-card">
-                                                <div class="icon-container">
-                                                    <i class="bx bx-globe bx-md text-purple-70"></i>
-                                                </div>
-                                                <div class="tools-card-body">
-                                                    <h3 class="h6-700 h6-m-700">Link Analyzer</h3>
-                                                    <p class="s-400 text-dark-40">Track all the URLs that link to your site from external or internal. Input the link you want to review on the link analyzer, manage the list and get a better SEO performance.</p>
-                                                    <a href="" class="mt-8 b2-700 b2-m-700 text-dark-70"><u>LAUNCH</u> <i class='bx bx-right-arrow-alt'></i></a>
-                                                </div>
-                                            </div>
-                                        </div>                                        
-                                        <div class="col-4">
-                                            <div class="tools-card">
-                                                <div class="icon-container">
-                                                    <i class="bx bx-globe bx-md text-purple-70"></i>
-                                                </div>
-                                                <div class="tools-card-body">
-                                                    <h3 class="h6-700 h6-m-700">Link Analyzer</h3>
-                                                    <p class="s-400 text-dark-40">Track all the URLs that link to your site from external or internal. Input the link you want to review on the link analyzer, manage the list and get a better SEO performance.</p>
-                                                    <a href="" class="mt-8 b2-700 b2-m-700 text-dark-70"><u>LAUNCH</u> <i class='bx bx-right-arrow-alt'></i></a>
-                                                </div>
-                                            </div>
-                                        </div>                                        
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <div class="row">
-                                        <div class="col-4">
-                                            <div class="tools-card">
-                                                <div class="icon-container">
-                                                    <i class="bx bx-globe bx-md text-purple-70"></i>
-                                                </div>
-                                                <div class="tools-card-body">
-                                                    <h3 class="h6-700 h6-m-700">Link Analyzer</h3>
-                                                    <p class="s-400 text-dark-40">Track all the URLs that link to your site from external or internal. Input the link you want to review on the link analyzer, manage the list and get a better SEO performance.</p>
-                                                    <a href="" class="mt-8 b2-700 b2-m-700 text-dark-70"><u>LAUNCH</u> <i class='bx bx-right-arrow-alt'></i></a>
-                                                </div>
-                                            </div>
-                                        </div>                                        
-                                        <div class="col-4">
-                                            <div class="tools-card">
-                                                <div class="icon-container">
-                                                    <i class="bx bx-globe bx-md text-purple-70"></i>
-                                                </div>
-                                                <div class="tools-card-body">
-                                                    <h3 class="h6-700 h6-m-700">Link Analyzer</h3>
-                                                    <p class="s-400 text-dark-40">Track all the URLs that link to your site from external or internal. Input the link you want to review on the link analyzer, manage the list and get a better SEO performance.</p>
-                                                    <a href="" class="mt-8 b2-700 b2-m-700 text-dark-70"><u>LAUNCH</u> <i class='bx bx-right-arrow-alt'></i></a>
-                                                </div>
-                                            </div>
-                                        </div>                                        
-                                        <div class="col-4">
-                                            <div class="tools-card">
-                                                <div class="icon-container">
-                                                    <i class="bx bx-globe bx-md text-purple-70"></i>
-                                                </div>
-                                                <div class="tools-card-body">
-                                                    <h3 class="h6-700 h6-m-700">Link Analyzer</h3>
-                                                    <p class="s-400 text-dark-40">Track all the URLs that link to your site from external or internal. Input the link you want to review on the link analyzer, manage the list and get a better SEO performance.</p>
-                                                    <a href="" class="mt-8 b2-700 b2-m-700 text-dark-70"><u>LAUNCH</u> <i class='bx bx-right-arrow-alt'></i></a>
-                                                </div>
-                                            </div>
-                                        </div>                                        
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <div class="row">
-                                        <div class="col-4">
-                                            <div class="tools-card">
-                                                <div class="icon-container">
-                                                    <i class="bx bx-globe bx-md text-purple-70"></i>
-                                                </div>
-                                                <div class="tools-card-body">
-                                                    <h3 class="h6-700 h6-m-700">Link Analyzer</h3>
-                                                    <p class="s-400 text-dark-40">Track all the URLs that link to your site from external or internal. Input the link you want to review on the link analyzer, manage the list and get a better SEO performance.</p>
-                                                    <a href="" class="mt-8 b2-700 b2-m-700 text-dark-70"><u>LAUNCH</u> <i class='bx bx-right-arrow-alt'></i></a>
-                                                </div>
-                                            </div>
-                                        </div>                                        
-                                        <div class="col-4">
-                                            <div class="tools-card">
-                                                <div class="icon-container">
-                                                    <i class="bx bx-globe bx-md text-purple-70"></i>
-                                                </div>
-                                                <div class="tools-card-body">
-                                                    <h3 class="h6-700 h6-m-700">Link Analyzer</h3>
-                                                    <p class="s-400 text-dark-40">Track all the URLs that link to your site from external or internal. Input the link you want to review on the link analyzer, manage the list and get a better SEO performance.</p>
-                                                    <a href="" class="mt-8 b2-700 b2-m-700 text-dark-70"><u>LAUNCH</u> <i class='bx bx-right-arrow-alt'></i></a>
-                                                </div>
-                                            </div>
-                                        </div>                                        
-                                        <div class="col-4">
-                                            <div class="tools-card">
-                                                <div class="icon-container">
-                                                    <i class="bx bx-globe bx-md text-purple-70"></i>
-                                                </div>
-                                                <div class="tools-card-body">
-                                                    <h3 class="h6-700 h6-m-700">Link Analyzer</h3>
-                                                    <p class="s-400 text-dark-40">Track all the URLs that link to your site from external or internal. Input the link you want to review on the link analyzer, manage the list and get a better SEO performance.</p>
-                                                    <a href="" class="mt-8 b2-700 b2-m-700 text-dark-70"><u>LAUNCH</u> <i class='bx bx-right-arrow-alt'></i></a>
-                                                </div>
-                                            </div>
-                                        </div>                                        
-                                    </div>
-                                </div>
-                            </div>                            
-                        </div>
+                        @include("Tools.plagiarism-checker.components.other-tools")
                     </div>
                 </div>
                 <div class="row mt-16">
@@ -212,7 +84,7 @@
                     </div>
                     <div class="col-12 mt-6">
                         <div class="row">
-                            <div class="col-4">
+                            <div class="col-12 col-lg-4">
                                 <a href="/" class="resource-card">
                                     <div class="card-header p-0 m-0">
                                         <img class="img-fluid w-100" src="{{asset("media/images/resources-example.png")}}" alt="">
@@ -224,7 +96,7 @@
                                     </div>
                                 </a>
                             </div>
-                            <div class="col-4">
+                            <div class="col-12 col-lg-4">
                                 <a href="/" class="resource-card">
                                     <div class="card-header p-0 m-0">
                                         <img class="img-fluid w-100" src="{{asset("media/images/resources-example.png")}}" alt="">
@@ -236,7 +108,7 @@
                                     </div>
                                 </a>
                             </div>
-                            <div class="col-4">
+                            <div class="col-12 col-lg-4">
                                 <a href="/" class="resource-card">
                                     <div class="card-header p-0 m-0">
                                         <img class="img-fluid w-100" src="{{asset("media/images/resources-example.png")}}" alt="">
