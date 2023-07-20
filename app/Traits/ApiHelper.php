@@ -73,7 +73,7 @@ trait ApiHelper
         try {
             $data = [];
             $apiPost = "http://www.copyscape.com/api/?u=" . env('COPYSCAPE_USERNAME') . "&k=" . env('COPYSCAPE_API_KEY') . "&o=csearch&f=json&c=10";
-            if (env('APP_ENV') != 'production') {
+            if (env('APP_ENV') != 'production' || env('APP_ENV') != 'development') {
                 $apiPost .= "&x=1";
             }
             if (filter_var($text, FILTER_VALIDATE_URL) == true) {
