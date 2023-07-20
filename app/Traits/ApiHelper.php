@@ -72,14 +72,19 @@ trait ApiHelper
     {
         try {
             $data = [];
-            $apiPost = "http://www.copyscape.com/api?u=" . env('COPYSCAPE_USERNAME') . "&k=" . env('COPYSCAPE_API_KEY') . "&o=csearch&f=json&c=10";
-            if (env('APP_ENV') != 'production' && env('APP_ENV') != 'development') {
-                $apiPost .= "&x=1";
-            }
+            $apiPost = "";
             $dataPost = [];
             if (filter_var($text, FILTER_VALIDATE_URL) == true) {
+                $apiPost = "http://www.copyscape.com/api?u=" . env('COPYSCAPE_USERNAME') . "&k=" . env('COPYSCAPE_API_KEY') . "&o=csearch&f=json&c=10";
+                if (env('APP_ENV') != 'production' && env('APP_ENV') != 'development') {
+                    $apiPost .= "&x=1";
+                }
                 $apiPost .= "&q=" . urlencode($text);
             } else {
+                $apiPost = "http://www.copyscape.com/api/?u=" . env('COPYSCAPE_USERNAME') . "&k=" . env('COPYSCAPE_API_KEY') . "&o=csearch&f=json&c=10";
+                if (env('APP_ENV') != 'production' && env('APP_ENV') != 'development') {
+                    $apiPost .= "&x=1";
+                }
                 $dataPost = [
                     "e" => "UTF-8",
                     "t" => $text,
@@ -89,7 +94,9 @@ trait ApiHelper
             $options['form_params'] = $dataPost;
             $response = $this->client->request('POST', $apiPost, $options);
             $data['response'] = json_decode($response->getBody()->getContents());
-            
+            if (isset($data['response']->error) && $data['response']->error != "") {
+                throw new \ErrorException($data['response']->error);
+            }
             $log = new PlagiarismCheckLog;
             $log->user_id = $id;
             $log->content = $text;
