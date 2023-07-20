@@ -253,19 +253,6 @@ class ApiController extends Controller
             $isTodayMonth = $today->month == Carbon::now()->month && $today->year == Carbon::now()->year;
             $calendar = [];
 
-            for($i = $isTodayMonth ? Carbon::now()->day + 1 : 1; $i < $first->daysInMonth + 1; ++$i) {
-                $date = Carbon::createFromDate($first->year, $first->month, $i);
-                $dateString = $date->toDateString();
-                $dayOfWeek = $date->dayOfWeekIso;
-                $dayString = strtoupper($date->shortEnglishDayOfWeek);
-                $dayDate = $date->day;
-                if ($dayOfWeek == 6 || $dayOfWeek == 7) {
-                    $calendar[$dateString] = ['cost' => 0, 'request' => 0, 'weekend' => true, 'date' => "$dayString, $dayDate"];
-                } else {
-                    $calendar[$dateString] = ['cost' => 0, 'request' => 0, 'weekend' => false, 'date' => "$dayString, $dayDate"];
-                }
-            }
-
             if($first->dayOfWeekIso > 1) {
                 $monday = $first->subDays($first->dayOfWeekIso-1);
                 for($i=$monday->day; $i < $monday->daysInMonth + 1; ++$i) {
@@ -289,6 +276,20 @@ class ApiController extends Controller
                     } else {
                         $calendar[$dateString] = ['cost' => 0, 'request' => 0, 'weekend' => false, 'date' => "$dayString, $dayDate"];
                     }
+                }
+            }
+
+            $first = Carbon::createFromDate($today->year, $today->month, 1);
+            for($i = $isTodayMonth ? Carbon::now()->day + 1 : 1; $i < $first->daysInMonth + 1; ++$i) {
+                $date = Carbon::createFromDate($first->year, $first->month, $i);
+                $dateString = $date->toDateString();
+                $dayOfWeek = $date->dayOfWeekIso;
+                $dayString = strtoupper($date->shortEnglishDayOfWeek);
+                $dayDate = $date->day;
+                if ($dayOfWeek == 6 || $dayOfWeek == 7) {
+                    $calendar[$dateString] = ['cost' => 0, 'request' => 0, 'weekend' => true, 'date' => "$dayString, $dayDate"];
+                } else {
+                    $calendar[$dateString] = ['cost' => 0, 'request' => 0, 'weekend' => false, 'date' => "$dayString, $dayDate"];
                 }
             }
 

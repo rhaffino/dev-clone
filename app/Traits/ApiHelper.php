@@ -94,6 +94,7 @@ trait ApiHelper
             $log = new PlagiarismCheckLog;
             $log->user_id = $id;
             $log->content = $text;
+            $log->word_count = $data['response']->querywords;
             $log->cost = $data['response']->cost;
             $log->result = $data['response']->result;
             $log->url = $data['response']->allviewurl;
