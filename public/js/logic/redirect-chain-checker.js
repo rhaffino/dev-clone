@@ -181,17 +181,29 @@ function renderAllData(data){
         $('#cta-danger').show();
     }
 
-    for (let redirect of data.redirects) {
+    for (let redirect of data.redirects) {        
         $('#redirect-result').append(
-            RedirectResultTemplate(redirect.url, redirect.status, redirect.date)
+            RedirectResultTemplate(redirect.url, redirect.status, formatDateToUTC7(redirect.date))
         )
     }
 }
 
 function formatDate(date){
-    // Format should be : DD/MM/YYYY HH:ii
-    return `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()} ${date.getHours()}:${date.getMinutes()}`
+  const utcOffset = 7 * 60;
+  const adjustedDate = new Date(date.getTime() + utcOffset * 60 * 1000);
+
+  return `${adjustedDate.getDate()}/${adjustedDate.getMonth() + 1}/${adjustedDate.getFullYear()} ${adjustedDate.getHours()}:${adjustedDate.getMinutes().toString().padStart(2, '0')}`;
 }
+
+function formatDateToUTC7(inputDate) {
+    const [day, month, year, hour, minute] = inputDate.split(/[\/ :]/).map(Number);
+    const localDate = new Date(year, month, day, hour, minute);
+  
+    const utcOffset = 7 * 60; // UTC+7 in minutes
+    const adjustedDate = new Date(localDate.getTime() + utcOffset * 60 * 1000);
+  
+    return `${adjustedDate.getDate()}/${adjustedDate.getMonth() + 1}/${adjustedDate.getFullYear()} ${adjustedDate.getHours()}:${adjustedDate.getMinutes().toString().padStart(2, '0')}`;
+  }
 
 function checkUrl(url) {
     try {
