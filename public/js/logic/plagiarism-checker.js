@@ -520,57 +520,68 @@ function strokeValue(score, category, isReverse) {
 $("#button-checker").on("click", function () {
     let text
 
-    if ($(".url-mode-container").css("display") === "none") {
-        text = $('#text-check').val()
-    } else {
-        text = $('#url-check').val()
-    }
-
-    $.post({
-        url: PLAGIARISM_CHECK_URL,
-        data: {
-            _token: $('meta[name="csrf-token"]').attr('content'),
-            text: text,
-            user_id: USER_ID,
-        },
-        beforeSend: () => {
-            $("#button-checker").prop("disabled", true);
-        },
-        success: (res) => {
-            if (res.statusCode === 200) {
-                // console.log(res.data)
-                let text = res.data.text
-                res.data = res.data.response
-                $("#plagiarismBtn").prop("disabled", false);
-                $("#plagiarismBtn").prop("checked", true);
-                $("#densityBtn").prop("checked", false);
-                $("#estimationCard").hide()
-                $("#fullUrl").prop("href", res.data.allviewurl)
-                showPlagiarism()
-
-                strokeValue(res.data.allpercentmatched, "duplicate", false)
-                strokeValue(100 - res.data.allpercentmatched, "unique", true)
-
-                $("#button-checker").prop("disabled", false);
-
-                var textareaContent = styleMatchedText(text, res.data.alltextmatched)
-
-                $('.result-input').append(textareaContent)
-                $('.result-input').show()
-                $('.url-mode-container').hide()
-                $('#text-check').hide()
-
-                results = res.data.result
-                querywords = res.data.querywords
-                results.forEach((result) => {
-                    $(".result-container").append(resultCards(querywords, result));
-                });
+    Swal.fire({
+        title: 'Error!',
+        text: 'Are u sure want to run the copyscape check?',
+        confirmButtonText: 'Yes',
+        cancelButtonText: 'No',
+        showCancelButton: true,
+        reverseButtons: true
+    }).then((result) => {
+        if (result.isConfirmed) {
+            if ($(".url-mode-container").css("display") === "none") {
+                text = $('#text-check').val()
             } else {
-                toastr.error(res.message)
+                text = $('#url-check').val()
             }
-        },
-        error: (err) => {
-            toastr.error(err.responseJSON.message)
+
+            $.post({
+                url: PLAGIARISM_CHECK_URL,
+                data: {
+                    _token: $('meta[name="csrf-token"]').attr('content'),
+                    text: text,
+                    user_id: USER_ID,
+                },
+                beforeSend: () => {
+                    $("#button-checker").prop("disabled", true);
+                },
+                success: (res) => {
+                    if (res.statusCode === 200) {
+                        // console.log(res.data)
+                        let text = res.data.text
+                        res.data = res.data.response
+                        $("#plagiarismBtn").prop("disabled", false);
+                        $("#plagiarismBtn").prop("checked", true);
+                        $("#densityBtn").prop("checked", false);
+                        $("#estimationCard").hide()
+                        $("#fullUrl").prop("href", res.data.allviewurl)
+                        showPlagiarism()
+
+                        strokeValue(res.data.allpercentmatched, "duplicate", false)
+                        strokeValue(100 - res.data.allpercentmatched, "unique", true)
+
+                        $("#button-checker").prop("disabled", false);
+
+                        var textareaContent = styleMatchedText(text, res.data.alltextmatched)
+
+                        $('.result-input').append(textareaContent)
+                        $('.result-input').show()
+                        $('.url-mode-container').hide()
+                        $('#text-check').hide()
+
+                        results = res.data.result
+                        querywords = res.data.querywords
+                        results.forEach((result) => {
+                            $(".result-container").append(resultCards(querywords, result));
+                        });
+                    } else {
+                        toastr.error(res.message)
+                    }
+                },
+                error: (err) => {
+                    toastr.error(err.responseJSON.message)
+                }
+            });
         }
-    });
+    })
 });
