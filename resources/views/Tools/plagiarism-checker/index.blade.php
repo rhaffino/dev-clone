@@ -109,7 +109,7 @@
                                 </div>
 
                                 <textarea id="url-check" data-autoresize name="name" placeholder="Type / paste url here (eg. https://cmlabs.co/)"
-                                    style="resize:none;" class="form-control plagiarism-checker-text__area py-6"></textarea>
+                                    style="resize:none;" class="form-control rounded-0 plagiarism-checker-text__area py-6"></textarea>
 
                                 <div class="footer-section px-4 py-2">
                                     <button class="remove-btn">
@@ -126,7 +126,7 @@
                                 </div>
 
                                 <textarea id="text-check" data-autoresize name="name" placeholder="Type / paste any text here.."
-                                    style="resize:none;" class="form-control plagiarism-checker-text__area py-6"></textarea>
+                                    style="resize:none;" class="form-control rounded-0 plagiarism-checker-text__area py-6"></textarea>
                                 <div class="result-input" style="display: none"></div>
                             </div>
 
