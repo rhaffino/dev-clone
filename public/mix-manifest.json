@@ -1,5 +1,7 @@
 {
     "/js/app.js": "/js/app.js",
     "/css/app.css": "/css/app.css",
-    "/assets/css/plagiarism.css": "/assets/css/plagiarism.css"
+    "/assets/css/plagiarism.css": "/assets/css/plagiarism.css",
+    "/js/plagiarism-checker.js": "/js/plagiarism-checker.js",
+    "/js/plagiarism-checker-calendar.js": "/js/plagiarism-checker-calendar.js"
 }

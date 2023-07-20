@@ -387,8 +387,8 @@
             $('[data-toggle="tooltip"]').tooltip()
         })
     </script>
-    <script src="{{ asset('/js/logic/plagiarism-checker.js') }}"></script>
-    <script src="{{ asset('/js/logic/plagiarism-checker-calendar.js') }}"></script>
+    <script src="{{ mix('/js/plagiarism-checker.js') }}"></script>
+    <script src="{{ mix('/js/plagiarism-checker-calendar.js') }}"></script>
     <script type="application/ld+json">
     {
         "@context": "https://schema.org/",

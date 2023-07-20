@@ -14,6 +14,9 @@ const mix = require('laravel-mix');
 mix.js('resources/js/app.js', 'public/js')
     .sass('resources/sass/app.scss', 'public/css');
 
+mix.js('resources/js/plagiarism-checker.js', 'public/js/plagiarism-checker.js');
+mix.js('resources/js/plagiarism-checker-calendar.js', 'public/js/plagiarism-checker-calendar.js');
+
 mix.sass('resources/sass/plagiarism.scss', 'public/assets/css/plagiarism.css').options({
     autoprefixer: { remove: false }
 });
