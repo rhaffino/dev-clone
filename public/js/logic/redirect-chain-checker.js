@@ -89,7 +89,7 @@ function addHistory(url, data) {
     histories.push({
         url: url,
         data: data,
-        date: (new Date()).toLocaleDateString('en-GB')
+        date: (new Date()).toLocaleDateString('id-ID')
     })
     localStorage.setItem(REDIRECT_CHAIN_CHECKER_LOCAL_STORAGE_KEY, JSON.stringify(histories));
     getHistories();
