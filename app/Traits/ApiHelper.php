@@ -89,7 +89,9 @@ trait ApiHelper
             $options['form_params'] = $dataPost;
             $response = $this->client->request('POST', $apiPost, $options);
             $data['response'] = json_decode($response->getBody()->getContents());
-            
+            if (isset($data['response']->error) && $data['response']->error != "") {
+                throw new \ErrorException($data['response']->error);
+            }
             $log = new PlagiarismCheckLog;
             $log->user_id = $id;
             $log->content = $text;
