@@ -521,7 +521,6 @@ $("#button-checker").on("click", function () {
     let text
 
     Swal.fire({
-        title: 'Error!',
         text: 'Are u sure want to run the copyscape check?',
         confirmButtonText: 'Yes',
         cancelButtonText: 'No',
