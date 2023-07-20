@@ -76,10 +76,9 @@ trait ApiHelper
             if (env('APP_ENV') != 'production' && env('APP_ENV') != 'development') {
                 $apiPost .= "&x=1";
             }
+            $dataPost = [];
             if (filter_var($text, FILTER_VALIDATE_URL) == true) {
-                $dataPost = [
-                    "q" => $text,
-                ];
+                $apiPost .= "&q=" . urlencode($text);
             } else {
                 $dataPost = [
                     "e" => "UTF-8",
