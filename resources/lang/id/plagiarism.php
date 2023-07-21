@@ -16,7 +16,7 @@ return [
     "team_request" => "PERMINTAAN TIM",
     "total_words" => "TOTAL KATA",
     "words" => "KATA",
-    "times" => "kali",
+    "times" => "Kali",
 
     "title" => "PEMERIKSA PLAGIARISME",
     "desc" => "Solusi deteksi plagiarisme dengan teknologi CopyScape",

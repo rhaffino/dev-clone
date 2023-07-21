@@ -14,7 +14,7 @@
         </li>
 
         <div class="align-self-end b2-400 text-dark-60 flex-grow-1 d-flex justify-content-end">
-            <a href="">@lang('plagiarism.downlaod')</a>
+            <a href="">@lang('plagiarism.download')</a>
         </div>
     </ul>
     <div class="history-container tab-content" id="myTabContent">

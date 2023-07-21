@@ -161,7 +161,7 @@
                                     <button
                                         class="btn py-2 mr-2 b2-700 text-dark-50 remove-btn">@lang('plagiarism.cancel')</button>
                                     <button id="button-checker"
-                                        class="btn py-2 button-primary-70 b2-700">@lang('plagiarism.runcopyscape')</button>
+                                        class="btn py-2 button-primary-70 b2-700">@lang('plagiarism.run_copyscape')</button>
                                 </div>
                             </div>
 
@@ -378,6 +378,7 @@
     <script>
         const PLAGIARISM_CHECK_URL = "{{ route('api.plagiarism-check') }}"
         const PLAGIARISM_CALENDAR_API_URL = "{{ route('api.plagiarism-check-calendar-logs') }}"
+        const PLAGIARISM_LOGS_API_URL = "{{ route('api.plagiarism-check-logs') }}"
         const USER_ID = "{{ $userId }}"
     </script>
     <script>

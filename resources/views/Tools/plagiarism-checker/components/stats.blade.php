@@ -11,7 +11,8 @@
                         @lang('plagiarism.your_request')
                     </p>
                     <p class="b1-700 b1-m-700 m-0">
-                        {{ $userSummaryLogs->user_requests }} @lang('plagiarism.times')
+                        <span id="userReq">{{ $userSummaryLogs->user_requests }}</span>
+                        @lang('plagiarism.times')
                     </p>
                 </div>
                 <div class="col-4">
@@ -19,7 +20,7 @@
                         @lang('plagiarism.words_checked')
                     </p>
                     <p class="b1-700 b1-m-700 m-0">
-                        {{ $userSummaryLogs->total_words ?? '0' }} @lang('plagiarism.words')
+                        <span id="userWord">{{ $userSummaryLogs->total_words ?? '0' }}</span> @lang('plagiarism.words')
                     </p>
                 </div>
                 <div class="col-4">
@@ -27,7 +28,7 @@
                         @lang('plagiarism.cost')
                     </p>
                     <p class="b1-700 b1-m-700 m-0">
-                        ${{ $userSummaryLogs->total_cost ?? '0' }}
+                        $<span id="userCost">{{ $userSummaryLogs->total_cost ?? '0' }}</span>
                     </p>
                 </div>
             </div>
@@ -41,25 +42,30 @@
                 <div class="">
                     <p class="s-400 s-m-400 m-0">
                         @lang('plagiarism.team_request') </p>
-                    <p class="b1-700 b1-m-700 m-0"> {{ $cummulativeSummaryLogs->team_requests }} @lang('plagiarism.times')
+                    <p class="b1-700 b1-m-700 m-0"><span
+                            id="teamReq">{{ $cummulativeSummaryLogs->team_requests }}</span> @lang('plagiarism.times')
                     </p>
                 </div>
                 <div class="">
                     <p class="s-400 s-m-400 m-0">
                         @lang('plagiarism.users') </p>
-                    <p class="b1-700 b1-m-700 m-0"> {{ $cummulativeSummaryLogs->total_users }}
+                    <p class="b1-700 b1-m-700 m-0"><span
+                            id="teamTotal">{{ $cummulativeSummaryLogs->total_users }}</span>
                     </p>
                 </div>
                 <div class="col-3 flex-shrink-0">
                     <p class="s-400 s-m-400 m-0">
                         @lang('plagiarism.total_words') </p>
-                    <p class="b1-700 b1-m-700 m-0"> {{ $cummulativeSummaryLogs->total_words }} @lang('plagiarism.words')
+                    <p class="b1-700 b1-m-700 m-0"><span
+                            id="teamWord">{{ $cummulativeSummaryLogs->total_words }}</span>
+                        @lang('plagiarism.words')
                     </p>
                 </div>
                 <div class="">
                     <p class="s-400 s-m-400 m-0">
                         @lang('plagiarism.cost') </p>
-                    <p class="b1-700 b1-m-700 m-0"> ${{ $cummulativeSummaryLogs->total_cost }}
+                    <p class="b1-700 b1-m-700 m-0">$<span
+                            id="teamCost">{{ $cummulativeSummaryLogs->total_cost }}</span>
                     </p>
                 </div>
             </div>

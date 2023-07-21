@@ -16,7 +16,7 @@ return [
     "team_request" => "TEAM REQUEST",
     "total_words" => "TOTAL WORDS",
     "words" => "WORDS",
-    "times" => "times",
+    "times" => "Times",
 
     "title" => "PLAGIARISM CHECKER",
     "desc" => "Plagiarism detection solution powered by CopyScape",
