@@ -1,23 +1,30 @@
-FROM composer:1.9 as builder
+FROM php:7.4-fpm
 
-WORKDIR /app
+RUN apt-get update && apt-get install -y \
+    git \
+    zip \
+    unzip \
+    libfreetype6-dev \
+    libjpeg62-turbo-dev \
+    libpng-dev \
+    npm
 
-COPY composer.* ./
+RUN docker-php-ext-install pdo pdo_mysql gd
 
-RUN composer install
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
-FROM php:7.3-apache
-
-WORKDIR /var/www/
-
-COPY --from=builder /app/vendor /var/www/vendor
+WORKDIR /var/www/html
 
 COPY . .
 
-COPY public/* /var/www/html/
+RUN composer install --no-interaction --prefer-dist --ignore-platform-req=ext-zip
 
 RUN php artisan key:gen
 
 RUN chown www-data:www-data ./ -R
 
-EXPOSE 80
+# RUN npm install
+
+# RUN npm run dev
+
+CMD ["php", "artisan", "serve", "--host=0.0.0.0"]
