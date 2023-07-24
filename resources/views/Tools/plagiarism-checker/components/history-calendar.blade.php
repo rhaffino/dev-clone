@@ -5,19 +5,19 @@
                 <div class="d-flex rounded-sm background-dark-40 overflow-hidden type-container">
                     <label class="font-size-container">
                         <input class="calendar-btn" value="request" type="radio" name="calendar" checked>
-                        <span class="s-400 text-white">REQUEST</span>
+                        <span class="s-400 text-white">@lang('plagiarism.request')</span>
                     </label>
                     <label class="font-size-container">
                         <input class="calendar-btn" value="cost" type="radio" name="calendar">
-                        <span class="s-400 text-white">COST</span>
+                        <span class="s-400 text-white">@lang('plagiarism.cost')</span>
                     </label>
                 </div>
                 <div class="right-menu">
-                    <label class="button-container" data-toggle="tooltip" data-placement="top" title="Team usage">
+                    <label class="button-container" data-toggle="tooltip" data-placement="top" title="@lang('plagiarism.team_usage')">
                         <input class="calendar-btn" type="radio" name="calendar-type" value="all" checked>
                         <span class=""><i class='bx bxs-group'></i></span>
                     </label>
-                    <label class="button-container" data-toggle="tooltip" data-placement="top" title="Account usage">
+                    <label class="button-container" data-toggle="tooltip" data-placement="top" title="@lang('plagiarism.account_usage')">
                         <input class="calendar-btn" type="radio" name="calendar-type" value="user">
                         <span class=""><i class='bx bxs-user'></i></span>
                     </label>

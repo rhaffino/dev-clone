@@ -29,9 +29,8 @@
             <span id="titlesizer"></span>
             <div class="d-flex flex-column-fluid">
                 <div class="container-fluid px-0">
-                    <h1 class="text-dark-70 h6-700 m-0">PLAGIARISM CHECKER</h1>
-                    <p class="b2-400 text-dark-70">Plagiarism detection solution powered by
-                        CopyScape</p>
+                    <h1 class="text-dark-70 h6-700 m-0">@lang('plagiarism.title')</h1>
+                    <p class="b2-400 text-dark-70">@lang('plagiarism.desc')</p>
                     <div class="row mb-8">
                         <div class="col-md-8">
                             <div class="card card-custom px-8 py-3 top-menu">
@@ -66,7 +65,7 @@
                         </div>
                         <div class="col-md-4">
                             <div class="card card-custom px-8 py-3 top-menu">
-                                <p class="m-0 text-dark-30 s-400">RESULTS</p>
+                                <p class="m-0 text-dark-30 s-400">@lang('plagiarism.results')</p>
                                 <div class="left-menu background-dark-40">
                                     <label class="font-size-container">
                                         <input value="plagiarism" type="radio" name="results" id="plagiarismBtn" disabled>
@@ -87,29 +86,29 @@
                             <div class="card card-custom text-input">
                                 <div class="px-4 py-3 d-flex align-items-center justify-content-between">
                                     <div>
-                                        <div class="text-dark-70 b2-400">Characters</div>
+                                        <div class="text-dark-70 b2-400">@lang('plagiarism.characters')</div>
                                         <div class="text-dark-70 p-700" id="characterCount">0</div>
                                     </div>
                                     <div>
-                                        <div class="text-dark-70 b2-400">Words</div>
+                                        <div class="text-dark-70 b2-400">@lang('plagiarism.words')</div>
                                         <div class="text-dark-70 p-700" id="wordCount">0</div>
                                     </div>
                                     <div>
-                                        <div class="text-dark-70 b2-400">Sentences</div>
+                                        <div class="text-dark-70 b2-400">@lang('plagiarism.sentences')</div>
                                         <div class="text-dark-70 p-700" id="sentenceCount">0</div>
                                     </div>
                                     <div>
-                                        <div class="text-dark-70 b2-400">Paragraph</div>
+                                        <div class="text-dark-70 b2-400">@lang('plagiarism.paragraph')</div>
                                         <div class="text-dark-70 p-700" id="paragraphCount">0</div>
                                     </div>
                                     <div>
-                                        <div class="text-dark-70 b2-400">Reading Time</div>
+                                        <div class="text-dark-70 b2-400">@lang('plagiarism.reading_time')</div>
                                         <div class="text-dark-70 p-700" id="readingTime">0</div>
                                     </div>
                                 </div>
 
-                                <textarea id="url-check" data-autoresize name="name" placeholder="Type / paste url here (eg. https://cmlabs.co/)"
-                                    style="resize:none;" class="form-control rounded-0 plagiarism-checker-text__area py-6"></textarea>
+                                <textarea id="url-check" data-autoresize name="name" placeholder="@lang('plagiarism.plc_link')" style="resize:none;"
+                                    class="form-control rounded-0 plagiarism-checker-text__area py-6"></textarea>
 
                                 <div class="footer-section px-4 py-2">
                                     <button class="remove-btn">
@@ -118,15 +117,14 @@
                                     <button class="run-btn b5-700" id="linkCheckerBtn">
                                         <i class='bx bx-play b5-500'></i>
                                         <span class="b5-700 font-bold">
-                                            RUN
+                                            @lang('plagiarism.run')
                                         </span>
                                     </button>
-                                    <p class="s-400 text-dark-30 m-0">$0.03 first 200 words, $0.01 next 100 words (about
-                                        $0.05 for 400-449 words)</p>
+                                    <p class="s-400 text-dark-30 m-0">@lang('plagiarism.cost_desc')</p>
                                 </div>
 
-                                <textarea id="text-check" data-autoresize name="name" placeholder="Type / paste any text here.."
-                                    style="resize:none;" class="form-control rounded-0 plagiarism-checker-text__area py-6"></textarea>
+                                <textarea id="text-check" data-autoresize name="name" placeholder="@lang('plagiarism.plc_text')" style="resize:none;"
+                                    class="form-control rounded-0 plagiarism-checker-text__area py-6"></textarea>
                                 <div class="result-input" style="display: none"></div>
                             </div>
 
@@ -138,8 +136,7 @@
                         <div class="col-md-4 right-results">
                             {{-- empty state --}}
                             <div class="card card-custom px-4 py-3 mb-10" id="emptyState">
-                                <p class="m-0 text-gray-100 b2-400 text-center">Enter the text you want to check and run to
-                                    see the result here...</p>
+                                <p class="m-0 text-gray-100 b2-400 text-center">@lang('plagiarism.empty')</p>
                             </div>
 
                             {{-- estimation box --}}
@@ -148,22 +145,23 @@
                                     <div class="d-flex align-items-center text-purple-40 b2-500">
                                         <i class='bx bxs-dollar-circle text-purple-40 b2-700 mr-2'></i>
                                         <div>
-                                            EST.COST
+                                            @lang('plagiarism.estcost')
                                         </div>
                                     </div>
                                     <div>
-                                        <p class="s-400 m-0">TOTAL WORDS</p>
+                                        <p class="s-400 m-0">@lang('plagiarism.total_words')</p>
                                         <p class="m-0 b1-700" id="totalWordsEst">300</p>
                                     </div>
                                     <div>
-                                        <p class="s-400 m-0">COST</p>
+                                        <p class="s-400 m-0">@lang('plagiarism.cost')</p>
                                         <p class="m-0 b1-700">$<span id="costEst">0</span></p>
                                     </div>
                                 </div>
                                 <div class="px-4 py-3 d-flex align-items-center">
-                                    <button class="btn py-2 mr-2 b2-700 text-dark-50 remove-btn">Cancel</button>
-                                    <button id="button-checker" class="btn py-2 button-primary-70 b2-700">Run
-                                        CopyScape</button>
+                                    <button
+                                        class="btn py-2 mr-2 b2-700 text-dark-50 remove-btn">@lang('plagiarism.cancel')</button>
+                                    <button id="button-checker"
+                                        class="btn py-2 button-primary-70 b2-700">@lang('plagiarism.run_copyscape')</button>
                                 </div>
                             </div>
 
@@ -176,7 +174,7 @@
                                                 <button class="btn btn-link background-white btn-block text-left"
                                                     type="button" data-toggle="collapse" data-target="#collapseOne"
                                                     aria-expanded="true" aria-controls="collapseOne">
-                                                    <div class="pill b2-700">URL is Valid</div>
+                                                    <div class="pill b2-700">@lang('plagiarism.url_valid')</div>
                                                 </button>
                                             </h2>
                                         </div>
@@ -204,7 +202,7 @@
                                 <div
                                     class="px-4 py-3 d-flex align-items-center justify-content-between b2-400 text-dark-60">
                                     <div class="text-dark-30 b2-700">
-                                        WORDS
+                                        @lang('plagiarism.words')
                                     </div>
 
                                     <div class="d-flex rounded-sm background-dark-20 overflow-hidden">
@@ -253,7 +251,7 @@
                                 <div
                                     class="px-4 py-3 d-flex align-items-center justify-content-between b2-400 text-dark-60">
                                     <div class="text-dark-70 b2-700">
-                                        Overview
+                                        @lang('plagiarism.overview')
                                     </div>
                                 </div>
                                 <div class="d-flex align-items-center justify-content-center gap-3">
@@ -271,7 +269,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="b2-400 b2-m-400">Menjiplak</div>
+                                        <div class="b2-400 b2-m-400">@lang('plagiarism.plagiat')</div>
                                     </div>
                                     <div class="d-flex align-items-center flex-column gap-1 px-3">
                                         <div class="progress progress-red unique" data-percentage="0">
@@ -287,11 +285,11 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="b2-400 b2-m-400">Unik</div>
+                                        <div class="b2-400 b2-m-400">@lang('plagiarism.unique')</div>
                                     </div>
                                 </div>
                                 <a href="" id="fullUrl" target="_blank" rel="noopener noreferrer noindex"
-                                    class="btn button-gray-20 b2-700 full-url-btn"> <u>View full result</u></a>
+                                    class="btn button-gray-20 b2-700 full-url-btn"> <u>@lang('plagiarism.view_full')</u></a>
                             </div>
 
                             <div class="card card-custom mt-10 result-card plagiarism-result" style="display: none">
@@ -347,7 +345,7 @@
                                         <div class="card-header" id="headingOne2">
                                             <div class="card-title collapsed" data-toggle="collapse"
                                                 data-target="#collapseOne2">
-                                                @lang('layout.version') 2.0
+                                                @lang('layout.version') 1.0
                                             </div>
                                         </div>
                                         <div id="collapseOne2" class="collapse" data-parent="#accordionExample2">
@@ -355,8 +353,8 @@
                                                 <p>@lang('wordcounter.highlight')</p>
                                                 <div class="d-flex align-items-center">
                                                     <i class='bx bxs-check-circle text-darkgrey mr-1'></i>
-                                                    <span class="text-darkgrey h6 mb-0">@lang('layout.updated') 15 Mar,
-                                                        2021</span>
+                                                    <span class="text-darkgrey h6 mb-0">@lang('layout.updated') 21 Jul,
+                                                        2023</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -380,6 +378,7 @@
     <script>
         const PLAGIARISM_CHECK_URL = "{{ route('api.plagiarism-check') }}"
         const PLAGIARISM_CALENDAR_API_URL = "{{ route('api.plagiarism-check-calendar-logs') }}"
+        const PLAGIARISM_LOGS_API_URL = "{{ route('api.plagiarism-check-logs') }}"
         const USER_ID = "{{ $userId }}"
     </script>
     <script>

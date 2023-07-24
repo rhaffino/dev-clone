@@ -2,20 +2,19 @@
     <ul class="history-tabs nav nav-tabs" id="myTab" role="tablist">
         <div class="d-flex">
             <i class='bx bxs-collection b5-400'></i>
-            <p class="m-0 ml-2 b2-500">History</p>
+            <p class="m-0 ml-2 b2-500">@lang('plagiarism.history')</p>
         </div>
         <li class="nav-item" role="presentation">
             <a class="nav-link active b2-500 text-decoration-underline" id="my-account-tab" data-toggle="tab"
-                href="#my-account" role="tab" aria-controls="my-account" aria-selected="true">My Account</a>
+                href="#my-account" role="tab" aria-controls="my-account" aria-selected="true">@lang('plagiarism.my_acc')</a>
         </li>
         <li class="nav-item" role="presentation">
             <a class="nav-link b2-500 text-underline" id="all-account-tab" data-toggle="tab" href="#all-account"
-                role="tab" aria-controls="all-account" aria-selected="false">All
-                Account</a>
+                role="tab" aria-controls="all-account" aria-selected="false">@lang('plagiarism.all_acc')</a>
         </li>
 
         <div class="align-self-end b2-400 text-dark-60 flex-grow-1 d-flex justify-content-end">
-            <button>Download (*.csv) File</button>
+            <a href="">@lang('plagiarism.download')</a>
         </div>
     </ul>
     <div class="history-container tab-content" id="myTabContent">
@@ -44,7 +43,7 @@
 
             @if (count($userLogs) === 0)
                 <div class="card card-custom mb-5 mt-4 py-3 d-flex align-items-center justify-content-center b2-400">
-                    This is your first impressions, no history yet!
+                    @lang('plagiarism.empty_history')
                 </div>
             @endif
         </div>
