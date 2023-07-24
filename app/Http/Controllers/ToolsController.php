@@ -391,6 +391,7 @@ class ToolsController extends Controller
             $data["seo_terms"] = $seoTerms;
             $data["seo_guidelines"] = $seoGuidelines;
             $data["blogs"] = $blogs;
+            $data["lang"] = $lang;
             
             return view('Tools/plagiarism-checker/index', $data);
         } else {

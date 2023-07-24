@@ -58,7 +58,7 @@ return [
     "notif_center" => "Pusat Pemberitahuan",
 
     "cmlabs_alliance" => "Aliansi cmlabs",
-    "cmlabs_alliance-desc" => "Kerjasama strategis ini memungkinkan kami untuk menawarkan kepada klien kami beragam solusi inovatif SEO dan layanan luar biasa di seluruh dunia. Jika Anda pernah berencana untuk mendominasi pasar lebih luas, Anda telah datang ke tempat yang tepat! <a href='https://cmlabs.co/en-id/seo-guidelines' class='text-underline'>Mari kita wujudkan rencana-rencana tersebut menjadi kenyataan!</a>",
+    "cmlabs_alliance-desc" => "Kerjasama strategis ini memungkinkan kami untuk menawarkan kepada klien kami beragam solusi inovatif SEO dan layanan luar biasa di seluruh dunia. Jika Anda pernah berencana untuk mendominasi pasar lebih luas, Anda telah datang ke tempat yang tepat! <a href='https://cmlabs.co/en-id/become-partner' class='text-underline'>Mari kita wujudkan rencana-rencana tersebut menjadi kenyataan!</a>",
     "writing_starter" => "Panduan Memulai Menulis",
     "writing_starter_desc" => "Panduan Memulai Search Engine Optimization (SEO) menyediakan praktik terbaik untuk memudahkan mesin pencari mengindeks dan memahami konten Anda.",
 

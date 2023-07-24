@@ -41,7 +41,7 @@ return [
 
     "url_valid" => "URL is Valid",
 
-    "plagiat" => "Menjiplak",
+    "plagiat" => "Plagiarism",
     "unique" => "Unique",
     "overview" => "Overview",
     "view_full" => "Overview",
@@ -58,7 +58,7 @@ return [
     "notif_center" => "Notification center",
 
     "cmlabs_alliance" => "cmlabs Aliance",
-    "cmlabs_alliance-desc" => "These strategic alliances allow us to offer our clients a wider range of SEO innovative solutions and exceptional service around the world. If you've ever planned of conquering the more market, you've come to the right place! <a href='https://cmlabs.co/en-id/seo-guidelines' class='text-underline'>Let's turn those plan into reality, shall we?</a>",
+    "cmlabs_alliance-desc" => "These strategic alliances allow us to offer our clients a wider range of SEO innovative solutions and exceptional service around the world. If you've ever planned of conquering the more market, you've come to the right place! <a href='https://cmlabs.co/en-id/become-partner' class='text-underline'>Let's turn those plan into reality, shall we?</a>",
     "writing_starter" => "Writing Starter Guide",
     "writing_starter_desc" => "The Search Engine Optimization (SEO) Starter Guide provides best practices to make it easier for search engines to crawl, index, and understand your content.",
 

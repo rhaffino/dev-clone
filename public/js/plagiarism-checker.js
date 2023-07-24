@@ -375,6 +375,8 @@ document.querySelectorAll('input[type="radio"][name="result-collapse"]').forEach
 }); // function for remove content on text input
 
 $(".remove-btn").on("click", function () {
+  $(".result-input").html("");
+  $(".result-container").html("");
   $("textarea").val("");
   $(".url-mode-container").hide();
   $(".result-input").hide();
@@ -387,10 +389,15 @@ $("#linkCheckerBtn").on("click", function () {
   if (checkUrl(inputLink.value)) {
     $("#urlEmbedContainer").attr("src", inputLink.value);
     $("#emptyState").hide();
+    $(".estimation-box").hide();
+    $(".plagiarism-result").hide();
+    $(".words-density").hide();
     $(".url-mode-container").show();
     $(".estimation-card").show();
     $(".url-viewer .levels").html("".concat(checkUrlLevel(inputLink.value), " levels"));
     $(".url-viewer .url").html(inputLink.value);
+    $(".result-input").html("");
+    $(".result-container").html("");
   } else {
     toastr.error('URL Format is not valid', 'Error');
   }
@@ -403,6 +410,8 @@ function wordCounter() {
   if (input.value != "") {
     $("#emptyState").hide();
     $(".estimation-card").show();
+    $(".estimation-box").show();
+    $(".words-density").show();
   } else {
     $("#emptyState").show();
     $(".estimation-card").hide();
@@ -531,21 +540,25 @@ var resultCards = function resultCards(totalWords, data) {
   titlesizer.attr("style", "font-family: arial, sans-serif !important; font-size: 13px !important; position: absolute !important; visibility: hidden !important; white-space: nowrap !important;");
   titlesizer.text(data.title);
   var pixel = Math.floor(titlesizer.innerWidth());
-  return "\n<div class=\"accordion accordion-light accordion-toggle-arrow custom-features-accordion\" id = \"accordionResult".concat(data.index, "\">\n    <div class=\"card bg-white px-3\" style=\"\">\n        <div class=\"card-header\" id=\"headingOne2\">\n            <div class=\"card-title collapsed pr-4 justify-content-between\" data-toggle=\"collapse\"\n                data-target=\"#accordion").concat(data.index, "One\">\n                <div class=\"index-pill s-400\">").concat(data.index, "</div>\n                <div class=\"d-flex align-items-center\">\n                    ").concat(data.percentmatched != undefined ? "\n                    <p class=\"m-0 s-400 text-primary-70 mr-3\">".concat(data.percentmatched, "%</p>\n                    <p class=\"m-0 s-400\">Text matched</p>") : '', "\n                </div>\n            </div>\n        </div>\n        <div id=\"accordion").concat(data.index, "One\" class=\"collapse\" data-parent=\"#accordionResult").concat(data.index, "\">\n            <div class=\"card-body py-2\">\n                <div class=\"d-flex align-items-center flex-column\">\n                    <hr class='my-2 w-100'>\n                        <div class=\"row w-100\">\n                            <div class=\"col-7 s-400 text-ellipsis\">").concat(data.url, "</div>\n                            <div class=\"col-3 s-400 flex-shrink-0 text-primary-70\">").concat(levelUrl, " levels</div>\n                            <div class=\"col-2 s-400 flex-shrink-0 text-gray-100 text-right\">URL</div>\n                        </div>\n                        <hr class='my-2 w-100'>\n                            <div class=\"row w-100\">\n                                <div class=\"col-7 s-400 text-ellipsis\">").concat(data.title, "</div>\n                                <div class=\"col-3 s-400 flex-shrink-0 text-primary-70\">").concat(pixel, " pixels</div>\n                                <div class=\"col-2 s-400 flex-shrink-0 text-gray-100 text-right\">Title</div>\n                            </div>\n                            <hr class='my-2 w-100'>\n                                <div class=\"d-flex w-100 justify-content-end pr-3\">\n                                    <p class=\"m-0 mx-3 s-400 text-gray-100\">(").concat(data.minwordsmatched, " of ").concat(totalWords, ")</p>\n                                </div>\n                                <div class=\"my-3 w-100 py-2 px-3 background-gray-20 b2-400\">\n                                    ").concat(data.textsnippet, "\n                                </div>\n\n                                <div class=\"my-2 d-flex align-items-start justify-content-start w-100\">\n                                    <a href=\"").concat(data.url, "\" target=\"_blank\" rel=\"noopener noreferrer noindex\" class=\"btn button-gray-20 b2-700\"> <u>View \"index\" on CopyScape</u></a>\n                                </div>\n\n                                <hr class='my-2 w-100'>\n                                    <div class=\"d-flex w-100 justify-content-end mb-3 pr-3\">\n                                        <p class=\"m-0 mx-3 s-400 text-gray-100\">(").concat(data.minwordsmatched, " of ").concat(totalWords, ")</p>\n                                        <p class=\"m-0 mx-3 s-400 text-primary-70\">").concat(percentage, "%</p>\n                                        <p class=\"m-0 ml-3 s-400 text-gray-100\">Minimum words matched limit</p>\n                                    </div>\n                                </div>\n                            </div>\n                        </div>\n                </div>\n            </div>");
+  return "\n<div class=\"accordion accordion-light accordion-toggle-arrow custom-features-accordion\" id = \"accordionResult".concat(data.index, "\">\n    <div class=\"card bg-white px-3\" style=\"\">\n        <div class=\"card-header\" id=\"headingOne2\">\n            <div class=\"card-title collapsed pr-4 justify-content-between\" data-toggle=\"collapse\"\n                data-target=\"#accordion").concat(data.index, "One\">\n                <div class=\"index-pill s-400\">").concat(data.index, "</div>\n                <div class=\"d-flex align-items-center\">\n                    ").concat(data.percentmatched != undefined ? "\n                    <p class=\"m-0 s-400 text-primary-70 mr-3\">".concat(data.percentmatched, "%</p>\n                    <p class=\"m-0 s-400\">Text matched</p>") : '', "\n                </div>\n            </div>\n        </div>\n        <div id=\"accordion").concat(data.index, "One\" class=\"collapse\" data-parent=\"#accordionResult").concat(data.index, "\">\n            <div class=\"card-body py-2\">\n                <div class=\"d-flex align-items-center flex-column\">\n                    <hr class='my-2 w-100'>\n                        <div class=\"row w-100\">\n                            <div class=\"col-7 s-400 text-ellipsis\"><a href=\"").concat(data.url, "\" target=\"_blank\" rel=\"noopener noreferrer noindex\">").concat(data.url, "</a></div>\n                            <div class=\"col-3 s-400 flex-shrink-0 text-primary-70\">").concat(levelUrl, " levels</div>\n                            <div class=\"col-2 s-400 flex-shrink-0 text-gray-100 text-right\">URL</div>\n                        </div>\n                        <hr class='my-2 w-100'>\n                            <div class=\"row w-100\">\n                                <div class=\"col-7 s-400 text-ellipsis\">").concat(data.title, "</div>\n                                <div class=\"col-3 s-400 flex-shrink-0 text-primary-70\">").concat(pixel, " pixels</div>\n                                <div class=\"col-2 s-400 flex-shrink-0 text-gray-100 text-right\">Title</div>\n                            </div>\n                            <hr class='my-2 w-100'>\n                                <div class=\"d-flex w-100 justify-content-end pr-3\">\n                                    <p class=\"m-0 mx-3 s-400 text-gray-100\">(").concat(data.minwordsmatched, " of ").concat(totalWords, ")</p>\n                                </div>\n                                <div class=\"my-3 w-100 py-2 px-3 background-gray-20 b2-400\">\n                                    ").concat(data.textsnippet, "\n                                </div>\n\n                                <div class=\"my-2 d-flex align-items-start justify-content-start w-100\">\n                                    <a href=\"").concat(data.url, "\" target=\"_blank\" rel=\"noopener noreferrer noindex\" class=\"btn button-gray-20 b2-700\"> <u>View \"index\" on CopyScape</u></a>\n                                </div>\n\n                                <hr class='my-2 w-100'>\n                                    <div class=\"d-flex w-100 justify-content-end mb-3 pr-3\">\n                                        <p class=\"m-0 mx-3 s-400 text-gray-100\">(").concat(data.minwordsmatched, " of ").concat(totalWords, ")</p>\n                                        <p class=\"m-0 mx-3 s-400 text-primary-70\">").concat(percentage, "%</p>\n                                        <p class=\"m-0 ml-3 s-400 text-gray-100\">Minimum words matched limit</p>\n                                    </div>\n                                </div>\n                            </div>\n                        </div>\n                </div>\n            </div>");
 }; // function to highlight the matched text
+// function styleMatchedText(originalText, resultText) {
+//     const splitted = resultText.split("... ").filter(item => item.trim() !== "");
+//     console.log(splitted)
+//     for (var i = 0; i < splitted.length; i++) {
+//         var match = splitted[i];
+//         var regex = new RegExp(match, 'g');
+//         originalText = originalText.replace(regex, '<span class="highlight-red">' + match + '</span>');
+//     }
+//     return originalText;
+// }
 
 
 function styleMatchedText(originalText, resultText) {
-  var splitted = resultText.split("... ").filter(function (item) {
-    return item.trim() !== "";
-  });
+  var escapedResultText = resultText.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); // Escape special regex characters
 
-  for (var i = 0; i < splitted.length; i++) {
-    var match = splitted[i];
-    var regex = new RegExp(match, 'g');
-    originalText = originalText.replace(regex, '<span class="highlight-red">' + match + '</span>');
-  }
-
+  var regex = new RegExp(escapedResultText, 'g');
+  originalText = originalText.replace(regex, '<span class="highlight-red">$&</span>');
   return originalText;
 }
 
@@ -653,6 +666,13 @@ $("#button-checker").on("click", function () {
             $('#text-check').hide();
             results = res.data.result;
             querywords = res.data.querywords;
+
+            if (results.length > 0) {
+              $(".result-option").show();
+            } else {
+              $(".result-option").hide();
+            }
+
             results.forEach(function (result) {
               $(".result-container").append(resultCards(querywords, result));
             });

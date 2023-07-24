@@ -17,7 +17,7 @@
                         <input class="calendar-btn" type="radio" name="calendar-type" value="all" checked>
                         <span class=""><i class='bx bxs-group'></i></span>
                     </label>
-                    <label class="button-container" data-toggle="tooltip" data-placement="top" title="@lang('plagiarism.account_usage')">
+                    <label class="button-container" data-toggle="tooltip" data-placement="top" title="@lang('plagiarism.account_usage_2')">
                         <input class="calendar-btn" type="radio" name="calendar-type" value="user">
                         <span class=""><i class='bx bxs-user'></i></span>
                     </label>

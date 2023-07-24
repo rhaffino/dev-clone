@@ -63,7 +63,7 @@
         [
             'title' => 'Link Analyzer',
             'desc' => __('home.link-analyzer-desc'),
-            'icon' => "<i class='text-purple-70 bx bx-lg bx-globe'></i>",
+            'icon' => "<i class='text-purple-70 bx bx-md bx-globe'></i>",
             'link' => 'link-analyzer',
         ],
         [
