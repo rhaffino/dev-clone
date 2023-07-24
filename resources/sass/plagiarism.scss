@@ -46,6 +46,8 @@ button {
     align-items: center;
     justify-content: space-between;
     flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
     .left-menu {
         width: fit-content;
         border-radius: 4px;
@@ -82,7 +84,7 @@ button.radio,
     margin: 0;
     display: flex;
     align-items: center;
-    height: fit-content;
+    text-align: center;
     input {
         display: none;
     }
@@ -166,6 +168,11 @@ button.radio,
         background-color: map.get($colors, "dark-20");
         border-radius: 8px;
     }
+}
+
+.result-option {
+    flex-wrap: wrap;
+    gap: 6px;
 }
 
 .history {

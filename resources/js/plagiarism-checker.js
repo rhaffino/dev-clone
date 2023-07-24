@@ -289,6 +289,9 @@ document.querySelectorAll('input[type="radio"][name="result-collapse"]').forEach
 
 // function for remove content on text input
 $(".remove-btn").on("click", function () {
+    $(".result-input").html("");
+    $(".result-container").html("");
+
     $("textarea").val("");
     $(".url-mode-container").hide();
     $(".result-input").hide();
@@ -499,7 +502,7 @@ const resultCards = (totalWords, data) => {
                 <div class="d-flex align-items-center flex-column">
                     <hr class='my-2 w-100'>
                         <div class="row w-100">
-                            <div class="col-7 s-400 text-ellipsis">${data.url}</div>
+                            <div class="col-7 s-400 text-ellipsis"><a href="${data.url}" target="_blank" rel="noopener noreferrer noindex">${data.url}</a></div>
                             <div class="col-3 s-400 flex-shrink-0 text-primary-70">${levelUrl} levels</div>
                             <div class="col-2 s-400 flex-shrink-0 text-gray-100 text-right">URL</div>
                         </div>
@@ -535,17 +538,25 @@ const resultCards = (totalWords, data) => {
 }
 
 // function to highlight the matched text
+// function styleMatchedText(originalText, resultText) {
+//     const splitted = resultText.split("... ").filter(item => item.trim() !== "");
+//     console.log(splitted)
+//     for (var i = 0; i < splitted.length; i++) {
+//         var match = splitted[i];
+//         var regex = new RegExp(match, 'g');
+//         originalText = originalText.replace(regex, '<span class="highlight-red">' + match + '</span>');
+//     }
+
+//     return originalText;
+// }
+
 function styleMatchedText(originalText, resultText) {
-    const splitted = resultText.split("... ").filter(item => item.trim() !== "");
-
-    for (var i = 0; i < splitted.length; i++) {
-        var match = splitted[i];
-        var regex = new RegExp(match, 'g');
-        originalText = originalText.replace(regex, '<span class="highlight-red">' + match + '</span>');
-    }
-
+    const escapedResultText = resultText.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); // Escape special regex characters
+    const regex = new RegExp(escapedResultText, 'g');
+    originalText = originalText.replace(regex, '<span class="highlight-red">$&</span>');
     return originalText;
 }
+
 
 function animateValue(id, start, end, duration) {
     var obj = jQuery('.' + id), range, current, increment, stepTime, timer
@@ -639,7 +650,7 @@ $("#button-checker").on("click", function () {
                         strokeValue(100 - res.data.allpercentmatched, "unique", true)
 
                         $("#button-checker").prop("disabled", false);
-
+                        console.log(res.data.alltextmatched)
                         var textareaContent = styleMatchedText(text, res.data.alltextmatched)
 
                         $('.result-input').append(textareaContent)

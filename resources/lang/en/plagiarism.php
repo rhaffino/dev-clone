@@ -41,7 +41,7 @@ return [
 
     "url_valid" => "URL is Valid",
 
-    "plagiat" => "Menjiplak",
+    "plagiat" => "Plagiarism",
     "unique" => "Unique",
     "overview" => "Overview",
     "view_full" => "Overview",

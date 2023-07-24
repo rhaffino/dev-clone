@@ -182,7 +182,7 @@
                                         <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
                                             data-parent="#embedAccordion">
                                             <div class="card-body w-100">
-                                                <div class="d-flex justify-content-end w-100 url-viewer">
+                                                <div class="d-flex flex-wrap justify-content-end w-100 url-viewer">
                                                     <div class="levels b2-400 text-primary-70 mr-3">3 levels</div>
                                                     <div class="url b2-400 text-gray-100 mr-3">https://example.com</div>
                                                 </div>
@@ -294,7 +294,7 @@
 
                             <div class="card card-custom mt-10 result-card plagiarism-result" style="display: none">
                                 <div
-                                    class="px-4 py-3 d-flex align-items-center justify-content-between b2-400 text-dark-60">
+                                    class="px-4 py-3 d-flex align-items-center justify-content-between b2-400 text-dark-60 result-option">
                                     <div class="d-flex radio-tab-container-2 rounded-sm overflow-hidden">
                                         <label class="radio-tab">
                                             <input value="999999" checked type="radio" name="result-size" checked>
