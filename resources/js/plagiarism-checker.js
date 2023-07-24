@@ -305,13 +305,18 @@ $("#linkCheckerBtn").on("click", function () {
     if (checkUrl(inputLink.value)) {
         $("#urlEmbedContainer").attr("src", inputLink.value);
         $("#emptyState").hide();
-        $(".url-mode-container").show();
-        $(".estimation-card").show()
         $(".estimation-box").hide()
         $(".plagiarism-result").hide()
         $(".words-density").hide()
+
+        $(".url-mode-container").show();
+        $(".estimation-card").show()
+
         $(".url-viewer .levels").html(`${checkUrlLevel(inputLink.value)} levels`);
         $(".url-viewer .url").html(inputLink.value);
+
+        $(".result-input").html("");
+        $(".result-container").html("");
     } else {
         toastr.error('URL Format is not valid', 'Error')
     }
@@ -666,7 +671,7 @@ $("#button-checker").on("click", function () {
                         results = res.data.result
                         querywords = res.data.querywords
 
-                        if(results.length > 0){
+                        if (results.length > 0) {
                             $(".result-option").show();
                         } else {
                             $(".result-option").hide();
