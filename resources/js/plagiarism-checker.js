@@ -307,6 +307,9 @@ $("#linkCheckerBtn").on("click", function () {
         $("#emptyState").hide();
         $(".url-mode-container").show();
         $(".estimation-card").show()
+        $(".estimation-box").hide()
+        $(".plagiarism-result").hide()
+        $(".words-density").hide()
         $(".url-viewer .levels").html(`${checkUrlLevel(inputLink.value)} levels`);
         $(".url-viewer .url").html(inputLink.value);
     } else {
@@ -322,6 +325,8 @@ function wordCounter() {
     if (input.value != "") {
         $("#emptyState").hide();
         $(".estimation-card").show()
+        $(".estimation-box").show()
+        $(".words-density").show()
     } else {
         $("#emptyState").show();
         $(".estimation-card").hide()
@@ -650,7 +655,7 @@ $("#button-checker").on("click", function () {
                         strokeValue(100 - res.data.allpercentmatched, "unique", true)
 
                         $("#button-checker").prop("disabled", false);
-                        console.log(res.data.alltextmatched)
+
                         var textareaContent = styleMatchedText(text, res.data.alltextmatched)
 
                         $('.result-input').append(textareaContent)
@@ -660,6 +665,13 @@ $("#button-checker").on("click", function () {
 
                         results = res.data.result
                         querywords = res.data.querywords
+
+                        if(results.length > 0){
+                            $(".result-option").show();
+                        } else {
+                            $(".result-option").hide();
+                        }
+
                         results.forEach((result) => {
                             $(".result-container").append(resultCards(querywords, result));
                         });

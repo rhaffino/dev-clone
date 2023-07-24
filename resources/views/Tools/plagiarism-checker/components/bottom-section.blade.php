@@ -94,7 +94,7 @@
                                     class="resource-card">
                                     <div class="card-header p-0 m-0">
                                         <!-- <img class="img-fluid w-100" src="{{ asset('media/images/resources-example.png') }}" alt=""> -->
-                                        <img class="img-fluid w-100" src="{{ 'https://s3-cdn.cmlabs.co/' . $blog->image }}" alt="">
+                                        <img class="img-fluid w-100" src="{{ 'https://s3-cdn.cmlabs.co/' . $blogs->image }}" alt="">
                                     </div>
                                     <div class="card-body">
                                         <div class="text-purple-70 b2-700 b2-m-700">BLOGS</div>
