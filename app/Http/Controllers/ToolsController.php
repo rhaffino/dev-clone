@@ -2,19 +2,19 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Blog;
+use App\Models\BlogCategory;
+use App\Models\Page;
 use App\Models\PlagiarismCheckLog;
 use GuzzleHttp\Client;
-use Illuminate\Http\Request;
+use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\App;
-use Illuminate\Support\Facades\Date;
-use Illuminate\Support\Facades\Queue;
-use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Crypt;
 use App\Http\Controllers\HomeController;
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\Writer\Csv;
-use PhpOffice\PhpSpreadsheet\Style\Border;
 
 class ToolsController extends Controller
 {
@@ -341,6 +341,57 @@ class ToolsController extends Controller
             $data['cummulativeSummaryLogs'] = PlagiarismCheckLog::selectRaw("COUNT(id) as 'team_requests', COUNT(DISTINCT(user_id)) as 'total_users', SUM(word_count) as 'total_words', SUM(cost) as 'total_cost'")
                 ->first();
 
+            // Fetch Seo Term
+            $seoTerms = Page::select('pages.id', 'pages.published_at', 'pages.title', 'pages.slug', 'pages.image', 'pages.created_by', DB::raw($lang == 'id' ? "'KAMUSSEO'" : "'SEOTERMS'" . " as 'type'"), DB::raw("'seo-terms' as 'link'"))
+            ->join('page_categories', function ($join) use($lang) {
+                $join->on('pages.page_category_id', '=', 'page_categories.id')
+                ->where('page_categories.language', $lang)
+                ->where('page_categories.slug', '=', 'seo-terms');
+            })
+            ->where('pages.language', $lang)
+            ->where('pages.slug', '!=', 'about')
+            ->where('pages.status', '1')
+            ->orderBy('pages.created_at','DESC')
+            ->first();
+
+            $seoTerms->published_at = Carbon::parse($seoTerms->published_at)->format('d F Y');
+
+            // Fetch Seo Guidelines
+            $seoGuidelines = Page::select('pages.id', 'pages.published_at', 'pages.title', 'pages.slug', 'pages.image', 'pages.created_by', DB::raw($lang == 'id' ? "'PANDUANSEO'" : "'SEOGUIDELINES'" . " as 'type'"), DB::raw("'seo-guide' as 'link'"))
+            ->join('page_categories', function ($join) use($lang) {
+                $join->on('pages.page_category_id', '=', 'page_categories.id')
+                ->where('page_categories.language', $lang)
+                ->where('page_categories.slug', '=', 'seo-guide');
+            })
+            ->where('pages.language', $lang)
+            ->where('pages.slug', '!=', 'about')
+            ->orderBy('pages.created_at','DESC')
+            ->where('pages.status', '1')->first();
+
+            $seoGuidelines->published_at = Carbon::parse($seoTerms->published_at)->format('d F Y');
+
+            // Fetch Blogs
+            $blogCategories = BlogCategory::select('id', 'slug', 'name')
+            ->where('language', $lang)
+            ->where('slug', '!=', 'press-release')
+            ->where('slug', '!=', 'promo-campaign')
+            ->where('slug', '!=', 'event')
+            ->isPublish()
+            ->get();
+
+            $blogs = Blog::select('id', 'published_at', 'title', 'slug', 'image', 'created_by', DB::raw($lang == 'id' ? "'BLOG'" : "'BLOGS'" . " as 'type'"), DB::raw("'blog' as 'link'"))
+                ->where('language', $lang)
+                ->where('status', '1')
+                ->whereIn('blog_category_id', $blogCategories->pluck('id'))
+                ->orderBy('published_at', 'desc')
+                ->first();
+
+            $blogs->published_at = Carbon::parse($seoTerms->published_at)->format('d F Y');
+
+            $data["seo_terms"] = $seoTerms;
+            $data["seo_guidelines"] = $seoGuidelines;
+            $data["blogs"] = $blogs;
+            
             return view('Tools/plagiarism-checker/index', $data);
         } else {
             return redirect('/');

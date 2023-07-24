@@ -1,6 +1,7 @@
 var WORDS_LENGTH = 0
 var TOP_DENSITY = 0
 let results, querywords;
+
 function checkUrl(url) {
     try {
         let _url = new URL(url)
@@ -77,6 +78,83 @@ const calculateCost = (words) => {
     const wordPerCost = words > 200 ? Math.ceil((words - 200) / 100) : 0
 
     return cost + wordPerCost * 0.01
+}
+
+const historyCard = (content, cost, wordCount, date) => {
+    const createdAt = new Date(date);
+    const formattedDate = `${createdAt.getFullYear()}-${(createdAt.getMonth() + 1).toString().padStart(2, "0")}-${createdAt.getDate().toString().padStart(2, "0")}`;
+    const formattedTime = `${createdAt.getHours().toString().padStart(2, "0")}:${createdAt.getMinutes().toString().padStart(2, "0")}`;
+    createdAt.setHours(createdAt.getHours() + 7);
+
+    return `
+        <div class="card card-custom mb-5 mt-4">
+            <div class="card-body px-3 py-3 row align-items-center">
+                <div class="col-4 b2-400 text-dark-60">
+                    ${content.substring(0, 58)}...
+                </div>
+                <div class="col-2 b2-700 text-purple-70">
+                    $${cost}
+                </div>
+                <div class="col-2 b2-700 text-primary-70">
+                    ${wordCount} words
+                </div>
+                <div class="col-2 b2-400 text-dark-60">
+                    ${formattedDate}
+                </div >
+                <div class="col-2 b2-400 text-dark-60">
+                    ${formattedTime}
+                </div>
+            </div >
+        </div > `
+}
+
+const updateStats = (data) => {
+    const [userReq, userWord, userCost, teamReq, teamTotal, teamWord, teamCost] = data;
+
+    $("#userReq").html(userReq);
+    $("#userWord").html(userWord);
+    $("#userCost").html(userCost);
+    $("#teamReq").html(teamReq);
+    $("#teamTotal").html(teamTotal);
+    $("#teamWord").html(teamWord);
+    $("#teamCost").html(teamCost);
+}
+
+const updateUserHistory = (data) => {
+    $("#my-account").html("");
+    $.each(data, function (index, value) {
+        $("#my-account").append(historyCard(value.content, value.cost, value.word_count, value.created_at));
+    });
+}
+
+const updateTeamHistory = (data) => {
+    $("#all-account").html("");
+    $.each(data, function (index, value) {
+        $("#all-account").append(historyCard(value.content, value.cost, value.word_count, value.created_at));
+    });
+}
+
+const fetchLogAndUpdate = () => {
+    $.get({
+        url: PLAGIARISM_LOGS_API_URL,
+        data: {
+            _token: $('meta[name="csrf-token"]').attr('content'),
+        },
+        success: (res) => {
+            if (res.statusCode === 200) {
+                const data = res.data;
+
+                updateStats([data.userSummaryLogs.user_requests, data.userSummaryLogs.total_words, data.userSummaryLogs.total_cost, data.cummulativeSummaryLogs.team_requests, data.cummulativeSummaryLogs.total_users, data.cummulativeSummaryLogs.total_words, data.cummulativeSummaryLogs.total_cost]);
+                updateUserHistory(data.cummulativeLogs)
+                updateTeamHistory(data.userLogs)
+            } else {
+                toastr.error(res.message)
+            }
+        },
+        error: (err) => {
+            toastr.error(err.responseJSON.message)
+        }
+    });
 }
 
 // listen for words density
@@ -402,7 +480,8 @@ const resultCards = (totalWords, data) => {
     titlesizer.text(data.title);
     var pixel = Math.floor(titlesizer.innerWidth());
 
-    return `<div class="accordion accordion-light accordion-toggle-arrow custom-features-accordion" id="accordionResult${data.index}">
+    return `
+<div class="accordion accordion-light accordion-toggle-arrow custom-features-accordion" id = "accordionResult${data.index}">
     <div class="card bg-white px-3" style="">
         <div class="card-header" id="headingOne2">
             <div class="card-title collapsed pr-4 justify-content-between" data-toggle="collapse"
@@ -419,40 +498,40 @@ const resultCards = (totalWords, data) => {
             <div class="card-body py-2">
                 <div class="d-flex align-items-center flex-column">
                     <hr class='my-2 w-100'>
-                    <div class="row w-100">
-                        <div class="col-7 s-400 text-ellipsis">${data.url}</div>
-                        <div class="col-3 s-400 flex-shrink-0 text-primary-70">${levelUrl} levels</div>
-                        <div class="col-2 s-400 flex-shrink-0 text-gray-100 text-right">URL</div>
-                    </div>
-                    <hr class='my-2 w-100'>
-                    <div class="row w-100">
-                        <div class="col-7 s-400 text-ellipsis">${data.title}</div>
-                        <div class="col-3 s-400 flex-shrink-0 text-primary-70">${pixel} pixels</div>
-                        <div class="col-2 s-400 flex-shrink-0 text-gray-100 text-right">Title</div>
-                    </div>
-                    <hr class='my-2 w-100'>
-                    <div class="d-flex w-100 justify-content-end pr-3">
-                        <p class="m-0 mx-3 s-400 text-gray-100">(${data.minwordsmatched} of ${totalWords})</p>                        
-                    </div>
-                    <div class="my-3 w-100 py-2 px-3 background-gray-20 b2-400">
-                        ${data.textsnippet}
-                    </div>
+                        <div class="row w-100">
+                            <div class="col-7 s-400 text-ellipsis">${data.url}</div>
+                            <div class="col-3 s-400 flex-shrink-0 text-primary-70">${levelUrl} levels</div>
+                            <div class="col-2 s-400 flex-shrink-0 text-gray-100 text-right">URL</div>
+                        </div>
+                        <hr class='my-2 w-100'>
+                            <div class="row w-100">
+                                <div class="col-7 s-400 text-ellipsis">${data.title}</div>
+                                <div class="col-3 s-400 flex-shrink-0 text-primary-70">${pixel} pixels</div>
+                                <div class="col-2 s-400 flex-shrink-0 text-gray-100 text-right">Title</div>
+                            </div>
+                            <hr class='my-2 w-100'>
+                                <div class="d-flex w-100 justify-content-end pr-3">
+                                    <p class="m-0 mx-3 s-400 text-gray-100">(${data.minwordsmatched} of ${totalWords})</p>
+                                </div>
+                                <div class="my-3 w-100 py-2 px-3 background-gray-20 b2-400">
+                                    ${data.textsnippet}
+                                </div>
 
-                    <div class="my-2 d-flex align-items-start justify-content-start w-100">
-                        <a href="${data.url}" target="_blank" rel="noopener noreferrer noindex" class="btn button-gray-20 b2-700"> <u>View "index" on CopyScape</u></a>
-                    </div>
+                                <div class="my-2 d-flex align-items-start justify-content-start w-100">
+                                    <a href="${data.url}" target="_blank" rel="noopener noreferrer noindex" class="btn button-gray-20 b2-700"> <u>View "index" on CopyScape</u></a>
+                                </div>
 
-                    <hr class='my-2 w-100'>
-                    <div class="d-flex w-100 justify-content-end mb-3 pr-3">
-                        <p class="m-0 mx-3 s-400 text-gray-100">(${data.minwordsmatched} of ${totalWords})</p>
-                        <p class="m-0 mx-3 s-400 text-primary-70">${percentage}%</p>
-                        <p class="m-0 ml-3 s-400 text-gray-100">Minimum words matched limit</p>
-                    </div>
+                                <hr class='my-2 w-100'>
+                                    <div class="d-flex w-100 justify-content-end mb-3 pr-3">
+                                        <p class="m-0 mx-3 s-400 text-gray-100">(${data.minwordsmatched} of ${totalWords})</p>
+                                        <p class="m-0 mx-3 s-400 text-primary-70">${percentage}%</p>
+                                        <p class="m-0 ml-3 s-400 text-gray-100">Minimum words matched limit</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                 </div>
-            </div>
-        </div>
-    </div>
-</div>`
+            </div>`
 }
 
 // function to highlight the matched text
@@ -573,6 +652,8 @@ $("#button-checker").on("click", function () {
                         results.forEach((result) => {
                             $(".result-container").append(resultCards(querywords, result));
                         });
+
+                        fetchLogAndUpdate()
                     } else {
                         toastr.error(res.message)
                     }

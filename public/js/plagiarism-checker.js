@@ -93,6 +93,18 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
 var WORDS_LENGTH = 0;
 var TOP_DENSITY = 0;
 var results, querywords;
@@ -166,6 +178,69 @@ var calculateCost = function calculateCost(words) {
   var cost = 0.03;
   var wordPerCost = words > 200 ? Math.ceil((words - 200) / 100) : 0;
   return cost + wordPerCost * 0.01;
+};
+
+var historyCard = function historyCard(content, cost, wordCount, date) {
+  var createdAt = new Date(date);
+  var formattedDate = "".concat(createdAt.getFullYear(), "-").concat((createdAt.getMonth() + 1).toString().padStart(2, "0"), "-").concat(createdAt.getDate().toString().padStart(2, "0"));
+  var formattedTime = "".concat(createdAt.getHours().toString().padStart(2, "0"), ":").concat(createdAt.getMinutes().toString().padStart(2, "0"));
+  createdAt.setHours(createdAt.getHours() + 7);
+  return "\n        <div class=\"card card-custom mb-5 mt-4\">\n            <div class=\"card-body px-3 py-3 row align-items-center\">\n                <div class=\"col-4 b2-400 text-dark-60\">\n                    ".concat(content.substring(0, 58), "...\n                </div>\n                <div class=\"col-2 b2-700 text-purple-70\">\n                    $").concat(cost, "\n                </div>\n                <div class=\"col-2 b2-700 text-primary-70\">\n                    ").concat(wordCount, " words\n                </div>\n                <div class=\"col-2 b2-400 text-dark-60\">\n                    ").concat(formattedDate, "\n                </div >\n                <div class=\"col-2 b2-400 text-dark-60\">\n                    ").concat(formattedTime, "\n                </div>\n            </div >\n        </div > ");
+};
+
+var updateStats = function updateStats(data) {
+  var _data = _slicedToArray(data, 7),
+      userReq = _data[0],
+      userWord = _data[1],
+      userCost = _data[2],
+      teamReq = _data[3],
+      teamTotal = _data[4],
+      teamWord = _data[5],
+      teamCost = _data[6];
+
+  $("#userReq").html(userReq);
+  $("#userWord").html(userWord);
+  $("#userCost").html(userCost);
+  $("#teamReq").html(teamReq);
+  $("#teamTotal").html(teamTotal);
+  $("#teamWord").html(teamWord);
+  $("#teamCost").html(teamCost);
+};
+
+var updateUserHistory = function updateUserHistory(data) {
+  $("#my-account").html("");
+  $.each(data, function (index, value) {
+    $("#my-account").append(historyCard(value.content, value.cost, value.word_count, value.created_at));
+  });
+};
+
+var updateTeamHistory = function updateTeamHistory(data) {
+  $("#all-account").html("");
+  $.each(data, function (index, value) {
+    $("#all-account").append(historyCard(value.content, value.cost, value.word_count, value.created_at));
+  });
+};
+
+var fetchLogAndUpdate = function fetchLogAndUpdate() {
+  $.get({
+    url: PLAGIARISM_LOGS_API_URL,
+    data: {
+      _token: $('meta[name="csrf-token"]').attr('content')
+    },
+    success: function success(res) {
+      if (res.statusCode === 200) {
+        var data = res.data;
+        updateStats([data.userSummaryLogs.user_requests, data.userSummaryLogs.total_words, data.userSummaryLogs.total_cost, data.cummulativeSummaryLogs.team_requests, data.cummulativeSummaryLogs.total_users, data.cummulativeSummaryLogs.total_words, data.cummulativeSummaryLogs.total_cost]);
+        updateUserHistory(data.cummulativeLogs);
+        updateTeamHistory(data.userLogs);
+      } else {
+        toastr.error(res.message);
+      }
+    },
+    error: function error(err) {
+      toastr.error(err.responseJSON.message);
+    }
+  });
 }; // listen for words density
 
 
@@ -456,7 +531,7 @@ var resultCards = function resultCards(totalWords, data) {
   titlesizer.attr("style", "font-family: arial, sans-serif !important; font-size: 13px !important; position: absolute !important; visibility: hidden !important; white-space: nowrap !important;");
   titlesizer.text(data.title);
   var pixel = Math.floor(titlesizer.innerWidth());
-  return "<div class=\"accordion accordion-light accordion-toggle-arrow custom-features-accordion\" id=\"accordionResult".concat(data.index, "\">\n    <div class=\"card bg-white px-3\" style=\"\">\n        <div class=\"card-header\" id=\"headingOne2\">\n            <div class=\"card-title collapsed pr-4 justify-content-between\" data-toggle=\"collapse\"\n                data-target=\"#accordion").concat(data.index, "One\">\n                <div class=\"index-pill s-400\">").concat(data.index, "</div>\n                <div class=\"d-flex align-items-center\">\n                    ").concat(data.percentmatched != undefined ? "\n                    <p class=\"m-0 s-400 text-primary-70 mr-3\">".concat(data.percentmatched, "%</p>\n                    <p class=\"m-0 s-400\">Text matched</p>") : '', "\n                </div>\n            </div>\n        </div>\n        <div id=\"accordion").concat(data.index, "One\" class=\"collapse\" data-parent=\"#accordionResult").concat(data.index, "\">\n            <div class=\"card-body py-2\">\n                <div class=\"d-flex align-items-center flex-column\">\n                    <hr class='my-2 w-100'>\n                    <div class=\"row w-100\">\n                        <div class=\"col-7 s-400 text-ellipsis\">").concat(data.url, "</div>\n                        <div class=\"col-3 s-400 flex-shrink-0 text-primary-70\">").concat(levelUrl, " levels</div>\n                        <div class=\"col-2 s-400 flex-shrink-0 text-gray-100 text-right\">URL</div>\n                    </div>\n                    <hr class='my-2 w-100'>\n                    <div class=\"row w-100\">\n                        <div class=\"col-7 s-400 text-ellipsis\">").concat(data.title, "</div>\n                        <div class=\"col-3 s-400 flex-shrink-0 text-primary-70\">").concat(pixel, " pixels</div>\n                        <div class=\"col-2 s-400 flex-shrink-0 text-gray-100 text-right\">Title</div>\n                    </div>\n                    <hr class='my-2 w-100'>\n                    <div class=\"d-flex w-100 justify-content-end pr-3\">\n                        <p class=\"m-0 mx-3 s-400 text-gray-100\">(").concat(data.minwordsmatched, " of ").concat(totalWords, ")</p>                        \n                    </div>\n                    <div class=\"my-3 w-100 py-2 px-3 background-gray-20 b2-400\">\n                        ").concat(data.textsnippet, "\n                    </div>\n\n                    <div class=\"my-2 d-flex align-items-start justify-content-start w-100\">\n                        <a href=\"").concat(data.url, "\" target=\"_blank\" rel=\"noopener noreferrer noindex\" class=\"btn button-gray-20 b2-700\"> <u>View \"index\" on CopyScape</u></a>\n                    </div>\n\n                    <hr class='my-2 w-100'>\n                    <div class=\"d-flex w-100 justify-content-end mb-3 pr-3\">\n                        <p class=\"m-0 mx-3 s-400 text-gray-100\">(").concat(data.minwordsmatched, " of ").concat(totalWords, ")</p>\n                        <p class=\"m-0 mx-3 s-400 text-primary-70\">").concat(percentage, "%</p>\n                        <p class=\"m-0 ml-3 s-400 text-gray-100\">Minimum words matched limit</p>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>");
+  return "\n<div class=\"accordion accordion-light accordion-toggle-arrow custom-features-accordion\" id = \"accordionResult".concat(data.index, "\">\n    <div class=\"card bg-white px-3\" style=\"\">\n        <div class=\"card-header\" id=\"headingOne2\">\n            <div class=\"card-title collapsed pr-4 justify-content-between\" data-toggle=\"collapse\"\n                data-target=\"#accordion").concat(data.index, "One\">\n                <div class=\"index-pill s-400\">").concat(data.index, "</div>\n                <div class=\"d-flex align-items-center\">\n                    ").concat(data.percentmatched != undefined ? "\n                    <p class=\"m-0 s-400 text-primary-70 mr-3\">".concat(data.percentmatched, "%</p>\n                    <p class=\"m-0 s-400\">Text matched</p>") : '', "\n                </div>\n            </div>\n        </div>\n        <div id=\"accordion").concat(data.index, "One\" class=\"collapse\" data-parent=\"#accordionResult").concat(data.index, "\">\n            <div class=\"card-body py-2\">\n                <div class=\"d-flex align-items-center flex-column\">\n                    <hr class='my-2 w-100'>\n                        <div class=\"row w-100\">\n                            <div class=\"col-7 s-400 text-ellipsis\">").concat(data.url, "</div>\n                            <div class=\"col-3 s-400 flex-shrink-0 text-primary-70\">").concat(levelUrl, " levels</div>\n                            <div class=\"col-2 s-400 flex-shrink-0 text-gray-100 text-right\">URL</div>\n                        </div>\n                        <hr class='my-2 w-100'>\n                            <div class=\"row w-100\">\n                                <div class=\"col-7 s-400 text-ellipsis\">").concat(data.title, "</div>\n                                <div class=\"col-3 s-400 flex-shrink-0 text-primary-70\">").concat(pixel, " pixels</div>\n                                <div class=\"col-2 s-400 flex-shrink-0 text-gray-100 text-right\">Title</div>\n                            </div>\n                            <hr class='my-2 w-100'>\n                                <div class=\"d-flex w-100 justify-content-end pr-3\">\n                                    <p class=\"m-0 mx-3 s-400 text-gray-100\">(").concat(data.minwordsmatched, " of ").concat(totalWords, ")</p>\n                                </div>\n                                <div class=\"my-3 w-100 py-2 px-3 background-gray-20 b2-400\">\n                                    ").concat(data.textsnippet, "\n                                </div>\n\n                                <div class=\"my-2 d-flex align-items-start justify-content-start w-100\">\n                                    <a href=\"").concat(data.url, "\" target=\"_blank\" rel=\"noopener noreferrer noindex\" class=\"btn button-gray-20 b2-700\"> <u>View \"index\" on CopyScape</u></a>\n                                </div>\n\n                                <hr class='my-2 w-100'>\n                                    <div class=\"d-flex w-100 justify-content-end mb-3 pr-3\">\n                                        <p class=\"m-0 mx-3 s-400 text-gray-100\">(").concat(data.minwordsmatched, " of ").concat(totalWords, ")</p>\n                                        <p class=\"m-0 mx-3 s-400 text-primary-70\">").concat(percentage, "%</p>\n                                        <p class=\"m-0 ml-3 s-400 text-gray-100\">Minimum words matched limit</p>\n                                    </div>\n                                </div>\n                            </div>\n                        </div>\n                </div>\n            </div>");
 }; // function to highlight the matched text
 
 
@@ -534,7 +609,6 @@ function strokeValue(score, category, isReverse) {
 $("#button-checker").on("click", function () {
   var text;
   Swal.fire({
-    title: 'Error!',
     text: 'Are u sure want to run the copyscape check?',
     confirmButtonText: 'Yes',
     cancelButtonText: 'No',
@@ -582,6 +656,7 @@ $("#button-checker").on("click", function () {
             results.forEach(function (result) {
               $(".result-container").append(resultCards(querywords, result));
             });
+            fetchLogAndUpdate();
           } else {
             toastr.error(res.message);
           }

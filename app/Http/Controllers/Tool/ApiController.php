@@ -232,6 +232,26 @@ class ApiController extends Controller
         }
     }
 
+    public function plagiarismCheckLogs(Request $request)
+    {
+        try {
+            $data = [];
+            // Get user plagiarism check logs
+            $data['userLogs'] = PlagiarismCheckLog::where('user_id', Auth::user()->id)
+                ->get();
+            $data['userSummaryLogs'] = PlagiarismCheckLog::selectRaw("COUNT(id) as 'user_requests', SUM(word_count) as 'total_words', SUM(cost) as 'total_cost'")
+                ->where('user_id', Auth::user()->id)
+                ->first();
+            $data['cummulativeLogs'] = PlagiarismCheckLog::get();
+            $data['cummulativeSummaryLogs'] = PlagiarismCheckLog::selectRaw("COUNT(id) as 'team_requests', COUNT(DISTINCT(user_id)) as 'total_users', SUM(word_count) as 'total_words', SUM(cost) as 'total_cost'")
+                ->first();
+                
+            return new BaseApiResource($data, "success", 200);
+        } catch (Exception $exception){
+            return new BaseApiResource($response['data'] ?? null, $response['message'], $response['statusCode']);
+        }
+    }
+
     public function plagiarismCheckCalendarLogs(Request $request)
     {
         try {
