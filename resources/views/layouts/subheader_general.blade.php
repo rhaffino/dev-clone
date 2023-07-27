@@ -30,6 +30,8 @@
                             <a class="dropdown-item @yield('link-analyzer')" href="/{{ $local }}/link-analyzer">Link Analyzer</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item @yield('technology-lookup')" href="/{{ $local }}/technology-lookup">Technology Lookup</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item @yield('ping-tool')" href="/{{ $local }}/ping">Ping Tool</a>
                         </div>
                     </li>
                     <li class="nav-item ml-7">
