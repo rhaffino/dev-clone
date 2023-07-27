@@ -297,6 +297,7 @@ $(".remove-btn").on("click", function () {
     $(".result-input").hide();
     $("#text-check").show();
     $(".plagiarism-result").hide();
+    $("#text-check").removeClass("h-400");
     wordCounter()
 });
 
@@ -531,7 +532,7 @@ const resultCards = (totalWords, data) => {
                                 </div>
 
                                 <div class="my-2 d-flex align-items-start justify-content-start w-100">
-                                    <a href="${data.url}" target="_blank" rel="noopener noreferrer noindex" class="btn button-gray-20 b2-700"> <u>View "index" on CopyScape</u></a>
+                                    <a href="${data.url}" target="_blank" rel="noopener noreferrer noindex" class="btn button-gray-20 b2-700"> <u>View "index" on Copyscape</u></a>
                                 </div>
 
                                 <hr class='my-2 w-100'>
@@ -616,12 +617,20 @@ function strokeValue(score, category, isReverse) {
     animateValue('value-' + category, 0, score, 3000);
 }
 
+$("#text-check").on("change", () => {
+    if ($("#text-check").val() !== "") {
+        $("#text-check").addClass("h-400");
+    } else {
+        $("#text-check").removeClass("h-400");
+    }
+});
+
 // PLAGIARISM CHECKER
 $("#button-checker").on("click", function () {
     let text
 
     Swal.fire({
-        text: 'Are u sure want to run the copyscape check?',
+        text: 'Do you really want to run the Copyscape check?',
         confirmButtonText: 'Yes',
         cancelButtonText: 'No',
         showCancelButton: true,
@@ -646,7 +655,7 @@ $("#button-checker").on("click", function () {
                 },
                 success: (res) => {
                     if (res.statusCode === 200) {
-                        // console.log(res.data)
+                        console.log(res.data)
                         let text = res.data.text
                         res.data = res.data.response
                         $("#plagiarismBtn").prop("disabled", false);
@@ -661,7 +670,8 @@ $("#button-checker").on("click", function () {
 
                         $("#button-checker").prop("disabled", false);
 
-                        var textareaContent = styleMatchedText(text, res.data.alltextmatched)
+                        // var textareaContent = styleMatchedText(text, res.data.alltextmatched)
+                        var textareaContent = text
 
                         $('.result-input').append(textareaContent)
                         $('.result-input').show()
@@ -684,10 +694,12 @@ $("#button-checker").on("click", function () {
                         fetchLogAndUpdate()
                     } else {
                         toastr.error(res.message)
+                        $("#button-checker").prop("disabled", false);
                     }
                 },
                 error: (err) => {
                     toastr.error(err.responseJSON.message)
+                    $("#button-checker").prop("disabled", false);
                 }
             });
         }
