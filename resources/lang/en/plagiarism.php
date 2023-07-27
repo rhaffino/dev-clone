@@ -19,7 +19,7 @@ return [
     "times" => "Times",
 
     "title" => "PLAGIARISM CHECKER",
-    "desc" => "Plagiarism detection solution powered by CopyScape",
+    "desc" => "Plagiarism detection solution powered by Copyscape",
 
     "results" => "RESULTS",
 
@@ -31,7 +31,7 @@ return [
     "estcost" => "EST.COST",
     "cancel" => "Cancel",
     "run" => "Run",
-    "run_copyscape" => "Run CopyScape",
+    "run_copyscape" => "Run Copyscape",
     "cost_desc" => "$0.03 first 200 words, $0.01 next 100 words (about $0.05 for 400-449 words)",
 
     "plc_text" => "Type / paste any text here..",

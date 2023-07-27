@@ -19,7 +19,7 @@ return [
     "times" => "Kali",
 
     "title" => "PEMERIKSA PLAGIARISME",
-    "desc" => "Solusi deteksi plagiarisme dengan teknologi CopyScape",
+    "desc" => "Solusi deteksi plagiarisme dengan teknologi Copyscape",
 
     "results" => "HASIL",
 
@@ -31,7 +31,7 @@ return [
     "estcost" => "EST. BIAYA",
     "cancel" => "Batal",
     "run" => "Jalankan",
-    "run_copyscape" => "Jalankan CopyScape",
+    "run_copyscape" => "Jalankan Copyscape",
     "cost_desc" => "$0.03 untuk 200 kata pertama, $0.01 untuk 100 kata berikutnya (sekitar Rp0.05 untuk 400-449 kata)",
 
     "plc_text" => "Ketik / tempelkan teks di sini..",

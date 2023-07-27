@@ -137,7 +137,7 @@
                 </div>
                 <div class="row mt-10">
                     <div class="seo-booster-container">
-                        <h2 class="h2-700 h2-m-700">Plagiarism Checker (by CopyScape)</h2>
+                        <h2 class="h2-700 h2-m-700">Plagiarism Checker (by Copyscape)</h2>
                         <div class="d-flex align-items-center author">
                             <i class='bx bxs-user-circle'></i>
                             <p class="m-0 b2-400 b2-m-400">Writen by cmlabs</p>
