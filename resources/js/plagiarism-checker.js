@@ -1,6 +1,6 @@
 var WORDS_LENGTH = 0
 var TOP_DENSITY = 0
-let results, querywords;
+let results, querywords, allviewurl;
 
 function checkUrl(url) {
     try {
@@ -264,12 +264,18 @@ resultSizeButtons.forEach((btn) => {
         let count = 0
         $(".result-container").html("")
 
-        results.forEach((result) => {
-            if (count < parseInt(selectedValue)) {
-                $(".result-container").append(resultCards(querywords, result));
+        results.forEach((result, index) => {
+            if (count < parseInt(selectedValue) && result?.percentmatched) {
+                $(".result-container").append(resultCards(index, querywords, result));
             }
             count++;
         });
+
+        $(".result-container").append(
+            `
+            <a href="${allviewurl}" id="fullUrl" target="_blank" rel="noopener noreferrer noindex" class="btn button-gray-20 b2-700 full-url-btn"> <u>See detail result</u></a>
+            `
+        );
     });
 });
 
@@ -486,7 +492,7 @@ input.addEventListener("input", () => {
     wordCounter()
 })
 
-const resultCards = (totalWords, data) => {
+const resultCards = (index, totalWords, data) => {
     const percentage = Math.round(data.minwordsmatched / totalWords * 100)
     const levelUrl = checkUrlLevel(data.url)
     var titlesizer = $("#titlesizer");
@@ -499,7 +505,7 @@ const resultCards = (totalWords, data) => {
     <div class="card bg-white px-3" style="">
         <div class="card-header" id="headingOne2">
             <div class="card-title collapsed pr-4 justify-content-between" data-toggle="collapse"
-                data-target="#accordion${data.index}One">
+                data-target="#accordion${index + 1}One">
                 <div class="index-pill s-400">${data.index}</div>
                 <div class="d-flex align-items-center">
                     ${data.percentmatched != undefined ? `
@@ -680,16 +686,25 @@ $("#button-checker").on("click", function () {
 
                         results = res.data.result
                         querywords = res.data.querywords
+                        allviewurl = res.data.allviewurl
 
-                        if (results.length > 0) {
+                        results.forEach((result, index) => {
+                            if (result?.percentmatched) {
+                                $(".result-container").append(resultCards(index, querywords, result));
+                            }
+                        });
+
+                        if (results.length > 0 && res.data.allpercentmatched != 100) {
                             $(".result-option").show();
+                            $(".result-container").append(
+                                `
+                                <a href="${res.data.allviewurl}" id="fullUrl" target="_blank" rel="noopener noreferrer noindex" class="btn button-gray-20 b2-700 full-url-btn"> <u>See detail result</u></a>
+                                `
+                            );
                         } else {
                             $(".result-option").hide();
+                            $(".result-container").hide();
                         }
-
-                        results.forEach((result) => {
-                            $(".result-container").append(resultCards(querywords, result));
-                        });
 
                         fetchLogAndUpdate()
                     } else {

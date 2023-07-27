@@ -254,7 +254,7 @@
                                         @lang('plagiarism.overview')
                                     </div>
                                 </div>
-                                <div class="d-flex align-items-center justify-content-center gap-3">
+                                <div class="d-flex align-items-center justify-content-center gap-3 pb-4">
                                     <div class="d-flex align-items-center flex-column gap-1 px-3">
                                         <div class="progress progress-red duplicate" data-percentage="0">
                                             <span class="progress-left">
@@ -287,14 +287,12 @@
                                         </div>
                                         <div class="b2-400 b2-m-400">@lang('plagiarism.unique')</div>
                                     </div>
-                                </div>
-                                <a href="" id="fullUrl" target="_blank" rel="noopener noreferrer noindex"
-                                    class="btn button-gray-20 b2-700 full-url-btn"> <u>@lang('plagiarism.view_full')</u></a>
+                                </div>                                
                             </div>
 
-                            <div class="card card-custom mt-10 result-card plagiarism-result" style="display: none">
+                            <div class="card card-custom mt-10 result-card plagiarism-result result-option" style="display: none">
                                 <div
-                                    class="px-4 py-3 d-flex align-items-center justify-content-between b2-400 text-dark-60 result-option">
+                                    class="px-4 py-3 d-flex align-items-center justify-content-between b2-400 text-dark-60">
                                     <div class="d-flex radio-tab-container-2 rounded-sm overflow-hidden">
                                         <label class="radio-tab">
                                             <input value="999999" checked type="radio" name="result-size" checked>
