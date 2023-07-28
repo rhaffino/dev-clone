@@ -1,0 +1,188 @@
+@use "sass:map";
+
+.footer-bottom {
+    .cmlabs-container {
+        padding-top: 64px;
+    }
+    .footer-menu {
+        padding-bottom: 24px;
+        .footer-submenu-container {
+            flex: 18%;
+
+            .flex-1 {
+                flex: 50%;
+            }
+
+            ul {
+                li {
+                    line-height: 16px;
+                }
+            }
+        }
+        .partner-badge {
+            padding: 32px 0;
+            &-card {
+                max-width: 545px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 24px 48px;
+                gap: 24px;
+                background-color: map.get($colors, "gray-60");
+                border-radius: 10px;
+                .pill {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: flex-start;
+                    padding: 6px 14px;
+                    gap: 8px;
+                    border-radius: 100px;
+                    background-color: map.get($colors, "gray-10");
+                }
+            }
+            .desc {
+                max-width: 459px;
+            }
+        }
+        .two-rows {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+        .footer-title {
+            margin-bottom: 48px;
+        }
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            a {
+                text-decoration: none;
+            }
+            a:hover {
+                color: map.get($colors, "primary-70");
+            }
+        }
+        .office-location {
+            margin-bottom: 12px;
+        }
+        .office-address {
+            margin-bottom: 0;
+        }
+        .office-phone {
+            text-decoration: none;
+            margin-bottom: 0;
+        }
+        a {
+            text-decoration: none;
+        }
+        .btn-become-partner {
+            margin-top: 36px;
+            margin-bottom: 28px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            padding: 6px 12px;
+            background-color: transparent;
+            &:hover {
+                background-color: map.get($colors, "primary-70");
+            }
+        }
+    }
+    .footer-credit {
+        .cmlabs-container {
+            padding-top: 16px;
+            padding-bottom: 16px;
+        }
+        ul {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            li {
+                a {
+                    color: map.get($colors, "primary-100");
+                }
+            }
+        }
+        .find-us {
+            display: flex;
+            align-items: center;
+            line-height: 0;
+            span {
+                margin-right: 16px;
+            }
+            ul {
+                display: flex;
+                gap: 16px;
+            }
+            .icon {
+                font-size: 20px; // icon size
+                &.bxl-youtube {
+                    margin-top: 4px;
+                }
+            }
+        }
+        .disclaimer-term {
+            ul {
+                display: flex;
+                gap: 40px;
+                li {
+                    white-space: nowrap;
+                }
+            }
+            @media screen and (max-width: 1440px) {
+                ul {
+                    gap: 20px;
+                }
+            }
+        }
+    }
+    &.info {
+        background: #f2f1f1;
+    }
+
+    @media screen and (max-width: 991px) {
+        .footer-menu {
+            padding-bottom: 32px;
+            .menu-container {
+                margin-top: 28px;
+            }
+            .footer-submenu-container {
+                flex: 50%;
+            }
+            .footer-title {
+                margin-bottom: 28px;
+            }
+            .office-location {
+                margin-bottom: 6px;
+            }
+        }
+    }
+    @media screen and (max-width: 767.98px) {
+        .cmlabs-container {
+            padding-top: 32px;
+        }
+        .footer-credit {
+            .find-us {
+                .icon {
+                    font-size: 20px; // icon size
+                    &.bxl-youtube {
+                        margin-top: 4px;
+                    }
+                }
+            }
+            .disclaimer-term {
+                ul {
+                    display: flex;
+                    gap: 28px;
+                }
+            }
+        }
+    }
+}
