@@ -1,0 +1,76 @@
+@use "sass:map";
+
+body.cmlabs-tools {
+    .cmlabs-container {
+        max-width: 1366px !important;
+        padding-left: 100px;
+        padding-right: 100px;
+        margin: 0 auto;
+    }
+
+    @media screen and (max-width: 1024px) {
+        .cmlabs-container {
+            max-width: 100%;
+            width: 100%;
+            padding-right: var(--bs-gutter-x, 1.5rem);
+            padding-left: var(--bs-gutter-x, 1.5rem);
+            margin-right: auto;
+            margin-left: auto;
+        }
+    }
+
+    .cover_wrapper {
+        .text-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 32px 0;
+        }
+    }
+
+    // Switch in homepage
+    .btn-group {
+        z-index: 9;
+        .button-switch {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 6px 14px;
+            gap: 8px;
+            height: 32px;
+
+            background: #ffffff;
+            color: map.get($colors, "primary-70");
+            border: 1px solid map.get($colors, "primary-70");
+            &.left {
+                border-radius: 4px 0px 0px 4px;
+            }
+            &.right {
+                border-radius: 0px 4px 4px 0px;
+            }
+            &.active {
+                background: map.get($colors, "primary-70");
+                color: #ffffff;
+                border: none;
+            }
+        }
+    }
+
+    .swal2-actions {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .custom-bundling {
+        margin: auto;
+        width: 50%;
+    }
+
+    @media screen and (max-width: 767px) {
+        .custom-bundling {
+            width: 100%;
+        }
+    }
+}

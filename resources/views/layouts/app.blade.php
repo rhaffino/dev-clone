@@ -65,7 +65,7 @@
     <!--end::Layout Themes-->
     <link rel="shortcut icon" href="{{ asset('media/logos/cmlabs.ico') }}"/>
 </head>
-<body id="kt_body" class="header-fixed header-mobile-fixed subheader-enabled subheader-fixed">
+<body id="kt_body" class="header-fixed header-mobile-fixed subheader-enabled subheader-fixed cmlabs-tools">
 @if (env('APP_ENV') == 'production')
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NRKQD67"
@@ -102,7 +102,7 @@
             </div>
             <!--end::Content-->
             @yield('bottom-content')
-            @include('layouts.footernew')
+            @include('v2.components.footer')
         </div>
         <!--end::Wrapper-->
     </div>
