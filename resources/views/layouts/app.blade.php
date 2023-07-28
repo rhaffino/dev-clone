@@ -56,6 +56,7 @@
     <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@2.4.14/dist/css/splide.min.css">
+    <link rel="stylesheet" href="{{ mix('/css/app.css') }}">
     @stack('style')
 
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
@@ -64,7 +65,7 @@
     <!--end::Layout Themes-->
     <link rel="shortcut icon" href="{{ asset('media/logos/cmlabs.ico') }}"/>
 </head>
-<body id="kt_body" class="header-fixed header-mobile-fixed subheader-enabled subheader-fixed">
+<body id="kt_body" class="header-fixed header-mobile-fixed subheader-enabled subheader-fixed cmlabs-tools">
 @if (env('APP_ENV') == 'production')
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NRKQD67"
@@ -100,7 +101,7 @@
                 <!--end::Entry-->
             </div>
             <!--end::Content-->
-            @include('layouts.footernew')
+            @include('v2.components.footer')
         </div>
         <!--end::Wrapper-->
     </div>
