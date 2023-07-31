@@ -65,4 +65,9 @@ trait ApiHelper
         $response = $this->request("api/meta-checker/check", 'POST', compact('url'));
         return \GuzzleHttp\json_decode($response, 1);
     }
+
+    protected function requestPingChecker($url){
+        $response = $this->request("api/ping-tool/check", 'POST', compact('url'));
+        return \GuzzleHttp\json_decode($response, 1);
+    }
 }

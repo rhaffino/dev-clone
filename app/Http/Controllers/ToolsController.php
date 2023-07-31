@@ -312,7 +312,7 @@ class ToolsController extends Controller
         return view('Tools/keywordpermutation', compact('local', 'dataID', 'dataEN', 'is_maintenance'));
     }
 
-    public function ping($lang)
+    public function pingTool($lang)
     {
         App::setLocale($lang);
         $dataID = [];
