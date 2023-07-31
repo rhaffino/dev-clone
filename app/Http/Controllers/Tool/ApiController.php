@@ -238,11 +238,13 @@ class ApiController extends Controller
             $data = [];
             // Get user plagiarism check logs
             $data['userLogs'] = PlagiarismCheckLog::where('user_id', Auth::user()->id)
+                ->orderBy('created_at', 'desc')
                 ->get();
             $data['userSummaryLogs'] = PlagiarismCheckLog::selectRaw("COUNT(id) as 'user_requests', SUM(word_count) as 'total_words', SUM(cost) as 'total_cost'")
                 ->where('user_id', Auth::user()->id)
                 ->first();
-            $data['cummulativeLogs'] = PlagiarismCheckLog::get();
+            $data['cummulativeLogs'] = PlagiarismCheckLog::orderBy('created_at', 'desc')
+                ->get();
             $data['cummulativeSummaryLogs'] = PlagiarismCheckLog::selectRaw("COUNT(id) as 'team_requests', COUNT(DISTINCT(user_id)) as 'total_users', SUM(word_count) as 'total_words', SUM(cost) as 'total_cost'")
                 ->first();
                 

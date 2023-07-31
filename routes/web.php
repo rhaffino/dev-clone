@@ -67,7 +67,7 @@ Route::get('/logout','Auth\LoginController@logout');
         Route::get('/{lang}/keyword-research', 'ToolsController@keywordresearch');
         Route::get('/{lang}/keyword-permutation', 'ToolsController@keywordpermutation');
         Route::get('/{lang}/plagiarism-checker', 'ToolsController@plagiarismChecker');
-        Route::get('/{lang}/download-plagiarism-check-logs', 'ToolsController@downloadPlagiarismCheckLogs');
+        Route::get('/{lang}/download-plagiarism-check-logs/{type}', 'ToolsController@downloadPlagiarismCheckLogs');
     });
     Route::get('/en/version', 'ToolsController@englishVersion');
     Route::get('/id/version', 'ToolsController@indonesiaVersion');

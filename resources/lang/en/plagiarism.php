@@ -49,7 +49,7 @@ return [
     "history" => "History",
     "my_acc" => "My Account",
     "all_acc" => "All Account",
-    "download" => "Download (*.csv) File",
+    "download" => "Download (*.xlsx) File",
 
     "whatsnew" => "What's New",
     "other_tools" => "Other SEO Tools",

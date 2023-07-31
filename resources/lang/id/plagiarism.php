@@ -49,7 +49,7 @@ return [
     "history" => "Riwayat",
     "my_acc" => "Akun Saya",
     "all_acc" => "Semua Akun",
-    "download" => "Unduh File (*.csv)",
+    "download" => "Unduh File (*.xlsx)",
 
     "whatsnew" => "Yang Baru",
     "other_tools" => "Alat SEO Lainnya",
