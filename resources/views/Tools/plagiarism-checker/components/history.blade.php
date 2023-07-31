@@ -5,16 +5,18 @@
             <p class="m-0 ml-2 b2-500">@lang('plagiarism.history')</p>
         </div>
         <li class="nav-item" role="presentation">
-            <a class="nav-link active b2-500 text-decoration-underline" id="my-account-tab" data-toggle="tab"
-                href="#my-account" role="tab" aria-controls="my-account" aria-selected="true">@lang('plagiarism.my_acc')</a>
+            <a onclick="changeToCurrentUser()" class="nav-link active b2-500 text-decoration-underline"
+                id="my-account-tab" data-toggle="tab" href="#my-account" role="tab" aria-controls="my-account"
+                aria-selected="true">@lang('plagiarism.my_acc')</a>
         </li>
         <li class="nav-item" role="presentation">
-            <a class="nav-link b2-500 text-underline" id="all-account-tab" data-toggle="tab" href="#all-account"
-                role="tab" aria-controls="all-account" aria-selected="false">@lang('plagiarism.all_acc')</a>
+            <a onclick="changeToAll()" class="nav-link b2-500 text-underline" id="all-account-tab" data-toggle="tab"
+                href="#all-account" role="tab" aria-controls="all-account"
+                aria-selected="false">@lang('plagiarism.all_acc')</a>
         </li>
 
         <div class="align-self-end b2-400 text-dark-60 flex-grow-1 d-flex justify-content-end">
-            <a href="/en/download-plagiarism-check-logs/all">@lang('plagiarism.download')</a>
+            <a href="/en/download-plagiarism-check-logs/user" id="downloadLink">@lang('plagiarism.download')</a>
         </div>
     </ul>
     <div class="history-container tab-content" id="myTabContent">
@@ -72,3 +74,15 @@
         </div>
     </div>
 </div>
+
+<script>
+    const downloadLink = document.getElementById("downloadLink");
+
+    function changeToAll() {
+        downloadLink.href = "/en/download-plagiarism-check-logs/all";
+    }
+
+    function changeToCurrentUser() {
+        downloadLink.href = "/en/download-plagiarism-check-logs/user";
+    }
+</script>
