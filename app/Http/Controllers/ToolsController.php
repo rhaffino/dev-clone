@@ -6,6 +6,7 @@ use App\Models\Blog;
 use App\Models\BlogCategory;
 use App\Models\Page;
 use App\Models\PlagiarismCheckLog;
+use App\Models\User;
 use GuzzleHttp\Client;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\App;
@@ -14,7 +15,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Crypt;
 use App\Http\Controllers\HomeController;
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
-use PhpOffice\PhpSpreadsheet\Writer\Csv;
+use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 
 class ToolsController extends Controller
 {
@@ -399,32 +400,64 @@ class ToolsController extends Controller
         }
     }
 
-    public function downloadPlagiarismCheckLogs($lang)
+    public function downloadPlagiarismCheckLogs($lang, $type)
     {
         if (Auth::check()  && (Auth::check() ? Auth::user()->user_role_id == 3 : false)) {
-            $logs = PlagiarismCheckLog::get();
-            // Preparing csv file
-            $fileName = "plagiarism-check-logs-" . time() . ".csv";
-            $spreadsheet = new Spreadsheet();
-            $sheet = $spreadsheet->getActiveSheet();
-            $sheet->setCellValue('A1', 'Content');
-            $sheet->setCellValue('B1', 'Word Count');
-            $sheet->setCellValue('C1', 'Cost');
-            $sheet->setCellValue('D1', 'Result URL');
-            $sheet->setCellValue('E1', 'Created at');
-
-            // Insert data to csv
-            $index = 2;
-            foreach ($logs as $log) {
-                $sheet->setCellValue("A$index", $log->content);
-                $sheet->setCellValue("B$index", "$log->word_count words");
-                $sheet->setCellValue("C$index", "\$$log->cost");
-                $sheet->setCellValue("D$index", $log->url);
-                $sheet->setCellValue("E$index", date_format(date_add($log->created_at, date_interval_create_from_date_string('7 hours')), "l, d F Y H:i"));
-                $index++;
+            if ($type == 'all') {
+                $logs = PlagiarismCheckLog::with('user')->get();
+                // Preparing csv file
+                $fileName = "plagiarism_check_logs-" . time() . ".xlsx";
+                $spreadsheet = new Spreadsheet();
+                $sheet = $spreadsheet->getActiveSheet();
+                $sheet->setCellValue('A1', 'Content');
+                $sheet->getColumnDimension('A')->setWidth(40);
+                $sheet->setCellValue('B1', 'Word Count');
+                $sheet->getColumnDimension('B')->setWidth(12);
+                $sheet->setCellValue('C1', 'Cost');
+                $sheet->setCellValue('D1', 'User Email');
+                $sheet->getColumnDimension('D')->setWidth(30);
+                $sheet->setCellValue('E1', 'Result URL');
+                $sheet->getColumnDimension('E')->setWidth(45);
+                $sheet->setCellValue('F1', 'Created at');
+                // Insert data to csv
+                $index = 2;
+                foreach ($logs as $log) {
+                    $sheet->setCellValue("A$index", $log->content);
+                    $sheet->setCellValue("B$index", "$log->word_count words");
+                    $sheet->setCellValue("C$index", "\$$log->cost");
+                    $sheet->setCellValue("D$index", $log->user ? $log->user->email : '-');
+                    $sheet->setCellValue("E$index", $log->url);
+                    $sheet->setCellValue("F$index", date_format(date_add($log->created_at, date_interval_create_from_date_string('7 hours')), "l, d F Y H:i"));
+                    $index++;
+                }
+            } else if($type == 'user') {
+                $logs = PlagiarismCheckLog::where('user_id', Auth::user()->id)->get();
+                $user = User::find(Auth::user()->id);
+                // Preparing csv file
+                $fileName = "plagiarism_check_logs-" . $user->name . "-" . time() . ".xlsx";
+                $spreadsheet = new Spreadsheet();
+                $sheet = $spreadsheet->getActiveSheet();
+                $sheet->setCellValue('A1', 'Content');
+                $sheet->getColumnDimension('A')->setWidth(40);
+                $sheet->setCellValue('B1', 'Word Count');
+                $sheet->getColumnDimension('B')->setWidth(12);
+                $sheet->setCellValue('C1', 'Cost');
+                $sheet->setCellValue('D1', 'Result URL');
+                $sheet->getColumnDimension('D')->setWidth(45);
+                $sheet->setCellValue('F1', 'Created at');
+                // Insert data to csv
+                $index = 2;
+                foreach ($logs as $log) {
+                    $sheet->setCellValue("A$index", $log->content);
+                    $sheet->setCellValue("B$index", "$log->word_count words");
+                    $sheet->setCellValue("C$index", "\$$log->cost");
+                    $sheet->setCellValue("D$index", $log->url);
+                    $sheet->setCellValue("F$index", date_format(date_add($log->created_at, date_interval_create_from_date_string('7 hours')), "l, d F Y H:i"));
+                    $index++;
+                }
             }
 
-            $csv = new Csv($spreadsheet);
+            $csv = new Xlsx($spreadsheet);
             $csv->save($fileName);
             return response()->download($fileName)->deleteFileAfterSend();
         } else {
