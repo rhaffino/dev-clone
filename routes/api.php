@@ -17,6 +17,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+Route::post('/ping-tool', 'Tool\ApiController@pingTool')->name('api.ping-tool');
 Route::post('/analyze-technology', 'Tool\ApiController@analyzeTechnology')->name('api.analyze-technology');
 Route::post('/analyze-hreflang', 'Tool\ApiController@analyzeHreflang')->name('api.analyze-hreflang');
 Route::post('/analyze-link', 'Tool\ApiController@analyzeLink')->name('api.analyze-link');
