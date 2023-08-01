@@ -50,12 +50,9 @@ id/ping
             </div>
             <div class="row">
                 <div class="col-md-8">
-                    <div class="px-2 mb-3">
-                        <span class="text-black font-15px font-weight-bolder">@lang('ping.result')</span>
-                        <span class="font-15px font-weight-bolder" style="color:#9A99A2" id="technology-lookup-result-total"></span>
-                        {{--
-                        <span class="font-15px what-is-this" style="color:#9A99A2">(@lang('layout.what-is-this'))</span>
-                        --}}
+                    <div class="px-2 mb-3 d-flex">
+                        <span class="text-black font-15px font-weight-bolder mr-2">@lang('ping.result')</span>
+                        <span class="font-15px font-weight-bolder d-flex align-items-center" id="technology-lookup-result-total"></span>
                     </div>
                     <div class="card card-custom" id="technology-lookup-result-container">
                         <div class="card-body py-4 px-0">
@@ -226,7 +223,7 @@ id/ping
             </div>
             <div class="col-md-6">
                 <div class="d-flex align-items-center">
-                    <span class="text-primaryblue">cmlabs Technology Lookup</span>
+                    <span class="text-primaryblue">cmlabs Ping Tool</span>
                     <span class="bx bxs-check-circle ml-5 mr-1 text-primaryblue"></span>
                     <small class="text-grey">@lang('layout.updated') 25 Dec, 2020</small>
                 </div>
@@ -435,6 +432,10 @@ id/ping
         // });
     </script>
  {{-- @endif --}}
+@endpush
+
+@push('style')
+<link rel="stylesheet" href="{{asset('css/ping-tool.css')}}">
 @endpush
 
 @section('ping-tool')
