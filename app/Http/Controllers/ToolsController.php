@@ -2,13 +2,20 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Blog;
+use App\Models\BlogCategory;
+use App\Models\Page;
+use App\Models\PlagiarismCheckLog;
+use App\Models\User;
 use GuzzleHttp\Client;
-use Illuminate\Http\Request;
+use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\App;
-use Illuminate\Support\Facades\Date;
-use Illuminate\Support\Facades\Queue;
-use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Crypt;
 use App\Http\Controllers\HomeController;
+use PhpOffice\PhpSpreadsheet\Spreadsheet;
+use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 
 class ToolsController extends Controller
 {
@@ -310,6 +317,154 @@ class ToolsController extends Controller
         $is_maintenance = in_array('keyword-permutation', explode(',', env('TOOLS_MAINTENANCE'))) && env('APP_ENV') === 'production';
 
         return view('Tools/keywordpermutation', compact('local', 'dataID', 'dataEN', 'is_maintenance'));
+    }
+
+    public function plagiarismChecker($lang)
+    {
+        if (Auth::check()  && (Auth::check() ? Auth::user()->user_role_id == 3 : false)) {
+            $data = [];
+            App::setLocale($lang);
+            $data['dataID'] = $this->HomeController->getBlogWordpressId();
+            $data['dataEN'] = $this->HomeController->getBlogWordpressEn();
+            $data['local'] = App::getLocale();
+            $data['is_maintenance'] = in_array('plagiarism-checker', explode(',', env('TOOLS_MAINTENANCE'))) && env('APP_ENV') === 'production';
+            
+            // Get user data
+            $data['userId'] = Crypt::encrypt(Auth::user()->id . '-' . time());
+
+            // Get user plagiarism check logs
+            $data['userLogs'] = PlagiarismCheckLog::where('user_id', Auth::user()->id)
+                ->orderBy('created_at', 'desc')
+                ->get();
+            $data['userSummaryLogs'] = PlagiarismCheckLog::selectRaw("COUNT(id) as 'user_requests', SUM(word_count) as 'total_words', SUM(cost) as 'total_cost'")
+                ->where('user_id', Auth::user()->id)
+                ->first();
+            $data['cummulativeLogs'] = PlagiarismCheckLog::orderBy('created_at', 'desc')
+                ->get();
+            $data['cummulativeSummaryLogs'] = PlagiarismCheckLog::selectRaw("COUNT(id) as 'team_requests', COUNT(DISTINCT(user_id)) as 'total_users', SUM(word_count) as 'total_words', SUM(cost) as 'total_cost'")
+                ->first();
+
+            // Fetch Seo Term
+            $seoTerms = Page::select('pages.id', 'pages.published_at', 'pages.title', 'pages.slug', 'pages.image', 'pages.created_by', DB::raw($lang == 'id' ? "'KAMUSSEO'" : "'SEOTERMS'" . " as 'type'"), DB::raw("'seo-terms' as 'link'"))
+            ->join('page_categories', function ($join) use($lang) {
+                $join->on('pages.page_category_id', '=', 'page_categories.id')
+                ->where('page_categories.language', $lang)
+                ->where('page_categories.slug', '=', 'seo-terms');
+            })
+            ->where('pages.language', $lang)
+            ->where('pages.slug', '!=', 'about')
+            ->where('pages.status', '1')
+            ->orderBy('pages.created_at','DESC')
+            ->first();
+
+            $seoTerms->published_at = Carbon::parse($seoTerms->published_at)->format('d F Y');
+
+            // Fetch Seo Guidelines
+            $seoGuidelines = Page::select('pages.id', 'pages.published_at', 'pages.title', 'pages.slug', 'pages.image', 'pages.created_by', DB::raw($lang == 'id' ? "'PANDUANSEO'" : "'SEOGUIDELINES'" . " as 'type'"), DB::raw("'seo-guide' as 'link'"))
+            ->join('page_categories', function ($join) use($lang) {
+                $join->on('pages.page_category_id', '=', 'page_categories.id')
+                ->where('page_categories.language', $lang)
+                ->where('page_categories.slug', '=', 'seo-guide');
+            })
+            ->where('pages.language', $lang)
+            ->where('pages.slug', '!=', 'about')
+            ->orderBy('pages.created_at','DESC')
+            ->where('pages.status', '1')->first();
+
+            $seoGuidelines->published_at = Carbon::parse($seoTerms->published_at)->format('d F Y');
+
+            // Fetch Blogs
+            $blogCategories = BlogCategory::select('id', 'slug', 'name')
+            ->where('language', $lang)
+            ->where('slug', '!=', 'press-release')
+            ->where('slug', '!=', 'promo-campaign')
+            ->where('slug', '!=', 'event')
+            ->isPublish()
+            ->get();
+
+            $blogs = Blog::select('id', 'published_at', 'title', 'slug', 'image', 'created_by', DB::raw($lang == 'id' ? "'BLOG'" : "'BLOGS'" . " as 'type'"), DB::raw("'blog' as 'link'"))
+                ->where('language', $lang)
+                ->where('status', '1')
+                ->whereIn('blog_category_id', $blogCategories->pluck('id'))
+                ->orderBy('published_at', 'desc')
+                ->first();
+
+            $blogs->published_at = Carbon::parse($seoTerms->published_at)->format('d F Y');
+
+            $data["seo_terms"] = $seoTerms;
+            $data["seo_guidelines"] = $seoGuidelines;
+            $data["blogs"] = $blogs;
+            $data["lang"] = $lang;
+            
+            return view('Tools/plagiarism-checker/index', $data);
+        } else {
+            return redirect('/');
+        }
+    }
+
+    public function downloadPlagiarismCheckLogs($lang, $type)
+    {
+        if (Auth::check()  && (Auth::check() ? Auth::user()->user_role_id == 3 : false)) {
+            if ($type == 'all') {
+                $logs = PlagiarismCheckLog::with('user')->get();
+                // Preparing csv file
+                $fileName = "plagiarism_check_logs-" . time() . ".xlsx";
+                $spreadsheet = new Spreadsheet();
+                $sheet = $spreadsheet->getActiveSheet();
+                $sheet->setCellValue('A1', 'Content');
+                $sheet->getColumnDimension('A')->setWidth(40);
+                $sheet->setCellValue('B1', 'Word Count');
+                $sheet->getColumnDimension('B')->setWidth(12);
+                $sheet->setCellValue('C1', 'Cost');
+                $sheet->setCellValue('D1', 'User Email');
+                $sheet->getColumnDimension('D')->setWidth(30);
+                $sheet->setCellValue('E1', 'Result URL');
+                $sheet->getColumnDimension('E')->setWidth(45);
+                $sheet->setCellValue('F1', 'Created at');
+                // Insert data to csv
+                $index = 2;
+                foreach ($logs as $log) {
+                    $sheet->setCellValue("A$index", $log->content);
+                    $sheet->setCellValue("B$index", "$log->word_count words");
+                    $sheet->setCellValue("C$index", "\$$log->cost");
+                    $sheet->setCellValue("D$index", $log->user ? $log->user->email : '-');
+                    $sheet->setCellValue("E$index", $log->url);
+                    $sheet->setCellValue("F$index", date_format(date_add($log->created_at, date_interval_create_from_date_string('7 hours')), "l, d F Y H:i"));
+                    $index++;
+                }
+            } else if($type == 'user') {
+                $logs = PlagiarismCheckLog::where('user_id', Auth::user()->id)->get();
+                $user = User::find(Auth::user()->id);
+                // Preparing csv file
+                $fileName = "plagiarism_check_logs-" . $user->name . "-" . time() . ".xlsx";
+                $spreadsheet = new Spreadsheet();
+                $sheet = $spreadsheet->getActiveSheet();
+                $sheet->setCellValue('A1', 'Content');
+                $sheet->getColumnDimension('A')->setWidth(40);
+                $sheet->setCellValue('B1', 'Word Count');
+                $sheet->getColumnDimension('B')->setWidth(12);
+                $sheet->setCellValue('C1', 'Cost');
+                $sheet->setCellValue('D1', 'Result URL');
+                $sheet->getColumnDimension('D')->setWidth(45);
+                $sheet->setCellValue('F1', 'Created at');
+                // Insert data to csv
+                $index = 2;
+                foreach ($logs as $log) {
+                    $sheet->setCellValue("A$index", $log->content);
+                    $sheet->setCellValue("B$index", "$log->word_count words");
+                    $sheet->setCellValue("C$index", "\$$log->cost");
+                    $sheet->setCellValue("D$index", $log->url);
+                    $sheet->setCellValue("F$index", date_format(date_add($log->created_at, date_interval_create_from_date_string('7 hours')), "l, d F Y H:i"));
+                    $index++;
+                }
+            }
+
+            $csv = new Xlsx($spreadsheet);
+            $csv->save($fileName);
+            return response()->download($fileName)->deleteFileAfterSend();
+        } else {
+            return redirect('/');
+        }
     }
 
     public function englishVersion()
