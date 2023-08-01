@@ -9,6 +9,7 @@ return [
     "ping-placeholder" => "https://www.example.com or 192.168.32.1",
     "result" => "Result",
     "result-none" => "No URL tested, please input your domain or IP address above!",
+    "ping-select" => "Select Value Type",
 
     "lookup-btn-tooltip" => "You can only search 5 times in 1 hour",
     "desc-1" => "What is Technology Lookup?",

@@ -8,15 +8,15 @@ if (lang == "en") {
     var localStorageNone = "Ini adalah kesan pertama Anda, belum ada riwayat!";
 }
 
-const TechnologyTemplate = (host, numericHost, output, time) => `
+const PingTemplate = (host, numericHost, output, time) => `
 <div class="d-flex flex-column mx-5">
-  <div class="font-weight-bold custom-header">
+  <div class="font-weight-bold ping-header p-4">
     <p class="text-darkgrey">Domain: <span class="text-black">${host}</span></p>
     <p class="text-darkgrey">IP Address: <span class="text-black">${numericHost}</span></p>
-    <p class="text-darkgrey">Time: <span class="technology-name">${time}</span> ms</p>
-    <p class="h5 mb-0 text-darkgrey">Details</p>
+    <p class="text-darkgrey m-0">Time: ${time}</p>
   </div>
-  <div class="d-flex flex-column data-ping">
+  <div class="d-flex flex-column data-ping" id="detail-ping">
+    <p class="h5 mb-0 text-darkgrey">Details</p>
     ${output}
   </div>
 </div>`;
@@ -48,7 +48,7 @@ const HistoryTemplateMobile = (url, date) => `
 <div class="d-flex align-items-center justify-content-between">
   <div class="local-collection-title">${url}</div>
   <div class="d-flex align-items-center">
-    <i class='bx bxs-info-circle text-grey bx-sm mr-2' data-toggle="tooltip" data-theme="dark" title="${date}"></i>
+    <i class='bx bxs-info-circle text-grey bx-sm mr-2' data-bs-toggle="tooltip" data-bs-placement="top" data-theme="dark" title="${date}"></i>
     <i class='bx bxs-x-circle bx-sm text-grey delete-history--btn' data-url="${url}"></i>
   </div>
 </div>
@@ -124,96 +124,142 @@ function convertSecond(seconds) {
     };
 }
 
-function analyzeUrl(_url) {
-    if (checkUrl(_url)) {
-        $("#technology-lookup-result-total").text("");
-        $.post({
-            url: PING_API_URL,
-            data: {
-                _token: $("meta[name=csrf-token]").attr("content"),
-                url: _url,
-            },
-            beforeSend: () => {
-                KTApp.block("#technology-lookup-result-container", {
-                    overlayColor: "gray",
-                    opacity: 0.1,
-                    state: "primary",
-                });
-            },
-            success: (res) => {
-                if (res.statusCode === 200) {
-                    renderAllData(res.data);
-                    addHistory(_url, res.data);
-                    getHistories();
-                } else if (err.responseJSON.statusCode === 429) {
-                    let { minute, second } = convertSecond(
-                        err.responseJSON.data.current_time
-                    );
-                    toastr.error(
-                        `Please wait for ${minute} minutes and ${second} seconds`,
-                        `Error ${err.responseJSON.message}`
-                    );
+function CheckAnalyze(type, value) {
+    switch (type) {
+        case "url":
+            try {
+                if (checkUrl(value)) {
+                    analyzeUrl(type, value);
                 } else {
-                    $("#technology-lookup-result-list").hide();
-                    $("#technology-lookup-result-empty").show();
-                    toastr.error(res.message, "Error");
+                    $("#ping-result-status").html("");
+                    $("#ping-result-list").hide();
+                    $("#ping-result-empty").show();
+                    toastr.error("URL Format is not valid", "Error");
+                    KTApp.unblock("#ping-result-container");
                 }
-            },
-            error: (err) => {
-                console.log(err);
-                if (err.responseJSON.statusCode === 429) {
-                    let { minute, second } = convertSecond(
-                        err.responseJSON.data.current_time
-                    );
-                    toastr.error(
-                        `Please wait for ${minute} minutes and ${second} seconds`,
-                        `Error ${err.responseJSON.message}`
-                    );
+            } catch (e) {
+                console.log(e);
+            }
+            break;
+        case "ip":
+            try {
+                if (ValidateIPaddress(value)) {
+                    analyzeUrl(type, value);
                 } else {
-                    toastr.error(err.responseJSON.message, "Error");
+                    $("#ping-result-status").html("");
+                    $("#ping-result-list").hide();
+                    $("#ping-result-empty").show();
+                    toastr.error("IP Address Format is not valid", "Error");
+                    KTApp.unblock("#ping-result-container");
                 }
-                $("#technology-lookup-result-list").hide();
-                $("#technology-lookup-result-empty").show();
-            },
-            complete: () => {
-                KTApp.unblock("#technology-lookup-result-container");
-            },
-        });
-    } else {
-        $("#technology-lookup-result-list").hide();
-        $("#technology-lookup-result-empty").show();
-        toastr.error("URL Format is not valid", "Error");
-        KTApp.unblock("#technology-lookup-result-container");
+            } catch (e) {
+                console.log(e);
+            }
+            break;
+        default:
+            break;
     }
 }
 
+function analyzeUrl(_type, _url) {
+    console.log(_type)
+    $("#ping-result-status").text("");
+    $.post({
+        url: PING_API_URL,
+        data: {
+            _token: $("meta[name=csrf-token]").attr("content"),
+            type: _type,
+            url: _url,
+        },
+        beforeSend: () => {
+            KTApp.block("#ping-result-container", {
+                overlayColor: "gray",
+                opacity: 0.1,
+                state: "primary",
+            });
+        },
+        success: (res) => {
+            if (res.statusCode === 200) {
+                renderAllData(res.data);
+                addHistory(_url, res.data);
+                getHistories();
+            } else if (err.responseJSON.statusCode === 429) {
+                let { minute, second } = convertSecond(
+                    err.responseJSON.data.current_time
+                );
+                toastr.error(
+                    `Please wait for ${minute} minutes and ${second} seconds`,
+                    `Error ${err.responseJSON.message}`
+                );
+            } else {
+                $("#ping-result-list").hide();
+                $("#ping-result-empty").show();
+                toastr.error(res.message, "Error");
+            }
+        },
+        error: (err) => {
+            console.log(err);
+            if (err.responseJSON.statusCode === 429) {
+                let { minute, second } = convertSecond(
+                    err.responseJSON.data.current_time
+                );
+                toastr.error(
+                    `Please wait for ${minute} minutes and ${second} seconds`,
+                    `Error ${err.responseJSON.message}`
+                );
+            } else {
+                toastr.error(err.responseJSON.message, "Error");
+            }
+            $("#ping-result-list").hide();
+            $("#ping-result-empty").show();
+        },
+        complete: () => {
+            KTApp.unblock("#ping-result-container");
+        },
+    });
+}
+
 function renderAllData(data) {
-    $("#technology-lookup-result-empty").hide();
-    $("#technology-lookup-result-list").empty().show();
-
-    if (data.alive) {
-        $("#technology-lookup-result-total").html("Online <i class='bx bxs-check-circle bx-sm ml-1 text-green'></i>");
-        $("#technology-lookup-result-total").addClass("text-green");
-        $("#technology-lookup-result-total").removeClass("text-red");
-    } else {
-        $("#technology-lookup-result-total").html("Offline <i class='bx bxs-x-circle bx-sm ml-1 text-red'></i>");
-        $("#technology-lookup-result-total").addClass("text-red");
-        $("#technology-lookup-result-total").removeClass("text-green");
-    }
-
+    $("#ping-result-empty").hide();
+    $("#ping-result-list").empty().show();
     let _timeLabel =
         data.time != null
-            ? `<span class="label label-primary-version label-inline font-weight-normal px-2">${data.time}</span>`
+            ? `<span class="time-ping"><span class="label label-primary-version label-inline font-weight-normal px-2">${data.time}</span></span> ms`
             : "";
 
-    $("#technology-lookup-result-list").append(
-        TechnologyTemplate(
-            data.host,
-            data.numeric_host,
-            data.output,
-            _timeLabel
-        )
+    let _outputShow = data.output.replace("data:", "data:<br/>");
+    _outputShow = _outputShow.replace(
+        "Ping statistics for",
+        "<br/><div class='custom-line'></div>Ping statistics for"
     );
+    _outputShow = _outputShow.replace("Packets:", "<br/>Packets:");
+    _outputShow = _outputShow.replace(
+        "Approximate",
+        "<br/><div class='custom-line'></div>Approximate"
+    );
+    _outputShow = _outputShow.replace("milli-seconds:", "milli-seconds:<br/>");
+
+    if (data.alive) {
+        $("#ping-result-status").html(
+            "Online <i class='bx bxs-check-circle bx-sm ml-1 text-green'></i>"
+        );
+        $("#ping-result-status").addClass("text-green");
+        $("#ping-result-status").removeClass("text-red");
+
+        $("#ping-result-list").append(
+            PingTemplate(data.host, data.numeric_host, _outputShow, _timeLabel)
+        );
+    } else {
+        $("#ping-result-status").html(
+            "Offline <i class='bx bxs-x-circle bx-sm ml-1 text-red'></i>"
+        );
+        $("#ping-result-status").addClass("text-red");
+        $("#ping-result-status").removeClass("text-green");
+
+        $("#ping-result-list").append(
+            PingTemplate("-", "-", _outputShow, "-")
+        );
+    }
 }
 
 function formatDate(date) {
@@ -230,6 +276,15 @@ function checkUrl(url) {
     } catch (e) {
         return false;
     }
+}
+
+function ValidateIPaddress(ipaddress) {
+    var ipformat = /^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/;
+    
+    if(ipaddress.match(ipformat)){
+        return (true)
+    }
+    return (false)
 }
 
 function getProtocol(url) {
@@ -285,7 +340,6 @@ $("#local-history-mobile")
     })
     .on("click", ".history--list", function (e) {
         if (e.target.classList.contains("delete-history--btn")) return;
-        analyze($(this).data('url'));
         const _url = $(this).data("url");
 
         let histories = localStorage.getItem(PING_TOOL_LOCAL_STORAGE_KEY);
@@ -304,9 +358,21 @@ $(".clear-history--btn").click(function () {
 });
 
 $("#crawl-btn").click(function () {
-    analyzeUrl($("#input-url").val());
+    if ($("#ping-select").val() === null){
+        $("#ping-result-list").hide();
+        $("#ping-result-empty").show();
+        toastr.error("Choice value type", "Error");
+        KTApp.unblock("#ping-result-container");
+    }else{
+        CheckAnalyze($("#ping-select").val(), $("#input-url").val());
+        
+    }
 });
 
 $(document).ready(function () {
     getHistories();
+
+    $(function () {
+        $("body").tooltip({ selector: "[data-toggle=tooltip]" });
+    });
 });
