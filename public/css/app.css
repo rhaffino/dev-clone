@@ -3755,6 +3755,109 @@ body.cmlabs-tools .custom-bundling {
   }
 }
 
+body.cmlabs-tools #new_ui {
+  background-color: white;
+  padding: 4rem 0rem;
+  color: #252a38;
+}
+
+body.cmlabs-tools #new_ui .gap-2 {
+  gap: 0.5rem;
+}
+
+body.cmlabs-tools #new_ui .gap-3 {
+  gap: 1rem;
+}
+
+body.cmlabs-tools #new_ui .gap-4 {
+  gap: 1.5rem;
+}
+
+body.cmlabs-tools #new_ui .gap-8 {
+  gap: 3rem;
+}
+
+body.cmlabs-tools #new_ui .whats-new-section {
+  background-color: #f9f9f9;
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+body.cmlabs-tools #new_ui .last-update {
+  color: #92959c;
+}
+
+body.cmlabs-tools #new_ui .right-design {
+  padding-left: 4rem;
+}
+
+@media screen and (max-width: 767px) {
+  body.cmlabs-tools #new_ui .right-design {
+    padding-left: 0;
+    margin-top: 4rem;
+  }
+}
+
+body.cmlabs-tools #new_ui .starter-guide {
+  color: white;
+  border-radius: 10px;
+  background: linear-gradient(92.41deg, #0699f9 0%, #0872b7 100%);
+}
+
+body.cmlabs-tools #new_ui .sequence-img,
+body.cmlabs-tools #new_ui .storylabs-img {
+  width: 100%;
+}
+
+body.cmlabs-tools #new_ui .card-explore {
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+body.cmlabs-tools #new_ui .blue-card {
+  background: linear-gradient(280.5deg, rgba(188, 223, 252, 0.45) -12%, rgba(186, 193, 252, 0.45) 129.79%);
+}
+
+body.cmlabs-tools #new_ui .gradient-card {
+  background: linear-gradient(258.17deg, rgba(255, 236, 198, 0.45) -35.11%, rgba(188, 223, 252, 0.45) 142.12%);
+}
+
+body.cmlabs-tools #new_ui button {
+  background-color: #092d49;
+  padding: 0.5rem 1rem;
+  width: auto;
+  border-radius: 5px;
+  border: 0px;
+}
+
+body.cmlabs-tools #new_ui button a {
+  color: white;
+}
+
+body.cmlabs-tools #new_ui .underline {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
+body.cmlabs-tools #new_ui .text-purple {
+  color: #a159ed !important;
+}
+
+body.cmlabs-tools #new_ui .card-knowledge {
+  box-shadow: 0px 0px 45px 0px #0059951f;
+  height: 100%;
+}
+
+body.cmlabs-tools #new_ui .rounded-top {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+body.cmlabs-tools #new_ui .rounded-bottom {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
 .footer-bottom .cmlabs-container {
   padding-top: 64px;
 }

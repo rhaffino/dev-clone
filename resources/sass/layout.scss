@@ -73,4 +73,111 @@ body.cmlabs-tools {
             width: 100%;
         }
     }
+
+    #new_ui {
+        background-color: white;
+        padding: 4rem 0rem;
+        color: #252a38;
+
+        .gap-2 {
+            gap: 0.5rem;
+        }
+
+        .gap-3 {
+            gap: 1rem;
+        }
+
+        .gap-4 {
+            gap: 1.5rem;
+        }
+
+        .gap-8 {
+            gap: 3rem;
+        }
+
+        .whats-new-section {
+            background-color: #f9f9f9;
+            padding: 2rem;
+            border-radius: 10px;
+        }
+
+        .last-update {
+            color: #92959c;
+        }
+
+        .right-design {
+            padding-left: 4rem;
+            @media screen and (max-width: 767px) {
+                padding-left: 0;
+                margin-top: 4rem;
+            }
+        }
+
+        .starter-guide {
+            color: white;
+            border-radius: 10px;
+            background: linear-gradient(92.41deg, #0699f9 0%, #0872b7 100%);
+        }
+
+        .sequence-img,
+        .storylabs-img {
+            width: 100%;
+        }
+
+        .card-explore {
+            padding: 2rem;
+            border-radius: 10px;
+        }
+
+        .blue-card {
+            background: linear-gradient(
+                280.5deg,
+                rgba(188, 223, 252, 0.45) -12%,
+                rgba(186, 193, 252, 0.45) 129.79%
+            );
+        }
+
+        .gradient-card {
+            background: linear-gradient(
+                258.17deg,
+                rgba(255, 236, 198, 0.45) -35.11%,
+                rgba(188, 223, 252, 0.45) 142.12%
+            );
+        }
+
+        button {
+            background-color: #092d49;
+            padding: 0.5rem 1rem;
+            a {
+                color: white;
+            }
+            width: auto;
+            border-radius: 5px;
+            border: 0px;
+        }
+
+        .underline {
+            text-decoration: underline;
+            text-underline-offset: 5px;
+        }
+
+        .text-purple {
+            color: #a159ed !important;
+        }
+
+        .card-knowledge {
+            box-shadow: 0px 0px 45px 0px #0059951f;
+            height: 100%;
+        }
+
+        .rounded-top {
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .rounded-bottom {
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+    }
 }
