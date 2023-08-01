@@ -75,5 +75,5 @@ return [
 
     "broaden" => "Perluas pengetahuan Anda tentang SEO",
     "launch" => "LUNCURKAN",
-    "highlight" => "Are you tired of spending hours double-checking your work for plagiarism? Now, embrace your writing with our ultimate safeguard against content duplication, Plagiarism Checker (by Copyscape). Powered by cutting-edge algorithms, our tool will scan your text with lightning speed so that you can rest easy knowing your content is authentic.",
+    "highlight" => "Mari cegah penyalinan dan pengutipan tanpa atribusi! Kini, cmlabs menghadirkan Plagiarism Checker (by Copyscape) sebagai solusi terbaik untuk melawan duplikasi konten. Berbekal data dengan basis kecanggihan algoritma, tool ini dapat memindai tulisan Anda dengan cepat untuk mencapai hasil tulisan yang orisinal dan bebas plagiasi.",
 ];
