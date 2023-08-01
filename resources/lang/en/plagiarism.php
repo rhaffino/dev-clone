@@ -75,4 +75,5 @@ return [
 
     "broaden" => "Broaden your SEO knowledge",
     "launch" => "LAUNCH",
+    "highlight" => "Are you tired of spending hours double-checking your work for plagiarism? Now, embrace your writing with our ultimate safeguard against content duplication, Plagiarism Checker (by Copyscape). Powered by cutting-edge algorithms, our tool will scan your text with lightning speed so that you can rest easy knowing your content is authentic.",
 ];
