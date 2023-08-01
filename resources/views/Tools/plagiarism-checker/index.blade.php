@@ -27,7 +27,7 @@
         <div class="container container-tools mt-5 mb-10">
             @include('Tools.plagiarism-checker.components.stats')
             <span id="titlesizer"></span>
-            <div class="d-flex flex-column-fluid">
+            <div class="d-flex flex-column-fluid mt-10">
                 <div class="container-fluid px-0">
                     <h1 class="text-dark-70 h6-700 m-0">@lang('plagiarism.title')</h1>
                     <p class="b2-400 text-dark-70">@lang('plagiarism.desc')</p>
