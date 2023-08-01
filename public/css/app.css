@@ -3739,11 +3739,6 @@ body.cmlabs-tools .btn-group .button-switch.active {
   border: none;
 }
 
-body.cmlabs-tools .swal2-actions {
-  display: flex;
-  flex-direction: column;
-}
-
 body.cmlabs-tools .custom-bundling {
   margin: auto;
   width: 50%;

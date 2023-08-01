@@ -30,6 +30,8 @@
                             <a class="dropdown-item @yield('link-analyzer')" href="/{{ $local }}/link-analyzer">Link Analyzer</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item @yield('technology-lookup')" href="/{{ $local }}/technology-lookup">Technology Lookup</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item @yield('ping-tool')" href="/{{ $local }}/ping-tool">Ping Tool</a>
                         </div>
                     </li>
                     <li class="nav-item ml-7">
@@ -41,6 +43,11 @@
                     <li class="nav-item ml-7">
                         <a class="nav-link @yield('title-checker')" href="/{{ $local }}/page-title-meta-description-checker">Title and Meta Checker</a>
                     </li>
+                    @if (auth()->check() && (auth()->check() ? auth()->user()->user_role_id == 3 : false))
+                        <li class="nav-item ml-7">
+                            <a class="nav-link plagiarism @yield('plagiarism-checker')" href="/{{ $local }}/plagiarism-checker">Plagiarism Checker <span class="font-weight-light ml-1">by Copyscape</span></a>
+                        </li>
+                    @endif
                 </ul>
             </div>
         </div>
