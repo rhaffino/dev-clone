@@ -12,14 +12,14 @@ return [
     "request" => "PERMINTAAN",
     "words_checked" => "KATA YANG DICEK",
     "cost" => "BIAYA",
-    "users" => "PENGGUNA",
+    "users" => "JUMLAH PENGGUNA",
     "team_request" => "PERMINTAAN TIM",
     "total_words" => "TOTAL KATA",
     "words" => "KATA",
     "times" => "Kali",
 
     "title" => "PEMERIKSA PLAGIARISME",
-    "desc" => "Solusi deteksi plagiarisme dengan teknologi Copyscape",
+    "desc" => "Pendeteksi plagiarisme yang didukung oleh Copyscape",
 
     "results" => "HASIL",
 
@@ -34,9 +34,9 @@ return [
     "run_copyscape" => "Jalankan Copyscape",
     "cost_desc" => "$0.03 untuk 200 kata pertama, $0.01 untuk 100 kata berikutnya (sekitar Rp0.05 untuk 400-449 kata)",
 
-    "plc_text" => "Ketik / tempelkan teks di sini..",
-    "plc_link" => "Ketik / tempelkan URL di sini (mis. https://cmlabs.co/)",
-    "empty" => "Masukkan teks yang ingin Anda periksa dan jalankan untuk melihat hasilnya di sini...",
+    "plc_text" => "Ketik / tempel teks di sini..",
+    "plc_link" => "Ketik / tempel URL di sini (mis. https://cmlabs.co/)",
+    "empty" => "Ketik atau tempel teks pada kolom yang tersedia dan tinjau hasilnya di sini..",
     "empty_history" => "Ini adalah kesan pertama Anda, belum ada riwayat!",
 
     "url_valid" => "URL Sah",
@@ -58,7 +58,7 @@ return [
     "notif_center" => "Pusat Pemberitahuan",
 
     "cmlabs_alliance" => "Aliansi cmlabs",
-    "cmlabs_alliance-desc" => "Kerjasama strategis ini memungkinkan kami untuk menawarkan kepada klien kami beragam solusi inovatif SEO dan layanan luar biasa di seluruh dunia. Jika Anda pernah berencana untuk mendominasi pasar lebih luas, Anda telah datang ke tempat yang tepat! <a href='https://cmlabs.co/en-id/become-partner' class='text-underline'>Mari kita wujudkan rencana-rencana tersebut menjadi kenyataan!</a>",
+    "cmlabs_alliance-desc" => "Aliansi strategis ini mendukung kami untuk menyediakan beragam solusi SEO inovatif serta banyak layanan unggulan lainnya. Tertarik untuk menguasai pasar yang lebih luas? <a href='https://cmlabs.co/en-id/become-partner' class='text-underline'>Bersama kami, mari capai tujuan bisnis Anda SEOtuhnya.</a>",
     "writing_starter" => "Panduan Memulai Menulis",
     "writing_starter_desc" => "Panduan Memulai Search Engine Optimization (SEO) menyediakan praktik terbaik untuk memudahkan mesin pencari mengindeks dan memahami konten Anda.",
 
@@ -70,9 +70,10 @@ return [
     "political" => "Kampanye Politik SEO",
     "backlink" => "Layanan Backlink",
     "service_desc" => "Dapatkan layanan SEO personal dan berikan perlakuan istimewa bagi bisnis Anda.",
-    "explore_now" => "Jelajahi sekarang",
-    "explore_today" => "Jelajahi Sekarang!",
+    "explore_now" => "Telusuri sekarang",
+    "explore_today" => "Telusuri sekarang!",
 
-    "broaden" => "Perluas pengetahuan SEO Anda",
+    "broaden" => "Perluas pengetahuan Anda tentang SEO",
     "launch" => "LUNCURKAN",
+    "highlight" => "Are you tired of spending hours double-checking your work for plagiarism? Now, embrace your writing with our ultimate safeguard against content duplication, Plagiarism Checker (by Copyscape). Powered by cutting-edge algorithms, our tool will scan your text with lightning speed so that you can rest easy knowing your content is authentic.",
 ];

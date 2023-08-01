@@ -2,6 +2,16 @@ var WORDS_LENGTH = 0
 var TOP_DENSITY = 0
 let results, querywords, allviewurl;
 
+if (lang && lang == "en") {
+    var seeDetailText = "See details"
+    var seeOther = "See other results"
+    var textMatched = "Text matched"
+} else {
+    var seeDetailText = "Lihat detail"
+    var seeOther = "Lihat hasil lainnya"
+    var textMatched = "Teks sesuai"
+}
+
 function checkUrl(url) {
     try {
         let _url = new URL(url)
@@ -265,7 +275,7 @@ resultSizeButtons.forEach((btn) => {
         $(".result-container").html("")
 
         results.forEach((result, index) => {
-            if (count < parseInt(selectedValue) && result?.percentmatched) {
+            if (count < parseInt(selectedValue)) {
                 $(".result-container").append(resultCards(index, querywords, result));
             }
             count++;
@@ -510,7 +520,7 @@ const resultCards = (index, totalWords, data) => {
                 <div class="d-flex align-items-center">
                     ${data.percentmatched != undefined ? `
                     <p class="m-0 s-400 text-primary-70 mr-3">${data.percentmatched}%</p>
-                    <p class="m-0 s-400">Text matched</p>`: ''}
+                    <p class="m-0 s-400">${textMatched}</p>`: `<p class="m-0 s-400">${seeDetailText}</p>`}
                 </div>
             </div>
         </div>
@@ -689,16 +699,14 @@ $("#button-checker").on("click", function () {
                         allviewurl = res.data.allviewurl
 
                         results.forEach((result, index) => {
-                            if (result?.percentmatched) {
-                                $(".result-container").append(resultCards(index, querywords, result));
-                            }
+                            $(".result-container").append(resultCards(index, querywords, result));
                         });
 
                         if (results.length > 0 && res.data.allpercentmatched != 100) {
                             $(".result-option").show();
                             $(".result-container").append(
                                 `
-                                <a href="${res.data.allviewurl}" id="fullUrl" target="_blank" rel="noopener noreferrer noindex" class="btn button-gray-20 b2-700 full-url-btn"> <u>See detail result</u></a>
+                                <a href="${res.data.allviewurl}" id="fullUrl" target="_blank" rel="noopener noreferrer noindex" class="btn button-gray-20 b2-700 full-url-btn"> <u>${seeOther}</u></a>
                                 `
                             );
                         } else {

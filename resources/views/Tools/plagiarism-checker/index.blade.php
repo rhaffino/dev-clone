@@ -287,46 +287,47 @@
                                         </div>
                                         <div class="b2-400 b2-m-400">@lang('plagiarism.unique')</div>
                                     </div>
-                                </div>                                
+                                </div>
                             </div>
 
-                            <div class="card card-custom mt-10 result-card plagiarism-result result-option" style="display: none">
+                            <div class="card card-custom mt-10 result-card plagiarism-result result-option"
+                                style="display: none">
                                 <div
                                     class="px-4 py-3 d-flex align-items-center justify-content-between b2-400 text-dark-60">
                                     <div class="d-flex radio-tab-container-2 rounded-sm overflow-hidden">
                                         <label class="radio-tab">
                                             <input value="999999" checked type="radio" name="result-size" checked>
-                                            <span class="b2-700">ALL</span>
+                                            <span class="xs-700">ALL</span>
                                         </label>
                                         <label class="radio-tab">
                                             <input value="5" type="radio" name="result-size">
-                                            <span class="b2-700">5</span>
+                                            <span class="xs-700">5</span>
                                         </label>
                                         <label class="radio-tab">
                                             <input value="10" type="radio" name="result-size">
-                                            <span class="b2-700">10</span>
+                                            <span class="xs-700">10</span>
                                         </label>
                                         <label class="radio-tab">
                                             <input value="20" type="radio" name="result-size">
-                                            <span class="b2-700">20</span>
+                                            <span class="xs-700">20</span>
                                         </label>
                                         <label class="radio-tab">
                                             <input value="50" type="radio" name="result-size">
-                                            <span class="b2-700">50</span>
+                                            <span class="xs-700">50</span>
                                         </label>
                                     </div>
 
                                     <div class="d-flex radio-tab-container-2 rounded-sm overflow-hidden">
                                         <label class="radio-tab">
                                             <input value="expand" type="radio" name="result-collapse" checked>
-                                            <span class="b2-700">
-                                                <i class='bx bx-expand-vertical'></i>
+                                            <span class="xs-700">
+                                                <i class='bx xs-700 bx-expand-vertical'></i>
                                             </span>
                                         </label>
                                         <label class="radio-tab">
                                             <input value="collapse" type="radio" name="result-collapse">
-                                            <span class="b2-700">
-                                                <i class='bx bx-collapse-vertical'></i>
+                                            <span class="xs-700">
+                                                <i class='bx xs-700 bx-collapse-vertical'></i>
                                             </span>
                                         </label>
                                     </div>
@@ -348,7 +349,7 @@
                                         </div>
                                         <div id="collapseOne2" class="collapse" data-parent="#accordionExample2">
                                             <div class="card-body">
-                                                <p>@lang('wordcounter.highlight')</p>
+                                                <p>@lang('plagiarism.highlight')</p>
                                                 <div class="d-flex align-items-center">
                                                     <i class='bx bxs-check-circle text-darkgrey mr-1'></i>
                                                     <span class="text-darkgrey h6 mb-0">@lang('layout.updated') 21 Jul,

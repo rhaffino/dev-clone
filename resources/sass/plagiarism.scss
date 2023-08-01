@@ -1,6 +1,10 @@
 @use "sass:map";
 @import "./color.scss";
 
+body.cmlabs-tools .swal2-actions {
+    flex-direction: row !important;
+}
+
 button {
     background: none;
     outline: none;
@@ -279,7 +283,7 @@ button.radio,
     }
 
     .radio-tab-container-2 {
-        gap: 10px;
+        gap: 6px;
         background-color: transparent;
         border-radius: none;
         .radio-tab {
