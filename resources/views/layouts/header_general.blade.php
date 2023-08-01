@@ -14,8 +14,8 @@
                     <a href="/"
                         class="brand-logo d-flex justify-content-center align-items-center">
                         <img alt="Logo"
-                            src="https://cmlabs-co.s3.ap-southeast-1.amazonaws.com/email/logo-cmlabs.png"
-                            class="max-h-45px" />
+                            src="https://cmlabs-co.s3.ap-southeast-1.amazonaws.com/logos/cmlabs-logo-new.webp"
+                            class="max-h-35px" />
                         <span class="h2 title-logo-name ml-2 mt-3">SEO Tools</span>
                     </a>
                 </div>

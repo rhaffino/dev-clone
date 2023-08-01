@@ -9,6 +9,7 @@ return [
     "ping-placeholder" => "https://www.example.com atau 192.168.32.1",
     "result" => "Hasil",
     "result-none" => "Tidak ada URL yang diuji, silakan masukkan domain atau alamat IP Anda di atas!",
+    "ping-select" => "Pilih Tipe",
 
     "lookup-btn-tooltip" => "Anda hanya dapat mencari 5 kali dalam 1 jam",
     "desc-1" => "Apa itu Technology Lookup?",

@@ -29,13 +29,18 @@ id/ping
             <div class="header-blue mt-10 mb-5 px-5 py-1">
                 <input type="hidden" id="#count-tools" autocomplete="off" value="{{ $access_count }}" >
                 <div class="row d-flex align-items-center">
-                    <div class="col-sm-8 col-md-9 col-lg-8 col-xl-9 d-flex align-items-center py-1">
+                    <div class="col-sm-6 col-md-7 col-lg-6 col-xl-7 d-flex align-items-center py-1">
                         <i id="empty-url" class='bx bxs-shield text-white bx-md mr-3'></i>
                         <i id="secure-url" class='bx bxs-check-shield text-white bx-md mr-3' style="display: none"></i>
                         <i id="unsecure-url" class='bx bxs-shield-x text-white bx-md mr-3' style="display: none"></i>
                         <input type="url" class="form-control lookup-url" name="" value="" placeholder="@lang('ping.ping-placeholder')" id="input-url" autocomplete="off">
                     </div>
-                    <div class="col-sm-4 col-md-3 col-lg-4 col-xl-3 d-flex justify-content-end py-1">
+                    <div class="col-sm-6 col-md-5 col-lg-6 col-xl-5 d-flex align-items-center py-1">
+                        <select class="form-control selectpicker user-agent mx-2" id="ping-select">
+                            <option value="" disabled selected>@lang('ping.ping-select')</option>
+                            <option value="url">URL</option>
+                            <option value="ip">IP Address</option>
+                        </select>
                         {{-- @if (session()->has('logged_in') || session()->get('logged_in') == 'true') --}}
                             <button id="crawl-btn" type="button" class="btn btn-crawl" name="button" data-toggle="tooltip" data-theme="dark" title="@lang('lookup.lookup-btn-tooltip')">@lang('ping.ping-btn')</button>
                         {{--@elseif (isset($access_limit) && $access_limit > 0)
@@ -50,22 +55,19 @@ id/ping
             </div>
             <div class="row">
                 <div class="col-md-8">
-                    <div class="px-2 mb-3">
-                        <span class="text-black font-15px font-weight-bolder">@lang('ping.result')</span>
-                        <span class="font-15px font-weight-bolder" style="color:#9A99A2" id="technology-lookup-result-total"></span>
-                        {{--
-                        <span class="font-15px what-is-this" style="color:#9A99A2">(@lang('layout.what-is-this'))</span>
-                        --}}
+                    <div class="px-2 mb-3 d-flex">
+                        <span class="text-black font-15px font-weight-bolder mr-2">@lang('ping.result')</span>
+                        <span class="font-15px font-weight-bolder d-flex align-items-center" id="ping-result-status"></span>
                     </div>
-                    <div class="card card-custom" id="technology-lookup-result-container">
+                    <div class="card card-custom" id="ping-result-container">
                         <div class="card-body py-4 px-0">
-                            <div class="" id="technology-lookup-result-empty">
+                            <div class="" id="ping-result-empty">
                                 <div class="text-center">
                                     <p class="d-block">@lang('ping.result-none')</p>
                                     <a href="#lookup-description" class="links">@lang('layout.learn-how-to-use')</a>
                                 </div>
                             </div>
-                            <div class="" id="technology-lookup-result-list" style="display: none">
+                            <div class="" id="ping-result-list" style="display: none">
                             </div>
                         </div>
                     </div>
@@ -226,7 +228,7 @@ id/ping
             </div>
             <div class="col-md-6">
                 <div class="d-flex align-items-center">
-                    <span class="text-primaryblue">cmlabs Technology Lookup</span>
+                    <span class="text-primaryblue">cmlabs Ping Tool</span>
                     <span class="bx bxs-check-circle ml-5 mr-1 text-primaryblue"></span>
                     <small class="text-grey">@lang('layout.updated') 25 Dec, 2020</small>
                 </div>
@@ -302,12 +304,6 @@ id/ping
     const PING_API_URL = "{{ route('api.ping-tool') }}";
 </script>
 <script src="{{asset('js/logic/ping-tool.js')}}"></script>
-
-<script>
-    $(document).ready(function() {
-        // getHistories();
-    })
-</script>
 <script type="application/ld+json">
     {
         "@context": "https://schema.org/",
@@ -327,114 +323,118 @@ id/ping
 </script>
 {{-- @if (!session()->has('logged_in') || session()->get('logged_in') != 'true' && $access_limit <= 0) --}}
     <script>
-        // $(function(){
-        //     $('.check-limit-button').on('click', function(e) {
-        //         var process_clicked = false;
-        //         const submitbtn = document.querySelector(".analysist-button-guest");
-        //         const alertLimit = document.getElementById('alert-limit');
-        //         const toolsCount = document.getElementById("#count-tools");
-        //         const countValue = document.getElementById("#count-tools").value;
-        //         const loginModal = document.getElementById('loginModal');
-        //         let totalClicked = parseInt(countValue) + 1;
+        $(function(){
+            $('.check-limit-button').on('click', function(e) {
+                var process_clicked = false;
+                const submitbtn = document.querySelector(".analysist-button-guest");
+                const alertLimit = document.getElementById('alert-limit');
+                const toolsCount = document.getElementById("#count-tools");
+                const countValue = document.getElementById("#count-tools").value;
+                const loginModal = document.getElementById('loginModal');
+                let totalClicked = parseInt(countValue) + 1;
 
-        //         toolsCount.value = totalClicked;
-        //         if(toolsCount.value <= 5){
-        //             e.preventDefault();
-        //             $.post('{{ route("api.count") }}', {
-        //                 _token: $('meta[name=csrf-token]').attr('content'),
-        //             });
-        //             process_clicked = true; 
-        //             $('.next-button').trigger('click');
-        //             loginModal.innerHTML = `
-        //             <div
-        //                 class="modal fade"
-        //                 id="login-modal"
-        //                 tabindex="-1"
-        //                 role="dialog"
-        //                 aria-hidden="true"
-        //             >
-        //                 <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
-        //                     <div class="modal-content" style="border-radius:16px">
-        //                         <div class="modal-header border-0 pb-2">
-        //                             <h1 class="font-weight-bolder">
-        //                                 @lang('modal.modal-login-title')
-        //                             </h1>
-        //                             <button
-        //                                 type="button"
-        //                                 class="close"
-        //                                 data-dismiss="modal"
-        //                                 aria-label="Close"
-        //                             >
-        //                                 <i class="pb-2 bx bx-x bx-md"></i>
-        //                             </button>
-        //                         </div>
-        //                         <div class="modal-body py-2">
-        //                             @lang('modal.modal-login-text')
-        //                         </div>
-        //                         <div class="p-7">
-        //                             <div class="row justify-content-end">
-        //                                 <div class="col-sm-5">
-        //                                     <a
-        //                                         href="{{ env('MAIN_URL', 'https://cmlabs.co') }}/{{ App::isLocale('id') ? 'id-id' : 'en' }}/login/?logged_target={{ request()->url() }}"
-        //                                         class="btn btn-primary btn-sm btn-block font-weight-bolder"
-        //                                     >
-        //                                         Continue
-        //                                     </a>
-        //                                 </div>
-        //                             </div>
-        //                         </div>
-        //                     </div>
-        //                 </div>
-        //             </div>
-        //             `
-        //         }else if(toolsCount.value == 6){
-        //             e.preventDefault();
-        //             $.post('{{ route("api.count") }}', {
-        //                 _token: $('meta[name=csrf-token]').attr('content'),
-        //             });
-        //             submitbtn.disabled = true;
-        //             alertLimit.innerHTML = `
-        //             <div class="alert alert-limit d-flex justify-content-between align-items-center" role="alert" style="border-color: #C29C13; background-color: #FFF8DF; margin-bottom: 32px;">
-        //             <div class=" d-flex align-items-center mr-2" style="color: #C29C13;">
-        //                 <i class="icon pr-2 bx bxs-error-circle bx-sm"  style="color: #C29C13;"></i> @lang('alert.alert-limit')
-        //             </div>
-        //                 <a href="{{ env('MAIN_URL', 'https://cmlabs.co') }}/{{ App::isLocale('id') ? 'id-id' : 'en' }}/login/?logged_target={{ request()->url() }}" style="color: #C29C13; font-weight: 700;">Login</a>
-        //             </div>`
-        //             $(function(){
-        //                 $('#login-modal').modal('show');
-        //             });
-        //         }
-        //         else{
-        //             if (process_clicked) {
-        //             process_clicked = false;
-        //             $('.next-button').trigger('click');
-        //             return;
-        //         }
-        //         e.preventDefault();
-        //         $.post('{{ route("api.limit") }}', {
-        //             logged_target: '{{ request()->url() }}',
-        //             _token: $('meta[name=csrf-token]').attr('content'),
-        //         }, function (response) {
-        //             if (response.statusCode === 200) {
-        //                 if (response.data.limit == 1) {
-        //                     var alert_html = '<div class="alert alert-limit d-flex justify-content-between align-items-center" role="alert" style="border-color: #C29C13; background-color: #FFF8DF; margin-bottom: 32px;">' + 
-        //                         '<div class="d-flex align-items-center mr-2" style="color: #C29C13;">'+ 
-        //                             '<i class="icon pr-2 bx bxs-error-circle bx-sm"  style="color: #C29C13;"></i>' + 
-        //                             response.data.message + 
-        //                         '</div>' + 
-        //                         '<a href="'+ response.data.logged_target +'" style="color: #C29C13; font-weight: 700;">Login</a>' +
-        //                     '</div>';
-        //                     $('#alert-limit').html(alert_html);
-        //                 } else {
-        //                     process_clicked = true; 
-        //                     $('.check-limit-button').trigger('click');
-        //                 }
-        //             }
-        //         });}
-        //     });
-        // });
+                toolsCount.value = totalClicked;
+                if(toolsCount.value <= 5){
+                    e.preventDefault();
+                    $.post('{{ route("api.count") }}', {
+                        _token: $('meta[name=csrf-token]').attr('content'),
+                    });
+                    process_clicked = true; 
+                    $('.next-button').trigger('click');
+                    loginModal.innerHTML = `
+                    <div
+                        class="modal fade"
+                        id="login-modal"
+                        tabindex="-1"
+                        role="dialog"
+                        aria-hidden="true"
+                    >
+                        <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+                            <div class="modal-content" style="border-radius:16px">
+                                <div class="modal-header border-0 pb-2">
+                                    <h1 class="font-weight-bolder">
+                                        @lang('modal.modal-login-title')
+                                    </h1>
+                                    <button
+                                        type="button"
+                                        class="close"
+                                        data-dismiss="modal"
+                                        aria-label="Close"
+                                    >
+                                        <i class="pb-2 bx bx-x bx-md"></i>
+                                    </button>
+                                </div>
+                                <div class="modal-body py-2">
+                                    @lang('modal.modal-login-text')
+                                </div>
+                                <div class="p-7">
+                                    <div class="row justify-content-end">
+                                        <div class="col-sm-5">
+                                            <a
+                                                href="{{ env('MAIN_URL', 'https://cmlabs.co') }}/{{ App::isLocale('id') ? 'id-id' : 'en' }}/login/?logged_target={{ request()->url() }}"
+                                                class="btn btn-primary btn-sm btn-block font-weight-bolder"
+                                            >
+                                                Continue
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    `
+                }else if(toolsCount.value == 6){
+                    e.preventDefault();
+                    $.post('{{ route("api.count") }}', {
+                        _token: $('meta[name=csrf-token]').attr('content'),
+                    });
+                    submitbtn.disabled = true;
+                    alertLimit.innerHTML = `
+                    <div class="alert alert-limit d-flex justify-content-between align-items-center" role="alert" style="border-color: #C29C13; background-color: #FFF8DF; margin-bottom: 32px;">
+                    <div class=" d-flex align-items-center mr-2" style="color: #C29C13;">
+                        <i class="icon pr-2 bx bxs-error-circle bx-sm"  style="color: #C29C13;"></i> @lang('alert.alert-limit')
+                    </div>
+                        <a href="{{ env('MAIN_URL', 'https://cmlabs.co') }}/{{ App::isLocale('id') ? 'id-id' : 'en' }}/login/?logged_target={{ request()->url() }}" style="color: #C29C13; font-weight: 700;">Login</a>
+                    </div>`
+                    $(function(){
+                        $('#login-modal').modal('show');
+                    });
+                }
+                else{
+                    if (process_clicked) {
+                    process_clicked = false;
+                    $('.next-button').trigger('click');
+                    return;
+                }
+                e.preventDefault();
+                $.post('{{ route("api.limit") }}', {
+                    logged_target: '{{ request()->url() }}',
+                    _token: $('meta[name=csrf-token]').attr('content'),
+                }, function (response) {
+                    if (response.statusCode === 200) {
+                        if (response.data.limit == 1) {
+                            var alert_html = '<div class="alert alert-limit d-flex justify-content-between align-items-center" role="alert" style="border-color: #C29C13; background-color: #FFF8DF; margin-bottom: 32px;">' + 
+                                '<div class="d-flex align-items-center mr-2" style="color: #C29C13;">'+ 
+                                    '<i class="icon pr-2 bx bxs-error-circle bx-sm"  style="color: #C29C13;"></i>' + 
+                                    response.data.message + 
+                                '</div>' + 
+                                '<a href="'+ response.data.logged_target +'" style="color: #C29C13; font-weight: 700;">Login</a>' +
+                            '</div>';
+                            $('#alert-limit').html(alert_html);
+                        } else {
+                            process_clicked = true; 
+                            $('.check-limit-button').trigger('click');
+                        }
+                    }
+                });}
+            });
+        });
     </script>
  {{-- @endif --}}
+@endpush
+
+@push('style')
+<link rel="stylesheet" href="{{asset('css/ping-tool.css')}}">
 @endpush
 
 @section('ping-tool')

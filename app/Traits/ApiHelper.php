@@ -28,8 +28,8 @@ trait ApiHelper
             }
 
             $response = $this->client->request($method, env('TOOLS_API_URL') . $path . "?key=$key" , $options);
-//            dd($response->getBody()->getContents());
             return $response->getBody()->getContents();
+            
         } catch (ClientException $exception) {
             return $exception->getResponse()->getBody()->getContents();
         }
@@ -122,8 +122,8 @@ trait ApiHelper
         }
     }
     
-    protected function requestPingChecker($url){
-        $response = $this->request("api/ping-tool/check", 'POST', compact('url'));
+    protected function requestPingChecker($type, $url){
+        $response = $this->request("api/ping-tool/check", 'POST', compact('type', 'url'));
         return \GuzzleHttp\json_decode($response, 1);
     }
 }
