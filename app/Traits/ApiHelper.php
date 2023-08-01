@@ -85,10 +85,10 @@ trait ApiHelper
                 if (env('APP_ENV') != 'production' && env('APP_ENV') != 'development') {
                     $apiPost .= "&x=1";
                 }
-                $text = preg_replace('/\s+/', ' ', trim($text));
+                $requestText = preg_replace('/\s+/', ' ', trim($text));
                 $dataPost = [
                     "e" => "UTF-8",
-                    "t" => $text,
+                    "t" => $requestText,
                 ];
             }
             $options = [];
