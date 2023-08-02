@@ -68,6 +68,11 @@ trait ApiHelper
         return \GuzzleHttp\json_decode($response, 1);
     }
 
+    protected function requestPingChecker($type, $url){
+        $response = $this->request("api/ping-tool/check", 'POST', compact('type', 'url'));
+        return \GuzzleHttp\json_decode($response, 1);
+    }
+
     protected function requestPlagiarismCheck($text, $id)
     {
         try {
@@ -120,10 +125,5 @@ trait ApiHelper
             $exceptions['statusCode'] = 500;
             return $exceptions;
         }
-    }
-    
-    protected function requestPingChecker($type, $url){
-        $response = $this->request("api/ping-tool/check", 'POST', compact('type', 'url'));
-        return \GuzzleHttp\json_decode($response, 1);
     }
 }
