@@ -16,7 +16,7 @@ $(document).ready(() => {
         if (result.data.dates === '') {
             nextDate();
         }
-        adjustDateNameInViewport()
+        // adjustDateNameInViewport()
     });
 });
 
