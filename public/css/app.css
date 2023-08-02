@@ -3750,6 +3750,24 @@ body.cmlabs-tools .custom-bundling {
   }
 }
 
+body.cmlabs-tools .bottom-section .subcontents p {
+  font-family: Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0px;
+}
+
+@media only screen and (max-width: 767.98px) {
+  body.cmlabs-tools .bottom-section .subcontents p {
+    font-family: Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0px;
+  }
+}
+
 body.cmlabs-tools .bottom-section .notification-center-card {
   display: flex;
   padding: 25px 16px;
@@ -3865,6 +3883,7 @@ body.cmlabs-tools .bottom-section .resource-card .card-body {
 }
 
 body.cmlabs-tools .bottom-section .seo-booster-container {
+  background-color: #fcfcfc;
   display: flex;
   padding: 25px 50px;
   flex-direction: column;
@@ -3949,6 +3968,12 @@ body.cmlabs-tools .bottom-section .storylabs-container .storylabs-button {
   align-self: stretch;
   background-color: white;
   width: 100%;
+}
+
+body.cmlabs-tools .bottom-section .read-more {
+  text-decoration: underline;
+  color: #1f95f5;
+  cursor: pointer;
 }
 
 .footer-bottom .cmlabs-container {

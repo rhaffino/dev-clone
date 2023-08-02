@@ -170,198 +170,115 @@ id/json-ld-faq-schema-generator
     </div>
 </div>
 @endif
-@include('layouts.new_ui_design')
-<div class="" style="background:white">
-    <div class="container container-description">
-        <div class="row">
-            <div class="col-md-9">
-                <div class="" id="description-tab-1">
-                    <h2>@lang('faq.desc-1')</h2>
-                    <p>@lang('faq.desc-1-1')</p>
-                    <p>@lang('faq.desc-1-2')</p>
-                    <p>@lang('faq.desc-1-3')</p>
-                </div>
-                <div class="d-none" id="description-tab-2">
-                    <h2>@lang('faq.desc-2')</h2>
-                    <p>@lang('faq.desc-2-1')</p>
-                    <h4 class="sub-titles">@lang('faq.desc-2-2-1')</h4>
-                    <p>@lang('faq.desc-2-2-2')</p>
-                    <h4 class="sub-titles">@lang('faq.desc-2-3-1')</h4>
-                    <p>@lang('faq.desc-2-3-2')</p>
-                    <h4 class="sub-titles">@lang('faq.desc-2-4-1')</h4>
-                    <p>@lang('faq.desc-2-4-2')</p>
-                </div>
-                <div class="d-none" id="description-tab-3">
-                    <h2>@lang('faq.desc-3')</h2>
-                    <p>@lang('faq.desc-3-1')</p>
-                    <p>@lang('faq.desc-3-2')</p>
-                </div>
-                <div class="d-none" id="description-tab-4">
-                    <h2>@lang('faq.desc-4')</h2>
-                    <p>@lang('faq.desc-4-1')</p>
-                    <h4 class="sub-titles">@lang('faq.desc-4-2-1')</h4>
-                    <p>@lang('faq.desc-4-2-2')</p>
-                    <p>@lang('faq.desc-4-2-3')</p>
-                    <h4 class="sub-titles">@lang('faq.desc-4-3-1')</h4>
-                    <p>@lang('faq.desc-4-3-2')</p>
-                    <h4 class="sub-titles">@lang('faq.desc-4-4-1')</h4>
-                    <p>@lang('faq.desc-4-4-2')</p>
-                </div>
-                <div class="d-none" id="description-tab-5">
-                    <h2>@lang('faq.desc-5')</h2>
-                    <p>@lang('faq.desc-5-1')</p>
-                    <pre class="language-html mb-4">
-                        <code class="language-html">
-                          &lt;script type="application/ld+json"&gt;
-                          {
-                            "@context": "https://schema.org",
-                            "@type": "FAQPage",
-                            "mainEntity": [{
-                              "@type": "Question",
-                              "name": "Apa Itu JSON-LD FAQ Schema Generator?",
-                              "acceptedAnswer": {
-                              "@type": "Answer",
-                              "text": "JSON-LD FAQ schema generator adalah sebuah tool gratis dari cmlabs yang dapat membantu webmaster membuat skema FAQ dengan lebih cepat dan praktis."
-                              }
-                            },{
-                              "@type": "Question",
-                              "name": "Apa saja fitur yang tersedia?",
-                              "acceptedAnswer": {
-                              "@type": "Answer",
-                              "text": "Alat ini menyediakan berbagai fitur seperti, copy, check, reset, dan add question"
-                              }
-                            },{
-                                "@type": "Question",
-                                "name": "Alat ini dapat digunakan oleh siapa?",
-                                "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "Alat ini dapat digunakan oleh siapa saja yang membutuhkan dengan gratis"
-                                }
-                              }
-                            ]
-                          }
-                          &lt;/script&gt;
-                        </code>
-                      </pre>
-                    <p>@lang('faq.desc-5-2')</p>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-1">
-                    <div class="mr-2" style="width:24px !important; height: 24px !important;">
-                        <span class="label label-lg label-tools-description active" id="nav-label-tab-1">1</span>
-                    </div>
-                    <a class="">@lang('faq.desc-1')</a>
-                </div>
-                <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-2">
-                    <div class="mr-2" style="width:24px !important; height: 24px !important;">
-                        <span class="label label-lg label-tools-description" id="nav-label-tab-2">2</span>
-                    </div>
-                    <a class="">@lang('faq.desc-2')</a>
-                </div>
-                <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-3">
-                    <div class="mr-2" style="width:24px !important; height: 24px !important;">
-                        <span class="label label-lg label-tools-description" id="nav-label-tab-3">3</span>
-                    </div>
-                    <a class="">@lang('faq.desc-3')</a>
-                </div>
-                <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-4">
-                    <div class="mr-2" style="width:24px !important; height: 24px !important;">
-                        <span class="label label-lg label-tools-description" id="nav-label-tab-4">4</span>
-                    </div>
-                    <a class="">@lang('faq.desc-4')</a>
-                </div>
-                <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-5">
-                    <div class="mr-2" style="width:24px !important; height: 24px !important;">
-                        <span class="label label-lg label-tools-description" id="nav-label-tab-5">5</span>
-                    </div>
-                    <a class="">@lang('faq.desc-5')</a>
-                </div>
+
+@component('layouts.new_ui_design', ['local' => $local, 'blogs' => $blogs, 'seo_terms' => $seo_terms, 'seo_guidelines' => $seo_guidelines])
+    @slot('title', 'JSON L-D FAQ Schema Generator')
+    @slot('subcontent_1')
+        <div class="" id="description-tab-1">
+            <h2>@lang('faq.desc-1')</h2>
+            <p>@lang('faq.desc-1-1')</p>
+            <p>@lang('faq.desc-1-2')</p>
+            <p>@lang('faq.desc-1-3')</p>
+        </div>
+    @endslot
+    @slot('subcontent_2')
+        <div class="d-none" id="description-tab-2">
+            <h2>@lang('faq.desc-2')</h2>
+            <p>@lang('faq.desc-2-1')</p>
+            <h4 class="sub-titles">@lang('faq.desc-2-2-1')</h4>
+            <p>@lang('faq.desc-2-2-2')</p>
+            <h4 class="sub-titles">@lang('faq.desc-2-3-1')</h4>
+            <p>@lang('faq.desc-2-3-2')</p>
+            <h4 class="sub-titles">@lang('faq.desc-2-4-1')</h4>
+            <p>@lang('faq.desc-2-4-2')</p>
+        </div>
+    @endslot
+    @slot('subcontent_3')
+        <div class="d-none" id="description-tab-3">
+            <h2>@lang('faq.desc-3')</h2>
+            <p>@lang('faq.desc-3-1')</p>
+            <p>@lang('faq.desc-3-2')</p>
+        </div>
+    @endslot
+    @slot('subcontent_4')
+        <div class="d-none" id="description-tab-4">
+            <h2>@lang('faq.desc-4')</h2>
+            <p>@lang('faq.desc-4-1')</p>
+            <h4 class="sub-titles">@lang('faq.desc-4-2-1')</h4>
+            <p>@lang('faq.desc-4-2-2')</p>
+            <p>@lang('faq.desc-4-2-3')</p>
+            <h4 class="sub-titles">@lang('faq.desc-4-3-1')</h4>
+            <p>@lang('faq.desc-4-3-2')</p>
+            <h4 class="sub-titles">@lang('faq.desc-4-4-1')</h4>
+            <p>@lang('faq.desc-4-4-2')</p>
+        </div>
+    @endslot
+    @slot('subcontent_5')
+        <div class="d-none" id="description-tab-5" style="overflow:auto">
+            <h2>@lang('faq.desc-5')</h2>
+            <p>@lang('faq.desc-5-1')</p>
+            <pre class="language-html mb-4" style="overflow:auto; width:100%;">
+                <code class="language-html">
+                    &lt;script type="application/ld+json"&gt;
+                    {
+                    "@context": "https://schema.org",
+                    "@type": "FAQPage",
+                    "mainEntity": [{
+                        "@type": "Question",
+                        "name": "Apa Itu JSON-LD FAQ Schema Generator?",
+                        "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "JSON-LD FAQ schema generator adalah sebuah tool gratis dari cmlabs yang dapat membantu webmaster membuat skema FAQ dengan lebih cepat dan praktis."
+                        }
+                    },{
+                        "@type": "Question",
+                        "name": "Apa saja fitur yang tersedia?",
+                        "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Alat ini menyediakan berbagai fitur seperti, copy, check, reset, dan add question"
+                        }
+                    },{
+                        "@type": "Question",
+                        "name": "Alat ini dapat digunakan oleh siapa?",
+                        "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Alat ini dapat digunakan oleh siapa saja yang membutuhkan dengan gratis"
+                        }
+                        }
+                    ]
+                    }
+                    &lt;/script&gt;
+                </code>
+                </pre>
+            <p>@lang('faq.desc-5-2')</p>
+        </div>
+    @endslot
+    @slot('how_to_content')
+        <div class="d-none" id="how-to">
+            @lang('faq.howto1')
+            <div class="expand-text">
+            @lang('faq.howto1-1')
+                <img class="mb-4" src="{{asset('/media/images/faq_instruction_1.webp')}}" alt="HowTo-faq-1" width="80%">
+                @lang('faq.howto2')
+                <img class="mb-4" src="{{asset('/media/images/faq_instruction_2.webp')}}" alt="HowTo-faq-2" width="80%">
+                @lang('faq.howto3')
+                <img class="mb-4" src="{{asset('/media/images/faq_instruction_3.webp')}}" alt="HowTo-faq-3" width="80%">
+                @lang('faq.howto4')
+                <img class="mb-4" src="{{asset('/media/images/faq_instruction_4.webp')}}" alt="HowTo-faq-4" width="80%">
+                @lang('faq.howto5')
+                <img class="mb-4" src="{{asset('/media/images/faq_instruction_5.webp')}}" alt="HowTo-faq-5" width="80%">
+                @lang('faq.howto6')
+                <img class="mb-4" src="{{asset('/media/images/faq_instruction_6.webp')}}" alt="HowTo-faq-6" width="80%">
+                @lang('faq.howto7')
+                <img class="mb-4" src="{{asset('/media/images/faq_instruction_7.webp')}}" alt="HowTo-faq-7" width="80%">
+                @lang('faq.howto8')
             </div>
         </div>
-        @lang('faq.howto1')
-        <div class="expand-text">
-        @lang('faq.howto1-1')
-            <img class="mb-4" src="{{asset('/media/images/faq_instruction_1.webp')}}" alt="HowTo-faq-1" width="80%">
-            @lang('faq.howto2')
-            <img class="mb-4" src="{{asset('/media/images/faq_instruction_2.webp')}}" alt="HowTo-faq-2" width="80%">
-            @lang('faq.howto3')
-            <img class="mb-4" src="{{asset('/media/images/faq_instruction_3.webp')}}" alt="HowTo-faq-3" width="80%">
-            @lang('faq.howto4')
-            <img class="mb-4" src="{{asset('/media/images/faq_instruction_4.webp')}}" alt="HowTo-faq-4" width="80%">
-            @lang('faq.howto5')
-            <img class="mb-4" src="{{asset('/media/images/faq_instruction_5.webp')}}" alt="HowTo-faq-5" width="80%">
-            @lang('faq.howto6')
-            <img class="mb-4" src="{{asset('/media/images/faq_instruction_6.webp')}}" alt="HowTo-faq-6" width="80%">
-            @lang('faq.howto7')
-            <img class="mb-4" src="{{asset('/media/images/faq_instruction_7.webp')}}" alt="HowTo-faq-7" width="80%">
-            @lang('faq.howto8')
-        </div>
-            @if($local == 'en')
-                <a class="moreless-button" href="#/">Read more</a>
-                @else
-                <a class="moreless-buttonid" href="#/">Baca Selengkapnya</a>
-                @endif
-        @include('layouts.roboDesc')
-        {{-- <div class="row mb-10">
-      <div class="col-md-6">
-        <h2 class="text-black">Available features</h2>
-        <p class="text-black" style="font-size:1.5rem">Explore the full features of cmlabs WORD COUNTER</p>
-        <p class="text-black">CMLABS will enhance your writing capabilities and incorporate strategical thinking to provide technical advice from the our data.</p>
-      </div>
-      <div class="col-md-6">
-        <div class="d-flex align-items-center">
-          <span class="text-primaryblue">cmlabs Words Counter</span>
-          <span class="bx bxs-check-circle ml-5 mr-1 text-primaryblue"></span>
-          <small class="text-grey">Updated 25 Dec, 2020</small>
-        </div>
-        <p class="font-weight-bold mt-3">CMLABS Analytics opens many possible ways to access, organize, and visualize your SERRPs data to suit your business needs.</p>
-        <label class="checkbox checkbox-disabled checkbox-features mb-1"><input type="checkbox" disabled="disabled" checked="checked" name="Checkboxes12" /><span></span>&nbsp;&nbsp;<bdi>Daily domain ranking on SERP. Version 1.0</bdi></label>
-        <label class="checkbox checkbox-disabled checkbox-features mb-1"><input type="checkbox" disabled="disabled" checked="checked" name="Checkboxes13" /><span></span>&nbsp;&nbsp;<bdi>Exact and average Google Search Volume. Version
-            1.3</bdi></label>
-        <label class="checkbox checkbox-disabled checkbox-features features-disabled mb-1"><input type="checkbox" disabled="disabled" name="Checkboxes14" /><span></span>&nbsp;&nbsp;<bdi>Daily domain ranking on SERP. Version 0.1</bdi></label>
-        <label class="checkbox checkbox-disabled checkbox-features features-disabled mb-1"><input type="checkbox" disabled="disabled" name="Checkboxes14" /><span></span>&nbsp;&nbsp;<bdi>Daily domain ranking on SERP. Version 0.1</bdi></label>
-        <label class="checkbox checkbox-disabled checkbox-features features-disabled mb-1"><input type="checkbox" disabled="disabled" name="Checkboxes14" /><span></span>&nbsp;&nbsp;<bdi>Daily domain ranking on SERP. Version 0.1</bdi></label>
-        <label class="checkbox checkbox-disabled checkbox-features features-disabled mb-1"><input type="checkbox" disabled="disabled" name="Checkboxes14" /><span></span>&nbsp;&nbsp;<bdi>Daily domain ranking on SERP. Version 0.1</bdi></label>
-        <label class="checkbox checkbox-disabled checkbox-features features-disabled mb-1"><input type="checkbox" disabled="disabled" name="Checkboxes14" /><span></span>&nbsp;&nbsp;<bdi>Daily domain ranking on SERP. Version 0.1</bdi></label>
-      </div>
-    </div> --}}
-        {{--<h2 class="text-black">@lang('layout.whats-new-title') @lang('faq.title')</h2>
-        <div class="row my-5">
-            <div class="col-md-6 mb-5">
-                <div class="alert alert-custom alert-features-new fade show card card-custom card-stretch" role="alert" style="background: var(--lightgrey); display:block">
-                    <div class="alert-text mb-5">
-                        <span class="h4 alert-title">@lang('layout.whats-new-sub-title')</span>&nbsp;&nbsp;<span class="label label-dot label-alert-features"></span>
-                        <br />
-                        <span class="font-weight-light">@lang('layout.whats-new-update') 15 Mar, 2021</span>
-                    </div>
-                    <!-- <div class="alert-close pt-5 pr-5">
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                            <span aria-hidden="true"><i class="ki ki-close icon-alert-close"></i></span>
-                        </button>
-                    </div> -->
-                    <span class="alert-features-text">@lang('faq.whats-new-1')</span>
-                </div>
-            </div>
-            <div class="col-md-6 mb-5">
-                <div class="alert alert-custom alert-features-new fade show card card-custom card-stretch" role="alert" style="background: var(--lightgrey); display:block">
-                    <div class="alert-text mb-5">
-                        <span class="h4 alert-title">@lang('layout.whats-new-sub-title')</span>&nbsp;&nbsp;<span class="label label-dot label-alert-features"></span>
-                        <br />
-                        <span class="font-weight-light">@lang('layout.whats-new-update') 15 Mar, 2021</span>
-                    </div>
-                    <!-- <div class="alert-close pt-5 pr-5">
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                            <span aria-hidden="true"><i class="ki ki-close icon-alert-close"></i></span>
-                        </button>
-                    </div> -->
-                    <span class="alert-features-text">@lang('faq.whats-new-2')</span>
-                </div>
-            </div>
-        </div>--}}
-        {{-- <p class="text-black view-all-release">View all web-release?</p> --}}
-    </div>
-</div>
+    @endslot
+    @slot('read_more')
+        <p class="b1-400 b1-m-400 read-more" id="read-more-button">Read more</p>
+    @endslot
+@endcomponent
 @endsection
 
 @push('script')
@@ -385,6 +302,50 @@ id/json-ld-faq-schema-generator
             "name": "JSON-LD FAQ Schema Generator"
         }]
     }
+</script>
+<script>
+    // Get the element by its id
+    const read_more_button = document.getElementById('read-more-button');
+    const description_1 = document.getElementById('description-tab-1');
+    const description_2 = document.getElementById('description-tab-2');
+    const description_3 = document.getElementById('description-tab-3');
+    const description_4 = document.getElementById('description-tab-4');
+    const description_5 = document.getElementById('description-tab-5');
+    const how_to = document.getElementById('how-to');
+    let read = false;
+
+    // Add a click event listener
+    read_more_button.addEventListener('click', function() {
+        if(!read){
+            description_1.style.display = 'block';
+            description_2.style.display = 'block';
+            description_3.style.display = 'block';
+            description_4.style.display = 'block';
+            description_5.style.display = 'block';
+            how_to.style.display = 'block';
+            description_1.classList.remove("d-none");
+            description_2.classList.remove("d-none");
+            description_3.classList.remove("d-none");
+            description_4.classList.remove("d-none");
+            description_5.classList.remove("d-none");
+            how_to.classList.remove("d-none");
+            read_more_button.innerHTML = 'Show less';
+            read = true;
+        } else {
+            description_2.style.display = 'none';
+            description_3.style.display = 'none';
+            description_4.style.display = 'none';
+            description_5.style.display = 'none';
+            how_to.style.display = 'none';
+            description_2.classList.add("d-none");
+            description_3.classList.add("d-none");
+            description_4.classList.add("d-none");
+            description_5.classList.add("d-none");
+            how_to.classList.add("d-none");
+            read_more_button.innerHTML = 'Read more';
+            read = false;
+        }
+    });
 </script>
 @endpush
 @push('script')

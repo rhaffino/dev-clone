@@ -315,206 +315,125 @@ id/json-ld-recipe-schema-generator
     </div>
 </div>
 @endif
-@include('layouts.new_ui_design')
-<div class="" style="background:white">
-    <div class="container container-description">
-        <div class="row">
-            <div class="col-md-9">
-                <div class="" id="description-tab-1">
-                    <h2 class="text-black">@lang('recipe.desc-1')</h2>
-                    <p class="text-black">@lang('recipe.desc-1-1')</p>
-                    <p class="text-black">@lang('recipe.desc-1-2')</p>
-                    <p class="text-black">@lang('recipe.desc-1-3')</p>
-                </div>
-                <div class="d-none" id="description-tab-2">
-                    <h2 class="text-black">@lang('recipe.desc-2')</h2>
-                    <p class="text-black">@lang('recipe.desc-2-1')</p>
-                    <h4 class="sub-titles">@lang('recipe.desc-2-2-1')</h4>
-                    <p class="text-black">@lang('recipe.desc-2-2-2')</p>
-                    <p class="text-black">@lang('recipe.desc-2-2-3')</p>
-                    <img class="mb-4" src="{{asset('/media/images/recipe-1.png')}}" alt="recipe-1" width="60%">
-                    <p class="text-black">@lang('recipe.desc-2-2-4')</p>
-                    <p class="text-black">@lang('recipe.desc-2-2-5')</p>
+@component('layouts.new_ui_design', ['local' => $local, 'blogs' => $blogs, 'seo_terms' => $seo_terms, 'seo_guidelines' => $seo_guidelines])
+    @slot('title', 'JSON-LD Recipe Schema Generator')
+    @slot('subcontent_1')
+        <div class="" id="description-tab-1">
+            <h2 class="text-black">@lang('recipe.desc-1')</h2>
+            <p class="text-black">@lang('recipe.desc-1-1')</p>
+            <p class="text-black">@lang('recipe.desc-1-2')</p>
+            <p class="text-black">@lang('recipe.desc-1-3')</p>
+        </div>
+    @endslot
+    @slot('subcontent_2')
+        <div class="d-none" id="description-tab-2">
+            <h2 class="text-black">@lang('recipe.desc-2')</h2>
+            <p class="text-black">@lang('recipe.desc-2-1')</p>
+            <h4 class="sub-titles">@lang('recipe.desc-2-2-1')</h4>
+            <p class="text-black">@lang('recipe.desc-2-2-2')</p>
+            <p class="text-black">@lang('recipe.desc-2-2-3')</p>
+            <img class="mb-4" src="{{asset('/media/images/recipe-1.png')}}" alt="recipe-1" width="60%">
+            <p class="text-black">@lang('recipe.desc-2-2-4')</p>
+            <p class="text-black">@lang('recipe.desc-2-2-5')</p>
 
-                    <h4 class="sub-titles">@lang('recipe.desc-2-3-1')</h4>
-                    <p class="text-black">@lang('recipe.desc-2-3-2')</p>
-                    <img class="mb-4" src="{{asset('/media/images/recipe-2.png')}}" alt="recipe-2" width="60%">
-                    <p class="text-black">@lang('recipe.desc-2-3-3')</p>
-                    <p class="text-black">@lang('recipe.desc-2-3-4')</p>
-                </div>
-                <div class="d-none" id="description-tab-3">
-                    <h2 class="text-black">@lang('recipe.desc-3')</h2>
-                    <p class="text-black">@lang('recipe.desc-3-1')</p>
-                    <h4 class="sub-titles">@lang('recipe.desc-3-2-1')</h4>
-                    <p class="text-black">@lang('recipe.desc-3-2-2')</p>
-                    <p class="text-black">@lang('recipe.desc-3-2-3')</p>
-                    <h4 class="sub-titles">@lang('recipe.desc-3-3-1')</h4>
-                    <p class="text-black">@lang('recipe.desc-3-3-2')</p>
-                    <p class="text-black">@lang('recipe.desc-3-3-3')</p>
-
-                </div>
-                <div class="d-none" id="description-tab-4">
-                    <h2 class="text-black">@lang('recipe.desc-4')</h2>
-                    <p class="text-black">@lang('recipe.desc-4-1')</p>
-                    <pre class="language-html">
-                        <code class="language-html">
-                            &lt;script type="application/ld+json"&gt;
-                                {
-                                    "@context": "https://schema.org",
-                                    "@type": "Recipe",
-                                    "author": "Jake Smith",
-                                    "cookTime": "PT2H",
-                                    "datePublished": "2015-05-18",
-                                    "description": "Your recipe description goes here",
-                                    "image": "http://www.example.com/images.jpg",
-                                    "recipeIngredient": [
-                                    "ingredient 1",
-                                    "ingredient 2",
-                                    "ingredient 3",
-                                    "ingredient 4",
-                                    "ingredient 5"
-                                    ],
-                                    "interactionStatistic": {
-                                    "@type": "InteractionCounter",
-                                    "interactionType": "http://schema.org/Comment",
-                                    "userInteractionCount": "5"
-                                    },
-                                    "name": "Rand's Cookies",
-                                    "nutrition": {
-                                    "@type": "NutritionInformation",
-                                    "calories": "1200 calories",
-                                    "carbohydrateContent": "12 carbs",
-                                    "proteinContent": "9 grams of protein",
-                                    "fatContent": "9 grams fat"
-                                    },
-                                    "prepTime": "PT15M",
-                                    "recipeInstructions": "This is the long part, etc.",
-                                    "recipeYield": "12 cookies"
-                                }                        
-                            &lt;/script&gt;
-                        </code>
-                    </pre>
-                    <p class="text-black">@lang('recipe.desc-4-2')</p>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-1">
-                    <div class="mr-2" style="width:24px !important; height: 24px !important;">
-                        <span class="label label-lg label-tools-description active" id="nav-label-tab-1">1</span>
-                    </div>
-                    <a class="">@lang('recipe.desc-1')</a>
-                </div>
-                <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-2">
-                    <div class="mr-2" style="width:24px !important; height: 24px !important;">
-                        <span class="label label-lg label-tools-description" id="nav-label-tab-2">2</span>
-                    </div>
-                    <a class="">@lang('recipe.desc-2')</a>
-                </div>
-                <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-3">
-                    <div class="mr-2" style="width:24px !important; height: 24px !important;">
-                        <span class="label label-lg label-tools-description" id="nav-label-tab-3">3</span>
-                    </div>
-                    <a class="">@lang('recipe.desc-3')</a>
-                </div>
-                <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-4">
-                    <div class="mr-2" style="width:24px !important; height: 24px !important;">
-                        <span class="label label-lg label-tools-description" id="nav-label-tab-4">4</span>
-                    </div>
-                    <a class="">@lang('recipe.desc-4')</a>
-                </div>
+            <h4 class="sub-titles">@lang('recipe.desc-2-3-1')</h4>
+            <p class="text-black">@lang('recipe.desc-2-3-2')</p>
+            <img class="mb-4" src="{{asset('/media/images/recipe-2.png')}}" alt="recipe-2" width="60%">
+            <p class="text-black">@lang('recipe.desc-2-3-3')</p>
+            <p class="text-black">@lang('recipe.desc-2-3-4')</p>
+        </div>
+    @endslot
+    @slot('subcontent_3')
+        <div class="d-none" id="description-tab-3">
+            <h2 class="text-black">@lang('recipe.desc-3')</h2>
+            <p class="text-black">@lang('recipe.desc-3-1')</p>
+            <h4 class="sub-titles">@lang('recipe.desc-3-2-1')</h4>
+            <p class="text-black">@lang('recipe.desc-3-2-2')</p>
+            <p class="text-black">@lang('recipe.desc-3-2-3')</p>
+            <h4 class="sub-titles">@lang('recipe.desc-3-3-1')</h4>
+            <p class="text-black">@lang('recipe.desc-3-3-2')</p>
+            <p class="text-black">@lang('recipe.desc-3-3-3')</p>
+        </div>
+    @endslot
+    @slot('subcontent_4')
+        <div class="d-none" id="description-tab-4">
+            <h2 class="text-black">@lang('recipe.desc-4')</h2>
+            <p class="text-black">@lang('recipe.desc-4-1')</p>
+            <pre class="language-html">
+                <code class="language-html">
+                    &lt;script type="application/ld+json"&gt;
+                        {
+                            "@context": "https://schema.org",
+                            "@type": "Recipe",
+                            "author": "Jake Smith",
+                            "cookTime": "PT2H",
+                            "datePublished": "2015-05-18",
+                            "description": "Your recipe description goes here",
+                            "image": "http://www.example.com/images.jpg",
+                            "recipeIngredient": [
+                            "ingredient 1",
+                            "ingredient 2",
+                            "ingredient 3",
+                            "ingredient 4",
+                            "ingredient 5"
+                            ],
+                            "interactionStatistic": {
+                            "@type": "InteractionCounter",
+                            "interactionType": "http://schema.org/Comment",
+                            "userInteractionCount": "5"
+                            },
+                            "name": "Rand's Cookies",
+                            "nutrition": {
+                            "@type": "NutritionInformation",
+                            "calories": "1200 calories",
+                            "carbohydrateContent": "12 carbs",
+                            "proteinContent": "9 grams of protein",
+                            "fatContent": "9 grams fat"
+                            },
+                            "prepTime": "PT15M",
+                            "recipeInstructions": "This is the long part, etc.",
+                            "recipeYield": "12 cookies"
+                        }                        
+                    &lt;/script&gt;
+                </code>
+            </pre>
+            <p class="text-black">@lang('recipe.desc-4-2')</p>
+        </div>
+    @endslot
+    @slot('how_to_content')
+        <div class="d-none" id="how-to">
+            @lang('recipe.howto1')
+            <div class="expand-text">
+                @lang('recipe.howto2')
+                <img class="mb-4" src="{{asset('/media/images/recipe_instruction_1.webp')}}" alt="HowTo-recipe-1" width="80%">
+                @lang('recipe.howto3')
+                <img class="mb-4" src="{{asset('/media/images/recipe_instruction_2.webp')}}" alt="HowTo-recipe-2" width="80%">
+                @lang('recipe.howto4')
+                <img class="mb-4" src="{{asset('/media/images/recipe_instruction_3.webp')}}" alt="HowTo-recipe-3" width="80%">
+                @lang('recipe.howto5')
+                <img class="mb-4" src="{{asset('/media/images/recipe_instruction_4.webp')}}" alt="HowTo-recipe-4" width="80%">
+                @lang('recipe.howto6')
+                <img class="mb-4" src="{{asset('/media/images/recipe_instruction_5.webp')}}" alt="HowTo-recipe-5" width="80%">
+                @lang('recipe.howto7')
+                <img class="mb-4" src="{{asset('/media/images/recipe_instruction_6.webp')}}" alt="HowTo-recipe-6" width="80%">
+                @lang('recipe.howto8')
+                <img class="mb-4" src="{{asset('/media/images/recipe_instruction_7.webp')}}" alt="HowTo-recipe-7" width="80%">
+                @lang('recipe.howto9')
+                <img class="mb-4" src="{{asset('/media/images/recipe_instruction_8.webp')}}" alt="HowTo-recipe-8" width="80%">
+                @lang('recipe.howto10')
+                <img class="mb-4" src="{{asset('/media/images/recipe_instruction_9.webp')}}" alt="HowTo-recipe-9" width="80%">
+                @lang('recipe.howto11')
+                <img class="mb-4" src="{{asset('/media/images/recipe_instruction_10.webp')}}" alt="HowTo-recipe-10" width="80%">
+                @lang('recipe.howto12')
+                <img class="mb-4" src="{{asset('/media/images/recipe_instruction_11.webp')}}" alt="HowTo-recipe-11" width="80%">
+                @lang('recipe.howto13')
             </div>
         </div>
-        @lang('recipe.howto1')
-        <div class="expand-text">
-            @lang('recipe.howto2')
-            <img class="mb-4" src="{{asset('/media/images/recipe_instruction_1.webp')}}" alt="HowTo-recipe-1" width="80%">
-            @lang('recipe.howto3')
-            <img class="mb-4" src="{{asset('/media/images/recipe_instruction_2.webp')}}" alt="HowTo-recipe-2" width="80%">
-            @lang('recipe.howto4')
-            <img class="mb-4" src="{{asset('/media/images/recipe_instruction_3.webp')}}" alt="HowTo-recipe-3" width="80%">
-            @lang('recipe.howto5')
-            <img class="mb-4" src="{{asset('/media/images/recipe_instruction_4.webp')}}" alt="HowTo-recipe-4" width="80%">
-            @lang('recipe.howto6')
-            <img class="mb-4" src="{{asset('/media/images/recipe_instruction_5.webp')}}" alt="HowTo-recipe-5" width="80%">
-            @lang('recipe.howto7')
-            <img class="mb-4" src="{{asset('/media/images/recipe_instruction_6.webp')}}" alt="HowTo-recipe-6" width="80%">
-            @lang('recipe.howto8')
-            <img class="mb-4" src="{{asset('/media/images/recipe_instruction_7.webp')}}" alt="HowTo-recipe-7" width="80%">
-            @lang('recipe.howto9')
-            <img class="mb-4" src="{{asset('/media/images/recipe_instruction_8.webp')}}" alt="HowTo-recipe-8" width="80%">
-            @lang('recipe.howto10')
-            <img class="mb-4" src="{{asset('/media/images/recipe_instruction_9.webp')}}" alt="HowTo-recipe-9" width="80%">
-            @lang('recipe.howto11')
-            <img class="mb-4" src="{{asset('/media/images/recipe_instruction_10.webp')}}" alt="HowTo-recipe-10" width="80%">
-            @lang('recipe.howto12')
-            <img class="mb-4" src="{{asset('/media/images/recipe_instruction_11.webp')}}" alt="HowTo-recipe-11" width="80%">
-            @lang('recipe.howto13')
-        </div>
-            @if($local == 'en')
-                <a class="moreless-button" href="#/">Read more</a>
-                @else
-                <a class="moreless-buttonid" href="#/">Baca Selengkapnya</a>
-                @endif
-        @include('layouts.roboDesc')
-        {{-- <div class="row mb-10">
-      <div class="col-md-6">
-        <h2 class="text-black">@lang('layout.feature-title')</h2>
-        <p class="text-black" style="font-size:1.5rem">@lang('layout.feature-sub-title') @lang('recipe.title')</p>
-        <p class="text-black">@lang('layout.feature-desc')</p>
-      </div>
-      <div class="col-md-6">
-        <div class="d-flex align-items-center">
-          <span class="text-primaryblue">cmlabs JSON-LD Recipe Schema Generator</span>
-          <span class="bx bxs-check-circle ml-5 mr-1 text-primaryblue"></span>
-          <small class="text-grey">@lang('layout.updated') 25 Dec, 2020</small>
-        </div>
-        <p class="font-weight-bold mt-3">CMLABS Analytics opens many possible ways to access, organize, and visualize your SERRPs data to suit your business needs.</p>
-        <label class="checkbox checkbox-disabled checkbox-features mb-1"><input type="checkbox" disabled="disabled" checked="checked" name="Checkboxes12" /><span></span>&nbsp;&nbsp;<bdi>Daily domain ranking on SERP. Version 1.0</bdi></label>
-        <label class="checkbox checkbox-disabled checkbox-features mb-1"><input type="checkbox" disabled="disabled" checked="checked" name="Checkboxes13" /><span></span>&nbsp;&nbsp;<bdi>Exact and average Google Search Volume. Version
-            1.3</bdi></label>
-        <label class="checkbox checkbox-disabled checkbox-features features-disabled mb-1"><input type="checkbox" disabled="disabled" name="Checkboxes14" /><span></span>&nbsp;&nbsp;<bdi>Daily domain ranking on SERP. Version 0.1</bdi></label>
-        <label class="checkbox checkbox-disabled checkbox-features features-disabled mb-1"><input type="checkbox" disabled="disabled" name="Checkboxes14" /><span></span>&nbsp;&nbsp;<bdi>Daily domain ranking on SERP. Version 0.1</bdi></label>
-        <label class="checkbox checkbox-disabled checkbox-features features-disabled mb-1"><input type="checkbox" disabled="disabled" name="Checkboxes14" /><span></span>&nbsp;&nbsp;<bdi>Daily domain ranking on SERP. Version 0.1</bdi></label>
-        <label class="checkbox checkbox-disabled checkbox-features features-disabled mb-1"><input type="checkbox" disabled="disabled" name="Checkboxes14" /><span></span>&nbsp;&nbsp;<bdi>Daily domain ranking on SERP. Version 0.1</bdi></label>
-        <label class="checkbox checkbox-disabled checkbox-features features-disabled mb-1"><input type="checkbox" disabled="disabled" name="Checkboxes14" /><span></span>&nbsp;&nbsp;<bdi>Daily domain ranking on SERP. Version 0.1</bdi></label>
-      </div>
-    </div> --}}
-        {{--<h2 class="text-black">@lang('layout.whats-new-title') @lang('recipe.title')</h2>
-        <div class="row my-5">
-            <div class="col-md-6 mb-5">
-                <div class="alert alert-custom alert-features-new fade show card card-custom card-stretch" role="alert" style="background: var(--lightgrey); display:block">
-                    <div class="alert-text mb-5">
-                        <span class="h4 alert-title">@lang('layout.whats-new-sub-title')</span>&nbsp;&nbsp;<span class="label label-dot label-alert-features"></span>
-                        <br />
-                        <span class="font-weight-light">@lang('layout.whats-new-update') 15 Mar, 2021</span>
-                    </div>
-                    <!-- <div class="alert-close pt-5 pr-5">
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                            <span aria-hidden="true"><i class="ki ki-close icon-alert-close"></i></span>
-                        </button>
-                    </div> -->
-                    <span class="alert-features-text">@lang('recipe.whats-new-1')</span>
-                </div>
-            </div>
-            <div class="col-md-6 mb-5">
-                <div class="alert alert-custom alert-features-new fade show card card-custom card-stretch" role="alert" style="background: var(--lightgrey); display:block">
-                    <div class="alert-text mb-5">
-                        <span class="h4 alert-title">@lang('layout.whats-new-sub-title')</span>&nbsp;&nbsp;<span class="label label-dot label-alert-features"></span>
-                        <br />
-                        <span class="font-weight-light">@lang('layout.whats-new-update') 15 Mar, 2021</span>
-                    </div>
-                    <!-- <div class="alert-close pt-5 pr-5">
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                            <span aria-hidden="true"><i class="ki ki-close icon-alert-close"></i></span>
-                        </button>
-                    </div> -->
-                    <span class="alert-features-text">@lang('recipe.whats-new-2')</span>
-                </div>
-            </div>
-        </div>--}}
-        {{-- <p class="text-black view-all-release">@lang('layout.view-web-release')</p> --}}
-    </div>
-</div>
+    @endslot
+    @slot('read_more')
+        <p class="b1-400 b1-m-400 read-more" id="read-more-button">Read more</p>
+    @endslot
+@endcomponent
 @endsection
 
 @push('script')
@@ -545,6 +464,45 @@ id/json-ld-recipe-schema-generator
             "item": "{{url('/')}}/{{$local}}/json-ld-recipe-schema-generator"
         }]
     }
+</script>
+<script>
+    // Get the element by its id
+    const read_more_button = document.getElementById('read-more-button');
+    const description_1 = document.getElementById('description-tab-1');
+    const description_2 = document.getElementById('description-tab-2');
+    const description_3 = document.getElementById('description-tab-3');
+    const description_4 = document.getElementById('description-tab-4');
+    const how_to = document.getElementById('how-to');
+    let read = false;
+
+    // Add a click event listener
+    read_more_button.addEventListener('click', function() {
+        if(!read){
+            description_1.style.display = 'block';
+            description_2.style.display = 'block';
+            description_3.style.display = 'block';
+            description_4.style.display = 'block';
+            how_to.style.display = 'block';
+            description_1.classList.remove("d-none");
+            description_2.classList.remove("d-none");
+            description_3.classList.remove("d-none");
+            description_4.classList.remove("d-none");
+            how_to.classList.remove("d-none");
+            read_more_button.innerHTML = 'Show less';
+            read = true;
+        } else {
+            description_2.style.display = 'none';
+            description_3.style.display = 'none';
+            description_4.style.display = 'none';
+            how_to.style.display = 'none';
+            description_2.classList.add("d-none");
+            description_3.classList.add("d-none");
+            description_4.classList.add("d-none");
+            how_to.classList.add("d-none");
+            read_more_button.innerHTML = 'Read more';
+            read = false;
+        }
+    });
 </script>
 @endpush
 

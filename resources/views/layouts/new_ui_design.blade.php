@@ -40,6 +40,38 @@
                         @include('v2.components.cmlabs-resources')
                     </div>
                 </div>
+                <div class="row mt-10">
+                    @component('layouts.new_booster_card')
+                        @slot('title', $title)
+                        @if (isset($subcontent_1))
+                            @slot('subcontent_1', $subcontent_1)
+                        @endif
+                        @if (isset($subcontent_2))
+                            @slot('subcontent_2', $subcontent_2)
+                        @endif
+                        @if (isset($subcontent_3))
+                            @slot('subcontent_3', $subcontent_3)
+                        @endif
+                        @if (isset($subcontent_4))
+                            @slot('subcontent_4', $subcontent_4)
+                        @endif
+                        @if (isset($subcontent_5))
+                            @slot('subcontent_5', $subcontent_5)
+                        @endif
+                        @if (isset($subcontent_6))
+                            @slot('subcontent_6', $subcontent_6)
+                        @endif
+                        @if (isset($subcontent_7))
+                            @slot('subcontent_7', $subcontent_7)
+                        @endif
+                        @if (isset($how_to_content))
+                            @slot('how_to_content', $how_to_content)
+                        @endif
+                        @slot('read_more', $read_more)
+                        @slot('lang', $lang)
+                        @slot('local', $local)
+                    @endcomponent
+                </div>
             </div>
             @include('v2.components.cmlabs-aliance')
         </div>

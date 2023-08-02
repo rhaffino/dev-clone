@@ -71,6 +71,23 @@ body.cmlabs-tools {
 
     // bottom section
     .bottom-section {
+        .subcontents {
+            p {
+                font-family: Helvetica, sans-serif;
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 24px;
+                letter-spacing: 0px;
+
+                @media only screen and (max-width: 767.98px) {
+                    font-family: Helvetica, sans-serif;
+                    font-size: 13px;
+                    font-weight: 400;
+                    line-height: 16px;
+                    letter-spacing: 0px;
+                }
+            }
+        }
         .notification-center-card {
             display: flex;
             padding: 25px 16px;
@@ -184,6 +201,7 @@ body.cmlabs-tools {
         }
 
         .seo-booster-container {
+            background-color: #fcfcfc;
             display: flex;
             padding: 25px 50px;
             flex-direction: column;
@@ -260,6 +278,11 @@ body.cmlabs-tools {
                 background-color: white;
                 width: 100%;
             }
+        }
+        .read-more {
+            text-decoration: underline;
+            color: #1f95f5;
+            cursor: pointer;
         }
     }
 }
