@@ -249,7 +249,6 @@ function renderAllData(data) {
         "round-trip",
         "<br/><div class='custom-line'></div>Approximate round trip times in milli-seconds:<br/>"
     );
-    _outputShow = _outputShow.replace("milli-seconds:", "milli-seconds:<br/>");
 
     if (data.alive) {
         $("#ping-result-status").html(
@@ -370,14 +369,20 @@ $(".clear-history--btn").click(function () {
 });
 
 $("#crawl-btn").click(function () {
-    if ($("#ping-select").val() === null){
+    if ($("#input-url").val() === "" || $("#input-url").val() === null) {
+        $("#ping-result-status").html("");
+        $("#ping-result-list").hide();
+        $("#ping-result-empty").show();
+        toastr.error("URL or IP Address empty", "Error");
+        KTApp.unblock("#ping-result-container");
+    } else if ($("#ping-select").val() === null) {
+        $("#ping-result-status").html("");
         $("#ping-result-list").hide();
         $("#ping-result-empty").show();
         toastr.error("Choice value type", "Error");
         KTApp.unblock("#ping-result-container");
-    }else{
+    } else {
         CheckAnalyze($("#ping-select").val(), $("#input-url").val());
-        
     }
 });
 
