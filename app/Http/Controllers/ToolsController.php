@@ -319,6 +319,20 @@ class ToolsController extends Controller
         return view('Tools/keywordpermutation', compact('local', 'dataID', 'dataEN', 'is_maintenance'));
     }
 
+    public function pingTool($lang)
+    {
+        App::setLocale($lang);
+        $dataID = [];
+        $dataEN = [];
+//        $dataID = $this->HomeController->getBlogWordpressId();
+//        $dataEN = $this->HomeController->getBlogWordpressEn();
+        $local = App::getLocale();
+
+        $is_maintenance = in_array('ping-tool', explode(',', env('TOOLS_MAINTENANCE'))) && env('APP_ENV') === 'production';
+
+        return view('Tools/ping', compact('local', 'dataID', 'dataEN', 'is_maintenance'));
+    }
+
     public function plagiarismChecker($lang)
     {
         if (Auth::check()  && (Auth::check() ? Auth::user()->user_role_id == 3 : false)) {
