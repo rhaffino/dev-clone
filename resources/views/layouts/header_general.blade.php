@@ -14,8 +14,8 @@
                     <a href="/"
                         class="brand-logo d-flex justify-content-center align-items-center">
                         <img alt="Logo"
-                            src="https://cmlabs-co.s3.ap-southeast-1.amazonaws.com/email/logo-cmlabs.png"
-                            class="max-h-45px" />
+                            src="https://cmlabs-co.s3.ap-southeast-1.amazonaws.com/logos/cmlabs-logo-new.webp"
+                            class="max-h-35px" />
                         <span class="h2 title-logo-name ml-2 mt-3">SEO Tools</span>
                     </a>
                 </div>
@@ -107,9 +107,17 @@
                         </ul>
                     </div>
                 </div>
-                @if (session('logged_in') == 'false' || session('logged_in') === null)
-                    <a href="{{ env('MAIN_URL', 'https://cmlabs.co') }}/{{ App::isLocale('id') ? 'id-id' : 'en' }}/login/?logged_target={{ request()->url() }}" class="btn btn-cmlabs-login mr-3">@lang('layout.button-login')</a>
-                @endif
+                {{-- 
+                    @if (session('logged_in') == 'false' || session('logged_in') === null)
+                        <a href="{{url('/' . (App::isLocale('id') ? 'id' : 'en') . '/login/google')}}" class="btn btn-cmlabs-login mr-3">@lang('layout.button-login')</a>
+                    @endif
+                --}}
+                @auth
+                    <a href="{{url('/' . (App::isLocale('id') ? 'id' : 'en') . '/logout')}}" class="btn btn-cmlabs-login mr-3">@lang('layout.button-logout')</a>
+                @endauth
+                @guest
+                    <a href="{{url('/' . (App::isLocale('id') ? 'id' : 'en') . '/login/google')}}" class="btn btn-cmlabs-login mr-3">@lang('layout.button-login')</a>
+                @endguest
                 <a href="https://cmlabs.co/{{$local}}-id/company/contact" class="btn btn-cmlabs-consult">@lang('layout.button-consult')</a>
             </div>
         </div>

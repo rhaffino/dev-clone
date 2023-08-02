@@ -93,7 +93,7 @@
                 <!--begin::Entry-->
                 <div class="d-flex flex-column-fluid">
                     <!--begin::Container-->
-                    <div style="padding-top: 20px; width:100%">
+                    <div style="padding-top: 20px; width:100%" class="background-gray-40">
                         @yield('content')
                     </div>
                     <!--end::Container-->
@@ -101,6 +101,7 @@
                 <!--end::Entry-->
             </div>
             <!--end::Content-->
+            @yield('bottom-content')
             @include('v2.components.footer')
         </div>
         <!--end::Wrapper-->

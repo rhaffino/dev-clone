@@ -19,6 +19,13 @@ jobs:
             echo ${{secrets.HOST_PASS}} | sudo -S chown dev:www-data -R ./
             git pull origin develop
             composer install
+            npm install
+            npm run dev
+            php artisan queue:restart
+            php artisan cache:clear 
+            php artisan route:clear
+            php artisan config:clear
+            php artisan view:clear
             echo ${{secrets.HOST_PASS}} | sudo -S chown www-data:www-data -R ./
             echo ${{secrets.HOST_PASS}} | sudo -S chmod 775 -R storage/ public/ bootstrap/cache
           # Hostname or IP address of the server.
@@ -30,3 +37,11 @@ jobs:
           # File Location or string that contains a private key for either key-based or hostbased user authentication (OpenSSH format)
           # Password for authentication.
           pass: ${{secrets.HOST_PASS}}
+          
+      - name: Google Chat Notification
+        uses: Co-qn/google-chat-notification@releases/v1
+        with:
+          name: Tools (Staging) Deployment
+          url: ${{ secrets.GOOGLE_CHAT_WEBHOOK }}
+          status: ${{ job.status }}
+          if: always()

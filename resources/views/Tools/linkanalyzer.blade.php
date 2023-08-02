@@ -37,7 +37,7 @@ id/link-analyzer
                         <input type="url" class="form-control analyzer-url" name="" value="" placeholder="http://example.com" id="input-url" autocomplete="off">
                     </div>
                     <div class="col-sm-3 col-md-2 col-lg-3 col-xl-2 d-flex justify-content-end py-1">
-                        @if (session()->has('logged_in') || session()->get('logged_in') == 'true'))
+                        @if (session()->has('logged_in') || session()->get('logged_in') == 'true')
                             <button id="analyze-btn" type="button" class="btn btn-crawl" name="button">@lang('analyzer.analyze-btn')</button>
                         @elseif (isset($access_limit) && $access_limit > 0)
                             <button disabled="disabled" type="button" class="btn btn-crawl" name="button">@lang('analyzer.analyze-btn')</button>
@@ -518,7 +518,7 @@ id/link-analyzer
                                     <div class="row justify-content-end">
                                         <div class="col-sm-5">
                                             <a
-                                                href="{{ env('MAIN_URL', 'https://cmlabs.co') }}/{{ App::isLocale('id') ? 'id-id' : 'en' }}/login/?logged_target={{ request()->url() }}"
+                                                href="{{url('/' . (App::isLocale('id') ? 'id' : 'en') . '/login/google')}}"
                                                 class="btn btn-primary btn-sm btn-block font-weight-bolder"
                                             >
                                                 Continue
@@ -541,7 +541,7 @@ id/link-analyzer
                     <div class=" d-flex align-items-center mr-2" style="color: #C29C13;">
                         <i class="icon pr-2 bx bxs-error-circle bx-sm"  style="color: #C29C13;"></i> @lang('alert.alert-limit')
                     </div>
-                        <a href="{{ env('MAIN_URL', 'https://cmlabs.co') }}/{{ App::isLocale('id') ? 'id-id' : 'en' }}/login/?logged_target={{ request()->url() }}" style="color: #C29C13; font-weight: 700;">Login</a>
+                        <a href="{{url('/' . (App::isLocale('id') ? 'id' : 'en') . '/login/google')}}" style="color: #C29C13; font-weight: 700;">Login</a>
                     </div>`
                     $(function(){
                         $('#login-modal').modal('show');

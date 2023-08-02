@@ -60,18 +60,19 @@ class LoginController extends Controller
 
     public function loginView()
     {
-        if (env('APP_ENV')=='development'){
-            if (session()->exists('logged_in')){
-                if (session('logged_in')==true){
-                    return redirect('/en');
-                }else{
-                    return view('login');
-                }
-            }else{
-                return view('login');
-            }
-        }else{
-            return redirect('/en');
-        }
+        return redirect('/en');
+        // if (env('APP_ENV')=='development'){
+        //     if (session()->exists('logged_in')){
+        //         if (session('logged_in')==true){
+        //             return redirect('/en');
+        //         }else{
+        //             return view('login');
+        //         }
+        //     }else{
+        //         return view('login');
+        //     }
+        // }else{
+        //     return redirect('/en');
+        // }
     }
 }
