@@ -229,15 +229,26 @@ function renderAllData(data) {
 
     let _outputShow = data.output.replace("data:", "data:<br/>");
     _outputShow = _outputShow.replace(
+        "data bytes",
+        "data bytes<br/>"
+    );
+    _outputShow = _outputShow.replace(
         "Ping statistics for",
         "<br/><div class='custom-line'></div>Ping statistics for"
+        );
+    _outputShow = _outputShow.replace(
+        "ping statistics ---",
+        "<br/><div class='custom-line'></div>Ping statistics for:<br/>"
     );
     _outputShow = _outputShow.replace("Packets:", "<br/>Packets:");
     _outputShow = _outputShow.replace(
         "Approximate",
         "<br/><div class='custom-line'></div>Approximate"
     );
-    _outputShow = _outputShow.replace("milli-seconds:", "milli-seconds:<br/>");
+    _outputShow = _outputShow.replace(
+        "round-trip",
+        "<br/><div class='custom-line'></div>Approximate round trip times in milli-seconds:<br/>"
+    );
 
     if (data.alive) {
         $("#ping-result-status").html(
@@ -358,14 +369,20 @@ $(".clear-history--btn").click(function () {
 });
 
 $("#crawl-btn").click(function () {
-    if ($("#ping-select").val() === null){
+    if ($("#input-url").val() === "" || $("#input-url").val() === null) {
+        $("#ping-result-status").html("");
+        $("#ping-result-list").hide();
+        $("#ping-result-empty").show();
+        toastr.error("URL or IP Address empty", "Error");
+        KTApp.unblock("#ping-result-container");
+    } else if ($("#ping-select").val() === null) {
+        $("#ping-result-status").html("");
         $("#ping-result-list").hide();
         $("#ping-result-empty").show();
         toastr.error("Choice value type", "Error");
         KTApp.unblock("#ping-result-container");
-    }else{
+    } else {
         CheckAnalyze($("#ping-select").val(), $("#input-url").val());
-        
     }
 });
 

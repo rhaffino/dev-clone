@@ -41,14 +41,14 @@ id/ping
                             <option value="url">URL</option>
                             <option value="ip">IP Address</option>
                         </select>
-                        {{-- @if (session()->has('logged_in') || session()->get('logged_in') == 'true') --}}
+                        @if (session()->has('logged_in') || session()->get('logged_in') == 'true')
                             <button id="crawl-btn" type="button" class="btn btn-crawl" name="button" data-toggle="tooltip" data-theme="dark" title="@lang('lookup.lookup-btn-tooltip')">@lang('ping.ping-btn')</button>
-                        {{--@elseif (isset($access_limit) && $access_limit > 0)
+                        @elseif (isset($access_limit) && $access_limit > 0)
                             <button disabled="disabled" type="button" class="btn btn-crawl" name="button" data-toggle="tooltip" data-theme="dark" title="@lang('lookup.lookup-btn-tooltip')">@lang('ping.ping-btn')</button>
-                         @else 
+                        @else
                             <button id="crawl-btn" class="next-button" style="display: none"></button>
                             <button id="process-button" type="button" class="btn btn-crawl check-limit-button analysist-button-guest" name="button" data-toggle="tooltip" data-theme="dark" title="@lang('lookup.lookup-btn-tooltip')">@lang('ping.ping-btn')</button>
-                         @endif --}}
+                        @endif
                         {{-- <button id="crawlButtonDisabled" type="button" class="btn btn-crawl-disabled" name="button" data-toggle="tooltip" data-theme="dark" title="Currently your are reached the limit!">PLEASE WAIT 59:12</button>--}}
                     </div>
                 </div>
@@ -322,7 +322,7 @@ id/ping
         }]
     }
 </script>
-{{-- @if (!session()->has('logged_in') || session()->get('logged_in') != 'true' && $access_limit <= 0) --}}
+@if (!session()->has('logged_in') || session()->get('logged_in') != 'true' && $access_limit <= 0)
     <script>
         $(function(){
             $('.check-limit-button').on('click', function(e) {
@@ -431,7 +431,7 @@ id/ping
             });
         });
     </script>
- {{-- @endif --}}
+@endif
 @endpush
 
 @push('style')
