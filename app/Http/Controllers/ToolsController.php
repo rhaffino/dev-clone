@@ -480,6 +480,20 @@ class ToolsController extends Controller
             return redirect('/');
         }
     }
+    
+    public function pingTool($lang)
+    {
+        App::setLocale($lang);
+        $dataID = [];
+        $dataEN = [];
+//        $dataID = $this->HomeController->getBlogWordpressId();
+//        $dataEN = $this->HomeController->getBlogWordpressEn();
+        $local = App::getLocale();
+
+        $is_maintenance = in_array('ping-tool', explode(',', env('TOOLS_MAINTENANCE'))) && env('APP_ENV') === 'production';
+
+        return view('Tools/ping', compact('local', 'dataID', 'dataEN', 'is_maintenance'));
+    }
 
     public function englishVersion()
     {

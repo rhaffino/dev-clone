@@ -19,7 +19,7 @@ Route::get('/login', 'Auth\LoginController@loginView');
 Route::post('/validate','Auth\LoginController@validateLogin');
 Route::get('/logout','Auth\LoginController@logout');
 
-Route::middleware([ManualAuth::class])->group(function (){
+// Route::middleware([ManualAuth::class])->group(function (){
     Route::redirect('/', '/en');
     
     Route::get('/analytics', function (){
@@ -69,10 +69,11 @@ Route::middleware([ManualAuth::class])->group(function (){
         Route::get('/{lang}/ping-tool', 'ToolsController@pingTool');
         Route::get('/{lang}/plagiarism-checker', 'ToolsController@plagiarismChecker');
         Route::get('/{lang}/download-plagiarism-check-logs/{type}', 'ToolsController@downloadPlagiarismCheckLogs');
+        Route::get('/{lang}/ping-tool', 'ToolsController@pingTool');
     });
     Route::get('/en/version', 'ToolsController@englishVersion');
     Route::get('/id/version', 'ToolsController@indonesiaVersion');
-});
+// });
 
 Route::post('/api/cta', 'Tool\ApiController@ctaEmail')->name('api.cta-email');
 Route::post('/api/count', 'Tool\ApiController@accessCount')->name('api.count');

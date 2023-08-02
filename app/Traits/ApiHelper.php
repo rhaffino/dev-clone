@@ -126,4 +126,9 @@ trait ApiHelper
             return $exceptions;
         }
     }
+    
+    protected function requestPingChecker($type, $url){
+        $response = $this->request("api/ping-tool/check", 'POST', compact('type', 'url'));
+        return \GuzzleHttp\json_decode($response, 1);
+    }
 }
