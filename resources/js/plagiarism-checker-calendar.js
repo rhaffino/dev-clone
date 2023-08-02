@@ -102,3 +102,9 @@ function getCalendar(data) {
     });
 }
 
+document.getElementById("prevMonthBtn").addEventListener("click", () => {
+    prevDate()
+})
+document.getElementById("nextMonthBtn").addEventListener("click", () => {
+    nextDate()
+})
