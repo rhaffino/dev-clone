@@ -18,7 +18,7 @@ return [
     "words" => "KATA",
     "times" => "Kali",
 
-    "title" => "PEMERIKSA PLAGIARISME",
+    "title" => "CEK PLAGIARISME",
     "desc" => "Pendeteksi plagiarisme yang didukung oleh Copyscape",
 
     "results" => "HASIL",
@@ -54,7 +54,7 @@ return [
     "whatsnew" => "Yang Baru",
     "other_tools" => "Alat SEO Lainnya",
     "last_update" => "Pembaruan terakhir",
-    "update_desc" => "Sekarang pengguna dapat menggunakan alat Penghitung Kata dengan fitur autosave. Dengan pembaruan dan fitur tambahan ini, Anda tidak perlu khawatir jika tulisan Anda hilang ketika ada masalah teknis. Tulisan Anda akan disimpan dengan aman di sistem kami. Saatnya menulis dengan aman untuk hasil tulisan yang lebih baik.",
+    "update_desc" => "Mari cegah penyalinan dan pengutipan tanpa atribusi! Kini, cmlabs menghadirkan Plagiarism (by Copyscape) sebagai solusi terbaik untuk melawan duplikasi konten. Berbekal data dengan basis kecanggihan algoritma, tool ini dapat memindai tulisan Anda dengan cepat untuk mencapai hasil tulisan yang orisinal dan bebas plagiasi.",
     "notif_center" => "Pusat Pemberitahuan",
 
     "cmlabs_alliance" => "Aliansi cmlabs",
