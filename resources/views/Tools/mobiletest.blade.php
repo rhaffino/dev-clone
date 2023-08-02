@@ -193,6 +193,7 @@ id/mobile-test
     </div>
 </div>
 @endif
+@include('layouts.new_ui_design')
 <div class="" style="background:white" id="mobiletest-description">
     <div class="container container-description">
         <div class="row">

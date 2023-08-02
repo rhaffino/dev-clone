@@ -203,6 +203,7 @@ id/json-ld-person-schema-generator
     </div>
 </div>
 @endif
+@include('layouts.new_ui_design')
 <div class="" style="background:white">
     <div class="container container-description">
         <div class="row">

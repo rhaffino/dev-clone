@@ -193,6 +193,7 @@ id/hreflang-checker
     </div>
 </div>
 @endif
+@include('layouts.new_ui_design')
 <div class="" style="background:white" id="hreflang-description">
     <div class="container container-description">
         <div class="row">

@@ -69,113 +69,197 @@ body.cmlabs-tools {
         }
     }
 
-    #new_ui {
-        background-color: white;
-        padding: 4rem 0rem;
-        color: #252a38;
-
-        .gap-2 {
-            gap: 0.5rem;
-        }
-
-        .gap-3 {
-            gap: 1rem;
-        }
-
-        .gap-4 {
-            gap: 1.5rem;
-        }
-
-        .gap-8 {
-            gap: 3rem;
-        }
-
-        .whats-new-section {
-            background-color: #f9f9f9;
-            padding: 2rem;
-            border-radius: 10px;
-            a {
-                text-decoration: underline;
+    // bottom section
+    .bottom-section {
+        .notification-center-card {
+            display: flex;
+            padding: 25px 16px;
+            align-items: flex-start;
+            gap: 16px;
+            align-self: stretch;
+            border-radius: 6px;
+            background: #f9f9f9;
+            .card-content {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+                flex: 1 0 0;
             }
         }
-
-        .last-update {
-            color: #92959c;
-        }
-
-        .right-design {
-            padding-left: 4rem;
-            @media screen and (max-width: 767px) {
-                padding-left: 0;
-                margin-top: 4rem;
-            }
-        }
-
-        .starter-guide {
-            color: white;
-            border-radius: 10px;
-            background: linear-gradient(92.41deg, #0699f9 0%, #0872b7 100%);
-        }
-
-        .sequence-img,
-        .storylabs-img {
-            width: 100%;
-        }
-
-        .card-explore {
-            padding: 2rem;
-            border-radius: 10px;
-        }
-
-        .blue-card {
-            background: linear-gradient(
-                280.5deg,
-                rgba(188, 223, 252, 0.45) -12%,
-                rgba(186, 193, 252, 0.45) 129.79%
-            );
-        }
-
-        .gradient-card {
-            background: linear-gradient(
-                258.17deg,
-                rgba(255, 236, 198, 0.45) -35.11%,
-                rgba(188, 223, 252, 0.45) 142.12%
-            );
-        }
-
-        button {
-            background-color: #092d49;
-            padding: 0.5rem 1rem;
-            a {
-                color: white;
-            }
-            width: auto;
-            border-radius: 5px;
-            border: 0px;
-        }
-
-        .underline {
-            text-decoration: underline;
-            text-underline-offset: 5px;
-        }
-
-        .text-purple {
-            color: #a159ed !important;
-        }
-
-        .card-knowledge {
-            box-shadow: 0px 0px 45px 0px #0059951f;
+        .service-card {
+            display: flex;
+            padding: 20px;
+            flex-direction: column;
+            align-items: start;
+            justify-content: space-between;
             height: 100%;
+            gap: 20px;
+            flex: 1 0 0;
+            border-radius: 12px;
+            background: linear-gradient(
+                318deg,
+                rgba(188, 223, 252, 0.45) 0%,
+                rgba(186, 193, 252, 0.45) 100%
+            );
+            &.opt {
+                background: linear-gradient(
+                    218deg,
+                    rgba(255, 236, 198, 0.45) 0%,
+                    rgba(188, 223, 252, 0.45) 100%
+                );
+            }
+        }
+        .tools-card {
+            display: flex;
+            gap: 12px;
+            height: 100%;
+            .icon-container {
+                display: flex;
+                padding: 4px;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                border-radius: 90px;
+                border: 1px solid var(--variant-70, #a159ed);
+                height: fit-content;
+                width: fit-content;
+                color: 1px solid var(--variant-70, #a159ed);
+            }
+            &-body {
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+                justify-content: space-between;
+                height: 100%;
+            }
+            a {
+                color: map.get($colors, "text-dark-70");
+            }
+
+            @media screen and (max-width: 991px) {
+                flex-direction: column;
+            }
+        }
+        .carousel-indicators {
+            bottom: -48px;
+            opacity: 1;
+        }
+        .carousel-indicators li {
+            width: 8px;
+            height: 8px;
+            border-radius: 8px;
+            background-color: #bcdffc;
+            border-top: 0;
+            border-bottom: 0;
+            opacity: 1;
+        }
+        .carousel-indicators li.active {
+            background-color: #18a0fb;
+            opacity: 1;
         }
 
-        .rounded-top {
-            border-top-left-radius: 10px;
-            border-top-right-radius: 10px;
+        .resource-card {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            flex: 1 0 0;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0px 0px 45px 0px rgba(0, 89, 149, 0.12);
+            height: 100%;
+            .card-header {
+                height: 160px;
+                align-self: stretch;
+            }
+            .card-body {
+                display: flex;
+                padding: 20px 16px;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 18px;
+                align-self: stretch;
+                background: var(--white, #fff);
+            }
         }
 
-        .rounded-bottom {
-            border-bottom-left-radius: 10px;
-            border-bottom-right-radius: 10px;
+        .seo-booster-container {
+            display: flex;
+            padding: 25px 50px;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 20px;
+            align-self: stretch;
+            .author {
+                display: flex;
+                align-items: center;
+                gap: 15px;
+                color: map.get($colors, "gray-100");
+            }
+        }
+
+        .cmlabs-aliance-container {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            align-items: center;
+            .aliance-card {
+                display: flex;
+                padding: 32px 24px;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 32px;
+                border-radius: 12px;
+                background: linear-gradient(135deg, #0699f9 0%, #0872b7 100%);
+                &-body {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 8px;
+                    align-self: stretch;
+                    text-align: center;
+                }
+            }
+        }
+        .storylabs-container {
+            .green-story-labs {
+                color: #358874;
+            }
+            display: flex;
+            padding: 24px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            border-radius: 12px;
+            background: var(--gray-70, #eee);
+            &-head {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 8px;
+                align-self: stretch;
+            }
+            &-body {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 8px;
+                align-self: stretch;
+            }
+            .storylabs-button {
+                display: flex;
+                padding: 4px;
+                justify-content: center;
+                align-items: center;
+                gap: 8px;
+                align-self: stretch;
+                background-color: white;
+                width: 100%;
+            }
         }
     }
 }
