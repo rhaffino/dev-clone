@@ -36,6 +36,12 @@ Route::middleware([ManualAuth::class])->group(function (){
 
     Route::middleware([EnsureUrlIsValid::class])->group(function (){
         Route::get('/{lang}','HomeController@index');
+        // login
+        Route::group(['as' => 'auth.'], function () {
+            Route::get('/{lang}/login/google','AuthController@googleLogin')->name('login.google');
+            Route::get('/{lang}/login/google/callback','AuthController@googleCallback')->name('login.google.callback');
+            Route::get('/{lang}/logout','AuthController@logout');
+        });
         Route::get('/{lang}/strikethrough', 'ToolsController@strikethrough');
         Route::get('/{lang}/json-ld-schema-generator', 'ToolsController@jsonld');
         Route::get('/{lang}/json-ld-faq-schema-generator', 'ToolsController@FAQ');
@@ -61,6 +67,8 @@ Route::middleware([ManualAuth::class])->group(function (){
         Route::get('/{lang}/keyword-research', 'ToolsController@keywordresearch');
         Route::get('/{lang}/keyword-permutation', 'ToolsController@keywordpermutation');
         Route::get('/{lang}/ping-tool', 'ToolsController@pingTool');
+        Route::get('/{lang}/plagiarism-checker', 'ToolsController@plagiarismChecker');
+        Route::get('/{lang}/download-plagiarism-check-logs/{type}', 'ToolsController@downloadPlagiarismCheckLogs');
     });
     Route::get('/en/version', 'ToolsController@englishVersion');
     Route::get('/id/version', 'ToolsController@indonesiaVersion');
@@ -69,3 +77,5 @@ Route::middleware([ManualAuth::class])->group(function (){
 Route::post('/api/cta', 'Tool\ApiController@ctaEmail')->name('api.cta-email');
 Route::post('/api/count', 'Tool\ApiController@accessCount')->name('api.count');
 Route::post('/api/limit', 'Tool\ApiController@accessLimit')->name('api.limit');
+Route::get('/api/plagiarism-checker-logs', 'Tool\ApiController@plagiarismCheckLogs')->name('api.plagiarism-check-logs');
+Route::get('/api/plagiarism-checker-calendar', 'Tool\ApiController@plagiarismCheckCalendarLogs')->name('api.plagiarism-check-calendar-logs');

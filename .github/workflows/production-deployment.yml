@@ -19,6 +19,8 @@ jobs:
             sudo chown ubuntu:www-data -R ./
             git pull origin master
             composer install
+            npm run production
+            php artisan queue:restart
             sudo chown www-data:www-data -R ./
             sudo chmod 775 -R storage public bootstrap/cache
           # Hostname or IP address of the server.

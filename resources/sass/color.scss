@@ -1,0 +1,170 @@
+@use "sass:map";
+//Colors
+$colors: (
+    "primary-10": #BCDFFC,
+    "primary-20": #A5D5FB,
+    "primary-30": #8FCAFA,
+    "primary-40": #62B5F8,
+    "primary-50": #4CAAF7,
+    "primary-60": #35A0F6,
+    "primary-70": #1F95F5,
+    "primary-80": #1C86DD,
+    "primary-90": #1977C4,
+    "primary-100":#1668AC,
+    "primary-110":#104B7B,
+    "primary-120":#0C3C62,
+    "primary-130":#092D49,
+    "yellow-10" : #FFECC6,
+    "yellow-20" : #FFE5B3,
+    "yellow-30" : #FFDFA0,
+    "yellow-40" : #FFD279,
+    "yellow-50" : #FFCB66,
+    "yellow-60" : #FFC553,
+    "yellow-70" : #FFBE40,
+    "yellow-80" : #E6AB3A,
+    "yellow-90" : #CC9833,
+    "yellow-100" :#B3852D,
+    "yellow-110" :#805F20,
+    "yellow-120" :#664C1A,
+    "yellow-130" :#4C3913,
+    "success-10": #CBE3D3,
+    "success-20": #B9D9C5,
+    "success-30": #A8D0B6,
+    "success-40": #85BD99,
+    "success-50": #73B38A,
+    "success-60": #62AA7C,
+    "success-70": #50A06D,
+    "success-80": #489062,
+    "success-90": #408057,
+    "success-100": #38704C,
+    "success-110": #285037,
+    "success-120": #20402C,
+    "success-130": #183021,
+    "danger-10" : #FDD0D0,
+    "danger-20" : #FCC0C0,
+    "danger-30" : #FBB0B1,
+    "danger-40" : #F99091,
+    "danger-50" : #F98181,
+    "danger-60" : #F87172,
+    "danger-70" : #F76162,
+    "danger-80" : #DE5758,
+    "danger-90" : #C64E4E,
+    "danger-100" :#AD4445,
+    "danger-110" :#7C3131,
+    "danger-120" :#632727,
+    "danger-130" :#4A1D1D,
+    "purple-10" : #E3CDFA,
+    "purple-20" : #D9BDF8,
+    "purple-30" : #D0ACF6,
+    "purple-40" : #BD8BF2,
+    "purple-50" : #B47AF1,
+    "purple-60" : #AA6AEF,
+    "purple-70" : #A159ED,
+    "purple-80" : #9150D5,
+    "purple-90" : #8147BE,
+    "purple-100" :#713EA6,
+    "purple-110" :#512D77,
+    "purple-120" :#40245F,
+    "purple-130" :#301B47,
+    "gray-10" : #FCFCFC,
+    "gray-20" : #F9F9F9,
+    "gray-30" : #F7F7F7,
+    "gray-40" : #F5F5F5,
+    "gray-50" : #F3F3F3,
+    "gray-60" : #F0F0F0,
+    "gray-70" : #EEEEEE,
+    "gray-80" : #D0D0D0,
+    "gray-90" : #B3B3B3,
+    "gray-100" :#959595,
+    "gray-110" :#777777,
+    "gray-120" :#686868,
+    "gray-130" :#595959,
+    "dark-10" : #BEBFC3,
+    "dark-20" : #A8AAAF,
+    "dark-30" : #92959C,
+    "dark-40" : #666A74,
+    "dark-50" : #515560,
+    "dark-60" : #3B3F4C,
+    "dark-70" : #252A38,
+    "dark-80" : #212632,
+    "dark-90" : #1E222D,
+    "dark-100" :#1A1D27,
+    "dark-110" :#161922,
+    "dark-120" :#13151C,
+    "dark-130" :#0F1116,
+);
+$white: #FFFFFF;
+$black: #000000;
+
+$font-jakarta-sans: "Plus Jakarta Sans", sans-serif;
+
+$color_list: "primary", "yellow", "success", "danger", "purple", "gray", "dark", "white", "transparent";
+$color_weight: 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130;
+
+@each $list in $color_list {
+    @each $weight in $color_weight {
+        .text-#{$list}-#{$weight} {
+            color: map.get($colors, #{$list}-#{$weight});
+        }
+    }
+}
+
+@each $list in $color_list {
+    @if $list == 'white' {
+        .background-#{$list} {
+            background-color: #ffffff !important;
+        }
+        .button-#{$list} {
+            background-color: #ffffff !important;
+            color: map.get($colors, "dark-60");
+            &.button-outline {
+                background-color: transparent !important;
+                border: 1px solid #ffffff;
+                color: #ffffff !important;
+            }
+        }
+    }
+
+    @if $list == 'transparent' {
+        .background-#{$list} {
+            background-color: transparent !important;
+        }
+    }
+    
+    @if $list != 'white' and $list != 'transparent' {
+        @each $weight in $color_weight {
+            .border-#{$list}-#{$weight} {
+                border-color: map.get($colors, #{$list}-#{$weight}) !important;
+            }
+            .background-#{$list}-#{$weight} {
+                background-color: map.get($colors, #{$list}-#{$weight}) !important;
+            }
+            .button-#{$list}-#{$weight} {
+                background-color: map.get($colors, #{$list}-#{$weight});
+                border: 1px solid map.get($colors, #{$list}-#{$weight});
+                @if ($list == "yellow" or $weight <= 50) {
+                    color: map.get($colors, "dark-100");
+                } @else {
+                    color: $white;
+                }
+                &.button-outline {
+                    background-color: transparent;
+                    border: 2px solid map.get($colors, #{$list}-#{$weight});
+                    color: map.get($colors, #{$list}-#{$weight});
+                    &:hover {
+                        background-color: map.get($colors, #{$list}-#{$weight});
+                        color: $white;
+                    }
+                }
+                &:hover{
+                    background-color: map.get($colors, #{$list}-#{$weight+10});
+                    @if ($list == "yellow" or $weight <= 50) {
+                        color: map.get($colors, "dark-100");
+                    } @else {
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+}
