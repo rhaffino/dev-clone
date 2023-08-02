@@ -99,6 +99,9 @@ body.cmlabs-tools {
             background-color: #f9f9f9;
             padding: 2rem;
             border-radius: 10px;
+            a {
+                text-decoration: underline;
+            }
         }
 
         .last-update {

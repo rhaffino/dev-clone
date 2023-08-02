@@ -3783,6 +3783,10 @@ body.cmlabs-tools #new_ui .whats-new-section {
   border-radius: 10px;
 }
 
+body.cmlabs-tools #new_ui .whats-new-section a {
+  text-decoration: underline;
+}
+
 body.cmlabs-tools #new_ui .last-update {
   color: #92959c;
 }

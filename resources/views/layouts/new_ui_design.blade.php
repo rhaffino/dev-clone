@@ -18,7 +18,9 @@
                                 would be saved safely on our system. It's time to write securely for better 
                                 writing results.
                             </p>
-                            <a>Notification center</a>
+                            <div>
+                                <a href="#" class="b1-400 b1-m-400">Notification center</a>
+                            </div>
                         </div>
                     </div>
                     <div class="d-flex flex-md-row flex-column gap-4">
@@ -152,8 +154,9 @@
                             These strategic alliances allow us to offer our clients a wider 
                             range of SEO innovative solutions and exceptional service around 
                             the world. If you've ever planned of conquering the more market, 
-                            you've come to the right place! Let's turn those plan into reality, 
-                            shall we?
+                            you've come to the right place! 
+                            <a href="#" style="text-decoration: underline">Let's turn those plan into reality, 
+                            shall we?</a>
                         </p>
                     </div>
                     <div class="d-flex flex-column gap-4 p-8 starter-guide">
