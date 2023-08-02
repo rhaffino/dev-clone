@@ -54,7 +54,7 @@ return [
     "whatsnew" => "What's New",
     "other_tools" => "Other SEO Tools",
     "last_update" => "Last update",
-    "update_desc" => "Now users can use the Word Counter tool with the autosave feature. With these updates and additional features, you don't have to worry if your writing gets lost when a technical problem occurs. Your writing would be saved safely on our system. It's time to write securely for better writing results.",
+    "update_desc" => "Are you tired of spending hours double-checking your work for plagiarism? Now, embrace your writing with our ultimate safeguard against content duplication, Plagiarism Checker (by Copyscape). Powered by cutting-edge algorithms, our tool will scan your text with lightning speed so that you can rest easy knowing your content is authentic.",
     "notif_center" => "Notification center",
 
     "cmlabs_alliance" => "cmlabs Aliance",
