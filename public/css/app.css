@@ -3750,6 +3750,232 @@ body.cmlabs-tools .custom-bundling {
   }
 }
 
+body.cmlabs-tools .bottom-section .subcontents p {
+  font-family: Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0px;
+}
+
+@media only screen and (max-width: 767.98px) {
+  body.cmlabs-tools .bottom-section .subcontents p {
+    font-family: Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0px;
+  }
+}
+
+body.cmlabs-tools .bottom-section .notification-center-card {
+  display: flex;
+  padding: 25px 16px;
+  align-items: flex-start;
+  gap: 16px;
+  align-self: stretch;
+  border-radius: 6px;
+  background: #f9f9f9;
+}
+
+body.cmlabs-tools .bottom-section .notification-center-card .card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  flex: 1 0 0;
+}
+
+body.cmlabs-tools .bottom-section .service-card {
+  display: flex;
+  padding: 20px;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+  height: 100%;
+  gap: 20px;
+  flex: 1 0 0;
+  border-radius: 12px;
+  background: linear-gradient(318deg, rgba(188, 223, 252, 0.45) 0%, rgba(186, 193, 252, 0.45) 100%);
+}
+
+body.cmlabs-tools .bottom-section .service-card.opt {
+  background: linear-gradient(218deg, rgba(255, 236, 198, 0.45) 0%, rgba(188, 223, 252, 0.45) 100%);
+}
+
+body.cmlabs-tools .bottom-section .tools-card {
+  display: flex;
+  gap: 12px;
+  height: 100%;
+}
+
+body.cmlabs-tools .bottom-section .tools-card .icon-container {
+  display: flex;
+  padding: 4px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 90px;
+  border: 1px solid var(--variant-70, #a159ed);
+  height: fit-content;
+  width: fit-content;
+  color: 1px solid var(--variant-70, #a159ed);
+}
+
+body.cmlabs-tools .bottom-section .tools-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: space-between;
+  height: 100%;
+}
+
+@media screen and (max-width: 991px) {
+  body.cmlabs-tools .bottom-section .tools-card {
+    flex-direction: column;
+  }
+}
+
+body.cmlabs-tools .bottom-section .carousel-indicators {
+  bottom: -48px;
+  opacity: 1;
+}
+
+body.cmlabs-tools .bottom-section .carousel-indicators li {
+  width: 8px;
+  height: 8px;
+  border-radius: 8px;
+  background-color: #bcdffc;
+  border-top: 0;
+  border-bottom: 0;
+  opacity: 1;
+}
+
+body.cmlabs-tools .bottom-section .carousel-indicators li.active {
+  background-color: #18a0fb;
+  opacity: 1;
+}
+
+body.cmlabs-tools .bottom-section .resource-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1 0 0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 0px 45px 0px rgba(0, 89, 149, 0.12);
+  height: 100%;
+}
+
+body.cmlabs-tools .bottom-section .resource-card .card-header {
+  height: 160px;
+  align-self: stretch;
+}
+
+body.cmlabs-tools .bottom-section .resource-card .card-body {
+  display: flex;
+  padding: 20px 16px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 18px;
+  align-self: stretch;
+  background: var(--white, #fff);
+}
+
+body.cmlabs-tools .bottom-section .seo-booster-container {
+  background-color: #fcfcfc;
+  display: flex;
+  padding: 25px 50px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  align-self: stretch;
+}
+
+body.cmlabs-tools .bottom-section .seo-booster-container .author {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: #959595;
+}
+
+body.cmlabs-tools .bottom-section .cmlabs-aliance-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+
+body.cmlabs-tools .bottom-section .cmlabs-aliance-container .aliance-card {
+  display: flex;
+  padding: 32px 24px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #0699f9 0%, #0872b7 100%);
+}
+
+body.cmlabs-tools .bottom-section .cmlabs-aliance-container .aliance-card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  align-self: stretch;
+  text-align: center;
+}
+
+body.cmlabs-tools .bottom-section .storylabs-container {
+  display: flex;
+  padding: 24px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  border-radius: 12px;
+  background: var(--gray-70, #eee);
+}
+
+body.cmlabs-tools .bottom-section .storylabs-container .green-story-labs {
+  color: #358874;
+}
+
+body.cmlabs-tools .bottom-section .storylabs-container-head {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  align-self: stretch;
+}
+
+body.cmlabs-tools .bottom-section .storylabs-container-body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  align-self: stretch;
+}
+
+body.cmlabs-tools .bottom-section .storylabs-container .storylabs-button {
+  display: flex;
+  padding: 4px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  align-self: stretch;
+  background-color: white;
+  width: 100%;
+}
+
+body.cmlabs-tools .bottom-section .read-more {
+  text-decoration: underline;
+  color: #1f95f5;
+  cursor: pointer;
+}
+
 .footer-bottom .cmlabs-container {
   padding-top: 64px;
 }

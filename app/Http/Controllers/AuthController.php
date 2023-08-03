@@ -74,6 +74,7 @@ class AuthController extends Controller
                 $createUser->password = "";
                 $createUser->status = User::ACTIVE; // default status
                 $createUser->user_role_id = 1; // default user role id
+                $createUser->parent_id = 0; // default parent id
                 $createUser->api_token = AppLib::generateRandomString();
 
                 if ($driver == "google")
