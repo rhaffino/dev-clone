@@ -37,26 +37,11 @@
                 </div>
                 <div class="row mt-10">
                     <div class="seo-booster-container">
-                        <h2 class="h2-700 h2-m-700">Plagiarism Checker (by Copyscape)</h2>
-                        <div class="d-flex align-items-center author">
-                            <i class='bx bxs-user-circle'></i>
-                            <p class="m-0 b2-400 b2-m-400">Writen by cmlabs</p>
-                            <div>|</div>
-                            <p class="m-0 b2-400 b2-m-400">Published at Aug 21, 2021</p>
-                        </div>
-                        <p class="m-0 p-400 p-m-400">The scope of business niches in Indonesia is widely known and
-                            varied. There are always innovations presented every year, both in large companies and the
-                            new startups in the city. It's certainly a sign that your competitors are growing and
-                            potentially get the top position on the first page of Google search is getting tighter.</p>
-                        <p class="m-0 p-400 p-m-400">The scope of business niches in Indonesia is widely known and
-                            varied. There are always innovations presented every year, both in large companies and the
-                            new startups in the city. It's certainly a sign that your competitors are growing and
-                            potentially get the top position on the first page of Google search is getting tighter.</p>
-                        <p class="m-0 p-400 p-m-400">The scope of business niches in Indonesia is widely known and
-                            varied. There are always innovations presented every year, both in large companies and the
-                            new startups in the city. It's certainly a sign that your competitors are growing and
-                            potentially get the top position on the first page of Google search is getting tighter.</p>
-                        <div class="b2-400 b2-m-400 text-gray-90">Edited at Aug 21, 2023</div>
+                        @if($lang === 'en')
+                            @include('Tools.plagiarism-checker.components.seo-booster-en')
+                        @else
+                            @include('Tools.plagiarism-checker.components.seo-booster-id')
+                        @endif
                     </div>
                 </div>
             </div>
