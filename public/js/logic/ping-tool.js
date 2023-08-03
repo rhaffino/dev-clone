@@ -162,7 +162,6 @@ function CheckAnalyze(type, value) {
 }
 
 function analyzeUrl(_type, _url) {
-    console.log(_type)
     $("#ping-result-status").text("");
     $.post({
         url: PING_API_URL,
@@ -226,8 +225,11 @@ function renderAllData(data) {
         data.time != null
             ? `<span class="time-ping"><span class="label label-primary-version label-inline font-weight-normal px-2">${data.time}</span></span> ms`
             : "";
+    
+    let _numericHost = data.numeric_host.replace(")", "");
 
-    let _outputShow = data.output.replace("data:", "data:<br/>");
+    let _outputShow = data.output.replace("PING", "Ping");
+    _outputShow = _outputShow.replace("data:", "data:<br/>");
     _outputShow = _outputShow.replace(
         "data bytes",
         "data bytes<br/>"
@@ -258,7 +260,7 @@ function renderAllData(data) {
         $("#ping-result-status").removeClass("text-red");
 
         $("#ping-result-list").append(
-            PingTemplate(data.host, data.numeric_host, _outputShow, _timeLabel)
+            PingTemplate(data.host, _numericHost, _outputShow, _timeLabel)
         );
     } else {
         $("#ping-result-status").html(
