@@ -69,7 +69,7 @@ Route::get('/logout','Auth\LoginController@logout');
         Route::get('/{lang}/ping-tool', 'ToolsController@pingTool');
         Route::get('/{lang}/plagiarism-checker', 'ToolsController@plagiarismChecker');
         Route::get('/{lang}/download-plagiarism-check-logs/{type}', 'ToolsController@downloadPlagiarismCheckLogs');
-        Route::get('/{lang}/ping-tool', 'ToolsController@pingTool');
+        Route::get('/{lang}/http-header-checker', 'ToolsController@headerChecker');
     });
     Route::get('/en/version', 'ToolsController@englishVersion');
     Route::get('/id/version', 'ToolsController@indonesiaVersion');

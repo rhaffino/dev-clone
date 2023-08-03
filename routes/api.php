@@ -25,4 +25,4 @@ Route::post('/analyze-ssl', 'Tool\ApiController@analyzeSsl')->name('api.analyze-
 Route::post('/analyze-meta', 'Tool\ApiController@analyzeMeta')->name('api.analyze-meta');
 Route::post('/ping-tool', 'Tool\ApiController@pingTool')->name('api.ping-tool');
 Route::post('/plagiarism-check', 'Tool\ApiController@plagiarismCheck')->name('api.plagiarism-check');
-Route::post('/ping-tool', 'Tool\ApiController@pingTool')->name('api.ping-tool');
+Route::post('/header-checker', 'Tool\ApiController@headerChecker')->name('api.header-checker');
