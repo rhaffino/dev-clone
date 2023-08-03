@@ -384,6 +384,7 @@
         $(function() {
             $('[data-toggle="tooltip"]').tooltip()
         })
+        $('.expand-text').slideToggle();
     </script>
     <script src="{{ mix('/assets/js/plagiarism-checker.js') }}"></script>
     <script src="{{ mix('/assets/js/plagiarism-checker-calendar.js') }}"></script>
