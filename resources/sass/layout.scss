@@ -72,7 +72,8 @@ body.cmlabs-tools {
     // bottom section
     .bottom-section {
         .subcontents {
-            p {
+            p,
+            li {
                 font-family: Helvetica, sans-serif;
                 font-size: 18px;
                 font-weight: 400;
