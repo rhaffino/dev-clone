@@ -73,6 +73,11 @@ trait ApiHelper
         return \GuzzleHttp\json_decode($response, 1);
     }
 
+    protected function requestHeaderChecker($url){
+        $response = $this->request("api/header-checker/check", 'POST', compact('url'));
+        return \GuzzleHttp\json_decode($response, 1);
+    }
+
     protected function requestPlagiarismCheck($text, $id)
     {
         try {
