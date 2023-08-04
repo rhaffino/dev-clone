@@ -237,8 +237,8 @@ id/json-ld-person-schema-generator
         <div class="d-none" id="description-tab-4">
             <h2>@lang('person.desc-4')</h2>
             <p>@lang('person.desc-4-1')</p>
-            <pre class="language-html">
-                <code class="language-html">
+            <pre class="language-html mb-4">
+                <code class="language-html" style="white-space: pre-wrap; word-break: keep-all;">
                     &lt;script type="application/ld+json"&gt;
                         {
                             "@context": "https://schema.org/",

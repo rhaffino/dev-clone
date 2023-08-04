@@ -161,7 +161,7 @@ id/json-ld-schema-generator
         </div>
     @endslot
     @slot('subcontent_3')
-        <div class="d-none" id="description-tab-3" style="overflow: auto;">
+        <div class="d-none" id="description-tab-3" style="">
             <h3 class="h3-700 h3-m-700">@lang('jsonldhome.desc-3')</h3>
             <p>@lang('jsonldhome.desc-3-1')</p>
             <p>@lang('jsonldhome.desc-3-2')</p>
@@ -169,8 +169,8 @@ id/json-ld-schema-generator
             <p>@lang('jsonldhome.desc-3-4')</p>
             <p>@lang('jsonldhome.desc-3-5')</p>
             <p>@lang('jsonldhome.desc-3-6')</p>
-            <pre class="language-html mb-4" style="width: 100%; overflow: auto;">
-                <code class="language-html">
+            <pre class="language-html mb-4">
+                <code class="language-html" style="white-space: pre-wrap; word-break: keep-all;">
                     &lt;script type="application/ld+json"&gt;
                     {
                         "@context": "http://schema.org/",

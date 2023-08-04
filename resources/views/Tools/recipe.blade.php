@@ -360,7 +360,7 @@ id/json-ld-recipe-schema-generator
             <h2 class="text-black">@lang('recipe.desc-4')</h2>
             <p class="text-black">@lang('recipe.desc-4-1')</p>
             <pre class="language-html">
-                <code class="language-html">
+                <code class="language-html" style="white-space: pre-wrap; word-break: keep-all;">
                     &lt;script type="application/ld+json"&gt;
                         {
                             "@context": "https://schema.org",

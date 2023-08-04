@@ -238,7 +238,7 @@ id/json-ld-breadcrumb-schema-generator
             <p>@lang('breadcrumb.desc-4-2')</p>
             <p>@lang('breadcrumb.desc-4-3')</p>
             <pre class="language-html mb-4">
-                <code class="language-html">
+                <code class="language-html" style="white-space: pre-wrap; word-break: keep-all;">
                     &lt;script type="application/ld+json"&gt;
                     {
                     "@context": "https://schema.org",
