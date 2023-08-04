@@ -80,7 +80,7 @@ function getCalendar(data) {
                 $('.calendar').append($(
                     `<div class="date-item ${date.weekend && "weekend"} ${(date.prevMonth || date.nextMonth) && "other"}">
                         <div class="date">${date.date}</div>
-                            <div class="value">${type === "cost" ? "$" + date.cost : date.request}</div>
+                            <div class="value">${type === "cost" ? "$" + parseFloat(date.cost).toFixed(2) : date.request}</div>
                     </div>`)
                 )
             })
