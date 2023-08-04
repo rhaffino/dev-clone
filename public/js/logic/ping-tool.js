@@ -21,13 +21,13 @@ const PingTemplate = (host, numericHost, output, time) => `
   </div>
 </div>`;
 
-const HistoryTemplate = (url, date) => `
+const HistoryTemplate = (index ,url , date) => `
 <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px history--list" data-url="${url}">
   <div class="d-flex justify-content-between">
     <div class="local-collection-title">${url}</div>
     <div class="d-flex align-items-center">
       <i class='bx bxs-info-circle text-grey bx-sm mr-2' data-toggle="tooltip" data-theme="dark" title="${created_at}${date}"></i>
-      <i class='bx bxs-x-circle bx-sm text-grey delete-history--btn' data-url="${url}"></i>
+      <i class='bx bxs-x-circle bx-sm text-grey delete-history--btn' data-url="${url}" data-index="${index}"></i>
     </div>
   </div>
 </li>
@@ -43,13 +43,13 @@ const EmptyHistoryTemplate = () =>
   </div>
 </li>`;
 
-const HistoryTemplateMobile = (url, date) => `
+const HistoryTemplateMobile = (index, url, date) => `
 <div class="custom-card py-5 px-3 history--list" data-url="${url}">
 <div class="d-flex align-items-center justify-content-between">
   <div class="local-collection-title">${url}</div>
   <div class="d-flex align-items-center">
     <i class='bx bxs-info-circle text-grey bx-sm mr-2' data-bs-toggle="tooltip" data-bs-placement="top" data-theme="dark" title="${date}"></i>
-    <i class='bx bxs-x-circle bx-sm text-grey delete-history--btn' data-url="${url}"></i>
+    <i class='bx bxs-x-circle bx-sm text-grey delete-history--btn' data-url="${url}" data-index="${index}"></i>
   </div>
 </div>
 </div>`;
@@ -74,11 +74,15 @@ function getHistories() {
         $("#local-history-mobile").append(EmptyHistoryTemplateMobile());
         return;
     }
-    for (let history of histories.reverse()) {
-        $("#local-history").append(HistoryTemplate(history.url, history.date));
+    
+    let index = 0;
+    for (let history of histories) {
+        $("#local-history").append(HistoryTemplate(index ,history.url, history.date));
         $("#local-history-mobile").append(
-            HistoryTemplateMobile(history.url, history.date)
+            HistoryTemplateMobile(index, history.url, history.date)
         );
+
+        index++;
     }
 }
 
@@ -97,21 +101,22 @@ function addHistory(url, data) {
     getHistories();
 }
 
-function deleteHistory(_url = null) {
-    let histories = [];
-    if (_url) {
-        histories = localStorage.getItem(PING_TOOL_LOCAL_STORAGE_KEY) || [];
-        if (typeof histories === "string" || histories instanceof String)
-            histories = JSON.parse(histories);
-        histories = histories.filter((history) => {
-            return history.url !== _url;
-        });
+function deleteHistory(_index = null, _url = null) {
+    const histories = JSON.parse(
+        localStorage.getItem(PING_TOOL_LOCAL_STORAGE_KEY)
+    );
+
+    if (_index) {
+        histories.splice(_index, 1);
+        localStorage.setItem(
+            PING_TOOL_LOCAL_STORAGE_KEY,
+            JSON.stringify(histories)
+        );
+    }else{
+        histories.length = 0;
+        localStorage.removeItem(PING_TOOL_LOCAL_STORAGE_KEY);
     }
 
-    localStorage.setItem(
-        PING_TOOL_LOCAL_STORAGE_KEY,
-        JSON.stringify(histories)
-    );
     getHistories();
 }
 
@@ -330,7 +335,7 @@ $("#input-url").keyup(function () {
 
 $("#local-history")
     .on("click", ".delete-history--btn", function () {
-        deleteHistory($(this).data("url"));
+        deleteHistory($(this).data("index") , $(this).data("url"));
     })
     .on("click", ".history--list", function (e) {
         if (e.target.classList.contains("delete-history--btn")) return;
@@ -349,7 +354,7 @@ $("#local-history")
 
 $("#local-history-mobile")
     .on("click", ".delete-history--btn", function () {
-        deleteHistory($(this).data("url"));
+        deleteHistory($(this).data("index"), $(this).data("url"));
     })
     .on("click", ".history--list", function (e) {
         if (e.target.classList.contains("delete-history--btn")) return;
