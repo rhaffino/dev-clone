@@ -358,7 +358,7 @@ id/json-ld-product-schema-generator
             <h2>@lang('product.desc-4')</h2>
             <p>@lang('product.desc-4-1')</p>
             <pre class="language-html mb-4">
-                <code class="language-html">
+                <code class="language-html" style="white-space: pre-wrap; word-break: keep-all;">
                     &lt;html&gt;
                         &lt;head&gt;
                             &lt;title&gt;Executive Anvil&lt;/title&gt;

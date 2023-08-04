@@ -227,7 +227,7 @@
                     <h2>@lang('robot.desc-6')</h2>
                     <p>@lang('robot.desc-6-1')</p>
                     <pre class="language-html mb-4">
-                        <code class="language-html">
+                        <code class="language-html" style="white-space: pre-wrap; word-break: keep-all;">
                         User-agent: *
                          Allow: /
 

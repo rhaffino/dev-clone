@@ -281,7 +281,7 @@ id/json-ld-how-to-schema-generator
                 <p>@lang('howto.desc-4-2')</p>
                 <p>@lang('howto.desc-4-3')</p>
                 <pre class="language-html mb-4">
-                    <code class="language-html">
+                    <code class="language-html" style="white-space: pre-wrap; word-break: keep-all;">
                         &lt;script type="application/ld+json"&gt;
                         {
                         "description": "Berikut adalah cara memasak nasi dengan mudah menggunakan rice cooker",

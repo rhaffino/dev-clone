@@ -361,7 +361,7 @@ id/json-ld-jobPosting-schema-generator
             <h2>@lang('jobPosting.desc-4')</h2>
             <p>@lang('jobPosting.desc-4-1')</p>
             <pre class="language-html mb-4">
-                <code class="language-html">
+                <code class="language-html" style="white-space: pre-wrap; word-break: keep-all;">
                     &lt;script type="application/ld+json"&gt;
                         {
                             "@context": "https://schema.org/",

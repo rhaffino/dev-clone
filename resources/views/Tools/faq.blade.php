@@ -217,8 +217,8 @@ id/json-ld-faq-schema-generator
         <div class="d-none" id="description-tab-5" style="overflow:auto">
             <h2>@lang('faq.desc-5')</h2>
             <p>@lang('faq.desc-5-1')</p>
-            <pre class="language-html mb-4" style="overflow:auto; width:100%;">
-                <code class="language-html">
+            <pre class="language-html mb-4">
+                <code class="language-html" style="white-space: pre-wrap; word-break: keep-all;">
                     &lt;script type="application/ld+json"&gt;
                     {
                     "@context": "https://schema.org",
