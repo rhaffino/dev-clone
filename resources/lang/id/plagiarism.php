@@ -54,7 +54,7 @@ return [
     "whatsnew" => "Yang Baru",
     "other_tools" => "Alat SEO Lainnya",
     "last_update" => "Pembaruan terakhir",
-    "update_desc" => "Mari cegah penyalinan dan pengutipan tanpa atribusi! Kini, cmlabs menghadirkan Plagiarism (by Copyscape) sebagai solusi terbaik untuk melawan duplikasi konten. Berbekal data dengan basis kecanggihan algoritma, tool ini dapat memindai tulisan Anda dengan cepat untuk mencapai hasil tulisan yang orisinal dan bebas plagiasi.",
+    "update_desc" => "Mari cegah penyalinan dan pengutipan tanpa atribusi! Kini, cmlabs menghadirkan Plagiarism Checker (by Copyscape) sebagai solusi terbaik untuk melawan duplikasi konten. Berbekal data dengan basis kecanggihan algoritma, tool ini dapat memindai tulisan Anda dengan cepat untuk mencapai hasil tulisan yang orisinal dan bebas plagiasi.",
     "notif_center" => "Pusat Pemberitahuan",
 
     "cmlabs_alliance" => "Aliansi cmlabs",
