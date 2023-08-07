@@ -9,7 +9,7 @@
             <div class="col-12 col-lg-9">
                 <div>
                     @component('v2.components.notification-card')
-                        @slot('last_updated', 'Jul 21, 2023')
+                        @slot('last_updated', 'Aug 2, 2023')
                         @slot('desc', __('plagiarism.update_desc'))
                         @slot('lang', $lang)
                     @endcomponent
