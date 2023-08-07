@@ -21,6 +21,7 @@ return [
     "hreflang-checker-desc" => "The Hreflang Checker is a tool for the process of automatically implementing the site's hreflang tag. Help Google target the correct content on your site to expand the market.",
     "keyword-search-desc" => "A keyword research tool for writers is a place for keyword research to make an SEO-friendly article. Help analyze, compare, and prioritize keyword opportunities for your website.",
     "keyword-permutation-desc" => "The SEO keyword permutation tool helps you to generates a series of data from the process of word combinations. Shorten typing time for maximum and optimal research results.",
+    "plagiarism-checker-desc" => "Now, embrace your writing with our ultimate safeguard against content duplication, Plagiarism Checker (by Copyscape). Powered by cutting-edge algorithms, our tool will scan your text with lightning speed so that you can rest easy knowing your content is authentic.",
     "last-update" => "Last Update",
     "desc-1" => "Important Note",
     "desc-1-1" => "In using some tools that require you to enter a URL, make sure it is valid. Otherwise, the tool will not function properly.",

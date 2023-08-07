@@ -78,6 +78,26 @@
             'icon' => "<i class='text-purple-70 bx bx-shape-circle bx-md'></i>",
             'link' => 'keyword-permutation',
         ],
+        [
+            'title' => 'Plagiarism Checker',
+            'desc' => __('home.plagiarism-checker-desc'),
+            'icon' => "<i class='text-purple-70 bx bx-shape-circle bx-md'></i>",
+            'link' => 'plagiarism-checker',
+        ],
+        /*
+        [
+            'title' => 'Ping Tool',
+            'desc' => __('home.ping-tool-desc'),
+            'icon' => "<i class='text-purple-70 bx bx-shape-circle bx-md'></i>",
+            'link' => 'ping-tool',
+        ],
+        [
+            'title' => 'HTTP Header Checker',
+            'desc' => __('home.header-checker-desc'),
+            'icon' => "<i class='text-purple-70 bx bx-shape-circle bx-md'></i>",
+            'link' => 'http-header-checker',
+        ],
+        */
     ];
 @endphp
 
