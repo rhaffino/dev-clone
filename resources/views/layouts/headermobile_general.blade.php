@@ -1,4 +1,4 @@
-<div id="kt_header_mobile" class="header-mobile align-items-center header-mobile-fixed custom-header-mobile">
+<div id="kt_header_mobile" class="header-mobile align-items-center header-mobile-fixed custom-header-mobile px-5">
     <div class="d-flex align-items-center">
         <button class="btn p-0 burger-icon mr-4" id="kt_aside_mobile_toggle">
             <span></span>

@@ -25,7 +25,7 @@
                             aria-haspopup="true" aria-expanded="false">
                             <div class="d-flex align-items-center">
                                 Resources
-                                <i class="bx bxs-down-arrow text-custom-softgrey icon-sm-xs ml-1"></i>
+                                <i class='bx bx-chevron-down ml-1'></i>
                             </div>
                         </a>
                         <div class="dropdown-menu">
@@ -51,32 +51,21 @@
                             role="button" aria-haspopup="true" aria-expanded="false">
                             <div class="d-flex align-items-center">
                                 @lang('layout.nav-pricing')
-                                <i class="bx bxs-down-arrow text-custom-softgrey icon-sm-xs ml-1"></i>
+                                <i class='bx bx-chevron-down ml-1'></i>
                             </div>
                         </a>
                         <div class="dropdown-menu">
-                            @if ($local == 'en')
-                                <a class="dropdown-item"
-                                    href="https://cmlabs.co/{{ $local }}-id/pricing/seo-services">@lang('layout.nav-pricing-seo')</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item"
-                                    href="https://cmlabs.co/{{ $local }}-id/pricing/content-writing">@lang('layout.nav-pricing-writing')</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item"
-                                    href="https://cmlabs.co/{{ $local }}-id/pricing/media-buying">@lang('layout.nav-pricing-media-buying')</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item"
-                                    href="https://cmlabs.co/{{ $local }}-id/pricing/political-campaign">@lang('layout.nav-pricing-political')</a>
-                            @else
-                                <a class="dropdown-item"
-                                    href="https://cmlabs.co/{{ $local }}-id/pricing/jasa-seo">@lang('layout.nav-pricing-seo')</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item"
-                                    href="https://cmlabs.co/{{ $local }}-id/pricing/content-writing">@lang('layout.nav-pricing-writing')</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item"
-                                    href="https://cmlabs.co/{{ $local }}-id/pricing/media-buying">@lang('layout.nav-pricing-media-buying')</a>
-                            @endif
+                            <a class="dropdown-item"
+                                href="https://cmlabs.co/{{ $local }}-id/pricing/seo-services">@lang('layout.nav-pricing-seo')</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item"
+                                href="https://cmlabs.co/{{ $local }}-id/pricing/content-writing">@lang('layout.nav-pricing-writing')</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item"
+                                href="https://cmlabs.co/{{ $local }}-id/pricing/media-buying">@lang('layout.nav-pricing-media-buying')</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item"
+                                href="https://cmlabs.co/{{ $local }}-id/pricing/political-campaign">@lang('layout.nav-pricing-political')</a>
                         </div>
                     </li>
                     {{--<li class="nav-item dropdown ml-9">
