@@ -133,9 +133,17 @@ function CheckAnalyze(type, value) {
     switch (type) {
         case "url":
             try {
-                if (checkUrl(value)) {
-                    analyzeUrl(type, value);
-                } else {
+                if (checkUrlStr(value)){
+                    if (checkUrl(value)) {
+                        analyzeUrl(type, value);
+                    } else {
+                        $("#ping-result-status").html("");
+                        $("#ping-result-list").hide();
+                        $("#ping-result-empty").show();
+                        toastr.error("URL is not secure", "Error");
+                        KTApp.unblock("#ping-result-container");
+                    }
+                }else{
                     $("#ping-result-status").html("");
                     $("#ping-result-list").hide();
                     $("#ping-result-empty").show();
@@ -291,6 +299,17 @@ function checkUrl(url) {
     try {
         let _url = new URL(url);
         return _url.protocol === "https:" || _url.protocol === "http:";
+    } catch (e) {
+        return false;
+    }
+}
+
+function checkUrlStr(url) {
+    try {
+        const regex = new RegExp(
+            "^(?:(?!://)(?:d{1,3}.d{1,3}.d{1,3}.d{1,3}))|^(?!://)(?=.{1,255}$)((.{1,63}.){1,127}(?![0-9]*$)[a-z0-9-]+.?)$|(.+)(?<!/)$"
+        );
+        return regex.test(url);
     } catch (e) {
         return false;
     }
