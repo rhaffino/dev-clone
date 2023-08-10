@@ -1,0 +1,6 @@
+.aside-menu .menu-nav > .menu-item.menu-item-open > .menu-link.dropdown-toggle.btn:after,
+.aside-menu .menu-nav > .menu-item.menu-item-open > .menu-submenu > .menu-subnav > .menu-item-submenu.menu-item-open > .menu-link.dropdown-toggle.btn:after{
+    transition: transform .2s;
+    -webkit-transform: scaleY(-1);
+    transform: scaleY(-1);
+}

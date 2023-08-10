@@ -41,7 +41,7 @@
         <div id="kt_aside_menu" class="aside-menu my-4 custom-aside-menu" data-menu-vertical="1" data-menu-scroll="1" data-menu-dropdown-timeout="500">
             <ul class="menu-nav custom-menu-sidebar">
                 <li class="menu-item menu-item-submenu" aria-haspopup="true">
-                    <a href="" class="menu-link menu-toggle">
+                    <a href="" class="menu-link menu-toggle btn dropdown-toggle align-items-center">
                         <span class="menu-text">Resources</span>
                     </a>
                     <div class="menu-submenu">
@@ -71,7 +71,7 @@
                     </div>
                 </li>
                 <li class="menu-item menu-item-submenu" aria-haspopup="true">
-                    <a href="" class="menu-link menu-toggle">
+                    <a href="" class="menu-link menu-toggle btn dropdown-toggle align-items-center">
                         <span class="menu-text">@lang('layout.nav-pricing')</span>
                     </a>
                     <div class="menu-submenu">
@@ -80,7 +80,6 @@
                             <li class="menu-item menu-item-parent" aria-haspopup="true">
                                 <span class="menu-link"><span class="menu-text">@lang('layout.nav-pricing')</span></span>
                             </li>
-                            @if ($local == "en")
                                 <li class="menu-item menu-item-children" aria-haspopup="true">
                                     <a href="https://cmlabs.co/{{ $local }}-id/pricing/seo-services" class="menu-link"><span class="menu-text">@lang('layout.nav-pricing-seo')</span></a>
                                 </li>
@@ -91,24 +90,13 @@
                                     <a href="https://cmlabs.co/{{ $local }}-id/pricing/media-buying" class="menu-link"><span class="menu-text">@lang('layout.nav-pricing-media-buying')</span></a>
                                 </li>
                                 <li class="menu-item menu-item-children" aria-haspopup="true">
-                                    <a href="https://cmlabs.co/{{ $local }}-id/pricing/political-campaign" class="menu-link"><span class="menu-text">@lang('layout.nav-pricing-media-buying')</span></a>
+                                    <a href="https://cmlabs.co/{{ $local }}-id/pricing/political-campaign" class="menu-link"><span class="menu-text">@lang('layout.nav-pricing-political')</span></a>
                                 </li>
-                            @else 
-                                <li class="menu-item menu-item-children" aria-haspopup="true">
-                                    <a href="https://cmlabs.co/{{ $local }}-id/pricing/jasa-seo" class="menu-link"><span class="menu-text">@lang('layout.nav-pricing-seo')</span></a>
-                                </li>
-                                <li class="menu-item menu-item-children" aria-haspopup="true">
-                                    <a href="https://cmlabs.co/{{ $local }}-id/pricing/content-writing" class="menu-link"><span class="menu-text">@lang('layout.nav-pricing-writing')</span></a>
-                                </li>
-                                <li class="menu-item menu-item-children" aria-haspopup="true">
-                                    <a href="https://cmlabs.co/{{ $local }}-id/pricing/media-buying" class="menu-link"><span class="menu-text">@lang('layout.nav-pricing-media-buying')</span></a>
-                                </li>
-                            @endif
                         </ul>
                     </div>
                 </li>
                 <li class="menu-item menu-item-submenu menu-item-open" aria-haspopup="true">
-                    <a href="" class="menu-link menu-toggle">
+                    <a href="" class="menu-link menu-toggle btn dropdown-toggle align-items-center">
                         <span class="menu-text">SEO Tools</span>
                     </a>
                     <div class="menu-submenu">
@@ -123,7 +111,7 @@
                                 </a>
                             </li>
                             <li class="menu-item menu-item-submenu" aria-haspopup="true">
-                                <a href="" class="menu-link menu-toggle">
+                                <a href="" class="menu-link menu-toggle btn dropdown-toggle align-items-center">
                                     <span class="menu-text">Generator</span>
                                 </a>
                                 <div class="menu-submenu">
@@ -148,7 +136,7 @@
                                 </div>
                             </li>
                             <li class="menu-item menu-item-submenu" aria-haspopup="true">
-                                <a href="" class="menu-link menu-toggle">
+                                <a href="" class="menu-link menu-toggle btn dropdown-toggle align-items-center">
                                     <span class="menu-text">Test & Checker</span>
                                 </a>
                                 <div class="menu-submenu">
@@ -192,6 +180,16 @@
                                         <li class="menu-item menu-item-children" aria-haspopup="true">
                                             <a href="/{{ $local }}/technology-lookup" class="menu-link">
                                                 <span class="menu-text">Technology Lookup</span>
+                                            </a>
+                                        </li>
+                                        <li class="menu-item menu-item-children" aria-haspopup="true">
+                                            <a href="/{{ $local }}/ping-tool" class="menu-link">
+                                                <span class="menu-text">Ping Tool</span>
+                                            </a>
+                                        </li>
+                                        <li class="menu-item menu-item-children" aria-haspopup="true">
+                                            <a href="/{{ $local }}/http-header-checker" class="menu-link">
+                                                <span class="menu-text">HTTP Header Checker</span>
                                             </a>
                                         </li>
                                     </ul>
