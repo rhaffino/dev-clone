@@ -115,6 +115,27 @@ function convertSecond(seconds) {
     }
 }
 
+function recordUserActivity(_url) {
+    $.post({
+        url: USER_ACTIVITY_API_URL,
+        data: {
+            '_token': $('meta[name="csrf-token"]').attr('content'),
+            'submitted_url' : _url,
+            'url': window.location.href,
+            width_height: window.innerWidth + "x" + window.innerHeight,
+        },
+        success: (res) => {
+            if (res.statusCode === 200) {
+            } else {
+                console.log(err)
+            }
+        },
+        error: (err) => {
+            console.log(err)
+        }
+    })
+}
+
 function analyzeUrl(_url) {
     if (checkUrl(_url)) {
         $('#technology-lookup-result-total').text("")
@@ -136,6 +157,7 @@ function analyzeUrl(_url) {
                     renderAllData(res.data);
                     addHistory(_url, res.data);
                     getHistories();
+                    recordUserActivity(_url);
                 } else if (err.responseJSON.statusCode === 429) {
                     let {
                         minute,

@@ -127,6 +127,27 @@ function deleteHistory(_url = null) {
     getHistories();
 }
 
+function recordUserActivity(_url) {
+    $.post({
+        url: USER_ACTIVITY_API_URL,
+        data: {
+            '_token': $('meta[name="csrf-token"]').attr('content'),
+            'submitted_url' : _url,
+            'url': window.location.href,
+            width_height: window.innerWidth + "x" + window.innerHeight,
+        },
+        success: (res) => {
+            if (res.statusCode === 200) {
+            } else {
+                console.log(err)
+            }
+        },
+        error: (err) => {
+            console.log(err)
+        }
+    })
+}
+
 $('.clear-history--btn').click(function () {
     deleteHistory();
 });
@@ -233,6 +254,7 @@ check_url.click(function() {
                 ic_normal.removeClass('d-none')
                 ic_http.addClass('d-none')
                 ic_https.addClass('d-none')
+                recordUserActivity('https://' + url);
             } else {
                 toastr.error('Error', "An error occurred during the test process. Please try again with http/https or try with another website URL");
 
