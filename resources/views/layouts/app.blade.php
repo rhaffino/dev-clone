@@ -153,7 +153,8 @@
 
 <!-- Custom JS -->
 <script src="{{ asset('js/custom.js?v=20210116213500')}}"></script>
-
+{{-- URL for record user activity --}}
+<script>const USER_ACTIVITY_API_URL = "{{ route('api.record-activity') }}";</script>
 <!--end::Global Theme Bundle-->
 <!--begin::Page Vendors(used by this page)-->
 <script src="{{asset('plugins/custom/fullcalendar/fullcalendar.bundle.js?v=7.0.5')}}"></script>

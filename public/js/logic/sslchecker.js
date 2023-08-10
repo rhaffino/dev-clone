@@ -41,6 +41,27 @@ function clearTable() {
     $("#generateCrawlResult").hide();
 }
 
+function recordUserActivity(_url) {
+    $.post({
+        url: USER_ACTIVITY_API_URL,
+        data: {
+            '_token': $('meta[name="csrf-token"]').attr('content'),
+            'submitted_url' : _url,
+            'url': window.location.href,
+            width_height: window.innerWidth + "x" + window.innerHeight,
+        },
+        success: (res) => {
+            if (res.statusCode === 200) {
+            } else {
+                console.log(err)
+            }
+        },
+        error: (err) => {
+            console.log(err)
+        }
+    })
+}
+
 $('#crawlButton').on('click', function() {
     let url = $('#url').val().replace(/^(http(s)?|ftp):\/\//, '');
     url = url.substr(url.length - 1) === '/' ? url.slice(0, -1) : url;
@@ -58,6 +79,7 @@ $('#crawlButton').on('click', function() {
                 save(response.data, url)
                 refreshLocalStorage()
                 toastr.success('Success scan your ssl', 'Success');
+                recordUserActivity('https://' + url);
             }else {
                 toastr.error('Domain Not found', 'Error');
                 $('#result').empty()

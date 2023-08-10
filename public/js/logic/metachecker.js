@@ -45,6 +45,7 @@ jQuery('#crawlURL').click(function () {
                 fillDescBar(rateDesc, true);
                 save(url, res.data.title, res.data.description)
                 refreshLocalStorage();
+                recordUserActivity(url);
             } else {
                 toastr.error(res.message)
             }
@@ -419,6 +420,27 @@ const fillDescBar = function (param, cta=false) {
         $('#desc-bad-pixel').removeClass('d-flex')
         $('#desc-bad-pixel').addClass('d-none')
     }
+}
+
+function recordUserActivity(_url) {
+    $.post({
+        url: USER_ACTIVITY_API_URL,
+        data: {
+            '_token': $('meta[name="csrf-token"]').attr('content'),
+            'submitted_url' : _url,
+            'url': window.location.href,
+            width_height: window.innerWidth + "x" + window.innerHeight,
+        },
+        success: (res) => {
+            if (res.statusCode === 200) {
+            } else {
+                console.log(err)
+            }
+        },
+        error: (err) => {
+            console.log(err)
+        }
+    })
 }
 
 $(document).ready(function () {

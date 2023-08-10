@@ -114,6 +114,27 @@ function deleteHistory(_url = null) {
     getHistories();
 }
 
+function recordUserActivity(_url) {
+    $.post({
+        url: USER_ACTIVITY_API_URL,
+        data: {
+            '_token': $('meta[name="csrf-token"]').attr('content'),
+            'submitted_url' : _url,
+            'url': window.location.href,
+            width_height: window.innerWidth + "x" + window.innerHeight,
+        },
+        success: (res) => {
+            if (res.statusCode === 200) {
+            } else {
+                console.log(err)
+            }
+        },
+        error: (err) => {
+            console.log(err)
+        }
+    })
+}
+
 function analyze(_url) {
     if (checkUrl(_url)) {
         jqueryRequest = $.post({
@@ -138,6 +159,7 @@ function analyze(_url) {
                     updateProgressBar(50);
                     addHistory(_url, res.data);
                     renderAllData(res.data);
+                    recordUserActivity(_url);
                 } else {
                     $('#hreflang-result-header').attr('style', 'display: none !important;');
                     toastr.error(res.message, 'Error API');

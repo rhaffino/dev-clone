@@ -21,6 +21,9 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Crypt;
 use Mockery\Exception;
 use Carbon\Carbon;
+use Jenssegers\Agent\Agent;
+use Revolution\Google\Sheets\Facades\Sheets;
+use Stevebauman\Location\Facades\Location;
 
 class ApiController extends Controller
 {
@@ -372,6 +375,34 @@ class ApiController extends Controller
             return new BaseApiResource($data, "success", 200);
         } catch (Exception $exception){
             return new BaseApiResource($response['data'] ?? null, $response['message'], $response['statusCode']);
+        }
+    }
+
+    public function recordUserActivity(Request $request)
+    {
+        try {
+            $spreadsheet = Sheets::spreadsheet(env('SUBMISSION_SPREADSHEET_ID'));
+            $agent = new Agent();
+
+            $ipAddress = env('APP_ENV') == 'local' ? '66.102.0.0' : $request->ip();
+            $location = Location::get($ipAddress);
+            $fullLocation = "IP: $location->ip, Country Code: $location->countryCode, Region Code: $location->regionCode, Region Name:  $location->regionName, City Name: $location->cityName, Zipcode: $location->zipCode, Latitude: $location->latitude, Longitude: $location->longitude";
+            
+            $row = array("", "", "", "", "", "", "");
+            $row = [
+                date("l, d F Y H:i:s", strtotime('+7 hours')),
+                $request->url,
+                $request->submitted_url,
+                $ipAddress,
+                $agent->browser(),
+                $request->width_height,
+                $fullLocation
+            ];
+            
+            $spreadsheet->sheet('cmlabs Tools - User Activities')->append([$row]);
+            return new BaseApiResource(null, "success", 200);
+        } catch (\Exception $exception) {
+            return new BaseApiResource(null, $exception->getMessage(), 500);
         }
     }
 }

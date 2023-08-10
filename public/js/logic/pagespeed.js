@@ -83,6 +83,7 @@ jQuery('#analysis-button').click(function () {
                 refreshLocalStorage();
                 checkCounter('page-speed-counter', () => showCta(data))
                 saveData(data)
+                recordUserActivity('https://' + urlWeb);
             } catch (e) {
                 Swal.close()
                 toastr.error(e)
@@ -797,6 +798,27 @@ let clearAll = function () {
 }
 
 refreshLocalStorage();
+
+function recordUserActivity(_url) {
+    $.post({
+        url: USER_ACTIVITY_API_URL,
+        data: {
+            '_token': $('meta[name="csrf-token"]').attr('content'),
+            'submitted_url' : _url,
+            'url': window.location.href,
+            width_height: window.innerWidth + "x" + window.innerHeight,
+        },
+        success: (res) => {
+            if (res.statusCode === 200) {
+            } else {
+                console.log(err)
+            }
+        },
+        error: (err) => {
+            console.log(err)
+        }
+    })
+}
 
 $(document).ready(function () {
     $("#performancePB").click(function () {
