@@ -124,62 +124,65 @@ function convertSecond(seconds) {
 }
 
 function analyze(_url) {
-    if (checkUrl(_url)) {
-        // $("#http-header-result-status").text("");
-        $.post({
-            url: HTTP_HEADER_CHECK_API_URL,
-            data: {
-                _token: $("meta[name=csrf-token]").attr("content"),
-                url: _url,
-            },
-            beforeSend: () => {
-                KTApp.block("#http-header-result-container", {
-                    overlayColor: "gray",
-                    opacity: 0.1,
-                    state: "primary",
-                });
-            },
-            success: (res) => {
-                if (res.statusCode === 200) {
-                    console.log(res.data);
-                    renderAllData(res.data);
-                    addHistory(_url, res.data);
-                    getHistories();
-                } else if (err.responseJSON.statusCode === 429) {
-                    let { minute, second } = convertSecond(
-                        err.responseJSON.data.current_time
-                    );
-                    toastr.error(
-                        `Please wait for ${minute} minutes and ${second} seconds`,
-                        `Error ${err.responseJSON.message}`
-                    );
-                } else {
+    if (checkUrlStr(_url)){
+        if (checkUrl(_url)) {
+            $.post({
+                url: HTTP_HEADER_CHECK_API_URL,
+                data: {
+                    _token: $("meta[name=csrf-token]").attr("content"),
+                    url: _url,
+                },
+                beforeSend: () => {
+                    KTApp.block("#http-header-result-container", {
+                        overlayColor: "gray",
+                        opacity: 0.1,
+                        state: "primary",
+                    });
+                },
+                success: (res) => {
+                    if (res.statusCode === 200) {
+                        console.log(res.data);
+                        renderAllData(res.data);
+                        addHistory(_url, res.data);
+                        getHistories();
+                    } else if (err.responseJSON.statusCode === 429) {
+                        let { minute, second } = convertSecond(
+                            err.responseJSON.data.current_time
+                        );
+                        toastr.error(
+                            `Please wait for ${minute} minutes and ${second} seconds`,
+                            `Error ${err.responseJSON.message}`
+                        );
+                    } else {
+                        $("#http-header-result-list").hide();
+                        $("#http-header-empty").show();
+                        toastr.error(res.message, "Error");
+                    }
+                },
+                error: (err) => {
+                    console.log(err);
+                    if (err.responseJSON.statusCode === 429) {
+                        let { minute, second } = convertSecond(
+                            err.responseJSON.data.current_time
+                        );
+                        toastr.error(
+                            `Please wait for ${minute} minutes and ${second} seconds`,
+                            `Error ${err.responseJSON.message}`
+                        );
+                    } else {
+                        toastr.error(err.responseJSON.message, "Error");
+                    }
                     $("#http-header-result-list").hide();
                     $("#http-header-empty").show();
-                    toastr.error(res.message, "Error");
-                }
-            },
-            error: (err) => {
-                console.log(err);
-                if (err.responseJSON.statusCode === 429) {
-                    let { minute, second } = convertSecond(
-                        err.responseJSON.data.current_time
-                    );
-                    toastr.error(
-                        `Please wait for ${minute} minutes and ${second} seconds`,
-                        `Error ${err.responseJSON.message}`
-                    );
-                } else {
-                    toastr.error(err.responseJSON.message, "Error");
-                }
-                $("#http-header-result-list").hide();
-                $("#http-header-empty").show();
-            },
-            complete: () => {
-                KTApp.unblock("#http-header-result-container");
-            },
-        });
-    } else {
+                },
+                complete: () => {
+                    KTApp.unblock("#http-header-result-container");
+                },
+            });
+        } else {
+            toastr.error("URL is not secure", "Error");
+        }
+    }else{
         toastr.error("URL Format is not valid", "Error");
     }
 }
@@ -191,7 +194,6 @@ function renderAllData(data) {
 
     $.each(data, function (key, value) {
         // Menampilkan hasil perulangan di console browser
-        // console.log(key + ": " + value);
         $("#http-header-result-list").append(
             HttpHeaderTemplate(key, value)
         );
@@ -212,6 +214,17 @@ function checkUrl(url) {
         return _url.protocol === "https:" || _url.protocol === "http:";
     } catch (e) {
         return false;
+    }
+}
+
+function checkUrlStr(url) {
+    try {
+      const regex = new RegExp(
+        "^(?:(?!://)(?:\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}))|^(?!:\/\/)(?=.{1,255}$)((.{1,63}\.){1,127}(?![0-9]*$)[a-z0-9-]+\.?)$|(.+)(?<!/)$"
+      );
+      return regex.test(url);
+    } catch (e) {
+      return false;
     }
 }
 
@@ -287,7 +300,6 @@ $(".clear-history--btn").click(function () {
 
 $("#crawl-btn").click(function () {
     if ($("#input-url").val() === "" || $("#input-url").val() === null) {
-        // $("#http-header-result-status").html("");
         $("#http-header-result-list").hide();
         $("#http-header-empty").show();
         toastr.error("URL is empty", "Error");
