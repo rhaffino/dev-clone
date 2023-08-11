@@ -1,56 +1,61 @@
 <?php
 return [
-    "meta-title" => "Header Judul",
-    "meta-desc" => "Header Deskripsi",
+    "meta-title" => "HTTP Header Checker dari cmlabs",
+    "meta-desc" => "HTTP Header Checker oleh cmlabs – Solusi terbaik untuk memastikan konfigurasi, keamanan, dan kinerja sebuah wesbite. Periksa Header HTTP sekarang!",
     "lang" => "id",
     "title" => "HTTP Header Checker",
-    "sub-title" => "Periksa Kualitas Internet Anda",
-    "headerchecker-btn" => "Cek URL",
+    "sub-title" => "Cek HTTP Header Anda",
+    "headerchecker-btn" => "Periksa URL",
     "headerchecker-placeholder" => "https://www.example.com",
     "result" => "Hasil",
-    "result-none" => "Tidak ada URL yang diuji, silakan masukkan domain Anda di atas!",
+    "result-none" => "URL belum terdeteksi, masukkan domain Anda di atas!",
+    "headerchecker-btn-tooltip" => "Anda hanya dapat mencari 5 kali dalam 1 jam",
+    "highlight" => "HTTP Header Checker dari cmlabs adalah tool gratis yang dirancang untuk memeriksa header HTTP dari website tertentu. Anda dapat memasukkan URL dan memperoleh informasi terperinci tentang header HTTP di URL tersebut. Pemeriksaan ini penting untuk meninjau kinerja, keamanan, dan kompatibilitas suatu website. Dengan HTTP Header Checker dari cmlabs, Anda dapat memperoleh laporan mengenai koneksi, jenis konten, etag, kontrol cache, jenis server, dan lainnya. Coba sekarang!",
+    "desc-1" => "Apa Itu HTPP Header Checker dari cmlabs?",
+    "desc-1-1" => "Dalam era digital yang semakin kompleks, aspek ketelitian dan efisiensi menjadi kunci utama untuk memastikan website berjalan tanpa hambatan dan terus memberikan kinerja optimal.",
+    "desc-1-2" => "Salah satu fondasi penting ini bisa dicapai melalui pengamanan data dan penyempurnaan performa situs web.",
+    "desc-1-3" => "Perlu dicatat bahwa pengawasan yang menyeluruh terhadap sebuah website di ranah digital menjadi semakin penting seiring berkembangnya ancaman siber yang selalu bertambah seiring waktu.",
+    "desc-1-4" => "Untuk itu, tool HTTP Header Checker yang dipersembahkan oleh cmlabs hadir sebagai salah satu solusi jitu.",
+    "desc-1-5" => "Namun, apa itu HTTP Header Checker sebenarnya? Bagaimana tool ini dapat melindungi serta meningkatkan performa sebuah website?",
+    "desc-1-6" => "Dengan memahami fungsi serta keunggulan HTTP Header Checker dari cmlabs secara komprehensif, Anda bisa menjadi lebih siap dalam menjaga keamanan dan kinerja optimal dari website Anda. Simak panduan berikut!",
+    "desc-1-7" => "",
 
-    "lookup-btn-tooltip" => "Anda hanya dapat mencari 5 kali dalam 1 jam",
-    "desc-1" => "Apa itu Technology Lookup?",
-    "desc-1-1" => "<a href='https://tools.cmlabs.co/id/technology-lookup'>Technology Lookup</a> adalah tool gratis dari cmlabs yang bisa Anda gunakan untuk mengidentifikasi teknologi apa yang digunakan untuk membangun suatu website. Tool ini memungkinkan Anda untuk melihat sistem operasi, web server, widget, library javascript, hingga menemukan versi lengkap teknologi yang digunakan pada sebuah situs.",
-    "desc-1-2" => "Anda bisa menggunakan tool ini secara gratis. Cara penggunaan Technology Lookup pun terbilang cukup mudah. Anda hanya perlu memasukkan URL dan robot kami akan membantu Anda menemukan teknologi yang digunakan pada URL tersebut.",
-    "desc-2" => "Mengapa Anda Membutuhkan Technology Lookup?",
-    "desc-2-1" => "Anda bukanlah satu-satunya yang ingin mengetahui teknologi pada suatu website. Berikut adalah alasan yang mungkin melatarbelakangi seseorang ingin mengetahui apa yang digunakan untuk membangun suatu website:",
-    "desc-2-1-1" => "<b>Rasa Penasaran -</b> beberapa orang mencari tahu teknologi dari sebuah situs karena penasaran dan ingin mempelajari teknologi yang digunakan dalam pengembangan suatu website.",
-    "desc-2-1-2" => "<b>Monitoring Website -</b> sebagian lainnya memantau teknologi dari suatu website dengan tujuan melakukan tindakan keamanan atau pengawasan agar bisa meningkatkan teknologi yang digunakan. ",
-    "desc-2-1-3" => "<b>Riset Pasar -</b> Anda mungkin sedang melakukan riset pasar karena ingin mengetahui teknologi yang digunakan oleh kompetitor Anda.",
-    "desc-2-1-4" => "<b>Mengetahui perubahan -</b> Pantau perubahan teknologi pesaing seperti CMS baru, platform e-commerce, atau teknologi lainnya.",
-    "desc-3" => "Manfaat Technology Lookup Untuk Anda",
-    "desc-3-1" => "Selain itu, Technology Lookup juga memberikan beberapa manfaat bagi Anda. Mulai dari manfaat untuk website pribadi atau untuk memantau website kompetitor. Simak penjelasannya berikut:",
-    "desc-3-1-1" => "Identifikasi Teknologi Pada Website Anda",
-    "desc-3-1-2" => "Anda bisa memanfaatkan tool ini untuk melakukan riset demi keperluan bisnis Anda. Misalnya, Anda perlu mengidentifikasi teknologi yang digunakan pada website Anda dan melakukan beberapa peningkatan versi teknologi jika memang diperlukan.",
-    "desc-3-1-3" => "Dengan demikian, Anda bisa menyajikan performa dan pengalaman pengguna yang lebih baik di halaman web Anda. Hal ini juga akan berpengaruh baik pada kesuksesan bisnis, seperti mendatangkan traffic hingga menghasilkan leads potensial.",
-    "desc-3-2-1" => "Analisa Teknologi di Website Kompetitor",
-    "desc-3-2-2" => "Tool ini juga dapat membantu Anda menganalisa teknologi yang digunakan oleh kompetitor Anda. Hal ini nantinya akan memberikan Anda gambaran, apa yang menjadi keunggulan kompetitor Anda, teknologi apa yang mereka gunakan, dan penggunaan teknologi seperti apa yang paling tepat untuk bisnis Anda.
-",
-    "desc-3-2-3" => "Demikian pembahasan mengenai apa itu Technology Lookup. Anda tidak akan rugi menggunakan tool ini. Alasannya karena cara pemakaian cukup mudah, dapat diakses secara gratis, dan tentunya bisa mengungkap teknologi dari suatu website secara utuh. Jelajahi teknologi website sekarang!",
-    "howto-title" => 'Cara Menggunakan Technology Lookup',
-    "howto1" => '<h2>Cara Menggunakan Technology Lookup</h2>
-                    <p>Panduan berikut dibuat untuk membantu Anda dalam menggunakan tool ini. Ikuti langkah-langkah berikut ini:</p>',
-    "howto2" => '<h4 class="sub-titles">Buka Halaman Technology Lookup</h4>
-                    <p>Silahkan buka halaman <a href="https://tools.cmlabs.co/en/technology-lookup">Technology Lookup</a> dari cmlabs terlebih dahulu. Pada halaman tersebut, Anda bisa menambahkan URL yang ingin dilihat teknologinya, mengidentifikasi teknologi pada website yang dilacak, dan melihat riwayat penggunaan Technology Lookup.</p>',
-    "howto3" => '<p>Gambar 1: Tampilan halaman tool Technology Lookup dari cmlabs</p>
-                    <h4 class="sub-titles">Masukkan URL Website</h4>
-                    <p>Agar bisa mengidentifikasi teknologi pada suatu website, Anda harus memasukkan URL website pada field yang tersedia. Pastikan Anda telah memasukkan URL dalam format yang benar (e.g https://example.com). Kemudian, klik tombol <b>&#34;LOOKUP URL&#34;</b> untuk memberikan perintah pada tool ini agar memulai memeriksa teknologi pada website tersebut.</p>',
-    "howto4" => '<p>Gambar 2: Tampilan ketika user telah memasukkan URL website pada field yang disediakan.</p>
-                    <h4 class="sub-titles">Identifikasi Tumpukan Teknologi di Website</h4>
-                    <p>Setelah beberapa saat, Anda bisa melihat tumpukan teknologi yang digunakan pada website tersebut di bagian Teknologi. Tool Technology Lookup memungkinkan Anda untuk melihat widget, sistem operasi, library javascript, web server, dan mengidentifikasi versi lengkap teknologi yang digunakan sebuah situs.</p>',
-    "howto5" => '<p>Gambar 3: Tampilan hasil pemantauan tumpukan teknologi yang digunakan pada website yang dilacak.</p>
-                    <h4 class="sub-titles">Pantau Riwayat Penggunaan Technology Lookup</h4>
-                    <p>Terakhir, Anda juga bisa melihat daftar riwayat penggunaan Technology Lookup. Dalam daftar tersebut, Anda akan melihat daftar URL website yang telah Anda pantau melalui Technology Lookup dari cmlabs.</p>',
-    "howto6" => '<p>Gambar 4: Daftar riwayat penggunaan technology lookup dari cmlabs.</p>
-                    <h4 class="sub-titles">Login Setelah 5 Kali Penggunaaan</h4>
-                    <p>Beberapa alat gratis cmlabs membutuhkah proses login setelah pemakaian sebanyak 5 kali, Technology Lookup adalah salah satunya. Jika Anda telah menggunakannya sebanyak 5 kali, sistem kami akan secara otomatis menampilkan pesan yang menyatakan bahwa Anda telah mencapai batas pemakaian.</p>',
-    "howto7" => '<p>Gambar 5: Peringatan pemakaian telah mencapai batas. Pada peringatan ini, terdapat tombol login yang mengarahkan pada login page.</p>
-                    <p>Anda dapat melakukan login dengan mengklik tombol login pada pesan peringatan yang muncul. Selanjutnya, Anda akan diarahkan menuju halaman login cmlabs. Silahkan masukkan data yang dibutuhkan, atau Anda dapat melakukan login melalui Google.</p>',
-    "howto8" => '<p>Gambar 6: Halaman login cmlabs</p>
-                    <p>Setelah Anda berhasil melakukan login, Anda akan dapat kembali menggunakan alat ini untuk melakukan pengecekan secara gratis. Dengan melakukan login, sistem dapat menyimpan data riwayat penggunaan tool ini dalam satu tahun terakhir.</p>',
-    "highlight" => "Pada versi terbaru ini, tool Technology Lookup di versi terbaru ini membantu pengguna dapat mengidentifikasi teknologi di situs web tertentu. Selain itu juga dapat membantu pengguna untuk membuat daftar situs web yang menggunakan teknologi tertentu dan menelusuri sejumlah situs web sekaligus. Dengan ini Anda dapat menemukan prospek baru dengan teknologi yang digunakan oleh kompetitor Anda.",
+    "desc-2" => "Mengapa Perlu Menggunakan HTTP Header Checker dari cmlabs?",
+    "desc-2-1" => "HTTP Header Checker dari cmlabs menawarkan sejumlah keunggulan yang tentunya berkontribusi tinggi pada peningkatan keamanan dan optimasi kinerja website agar menjadi semakin lancar dan bebas hambatan.",
+    "desc-2-2" => "Berikut adalah beberapa keuntungan yang bisa Anda peroleh setelah menggunakan HTTP Header Checker:",
+    "desc-2-1-1" => "<b>OptimisasI Kinerja:</b> HTTP Checker ini dirancang untuk menyempurnakan kinerja dan mengoptimalkan <a href='https://cmlabs.co/id-id/seo-terms/user-experience'>user experience</a>. Tool ini akan menganalisis header untuk mengontrol mekanisme caching, pengaturan kompresi, hingga strategi pengiriman konten sekalipun. Aspek-aspek tersebut bersifat krusial, terlebih jika Anda ingin mewujudkan aktivitas yang lancar dan responsif.",
+    "desc-2-1-2" => "<b>Peningkatan Keamanan yang Tangguh:</b> Tool ini dapat menjadi andalan dalam langkah peningkatan keamanan siber. Tool ini akan memeriksa header HTTP untuk mengidentifikasi dan memperbaiki potensi kerentanan sekaligus memastikan header memiliki konfigurasi yang sesuai.",
+    "desc-2-1-3" => "<b>Memenuhi Standar:</b> Tool ini akan memverifikasi bahwa header sejajar dengan rekomendasi dari lembaga-lembaga otoritatif sehingga membantu memastikan profesionalisme dan kredibilitas yang tinggi.",
+    "desc-2-1-4" => "<b>Mendukung SEO dan Aksesibilitas Secara Komprehensif:</b> Tool ini juga dapat berkontribusi dalam meningkatkan aksesibilitas, terutama pada mesin pencarian (<a href='https://cmlabs.co/id-id/seo-guidelines/cara-kerja-search-engine'>search engine</a>). Artinya, tool Header Checker ini akan memastikan apakah <a href='https://cmlabs.co/id-id/seo-terms/meta-description'>meta tag</a> dan header terkait SEO sudah dikonfigurasi dengan benar.",
+
+
+    "howto-title" => '<h2>Bagaimana Cara Menggunakan Tool HTTP Header Checker cmlabs?</h2>',
+    "howto1" => '<p>Segera pastikan apakah website Anda aman dan memenuhi standar! Ikuti langkah-langkah di bawah ini untuk memperoleh hasil analisis yang signifikan.</p>',
+    "howto2" => '<h4 class="sub-titles">Buka Halaman HTTP Header Checker cmlabs</h4>',
+    "howto3" => '<p>Gambar 1: Tampilan halaman depan HTTP Header Checker dari cmlabs</p>
+                <p>Hal pertama yang perlu Anda lakukan adalah mengunjungi halaman “<b>Text & Checker</b>” di website cmlabs. Kemudian, pilih opsi HTTP Header Checker untuk memeriksa Header website yang Anda inginkan. </p>
+                <h4 class="sub-titles">Masukkan URL</h4>',
+    "howto4" => '<p>Gambar 2: Masukkan URL domain website</p>
+                <p>Untuk memulai proses peninjauan, Anda hanya perlu memasukkan URL seperti contoh yang tertera pada kotak berwarna biru. Agar proses pemeriksaannya berjalan lancar, pastikan URL yang Anda masukkan sesuai dengan contoh, yaitu dalam format: <b>https://www.example.com</b>.</p>
+                <h4>Now, Check Your HTTP Header!</h4>',
+    "howto5" => '<p>Gambar 3: Klik Periksa URL</p>
+                <p>Langkah selanjutnya adalah memulai proses pemeriksaan. Setelah URL dimasukkan, Anda hanya perlu menekan tombol “<b>Periksa URL</b>” untuk menjalankan prosesnya. Lalu, tunggu beberapa saat sampai hasil analisis berhasil dimuat. Anda tidak perlu khawatir karena proses pemeriksaan pada HTTP Header Checker ini tidak memakan waktu lama.</p><h4>Periksa Hasil dan Lakukan Analisis</h4>',
+    "howto6" => '',
+    "howto7" => '<p>Gambar 4: Ilustrasi contoh hasil pemeriksaan HTTP Header</p>
+                <p>Setelah proses pemeriksaan berakhir, Anda akan disajikan dengan hasil yang menunjukkan sejulah detail terkait kinerja suatu website. Hasil pemeriksaan ini nantinya mencakup sejumlah detail penting seperti Connection, Content-Type, Date, Etag, Link, Platform, Server, dan masih banyak lagi.</p>
+                <p>Selain menyajikan hasil analisis komprehensif terhadap elemen-elemen penting tersebut, tool ini juga memberikan saran terkait tindakan yang perlu dilakukan sebagai langkah optimasi kinerja website Anda dan meningkatkan user experience.Dengan memanfaatkan hasil analisis dari tool HTTP Header Checker ini, Anda dapat membuat keputusan yang berdasar dan lebih terstruktur.</p>
+                <h4 class="sub-titles">Memantau Riwayat HTTP Header Checker</h4>
+                <p>Terakhir, Anda juga dapat melihat daftar riwayat penggunaan HTTP Header Checker. Dalam daftar tersebut, Anda akan melihat daftar URL situs web yang telah Anda pantau melalui HTTP Header Checker dari cmlabs.</p>',
+    "howto8" => '<p>Gambar 5: Daftar riwayat menggunakan HTTP Header Checker dari cmlabs.</p>
+                <h4 class="sub-titles">Login Setelah 5 Kali Penggunaan</h4>
+                <p>Beberapa tool gratis cmlabs membutuhkan proses login setelah 5 kali penggunaan, HTTP Header Checker adalah salah satunya. Jika Anda telah menggunakannya sebanyak 5 kali, sistem kami akan secara otomatis menampilkan pesan yang menyatakan bahwa Anda telah mencapai batas penggunaan.</p>',
+    "howto9" => '<p>Gambar 6: Peringatan penggunaan telah mencapai batas. Pada peringatan ini, terdapat tombol login yang mengarahkan ke halaman login.</p>
+                <p>Anda dapat login dengan mengklik tombol login pada pesan peringatan yang muncul. Selanjutnya, Anda akan diarahkan ke halaman login cmlabs. Silakan masukkan data yang diperlukan, atau Anda dapat login melalui Google.</p>',
+    "howto10" => '<p>Gambar 7: Halaman login cmlabs</p>
+                <p>Setelah Anda berhasil masuk, Anda akan dapat kembali menggunakan alat ini untuk melakukan pengecekan gratis. Dengan melakukan login, sistem dapat menyimpan data historis penggunaan alat ini dalam satu tahun terakhir.</p>
+                <p>HTTP Header Checker tool dari cmlabs telah terbukti efektif dalam memberikan hasil yang akurat. Sehingga, Anda bisa menjadikan tool ini sebagai andalan dalam proses pemeriksaan website agar dapat memenangkan persaingan di dunia digital.</p>
+                <p>Bergabunglah dengan banyak pengguna lainnya yang telah memanfaatkan potensi dari tool kami untuk menyempurnakan platform online mereka. Pastikan website Anda bebas dari berbagai potensi yang merugikan dengan lakukan pemeriksaan menggunakan HTTP Header Checker dari cmlabs sekarang juga!</p>',
+
     "whats-new-1" => "Saat ini, kami menambahkan tool Technology Lookup. Dengan tool ini, pengguna dapat mengidentifikasi teknologi di situs web dan mencari tahu dengan apa situs web dibuat. Sehingga dapat menghasilkan prospek, analisis pasar, dan penelitian pesaing. Dengan tool ini, kami berharap dapat membantu Anda untuk membangun situs web terbaik.",
     "whats-new-2" => "Tool Technology Lookup di versi terbaru ini juga mempunyai fitur lain. Kami mengembangkan Technology Lookup agar pengguna dapat membuat daftar situs web yang menggunakan teknologi tertentu dan menelusuri sejumlah situs web sekaligus. Dengan ini Anda dapat menemukan prospek baru dengan teknologi yang digunakan oleh kompetitor Anda.",
 ];

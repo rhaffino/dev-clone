@@ -37,12 +37,12 @@ id/http-header-checker
                     </div>
                     <div class="col-sm-3 col-md-2 col-lg-3 col-xl-2 d-flex justify-content-end py-1">
                         @if (session()->has('logged_in') || session()->get('logged_in') == 'true')
-                            <button id="crawl-btn" type="button" class="btn btn-crawl" name="button" data-toggle="tooltip" data-theme="dark" title="@lang('lookup.lookup-btn-tooltip')">@lang('headerchecker.headerchecker-btn')</button>
+                            <button id="crawl-btn" type="button" class="btn btn-crawl" name="button" data-toggle="tooltip" data-theme="dark" title="@lang('headerchecker.headerchecker-btn-tooltip')">@lang('headerchecker.headerchecker-btn')</button>
                         @elseif (isset($access_limit) && $access_limit > 0)
-                            <button disabled="disabled" type="button" class="btn btn-crawl" name="button" data-toggle="tooltip" data-theme="dark" title="@lang('lookup.lookup-btn-tooltip')">@lang('headerchecker.headerchecker-btn')</button>
+                            <button disabled="disabled" type="button" class="btn btn-crawl" name="button" data-toggle="tooltip" data-theme="dark" title="@lang('headerchecker.headerchecker-btn-tooltip')">@lang('headerchecker.headerchecker-btn')</button>
                         @else
                             <button id="crawl-btn" class="next-button" style="display: none"></button>
-                            <button id="process-button" type="button" class="btn btn-crawl check-limit-button analysist-button-guest" name="button" data-toggle="tooltip" data-theme="dark" title="@lang('lookup.lookup-btn-tooltip')">@lang('headerchecker.headerchecker-btn')</button>
+                            <button id="process-button" type="button" class="btn btn-crawl check-limit-button analysist-button-guest" name="button" data-toggle="tooltip" data-theme="dark" title="@lang('headerchecker.headerchecker-btn-tooltip')">@lang('headerchecker.headerchecker-btn')</button>
                         @endif
                         {{-- <button id="crawlButtonDisabled" type="button" class="btn btn-crawl-disabled" name="button" data-toggle="tooltip" data-theme="dark" title="Currently your are reached the limit!">PLEASE WAIT 59:12</button>--}}
                     </div>
@@ -59,7 +59,7 @@ id/http-header-checker
                             <div class="" id="http-header-empty">
                                 <div class="text-center">
                                     <p class="d-block">@lang('headerchecker.result-none')</p>
-                                    <a href="#lookup-description" class="links">@lang('layout.learn-how-to-use')</a>
+                                    <a href="#seo-booster-container" class="links">@lang('layout.learn-how-to-use')</a>
                                 </div>
                             </div>
                             <div class="http-header-result-list mx-5 my-2" id="http-header-result-list" style="display: none">
@@ -93,10 +93,10 @@ id/http-header-checker
                                 </div>
                                 <div id="collapseOne2" class="collapse" data-parent="#accordionExample2">
                                     <div class="card-body">
-                                        <p>@lang('lookup.highlight')</p>
+                                        <p>@lang('headerchecker.highlight')</p>
                                         <div class="d-flex align-items-center">
                                             <i class='bx bxs-check-circle text-darkgrey mr-1'></i>
-                                            <span class="text-darkgrey h6 mb-0">@lang('layout.updated') 15 Mar, 2021</span>
+                                            <span class="text-darkgrey h6 mb-0">@lang('layout.updated') 10 Aug, 2023</span>
                                         </div>
                                     </div>
                                 </div>
@@ -129,10 +129,10 @@ id/http-header-checker
                 </div>
                 <div id="collapseOne2" class="collapse" data-parent="#accordionExample2">
                     <div class="card-body">
-                        <p>@lang('lookup.highlight')</p>
+                        <p>@lang('headerchecker.highlight')</p>
                         <div class="d-flex align-items-center">
                             <i class='bx bxs-check-circle text-darkgrey mr-1'></i>
-                            <span class="text-darkgrey h6 mb-0">@lang('layout.updated') 15 Mar, 2021</span>
+                            <span class="text-darkgrey h6 mb-0">@lang('layout.updated') 10 Aug, 2023</span>
                         </div>
                     </div>
                 </div>
@@ -142,60 +142,57 @@ id/http-header-checker
 </div>
 @endif
 @component('layouts.new_ui_design', ['local' => $local, 'blogs' => $blogs, 'seo_terms' => $seo_terms, 'seo_guidelines' => $seo_guidelines])
-    @slot('title', 'Technology Lookup')
+    @slot('title', 'HTTP Header Checker')
     @slot('subcontent_1')
         <div class="" id="description-tab-1">
-            <h2 class="text-black">@lang('lookup.desc-1')</h2>
-            <p class="text-black">@lang('lookup.desc-1-1')</p>
-            <p class="text-black">@lang('lookup.desc-1-2')</p>
+            <h2 class="text-black">@lang('headerchecker.desc-1')</h2>
+            <p class="text-black">@lang('headerchecker.desc-1-1')</p>
+            <p class="text-black">@lang('headerchecker.desc-1-2')</p>
+            <p class="text-black">@lang('headerchecker.desc-1-3')</p>
         </div>
     @endslot
     @slot('subcontent_2')
         <div class="d-none" id="description-tab-2">
-            <h2 class="text-black">@lang('lookup.desc-2')</h2>
-            <p class="text-black">@lang('lookup.desc-2-1')</p>
+            <p class="text-black">@lang('headerchecker.desc-1-4')</p>
+            <p class="text-black">@lang('headerchecker.desc-1-5')</p>
+            <p class="text-black">@lang('headerchecker.desc-1-6')</p>
+            <p class="text-black">@lang('headerchecker.desc-1-7')</p>
+            <h2 class="text-black">@lang('headerchecker.desc-2')</h2>
+            <p class="text-black">@lang('headerchecker.desc-2-1')</p>
             <ul>
-                <li><p class="text-black">@lang('lookup.desc-2-1-1')</p></li>
-                <li><p class="text-black">@lang('lookup.desc-2-1-2')</p></li>
-                <li><p class="text-black">@lang('lookup.desc-2-1-3')</p></li>
-                <li><p class="text-black">@lang('lookup.desc-2-1-4')</p></li>
+                <li><p class="text-black">@lang('headerchecker.desc-2-1-1')</p></li>
+                <li><p class="text-black">@lang('headerchecker.desc-2-1-2')</p></li>
+                <li><p class="text-black">@lang('headerchecker.desc-2-1-3')</p></li>
+                <li><p class="text-black">@lang('headerchecker.desc-2-1-4')</p></li>
             </ul>
-        </div>
-    @endslot
-    @slot('subcontent_3')
-        <div class="d-none" id="description-tab-3">
-            <h2 class="text-black">@lang('lookup.desc-3')</h2>
-            <p class="text-black">@lang('lookup.desc-3-1')</p>
-            <h4 class="sub-titles">@lang('lookup.desc-3-1-1')</h4>
-            <p class="text-black">@lang('lookup.desc-3-1-2')</p>
-            <p class="text-black">@lang('lookup.desc-3-1-3')</p>
-            <h4 class="sub-titles">@lang('lookup.desc-3-2-1')</h4>
-            <p class="text-black">@lang('lookup.desc-3-2-2')</p>
-            <p class="text-black">@lang('lookup.desc-3-2-3')</p>
         </div>
     @endslot
     @slot('how_to_content')
         <div class="d-none" id="how-to">
-            @lang('lookup.howto1')
+            @lang('headerchecker.howto-title')
+            @lang('headerchecker.howto1')
             <div class="expand-text">
-                @lang('lookup.howto2')
-                <img class="mb-4" src="{{asset('/media/images/lookup_instruction_1.webp')}}" alt="HowTo-lookup-1" width="80%">
-                @lang('lookup.howto3')
-                <img class="mb-4" src="{{asset('/media/images/lookup_instruction_2.webp')}}" alt="HowTo-lookup-2" width="80%">
-                @lang('lookup.howto4')
-                <img class="mb-4" src="{{asset('/media/images/lookup_instruction_3.webp')}}" alt="HowTo-lookup-3" width="80%">
-                @lang('lookup.howto5')
-                <img class="mb-4" src="{{asset('/media/images/lookup_instruction_4.webp')}}" alt="HowTo-lookup-4" width="80%">
-                @lang('lookup.howto6')
-                <img class="mb-4" src="{{asset('/media/images/lookup_instruction_5.webp')}}" alt="HowTo-lookup-5" width="80%">
-                @lang('lookup.howto7')
-                <img class="mb-4" src="{{asset('/media/images/lookup_instruction_6.webp')}}" alt="HowTo-lookup-6" width="80%">
-                @lang('lookup.howto8')
+                @lang('headerchecker.howto2')
+                <img class="mb-4" src="{{asset('/media/images/http_header_instruction_1.webp')}}" alt="HowTo-http_header-1" width="80%">
+                @lang('headerchecker.howto3')
+                <img class="mb-4" src="{{asset('/media/images/http_header_instruction_2.webp')}}" alt="HowTo-http_header-2" width="80%">
+                @lang('headerchecker.howto4')
+                <img class="mb-4" src="{{asset('/media/images/http_header_instruction_3.webp')}}" alt="HowTo-http_header-3" width="80%">
+                @lang('headerchecker.howto5')
+                <img class="mb-4" src="{{asset('/media/images/http_header_instruction_4.webp')}}" alt="HowTo-http_header-4" width="80%">
+                @lang('headerchecker.howto6')
+                @lang('headerchecker.howto7')
+                <img class="mb-4" src="{{asset('/media/images/http_header_instruction_5.webp')}}" alt="HowTo-http_header-5" width="80%">
+                @lang('headerchecker.howto8')
+                <img class="mb-4" src="{{asset('/media/images/http_header_instruction_6.webp')}}" alt="HowTo-http_header-6" width="80%">
+                @lang('headerchecker.howto9')
+                <img class="mb-4" src="{{asset('/media/images/http_header_instruction_7.webp')}}" alt="HowTo-http_header-7" width="80%">
+                @lang('headerchecker.howto10')
             </div>
         </div>
     @endslot
     @slot('read_more')
-        <p class="b1-400 b1-m-400 read-more" id="read-more-button">Read more</p>
+        <p class="b1-400 b1-m-400 read-more" id="read-more-button">@lang('layout.read-more')</p>
     @endslot
 @endcomponent
 @endsection
@@ -233,7 +230,7 @@ id/http-header-checker
         }, {
             "@type": "ListItem",
             "position": 2,
-            "name": "Technology Lookup",
+            "name": "HTTP Header Checker",
             "item": "{{url('/')}}/{{$local}}/http-header-checker"
         }]
     }
@@ -353,7 +350,6 @@ id/http-header-checker
     const read_more_button = document.getElementById('read-more-button');
     const description_1 = document.getElementById('description-tab-1');
     const description_2 = document.getElementById('description-tab-2');
-    const description_3 = document.getElementById('description-tab-3');
     const how_to = document.getElementById('how-to');
     let read = false;
 
@@ -362,22 +358,18 @@ id/http-header-checker
         if(!read){
             description_1.style.display = 'block';
             description_2.style.display = 'block';
-            description_3.style.display = 'block';
             how_to.style.display = 'block';
             description_1.classList.remove("d-none");
             description_2.classList.remove("d-none");
-            description_3.classList.remove("d-none");
             how_to.classList.remove("d-none");
-            read_more_button.innerHTML = 'Show less';
+            read_more_button.innerHTML = @json( __('layout.show-less') );
             read = true;
         } else {
             description_2.style.display = 'none';
-            description_3.style.display = 'none';
             how_to.style.display = 'none';
             description_2.classList.add("d-none");
-            description_3.classList.add("d-none");
             how_to.classList.add("d-none");
-            read_more_button.innerHTML = 'Read more';
+            read_more_button.innerHTML = @json( __('layout.read-more') );
             read = false;
         }
     });

@@ -23,7 +23,7 @@ id/json-ld-faq-schema-generator
         <div class="container-fluid px-0">
             <h1 class="text-darkgrey font-weight-normal">@lang('faq.title')</h1>
             <span class="text-darkgrey h4 font-weight-normal mb-10">@lang('faq.subtitle')</span>
-            <div class="card card-custom mb-5">
+            <div class="card card-custom mt-10 mb-5">
                 <div class="card-body">
                     <div class="row">
                         <div class="col-md-8 mb-5">
