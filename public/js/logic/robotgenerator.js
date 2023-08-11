@@ -289,6 +289,7 @@ jQuery('#export').click(function() {
     document.body.appendChild(anchor);
     anchor.click();
     document.body.removeChild(anchor);
+    recordUserActivity("-");
 
     toastr.success('Successfully Exporting Files', 'Success');
 });
@@ -298,6 +299,7 @@ jQuery('#copy').click(function() {
     const textarea = jQuery('#json-format');
     textarea.select();
     document.execCommand("copy");
+    recordUserActivity("-");
 
     toastr.success('Copied to Clipboard', 'Information');
 });
@@ -366,3 +368,24 @@ $('#local-history-mobile').on('click', '.delete-history--btn', function() {
 
     renderAllData(history.data);
 })
+
+function recordUserActivity(_url) {
+    $.post({
+        url: USER_ACTIVITY_API_URL,
+        data: {
+            '_token': $('meta[name="csrf-token"]').attr('content'),
+            'submitted_url' : _url,
+            'url': window.location.href,
+            width_height: window.innerWidth + "x" + window.innerHeight,
+        },
+        success: (res) => {
+            if (res.statusCode === 200) {
+            } else {
+                console.log(err)
+            }
+        },
+        error: (err) => {
+            console.log(err)
+        }
+    })
+}
