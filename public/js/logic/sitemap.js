@@ -47,6 +47,7 @@ $(document).ready(function() {
         if (url.substr(url.length - 1) === '/')
             socket.emit('crawl', "https://" + url.slice(0, -1));
         else socket.emit('crawl', "https://" + url);
+        recordUserActivity(url);
         $('#info').html(robot_progress)
         cancel(true)
         $("#noCrawlResult").hide();
@@ -54,7 +55,6 @@ $(document).ready(function() {
         buttonOn(false)
         $("#result").empty();
         isCanceled = false;
-        recordUserActivity(url);
     });
 
     $('#cancelOn').on('click', function() {
