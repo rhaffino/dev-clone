@@ -3,20 +3,26 @@ const PING_TOOL_LOCAL_STORAGE_KEY = "ping-tool-history";
 if (lang == "en") {
     var created_at = "Created at ";
     var localStorageNone = "This is your first impressions, no history yet!";
+    var ipAddress_title = "IP Address:";
+    var time_title = "Time:";
+    var detail_title = "Details";
 } else if (lang == "id") {
     var created_at = "Dibuat pada ";
     var localStorageNone = "Ini adalah kesan pertama Anda, belum ada riwayat!";
+    var ipAddress_title = "Alamat IP:";
+    var time_title = "Durasi respons:";
+    var detail_title = "Detail";
 }
 
 const PingTemplate = (host, numericHost, output, time) => `
 <div class="d-flex flex-column mx-5">
   <div class="font-weight-bold ping-header p-4">
     <p class="text-darkgrey">Domain: <span class="text-black">${host}</span></p>
-    <p class="text-darkgrey">IP Address: <span class="text-black">${numericHost}</span></p>
-    <p class="text-darkgrey m-0">Time: ${time}</p>
+    <p class="text-darkgrey">${ipAddress_title} <span class="text-black">${numericHost}</span></p>
+    <p class="text-darkgrey m-0">${time_title} ${time}</p>
   </div>
   <div class="d-flex flex-column data-ping" id="detail-ping">
-    <p class="h5 mb-0 text-darkgrey">Details</p>
+    <p class="h5 mb-0 text-darkgrey">${time_title}</p>
     ${output}
   </div>
 </div>`;

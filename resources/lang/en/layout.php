@@ -86,5 +86,10 @@ return [
     "nav-pricing-political" => "Political Campaign",
     "button-login" => "Login",
     "button-logout" => "Logout",
-    "button-consult" => "Consult with us"
+    "button-consult" => "Consult with us",
+    "writen-by" => "Writen by",
+    "published-at" => "Published at",
+    "edited-at" => "Edited at",
+    "read-more" => "Read More",
+    "show-less" => "Show less",
 ];
