@@ -234,205 +234,186 @@ id
         </div>
     </div>
 </div>
-<div class="" style="background:white">
-    <div class="container container-description">
-        <div class="row">
-            <div class="col-md-9">
-                <div class="" id="description-tab-1">
-                    <h2>@lang('home.desc-1')</h2>
-                    <ul>
-                        <li>@lang('home.desc-1-1')</li>
-                        <li>@lang('home.desc-1-2')</li>
-                        <li>@lang('home.desc-1-3')</li>
-                        <li>@lang('home.desc-1-4')</li>
-                        <li>@lang('home.desc-1-5')</li>
-                    </ul>
-                </div>
-
-                <div class="d-none" id="description-tab-2">
-                    <h2>@lang('home.desc-2')</h2>
-                    <h3>@lang('home.desc-2-1')</h3>
-                    <ol>
-                        <li>@lang('home.desc-2-1-1')</li>
-                        <li>@lang('home.desc-2-1-2')</li>
-                        <li>@lang('home.desc-2-1-3')</li>
-                        <li>@lang('home.desc-2-1-4')</li>
-                    </ol>
-                    <h3>@lang('home.desc-2-2')</h3>
-                    <ol>
-                        <li>@lang('home.desc-2-2-1')</li>
-                        <li>@lang('home.desc-2-2-2')</li>
-                        <li>@lang('home.desc-2-2-3')</li>
-                        <li>@lang('home.desc-2-2-4')</li>
-                    </ol>
-                    <h3>@lang('home.desc-2-3')</h3>
-                    <h4>@lang('home.desc-2-3-1')</h4>
-                    <ol>
-                        <li>@lang('home.desc-2-3-1-1')</li>
-                        <li>@lang('home.desc-2-3-1-2')</li>
-                        <li>@lang('home.desc-2-3-1-3')</li>
-                        <li>@lang('home.desc-2-3-1-4')</li>
-                    </ol>
-                    <h4>@lang('home.desc-2-3-2')</h4>
-                    <ol>
-                        <li>@lang('home.desc-2-3-2-1')</li>
-                        <li>@lang('home.desc-2-3-2-2')</li>
-                        <li>@lang('home.desc-2-3-2-3')</li>
-                        <li>@lang('home.desc-2-3-2-4')</li>
-                    </ol>
-                    <h4>@lang('home.desc-2-3-3')</h4>
-                    <ol>
-                        <li>@lang('home.desc-2-3-3-1')</li>
-                        <li>@lang('home.desc-2-3-3-2')</li>
-                        <li>@lang('home.desc-2-3-3-3')</li>
-                        <li>@lang('home.desc-2-3-3-4')</li>
-                    </ol>
-                    <h4>@lang('home.desc-2-3-4')</h4>
-                    <ol>
-                        <li>@lang('home.desc-2-3-4-1')</li>
-                        <li>@lang('home.desc-2-3-4-2')</li>
-                        <li>@lang('home.desc-2-3-4-3')</li>
-                        <li>@lang('home.desc-2-3-4-4')</li>
-                    </ol>
-                    <h4>@lang('home.desc-2-3-5')</h4>
-                    <ol>
-                        <li>@lang('home.desc-2-3-5-1')</li>
-                        <li>@lang('home.desc-2-3-5-2')</li>
-                        <li>@lang('home.desc-2-3-5-3')</li>
-                        <li>@lang('home.desc-2-3-5-4')</li>
-                    </ol>
-                    <h4>@lang('home.desc-2-3-6')</h4>
-                    <ol>
-                        <li>@lang('home.desc-2-3-6-1')</li>
-                        <li>@lang('home.desc-2-3-6-2')</li>
-                        <li>@lang('home.desc-2-3-6-3')</li>
-                        <li>@lang('home.desc-2-3-6-4')</li>
-                    </ol>
-                    <h4>@lang('home.desc-2-3-7')</h4>
-                    <ol>
-                        <li>@lang('home.desc-2-3-7-1')</li>
-                        <li>@lang('home.desc-2-3-7-2')</li>
-                        <li>@lang('home.desc-2-3-7-3')</li>
-                        <li>@lang('home.desc-2-3-7-4')</li>
-                    </ol>
-                    <h3>@lang('home.desc-2-4')</h3>
-                    <ol>
-                        <li>@lang('home.desc-2-4-1')</li>
-                        <li>@lang('home.desc-2-4-2')</li>
-                        <li>@lang('home.desc-2-4-3')</li>
-                        <li>@lang('home.desc-2-4-4')</li>
-                    </ol>
-                    <h3>@lang('home.desc-2-5')</h3>
-                    <ol>
-                        <li>@lang('home.desc-2-5-1')</li>
-                        <li>@lang('home.desc-2-5-2')</li>
-                        <li>@lang('home.desc-2-5-3')</li>
-                        <li>@lang('home.desc-2-5-4')</li>
-                    </ol>
-                    <h3>@lang('home.desc-2-6')</h3>
-                    <ol>
-                        <li>@lang('home.desc-2-6-1')</li>
-                        <li>@lang('home.desc-2-6-2')</li>
-                        <li>@lang('home.desc-2-6-3')</li>
-                        <li>@lang('home.desc-2-6-4')</li>
-                    </ol>
-                    <h3>@lang('home.desc-2-7')</h3>
-                    <ol>
-                        <li>@lang('home.desc-2-7-1')</li>
-                        <li>@lang('home.desc-2-7-2')</li>
-                        <li>@lang('home.desc-2-7-3')</li>
-                    </ol>
-                    <h3>@lang('home.desc-2-8')</h3>
-                    <ol>
-                        <li>@lang('home.desc-2-8-1')</li>
-                        <li>@lang('home.desc-2-8-2')</li>
-                        <li>@lang('home.desc-2-8-3')</li>
-                        <li>@lang('home.desc-2-8-4')</li>
-                        <li>@lang('home.desc-2-8-5')</li>
-                        <li>@lang('home.desc-2-8-6')</li>
-                        <li>@lang('home.desc-2-8-7')</li>
-                    </ol>
-                    <h3>@lang('home.desc-2-9')</h3>
-                    <ol>
-                        <li>@lang('home.desc-2-9-1')</li>
-                        <li>@lang('home.desc-2-9-2')</li>
-                        <li>@lang('home.desc-2-9-3')</li>
-                        <li>@lang('home.desc-2-9-4')</li>
-                    </ol>
-                    <h3>@lang('home.desc-2-10')</h3>
-                    <ol>
-                        <li>@lang('home.desc-2-10-1')</li>
-                        <li>@lang('home.desc-2-10-2')</li>
-                        <li>@lang('home.desc-2-10-3')</li>
-                        <li>@lang('home.desc-2-10-4')</li>
-                    </ol>
-                    <h3>@lang('home.desc-2-11')</h3>
-                    <ol>
-                        <li>@lang('home.desc-2-11-1')</li>
-                        <li>@lang('home.desc-2-11-2')</li>
-                        <li>@lang('home.desc-2-11-3')</li>
-                        <li>@lang('home.desc-2-11-4')</li>
-                    </ol>
-                    <h3>@lang('home.desc-2-12')</h3>
-                    <ol>
-                        <li>@lang('home.desc-2-12-1')</li>
-                        <li>@lang('home.desc-2-12-2')</li>
-                        <li>@lang('home.desc-2-12-3')</li>
-                        <li>@lang('home.desc-2-12-4')</li>
-                    </ol>
-                </div>
-
-                <div class="d-none" id="description-tab-3">
-                    <h2>@lang('home.desc-3')</h2>
-                    <h3>@lang('home.desc-3-1')</h3>
-                    <p>@lang('home.desc-3-1-1')</p>
-                    <p>@lang('home.desc-3-1-2')</p>
-                    <p>@lang('home.desc-3-1-3')</p>
-                    <h3>@lang('home.desc-3-2')</h3>
-                    <p>@lang('home.desc-3-2-1')</p>
-                    <p>@lang('home.desc-3-2-2')</p>
-                    <p>@lang('home.desc-3-2-3')</p>
-                    <p>@lang('home.desc-3-2-4')</p>
-                    <p>@lang('home.desc-3-2-5')</p>
-                    <p>@lang('home.desc-3-2-6')</p>
-                    <p>@lang('home.desc-3-2-7')</p>
-                    <p>@lang('home.desc-3-2-8')</p>
-                    <h3>@lang('home.desc-3-3')</h3>
-                    <ol>
-                        <li>@lang('home.desc-3-3-1')</li>
-                        <li>@lang('home.desc-3-3-2')</li>
-                        <li>@lang('home.desc-3-3-3')</li>
-                    </ol>
-                    <h3>@lang('home.desc-3-4')</h3>
-                    <p>@lang('home.desc-3-4-1')</p>
-                    <p>@lang('home.desc-3-4-2')</p>
-                    <p>@lang('home.desc-3-4-3')</p>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-1">
-                    <div class="mr-2" style="width:24px !important; height: 24px !important;">
-                        <span class="label label-lg label-tools-description active" id="nav-label-tab-1">1</span>
-                    </div>
-                    <a class="">@lang('home.desc-1')</a>
-                </div>
-                <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-2">
-                    <div class="mr-2" style="width:24px !important; height: 24px !important;">
-                        <span class="label label-lg label-tools-description" id="nav-label-tab-2">2</span>
-                    </div>
-                    <a class="">@lang('home.desc-2')</a>
-                </div>
-                <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-3">
-                    <div class="mr-2" style="width:24px !important; height: 24px !important;">
-                        <span class="label label-lg label-tools-description" id="nav-label-tab-3">3</span>
-                    </div>
-                    <a class="">@lang('home.desc-3')</a>
-                </div>
-            </div>
+@component('layouts.new_ui_design', ['local' => $local, 'blogs' => $blogs, 'seo_terms' => $seo_terms, 'seo_guidelines' => $seo_guidelines])
+    @slot('title', 'Free SEO Tools by CMLABS')
+    @slot('subcontent_1')
+        <div class="" id="description-tab-1">
+            <h2>@lang('home.desc-1')</h2>
+            <ul>
+                <li>@lang('home.desc-1-1')</li>
+                <li>@lang('home.desc-1-2')</li>
+                <li>@lang('home.desc-1-3')</li>
+                <li>@lang('home.desc-1-4')</li>
+                <li>@lang('home.desc-1-5')</li>
+            </ul>
         </div>
-        @include('layouts.roboDesc')
-    </div>
-</div>
+    @endslot
+    @slot('subcontent_2')
+        <div class="d-none" id="description-tab-2">
+            <h2>@lang('home.desc-2')</h2>
+            <h3>@lang('home.desc-2-1')</h3>
+            <ol>
+                <li>@lang('home.desc-2-1-1')</li>
+                <li>@lang('home.desc-2-1-2')</li>
+                <li>@lang('home.desc-2-1-3')</li>
+                <li>@lang('home.desc-2-1-4')</li>
+            </ol>
+            <h3>@lang('home.desc-2-2')</h3>
+            <ol>
+                <li>@lang('home.desc-2-2-1')</li>
+                <li>@lang('home.desc-2-2-2')</li>
+                <li>@lang('home.desc-2-2-3')</li>
+                <li>@lang('home.desc-2-2-4')</li>
+            </ol>
+            <h3>@lang('home.desc-2-3')</h3>
+            <h4>@lang('home.desc-2-3-1')</h4>
+            <ol>
+                <li>@lang('home.desc-2-3-1-1')</li>
+                <li>@lang('home.desc-2-3-1-2')</li>
+                <li>@lang('home.desc-2-3-1-3')</li>
+                <li>@lang('home.desc-2-3-1-4')</li>
+            </ol>
+            <h4>@lang('home.desc-2-3-2')</h4>
+            <ol>
+                <li>@lang('home.desc-2-3-2-1')</li>
+                <li>@lang('home.desc-2-3-2-2')</li>
+                <li>@lang('home.desc-2-3-2-3')</li>
+                <li>@lang('home.desc-2-3-2-4')</li>
+            </ol>
+            <h4>@lang('home.desc-2-3-3')</h4>
+            <ol>
+                <li>@lang('home.desc-2-3-3-1')</li>
+                <li>@lang('home.desc-2-3-3-2')</li>
+                <li>@lang('home.desc-2-3-3-3')</li>
+                <li>@lang('home.desc-2-3-3-4')</li>
+            </ol>
+            <h4>@lang('home.desc-2-3-4')</h4>
+            <ol>
+                <li>@lang('home.desc-2-3-4-1')</li>
+                <li>@lang('home.desc-2-3-4-2')</li>
+                <li>@lang('home.desc-2-3-4-3')</li>
+                <li>@lang('home.desc-2-3-4-4')</li>
+            </ol>
+            <h4>@lang('home.desc-2-3-5')</h4>
+            <ol>
+                <li>@lang('home.desc-2-3-5-1')</li>
+                <li>@lang('home.desc-2-3-5-2')</li>
+                <li>@lang('home.desc-2-3-5-3')</li>
+                <li>@lang('home.desc-2-3-5-4')</li>
+            </ol>
+            <h4>@lang('home.desc-2-3-6')</h4>
+            <ol>
+                <li>@lang('home.desc-2-3-6-1')</li>
+                <li>@lang('home.desc-2-3-6-2')</li>
+                <li>@lang('home.desc-2-3-6-3')</li>
+                <li>@lang('home.desc-2-3-6-4')</li>
+            </ol>
+            <h4>@lang('home.desc-2-3-7')</h4>
+            <ol>
+                <li>@lang('home.desc-2-3-7-1')</li>
+                <li>@lang('home.desc-2-3-7-2')</li>
+                <li>@lang('home.desc-2-3-7-3')</li>
+                <li>@lang('home.desc-2-3-7-4')</li>
+            </ol>
+            <h3>@lang('home.desc-2-4')</h3>
+            <ol>
+                <li>@lang('home.desc-2-4-1')</li>
+                <li>@lang('home.desc-2-4-2')</li>
+                <li>@lang('home.desc-2-4-3')</li>
+                <li>@lang('home.desc-2-4-4')</li>
+            </ol>
+            <h3>@lang('home.desc-2-5')</h3>
+            <ol>
+                <li>@lang('home.desc-2-5-1')</li>
+                <li>@lang('home.desc-2-5-2')</li>
+                <li>@lang('home.desc-2-5-3')</li>
+                <li>@lang('home.desc-2-5-4')</li>
+            </ol>
+            <h3>@lang('home.desc-2-6')</h3>
+            <ol>
+                <li>@lang('home.desc-2-6-1')</li>
+                <li>@lang('home.desc-2-6-2')</li>
+                <li>@lang('home.desc-2-6-3')</li>
+                <li>@lang('home.desc-2-6-4')</li>
+            </ol>
+            <h3>@lang('home.desc-2-7')</h3>
+            <ol>
+                <li>@lang('home.desc-2-7-1')</li>
+                <li>@lang('home.desc-2-7-2')</li>
+                <li>@lang('home.desc-2-7-3')</li>
+            </ol>
+            <h3>@lang('home.desc-2-8')</h3>
+            <ol>
+                <li>@lang('home.desc-2-8-1')</li>
+                <li>@lang('home.desc-2-8-2')</li>
+                <li>@lang('home.desc-2-8-3')</li>
+                <li>@lang('home.desc-2-8-4')</li>
+                <li>@lang('home.desc-2-8-5')</li>
+                <li>@lang('home.desc-2-8-6')</li>
+                <li>@lang('home.desc-2-8-7')</li>
+            </ol>
+            <h3>@lang('home.desc-2-9')</h3>
+            <ol>
+                <li>@lang('home.desc-2-9-1')</li>
+                <li>@lang('home.desc-2-9-2')</li>
+                <li>@lang('home.desc-2-9-3')</li>
+                <li>@lang('home.desc-2-9-4')</li>
+            </ol>
+            <h3>@lang('home.desc-2-10')</h3>
+            <ol>
+                <li>@lang('home.desc-2-10-1')</li>
+                <li>@lang('home.desc-2-10-2')</li>
+                <li>@lang('home.desc-2-10-3')</li>
+                <li>@lang('home.desc-2-10-4')</li>
+            </ol>
+            <h3>@lang('home.desc-2-11')</h3>
+            <ol>
+                <li>@lang('home.desc-2-11-1')</li>
+                <li>@lang('home.desc-2-11-2')</li>
+                <li>@lang('home.desc-2-11-3')</li>
+                <li>@lang('home.desc-2-11-4')</li>
+            </ol>
+            <h3>@lang('home.desc-2-12')</h3>
+            <ol>
+                <li>@lang('home.desc-2-12-1')</li>
+                <li>@lang('home.desc-2-12-2')</li>
+                <li>@lang('home.desc-2-12-3')</li>
+                <li>@lang('home.desc-2-12-4')</li>
+            </ol>
+        </div>
+    @endslot
+    @slot('subcontent_3')
+        <div class="d-none" id="description-tab-3">
+            <h2>@lang('home.desc-3')</h2>
+            <h3>@lang('home.desc-3-1')</h3>
+            <p>@lang('home.desc-3-1-1')</p>
+            <p>@lang('home.desc-3-1-2')</p>
+            <p>@lang('home.desc-3-1-3')</p>
+            <h3>@lang('home.desc-3-2')</h3>
+            <p>@lang('home.desc-3-2-1')</p>
+            <p>@lang('home.desc-3-2-2')</p>
+            <p>@lang('home.desc-3-2-3')</p>
+            <p>@lang('home.desc-3-2-4')</p>
+            <p>@lang('home.desc-3-2-5')</p>
+            <p>@lang('home.desc-3-2-6')</p>
+            <p>@lang('home.desc-3-2-7')</p>
+            <p>@lang('home.desc-3-2-8')</p>
+            <h3>@lang('home.desc-3-3')</h3>
+            <ol>
+                <li>@lang('home.desc-3-3-1')</li>
+                <li>@lang('home.desc-3-3-2')</li>
+                <li>@lang('home.desc-3-3-3')</li>
+            </ol>
+            <h3>@lang('home.desc-3-4')</h3>
+            <p>@lang('home.desc-3-4-1')</p>
+            <p>@lang('home.desc-3-4-2')</p>
+            <p>@lang('home.desc-3-4-3')</p>
+        </div>
+    @endslot
+    @slot('read_more')
+        <p class="b1-400 b1-m-400 read-more" id="read-more-button">Read more</p>
+    @endslot
+@endcomponent
 @endsection
 
 @push('script')
@@ -450,6 +431,35 @@ id
 </script>
 <script type="text/javascript">
     $('#toggle_button_webmaster').click();
+</script>
+<script>
+    // Get the element by its id
+    const read_more_button = document.getElementById('read-more-button');
+    const description_1 = document.getElementById('description-tab-1');
+    const description_2 = document.getElementById('description-tab-2');
+    const description_3 = document.getElementById('description-tab-3');
+    let read = false;
+
+    // Add a click event listener
+    read_more_button.addEventListener('click', function() {
+        if(!read){
+            description_1.style.display = 'block';
+            description_2.style.display = 'block';
+            description_3.style.display = 'block';
+            description_1.classList.remove("d-none");
+            description_2.classList.remove("d-none");
+            description_3.classList.remove("d-none");
+            read_more_button.innerHTML = 'Show less';
+            read = true;
+        } else {
+            description_2.style.display = 'none';
+            description_3.style.display = 'none';
+            description_2.classList.add("d-none");
+            description_3.classList.add("d-none");
+            read_more_button.innerHTML = 'Read more';
+            read = false;
+        }
+    });
 </script>
 @endpush
 

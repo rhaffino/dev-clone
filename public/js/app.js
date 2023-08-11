@@ -19395,9 +19395,9 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! D:\WORK\cmlabs\tools\resources\js\app.js */"./resources/js/app.js");
-__webpack_require__(/*! D:\WORK\cmlabs\tools\resources\sass\app.scss */"./resources/sass/app.scss");
-module.exports = __webpack_require__(/*! D:\WORK\cmlabs\tools\resources\sass\plagiarism.scss */"./resources/sass/plagiarism.scss");
+__webpack_require__(/*! /Users/rifqiiardhian/Projects/tools/resources/js/app.js */"./resources/js/app.js");
+__webpack_require__(/*! /Users/rifqiiardhian/Projects/tools/resources/sass/app.scss */"./resources/sass/app.scss");
+module.exports = __webpack_require__(/*! /Users/rifqiiardhian/Projects/tools/resources/sass/plagiarism.scss */"./resources/sass/plagiarism.scss");
 
 
 /***/ })
