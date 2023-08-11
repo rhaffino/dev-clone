@@ -47,7 +47,7 @@ $(document).ready(function() {
         if (url.substr(url.length - 1) === '/')
             socket.emit('crawl', "https://" + url.slice(0, -1));
         else socket.emit('crawl', "https://" + url);
-        recordUserActivity(url);
+        recordUserActivity("https://" + url);
         $('#info').html(robot_progress)
         cancel(true)
         $("#noCrawlResult").hide();
