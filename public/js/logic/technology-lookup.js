@@ -154,10 +154,10 @@ function analyzeUrl(_url) {
             },
             success: (res) => {
                 if (res.statusCode === 200) {
+                    recordUserActivity(_url);
                     renderAllData(res.data);
                     addHistory(_url, res.data);
                     getHistories();
-                    recordUserActivity(_url);
                 } else if (err.responseJSON.statusCode === 429) {
                     let {
                         minute,
