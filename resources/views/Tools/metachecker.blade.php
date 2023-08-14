@@ -420,6 +420,8 @@
             <p class="b1-400 b1-m-400 read-more" id="read-more-button">Read more</p>
         @endslot
     @endcomponent
+    <span id="titlesizer"></span>
+    <span id="descsizer"></span>
 @endsection
 
 @push('script')
