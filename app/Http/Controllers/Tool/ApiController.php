@@ -319,7 +319,7 @@ class ApiController extends Controller
                     $dayOfWeek = $prevDateInMonth->dayOfWeekIso;
                     $dayString = strtoupper($prevDateInMonth->shortEnglishDayOfWeek);
                     $dayDate = $prevDateInMonth->day;
-                    if ($dayOfWeek == 0 || $dayOfWeek == 6) {
+                    if ($dayOfWeek == 6 || $dayOfWeek == 7) {
                         $calendar[$dateString] = ['cost' => 0, 'request' => 0, 'weekend' => true, 'date' => "$dayString, $dayDate"];
                     } else {
                         $calendar[$dateString] = ['cost' => 0, 'request' => 0, 'weekend' => false, 'date' => "$dayString, $dayDate"];
