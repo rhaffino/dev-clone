@@ -1,10 +1,22 @@
-<div id="seo-booster-container" class="seo-booster-container" style="width:100%; overflow: auto;">
+<div class="seo-booster-container" style="width:100%; overflow: auto;">
     <h2 class="h2-700 h2-m-700">{{ $title }}</h2>
     <div class="d-flex align-items-center author">
         <i class='bx bxs-user-circle'></i>
-    <p class="m-0 b2-400 b2-m-400">@lang('layout.writen-by') cmlabs</p>
+        <p class="m-0 b2-400 b2-m-400">
+            @if($lang === 'en')
+            Writen by cmlabs
+            @else
+            Ditulis oleh cmlabs
+            @endif
+        </p>
         <div>|</div>
-        <p class="m-0 b2-400 b2-m-400">@lang('layout.published-at') Aug 2, 2023</p>
+        <p class="m-0 b2-400 b2-m-400">
+            @if($local === 'en')
+            Published at Mar 15, 2023
+            @else
+            Dipublikasikan pada 15 Maret 2023
+            @endif
+        </p>
     </div>
     <div class="subcontents">
         @if (isset($subcontent_1))
@@ -40,5 +52,11 @@
         @endif
         {{ $read_more }}
     </div>
-    <p class="m-0 b2-400 b2-m-400" style="color:#959595">@lang('layout.edited-at') Aug 11, 2023</p>
+    <p class="m-0 b2-400 b2-m-400" style="color:#959595">
+        @if($local === 'en')
+        Edited at Aug 11, 2023
+        @else
+        Dipublikasikan pada 11 Agustus 2023
+        @endif
+    </p>
 </div>

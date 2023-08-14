@@ -201,6 +201,53 @@ class ToolsController extends Controller
 
         $blogs->published_at = Carbon::parse($seo_terms->published_at)->format('d F Y');
 
+        // Fetch Seo Term
+        $seo_terms = Page::select('pages.id', 'pages.published_at', 'pages.title', 'pages.slug', 'pages.image', 'pages.created_by', DB::raw($lang == 'id' ? "'KAMUSSEO'" : "'SEOTERMS'" . " as 'type'"), DB::raw("'seo-terms' as 'link'"))
+        ->join('page_categories', function ($join) use($lang) {
+            $join->on('pages.page_category_id', '=', 'page_categories.id')
+            ->where('page_categories.language', $lang)
+            ->where('page_categories.slug', '=', 'seo-terms');
+        })
+        ->where('pages.language', $lang)
+        ->where('pages.slug', '!=', 'about')
+        ->where('pages.status', '1')
+        ->orderBy('pages.created_at','DESC')
+        ->first();
+
+        $seo_terms->published_at = Carbon::parse($seo_terms->published_at)->format('d F Y');
+
+        // Fetch Seo Guidelines
+        $seo_guidelines = Page::select('pages.id', 'pages.published_at', 'pages.title', 'pages.slug', 'pages.image', 'pages.created_by', DB::raw($lang == 'id' ? "'PANDUANSEO'" : "'SEOGUIDELINES'" . " as 'type'"), DB::raw("'seo-guide' as 'link'"))
+        ->join('page_categories', function ($join) use($lang) {
+            $join->on('pages.page_category_id', '=', 'page_categories.id')
+            ->where('page_categories.language', $lang)
+            ->where('page_categories.slug', '=', 'seo-guide');
+        })
+        ->where('pages.language', $lang)
+        ->where('pages.slug', '!=', 'about')
+        ->orderBy('pages.created_at','DESC')
+        ->where('pages.status', '1')->first();
+
+        $seo_guidelines->published_at = Carbon::parse($seo_terms->published_at)->format('d F Y');
+
+        // Fetch Blogs
+        $blogCategories = BlogCategory::select('id', 'slug', 'name')
+        ->where('language', $lang)
+        ->where('slug', '!=', 'press-release')
+        ->where('slug', '!=', 'promo-campaign')
+        ->where('slug', '!=', 'event')
+        ->isPublish()
+        ->get();
+
+        $blogs = Blog::select('id', 'published_at', 'title', 'slug', 'image', 'created_by', DB::raw($lang == 'id' ? "'BLOG'" : "'BLOGS'" . " as 'type'"), DB::raw("'blog' as 'link'"))
+            ->where('language', $lang)
+            ->where('status', '1')
+            ->whereIn('blog_category_id', $blogCategories->pluck('id'))
+            ->orderBy('published_at', 'desc')
+            ->first();
+
+        $blogs->published_at = Carbon::parse($seo_terms->published_at)->format('d F Y');
+
         $is_maintenance = in_array('faq', explode(',', env('TOOLS_MAINTENANCE'))) && env('APP_ENV') === 'production';
 
         return view('Tools/faq', compact('local', 'dataID', 'dataEN', 'is_maintenance', 'lang', 'blogs', 'seo_terms', 'seo_guidelines'));
@@ -776,12 +823,12 @@ class ToolsController extends Controller
 
     public function mobiletest($lang)
     {
-      App::setLocale($lang);
-      $dataID = $this->HomeController->getBlogWordpressId();
-      $dataEN = $this->HomeController->getBlogWordpressEn();
-      $local = App::getLocale();
+        App::setLocale($lang);
+        $dataID = $this->HomeController->getBlogWordpressId();
+        $dataEN = $this->HomeController->getBlogWordpressEn();
+        $local = App::getLocale();
 
-      // Fetch Seo Term
+        // Fetch Seo Term
         $seo_terms = Page::select('pages.id', 'pages.published_at', 'pages.title', 'pages.slug', 'pages.image', 'pages.created_by', DB::raw($lang == 'id' ? "'KAMUSSEO'" : "'SEOTERMS'" . " as 'type'"), DB::raw("'seo-terms' as 'link'"))
         ->join('page_categories', function ($join) use($lang) {
             $join->on('pages.page_category_id', '=', 'page_categories.id')
@@ -828,19 +875,19 @@ class ToolsController extends Controller
 
         $blogs->published_at = Carbon::parse($seo_terms->published_at)->format('d F Y');
 
-      $is_maintenance = in_array('mobile-test', explode(',', env('TOOLS_MAINTENANCE'))) && env('APP_ENV') === 'production';
+        $is_maintenance = in_array('mobile-test', explode(',', env('TOOLS_MAINTENANCE'))) && env('APP_ENV') === 'production';
 
-      return view('Tools/mobiletest', compact('local', 'dataID', 'dataEN', 'is_maintenance', 'lang', 'blogs', 'seo_terms', 'seo_guidelines'));
+        return view('Tools/mobiletest', compact('local', 'dataID', 'dataEN', 'is_maintenance', 'lang', 'blogs', 'seo_terms', 'seo_guidelines'));
     }
 
     public function sitemap($lang)
     {
-      App::setLocale($lang);
-      $dataID = $this->HomeController->getBlogWordpressId();
-      $dataEN = $this->HomeController->getBlogWordpressEn();
-      $local = App::getLocale();
+        App::setLocale($lang);
+        $dataID = $this->HomeController->getBlogWordpressId();
+        $dataEN = $this->HomeController->getBlogWordpressEn();
+        $local = App::getLocale();
 
-      // Fetch Seo Term
+        // Fetch Seo Term
         $seo_terms = Page::select('pages.id', 'pages.published_at', 'pages.title', 'pages.slug', 'pages.image', 'pages.created_by', DB::raw($lang == 'id' ? "'KAMUSSEO'" : "'SEOTERMS'" . " as 'type'"), DB::raw("'seo-terms' as 'link'"))
         ->join('page_categories', function ($join) use($lang) {
             $join->on('pages.page_category_id', '=', 'page_categories.id')
@@ -887,9 +934,9 @@ class ToolsController extends Controller
 
         $blogs->published_at = Carbon::parse($seo_terms->published_at)->format('d F Y');
 
-      $is_maintenance = in_array('sitemap-generator', explode(',', env('TOOLS_MAINTENANCE'))) && env('APP_ENV') === 'production';
+        $is_maintenance = in_array('sitemap-generator', explode(',', env('TOOLS_MAINTENANCE'))) && env('APP_ENV') === 'production';
 
-      return view('Tools/sitemap', compact('local', 'dataID', 'dataEN', 'is_maintenance', 'lang', 'blogs', 'seo_terms', 'seo_guidelines'));
+        return view('Tools/sitemap', compact('local', 'dataID', 'dataEN', 'is_maintenance', 'lang', 'blogs', 'seo_terms', 'seo_guidelines'));
     }
 
     public function robotgenerator($lang)

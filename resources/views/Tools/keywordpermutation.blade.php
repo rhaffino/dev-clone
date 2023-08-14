@@ -197,7 +197,6 @@ id/keyword-permutation
             <p class="text-black">@lang('permutation.desc-3-3-3')</p>
         </div>
     @endslot
-    @endslot
     @slot('how_to_content')
         <div class="d-none" id="how-to">
             @lang('permutation.howto1')
