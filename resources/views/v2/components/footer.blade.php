@@ -282,17 +282,40 @@
                     <div class="find-us text-primary-70">
                         {{-- <span class="b2-400 b2-m-400">Find us on:</span> --}}
                         <ul>
-                            <li><a href="https://www.instagram.com/cmlabsco/" target="_blank"
-                                    rel="nofollow noopener noreferrer"><i class='bx bxl-instagram-alt icon'></i></a>
+                            <li>
+                                <a href="https://www.linkedin.com/company/cmlabs/" target="_blank"
+                                    rel="nofollow noopener noreferrer"><i class='bx bxl-linkedin icon '></i>
+                                </a>
                             </li>
-                            <li><a href="https://medium.com/cmlabs" target="_blank"
-                                    rel="nofollow noopener noreferrer"><i class='bx bxl-medium icon'></i></a></li>
-                            <li><a href="https://twitter.com/cmlabsco" target="_blank"
-                                    rel="nofollow noopener noreferrer"><i class='bx bxl-twitter icon'></i></a></li>
-                            <li><a href="https://www.linkedin.com/company/cmlabs/" target="_blank"
-                                    rel="nofollow noopener noreferrer"><i class='bx bxl-linkedin icon '></i></a></li>
-                            <li><a href="https://www.youtube.com/channel/UCnRPcyr0HIwN2HNGx35VRvA" target="_blank"
-                                    rel="nofollow noopener noreferrer"><i class='bx bxl-youtube icon'></i></a>
+                            <li>
+                                <a href="https://medium.com/cmlabs" target="_blank"
+                                    rel="nofollow noopener noreferrer"><i class='bx bxl-medium icon'></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://twitter.com/cmlabsco" target="_blank"
+                                    rel="nofollow noopener noreferrer"><i class='bx bxl-twitter icon'></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://id.pinterest.com/cmlabsco/" target="_blank"
+                                    rel="nofollow noopener noreferrer"><i class='bx bxl-pinterest'></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.youtube.com/channel/UCnRPcyr0HIwN2HNGx35VRvA" target="_blank"
+                                    rel="nofollow noopener noreferrer"><i class='bx bxl-youtube icon'></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/cmlabsco/" target="_blank"
+                                    rel="nofollow noopener noreferrer"><i class='bx bxl-instagram-alt icon'></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.tiktok.com/@cmlabs" target="_blank"
+                                    rel="nofollow noopener noreferrer"><i class='bx bxl-tiktok'></i>
+                                </a>
                             </li>
                         </ul>
                     </div>
