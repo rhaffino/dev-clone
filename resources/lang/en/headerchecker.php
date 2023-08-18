@@ -19,8 +19,6 @@ return [
     "desc-1-5" => "The HTTP Header Checker by cmlabs is a tool designed to inspect and analyze the headers of Hypertext Transfer Protocol (HTTP) requests as well as responses exchanged between client and server.",
     "desc-1-6" => "This tool is one of the most essential components containing important metadata and instructions that oversee how data is transmitted and processed.When we are speaking about cybersecurity, this tool stands as the first line of defense to protect particular websites from potential threats.",
     "desc-1-7" => "This tool can verify the integrity of headers to protect against malicious attacks such as Cross-Site Scripting (XSS), Cross-Site Request Forgery (CSRF), and Clickjacking.",
-
-    
     "desc-2" => "Advantages of Using HTTP Header Checker by cmlabs",
     "desc-2-1" => "The HTTP Header Checker by cmlabs offers a range of valuable advantages that contribute to enhanced security, optimized performance, and streamlined development within the digital landscape.",
     "desc-2-2" => "Discover the advantages along with the description of it in the following list:",
@@ -28,8 +26,8 @@ return [
     "desc-2-1-2" => "<b>Robust Security Enhancement:</b> This tool can be your powerful ally in fortifying cybersecurity measures. It meticulously inspects HTTP headers to identify and rectify potential vulnerabilities, ensuring that critical security headers are correctly configured.",
     "desc-2-1-3" => "<b>Simplified Compliance and Standards:</b> This tool will verify that headers align with recommendations from authoritative bodies to help maintain a high level of professionalism and credibility.",
     "desc-2-1-4" => "<b>Comprehensive SEO and Accessibility Support:</b> This tool goes beyond the technical realm. It can also contribute to improved search engine visibility and accessibility. This tool will ensure that meta tags and other SEO-relevant headers are correctly configured.",
-
-
+    "desc-table-title" => "Table Detail Description HTTP Header",
+    "table-header" => "Description",
     "howto-title" => '<h2>How to Use HTTP Header Checker cmlabs</h2>',
     "howto1" => '<p>Quickly ensure that your website is secure and compliant! Follow the steps below to obtain meaningful analysis results.</p>',
     "howto2" => '<h4 class="sub-titles">Go to The HTTP Header Checker Page</h4>',
@@ -55,7 +53,6 @@ return [
     "howto10" => '<p>Figure 7: cmlabs login page</p>
                     <p>Once you have successfully logged in, you will be able to return to using this tool for free checking. By logging in, the system can save historical data on the use of this tool in the last one year.</p>
                     <p>With a proven track record of delivering accurate and actionable results, our HTTP Header Checker tool can be your trusted companion in the journey of digital excellence. Join countless satisfied users who have harnessed the potential of this tool to fine-tune their online platforms, ensuring faster loading times, smoother interactions, and elevated user satisfaction. Now, it’s your time!</p>',
-
     "whats-new-1" => "Currently, we are adding the Technology Lookup tool. With this tool, users can identify the technology on the website and find out what the website was created with. So that it can generate prospects, market analysis, and competitor research. With this tool, we hope to help you to build the best website possible.",
     "whats-new-2" => "The Technology Lookup Tool in this latest version also has other features. We developed Technology Lookup so that users can list websites that use a particular technology and browse several websites at once. With this, you can find new prospects with the technology used by your competitors.",
 ];

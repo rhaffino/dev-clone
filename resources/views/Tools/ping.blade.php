@@ -62,7 +62,7 @@ id/ping
                     <div class="card card-custom" id="ping-result-container">
                         <div class="card-body py-4 px-0">
                             <div class="" id="ping-result-empty">
-                                <div class="text-center">
+                                <div class="text-center px-4">
                                     <p class="d-block">@lang('ping.result-none')</p>
                                     <a href="#seo-booster-container" class="links">@lang('layout.learn-how-to-use')</a>
                                 </div>
