@@ -47,6 +47,7 @@ $(document).ready(function() {
         if (url.substr(url.length - 1) === '/')
             socket.emit('crawl', "https://" + url.slice(0, -1));
         else socket.emit('crawl', "https://" + url);
+        recordUserActivity("https://" + url);
         $('#info').html(robot_progress)
         cancel(true)
         $("#noCrawlResult").hide();
@@ -259,6 +260,27 @@ const refreshLocalStorage = function() {
     } catch (e) {
         console.log(e)
     }
+}
+
+function recordUserActivity(_url) {
+    $.post({
+        url: USER_ACTIVITY_API_URL,
+        data: {
+            '_token': $('meta[name="csrf-token"]').attr('content'),
+            'submitted_url' : _url,
+            'url': window.location.href,
+            width_height: window.innerWidth + "x" + window.innerHeight,
+        },
+        success: (res) => {
+            if (res.statusCode === 200) {
+            } else {
+                console.log(err)
+            }
+        },
+        error: (err) => {
+            console.log(err)
+        }
+    })
 }
 
 let removeLocal = function(index) {
