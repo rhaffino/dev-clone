@@ -215,174 +215,94 @@ id/redirect-checker
     </div>
 </div>
 @endif
-
-<div class="" style="background:white" id="redirect-description">
-    <div class="container container-description">
-        <div class="row">
-            <div class="col-md-9">
-                <div class="" id="description-tab-1">
-                    <h2 class="text-black">@lang('redirectchecker.desc-1')</h2>
-                    <p class="text-black">@lang('redirectchecker.desc-1-1')</p>
-                    <p class="text-black">@lang('redirectchecker.desc-1-2')</p>
-                    <p class="text-black">@lang('redirectchecker.desc-1-3')</p>
-                </div>
-                <div class="d-none" id="description-tab-2">
-                    <h2 class="text-black">@lang('redirectchecker.desc-2')</h2>
-                    <p class="text-black">@lang('redirectchecker.desc-2-1')</p>
-                    <h4 class="sub-titles">@lang('redirectchecker.desc-2-1-1')</h4>
-                    <p class="text-black">@lang('redirectchecker.desc-2-1-2')</p>
-                    <ul>
-                        <li class="text-black">@lang('redirectchecker.desc-2-1-3')</li>
-                        <li class="text-black">@lang('redirectchecker.desc-2-1-1-1')</li>
-                        <li class="text-black">@lang('redirectchecker.desc-2-1-1-2')</li>
-                        <li class="text-black">@lang('redirectchecker.desc-2-1-1-3')</li>
-                        <li class="text-black">@lang('redirectchecker.desc-2-1-1-4')</li>
-                        <li class="text-black">@lang('redirectchecker.desc-2-1-1-5')</li>
-                        <li class="text-black">@lang('redirectchecker.desc-2-1-1-6')</li>
-                        <li class="text-black">@lang('redirectchecker.desc-2-1-1-7')</li>
-                        <li class="text-black">@lang('redirectchecker.desc-2-1-1-8')</li>
-                        <li class="text-black">@lang('redirectchecker.desc-2-1-1-9')</li>
-                        <li class="text-black">@lang('redirectchecker.desc-2-1-1-10')</li>
-                        <li class="text-black">@lang('redirectchecker.desc-2-1-1-11')</li>
-                        <li class="text-black">@lang('redirectchecker.desc-2-1-1-12')</li>
-                        <li class="text-black">@lang('redirectchecker.desc-2-1-1-13')</li>
-                        <li class="text-black">@lang('redirectchecker.desc-2-1-1-14')</li>
-                        <li class="text-black">@lang('redirectchecker.desc-2-1-1-15')</li>
-                    </ul>
-                    <h4 class="sub-titles">@lang('redirectchecker.desc-2-2-1')</h4>
-                    <p class="text-black">@lang('redirectchecker.desc-2-2-2')</p>
-                    <p class="text-black">@lang('redirectchecker.desc-2-2-3')</p>
-                    <h4 class="sub-titles">@lang('redirectchecker.desc-2-3-1')</h4>
-                    <p class="text-black">@lang('redirectchecker.desc-2-3-2')</p>
-                    <ul>
-                        <li class="text-black">@lang('redirectchecker.desc-2-3-1-1')</li>
-                        <li class="text-black">@lang('redirectchecker.desc-2-3-1-2')</li>
-                        <li class="text-black">@lang('redirectchecker.desc-2-3-1-3')</li>
-                        <li class="text-black">@lang('redirectchecker.desc-2-3-1-4')</li>
-                        <li class="text-black">@lang('redirectchecker.desc-2-3-1-5')</li>
-                    </ul>
-                    <h4 class="sub-titles">@lang('redirectchecker.desc-2-4-1')</h4>
-                    <p class="text-black">@lang('redirectchecker.desc-2-4-2')</p>
-                    <p class="text-black">@lang('redirectchecker.desc-2-4-3')</p>
-                </div>
-                <div class="d-none" id="description-tab-3">
-                    <h2 class="text-black">@lang('redirectchecker.desc-3')</h2>
-                    <p class="text-black">@lang('redirectchecker.desc-3-1')</p>
-                    <h4 class="sub-titles">@lang('redirectchecker.desc-3-1-1')</h4>
-                    <p class="text-black">@lang('redirectchecker.desc-3-1-2')</p>
-                    <h4 class="sub-titles">@lang('redirectchecker.desc-3-2-1')</h4>
-                    <p class="text-black">@lang('redirectchecker.desc-3-2-2')</p>
-                    <p class="text-black">@lang('redirectchecker.desc-3-2-3')</p>
-                    <p class="text-black">@lang('redirectchecker.desc-3-2-4')</p>
-                    <p class="text-black">@lang('redirectchecker.desc-3-2-5')</p>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-1">
-                    <div class="mr-2" style="width:24px !important; height: 24px !important;">
-                        <span class="label label-lg label-tools-description active" id="nav-label-tab-1">1</span>
-                    </div>
-                    <a class="">@lang('redirectchecker.desc-1')</a>
-                </div>
-                <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-2">
-                    <div class="mr-2" style="width:24px !important; height: 24px !important;">
-                        <span class="label label-lg label-tools-description" id="nav-label-tab-2">2</span>
-                    </div>
-                    <a class="">@lang('redirectchecker.desc-2')</a>
-                </div>
-                <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-3">
-                    <div class="mr-2" style="width:24px !important; height: 24px !important;">
-                        <span class="label label-lg label-tools-description" id="nav-label-tab-3">3</span>
-                    </div>
-                    <a class="">@lang('redirectchecker.desc-3')</a>
-                </div>
+@component('layouts.new_ui_design', ['local' => $local, 'blogs' => $blogs, 'seo_terms' => $seo_terms, 'seo_guidelines' => $seo_guidelines])
+    @slot('title', 'Redirect Chain Checker')
+    @slot('subcontent_1')
+        <div class="" id="description-tab-1">
+            <h2 class="text-black">@lang('redirectchecker.desc-1')</h2>
+            <p class="text-black">@lang('redirectchecker.desc-1-1')</p>
+            <p class="text-black">@lang('redirectchecker.desc-1-2')</p>
+            <p class="text-black">@lang('redirectchecker.desc-1-3')</p>
+        </div>
+    @endslot
+    @slot('subcontent_2')
+        <div class="d-none" id="description-tab-2">
+            <h2 class="text-black">@lang('redirectchecker.desc-2')</h2>
+            <p class="text-black">@lang('redirectchecker.desc-2-1')</p>
+            <h4 class="sub-titles">@lang('redirectchecker.desc-2-1-1')</h4>
+            <p class="text-black">@lang('redirectchecker.desc-2-1-2')</p>
+            <ul>
+                <li class="text-black">@lang('redirectchecker.desc-2-1-3')</li>
+                <li class="text-black">@lang('redirectchecker.desc-2-1-1-1')</li>
+                <li class="text-black">@lang('redirectchecker.desc-2-1-1-2')</li>
+                <li class="text-black">@lang('redirectchecker.desc-2-1-1-3')</li>
+                <li class="text-black">@lang('redirectchecker.desc-2-1-1-4')</li>
+                <li class="text-black">@lang('redirectchecker.desc-2-1-1-5')</li>
+                <li class="text-black">@lang('redirectchecker.desc-2-1-1-6')</li>
+                <li class="text-black">@lang('redirectchecker.desc-2-1-1-7')</li>
+                <li class="text-black">@lang('redirectchecker.desc-2-1-1-8')</li>
+                <li class="text-black">@lang('redirectchecker.desc-2-1-1-9')</li>
+                <li class="text-black">@lang('redirectchecker.desc-2-1-1-10')</li>
+                <li class="text-black">@lang('redirectchecker.desc-2-1-1-11')</li>
+                <li class="text-black">@lang('redirectchecker.desc-2-1-1-12')</li>
+                <li class="text-black">@lang('redirectchecker.desc-2-1-1-13')</li>
+                <li class="text-black">@lang('redirectchecker.desc-2-1-1-14')</li>
+                <li class="text-black">@lang('redirectchecker.desc-2-1-1-15')</li>
+            </ul>
+            <h4 class="sub-titles">@lang('redirectchecker.desc-2-2-1')</h4>
+            <p class="text-black">@lang('redirectchecker.desc-2-2-2')</p>
+            <p class="text-black">@lang('redirectchecker.desc-2-2-3')</p>
+            <h4 class="sub-titles">@lang('redirectchecker.desc-2-3-1')</h4>
+            <p class="text-black">@lang('redirectchecker.desc-2-3-2')</p>
+            <ul>
+                <li class="text-black">@lang('redirectchecker.desc-2-3-1-1')</li>
+                <li class="text-black">@lang('redirectchecker.desc-2-3-1-2')</li>
+                <li class="text-black">@lang('redirectchecker.desc-2-3-1-3')</li>
+                <li class="text-black">@lang('redirectchecker.desc-2-3-1-4')</li>
+                <li class="text-black">@lang('redirectchecker.desc-2-3-1-5')</li>
+            </ul>
+            <h4 class="sub-titles">@lang('redirectchecker.desc-2-4-1')</h4>
+            <p class="text-black">@lang('redirectchecker.desc-2-4-2')</p>
+            <p class="text-black">@lang('redirectchecker.desc-2-4-3')</p>
+        </div>
+    @endslot
+    @slot('subcontent_3')
+        <div class="d-none" id="description-tab-3">
+            <h2 class="text-black">@lang('redirectchecker.desc-3')</h2>
+            <p class="text-black">@lang('redirectchecker.desc-3-1')</p>
+            <h4 class="sub-titles">@lang('redirectchecker.desc-3-1-1')</h4>
+            <p class="text-black">@lang('redirectchecker.desc-3-1-2')</p>
+            <h4 class="sub-titles">@lang('redirectchecker.desc-3-2-1')</h4>
+            <p class="text-black">@lang('redirectchecker.desc-3-2-2')</p>
+            <p class="text-black">@lang('redirectchecker.desc-3-2-3')</p>
+            <p class="text-black">@lang('redirectchecker.desc-3-2-4')</p>
+            <p class="text-black">@lang('redirectchecker.desc-3-2-5')</p>
+        </div>
+    @endslot
+    @slot('how_to_content')
+        <div class="d-none" id="how-to">
+            @lang('redirectchecker.howto1')
+            <div class="expand-text">
+            @lang('redirectchecker.howto2')
+                <img class="mb-4" src="{{asset('/media/images/redirectchecker_instruction_1.webp')}}" alt="HowTo-redirectchecker-1" width="80%">
+                @lang('redirectchecker.howto3')
+                <img class="mb-4" src="{{asset('/media/images/redirectchecker_instruction_2.webp')}}" alt="HowTo-redirectchecker-2" width="80%">
+                @lang('redirectchecker.howto4')
+                <img class="mb-4" src="{{asset('/media/images/redirectchecker_instruction_3.webp')}}" alt="HowTo-redirectchecker-3" width="80%">
+                @lang('redirectchecker.howto5')
+                <img class="mb-4" src="{{asset('/media/images/redirectchecker_instruction_4.webp')}}" alt="HowTo-redirectchecker-4" width="80%">
+                @lang('redirectchecker.howto6')
+                <img class="mb-4" src="{{asset('/media/images/redirectchecker_instruction_5.webp')}}" alt="HowTo-redirectchecker-5" width="80%">
+                @lang('redirectchecker.howto7')
+                <img class="mb-4" src="{{asset('/media/images/redirectchecker_instruction_6.webp')}}" alt="HowTo-redirectchecker-6" width="80%">
+                @lang('redirectchecker.howto8')
             </div>
         </div>
-        @lang('redirectchecker.howto1')
-        <div class="expand-text">
-        @lang('redirectchecker.howto2')
-            <img class="mb-4" src="{{asset('/media/images/redirectchecker_instruction_1.webp')}}" alt="HowTo-redirectchecker-1" width="80%">
-            @lang('redirectchecker.howto3')
-            <img class="mb-4" src="{{asset('/media/images/redirectchecker_instruction_2.webp')}}" alt="HowTo-redirectchecker-2" width="80%">
-            @lang('redirectchecker.howto4')
-            <img class="mb-4" src="{{asset('/media/images/redirectchecker_instruction_3.webp')}}" alt="HowTo-redirectchecker-3" width="80%">
-            @lang('redirectchecker.howto5')
-            <img class="mb-4" src="{{asset('/media/images/redirectchecker_instruction_4.webp')}}" alt="HowTo-redirectchecker-4" width="80%">
-            @lang('redirectchecker.howto6')
-            <img class="mb-4" src="{{asset('/media/images/redirectchecker_instruction_5.webp')}}" alt="HowTo-redirectchecker-5" width="80%">
-            @lang('redirectchecker.howto7')
-            <img class="mb-4" src="{{asset('/media/images/redirectchecker_instruction_6.webp')}}" alt="HowTo-redirectchecker-6" width="80%">
-            @lang('redirectchecker.howto8')
-        </div>
-                @if($local == 'en')
-                <a class="moreless-button" href="#/">Read more</a>
-                @else
-                <a class="moreless-buttonid" href="#/">Baca Selengkapnya</a>
-                @endif
-        @include('layouts.roboDesc')
-        {{--
-        <div class="row mb-10">
-            <div class="col-md-6">
-                <h2 class="text-black">@lang('layout.feature-title')</h2>
-                <p class="text-black" style="font-size:1.5rem">@lang('layout.feature-sub-title') @lang('redirectchecker.title')</p>
-                <p class="text-black">@lang('redirectchecker.feature-desc')</p>
-            </div>
-            <div class="col-md-6">
-                <div class="d-flex align-items-center">
-                    <span class="text-primaryblue">cmlabs Redirect Checker</span>
-                    <span class="bx bxs-check-circle ml-5 mr-1 text-primaryblue"></span>
-                    <small class="text-grey">@lang('layout.updated') 25 Dec, 2020</small>
-                </div>
-                <p class="font-weight-bold mt-3">@lang('redirectchecker.feature-sub-title')</p>
-                <label class="checkbox checkbox-disabled checkbox-features mb-1"><input type="checkbox" disabled="disabled" checked="checked" name="Checkboxes12" /><span></span>&nbsp;&nbsp;<bdi>@lang('redirectchecker.feature-1')</bdi></label>
-                <label class="checkbox checkbox-disabled checkbox-features mb-1"><input type="checkbox" disabled="disabled" checked="checked" name="Checkboxes13" /><span></span>&nbsp;&nbsp;<bdi>@lang('redirectchecker.feature-2')</bdi></label>
-                <label class="checkbox checkbox-disabled checkbox-features features-disabled mb-1"><input type="checkbox" disabled="disabled" name="Checkboxes14" /><span></span>&nbsp;&nbsp;<bdi>@lang('redirectchecker.feature-3')</bdi></label>
-                <label class="checkbox checkbox-disabled checkbox-features features-disabled mb-1"><input type="checkbox" disabled="disabled" name="Checkboxes14" /><span></span>&nbsp;&nbsp;<bdi>@lang('redirectchecker.feature-4')</bdi></label>
-                <label class="checkbox checkbox-disabled checkbox-features features-disabled mb-1"><input type="checkbox" disabled="disabled" name="Checkboxes14" /><span></span>&nbsp;&nbsp;<bdi>@lang('redirectchecker.feature-5')</bdi></label>
-                <label class="checkbox checkbox-disabled checkbox-features features-disabled mb-1"><input type="checkbox" disabled="disabled" name="Checkboxes14" /><span></span>&nbsp;&nbsp;<bdi>@lang('redirectchecker.feature-6')</bdi></label>
-                <label class="checkbox checkbox-disabled checkbox-features features-disabled mb-1"><input type="checkbox" disabled="disabled" name="Checkboxes14" /><span></span>&nbsp;&nbsp;<bdi>@lang('redirectchecker.feature-7')</bdi></label>
-            </div>
-        </div>
-        --}}
-        {{--<h2 class="text-black">@lang('layout.whats-new-title') @lang('redirectchecker.title')</h2>
-        <div class="row my-5">
-            <div class="col-md-6 mb-5">
-                <div class="alert alert-custom alert-features-new fade show card card-custom card-stretch" role="alert" style="background: var(--lightgrey); display:block">
-                    <div class="alert-text mb-5">
-                        <span class="h4 alert-title">@lang('layout.whats-new-sub-title')</span>&nbsp;&nbsp;<span class="label label-dot label-alert-features"></span>
-                        <br />
-                        <span class="font-weight-light">@lang('layout.whats-new-update') Mar 15, 2021</span>
-                    </div>
-                    <!-- <div class="alert-close pt-5 pr-5">
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                            <span aria-hidden="true"><i class="ki ki-close icon-alert-close"></i></span>
-                        </button>
-                    </div> -->
-                    <span class="alert-features-text">@lang('redirectchecker.whats-new-1')</span>
-                </div>
-            </div>
-            <div class="col-md-6 mb-5">
-                <div class="alert alert-custom alert-features-new fade show card card-custom card-stretch" role="alert" style="background: var(--lightgrey); display:block">
-                    <div class="alert-text mb-5">
-                        <span class="h4 alert-title">@lang('layout.whats-new-sub-title')</span>&nbsp;&nbsp;<span class="label label-dot label-alert-features"></span>
-                        <br />
-                        <span class="font-weight-light">@lang('layout.whats-new-update') Mar 15, 2021</span>
-                    </div>
-                    <!-- <div class="alert-close pt-5 pr-5">
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                            <span aria-hidden="true"><i class="ki ki-close icon-alert-close"></i></span>
-                        </button>
-                    </div> -->
-                    <span class="alert-features-text">@lang('redirectchecker.whats-new-2')</span>
-                </div>
-            </div>
-        </div>--}}
-        {{--
-        <p class="text-black view-all-release">@lang('layout.view-web-release')</p>
-        --}}
-    </div>
-</div>
-
+    @endslot
+    @slot('read_more')
+        <p class="b1-400 b1-m-400 read-more" id="read-more-button">Read more</p>
+    @endslot
+@endcomponent
 @endsection
 @push('script')
 <script>
@@ -550,6 +470,40 @@ id/redirect-checker
         });
     </script>
 @endif
+<script>
+    // Get the element by its id
+    const read_more_button = document.getElementById('read-more-button');
+    const description_1 = document.getElementById('description-tab-1');
+    const description_2 = document.getElementById('description-tab-2');
+    const description_3 = document.getElementById('description-tab-3');
+    const how_to = document.getElementById('how-to');
+    let read = false;
+
+    // Add a click event listener
+    read_more_button.addEventListener('click', function() {
+        if(!read){
+            description_1.style.display = 'block';
+            description_2.style.display = 'block';
+            description_3.style.display = 'block';
+            how_to.style.display = 'block';
+            description_1.classList.remove("d-none");
+            description_2.classList.remove("d-none");
+            description_3.classList.remove("d-none");
+            how_to.classList.remove("d-none");
+            read_more_button.innerHTML = 'Show less';
+            read = true;
+        } else {
+            description_2.style.display = 'none';
+            description_3.style.display = 'none';
+            how_to.style.display = 'none';
+            description_2.classList.add("d-none");
+            description_3.classList.add("d-none");
+            how_to.classList.add("d-none");
+            read_more_button.innerHTML = 'Read more';
+            read = false;
+        }
+    });
+</script>
 @endpush
 
 @section('redirect-checker')
