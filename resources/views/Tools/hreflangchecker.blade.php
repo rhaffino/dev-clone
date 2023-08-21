@@ -94,7 +94,7 @@ id/hreflang-checker
                             </div>
                             <div class="" id="no-crawl-result">
                                 <div class="text-center">
-                                    <a href="#seo-booster-container" class="links">@lang('layout.learn-how-to-use')</a>
+                                    <a href="#seo-booster" class="links">@lang('layout.learn-how-to-use')</a>
                                 </div>
                             </div>
                         </div>
@@ -129,7 +129,7 @@ id/hreflang-checker
                             </div>
                         </div>
                         <div class="local-collection-body">
-                            <ul class="list-group" id="local-history">
+                            <ul class="list-group flex-column-reverse" id="local-history">
                             </ul>
                         </div>
                     </div>
@@ -170,7 +170,7 @@ id/hreflang-checker
                 <span class="clear-all font-15px pointer clear-history--btn">@lang('layout.clear-all')</span>
             </div>
         </div>
-        <div class="local-collection-body mt-3 px-5" id="local-history-mobile">
+        <div class="local-collection-body mt-3 px-5 d-flex flex-wrap-reverse" id="local-history-mobile">
         </div>
         <div id="mobile-version" class="px-5 accordion accordion-light accordion-toggle-arrow custom-features-accordion" id="accordionExample2">
             <div class="card bg-transparent" style="">

@@ -506,7 +506,7 @@ id/http-header-checker
                             <div class="" id="http-header-empty">
                                 <div class="text-center">
                                     <p class="d-block">@lang('headerchecker.result-none')</p>
-                                    <a href="#seo-booster-container" class="links">@lang('layout.learn-how-to-use')</a>
+                                    <a href="#seo-booster" class="links">@lang('layout.learn-how-to-use')</a>
                                 </div>
                             </div>
                             <div class="http-header-result-list mx-5 my-2" id="http-header-result-list" style="display: none">
@@ -526,7 +526,7 @@ id/http-header-checker
                             </div>
                         </div>
                         <div class="local-collection-body">
-                            <ul class="list-group" id="local-history">
+                            <ul class="list-group flex-column-reverse" id="local-history">
                             </ul>
                         </div>
                     </div>
@@ -543,7 +543,7 @@ id/http-header-checker
                                         <p>@lang('headerchecker.highlight')</p>
                                         <div class="d-flex align-items-center">
                                             <i class='bx bxs-check-circle text-darkgrey mr-1'></i>
-                                            <span class="text-darkgrey h6 mb-0">@lang('layout.updated') 10 Aug, 2023</span>
+                                            <span class="text-darkgrey h6 mb-0">@lang('layout.updated') 21 Aug, 2023</span>
                                         </div>
                                     </div>
                                 </div>
@@ -566,7 +566,7 @@ id/http-header-checker
                 <span class="clear-all font-15px pointer clear-history--btn">@lang('layout.clear-all')</span>
             </div>
         </div>
-        <div class="local-collection-body mt-3 px-5" id="local-history-mobile"></div>
+        <div class="local-collection-body mt-3 px-5 d-flex flex-wrap-reverse" id="local-history-mobile"></div>
         <div id="mobile-version" class="px-5 accordion accordion-light accordion-toggle-arrow custom-features-accordion" id="accordionExample2">
             <div class="card bg-transparent" style="">
                 <div class="card-header" id="headingOne2">
@@ -579,7 +579,7 @@ id/http-header-checker
                         <p>@lang('headerchecker.highlight')</p>
                         <div class="d-flex align-items-center">
                             <i class='bx bxs-check-circle text-darkgrey mr-1'></i>
-                            <span class="text-darkgrey h6 mb-0">@lang('layout.updated') 10 Aug, 2023</span>
+                            <span class="text-darkgrey h6 mb-0">@lang('layout.updated') 21 Aug, 2023</span>
                         </div>
                     </div>
                 </div>
