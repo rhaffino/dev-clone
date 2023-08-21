@@ -703,6 +703,7 @@ a:hover {
 
 .local-collection-mobile .local-collection-body .custom-card {
     border-radius: 5px;
+    width: 100%;
 }
 
 .local-collection-mobile .local-collection-body .custom-card:hover {
