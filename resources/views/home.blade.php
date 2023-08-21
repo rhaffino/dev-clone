@@ -257,7 +257,7 @@ id
             </div>
             <div class="d-flex align-items-center">
                 <i class='bx bxs-check-circle text-darkgrey mr-1'></i>
-                <span class="text-darkgrey">@lang('home.last-update') 11 Aug, 2023 | @lang('layout.version') 1.0</span>
+                <span class="text-darkgrey">@lang('home.last-update') 21 Aug, 2023 | @lang('layout.version') 2.0</span>
             </div>
         </div>
     </div>

@@ -33,7 +33,7 @@ const HistoryTemplate = (index ,url , date) => `
     <div class="local-collection-title">${url}</div>
     <div class="d-flex align-items-center">
       <i class='bx bxs-info-circle text-grey bx-sm mr-2' data-toggle="tooltip" data-theme="dark" title="${created_at}${date}"></i>
-      <i class='bx bxs-x-circle bx-sm text-grey delete-history--btn' data-url="${url}" data-index="${index}"></i>
+      <i class='bx bxs-x-circle bx-sm text-grey delete-history--btn' data-index="${index}"></i>
     </div>
   </div>
 </li>
@@ -54,8 +54,8 @@ const HistoryTemplateMobile = (index, url, date) => `
 <div class="d-flex align-items-center justify-content-between">
   <div class="local-collection-title">${url}</div>
   <div class="d-flex align-items-center">
-    <i class='bx bxs-info-circle text-grey bx-sm mr-2' data-bs-toggle="tooltip" data-bs-placement="top" data-theme="dark" title="${date}"></i>
-    <i class='bx bxs-x-circle bx-sm text-grey delete-history--btn' data-url="${url}" data-index="${index}"></i>
+    <i class='bx bxs-info-circle text-grey bx-sm mr-2' data-bs-toggle="tooltip" data-bs-placement="top" data-theme="dark" title="${created_at}${date}"></i>
+    <i class='bx bxs-x-circle bx-sm text-grey delete-history--btn' data-index="${index}"></i>
   </div>
 </div>
 </div>`;
@@ -83,11 +83,12 @@ function getHistories() {
     
     let index = 0;
     for (let history of histories) {
-        $("#local-history").append(HistoryTemplate(index ,history.url, history.date));
+        $("#local-history").append(
+            HistoryTemplate(index ,history.url, history.date)
+        );
         $("#local-history-mobile").append(
             HistoryTemplateMobile(index, history.url, history.date)
         );
-
         index++;
     }
 }
@@ -95,10 +96,32 @@ function getHistories() {
 function addHistory(url, data) {
     let histories = localStorage.getItem(PING_TOOL_LOCAL_STORAGE_KEY);
     histories = histories ? JSON.parse(histories) : [];
+    const month = [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep",
+        "Oct",
+        "Nov",
+        "Des",
+    ];
+    let date = new Date();
+    date.setTime(date.getTime());
+    let formatDate = `${
+        date.getHours() < 10 ? "0" + date.getHours() : date.getHours()
+    }.${
+        date.getMinutes() < 10 ? "0" + date.getMinutes() : date.getMinutes()
+    } | ${date.getDate()}, ${month[date.getMonth()]} ${date.getFullYear()}`;
+
     histories.push({
         url: url,
         data: data,
-        date: new Date().toLocaleDateString("en-GB"),
+        date: formatDate,
     });
     localStorage.setItem(
         PING_TOOL_LOCAL_STORAGE_KEY,
@@ -107,24 +130,24 @@ function addHistory(url, data) {
     getHistories();
 }
 
-function deleteHistory(_index = null, _url = null) {
+function deleteHistory(_index) {
     const histories = JSON.parse(
         localStorage.getItem(PING_TOOL_LOCAL_STORAGE_KEY)
     );
 
-    if (_index) {
-        histories.splice(_index, 1);
-        localStorage.setItem(
-            PING_TOOL_LOCAL_STORAGE_KEY,
-            JSON.stringify(histories)
-        );
-    }else{
-        histories.length = 0;
-        localStorage.removeItem(PING_TOOL_LOCAL_STORAGE_KEY);
-    }
+    histories.splice(_index, 1);
+    localStorage.setItem(
+        PING_TOOL_LOCAL_STORAGE_KEY,
+        JSON.stringify(histories)
+    );
 
     getHistories();
 }
+
+let clearAllHistory = function () {
+    localStorage.removeItem(PING_TOOL_LOCAL_STORAGE_KEY);
+    getHistories();
+};
 
 function convertSecond(seconds) {
     let minute = (seconds / 60).toFixed(0);
@@ -201,6 +224,7 @@ function analyzeUrl(_type, _url) {
                 renderAllData(res.data);
                 addHistory(_url, res.data);
                 getHistories();
+                toastr.success("Success scan your ping", "Success");
             } else if (err.responseJSON.statusCode === 429) {
                 let { minute, second } = convertSecond(
                     err.responseJSON.data.current_time
@@ -360,7 +384,7 @@ $("#input-url").keyup(function () {
 
 $("#local-history")
     .on("click", ".delete-history--btn", function () {
-        deleteHistory($(this).data("index") , $(this).data("url"));
+        deleteHistory($(this).data("index"));
     })
     .on("click", ".history--list", function (e) {
         if (e.target.classList.contains("delete-history--btn")) return;
@@ -379,7 +403,7 @@ $("#local-history")
 
 $("#local-history-mobile")
     .on("click", ".delete-history--btn", function () {
-        deleteHistory($(this).data("index"), $(this).data("url"));
+        deleteHistory($(this).data("index"));
     })
     .on("click", ".history--list", function (e) {
         if (e.target.classList.contains("delete-history--btn")) return;
@@ -397,7 +421,7 @@ $("#local-history-mobile")
     });
 
 $(".clear-history--btn").click(function () {
-    deleteHistory();
+    clearAllHistory();
 });
 
 $("#crawl-btn").click(function () {
