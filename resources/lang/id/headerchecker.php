@@ -19,7 +19,6 @@ return [
     "desc-1-5" => "Namun, apa itu HTTP Header Checker sebenarnya? Bagaimana tool ini dapat melindungi serta meningkatkan performa sebuah website?",
     "desc-1-6" => "Dengan memahami fungsi serta keunggulan HTTP Header Checker dari cmlabs secara komprehensif, Anda bisa menjadi lebih siap dalam menjaga keamanan dan kinerja optimal dari website Anda. Simak panduan berikut!",
     "desc-1-7" => "",
-
     "desc-2" => "Mengapa Perlu Menggunakan HTTP Header Checker dari cmlabs?",
     "desc-2-1" => "HTTP Header Checker dari cmlabs menawarkan sejumlah keunggulan yang tentunya berkontribusi tinggi pada peningkatan keamanan dan optimasi kinerja website agar menjadi semakin lancar dan bebas hambatan.",
     "desc-2-2" => "Berikut adalah beberapa keuntungan yang bisa Anda peroleh setelah menggunakan HTTP Header Checker:",
@@ -27,8 +26,8 @@ return [
     "desc-2-1-2" => "<b>Peningkatan Keamanan yang Tangguh:</b> Tool ini dapat menjadi andalan dalam langkah peningkatan keamanan siber. Tool ini akan memeriksa header HTTP untuk mengidentifikasi dan memperbaiki potensi kerentanan sekaligus memastikan header memiliki konfigurasi yang sesuai.",
     "desc-2-1-3" => "<b>Memenuhi Standar:</b> Tool ini akan memverifikasi bahwa header sejajar dengan rekomendasi dari lembaga-lembaga otoritatif sehingga membantu memastikan profesionalisme dan kredibilitas yang tinggi.",
     "desc-2-1-4" => "<b>Mendukung SEO dan Aksesibilitas Secara Komprehensif:</b> Tool ini juga dapat berkontribusi dalam meningkatkan aksesibilitas, terutama pada mesin pencarian (<a href='https://cmlabs.co/id-id/seo-guidelines/cara-kerja-search-engine'>search engine</a>). Artinya, tool Header Checker ini akan memastikan apakah <a href='https://cmlabs.co/id-id/seo-terms/meta-description'>meta tag</a> dan header terkait SEO sudah dikonfigurasi dengan benar.",
-
-
+    "desc-table-title" => "Detail Tabel Keterangan HTTP Header",
+    "table-header" => "Keterangan",
     "howto-title" => '<h2>Bagaimana Cara Menggunakan Tool HTTP Header Checker cmlabs?</h2>',
     "howto1" => '<p>Segera pastikan apakah website Anda aman dan memenuhi standar! Ikuti langkah-langkah di bawah ini untuk memperoleh hasil analisis yang signifikan.</p>',
     "howto2" => '<h4 class="sub-titles">Buka Halaman HTTP Header Checker cmlabs</h4>',
@@ -55,7 +54,6 @@ return [
                 <p>Setelah Anda berhasil masuk, Anda akan dapat kembali menggunakan alat ini untuk melakukan pengecekan gratis. Dengan melakukan login, sistem dapat menyimpan data historis penggunaan alat ini dalam satu tahun terakhir.</p>
                 <p>HTTP Header Checker tool dari cmlabs telah terbukti efektif dalam memberikan hasil yang akurat. Sehingga, Anda bisa menjadikan tool ini sebagai andalan dalam proses pemeriksaan website agar dapat memenangkan persaingan di dunia digital.</p>
                 <p>Bergabunglah dengan banyak pengguna lainnya yang telah memanfaatkan potensi dari tool kami untuk menyempurnakan platform online mereka. Pastikan website Anda bebas dari berbagai potensi yang merugikan dengan lakukan pemeriksaan menggunakan HTTP Header Checker dari cmlabs sekarang juga!</p>',
-
     "whats-new-1" => "Saat ini, kami menambahkan tool Technology Lookup. Dengan tool ini, pengguna dapat mengidentifikasi teknologi di situs web dan mencari tahu dengan apa situs web dibuat. Sehingga dapat menghasilkan prospek, analisis pasar, dan penelitian pesaing. Dengan tool ini, kami berharap dapat membantu Anda untuk membangun situs web terbaik.",
     "whats-new-2" => "Tool Technology Lookup di versi terbaru ini juga mempunyai fitur lain. Kami mengembangkan Technology Lookup agar pengguna dapat membuat daftar situs web yang menggunakan teknologi tertentu dan menelusuri sejumlah situs web sekaligus. Dengan ini Anda dapat menemukan prospek baru dengan teknologi yang digunakan oleh kompetitor Anda.",
 ];
