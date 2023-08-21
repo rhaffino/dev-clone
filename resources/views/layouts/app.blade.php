@@ -80,7 +80,8 @@
 
     <!-- Custom Page CSS -->
     <link href="{{ asset('css/custom.css') }}" rel="stylesheet" type="text/css" />
-    <link href="{{ asset('css/header_general.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('css/header_general.css') }}" rel="stylesheet" type="text/css"/>
+    <link href="{{ asset('css/asidemobile_generale.css') }}" rel="stylesheet" type="text/css"/>
 
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />

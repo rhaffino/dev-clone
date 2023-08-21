@@ -1,7 +1,7 @@
 <?php
 $data = count(json_decode(file_get_contents(base_path('resources/js/json/tools.json')),true));
 return [
-    "meta-title" => "19 SEO Tools (Free) English Version \ cmlabs",
+    "meta-title" => "22 SEO Tools (Free) English Version \ cmlabs",
     "meta-desc" => "Check your website with Free SEO tools cmlabs: Page Speed Test, Sitemap Generator, Word Counter, Title & Meta Desc Checker, etc.",
     "lang" => "en",
     "title" => "Free SEO Tools by CMLABS",
@@ -22,6 +22,8 @@ return [
     "keyword-search-desc" => "A keyword research tool for writers is a place for keyword research to make an SEO-friendly article. Help analyze, compare, and prioritize keyword opportunities for your website.",
     "keyword-permutation-desc" => "The SEO keyword permutation tool helps you to generates a series of data from the process of word combinations. Shorten typing time for maximum and optimal research results.",
     "plagiarism-checker-desc" => "Now, embrace your writing with our ultimate safeguard against content duplication, Plagiarism Checker (by Copyscape). Powered by cutting-edge algorithms, our tool will scan your text with lightning speed so that you can rest easy knowing your content is authentic.",
+    "ping-tool-desc" => "Online Ping Tool is a network utility to test the existence of a website's IP address or domain and analyzes the network quality and responsiveness of a target device server on a network.",
+    "http-header-checker-desc" => "The HTTP Header Checker is a tool designed to inspect and analyze the headers of Hypertext Transfer Protocol (HTTP) requests as well as responses exchanged between client and server.",
     "last-update" => "Last Update",
     "desc-1" => "Important Note",
     "desc-1-1" => "In using some tools that require you to enter a URL, make sure it is valid. Otherwise, the tool will not function properly.",

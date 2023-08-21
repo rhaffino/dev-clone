@@ -30,6 +30,7 @@ trait ApiHelper
             $response = $this->client->request($method, env('TOOLS_API_URL') . $path . "?key=$key" , $options);
 //            dd($response->getBody()->getContents());
             return $response->getBody()->getContents();
+            
         } catch (ClientException $exception) {
             return $exception->getResponse()->getBody()->getContents();
         }
@@ -65,6 +66,16 @@ trait ApiHelper
 
     protected function requestMetaChecker($url){
         $response = $this->request("api/meta-checker/check", 'POST', compact('url'));
+        return \GuzzleHttp\json_decode($response, 1);
+    }
+
+    protected function requestPingChecker($type, $url){
+        $response = $this->request("api/ping-tool/check", 'POST', compact('type', 'url'));
+        return \GuzzleHttp\json_decode($response, 1);
+    }
+
+    protected function requestHeaderChecker($url){
+        $response = $this->request("api/header-checker/check", 'POST', compact('url'));
         return \GuzzleHttp\json_decode($response, 1);
     }
 

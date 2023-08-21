@@ -88,5 +88,10 @@ return [
     "nav-pricing-political" => "Political Campaign",
     "button-login" => "Masuk",
     "button-logout" => "Keluar",
-    "button-consult" => "Konsultasikan dengan kami"
+    "button-consult" => "Konsultasikan dengan kami",
+    "writen-by" => "Ditulis oleh",
+    "published-at" => "Terbit pada",
+    "edited-at" => "Pembaruan terakhir",
+    "read-more" => "Baca Selengkapnya",
+    "show-less" => "Tampilkan lebih sedikit",
 ];

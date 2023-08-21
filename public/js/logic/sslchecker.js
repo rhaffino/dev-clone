@@ -1,3 +1,9 @@
+if (lang == "en") {
+    var created_at = "Created at ";
+} else if (lang == "id") {
+    var created_at = "Dibuat pada ";
+}
+
 triggerEnter('#btn-ssl', '#url');
 $(document).ready(function() {
     $('#noCrawl').show()
@@ -177,7 +183,7 @@ const refreshLocalStorage = function() {
     let no_history = lang === 'en' ? 'This is your first impressions, no history yet!' : 'Ini adalah kesan pertama Anda, belum ada riwayat!';
 
     try {
-        const month = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DES']
+        const month = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Des']
         $('#localsavemobile').empty();
         $('#localsavedesktop').empty();
         const keys = JSON.parse(localStorage.getItem('ssl-checker'))
@@ -186,7 +192,7 @@ const refreshLocalStorage = function() {
                 let index = 0;
                 for (let key of keys) {
                     let date = new Date()
-                    let formatDate = `Created at ${date.getHours() < 10 ? ('0'+date.getHours()) : date.getHours()}.${date.getMinutes() < 10 ? ('0'+date.getMinutes()) : date.getMinutes()} | ${date.getDate()}, ${month[date.getMonth()]} ${date.getFullYear()}`
+                    let formatDate = `${created_at}${date.getHours() < 10 ? ('0'+date.getHours()) : date.getHours()}.${date.getMinutes() < 10 ? ('0'+date.getMinutes()) : date.getMinutes()} | ${date.getDate()}, ${month[date.getMonth()]} ${date.getFullYear()}`
                     let div = `<div class="custom-card py-5 px-3" onclick="getData(${index})">
                     <div class="d-flex align-items-center justify-content-between">
                         <div class="local-collection-title">${key.url}

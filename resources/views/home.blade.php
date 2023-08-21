@@ -226,10 +226,38 @@ id
                         </div>
                     </div>
                 </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-8">
+                    <div class="card card-custom card-stretch card-home">
+                        <div class="card-body p-7">
+                            <div class="text-center">
+                                <i class='text-darkgrey bx bx-terminal bx-lg'></i>
+                                <h2 class="h6 text-darkgrey font-weight-bolder">Ping Tool</h2>
+                                <p class="text-darkgrey mb-0">@lang('home.ping-tool-desc')</p>
+                            </div>
+                        </div>
+                        <div class="card-footer text-center border-top-0 pt-0">
+                            <a href="/{{ $local }}/ping-tool" type="button" class="btn btn-launch" name="button">LAUNCH</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-8">
+                    <div class="card card-custom card-stretch card-home">
+                        <div class="card-body p-7">
+                            <div class="text-center">
+                                <i class='text-darkgrey bx bx-code bx-lg'></i>
+                                <h2 class="h6 text-darkgrey font-weight-bolder">HTTP Header Checker</h2>
+                                <p class="text-darkgrey mb-0">@lang('home.http-header-checker-desc')</p>
+                            </div>
+                        </div>
+                        <div class="card-footer text-center border-top-0 pt-0">
+                            <a href="/{{ $local }}/http-header-checker" type="button" class="btn btn-launch" name="button">LAUNCH</a>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="d-flex align-items-center">
                 <i class='bx bxs-check-circle text-darkgrey mr-1'></i>
-                <span class="text-darkgrey">@lang('home.last-update') 15 Mar, 2021 | @lang('layout.version') 1.0</span>
+                <span class="text-darkgrey">@lang('home.last-update') 21 Aug, 2023 | @lang('layout.version') 2.0</span>
             </div>
         </div>
     </div>

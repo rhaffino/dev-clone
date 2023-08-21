@@ -61,7 +61,7 @@ id/ssl-checker
                             <div class="" id="noCrawlResult">
                                 <div class="text-center">
                                     <p class="d-block">@lang('sslchecker.no-test-result')</p>
-                                    <a href="#ssl-description" class="links">@lang('layout.learn-how-to-use')</a>
+                                    <a href="#seo-booster" class="links">@lang('layout.learn-how-to-use')</a>
                                 </div>
                             </div>
                             <div class="" id=result>
@@ -81,7 +81,7 @@ id/ssl-checker
                             </div>
                         </div>
                         <div class="local-collection-body">
-                            <ul class="list-group" id="localsavedesktop">
+                            <ul class="list-group flex-column-reverse" id="localsavedesktop">
                             </ul>
                         </div>
                     </div>
@@ -121,7 +121,7 @@ id/ssl-checker
                 <span class="clear-all font-15px pointer">@lang('layout.clear-all')</span>
             </div>
         </div>
-        <div class="local-collection-body mt-3 px-5" id="localsavemobile">
+        <div class="local-collection-body mt-3 px-5 d-flex flex-wrap-reverse" id="localsavemobile">
         </div>
         <div id="mobile-version" class="px-5 accordion accordion-light accordion-toggle-arrow custom-features-accordion" id="accordionExample2">
             <div class="card bg-transparent" style="">
@@ -238,7 +238,7 @@ id/ssl-checker
         </div>
     @endslot
     @slot('read_more')
-        <p class="b1-400 b1-m-400 read-more" id="read-more-button">Read more</p>
+        <p class="b1-400 b1-m-400 read-more" id="read-more-button">@lang('layout.read-more')</p>
     @endslot
 @endcomponent
 @endsection
@@ -249,7 +249,7 @@ id/ssl-checker
 <script src="{{asset('js/logic/sslchecker.js')}}"></script>
 <script type="text/javascript">
     $('#toggle_button_webmaster').click();
-    $('a[href*="#ssl-description"]:not([href="#"])').click(function() {
+    $('a[href*="#seo-booster"]:not([href="#"])').click(function() {
         var offset = -80;
         if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
             var target = $(this.hash);
@@ -416,7 +416,7 @@ id/ssl-checker
             description_4.classList.remove("d-none");
             description_5.classList.remove("d-none");
             how_to.classList.remove("d-none");
-            read_more_button.innerHTML = 'Show less';
+            read_more_button.innerHTML = @json( __('layout.show-less') );
             read = true;
         } else {
             description_2.style.display = 'none';
@@ -429,7 +429,7 @@ id/ssl-checker
             description_4.classList.add("d-none");
             description_5.classList.add("d-none");
             how_to.classList.add("d-none");
-            read_more_button.innerHTML = 'Read more';
+            read_more_button.innerHTML = @json( __('layout.read-more') );
             read = false;
         }
     });

@@ -580,7 +580,7 @@
             description_2.classList.remove("d-none");
             description_3.classList.remove("d-none");
             how_to.classList.remove("d-none");
-            read_more_button.innerHTML = 'Show less';
+            read_more_button.innerHTML = @json( __('layout.show-less') );
             read = true;
         } else {
             description_2.style.display = 'none';
@@ -589,7 +589,7 @@
             description_2.classList.add("d-none");
             description_3.classList.add("d-none");
             how_to.classList.add("d-none");
-            read_more_button.innerHTML = 'Read more';
+            read_more_button.innerHTML = @json( __('layout.read-more') );
             read = false;
         }
     });
