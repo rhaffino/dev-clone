@@ -29,6 +29,29 @@ class ApiController extends Controller
 {
     use ApiHelper;
 
+    public function headerChecker(Request $request)
+    {
+        $url = $request->get('url');
+
+        if (!filter_var($url, FILTER_VALIDATE_URL)) {
+            return new BaseApiResource(null, 'URL is not valid', 422, 'danger');
+        }
+        $response = $this->requestHeaderChecker($url);
+        return new BaseApiResource($response['data'] ?? [], $response['message'], $response['statusCode']);
+    }
+
+    public function pingTool(Request $request)
+    {
+        $type = $request->get('type');
+        $url = $request->get('url');
+
+        // if (!filter_var($url, FILTER_VALIDATE_URL)) {
+        //     return new BaseApiResource(null, 'URL is not valid', 422, 'danger');
+        // }
+        $response = $this->requestPingChecker($type, $url);
+        return new BaseApiResource($response['data'] ?? [], $response['message'], $response['statusCode']);
+    }
+
     public function analyzeTechnology(Request $request)
     {
         $url = $request->get('url');
