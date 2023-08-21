@@ -19,7 +19,7 @@
         <div class="container-fluid px-0">
             <h1 class="text-darkgrey font-weight-normal">@lang('robot.title')</h1>
             <span class="text-darkgrey h4 font-weight-normal mb-10">@lang('robot.subtitle')</span>
-            <div class="card card-custom mb-5">
+            <div class="card card-custom mt-10 mb-5">
                 <div class="card-body">
                     <div class="row">
                         <div class="col-md-8 mb-5">
@@ -288,7 +288,7 @@
         </div>
     @endslot
     @slot('read_more')
-        <p class="b1-400 b1-m-400 read-more" id="read-more-button">Read more</p>
+        <p class="b1-400 b1-m-400 read-more" id="read-more-button">@lang('layout.read-more')</p>
     @endslot
 @endcomponent
 @endsection
@@ -347,7 +347,7 @@
             description_6.classList.remove("d-none");
             description_7.classList.remove("d-none");
             how_to.classList.remove("d-none");
-            read_more_button.innerHTML = 'Show less';
+            read_more_button.innerHTML = @json( __('layout.show-less') );
             read = true;
         } else {
             description_2.style.display = 'none';
@@ -364,7 +364,7 @@
             description_6.classList.add("d-none");
             description_7.classList.add("d-none");
             how_to.classList.add("d-none");
-            read_more_button.innerHTML = 'Read more';
+            read_more_button.innerHTML = @json( __('layout.read-more') );
             read = false;
         }
     });

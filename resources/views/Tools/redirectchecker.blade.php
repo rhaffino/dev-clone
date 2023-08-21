@@ -91,7 +91,7 @@ id/redirect-checker
                             <div class="" id="redirect-result-empty">
                                 <div class="text-center">
                                     <p class="d-block">@lang('redirectchecker.result-none')</p>
-                                    <a href="#redirect-description" class="links">@lang('layout.learn-how-to-use')</a>
+                                    <a href="#seo-booster-container" class="links">@lang('layout.learn-how-to-use')</a>
                                 </div>
                             </div>
                             <div class="" id="redirect-result-container" style="display: none;">
@@ -300,7 +300,7 @@ id/redirect-checker
         </div>
     @endslot
     @slot('read_more')
-        <p class="b1-400 b1-m-400 read-more" id="read-more-button">Read more</p>
+        <p class="b1-400 b1-m-400 read-more" id="read-more-button">@lang('layout.read-more')</p>
     @endslot
 @endcomponent
 @endsection
@@ -309,7 +309,7 @@ id/redirect-checker
     const REDIRECT_CHAIN_CHECKER_API_URL = "{{ route('api.analyze-redirect-chain') }}";
     $('#toggle_button_webmaster').click();
 
-    $('a[href*="#redirect-description"]:not([href="#"])').click(function() {
+    $('a[href*="#seo-booster-container"]:not([href="#"])').click(function() {
         var offset = -80;
         if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
             var target = $(this.hash);
@@ -490,7 +490,7 @@ id/redirect-checker
             description_2.classList.remove("d-none");
             description_3.classList.remove("d-none");
             how_to.classList.remove("d-none");
-            read_more_button.innerHTML = 'Show less';
+            read_more_button.innerHTML = @json( __('layout.show-less') );
             read = true;
         } else {
             description_2.style.display = 'none';
@@ -499,7 +499,7 @@ id/redirect-checker
             description_2.classList.add("d-none");
             description_3.classList.add("d-none");
             how_to.classList.add("d-none");
-            read_more_button.innerHTML = 'Read more';
+            read_more_button.innerHTML = @json( __('layout.read-more') );
             read = false;
         }
     });

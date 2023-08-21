@@ -26,7 +26,7 @@ id/sitemap-generator
 
             @include('components.alert_limit')
 
-            <div class="header-blue mb-5 px-5 py-1">
+            <div class="header-blue mt-10 mb-5 px-5 py-1">
                 <input type="hidden" id="#count-tools" autocomplete="off" value="{{ $access_count }}" >
                 <div class="row d-flex align-items-center">
                     <div class="col-sm-9 col-md-10 col-lg-9 col-xl-10 d-flex align-items-center py-1">
@@ -65,7 +65,7 @@ id/sitemap-generator
                             <div class="" id="noCrawlResult">
                                 <div class="text-center">
                                     <p class="d-block">@lang('sitemap.no-crawl-result')</p>
-                                    <a href="#sitemap-description" class="links">@lang('layout.learn-how-to-use')</a>
+                                    <a href="#seo-booster-container" class="links">@lang('layout.learn-how-to-use')</a>
                                 </div>
                             </div>
                             <div style="display: none;" id="generateCrawlResult">
@@ -256,7 +256,7 @@ id/sitemap-generator
         </div>
     @endslot
     @slot('read_more')
-        <p class="b1-400 b1-m-400 read-more" id="read-more-button">Read more</p>
+        <p class="b1-400 b1-m-400 read-more" id="read-more-button">@lang('layout.read-more')</p>
     @endslot
 @endcomponent
 @endsection
@@ -312,7 +312,7 @@ id/sitemap-generator
             description_5.classList.remove("d-none");
             description_6.classList.remove("d-none");
             how_to.classList.remove("d-none");
-            read_more_button.innerHTML = 'Show less';
+            read_more_button.innerHTML = @json( __('layout.show-less') );
             read = true;
         } else {
             description_2.style.display = 'none';
@@ -327,7 +327,7 @@ id/sitemap-generator
             description_5.classList.add("d-none");
             description_6.classList.add("d-none");
             how_to.classList.add("d-none");
-            read_more_button.innerHTML = 'Read more';
+            read_more_button.innerHTML = @json( __('layout.read-more') );
             read = false;
         }
     });
