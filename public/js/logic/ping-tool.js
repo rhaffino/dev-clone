@@ -224,6 +224,7 @@ function analyzeUrl(_type, _url) {
                 renderAllData(res.data);
                 addHistory(_url, res.data);
                 getHistories();
+                recordUserActivity(_url);
                 toastr.success("Success scan your ping", "Success");
             } else if (err.responseJSON.statusCode === 429) {
                 let { minute, second } = convertSecond(
@@ -361,6 +362,27 @@ function getProtocol(url) {
     } catch (e) {
         return false;
     }
+}
+
+function recordUserActivity(_url) {
+    $.post({
+        url: USER_ACTIVITY_API_URL,
+        data: {
+            '_token': $('meta[name="csrf-token"]').attr('content'),
+            'submitted_url' : _url,
+            'url': window.location.href,
+            width_height: window.innerWidth + "x" + window.innerHeight,
+        },
+        success: (res) => {
+            if (res.statusCode === 200) {
+            } else {
+                console.log(err)
+            }
+        },
+        error: (err) => {
+            console.log(err)
+        }
+    })
 }
 
 $("#input-url").keyup(function () {
