@@ -265,7 +265,7 @@ function addSubTitle(title, id, description = null, category) {
             "    <div id=\"" + id + "\"></div><br>")
     }
 }
-
+// 
 function addItem(allAudits, audit, category, group = null) {
     let displayValue = '―';
     if (allAudits[audit.id].hasOwnProperty('displayValue')) {
@@ -275,72 +275,170 @@ function addItem(allAudits, audit, category, group = null) {
     }
     let table = '';
     if (allAudits[audit.id].hasOwnProperty('details')) {
-        if (allAudits[audit.id].details.type === 'table' || allAudits[audit.id].details.type === 'opportunity') {
-            if (Array.isArray(allAudits[audit.id].details.items) && allAudits[audit.id].details.items.length) {
-                table = "<table style=\"width:100%;\">\n" +
+        if (
+            allAudits[audit.id].details.type === "table" ||
+            allAudits[audit.id].details.type === "opportunity"
+        ) {
+            if (
+                Array.isArray(allAudits[audit.id].details.items) &&
+                allAudits[audit.id].details.items.length
+            ) {
+                table =
+                    '<table style="width:100%;">\n' +
                     "        <thead>\n" +
                     "          <tr>";
                 let headings = allAudits[audit.id].details.headings;
                 let items = allAudits[audit.id].details.items;
                 let loop = 0;
                 for (let heading of headings) {
-                    let styling = heading['valueType'] === 'url' || heading['itemType'] === 'url' || loop === 0 ? 'class = \"align-left\"' : '';
-                    if (heading.hasOwnProperty('label')) {
-                        table += "\n<th " + styling + ">" + heading.label + "</th>";
-                    } else if (heading.hasOwnProperty('text')) {
-                        table += "\n<th " + styling + ">" + heading.text + "</th>";
+                    let styling =
+                        heading["valueType"] === "url" ||
+                        heading["itemType"] === "url" ||
+                        loop === 0
+                            ? 'class = "align-left"'
+                            : "";
+                    if (heading.hasOwnProperty("label")) {
+                        table +=
+                            "\n<th " + styling + ">" + heading.label + "</th>";
+                    } else if (heading.hasOwnProperty("text")) {
+                        table +=
+                            "\n<th " + styling + ">" + heading.text + "</th>";
                     } else {
                         table += "\n<th " + styling + "></th>";
                     }
                     loop++;
                 }
-                table += "\n  </tr>\n" +
-                    "</thead>\n" +
-                    "<tbody>\n";
-                let _ = 1
+                table += "\n  </tr>\n" + "</thead>\n" + "<tbody>\n";
+                let _ = 1;
                 for (let item of items) {
                     table += "<tr>\n";
                     loop = 0;
                     for (let heading of headings) {
-                        let styling = heading['valueType'] === 'url' || heading['itemType'] === 'url' || loop === 0 ? 'class = \"align-left\"' : '';
-                        if (heading['valueType'] === 'thumbnail' || heading['itemType'] === 'thumbnail') {
-                            table += "<td " + styling + "><img src=\"" + item[heading.key] + "\" height=\"auto\" width=\"50px\"></td>";
-                        } else if (heading['valueType'] === 'url' || heading['itemType'] === 'url') {
+                        let styling =
+                            heading["valueType"] === "url" ||
+                            heading["itemType"] === "url" ||
+                            loop === 0
+                                ? 'class = "align-left"'
+                                : "";
+                        if (
+                            heading["valueType"] === "thumbnail" ||
+                            heading["itemType"] === "thumbnail"
+                        ) {
+                            table +=
+                                "<td " +
+                                styling +
+                                '><img src="' +
+                                item[heading.key] +
+                                '" height="auto" width="50px"></td>';
+                        } else if (
+                            heading["valueType"] === "url" ||
+                            heading["itemType"] === "url"
+                        ) {
                             if (item[heading.key]) {
-                                table += "<td " + styling + "><a href=\"" + item[heading.key] + "\" class=\"url\">" + subStringUrl(item[heading.key]) + "</a></td>";
+                                table +=
+                                    "<td " +
+                                    styling +
+                                    '><a href="' +
+                                    item[heading.key] +
+                                    '" class="url">' +
+                                    subStringUrl(item[heading.key]) +
+                                    "</a></td>";
                             } else {
-                                table += "<td " + styling + "><a href=\"" + item["scriptUrl"] + "\" class=\"url\">" + subStringUrl(item["scriptUrl"]) + "</a></td>";
+                                table +=
+                                    "<td " +
+                                    styling +
+                                    '><a href="' +
+                                    item["scriptUrl"] +
+                                    '" class="url">' +
+                                    subStringUrl(item["scriptUrl"]) +
+                                    "</a></td>";
                             }
                         } else {
-                            let value = '';
-                            if (heading['valueType'] === 'bytes' || heading['itemType'] === 'bytes') {
-                                value = (item[heading.key] / 1000).toFixed(1) + " KiB";
-                            } else if (heading['valueType'] === 'timespanMs' || heading['itemType'] === 'timespanMs') {
+                            let value = "";
+                            if (
+                                heading["valueType"] === "bytes" ||
+                                heading["itemType"] === "bytes"
+                            ) {
+                                value =
+                                    (item[heading.key] / 1000).toFixed(1) +
+                                    " KiB";
+                            } else if (
+                                heading["valueType"] === "timespanMs" ||
+                                heading["itemType"] === "timespanMs"
+                            ) {
                                 value = item[heading.key] + " Ms";
-                            } else if (heading['itemType'] === 'ms' || heading['valueType'] === 'ms') {
+                            } else if (
+                                heading["itemType"] === "ms" ||
+                                heading["valueType"] === "ms"
+                            ) {
                                 if (item[heading.key] !== undefined) {
-                                    value = item[heading.key].toFixed(1) + " ms";
+                                    value =
+                                        item[heading.key].toFixed(1) + " ms";
                                 } else {
                                     value = "";
                                 }
-                            } else if (heading['itemType'] === 'code' && item.hasOwnProperty(heading.key)) {
-                                value = converter.makeHtml("`" + item[heading.key].value + "`");
-                            } else if (heading['itemType'] === 'link') {
-                                value = "<a href=\"" + item[heading.key].url + "\">" + subStringUrl(item[heading.key].text) + "</a>"
-                            } else if (heading['itemType'] === 'node') {
+                            } else if (
+                                heading["itemType"] === "code" &&
+                                item.hasOwnProperty(heading.key)
+                            ) {
+                                value = converter.makeHtml(
+                                    "`" + item[heading.key].value + "`"
+                                );
+                            } else if (heading["itemType"] === "link") {
+                                value =
+                                    '<a href="' +
+                                    item[heading.key].url +
+                                    '">' +
+                                    subStringUrl(item[heading.key].text) +
+                                    "</a>";
+                            } else if (
+                                heading["itemType"] === "node" ||
+                                heading["valueType"] === "node"
+                            ) {
                                 if (item[heading.key]) {
-                                    if (audit.id === 'link-name') {
-                                        value = "<h5>" + item[heading.key].nodeLabel + "</h5><p>" + converter.makeHtml("`" + item[heading.key].snippet + "`") + "</p>"
-                                    } else if (item[heading.key]['explanation']) {
-                                        value = "<h5>" + item[heading.key].nodeLabel + "</h5><p>" + item[heading.key].explanation + "</p><p>" + converter.makeHtml("`" + item[heading.key].snippet + "`") + "</p>"
+                                    if (audit.id === "link-name") {
+                                        value =
+                                            "<h5>" +
+                                            item[heading.key].nodeLabel +
+                                            "</h5><p>" +
+                                            converter.makeHtml(
+                                                "`" +
+                                                    item[heading.key].snippet +
+                                                    "`"
+                                            ) +
+                                            "</p>";
+                                    } else if (
+                                        item[heading.key]["explanation"]
+                                    ) {
+                                        value =
+                                            "<h5>" +
+                                            item[heading.key].nodeLabel +
+                                            "</h5><p>" +
+                                            item[heading.key].explanation +
+                                            "</p><p>" +
+                                            converter.makeHtml(
+                                                "`" +
+                                                    item[heading.key].snippet +
+                                                    "`"
+                                            ) +
+                                            "</p>";
                                     } else {
-                                        value = "<h5>" + item[heading.key].nodeLabel + "</h5><p>" + converter.makeHtml("`" + item[heading.key].snippet + "`") + "</p>"
+                                        value =
+                                            "<h5>" +
+                                            item[heading.key].nodeLabel +
+                                            "</h5><p>" +
+                                            converter.makeHtml(
+                                                "`" +
+                                                    item[heading.key].snippet +
+                                                    "`"
+                                            ) +
+                                            "</p>";
                                     }
                                 }
                             } else {
-                                value = item[heading.key] + '';
-                                if (value === 'undefined') {
-                                    value = '';
+                                value = item[heading.key] + "";
+                                if (value === "undefined") {
+                                    value = "";
                                 }
                             }
                             table += "<td " + styling + ">" + value + "</td>";
@@ -349,77 +447,85 @@ function addItem(allAudits, audit, category, group = null) {
                     }
                     table += "</tr>\n";
                 }
-                table += "</tbody>\n" +
-                    "</table>";
-            }
-        } else if (allAudits[audit.id].details.type === 'criticalrequestchain') {
+                table += "</tbody>\n" + "</table>";
+            } 
+        } else if (allAudits[audit.id].details.type === "criticalrequestchain") {
             let chains = allAudits[audit.id].details.chains;
-            table = "<p>Initial Navigation</p><ul class=\"tree\">"
+            table = '<p>Initial Navigation</p><ul class="tree">';
             for (let chain of Object.keys(chains)) {
                 table += traceTreeData(chains[chain]);
             }
-            table += "</ul>"
-        } else if (allAudits[audit.id].details.type === 'debugdata') {
-            table = "<table style=\"width:100%;\">\n" +
-                    "<thead>\n" +
-                    "<tr>\n<th>Property</th>\n<th>Value</th>"+
-                    "\n</tr>\n" +
-                    "</thead>\n" +
-                    "<tbody>\n";
+            table += "</ul>";
+        } else if (allAudits[audit.id].details.type === "debugdata") {
+            table =
+                '<table style="width:100%;">\n' +
+                "<thead>\n" +
+                "<tr>\n<th>Property</th>\n<th>Value</th>" +
+                "\n</tr>\n" +
+                "</thead>\n" +
+                "<tbody>\n";
             for (const property in allAudits[audit.id].details.items[0]) {
                 table += "\n<tr>";
                 table += "\n<td>" + property + "</td>";
-                table += "\n<td>" + allAudits[audit.id].details.items[0][property] + "</td>";
-                table += "\n<tr>"
+                table +=
+                    "\n<td>" +
+                    allAudits[audit.id].details.items[0][property] +
+                    "</td>";
+                table += "\n<tr>";
             }
-            table += "</tbody>\n" +
-                    "</table>";
-        } else if (allAudits[audit.id].details.type === 'filmstrip') {
-            table = "<table style=\"width:100%;\">\n" +
-                    "<thead>\n" +
-                    "<tr>\n<th>Timestamp</th>\n<th>Timing</th>\n<th>Data</th>"+
-                    "\n</tr>\n" +
-                    "</thead>\n" +
-                    "<tbody>\n";
+            table += "</tbody>\n" + "</table>";
+        } else if (allAudits[audit.id].details.type === "filmstrip") {
+            table =
+                '<table style="width:100%;">\n' +
+                "<thead>\n" +
+                "<tr>\n<th>Timestamp</th>\n<th>Timing</th>\n<th>Data</th>" +
+                "\n</tr>\n" +
+                "</thead>\n" +
+                "<tbody>\n";
             for (const property of allAudits[audit.id].details.items) {
                 table += "\n<tr>";
-                table += "\n<td>" + property['timestamp'] + "</td>";
-                table += "\n<td>" + property['timing'] + "</td>";
-                table += "\n<td>" + "<img src=" + property['data'] + " >" + "</td>";
-                table += "\n<tr>"
+                table += "\n<td>" + property["timestamp"] + "</td>";
+                table += "\n<td>" + property["timing"] + "</td>";
+                table +=
+                    "\n<td>" + "<img src=" + property["data"] + " >" + "</td>";
+                table += "\n<tr>";
             }
-            table += "</tbody>\n" +
-                    "</table>";
-        } else if (allAudits[audit.id].details.type === 'screenshot') {
-            table = "<table style=\"width:100%;\">\n" +
-                    "<thead>\n" +
-                    "<tr>\n<th>Timestamp</th>\n<th>Timing</th>\n<th>Data</th>"+
-                    "\n</tr>\n" +
-                    "</thead>\n" +
-                    "<tbody>\n";
+            table += "</tbody>\n" + "</table>";
+        } else if (allAudits[audit.id].details.type === "screenshot") {
+            table =
+                '<table style="width:100%;">\n' +
+                "<thead>\n" +
+                "<tr>\n<th>Timestamp</th>\n<th>Timing</th>\n<th>Data</th>" +
+                "\n</tr>\n" +
+                "</thead>\n" +
+                "<tbody>\n";
             table += "\n<tr>";
             table += "\n<td>" + allAudits[audit.id].details.timestamp + "</td>";
             table += "\n<td>" + allAudits[audit.id].details.timing + "</td>";
-            table += "\n<td>" + "<img src=" + allAudits[audit.id].details.data + " >" + "</td>";
-            table += "\n<tr>"
-            table += "</tbody>\n" +
-                    "</table>";
-        } else if (allAudits[audit.id].details.type === 'treemap-data') {
-            table = "<table style=\"width:100%;\">\n" +
-                    "<thead>\n" +
-                    "<tr>\n<th>Name</th>\n<th>Resource Bytes</th>\n<th>Unused Bytes</th>"+
-                    "\n</tr>\n" +
-                    "</thead>\n" +
-                    "<tbody>\n";
+            table +=
+                "\n<td>" +
+                "<img src=" +
+                allAudits[audit.id].details.data +
+                " >" +
+                "</td>";
+            table += "\n<tr>";
+            table += "</tbody>\n" + "</table>";
+        } else if (allAudits[audit.id].details.type === "treemap-data") {
+            table =
+                '<table style="width:100%;">\n' +
+                "<thead>\n" +
+                "<tr>\n<th>Name</th>\n<th>Resource Bytes</th>\n<th>Unused Bytes</th>" +
+                "\n</tr>\n" +
+                "</thead>\n" +
+                "<tbody>\n";
             for (const property of allAudits[audit.id].details.nodes) {
                 table += "\n<tr>";
                 table += "\n<td>" + property.name + "</td>";
                 table += "\n<td>" + property.resourceBytes + "</td>";
                 table += "\n<td>" + property.unusedBytes + "</td>";
-                table += "\n<tr>"
+                table += "\n<tr>";
             }
-            table += "</tbody>\n" +
-                    "</table>";
+            table += "</tbody>\n" + "</table>";
         }
     }
     let groupId = '';
