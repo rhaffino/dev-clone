@@ -79,7 +79,7 @@
     <link href="{{ asset('css/themes/layout/brand/light.css?v=7.0.9') }}" rel="stylesheet" type="text/css" />
 
     <!-- Custom Page CSS -->
-    <link href="{{ asset('css/custom.css') }}" rel="stylesheet" type="text/css"/>
+    <link href="{{ asset('css/custom.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('css/header_general.css') }}" rel="stylesheet" type="text/css"/>
     <link href="{{ asset('css/asidemobile_generale.css') }}" rel="stylesheet" type="text/css"/>
 
@@ -235,35 +235,39 @@
     </script>
 
 
-<!-- Custom JS -->
-<script src="{{ asset('js/custom.js?v=20210116213500')}}"></script>
-{{-- URL for record user activity --}}
-<script>const USER_ACTIVITY_API_URL = "{{ route('api.record-activity') }}";</script>
-<!--end::Global Theme Bundle-->
-<!--begin::Page Vendors(used by this page)-->
-<script src="{{asset('plugins/custom/fullcalendar/fullcalendar.bundle.js?v=7.0.5')}}"></script>
-<script src="//maps.google.com/maps/api/js?key=AIzaSyBTGnKT7dt597vo9QgeQ7BFhvSRP4eiMSM?v=7.0.5"></script>
-<script src="{{asset('plugins/custom/gmaps/gmaps.js?v=7.0.5')}}"></script>
-<!--end::Page Vendors-->
-<!--begin::Page Scripts(used by this page)-->
-<script src="{{asset('js/pages/widgets.js?v=7.0.5')}}"></script>
-<script>const lang = "{{\Illuminate\Support\Facades\App::getLocale()}}"</script>
-<script type="text/javascript">
-  var sticky = new Sticky('.sticky');
-  sticky.update();
-  window.onresize = function(e) {
-    sticky.update();
-  };
-</script>
-<script>
-    $('.moreless-button').click(function() {
-    $('.expand-text').slideToggle();
-    if ($('.moreless-button').text() == "Read more") {
-      $(this).text("Read less")
-    } else {
-      $(this).text("Read more")
-    }
-  });
+    <!-- Custom JS -->
+    <script src="{{ asset('js/custom.js?v=20210116213500') }}"></script>
+
+    {{-- URL for record user activity --}}
+    <script>const USER_ACTIVITY_API_URL = "{{ route('api.record-activity') }}";</script>
+
+    <!--end::Global Theme Bundle-->
+    <!--begin::Page Vendors(used by this page)-->
+    <script src="{{ asset('plugins/custom/fullcalendar/fullcalendar.bundle.js?v=7.0.5') }}"></script>
+    <script src="//maps.google.com/maps/api/js?key=AIzaSyBTGnKT7dt597vo9QgeQ7BFhvSRP4eiMSM?v=7.0.5"></script>
+    <script src="{{ asset('plugins/custom/gmaps/gmaps.js?v=7.0.5') }}"></script>
+    <!--end::Page Vendors-->
+    <!--begin::Page Scripts(used by this page)-->
+    <script src="{{ asset('js/pages/widgets.js?v=7.0.5') }}"></script>
+    <script>
+        const lang = "{{ \Illuminate\Support\Facades\App::getLocale() }}"
+    </script>
+    <script type="text/javascript">
+        var sticky = new Sticky('.sticky');
+        sticky.update();
+        window.onresize = function(e) {
+            sticky.update();
+        };
+    </script>
+    <script>
+        $('.moreless-button').click(function() {
+            $('.expand-text').slideToggle();
+            if ($('.moreless-button').text() == "Read more") {
+                $(this).text("Read less")
+            } else {
+                $(this).text("Read more")
+            }
+        });
 
         $('.moreless-buttonid').click(function() {
             $('.expand-text').slideToggle();
