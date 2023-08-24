@@ -81,7 +81,7 @@ return [
     "menu_press_release" => "Press Release",
     "menu_seo_smes" => "SEO for SMEs",
     "menu_testimony" => "Client's Testimony",
-    "menu_insight" => "Insight",
+    "menu_insight" => "General Insight",
 
     'sub_partnership' => "Partnership",
     'menu_contributor' => "Contributor Program",

@@ -270,7 +270,7 @@
                         <div class="text-yellow-100 b1-400 b1-m-400">@lang('v2_footer.badge-name')</div>
                     </div>
                 </div>
-                <p class="text-dark-50 mt-2 text-center desc xs-400">@lang('v2_footer.badge-desc') <a
+                <p class="text-dark-50 mt-2 text-center desc b2-400 b2-m-400">@lang('v2_footer.badge-desc') <a
                         href="https://cmlabs.co/{{ $lang_region }}/become-partner">@lang('v2_footer.badge-desc-cta')</a></p>
             </div>
         </div>
@@ -332,14 +332,14 @@
                                     @lang('v2_footer.menu_tos')</a></li>
                             {{-- <li><a href="{{ route('v2.company.disclaimer', ['lang' => $lang_region]) }}">{{
 									__('v2_footer.menu_disclaimer') </a></li> --}}
-                            <li class="d-none d-lg-flex text-primary-70">
+                            <li class="d-none d-lg-flex text-gray-100">
                                 <span class="s-400 s-m-400 d-lg-flex align-items-center">@lang('v2_footer.copyright') &copy;
                                     2019-2023 PT CMLABS INDONESIA DIGITAL</span>
                             </li>
                         </ul>
                     </div>
                 </div>
-                <div class="mt-3 mt-lg-0 col-lg-5 d-flex d-lg-none justify-content-start text-primary-70">
+                <div class="mt-3 mt-lg-0 col-lg-5 d-flex d-lg-none justify-content-start text-gray-100">
                     <span class="s-700 s-m-700 d-lg-flex align-items-center text-footer">@lang('v2_footer.copyright') &copy;
                         2019-2023 PT CMLABS INDONESIA DIGITAL</span>
                 </div>
