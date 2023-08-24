@@ -81,7 +81,7 @@ return [
     "menu_service_backlink_national_2" => "Backlink ke Media Nasional",
     "menu_press_release" => "Press Rilis",
     "menu_seo_smes" => "SEO untuk UKM",
-    "menu_insight" => "Insight",
+    "menu_insight" => "Wawasan Umum",
 
     'sub_partnership' => "Partnership",
     'menu_contributor' => "Program Kontributor",
