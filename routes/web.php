@@ -71,6 +71,7 @@ Route::get('/logout','Auth\LoginController@logout');
         Route::get('/{lang}/download-plagiarism-check-logs/{type}', 'ToolsController@downloadPlagiarismCheckLogs');
         Route::get('/{lang}/http-header-checker', 'ToolsController@headerChecker');
         Route::get('/{lang}/json-ld-website-schema-generator', 'ToolsController@website');
+        Route::get('/{lang}/json-ld-local-business-schema-generator', 'ToolsController@localBusiness');
     });
     Route::get('/en/version', 'ToolsController@englishVersion');
     Route::get('/id/version', 'ToolsController@indonesiaVersion');

@@ -92,4 +92,7 @@ return [
     "edited-at" => "Edited at",
     "read-more" => "Read More",
     "show-less" => "Show less",
+    "invalid-phone" => "Invalid Number Phone",
+    "invalid-latitude" => "Invalid Latitude",
+    "invalid-longitude" => "Invalid Longitude",
 ];

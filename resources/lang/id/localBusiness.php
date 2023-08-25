@@ -1,20 +1,22 @@
 <?php
 return [
-    "meta-title" => "Tool Gratis JSON-LD Website Schema Generator",
-    "meta-desc" => "Tampilkan letak spesifik halaman website Anda dengan gunakan website schema generator tool secara gratis.",
-    "title" => "JSON-LD WEBSITE SCHEMA GENERATOR",
-    "subtitle" => "Website Schema Generator Deskripsi",
-    "label-name-website" => "Nama Website",
+    "meta-title" => "Tool Gratis JSON-LD Lokal Bisnis Schema Generator",
+    "meta-desc" => "Tampilkan letak spesifik halaman website Anda dengan gunakan Lokal Bisnis schema generator tool secara gratis.",
+    "title" => "JSON-LD LOKAL BISNIS SCHEMA GENERATOR",
+    "subtitle" => "Lokal Bisnis Schema Generator Deskripsi",
+    "label-type" => "LocalBusiness @type",
+    "placeholder-type" => "LocalBusiness",
+    "label-spesificType" => "More Specific @type",
+    "placeholder-spesificType" => "More Specific",
+
+
+
     "label-internal-site-search" => "URL penelusuran situs internal",
     "label-query-keywords" => "Optional: string di URL pencarian setelah kueri",
     "placeholder-websiteName" => "Ketik nama website Anda di sini ...",
     "placeholder-url" => "Ketik URL website Anda di sini ...",
     "placeholder-internalSiteSearch" => "Misalnya https://example.com/search?q=",
     "placeholder-queryKeywords" => "Ketik query string di sini ...",
-
-
-
-
     "highlight" => "Pada versi terbaru dari JSON LD , kami menambahkan website Schema Generator. Tool ini berguna untuk memungkinkan pengguna mengambil klik dari halaman yang diberi peringkat diatasnya jika Anda memiliki markup website sedangkan kompetitor tidak. Sekarang pengguna dapat menambahkan skema. Skema ini berfungsi untuk menguji implementasi Anda di halaman atau tingkat kode dengan Rich Snippet Testing Tool Google dan memintanya untuk merayapi laman website Anda yang telah dimodifikasi. Dengan adanya tool ini, Anda dapat melihat CTR dan tingkat kunjungan website Anda melonjak.",
     "desc-1" => "Apa itu JSON-LD website Schema Generator dari cmlabs?",
     "desc-1-1" => '<i class="italics">website schema generator</i> adalah sebuah tool gratis dari cmlabs yang dapat membantu webmaster membuat <i class="italics"><a href="https://cmlabs.co/en-id/seo-terms/website">website</a> schema markup</i> secara lebih praktis. Tool ini memungkinkan Anda untuk menghasilkan <i class="italics">schema markup</i> hanya dengan beberapa klik saja, tanpa harus memiliki kemampuan <i class="italics">coding</i> sekalipun.',
