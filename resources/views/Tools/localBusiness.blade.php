@@ -162,17 +162,17 @@ id/json-ld-localBusiness-schema-generator
                                     </div>
                                     <div class="col-12 col-sm-12">
                                         <div class="row">
-                                            <div class="col-sm-4 mb-5">
+                                            <div class="col-md-3 col-lg-4 mb-5">
                                                 <label for="latitude" class="font-weight-bold text-black">@lang('localBusiness.label-latitude')</label>
                                                 <input type="text" id="latitude" class="form-control latitude" name="" placeholder="{{ Lang::get('localBusiness.placeholder-latitude') }}" value="">
                                                 <div class="invalid-feedback" data-id="5">@lang('layout.invalid-latitude')</div>
                                             </div>
-                                            <div class="col-sm-4 mb-5">
+                                            <div class="col-md-3 col-lg-4 mb-5">
                                                 <label for="longitude" class="font-weight-bold text-black">@lang('localBusiness.label-longitude')</label>
                                                 <input type="text" id="longitude" class="form-control longitude" name="" placeholder="{{ Lang::get('localBusiness.placeholder-longitude') }}" value="">
                                                 <div class="invalid-feedback" data-id="6">@lang('layout.invalid-longitude')</div>
                                             </div>
-                                            <div class="col-sm-4 mb-5 align-self-center mt-md-2 mb-md-0">
+                                            <div class="col-md-5 col-lg-4 mb-5 align-self-center mt-md-2 mb-md-0">
                                                  <button type="button" class="btn btn-add-question mb-5 mt-5" name="button" id="fecthed-geo-coordinates">
                                                     <i class='bx bx-target-lock'></i> @lang('localBusiness.btn-geo-coordinates')
                                                 </button>
@@ -181,7 +181,7 @@ id/json-ld-localBusiness-schema-generator
                                     </div>
                                     <div class="col-12 col-sm-12">
                                         <div class="row">
-                                             <div class="col-sm-4 mb-5 align-self-center mt-md-2 mb-md-0">
+                                             <div class="col-md-5 mb-5 align-self-center mt-md-2 mb-md-0">
                                                   <button type="button" class="btn btn-add-question mb-5 mt-5" name="button" id="add-hours">
                                                     <i class='bx bx-plus'></i> @lang('localBusiness.btn-add-hours')
                                                 </button>
@@ -228,16 +228,16 @@ id/json-ld-localBusiness-schema-generator
                                     </div>
                                     <div class="col-12 col-sm-12">
                                         <div class="row">
-                                             <div class="col-sm-4 mb-5 align-self-center mt-md-2 mb-md-0">
-                                                  <button type="button" class="btn btn-add-question mb-5 mt-5" name="button" id="add-department">
-                                                    <i class='bx bx-plus'></i> @lang('localBusiness.btn-add-department')
-                                                </button>
-                                            </div>
-                                        </div>
-                                        <div class="row">
                                             <div class="col-12 mb-5">
                                                 <div id="form-department">
                                                 </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                             <div class="col-md-5 mb-5 align-self-center mt-md-2 mb-md-0">
+                                                  <button type="button" class="btn btn-add-question mb-5 mt-5" name="button" id="add-department">
+                                                    <i class='bx bx-plus'></i> @lang('localBusiness.btn-add-department')
+                                                </button>
                                             </div>
                                         </div>
                                     </div>

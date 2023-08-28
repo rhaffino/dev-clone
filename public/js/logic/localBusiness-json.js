@@ -1,13 +1,13 @@
 // Declar Social Profile Local Business
 var counterSocial = 0;
 var hoursCounter = -1;
+var departmentCounter = -1;
 
 let invalid_url = lang === "en" ? "Invalid URL" : "URL Tidak Valid";
 let placeholder_type = lang === "en" ? "Type your" : "Ketik URL";
 let placeholder_url = lang === "en" ? "URL here.." : "Anda di sini..";
 let invalid_hours = lang === "en" ? "Invalid Hours" : "Jam Tidak Valid";
-let label_days_week =
-    lang === "en" ? "Day(s) of the week" : "Hari dalam seminggu";
+let label_days_week = lang === "en" ? "Day(s) of the week" : "Hari dalam seminggu";
 let label_openat = lang === "en" ? "Open at" : "Buka";
 let placeholder_openat = lang === "en" ? "e.g 08:00" : "contoh 08:00";
 let label_closeat = lang === "en" ? "Close at" : "Tutup";
@@ -19,6 +19,11 @@ let label_thursday = lang === "en" ? "Thursday" : "Kamis";
 let label_friday = lang === "en" ? "Friday" : "Jumat";
 let label_saturday = lang === "en" ? "Saturday" : "Sabtu";
 let label_sunday = lang === "en" ? "Sunday" : "Minggu";
+
+let label_type_department = lang === "en" ? "LocalBusiness @type" : "LocalBusiness @type";
+let placeholder_type_department = lang === "en" ? "LocalBusiness" : "LocalBusiness";
+let label_specific_department = lang === "en" ? "More Specific @type" : "More Specific @type";
+let placeholder_specific_department = lang === "en" ? "More Specific" : "More Specific";
 
 let facebookVal = "";
 let twitterVal = "";
@@ -278,9 +283,11 @@ const localBusinessSchema = class {
             addressCountry: "",
         };
         this.geo = undefined;
-        (this.openingHoursSpecification = []),
-            // temp
-            (this.tempStreetAddress = "");
+        this.openingHoursSpecification = [];
+        this.dayOfWeek = [];
+
+        // temp
+        this.tempStreetAddress = "";
         this.tempAddressLocality = "";
         this.tempAddressRegion = "";
         this.tempPostalCode = "";
@@ -289,7 +296,7 @@ const localBusinessSchema = class {
         this.tempLatitude = "";
         this.tempLongitude = "";
 
-        this.tempDayWeek = [];
+        this.tempDayOfWeek = [];
         this.tempOpenAt = [];
         this.tempCloseAt = [];
 
@@ -329,9 +336,11 @@ const localBusinessSchema = class {
             addressCountry: "",
         };
         this.geo = undefined;
-        (this.openingHoursSpecification = []),
-            // temp
-            (this.tempStreetAddress = "");
+        this.openingHoursSpecification = [];
+        this.dayOfWeek = [];
+        
+        // temp
+        this.tempStreetAddress = "";
         this.tempAddressLocality = "";
         this.tempAddressRegion = "";
         this.tempPostalCode = "";
@@ -340,7 +349,7 @@ const localBusinessSchema = class {
         this.tempLatitude = "";
         this.tempLongitude = "";
 
-        this.tempDayWeek = [];
+        this.tempDayOfWeek = [];
         this.tempOpenAt = [];
         this.tempCloseAt = [];
 
@@ -414,11 +423,11 @@ const localBusinessSchema = class {
         tempObj.tempLatitude = this.tempLatitude;
         tempObj.tempLongitude = this.tempLongitude;
 
-        if (this.tempDayWeek.length > 0) {
-            if (this.tempDayWeek.length === 1) {
-                tempObj.tempDayWeek = this.tempDayWeek[0];
+        if (this.tempDayOfWeek.length > 0) {
+            if (this.tempDayOfWeek.length === 1) {
+                tempObj.tempDayOfWeek = this.tempDayOfWeek[0];
             } else {
-                tempObj.tempDayWeek = this.tempDayWeek;
+                tempObj.tempDayOfWeek = this.tempDayOfWeek;
             }
         }
 
@@ -864,6 +873,21 @@ function validateSosmed(value, data, id) {
     }
 }
 
+function updateJson_dayOfWeek(value, id){
+    for (let i = 0; i < 8; i++) {
+        if (
+            $.inArray(
+                value[i], localBusinessFormat.tempDayOfWeek) == -1)
+        {
+            localBusinessFormat.openingHoursSpecification[id].dayOfWeek = value;
+        } else {
+            localBusinessFormat.openingHoursSpecification[id].dayOfWeek = "";
+        }
+    }
+
+    localBusinessFormat.render();
+}
+
 function updateJSON_openAt(value, id) {
     localBusinessFormat.openingHoursSpecification[id].opens = value;
     localBusinessFormat.render();
@@ -891,29 +915,30 @@ function updateJSON_closeAt(value, id) {
 }
 
 function deleteHours(id) {
-    $(".hours-data[data-id=" + id + "]").remove();
     localBusinessFormat.openingHoursSpecification.splice(id, 1);
     localBusinessFormat.render();
 
-    console.log(id);
-    console.log(localBusinessFormat.openingHoursSpecification.length);
-
     for (
-        let i = id+1;
-        i < localBusinessFormat.openingHoursSpecification.length+1;
+        let i = id + 1;
+        i < localBusinessFormat.openingHoursSpecification.length + 1;
         i++
     ) {
-        // $(".openAt[data-id=" + i + "]").val(
-        //     $(".openAt[data-id=" + i + "]").val()
-        // );
-        console.log($(".openAt[data-id="+i+"]").data("id", i-1));
+        $(".hours-data[data-id=" + (i - 1) + "]").val(
+            $(".hours-data[data-id=" + i + "]").val()
+        );
+        $(".openAt[data-id=" + (i - 1) + "]").val(
+            $(".openAt[data-id=" + i + "]").val()
+        );
+        $(".closeAt[data-id=" + (i - 1) + "]").val(
+            $(".closeAt[data-id=" + i + "]").val()
+        );
     }
-
-    // $(
-    //     ".openAt[data-id=" +
-    //         localBusinessFormat.openingHoursSpecification.length +
-    //         "]"
-    // ).remove();
+    
+    $(
+        ".hours-data[data-id=" +
+            localBusinessFormat.openingHoursSpecification.length +
+            "]"
+    ).remove();
     hoursCounter--;
 }
 
@@ -990,6 +1015,7 @@ $("#fecthed-geo-coordinates").click(function (e) {
 
 // Add Hours Work
 $(document).on("click", "#add-hours", function () {
+    $("#form-hours").show();
     hoursCounter++;
 
     $("#form-hours").append(
@@ -997,7 +1023,9 @@ $(document).on("click", "#add-hours", function () {
             hoursCounter +
             '"><div class="col-sm-5 mb-5 align-self-center mt-md-2 mb-md-0"><label class="text-black font-weight-bold" for="dayWeek">' +
             label_days_week +
-            '</label><div class="dropdown bootstrap-select show-tick form-control"><select class="form-control selectpicker custom-select-blue dayWeek custom-searchbox" multiple="multiple" data-actions-box="false" data-size="4" data-live-search="true" tabindex="null"><option value="Monday">' +
+            '</label><div class="dropdown bootstrap-select show-tick form-control"><select class="form-control selectpicker custom-select-blue dayWeek custom-searchbox" multiple="multiple" data-actions-box="false" data-size="4" data-live-search="true" tabindex="null" data-id="' +
+            hoursCounter +
+            '"><option value="Monday">' +
             label_monday +
             '</option><option value="Tuesday">' +
             label_tuesday +
@@ -1037,7 +1065,6 @@ $(document).on("click", "#add-hours", function () {
     );
 
     $(".dayWeek").selectpicker("refresh");
-
     localBusinessFormat.openingHoursSpecification.push({
         "@type": "OpeningHoursSpecification",
         dayOfWeek: "",
@@ -1049,6 +1076,58 @@ $(document).on("click", "#add-hours", function () {
 
 $(document).on("click", ".deleteHours", function () {
     deleteHours(parseInt($(this).data("id")));
+});
+
+// Change Fullday
+$("#open-fullday").change(function () {
+    if (this.checked) {
+        // format hours everyday open
+        localBusinessFormat.openingHoursSpecification = [{
+            "@type": "OpeningHoursSpecification",
+            dayOfWeek: [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+                "Saturday",
+                "Sunday",
+            ],
+            opens: "00:00",
+            closes: "23:59",
+        }];
+
+        $("#add-hours").prop("disabled", true);
+        $("#form-hours").hide();
+    }else{
+        // render hours
+        localBusinessFormat.openingHoursSpecification.splice(0, 1);
+        var hoursDataCount = $(".hours-data").length;
+        for (let i = 0; i < hoursDataCount; i++) {
+            localBusinessFormat.openingHoursSpecification.push({
+                "@type": "OpeningHoursSpecification",
+                dayOfWeek: $(".dayWeek[data-id=" + i + "]").val(),
+                opens: $(".openAt[data-id=" + i + "]").val(),
+                closes: $(".closeAt[data-id=" + i + "]").val(),
+            });
+        }
+        
+        $("#add-hours").prop("disabled", false);
+        $("#form-hours").show();
+    }
+    localBusinessFormat.render();
+});
+
+$(document).on("click", "#add-department", function(){
+    console.log('add-department')
+    departmentCounter++;
+
+    $("#form-department").append(
+        '<hr><div class="row py-3"><div class="col-12 col-sm-12"><div class="row"><div class="col-sm-5 mb-5"><label for="localBusinessType" class="font-weight-bold text-black">#'+ departmentCounter +' '+ label_type_department +'</label><select id="localBusinessType" class="form-control selectpicker custom-select-blue custom-searchbox localBusinessType mb-5" data-size="4" data-live-search="true" tabindex="null"><option value="none">'+ placeholder_type_department +'</option></select></div><div class="col-sm-5 mb-5"><label for="spesificType" class="font-weight-bold text-black">'+ label_specific_department +'</label><select id="SpesificType" class="form-control selectpicker custom-select-blue custom-searchbox spesificType mb-5" data-size="4" data-live-search="true" tabindex="null" disabled><option value="none">'+ placeholder_specific_department +'</option></select></div><div class="col-sm-2 mb-5 align-self-center mt-md-0 mb-md-0"><div class="d-flex justify-content-end mt-md-0"><i class="bx bxs-x-circle bx-md delete deleteHours" data-id="0"></i></div></div></div></div><div class="col-12 col-sm-12"><div class="row"><div class="col-sm-4 mb-5"><label for="nameBusiness" class="font-weight-bold text-black">Name</label><input type="text" id="nameBusiness" class="form-control nameBusiness" name="" placeholder="Type your name business here.." value=""></div><div class="col-sm-4 mb-5"><label for="imageBusiness" class="font-weight-bold text-black">Image URL</label><input type="text" id="imageBusiness" class="form-control imageBusiness" name="" placeholder="Type your URL Image here.." value=""><div class="invalid-feedback url-department" data-id="0">URL invalid</div></div><div class="col-sm-4 mb-5"><label for="phone" class="font-weight-bold text-black">Phone</label><input type="text" id="phone" class="form-control phone" name="" placeholder="Type your phone here.." value=""><div class="invalid-feedback phone-department" data-id="0">Invalid Phone</div></div></div></div></div>'
+    );
+    
+    $(".localBusinessType").selectpicker("refresh");
+    $(".spesificType").selectpicker("refresh");
 });
 
 // Form Action
@@ -1135,11 +1214,14 @@ $(document).on("keyup", ".longitude", function () {
 
 $(document).on("keyup", ".openAt", function () {
     updateJSON_openAt($(this).val(), $(this).data("id"));
-    console.log($(this).data("id"));
 });
 
 $(document).on("keyup", ".closeAt", function () {
     updateJSON_closeAt($(this).val(), $(this).data("id"));
+});
+
+$(document).on("change", ".dayWeek", function () {
+    updateJson_dayOfWeek($(this).val(), $(this).data("id"));
 });
 
 $(".social-profiles").change(function (e) {
@@ -1259,11 +1341,14 @@ $(".reset").click(function (e) {
     $(".region").attr("disabled", true);
     $(".region").selectpicker("val", "none");
     $(".region").selectpicker("refresh");
+    $(".dayWeek").selectpicker("val", "none");
+    $(".dayWeek").selectpicker("refresh");
+    $("#form-hours").hide();
 
     $(".social-profiles").val(1);
     $(".social-profiles").change();
     $(".sosial-profile-url").html("");
-
+    
     $(".invalid-feedback").hide();
     $("#foodEstablishment").addClass("d-none");
     $("#form-localBusiness").trigger("reset");

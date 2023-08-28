@@ -1877,6 +1877,11 @@ input.input-url-meta-checker:focus {
     border-radius: 20px;
 }
 
+.btn-add-question:disabled:hover,
+.btn-add-question[disabled]:hover{
+    cursor: no-drop;
+}
+
 .btn-add-question i {
     color: white;
 }
