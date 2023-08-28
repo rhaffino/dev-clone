@@ -4,6 +4,7 @@ var hoursCounter = -1;
 var departmentCounter = -1;
 
 let invalid_url = lang === "en" ? "Invalid URL" : "URL Tidak Valid";
+let invalid_phone = lang === "en" ? "Invalid Phone" : "Telepon Tidak Valid";
 let placeholder_type = lang === "en" ? "Type your" : "Ketik URL";
 let placeholder_url = lang === "en" ? "URL here.." : "Anda di sini..";
 let invalid_hours = lang === "en" ? "Invalid Hours" : "Jam Tidak Valid";
@@ -24,6 +25,12 @@ let label_type_department = lang === "en" ? "LocalBusiness @type" : "LocalBusine
 let placeholder_type_department = lang === "en" ? "LocalBusiness" : "LocalBusiness";
 let label_specific_department = lang === "en" ? "More Specific @type" : "More Specific @type";
 let placeholder_specific_department = lang === "en" ? "More Specific" : "More Specific";
+let label_name_department = lang === "en" ? "Name" : "Nama";
+let placeholder_name_department = lang === "en" ? "Type your name business here" : "Type your name business here";
+let label_image_department = lang === "en" ? "Image URL" : "Image URL";
+let placeholder_image_department = lang === "en" ? "Type your URL Image here" : "Type your URL Image here";
+let label_phone_department = lang === "en" ? "Phone" : "Phone";
+let placeholder_phone_department = lang === "en" ? "Type your phone here" : "Type your phone here";
 
 let facebookVal = "";
 let twitterVal = "";
@@ -285,6 +292,7 @@ const localBusinessSchema = class {
         this.geo = undefined;
         this.openingHoursSpecification = [];
         this.dayOfWeek = [];
+        this.department = [];
 
         // temp
         this.tempStreetAddress = "";
@@ -338,6 +346,7 @@ const localBusinessSchema = class {
         this.geo = undefined;
         this.openingHoursSpecification = [];
         this.dayOfWeek = [];
+        this.department = [];
         
         // temp
         this.tempStreetAddress = "";
@@ -507,6 +516,16 @@ const localBusinessSchema = class {
         }
 
         if (this.sameAs.length > 0) obj.sameAs = this.sameAs;
+
+        if (this.department) {
+            if (this.department.length > 0) {
+                if (this.department.length === 1) {
+                    obj.department = this.department[0];
+                } else {
+                    obj.department = this.department;
+                }
+            }
+        }
 
         $("#json-format").val(
             '<script type="application/ld+json">\n' +
@@ -942,6 +961,19 @@ function deleteHours(id) {
     hoursCounter--;
 }
 
+function deleteDepartment(id){
+    $(
+        ".department-list[data-id=" +
+            id +
+            "]"
+    ).remove();
+    $(
+        "hr[data-id=" +
+            id +
+            "]"
+    ).remove();
+}
+
 // Change Business Type
 $(".localBusinessType").change(function (e) {
     clearSelect();
@@ -1118,16 +1150,144 @@ $("#open-fullday").change(function () {
     localBusinessFormat.render();
 });
 
+// Department
 $(document).on("click", "#add-department", function(){
-    console.log('add-department')
     departmentCounter++;
 
     $("#form-department").append(
-        '<hr><div class="row py-3"><div class="col-12 col-sm-12"><div class="row"><div class="col-sm-5 mb-5"><label for="localBusinessType" class="font-weight-bold text-black">#'+ departmentCounter +' '+ label_type_department +'</label><select id="localBusinessType" class="form-control selectpicker custom-select-blue custom-searchbox localBusinessType mb-5" data-size="4" data-live-search="true" tabindex="null"><option value="none">'+ placeholder_type_department +'</option></select></div><div class="col-sm-5 mb-5"><label for="spesificType" class="font-weight-bold text-black">'+ label_specific_department +'</label><select id="SpesificType" class="form-control selectpicker custom-select-blue custom-searchbox spesificType mb-5" data-size="4" data-live-search="true" tabindex="null" disabled><option value="none">'+ placeholder_specific_department +'</option></select></div><div class="col-sm-2 mb-5 align-self-center mt-md-0 mb-md-0"><div class="d-flex justify-content-end mt-md-0"><i class="bx bxs-x-circle bx-md delete deleteHours" data-id="0"></i></div></div></div></div><div class="col-12 col-sm-12"><div class="row"><div class="col-sm-4 mb-5"><label for="nameBusiness" class="font-weight-bold text-black">Name</label><input type="text" id="nameBusiness" class="form-control nameBusiness" name="" placeholder="Type your name business here.." value=""></div><div class="col-sm-4 mb-5"><label for="imageBusiness" class="font-weight-bold text-black">Image URL</label><input type="text" id="imageBusiness" class="form-control imageBusiness" name="" placeholder="Type your URL Image here.." value=""><div class="invalid-feedback url-department" data-id="0">URL invalid</div></div><div class="col-sm-4 mb-5"><label for="phone" class="font-weight-bold text-black">Phone</label><input type="text" id="phone" class="form-control phone" name="" placeholder="Type your phone here.." value=""><div class="invalid-feedback phone-department" data-id="0">Invalid Phone</div></div></div></div></div>'
+        '<hr data-id="'+
+        departmentCounter +
+        '"><div class="row department-list" data-id="' +
+            departmentCounter +
+            '"><div class="col-12 col-sm-12 py-3"><div class="row"><div class="col-sm-5 mb-5"><label for="localBusinessType" class="font-weight-bold text-black">#' +
+            departmentCounter +
+            " " +
+            label_type_department +
+            '</label><select id="localBusinessType-'+
+            departmentCounter +'" class="form-control selectpicker custom-select-blue custom-searchbox localBusinessType-'+
+            departmentCounter +' mb-5" data-size="4" data-live-search="true" tabindex="null"><option value="none">' +
+            placeholder_type_department +
+            '</option></select></div><div class="col-sm-5 mb-5"><label for="spesificType" class="font-weight-bold text-black">' +
+            label_specific_department +
+            '</label><select id="SpesificType-'+
+            departmentCounter +
+            '" class="form-control selectpicker custom-select-blue custom-searchbox spesificType-'+
+            departmentCounter +
+            ' mb-5" data-size="4" data-live-search="true" tabindex="null" disabled><option value="none">' +
+            placeholder_specific_department +
+            '</option></select></div><div class="col-sm-2 mb-5 align-self-center mt-md-0 mb-md-0"><div class="d-flex justify-content-end mt-md-0"><i class="bx bxs-x-circle bx-md delete deleteDepartment" data-id="' +
+            departmentCounter +
+            '"></i></div></div></div></div><div class="col-12 col-sm-12"><div class="row"><div class="col-sm-4 mb-5"><label for="nameBusiness" class="font-weight-bold text-black">' +
+            label_name_department +
+            '</label><input type="text" id="nameBusiness" class="form-control nameBusiness" name="" placeholder="' +
+            placeholder_name_department +
+            '" value=""></div><div class="col-sm-4 mb-5"><label for="imageBusiness" class="font-weight-bold text-black">' +
+            label_image_department +
+            '</label><input type="text" id="imageBusiness" class="form-control imageBusiness" name="" placeholder="' +
+            placeholder_image_department +
+            '" value=""><div class="invalid-feedback url-department" data-id="' +
+            departmentCounter +
+            '">' +
+            invalid_url +
+            '</div></div><div class="col-sm-4 mb-5"><label for="phone" class="font-weight-bold text-black">' +
+            label_phone_department +
+            '</label><input type="text" id="phone" class="form-control phone" name="" placeholder="' +
+            placeholder_phone_department +
+            '" value=""><div class="invalid-feedback phone-department" data-id="' +
+            departmentCounter +
+            '">' +
+            invalid_phone +
+            "</div></div></div></div></div>"
     );
+
+    jQuery.ajax({
+        url: "/json/local-business.json",
+        type: "GET",
+        dataType: "json",
+        success: function (data) {
+            jQuery.each(data, function (key, value) {
+                clearSelect();
+                jQuery('#localBusinessType-'+ departmentCounter +'').append(
+                    '<option value="' +
+                        value.localBusinessType +
+                        '">' +
+                        value.localBusinessType +
+                        "</option>"
+                );
+                $('#localBusinessType-'+ departmentCounter +'').selectpicker("refresh");
+            });
+        },
+    });
+
+    localBusinessFormat.department.push({
+        "@type": "LocalBusiness",
+        name: "",
+        image: "",
+        telephone: "",
+    });
+    localBusinessFormat.render();
     
-    $(".localBusinessType").selectpicker("refresh");
-    $(".spesificType").selectpicker("refresh");
+    $('#localBusinessType-'+ departmentCounter +'').selectpicker("refresh");
+    $('.spesificType-'+ departmentCounter +'').selectpicker("refresh");
+});
+
+$(document).on("change", "#form-department", function () {
+    for (
+        let i = departmentCounter;
+        i < departmentCounter + 1;
+        i++
+    ) {
+        clearSelect();
+        if ($("#localBusinessType-" + i + "").val() == "none") {
+            $(".spesificType-" + i + "").attr("disabled", true);
+            $(".spesificType-" + i + "").selectpicker("refresh");
+        } else {
+            $(".spesificType-" + i + "").removeAttr("disabled");
+            $(".spesificType-" + i + "").selectpicker("refresh");
+
+            jQuery.ajax({
+                url: "/json/local-business.json",
+                type: "GET",
+                dataType: "json",
+                success: function (data) {
+                    jQuery.each(data, function (key, value) {
+                        if (
+                            value.localBusinessType ==
+                                $("#localBusinessType-" + i + "").val() &&
+                            value.specificType
+                        ) {
+                            clearSelect();
+                            value.specificType.forEach((specificTypeList) => {
+                                jQuery("#SpesificType-" + i + "").append(
+                                    '<option value="' +
+                                        specificTypeList +
+                                        '">' +
+                                        specificTypeList +
+                                        "</option>"
+                                );
+                            });
+                            $(".spesificType-" + i + "").selectpicker(
+                                "refresh"
+                            );
+                        } else if (
+                            value.localBusinessType ==
+                                $("#localBusinessType-" + i + "").val() &&
+                            value.specificType == null
+                        ) {
+                            $(".spesificType-" + i + "").attr("disabled", true);
+                            $(".spesificType-" + i + "").selectpicker(
+                                "refresh"
+                            );
+                        }
+                    });
+                },
+            });
+        }
+    }
+});
+
+$(document).on("click", ".deleteDepartment", function () {
+    deleteDepartment(parseInt($(this).data("id")));
 });
 
 // Form Action
