@@ -66,6 +66,10 @@
                                         class="mktcmlgtm_footer_seo_writing text-dark-70 b2-400 b2-m-400 two-rows"
                                         href="https://cmlabs.co/{{ $lang_region }}/pricing/content-writing">@lang('v2_footer.menu_service_writing')
                                     </a></li>
+                                <li class="my-1 my-lg-2"><a
+                                    class="mktcmlgtm_footer_expert_writing text-dark-70 b2-400 b2-m-400 two-rows"
+                                    href="https://cmlabs.co/{{ $lang_region }}/pricing/expert-writing">@lang('v2_footer.menu_service_expert_writing')
+                                </a></li>                                    
                                 @if ($lang_region === 'en-id' || $lang_region === 'id-id')
                                     <li class="my-1 my-lg-2"><a
                                             class="mktcmlgtm_footer_media_buying text-dark-70 b2-400 b2-m-400 two-rows"

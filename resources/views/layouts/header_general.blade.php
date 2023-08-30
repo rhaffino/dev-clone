@@ -62,6 +62,9 @@
                                 href="https://cmlabs.co/{{ $local }}-id/pricing/content-writing">@lang('layout.nav-pricing-writing')</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item"
+                                href="https://cmlabs.co/{{ $local }}-id/pricing/expert-writing">Expert Writing</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item"
                                 href="https://cmlabs.co/{{ $local }}-id/pricing/media-buying">@lang('layout.nav-pricing-media-buying')</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item"
