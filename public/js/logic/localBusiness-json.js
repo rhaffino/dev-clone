@@ -325,6 +325,7 @@ const localBusinessSchema = class {
 
     resetrender() {
         hoursCounter = -1;
+        departmentCounter = -1;
 
         this.type = "LocalBusiness";
         this.name = "";
