@@ -1287,6 +1287,7 @@ $("#open-fullday").change(function () {
 
 // Department
 $(document).on("click", "#add-department", function(){
+    $("#form-department").show();
     departmentCounter++;
 
     $("#form-department").append(
@@ -1601,11 +1602,14 @@ $(".reset").click(function (e) {
     $(".region").selectpicker("refresh");
     $(".dayWeek").selectpicker("val", "none");
     $(".dayWeek").selectpicker("refresh");
+    $("#form-hours").html("");
     $("#form-hours").hide();
-
     $(".social-profiles").val(1);
     $(".social-profiles").change();
     $(".sosial-profile-url").html("");
+    $("#form-department").html("");
+    $("#form-department").hide();
+    // debug department number reset
     
     $(".invalid-feedback").hide();
     $("#foodEstablishment").addClass("d-none");
