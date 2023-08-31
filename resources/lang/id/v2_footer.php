@@ -110,7 +110,7 @@ return [
     'menu_service_seo' => 'Jasa SEO <br><i class="text-primary-70 s-700 b2-m-700">mulai dari Rp10juta</i>',
     'menu_service_writing' => 'Jasa Penulisan Artikel SEO<br><i class="text-primary-70 s-700 b2-m-700">mulai dari Rp450ribu</i>',
     'menu_service_marketing' => 'Media Buying <br><i class="text-primary-70 s-700 b2-m-700">mulai dari Rp100juta</i>',
-    'menu_service_expert_writing' => 'Expert Writing <br><i class="text-primary-70 s-700 b2-m-700">mulai dari Rp10.5juta</i>',
+    'menu_service_expert_writing' => 'Expert Writing <br><i class="text-primary-70 s-700 b2-m-700">mulai dari Rp800ribu</i>',
     'menu_service_backlink' => 'Backlink dari Blogger',
     'menu_service_political' => 'SEO untuk Kampanye Politik',
     'menu_service_pr' => 'PR / Advertorial',
