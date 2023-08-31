@@ -182,7 +182,7 @@ id/json-ld-localBusiness-schema-generator
                                     <div class="col-12 col-sm-12">
                                         <div class="row">
                                              <div class="col-md-5 mb-5 align-self-center mt-md-2 mb-md-0">
-                                                  <button type="button" class="btn btn-add-question mb-5 mt-5" name="button" id="add-hours">
+                                                <button type="button" class="btn btn-add-question mb-5 mt-5" name="button" id="add-hours">
                                                     <i class='bx bx-plus'></i> @lang('localBusiness.btn-add-hours')
                                                 </button>
                                             </div>
@@ -230,6 +230,7 @@ id/json-ld-localBusiness-schema-generator
                                         <div class="row">
                                             <div class="col-12 mb-5">
                                                 <div id="form-department">
+                                                    <p class="h6 text-black mb-5">Local Business - Department</p>
                                                 </div>
                                             </div>
                                         </div>

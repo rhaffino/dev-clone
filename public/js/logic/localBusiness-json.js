@@ -2,6 +2,7 @@
 var counterSocial = 0;
 var hoursCounter = -1;
 var departmentCounter = -1;
+var hoursDepartmentCounter = -1;
 
 let invalid_url = lang === "en" ? "Invalid URL" : "URL Tidak Valid";
 let invalid_phone = lang === "en" ? "Invalid Phone" : "Telepon Tidak Valid";
@@ -31,6 +32,8 @@ let label_image_department = lang === "en" ? "Image URL" : "Image URL";
 let placeholder_image_department = lang === "en" ? "Type your URL Image here" : "Type your URL Image here";
 let label_phone_department = lang === "en" ? "Phone" : "Phone";
 let placeholder_phone_department = lang === "en" ? "Type your phone here" : "Type your phone here";
+let label_add_opening = lang === "en" ? "Add Opening Hours" : "Tambah Jam Buka";
+let label_open_full = lang === "en" ? "Open 24/7" : "Buka 24/7";
 
 let facebookVal = "";
 let twitterVal = "";
@@ -307,7 +310,7 @@ const localBusinessSchema = class {
         this.tempDayOfWeek = [];
         this.tempOpenAt = [];
         this.tempCloseAt = [];
-
+        
         this.sameAs = [];
         this.tempSocial = [];
         this.facebookVal = "https://facebook.com/";
@@ -321,11 +324,14 @@ const localBusinessSchema = class {
         this.soundcloudVal = "";
         this.instagramVal = "https://instagram.com/";
         this.youtubeVal = "https://www.youtube.com/";
+
+        this.tempDayOfWeekDepartment = [];
     }
 
     resetrender() {
         hoursCounter = -1;
         departmentCounter = -1;
+        hoursDepartmentCounter = -1;
 
         this.type = "LocalBusiness";
         this.name = "";
@@ -376,6 +382,8 @@ const localBusinessSchema = class {
         this.soundcloudVal = "";
         this.instagramVal = "https://instagram.com/";
         this.youtubeVal = "https://www.youtube.com/";
+
+        this.tempDayOfWeekDepartment = [];
 
         const resetObj = {
             "@context": "https://schema.org",
@@ -479,6 +487,14 @@ const localBusinessSchema = class {
         instagramVal = this.instagramVal;
         tempObj.youtubeVal = this.youtubeVal;
         youtubeVal = this.youtubeVal;
+
+        if (this.tempDayOfWeekDepartment.length > 0) {
+            if (this.tempDayOfWeekDepartment.length === 1) {
+                tempObj.tempDayOfWeekDepartment = this.tempDayOfWeekDepartment[0];
+            } else {
+                tempObj.tempDayOfWeekDepartment = this.tempDayOfWeekDepartment;
+            }
+        }
 
         return tempObj;
     }
@@ -1038,7 +1054,11 @@ function deleteDepartment(id){
             dataType: "json",
             success: function (data) {
                 jQuery.each(data, function (key, value) {
-                    if (value.localBusinessType == $("#localBusinessType-" + (i - 1) + "").val() && value.specificType) {
+                    if (
+                        value.localBusinessType ==
+                            $("#localBusinessType-" + (i - 1) + "").val() &&
+                        value.specificType
+                    ) {
                         value.specificType?.forEach((specificTypeList) => {
                             jQuery("#SpesificType-" + (i - 1) + "").append(
                                 '<option value="' +
@@ -1049,9 +1069,15 @@ function deleteDepartment(id){
                             );
                         });
 
-                        $("#SpesificType-" + (i - 1) + "").val(localBusinessFormat.department[(i - 1)]["@type"]);
-                        $(".spesificType-" + (i - 1) + "").removeAttr("disabled");
-                        $(".spesificType-" + (i - 1) + "").selectpicker("refresh");
+                        $("#SpesificType-" + (i - 1) + "").val(
+                            localBusinessFormat.department[i - 1]["@type"]
+                        );
+                        $(".spesificType-" + (i - 1) + "").removeAttr(
+                            "disabled"
+                        );
+                        $(".spesificType-" + (i - 1) + "").selectpicker(
+                            "refresh"
+                        );
                     }
                 });
             },
@@ -1108,6 +1134,71 @@ function phoneDepartmentKeyup(id) {
         "#phoneBusiness-" + id + ""
     ).val();
     localBusinessFormat.render();
+}
+
+function updateJson_dayOfWeekDepartment(value, id, select) {
+    for (let i = 0; i < 8; i++) {
+        if ($.inArray(value[i], localBusinessFormat.tempDayOfWeekDepartment) == -1) {
+            localBusinessFormat.department[id].openingHoursSpecification[select].dayOfWeek = value;
+        } else {
+            localBusinessFormat.department[id].openingHoursSpecification[select].dayOfWeek = "";
+        }
+    }
+
+    localBusinessFormat.render();
+}
+
+function openAtDepartment(value, id, input){
+    localBusinessFormat.department[id].openingHoursSpecification[input].opens = value;
+    localBusinessFormat.render();
+
+    if (value.match(regexHours)) {
+        $(".openAtDepartment[data-id=" + id + "][data-id-input="+ input +"]").removeClass("is-invalid");
+        $(".invalid-feedback[data-id=openAt-" + id + "][data-id-input="+ input +"]").hide();
+    } else {
+        $(".openAtDepartment[data-id=" + id + "][data-id-input="+ input +"]").addClass("is-invalid");
+        $(".invalid-feedback[data-id=openAt-" + id + "][data-id-input="+ input +"]").show();
+    }
+}
+
+function closeAtDepartment(value, id, input){
+    localBusinessFormat.department[id].openingHoursSpecification[input].closes = value;
+    localBusinessFormat.render();
+
+    if (value.match(regexHours)) {
+        $(".closeAtDepartment[data-id=" + id + "][data-id-input="+ input +"]").removeClass("is-invalid");
+        $(".invalid-feedback[data-id=closeAt-" + id + "][data-id-input="+ input +"]").hide();
+    } else {
+        $(".closeAtDepartment[data-id=" + id + "][data-id-input="+ input +"]").addClass("is-invalid");
+        $(".invalid-feedback[data-id=closeAt-" + id + "][data-id-input="+ input +"]").show();
+    }
+}
+
+function deleteHoursDepartment(id, idDelete){
+    localBusinessFormat.department[id].openingHoursSpecification.splice(idDelete, 1);
+    localBusinessFormat.render();
+
+    for (
+        let i = id + 1;
+        i < localBusinessFormat.department[id].openingHoursSpecification.length + 1; 
+        i++
+    ) {
+        $(".hours-data-department[data-id=" + (id - 1) + "][data-id-department="+ (idDelete - 1) +"]").val(
+            $(".hours-data-department[data-id=" + id + "][data-id-department="+ idDelete +"]").val()
+        );
+        $(".openAtDepartment[data-id=" + (id - 1) + "][data-id-input="+ (idDelete - 1) +"]").val(
+            $(".openAtDepartment[data-id=" + id + "][data-id-input="+ idDelete +"]").val()
+        );
+        $(".closeAtDepartment[data-id=" + (id - 1) + "][data-id-input="+ (idDelete - 1) +"]").val(
+            $(".closeAtDepartment[data-id=" + id + "][data-id-input="+ idDelete +"]").val()
+        );
+        $(".deleteHoursDepartment[data-id=" + (id - 1) + "][data-id-delete="+ (idDelete - 1) +"]").val(
+            $(".deleteHoursDepartment[data-id=" + id + "][data-id-delete="+ idDelete +"]").val()
+        );
+    }
+
+    $(".hours-data-department[data-id=" + id +"][data-id-department="+ idDelete +"]").remove();
+    hoursDepartmentCounter--;
 }
 
 // Change Business Type
@@ -1290,13 +1381,12 @@ $("#open-fullday").change(function () {
 $(document).on("click", "#add-department", function(){
     $("#form-department").show();
     departmentCounter++;
+    hoursDepartmentCounter = -1;
 
     $("#form-department").append(
-        '<hr data-id="' +
+        '<div class="row department-list" data-id="' +
             departmentCounter +
-            '"><div class="row department-list" data-id="' +
-            departmentCounter +
-            '"><div class="col-12 col-sm-12 py-3"><div class="row"><div class="col-sm-5 mb-5"><label for="localBusinessType" class="font-weight-bold text-black">#' +
+            '"><div class="col-12 col-sm-12 py-3"><div class="row"><div class="col-sm-6 mb-5"><label for="localBusinessType" class="font-weight-bold text-black">#' +
             departmentCounter +
             " " +
             label_type_department +
@@ -1318,7 +1408,7 @@ $(document).on("click", "#add-department", function(){
             departmentCounter +
             ')" disabled><option value="none">' +
             placeholder_specific_department +
-            '</option></select></div><div class="col-sm-2 mb-5 align-self-center mt-md-0 mb-md-0"><div class="d-flex justify-content-end mt-md-0"><i class="bx bxs-x-circle bx-md delete deleteDepartment" data-id="' +
+            '</option></select></div><div class="col-sm-1 mb-5 align-self-center mt-md-0 mb-md-0"><div class="d-flex justify-content-end mb-md-3"><i class="bx bxs-x-circle bx-md delete deleteDepartment" data-id="' +
             departmentCounter +
             '"></i></div></div></div></div><div class="col-12 col-sm-12"><div class="row"><div class="col-sm-4 mb-5"><label for="nameBusiness" class="font-weight-bold text-black">' +
             label_name_department +
@@ -1352,7 +1442,19 @@ $(document).on("click", "#add-department", function(){
             departmentCounter +
             '">' +
             invalid_phone +
-            "</div></div></div></div></div>"
+            '</div></div><div class="col-12 col-sm-12"><div class="row"><div class="col-md-5 mb-5 align-self-center mt-md-2 mb-md-0"><button type="button" class="btn btn-add-question add-hours-department mb-5 mt-5" name="button" data-id=' +
+            departmentCounter +
+            '><i class="bx bx-plus"></i> ' +
+            label_add_opening +
+            '</button></div><div class="col-sm-4 mb-5  align-self-center mt-md-2 mb-md-0"><div class="checkbox-list"><label class="checkbox text-black font-weight-bold"><input type="checkbox" class="open-fullday-department" data-id=' +
+            departmentCounter +
+            ' name="" /><span></span>' +
+            label_open_full +
+            '</label></div></div></div><div class="row"><div class="col-12 mb-5"><div id="form-hours-department-' +
+            departmentCounter +
+            '"></div></div></div></div></div><hr data-id="' +
+            departmentCounter +
+            '"></div>'
     );
 
     jQuery.ajax({
@@ -1386,8 +1488,164 @@ $(document).on("click", "#add-department", function(){
     $('.spesificType-'+ departmentCounter +'').selectpicker("refresh");
 });
 
+// add-hours-department
+$(document).on("click", ".add-hours-department", function () {
+    var idHoursDepartment = parseInt($(this).attr("data-id"));
+    $("#form-hours-department-" + idHoursDepartment + "").show();
+    hoursDepartmentCounter++;
+
+    $("#form-hours-department-" + idHoursDepartment + "").append(
+        '<div class="row mb-5 hours-data-department" data-id="' +
+            idHoursDepartment +
+            '" data-id-department="' +
+            hoursDepartmentCounter +
+            '"><div class="col-sm-5 mb-5 align-self-center mt-md-2 mb-md-0"><label class="text-black font-weight-bold" for="dayWeek">' +
+            label_days_week +
+            '</label><div class="dropdown bootstrap-select show-tick form-control"><select class="form-control selectpicker custom-select-blue dayWeekDepartment custom-searchbox" multiple="multiple" data-actions-box="false" data-size="4" data-live-search="true" tabindex="null" data-id="' +
+            idHoursDepartment +
+            '" data-id-select="' +
+            hoursDepartmentCounter +
+            '"><option value="Monday">' +
+            label_monday +
+            '</option><option value="Tuesday">' +
+            label_tuesday +
+            '</option><option value="Wednesday">' +
+            label_wednesday +
+            '</option><option value="Thursday">' +
+            label_thursday +
+            '</option><option value="Friday">' +
+            label_friday +
+            '</option><option value="Saturday">' +
+            label_saturday +
+            '</option><option value="Sunday">' +
+            label_sunday +
+            '</option></select></div></div><div class="col-sm-3 mb-5 align-self-center mt-md-2 mb-md-0"><label for="openAt" class="font-weight-bold text-black">' +
+            label_openat +
+            '</label><input type="text" class="form-control openAtDepartment" name="" placeholder="' +
+            placeholder_openat +
+            '" value="" data-id="' +
+            idHoursDepartment +
+            '" data-id-input="' +
+            hoursDepartmentCounter +
+            '"><div class="invalid-feedback" data-id="openAt-' +
+            idHoursDepartment +
+            '" data-id-input="' +
+            hoursDepartmentCounter +
+            '">' +
+            invalid_hours +
+            '</div></div><div class="col-sm-3 mb-5 align-self-center mt-md-2 mb-md-0"><label for="closeAt" class="font-weight-bold text-black">' +
+            label_closeat +
+            '</label><input type="text" class="form-control closeAtDepartment" name="" placeholder="' +
+            placeholder_closeat +
+            '" value="" data-id="' +
+            idHoursDepartment +
+            '" data-id-input="' +
+            hoursDepartmentCounter +
+            '"><div class="invalid-feedback" data-id="closeAt-' +
+            idHoursDepartment +
+            '" data-id-input="' +
+            hoursDepartmentCounter +
+            '">' +
+            invalid_hours +
+            '</div></div><div class="col-sm-1 mb-5 align-self-center mt-md-2 mb-md-0"><div class="d-flex justify-content-center mt-7"><i class="bx bxs-x-circle bx-md delete deleteHoursDepartment" data-id="' +
+            idHoursDepartment +
+            '" data-id-delete="' +
+            hoursDepartmentCounter +
+            '"></i></div></div></div>'
+    );
+
+    $(".dayWeekDepartment").selectpicker("refresh");
+
+    if (
+        localBusinessFormat.department[idHoursDepartment]
+            .openingHoursSpecification
+    ) {
+        localBusinessFormat.department[
+            idHoursDepartment
+        ].openingHoursSpecification.push({
+            "@type": "OpeningHoursSpecification",
+            dayOfWeek: "",
+            opens: "",
+            closes: "",
+        });
+    } else {
+        localBusinessFormat.department[
+            idHoursDepartment
+        ].openingHoursSpecification = [];
+        localBusinessFormat.department[
+            idHoursDepartment
+        ].openingHoursSpecification.push({
+            "@type": "OpeningHoursSpecification",
+            dayOfWeek: "",
+            opens: "",
+            closes: "",
+        });
+    }
+
+    localBusinessFormat.render();
+});
+
+$(document).on("change", ".open-fullday-department", function () {
+    var id = parseInt($(this).attr("data-id"));
+    if (this.checked) {
+        // format hours everyday open
+        localBusinessFormat.department[id].openingHoursSpecification = [
+            {
+                "@type": "OpeningHoursSpecification",
+                dayOfWeek: [
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday",
+                    "Friday",
+                    "Saturday",
+                    "Sunday",
+                ],
+                opens: "00:00",
+                closes: "23:59",
+            },
+        ];
+
+        $(".add-hours-department[data-id="+ id +"]").prop("disabled", true);
+        $("#form-hours-department-" + id + "").hide();
+    } else {
+        // render hours
+        localBusinessFormat.department[id].openingHoursSpecification.splice(0, 1);
+        var departmentList = $(".department-list").length;
+        for (let i = 1; i < departmentList + 1; i++) {
+            console.log(departmentList);
+            localBusinessFormat.department[id].openingHoursSpecification.push({
+                "@type": "OpeningHoursSpecification",
+                dayOfWeek: $(".dayWeekDepartment[data-id=" + id + "][data-id-select=" + (i - 1) + "]").val(),
+                opens: $(".openAtDepartment[data-id=" + id + "][data-id-input=" + (i - 1) + "]").val(),
+                closes: $(".closeAtDepartment[data-id=" + id + "][data-id-input=" + (i - 1) + "]").val(),
+            });
+        }
+
+        $(".add-hours-department[data-id=" + id + "]").prop("disabled", false);
+        $("#form-hours-department-" + id + "").show();
+    }
+    localBusinessFormat.render();
+});
+
 $(document).on("click", ".deleteDepartment", function () {
     deleteDepartment(parseInt($(this).data("id")));
+});
+
+$(document).on("change", ".dayWeekDepartment", function () {
+    updateJson_dayOfWeekDepartment($(this).val(), $(this).data("id"), $(this).data("id-select"));
+});
+
+$(document).on("keyup", ".openAtDepartment", function () {
+    openAtDepartment($(this).val(), $(this).data("id"), $(this).data("id-input"));
+});
+
+$(document).on("keyup", ".closeAtDepartment", function () {
+    closeAtDepartment($(this).val(), $(this).data("id"), $(this).data("id-input"));
+});
+
+$(document).on("click", ".deleteHoursDepartment", function () {
+    deleteHoursDepartment(parseInt($(this).data("id")), parseInt($(this).data("id-delete")));
 });
 
 // Form Action
@@ -1610,10 +1868,11 @@ $(".reset").click(function (e) {
     $(".sosial-profile-url").html("");
     $("#form-department").html("");
     $("#form-department").hide();
-    // debug department number reset
     
     $(".invalid-feedback").hide();
     $("#foodEstablishment").addClass("d-none");
     $("#form-localBusiness").trigger("reset");
     localBusinessFormat.resetrender();
 });
+
+$("#form-department").hide();
