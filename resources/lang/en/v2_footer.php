@@ -92,6 +92,7 @@ return [
 
     'menu_service_seo' => 'SEO Services <br><i class="text-primary-70 s-700 b2-m-700">starting from Rp10m</i>',
     'menu_service_writing' => 'SEO Writing <br><i class="text-primary-70 s-700 b2-m-700">starting from Rp450k</i>',
+    'menu_service_expert_writing' => 'Expert Writing <br><i class="text-primary-70 s-700 b2-m-700">starting from Rp10.5m</i>',    
     'menu_service_marketing' => 'Media Buying <br><i class="text-primary-70 s-700 b2-m-700">starting from Rp100m</i>',
     'menu_service_backlink' => 'Blogger Backlink',
     'menu_service_political' => 'SEO for Political Campaign',
