@@ -129,7 +129,7 @@ id/json-ld-schema-generator
                     <div class="card card-custom card-stretch card-home">
                         <div class="card-body p-7">
                             <div class="">
-                                <i class='bx bxs-receipt text-darkgrey bx-lg'></i>
+                                <i class='bx bx-globe text-darkgrey bx-lg'></i>
                                 <h2 class="h6 text-darkgrey font-weight-bolder">Website</h2>
                                 <p class="text-darkgrey mb-0">@lang('jsonldhome.json-ld-website-desc')</p>
                             </div>
@@ -143,7 +143,7 @@ id/json-ld-schema-generator
                     <div class="card card-custom card-stretch card-home">
                         <div class="card-body p-7">
                             <div class="">
-                                <i class='bx bxs-receipt text-darkgrey bx-lg'></i>
+                                <i class='bx bxs-business text-darkgrey bx-lg'></i>
                                 <h2 class="h6 text-darkgrey font-weight-bolder">Local Business</h2>
                                 <p class="text-darkgrey mb-0">@lang('jsonldhome.json-ld-local-business-desc')</p>
                             </div>
