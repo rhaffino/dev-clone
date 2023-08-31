@@ -39,6 +39,8 @@ id/json-ld-recipe-schema-generator
                                         <option value="person">Person</option>
                                         <option value="product">Product</option>
                                         <option value="recipe" selected="selected">Recipe</option>
+                                        <option value="website">Website</option>
+                                        <option value="local-business">Local Business</option>
                                     </select>
                                 </div>
                             </div>

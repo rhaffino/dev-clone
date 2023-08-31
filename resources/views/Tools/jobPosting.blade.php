@@ -39,6 +39,8 @@ id/json-ld-jobPosting-schema-generator
                                         <option value="person">Person</option>
                                         <option value="product">Product</option>
                                         <option value="recipe">Recipe</option>
+                                        <option value="website">Website</option>
+                                        <option value="local-business">Local Business</option>
                                     </select>
                                 </div>
                             </div>

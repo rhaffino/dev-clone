@@ -1,17 +1,17 @@
 @extends('layouts.app')
 
-@section('title', Lang::get('breadcrumb.meta-title'))
+@section('title', Lang::get('video.meta-title'))
 
-@section('meta-desc', Lang::get('breadcrumb.meta-desc'))
+@section('meta-desc', Lang::get('video.meta-desc'))
 
-@section('conical','/en/json-ld-breadcrumb-schema-generator')
+@section('conical','/en/json-ld-website-schema-generator')
 
 @section('en-link')
-en/json-ld-breadcrumb-schema-generator
+en/json-ld-website-schema-generator
 @endsection
 
 @section('id-link')
-id/json-ld-breadcrumb-schema-generator
+id/json-ld-website-schema-generator
 @endsection
 
 @section('content')
@@ -21,8 +21,8 @@ id/json-ld-breadcrumb-schema-generator
 <div class="container container-tools mb-10">
     <div class="d-flex flex-column-fluid">
         <div class="container-fluid px-0">
-            <h1 class="text-darkgrey font-weight-normal">@lang('breadcrumb.title')</h1>
-            <span class="text-darkgrey h4 font-weight-normal mb-10">@lang('breadcrumb.subtitle')</span>
+            <h1 class="text-darkgrey font-weight-normal">Video - @lang('video.title')</h1>
+            <span class="text-darkgrey h4 font-weight-normal mb-10">@lang('video.subtitle')</span>
             <div class="card card-custom mt-10 mb-5">
                 <div class="card-body">
                     <div class="row">
@@ -32,7 +32,7 @@ id/json-ld-breadcrumb-schema-generator
                                     <label for="schema-json-ld" class="font-weight-bold text-black h6">@lang('layout.which-schema')</label>
                                     <select class="form-control selectpicker custom-select-blue" tabindex="null" id="schema-json-ld">
                                         <option value="home">Home</option>
-                                        <option value="breadcrumb" selected="selected">Breadcrumb</option>
+                                        <option value="breadcrumb">Breadcrumb</option>
                                         <option value="faq">FAQ Page</option>
                                         <option value="how-to">How-to</option>
                                         <option value="job-posting">Job Posting</option>
@@ -41,61 +41,84 @@ id/json-ld-breadcrumb-schema-generator
                                         <option value="recipe">Recipe</option>
                                         <option value="website">Website</option>
                                         <option value="local-business">Local Business</option>
+                                        <option value="video" selected="selected">Video</option>
                                     </select>
                                 </div>
                             </div>
-                            <p class="h6 text-black mb-5">Breadcrumb Generator</p>
+                            <p class="h6 text-black mb-5">Video Generator</p>
                             <form action="" id="form-breadcrumb">
-                                <div class="">
-                                    <div class="row">
-                                        <div class="col-10 col-sm-11">
-                                            <div class="row">
-                                                <div class="col-sm-5 mb-5">
-                                                    <label for="pageName" class="font-weight-bold text-black">@lang('breadcrumb.label-page') #1 @lang('breadcrumb.label-name')</label>
-                                                    <input type="text" id="pageName" class="form-control pageName" name="" placeholder="{{ Lang::get('breadcrumb.placeholder-pageName') }}" value="" data-id="0">
-                                                </div>
-                                                <div class="col-sm-7 mb-5">
-                                                    <label for="url" class="font-weight-bold text-black">URL #1</label>
-                                                    <input type="text" id="url" class="form-control url" name="" placeholder="{{ Lang::get('breadcrumb.placeholder-url') }}" value="" data-id="0">
-                                                    <div class="invalid-feedback" data-id="0">@lang('layout.invalid-url')</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-2 col-sm-1">
-                                            <div class="d-flex justify-content-center mt-9">
-                                                <i class='bx bxs-x-circle bx-md btn-delete-disabled delete-bread'></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-10 col-sm-11">
-                                            <div class="row">
-                                                <div class="col-sm-5 mb-5">
-                                                    <label for="pageName" class="font-weight-bold text-black">@lang('breadcrumb.label-page') #2 @lang('breadcrumb.label-name')</label>
-                                                    <input type="text" id="pageName" class="form-control pageName" name="" placeholder="{{ Lang::get('breadcrumb.placeholder-pageName') }}" value="" data-id="1">
-                                                </div>
-                                                <div class="col-sm-7 mb-5">
-                                                    <label for="url" class="font-weight-bold text-black">URL #2</label>
-                                                    <input type="text" id="url" class="form-control url" name="" placeholder="{{ Lang::get('breadcrumb.placeholder-url') }}" value="" data-id="1">
-                                                    <div class="invalid-feedback" data-id="1">@lang('layout.invalid-url')</div>
+                                <div class="row">
+                                    <div class="col-12 col-lg-6">
+                                        <label class="text-black font-weight-bold" for="nameVideo">@lang('video.label-name')</label>
+                                        <input type="text" name="" class="form-control nameVideo mb-5" placeholder="@lang('video.placeholder-name')" value="">
+                                        <div class="row mb-5 mb-xl-0">
+                                            <div class="col-12 col-md-6 mb-5">
+                                                <label class="text-black font-weight-bold" for="uploadDate">@lang('video.label-upload-date')</label>
+                                                <div class="input-group date">
+                                                    <div class="input-group-append">
+                                                <span class="input-group-text">
+                                                    <i class="bx bx-calendar text-darkgrey"></i>
+                                                </span>
+                                                    </div>
+                                                    <input type="text" id="kt_datepicker_2" name="" class="form-control custom-date uploadDate" readonly placeholder="@lang('video.placeholder-update-date')" value="" />
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="col-2 col-sm-1">
-                                            <div class="d-flex justify-content-center mt-9">
-                                                <i class='bx bxs-x-circle bx-md btn-delete-disabled delete-bread'></i>
+                                            <div class="col-6 col-xl-3 col-xxl-3">
+                                                <label class="text-black font-weight-bold" for="minutes">@lang('video.label-minutes')</label>
+                                                <input type="number" name="" class="form-control minutes" placeholder="@lang('video.placeholder-minutes')" value="" min="0" max="59" data-id="0">
+                                                <div class="invalid-feedback">@lang('layout.invalid-number')</div>
+                                            </div>
+                                            <div class="col-6 col-xl-3 col-xxl-3">
+                                                <label class="text-black font-weight-bold" for="seconds">@lang('video.label-seconds')</label>
+                                                <input type="number" name="" class="form-control seconds" placeholder="@lang('video.placeholder-seconds')" value="" min="0" max="59" data-id="0">
+                                                <div class="invalid-feedback">@lang('layout.invalid-number')</div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div id="formbreadcrumb">
-
+                                    <div class="col-12 col-lg-6 mb-8 mb-lg-5">
+                                        <label class="text-black font-weight-bold" for="descriptionVideo">@lang('video.label-description')</label>
+                                        <textarea name="" class="form-control custom-textarea-82 descriptionVideo" placeholder="@lang('video.placeholder-description')" data-id="0"></textarea>
                                     </div>
                                 </div>
-                                <button type="button" class="btn btn-add-question mb-5 mt-5" name="button" id="add-breadcrumb">
-                                    <i class='bx bx-plus'></i> @lang('breadcrumb.btn-add')
-                                </button>
+                                <div class="row imageurlList">
+                                    <div class="col-10 col-sm-11 mb-5">
+                                        <label class="text-black font-weight-bold" for="image">@lang('video.label-image') #1</label>
+                                        <input type="text" name="" class="form-control image" placeholder="@lang('video.placeholder-image')" value="" data-id="0">
+                                        <div class="invalid-feedback">@lang('layout.invalid-url')</div>
+                                    </div>
+                                    <div class="col-2 col-sm-1">
+                                        <div class="d-flex justify-content-center mt-9">
+                                            <i class='bx bxs-x-circle bx-md btn-delete-disabled'></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mb-5">
+                                    <div class="col-12">
+                                        <div id="image"></div>
+                                    </div>
+                                    <div class="col-12 col-md-5 col-xl-4">
+                                        <button type="button" class="btn btn-block btn-add-question mb-5 mt-5" name="button" id="add-imageUrl">
+                                            <i class='bx bx-plus'></i> @lang('video.btn-addImageUrl')
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="row mb-5">
+                                    <div class="col-12 col-md-4 mb-5 mb-md-0">
+                                        <label class="text-black font-weight-bold" for="contentUrl">@lang('video.label-contentUrl')</label>
+                                        <input type="text" name="" class="form-control contentUrl" placeholder="@lang('video.placeholder-contentUrl')" value="" data-id="0">
+                                    </div>
+                                    <div class="col-6 col-md-4">
+                                        <label class="text-black font-weight-bold" for="embedUrl">@lang('video.label-embedUrl')</label>
+                                        <input type="number" name="" class="form-control embedUrl" placeholder="@lang('video.placeholder-embedUrl')" value="" data-id="0">
+                                        <div class="invalid-feedback">@lang('layout.invalid-number')</div>
+                                    </div>
+                                    <div class="col-6 col-md-4">
+                                        <label class="text-black font-weight-bold" for="targetUrl">@lang('video.label-targetUrl')</label>
+                                        <input type="number" name="" class="form-control targetUrl" placeholder="@lang('video.placeholder-targetUrl')" value="" data-id="0">
+                                        <div class="invalid-feedback">@lang('layout.invalid-number')</div>
+                                    </div>
+                                </div>
                             </form>
-
                         </div>
                         <div class="col-md-4 mb-5">
                             <div class="p-2" style="border: 1px solid #E4E6EF; border-radius: 0.42rem;">
@@ -123,20 +146,6 @@ id/json-ld-breadcrumb-schema-generator
             </div>
             <div class="row">
                 <div class="col-md-8">
-                    {{-- <div id="local-collection-desktop" class="local-collection">
-            <div class="local-collection-header d-flex justify-content-between px-2 mb-3">
-              <div class="d-flex flex-row align-items-center">
-                <i class='bx bxs-collection bx-sm text-darkgrey mr-2'></i>
-                <span class="text-black font-15px">@lang('layout.local-history')</span>
-              </div>
-              <div onclick="clearAll()">
-                <span class="clear-all font-15px pointer">@lang('layout.clear-all')</span>
-              </div>
-            </div>
-            <div class="local-collection-body">
-              <ul class="list-group" id="localsavedesktop"></ul>
-            </div>
-          </div> --}}
                 </div>
                 <div class="col-md-4">
                     <div class="desktop-version">
@@ -149,7 +158,7 @@ id/json-ld-breadcrumb-schema-generator
                                 </div>
                                 <div id="collapseOne2" class="collapse" data-parent="#accordionExample2">
                                     <div class="card-body">
-                                        <p>@lang('breadcrumb.highlight')</p>
+                                        <p>@lang('video.highlight')</p>
                                         <div class="d-flex align-items-center">
                                             <i class='bx bxs-check-circle text-darkgrey mr-1'></i>
                                             <span class="text-darkgrey h6 mb-0">@lang('layout.updated') 15 Mar, 2021</span>
@@ -167,18 +176,6 @@ id/json-ld-breadcrumb-schema-generator
 
 <div class="w-100">
     <div class="local-collection-mobile bg-white py-5">
-        {{--
-    <div class="local-collection-header d-flex justify-content-between mb-3 w-100 px-5">
-      <div class="d-flex flex-row align-items-center">
-        <i class='bx bxs-collection bx-sm text-darkgrey mr-2'></i>
-        <span class="text-black font-15px">@lang('layout.local-history')</span>
-      </div>
-      <div>
-        <span class="clear-all font-15px pointer">@lang('layout.clear-all')</span>
-      </div>
-    </div>
-    <div id="localsavemobile" class="local-collection-body mt-3 px-5"></div>
-    --}}
         <div id="mobile-version" class="px-5 accordion accordion-light accordion-toggle-arrow custom-features-accordion" id="accordionExample2">
             <div class="card bg-transparent" style="">
                 <div class="card-header" id="headingOne2">
@@ -188,7 +185,7 @@ id/json-ld-breadcrumb-schema-generator
                 </div>
                 <div id="collapseOne2" class="collapse" data-parent="#accordionExample2">
                     <div class="card-body">
-                        <p>@lang('breadcrumb.highlight')</p>
+                        <p>@lang('video.highlight')</p>
                         <div class="d-flex align-items-center">
                             <i class='bx bxs-check-circle text-darkgrey mr-1'></i>
                             <span class="text-darkgrey h6 mb-0">@lang('layout.updated') 15 Mar, 2021</span>
@@ -201,44 +198,44 @@ id/json-ld-breadcrumb-schema-generator
 </div>
 @endif
 @component('layouts.new_ui_design', ['local' => $local, 'blogs' => $blogs, 'seo_terms' => $seo_terms, 'seo_guidelines' => $seo_guidelines])
-    @slot('title', 'JSON-LD Breadcrumb Schema Generator')
+    @slot('title', 'JSON-LD Website Schema Generator')
     @slot('subcontent_1')
         <div class="" id="description-tab-1">
-            <h2>@lang('breadcrumb.desc-1')</h2>
-            <p>@lang('breadcrumb.desc-1-1')</p>
-            <p>@lang('breadcrumb.desc-1-2')</p>
+            <h2>@lang('video.desc-1')</h2>
+            <p>@lang('video.desc-1-1')</p>
+            <p>@lang('video.desc-1-2')</p>
         </div>
     @endslot
     @slot('subcontent_2')
         <div class="d-none" id="description-tab-2">
-            <h2>@lang('breadcrumb.desc-2')</h2>
-            <p>@lang('breadcrumb.desc-2-1')</p>
-            <h4 class="sub-titles">@lang('breadcrumb.desc-2-2-1')</h4>
-            <p>@lang('breadcrumb.desc-2-2-2')</p>
-            <h4 class="sub-titles">@lang('breadcrumb.desc-2-3-1')</h4>
-            <p>@lang('breadcrumb.desc-2-3-2')</p>
-            <h4 class="sub-titles">@lang('breadcrumb.desc-2-4-1')</h4>
-            <p>@lang('breadcrumb.desc-2-4-2')</p>
+            <h2>@lang('video.desc-2')</h2>
+            <p>@lang('video.desc-2-1')</p>
+            <h4 class="sub-titles">@lang('video.desc-2-2-1')</h4>
+            <p>@lang('video.desc-2-2-2')</p>
+            <h4 class="sub-titles">@lang('video.desc-2-3-1')</h4>
+            <p>@lang('video.desc-2-3-2')</p>
+            <h4 class="sub-titles">@lang('video.desc-2-4-1')</h4>
+            <p>@lang('video.desc-2-4-2')</p>
         </div>
     @endslot
     @slot('subcontent_3')
         <div class="d-none" id="description-tab-3">
-            <h2>@lang('breadcrumb.desc-3')</h2>
-            <p>@lang('breadcrumb.desc-3-1')</p>
-            <h4 class="sub-titles">@lang('breadcrumb.desc-3-2-1')</h4>
-            <p>@lang('breadcrumb.desc-3-2-2')</p>
-            <h4 class="sub-titles">@lang('breadcrumb.desc-3-3-1')</h4>
-            <p>@lang('breadcrumb.desc-3-3-2')</p>
-            <h4 class="sub-titles">@lang('breadcrumb.desc-3-4-1')</h4>
-            <p>@lang('breadcrumb.desc-3-4-2')</p>
+            <h2>@lang('video.desc-3')</h2>
+            <p>@lang('video.desc-3-1')</p>
+            <h4 class="sub-titles">@lang('video.desc-3-2-1')</h4>
+            <p>@lang('video.desc-3-2-2')</p>
+            <h4 class="sub-titles">@lang('video.desc-3-3-1')</h4>
+            <p>@lang('video.desc-3-3-2')</p>
+            <h4 class="sub-titles">@lang('video.desc-3-4-1')</h4>
+            <p>@lang('video.desc-3-4-2')</p>
         </div>
     @endslot
     @slot('subcontent_4')
         <div class="d-none" id="description-tab-4">
-            <h2>@lang('breadcrumb.desc-4')</h2>
-            <p>@lang('breadcrumb.desc-4-1')</p>
-            <p>@lang('breadcrumb.desc-4-2')</p>
-            <p>@lang('breadcrumb.desc-4-3')</p>
+            <h2>@lang('video.desc-4')</h2>
+            <p>@lang('video.desc-4-1')</p>
+            <p>@lang('video.desc-4-2')</p>
+            <p>@lang('video.desc-4-3')</p>
             <pre class="language-html mb-4">
                 <code class="language-html" style="white-space: pre-wrap; word-break: keep-all;">
                     &lt;script type="application/ld+json"&gt;
@@ -264,29 +261,29 @@ id/json-ld-breadcrumb-schema-generator
     @endslot
     @slot('subcontent_5')
         <div class="d-none" id="description-tab-5">
-            <h2>@lang('breadcrumb.desc-5')</h2>
-            <p>@lang('breadcrumb.desc-5-1')</p>
+            <h2>@lang('video.desc-5')</h2>
+            <p>@lang('video.desc-5-1')</p>
         </div>
     @endslot
     @slot('how_to_content')
         <div class="d-none" id="how-to">
-            @lang('breadcrumb.howto1')
+            @lang('video.howto1')
             <div class="expand-text">
-                @lang('breadcrumb.howto1-1')
+                @lang('video.howto1-1')
                 <img class="mb-4" src="{{asset('/media/images/breadcrumb_instruction_1.webp')}}" alt="HowTo-Breadcrumb-1" width="80%">
-                @lang('breadcrumb.howto2')
+                @lang('video.howto2')
                 <img class="mb-4" src="{{asset('/media/images/breadcrumb_instruction_2.webp')}}" alt="HowTo-Breadcrumb-2" width="80%">
-                @lang('breadcrumb.howto3')
+                @lang('video.howto3')
                 <img class="mb-4" src="{{asset('/media/images/breadcrumb_instruction_3.webp')}}" alt="HowTo-Breadcrumb-3" width="80%">
-                @lang('breadcrumb.howto4')
+                @lang('video.howto4')
                 <img class="mb-4" src="{{asset('/media/images/breadcrumb_instruction_4.webp')}}" alt="HowTo-Breadcrumb-4" width="80%">
-                @lang('breadcrumb.howto5')
+                @lang('video.howto5')
                 <img class="mb-4" src="{{asset('/media/images/breadcrumb_instruction_5.webp')}}" alt="HowTo-Breadcrumb-5" width="80%">
-                @lang('breadcrumb.howto6')
+                @lang('video.howto6')
                 <img class="mb-4" src="{{asset('/media/images/breadcrumb_instruction_6.webp')}}" alt="HowTo-Breadcrumb-6" width="80%">
-                @lang('breadcrumb.howto7')
+                @lang('video.howto7')
                 <img class="mb-4" src="{{asset('/media/images/breadcrumb_instruction_7.webp')}}" alt="HowTo-Breadcrumb-7" width="80%">
-                @lang('breadcrumb.howto8')
+                @lang('video.howto8')
             </div>
         </div>
     @endslot
@@ -314,8 +311,8 @@ id/json-ld-breadcrumb-schema-generator
         }, {
             "@type": "ListItem",
             "position": 3,
-            "name": "JSON-LD Breadcrumb Schema Generator",
-            "item": "{{url('/')}}/{{$local}}/json-ld-breadcrumb-schema-generator"
+            "name": "JSON-LD Website Schema Generator",
+            "item": "{{url('/')}}/{{$local}}/json-ld-website-schema-generator"
         }]
     }
 </script>
@@ -366,7 +363,7 @@ id/json-ld-breadcrumb-schema-generator
 @endpush
 @push('script')
 <script src="{{asset('js/logic/predifine-localstorage.js')}}"></script>
-<script src="{{asset('js/logic/breadcrumb-json.js')}}"></script>
+<script src="{{asset('js/logic/website-json.js')}}"></script>
 <script type="text/javascript">
     $('#toggle_button_webmaster').click();
 </script>
