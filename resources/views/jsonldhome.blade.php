@@ -125,6 +125,34 @@ id/json-ld-schema-generator
                         </div>
                     </div>
                 </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-8">
+                    <div class="card card-custom card-stretch card-home">
+                        <div class="card-body p-7">
+                            <div class="">
+                                <i class='bx bxs-receipt text-darkgrey bx-lg'></i>
+                                <h2 class="h6 text-darkgrey font-weight-bolder">Website</h2>
+                                <p class="text-darkgrey mb-0">@lang('jsonldhome.json-ld-website-desc')</p>
+                            </div>
+                        </div>
+                        <div class="card-footer text-right border-top-0 pt-0">
+                            <a href="/{{ $local }}/json-ld-website-schema-generator" type="button" class="btn btn-launch" name="button">LAUNCH</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-8">
+                    <div class="card card-custom card-stretch card-home">
+                        <div class="card-body p-7">
+                            <div class="">
+                                <i class='bx bxs-receipt text-darkgrey bx-lg'></i>
+                                <h2 class="h6 text-darkgrey font-weight-bolder">Local Business</h2>
+                                <p class="text-darkgrey mb-0">@lang('jsonldhome.json-ld-local-business-desc')</p>
+                            </div>
+                        </div>
+                        <div class="card-footer text-right border-top-0 pt-0">
+                            <a href="/{{ $local }}/json-ld-local-business-schema-generator" type="button" class="btn btn-launch" name="button">LAUNCH</a>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="d-flex align-items-center">
                 <i class='bx bxs-check-circle text-darkgrey mr-1'></i>

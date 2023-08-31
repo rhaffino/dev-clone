@@ -40,6 +40,7 @@ id/json-ld-website-schema-generator
                                         <option value="product">Product</option>
                                         <option value="recipe">Recipe</option>
                                         <option value="website" selected="selected">Website</option>
+                                        <option value="local-business">Local Business</option>
                                     </select>
                                 </div>
                             </div>
