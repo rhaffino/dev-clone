@@ -30,7 +30,7 @@ id/json-ld-how-to-schema-generator
                             <div class="row mb-8">
                                 <div class="col-12">
                                     <label for="schema-json-ld" class="text-black font-weight-bold h6">@lang('layout.which-schema')</label>
-                                    <select class="form-control selectpicker custom-select-blue" tabindex="null" id="schema-json-ld">
+                                    <select class="form-control selectpicker custom-select-blue custom-searchbox" tabindex="null" data-size="4" data-live-search="true" id="schema-json-ld">
                                         <option value="home">Home</option>
                                         <option value="breadcrumb">Breadcrumb</option>
                                         <option value="faq">FAQ Page</option>
@@ -41,6 +41,8 @@ id/json-ld-how-to-schema-generator
                                         <option value="recipe">Recipe</option>
                                         <option value="website">Website</option>
                                         <option value="local-business">Local Business</option>
+                                        <option value="video">Video</option>
+                                        <option value="event">Event</option>
                                     </select>
                                 </div>
                             </div>

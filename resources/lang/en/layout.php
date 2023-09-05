@@ -95,4 +95,6 @@ return [
     "invalid-phone" => "Invalid Number Phone",
     "invalid-latitude" => "Invalid Latitude",
     "invalid-longitude" => "Invalid Longitude",
+    "invalid_number" => "Value should be more than 0",
+    "invalid-hours" => "Invalid Hours",
 ];

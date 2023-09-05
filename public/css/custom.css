@@ -2636,3 +2636,8 @@ input.input-url-meta-checker:focus {
     font-weight: 700;
     padding: 0 !important;
 }
+
+#onlineAttendance,
+#offlineAttendance{
+    display: none;
+}
