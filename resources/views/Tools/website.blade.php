@@ -226,16 +226,16 @@ id/json-ld-website-schema-generator
         <div class="d-none" id="how-to">
             @lang('website.howto1')
             <div class="expand-text">
-                <img class="mb-4" src="{{asset('/media/images/breadcrumb_instruction_1.webp')}}" alt="HowTo-Breadcrumb-1 (page view website schema)" width="80%">
+                <img class="mb-4" src="{{asset('/media/images/website_schema_instruction_1.webp')}}" alt="HowTo-Website-Schema-1" width="80%">
                 @lang('website.howto1-1')
                 @lang('website.howto2')
-                <img class="mb-4" src="{{asset('/media/images/breadcrumb_instruction_2.webp')}}" alt="HowTo-Breadcrumb-2 (enter data provided fields)" width="80%">
+                <img class="mb-4" src="{{asset('/media/images/website_schema_instruction_2.webp')}}" alt="HowTo-Website-Schema-2" width="80%">
                 @lang('website.howto3')
-                <img class="mb-4" src="{{asset('/media/images/breadcrumb_instruction_3.webp')}}" alt="HowTo-Breadcrumb-3 (select action: copy)" width="80%">
+                <img class="mb-4" src="{{asset('/media/images/website_schema_instruction_3.webp')}}" alt="HowTo-Website-Schema-3" width="80%">
                 @lang('website.howto4')
-                <img class="mb-4" src="{{asset('/media/images/breadcrumb_instruction_4.webp')}}" alt="HowTo-Breadcrumb-4 (check option)" width="80%">
+                <img class="mb-4" src="{{asset('/media/images/website_schema_instruction_4.webp')}}" alt="HowTo-Website-Schema-4" width="80%">
                 @lang('website.howto5')
-                <img class="mb-4" src="{{asset('/media/images/breadcrumb_instruction_5.webp')}}" alt="HowTo-Breadcrumb-5 (data reset option)" width="80%">
+                <img class="mb-4" src="{{asset('/media/images/website_schema_instruction_5.webp')}}" alt="HowTo-Website-Schema-5" width="80%">
                 @lang('website.howto6')
                 <p>@lang('website.closing-1')</p>
                 <p>@lang('website.closing-2')</p>

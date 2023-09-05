@@ -12,9 +12,6 @@ return [
     "label-query-keywords" => "Optional: string in the search URL after the query",
     "placeholder-queryKeywords" => "Type your string query here...",
     "highlight" => "Transform how you enhance SEO and captivate users, this JSON-LD Website Schema Generator by cmlabs empowers you to efficiently generate rich schema markups with various options. Discover the power of our schema.org structured data generator and watch your website soar in search results. Ready to level up?",
-
-    
-
     "desc-1" => "What is JSON-LD Website Schema Generator by cmlabs?",
     "desc-1-1" => "JSON-LD Website Schema Generator is a beneficial tool to simplify your website development process. How? Before you delve deeper into the concept, let’s be aware of its definition first!",
     "desc-1-2" => "Have you ever wondered how search engines understand the content on websites? It is when the magic of structured data comes into play.",
@@ -74,8 +71,7 @@ return [
     "closing-1" => "In conclusion, the JSON-LD Website Schema Generator by cmlabs can be the game-changer in the world of structured data and website optimization.",
     "closing-2" => "It empowers website owners, developers, and marketers to effortlessly implement schema markup, enhance search engine visibility, and provide users with more informative and visually appealing search results. With its code validation checks and the ability to create schema markup for various types of content, this tool simplifies the complex task of structured data integration. Ready to explore?",
 
-
-
+    
     "whats-new-1" => "In the newest version of JSON LD, we added website Schema Generator. This tool is useful for allowing users to grab clicks from a page that is ranked above it if you have website markup and competitors don't. So that your website page will appear on the rich snippet. We hope that with this new tool, you can create a website page that is superior to competitors.",
     "whats-new-2" => "Toward JSON LD - website Schema Generator, now users can add schemas. This scheme serves to test your implementation at page or code level with Google's Rich Snippet Testing Tool and ask it to crawl the modified pages of your website. With this tool, you can see your CTR and traffic levels soar.",
 ];

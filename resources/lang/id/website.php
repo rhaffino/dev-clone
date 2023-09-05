@@ -12,10 +12,6 @@ return [
     "label-query-keywords" => "Opsional: string dalam URL pencarian setelah kueri",
     "placeholder-queryKeywords" => "Ketik query string Anda di sini...",
     "highlight" => "JSON-LD Website Schema Generator dari cmlabs adalah tool untuk menghasilkan markup skema menarik dan mudah dinavigasi dengan berbagai pilihan, mulai dari skema website, produk, dan masih banyak lagi. Ciptakan data terstruktur melalui schema.org kami dan saksikan website Anda meroket di laman hasil pencarian. Coba tool ini segera!",
-
-
-
-
     "desc-1" => "Apa itu JSON-LD Website Schema Generator dari cmlabs?",
     "desc-1-1" => "JSON-LD Website Schema Generator dari cmlabs adalah tool yang sangat bermanfaat untuk menyederhanakan proses pengembangan website. Namun, bagaimanakah caranya? Sebelum Anda memahami konsep ini lebih dalam, mari mengenal apa itu JSON-LD Website Schema Generator terlebih dahulu.",
     "desc-1-2" => "Pernahkah Anda bertanya-tanya bagaimana mesin pencari (search engine) memahami konten di dalam website? Ini merupakan salah satu peran krusial dari keberadaan struktur data.",
@@ -75,8 +71,6 @@ return [
                 <p>Opsi Reset memudahkan Anda untuk memulai seluruh proses dari langkah pertama. Tombol ini dapat mempercepat alur kerja Anda jika ingin melakukan pemeriksaan atau menghasilkan skema markup yang baru.</p>',
     "closing-1" => "Secara keseluruhan, JSON-LD Website Schema Generator dari cmlabs adalah tool yang dapat membantu proses optimasi situs web Anda.",
     "closing-2" => "Tool ini khususnya sangat bermanfaat bagi pemilik atau pengembang situs web (developer) guna memudahkan implementasi skema markup, meningkatkan visibilitas mesin pencari, serta memberikan hasil pencarian yang lebih informatif dan menarik secara visual. Coba tool ini sekarang!",
-
-
 
 
     "whats-new-1" => "Pada versi terbaru dari JSON LD , kami menambahkan website Schema Generator. Tool ini berguna untuk memungkinkan pengguna mengambil klik dari halaman yang diberi peringkat diatasnya jika Anda memiliki markup website sedangkan kompetitor tidak. Sehingga laman website Anda akan muncul di rich snippet. Kami berharap dengan adanya tool baru ini, Anda dapat membuat laman website yang unggul dibanding kompetitor.", 
