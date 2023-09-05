@@ -163,85 +163,82 @@ id/json-ld-website-schema-generator
             <p>@lang('website.desc-1-1')</p>
             <p>@lang('website.desc-1-2')</p>
         </div>
-    @endslot
-    @slot('subcontent_2')
+        @endslot
+        @slot('subcontent_2')
         <div class="d-none" id="description-tab-2">
+            <p>@lang('website.desc-1-3')</p>
+            <p>@lang('website.desc-1-4')</p>
+            <p>@lang('website.desc-1-5')</p>
+            <p>@lang('website.desc-1-6')</p>
             <h2>@lang('website.desc-2')</h2>
             <p>@lang('website.desc-2-1')</p>
+            <p>@lang('website.desc-2-2')</p>
+            <p>@lang('website.desc-2-3')</p>
+            <p>@lang('website.desc-2-4')</p>
             <h4 class="sub-titles">@lang('website.desc-2-2-1')</h4>
             <p>@lang('website.desc-2-2-2')</p>
             <h4 class="sub-titles">@lang('website.desc-2-3-1')</h4>
             <p>@lang('website.desc-2-3-2')</p>
             <h4 class="sub-titles">@lang('website.desc-2-4-1')</h4>
             <p>@lang('website.desc-2-4-2')</p>
+            <h4 class="sub-titles">@lang('website.desc-2-5-1')</h4>
+            <p>@lang('website.desc-2-5-2')</p>
+            <h4 class="sub-titles">@lang('website.desc-2-6-1')</h4>
+            <p>@lang('website.desc-2-6-2')</p>
+            <h4 class="sub-titles">@lang('website.desc-2-7-1')</h4>
+            <p>@lang('website.desc-2-7-2')</p>
+            <h4 class="sub-titles">@lang('website.desc-2-8-1')</h4>
+            <p>@lang('website.desc-2-8-2')</p>
+            <p>@lang('website.desc-2-8-3')</p>
+            <h4 class="sub-titles">@lang('website.desc-2-9-1')</h4>
+            <p>@lang('website.desc-2-9-2')</p>
+            <h4 class="sub-titles">@lang('website.desc-2-10-1')</h4>
+            <p>@lang('website.desc-2-10-2')</p>
         </div>
     @endslot
     @slot('subcontent_3')
         <div class="d-none" id="description-tab-3">
             <h2>@lang('website.desc-3')</h2>
             <p>@lang('website.desc-3-1')</p>
-            <h4 class="sub-titles">@lang('website.desc-3-2-1')</h4>
-            <p>@lang('website.desc-3-2-2')</p>
-            <h4 class="sub-titles">@lang('website.desc-3-3-1')</h4>
-            <p>@lang('website.desc-3-3-2')</p>
-            <h4 class="sub-titles">@lang('website.desc-3-4-1')</h4>
-            <p>@lang('website.desc-3-4-2')</p>
-        </div>
-    @endslot
-    @slot('subcontent_4')
-        <div class="d-none" id="description-tab-4">
-            <h2>@lang('website.desc-4')</h2>
-            <p>@lang('website.desc-4-1')</p>
-            <p>@lang('website.desc-4-2')</p>
-            <p>@lang('website.desc-4-3')</p>
+            <p>@lang('website.desc-3-2')</p>
+            <p>@lang('website.desc-3-3')</p>
+            <p>@lang('website.desc-3-4')</p>
             <pre class="language-html mb-4">
                 <code class="language-html" style="white-space: pre-wrap; word-break: keep-all;">
                     &lt;script type="application/ld+json"&gt;
                     {
-                    "@context": "https://schema.org",
-                    "@type": "BreadcrumbList",
-                    "itemListElement": [{
-                        "@type": "ListItem",
-                        "position": 1,
-                        "name": "Home",
-                        "item": "https://cmlabs.co/"
-                    },{
-                        "@type": "ListItem",
-                        "position": 2,
-                        "name": "About Us",
-                        "item": "https://cmlabs.co/about-us/"
-                    }]
+                        "@context": "https://schema.org/",
+                        "@type": "WebSite",
+                        "name": "",
+                        "url": "",
+                        "potentialAction": {
+                            "@type": "SearchAction",
+                            "target": "{search_term_string}",
+                            "query-input": "required name=search_term_string"
+                        }
                     }
                     &lt;/script&gt;
                 </code>
             </pre>
         </div>
     @endslot
-    @slot('subcontent_5')
-        <div class="d-none" id="description-tab-5">
-            <h2>@lang('website.desc-5')</h2>
-            <p>@lang('website.desc-5-1')</p>
-        </div>
-    @endslot
     @slot('how_to_content')
         <div class="d-none" id="how-to">
             @lang('website.howto1')
             <div class="expand-text">
+                <img class="mb-4" src="{{asset('/media/images/breadcrumb_instruction_1.webp')}}" alt="HowTo-Breadcrumb-1 (page view website schema)" width="80%">
                 @lang('website.howto1-1')
-                <img class="mb-4" src="{{asset('/media/images/breadcrumb_instruction_1.webp')}}" alt="HowTo-Breadcrumb-1" width="80%">
                 @lang('website.howto2')
-                <img class="mb-4" src="{{asset('/media/images/breadcrumb_instruction_2.webp')}}" alt="HowTo-Breadcrumb-2" width="80%">
+                <img class="mb-4" src="{{asset('/media/images/breadcrumb_instruction_2.webp')}}" alt="HowTo-Breadcrumb-2 (enter data provided fields)" width="80%">
                 @lang('website.howto3')
-                <img class="mb-4" src="{{asset('/media/images/breadcrumb_instruction_3.webp')}}" alt="HowTo-Breadcrumb-3" width="80%">
+                <img class="mb-4" src="{{asset('/media/images/breadcrumb_instruction_3.webp')}}" alt="HowTo-Breadcrumb-3 (select action: copy)" width="80%">
                 @lang('website.howto4')
-                <img class="mb-4" src="{{asset('/media/images/breadcrumb_instruction_4.webp')}}" alt="HowTo-Breadcrumb-4" width="80%">
+                <img class="mb-4" src="{{asset('/media/images/breadcrumb_instruction_4.webp')}}" alt="HowTo-Breadcrumb-4 (check option)" width="80%">
                 @lang('website.howto5')
-                <img class="mb-4" src="{{asset('/media/images/breadcrumb_instruction_5.webp')}}" alt="HowTo-Breadcrumb-5" width="80%">
+                <img class="mb-4" src="{{asset('/media/images/breadcrumb_instruction_5.webp')}}" alt="HowTo-Breadcrumb-5 (data reset option)" width="80%">
                 @lang('website.howto6')
-                <img class="mb-4" src="{{asset('/media/images/breadcrumb_instruction_6.webp')}}" alt="HowTo-Breadcrumb-6" width="80%">
-                @lang('website.howto7')
-                <img class="mb-4" src="{{asset('/media/images/breadcrumb_instruction_7.webp')}}" alt="HowTo-Breadcrumb-7" width="80%">
-                @lang('website.howto8')
+                <p>@lang('website.closing-1')</p>
+                <p>@lang('website.closing-2')</p>
             </div>
         </div>
     @endslot
@@ -280,8 +277,6 @@ id/json-ld-website-schema-generator
     const description_1 = document.getElementById('description-tab-1');
     const description_2 = document.getElementById('description-tab-2');
     const description_3 = document.getElementById('description-tab-3');
-    const description_4 = document.getElementById('description-tab-4');
-    const description_5 = document.getElementById('description-tab-5');
     const how_to = document.getElementById('how-to');
     let read = false;
 
@@ -291,27 +286,19 @@ id/json-ld-website-schema-generator
             description_1.style.display = 'block';
             description_2.style.display = 'block';
             description_3.style.display = 'block';
-            description_4.style.display = 'block';
-            description_5.style.display = 'block';
             how_to.style.display = 'block';
             description_1.classList.remove("d-none");
             description_2.classList.remove("d-none");
             description_3.classList.remove("d-none");
-            description_4.classList.remove("d-none");
-            description_5.classList.remove("d-none");
             how_to.classList.remove("d-none");
             read_more_button.innerHTML = 'Show less';
             read = true;
         } else {
             description_2.style.display = 'none';
             description_3.style.display = 'none';
-            description_4.style.display = 'none';
-            description_5.style.display = 'none';
             how_to.style.display = 'none';
             description_2.classList.add("d-none");
             description_3.classList.add("d-none");
-            description_4.classList.add("d-none");
-            description_5.classList.add("d-none");
             how_to.classList.add("d-none");
             read_more_button.innerHTML = 'Read more';
             read = false;

@@ -203,7 +203,7 @@ id/json-ld-localBusiness-schema-generator
                                         </div>
                                         <div class="row">
                                             <div class="col-sm-4 mb-5">
-                                                <label class="text-black font-weight-bold" for="sosmed">@lang('person.label-social-profiles')</label>
+                                                <label class="text-black font-weight-bold" for="sosmed">@lang('localBusiness.label-social-profiles')</label>
                                                 <div class="dropdown bootstrap-select show-tick form-control">
                                                     <select class="form-control selectpicker custom-select-blue social-profiles mb-5 custom-searchbox" multiple="multiple" data-actions-box="false" data-size="4" data-live-search="true" tabindex="null">
                                                         <option value="twitter">Twitter</option>
@@ -232,7 +232,7 @@ id/json-ld-localBusiness-schema-generator
                                         <div class="row">
                                             <div class="col-12 mb-5">
                                                 <div id="form-department">
-                                                    <p class="h6 text-black mb-5">Local Business - Department</p>
+                                                    <p class="h6 text-black mb-5">@lang('localBusiness.label-title-department')</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -288,7 +288,7 @@ id/json-ld-localBusiness-schema-generator
                                         <p>@lang('localBusiness.highlight')</p>
                                         <div class="d-flex align-items-center">
                                             <i class='bx bxs-check-circle text-darkgrey mr-1'></i>
-                                            <span class="text-darkgrey h6 mb-0">@lang('layout.updated') 15 Mar, 2021</span>
+                                            <span class="text-darkgrey h6 mb-0">@lang('layout.updated') 5 Sep, 2023</span>
                                         </div>
                                     </div>
                                 </div>
