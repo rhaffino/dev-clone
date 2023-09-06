@@ -21,7 +21,7 @@ id/json-ld-website-schema-generator
 <div class="container container-tools mb-10">
     <div class="d-flex flex-column-fluid">
         <div class="container-fluid px-0">
-            <h1 class="text-darkgrey font-weight-normal">Video - @lang('video.title')</h1>
+            <h1 class="text-darkgrey font-weight-normal">@lang('video.title')</h1>
             <span class="text-darkgrey h4 font-weight-normal mb-10">@lang('video.subtitle')</span>
             <div class="card card-custom mt-10 mb-5">
                 <div class="card-body">
@@ -30,7 +30,7 @@ id/json-ld-website-schema-generator
                             <div class="row mb-8">
                                 <div class="col-12">
                                     <label for="schema-json-ld" class="font-weight-bold text-black h6">@lang('layout.which-schema')</label>
-                                    <select class="form-control selectpicker custom-select-blue" tabindex="null" id="schema-json-ld">
+                                    <select class="form-control selectpicker custom-select-blue custom-searchbox" tabindex="null" data-size="4" data-live-search="true" id="schema-json-ld">
                                         <option value="home">Home</option>
                                         <option value="breadcrumb">Breadcrumb</option>
                                         <option value="faq">FAQ Page</option>
@@ -42,11 +42,12 @@ id/json-ld-website-schema-generator
                                         <option value="website">Website</option>
                                         <option value="local-business">Local Business</option>
                                         <option value="video" selected="selected">Video</option>
+                                        <option value="event">Event</option>
                                     </select>
                                 </div>
                             </div>
                             <p class="h6 text-black mb-5">Video Generator</p>
-                            <form action="" id="form-breadcrumb">
+                            <form action="" id="form-video">
                                 <div class="row">
                                     <div class="col-12 col-lg-6">
                                         <label class="text-black font-weight-bold" for="nameVideo">@lang('video.label-name')</label>
@@ -56,21 +57,21 @@ id/json-ld-website-schema-generator
                                                 <label class="text-black font-weight-bold" for="uploadDate">@lang('video.label-upload-date')</label>
                                                 <div class="input-group date">
                                                     <div class="input-group-append">
-                                                <span class="input-group-text">
-                                                    <i class="bx bx-calendar text-darkgrey"></i>
-                                                </span>
+                                                        <span class="input-group-text">
+                                                            <i class="bx bx-calendar text-darkgrey"></i>
+                                                        </span>
                                                     </div>
                                                     <input type="text" id="kt_datepicker_2" name="" class="form-control custom-date uploadDate" readonly placeholder="@lang('video.placeholder-update-date')" value="" />
                                                 </div>
                                             </div>
                                             <div class="col-6 col-xl-3 col-xxl-3">
                                                 <label class="text-black font-weight-bold" for="minutes">@lang('video.label-minutes')</label>
-                                                <input type="number" name="" class="form-control minutes" placeholder="@lang('video.placeholder-minutes')" value="" min="0" max="59" data-id="0">
+                                                <input type="number" name="" class="form-control minutes" placeholder="@lang('video.placeholder-minutes')" value="" min="0">
                                                 <div class="invalid-feedback">@lang('layout.invalid-number')</div>
                                             </div>
                                             <div class="col-6 col-xl-3 col-xxl-3">
                                                 <label class="text-black font-weight-bold" for="seconds">@lang('video.label-seconds')</label>
-                                                <input type="number" name="" class="form-control seconds" placeholder="@lang('video.placeholder-seconds')" value="" min="0" max="59" data-id="0">
+                                                <input type="number" name="" class="form-control seconds" placeholder="@lang('video.placeholder-seconds')" value="" min="0">
                                                 <div class="invalid-feedback">@lang('layout.invalid-number')</div>
                                             </div>
                                         </div>
@@ -82,9 +83,9 @@ id/json-ld-website-schema-generator
                                 </div>
                                 <div class="row imageurlList">
                                     <div class="col-10 col-sm-11 mb-5">
-                                        <label class="text-black font-weight-bold" for="image">@lang('video.label-image') #1</label>
+                                        <label class="text-black font-weight-bold" for="image">@lang('video.label-image') # 1</label>
                                         <input type="text" name="" class="form-control image" placeholder="@lang('video.placeholder-image')" value="" data-id="0">
-                                        <div class="invalid-feedback">@lang('layout.invalid-url')</div>
+                                        <div class="invalid-feedback image" data-id="0">@lang('layout.invalid-url')</div>
                                     </div>
                                     <div class="col-2 col-sm-1">
                                         <div class="d-flex justify-content-center mt-9">
@@ -93,9 +94,6 @@ id/json-ld-website-schema-generator
                                     </div>
                                 </div>
                                 <div class="row mb-5">
-                                    <div class="col-12">
-                                        <div id="image"></div>
-                                    </div>
                                     <div class="col-12 col-md-5 col-xl-4">
                                         <button type="button" class="btn btn-block btn-add-question mb-5 mt-5" name="button" id="add-imageUrl">
                                             <i class='bx bx-plus'></i> @lang('video.btn-addImageUrl')
@@ -106,16 +104,17 @@ id/json-ld-website-schema-generator
                                     <div class="col-12 col-md-4 mb-5 mb-md-0">
                                         <label class="text-black font-weight-bold" for="contentUrl">@lang('video.label-contentUrl')</label>
                                         <input type="text" name="" class="form-control contentUrl" placeholder="@lang('video.placeholder-contentUrl')" value="" data-id="0">
+                                        <div class="invalid-feedback contentUrl">@lang('layout.invalid-url')</div>
                                     </div>
                                     <div class="col-6 col-md-4">
                                         <label class="text-black font-weight-bold" for="embedUrl">@lang('video.label-embedUrl')</label>
-                                        <input type="number" name="" class="form-control embedUrl" placeholder="@lang('video.placeholder-embedUrl')" value="" data-id="0">
-                                        <div class="invalid-feedback">@lang('layout.invalid-number')</div>
+                                        <input type="text" name="" class="form-control embedUrl" placeholder="@lang('video.placeholder-embedUrl')" value="" data-id="0">
+                                        <div class="invalid-feedback embedUrl">@lang('layout.invalid-url')</div>
                                     </div>
                                     <div class="col-6 col-md-4">
                                         <label class="text-black font-weight-bold" for="targetUrl">@lang('video.label-targetUrl')</label>
-                                        <input type="number" name="" class="form-control targetUrl" placeholder="@lang('video.placeholder-targetUrl')" value="" data-id="0">
-                                        <div class="invalid-feedback">@lang('layout.invalid-number')</div>
+                                        <input type="text" name="" class="form-control targetUrl" placeholder="@lang('video.placeholder-targetUrl')" value="" data-id="0">
+                                        <div class="invalid-feedback targetUrl">@lang('layout.invalid-url')</div>
                                     </div>
                                 </div>
                             </form>
@@ -362,11 +361,8 @@ id/json-ld-website-schema-generator
 </script>
 @endpush
 @push('script')
-<script src="{{asset('js/logic/predifine-localstorage.js')}}"></script>
-<script src="{{asset('js/logic/website-json.js')}}"></script>
-<script type="text/javascript">
-    $('#toggle_button_webmaster').click();
-</script>
+<script src="{{asset('js/logic/video-json.js')}}"></script>
+<script src="{{asset('js/pages/crud/forms/widgets/bootstrap-datepicker.min.js')}}"></script>
 @endpush
 
 @section('json-ld')

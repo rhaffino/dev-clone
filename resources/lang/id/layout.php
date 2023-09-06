@@ -97,4 +97,6 @@ return [
     "invalid-phone" => "Nomor Telepon Tidak Valid",
     "invalid-latitude" => "Latitude Tidak Valid",
     "invalid-longitude" => "Longitude Tidak Valid",
+    "invalid_number" => "Nilai harus lebih dari 0",
+    "invalid-hours" => "Jam Tidak Valid",
 ];

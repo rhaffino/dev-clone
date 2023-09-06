@@ -30,7 +30,7 @@ id/json-ld-localBusiness-schema-generator
                             <div class="row mb-8">
                                 <div class="col-12">
                                     <label for="schema-json-ld" class="font-weight-bold text-black h6">@lang('layout.which-schema')</label>
-                                    <select class="form-control selectpicker custom-select-blue" tabindex="null" id="schema-json-ld">
+                                    <select class="form-control selectpicker custom-select-blue custom-searchbox" tabindex="null" data-size="4" data-live-search="true" id="schema-json-ld">
                                         <option value="home">Home</option>
                                         <option value="breadcrumb">Breadcrumb</option>
                                         <option value="faq">FAQ Page</option>
@@ -41,6 +41,8 @@ id/json-ld-localBusiness-schema-generator
                                         <option value="recipe">Recipe</option>
                                         <option value="website">Website</option>
                                         <option value="local-business" selected="selected">Local Business</option>
+                                        <option value="video">Video</option>
+                                        <option value="event">Event</option>
                                     </select>
                                 </div>
                             </div>
@@ -201,7 +203,7 @@ id/json-ld-localBusiness-schema-generator
                                         </div>
                                         <div class="row">
                                             <div class="col-sm-4 mb-5">
-                                                <label class="text-black font-weight-bold" for="sosmed">@lang('person.label-social-profiles')</label>
+                                                <label class="text-black font-weight-bold" for="sosmed">@lang('localBusiness.label-social-profiles')</label>
                                                 <div class="dropdown bootstrap-select show-tick form-control">
                                                     <select class="form-control selectpicker custom-select-blue social-profiles mb-5 custom-searchbox" multiple="multiple" data-actions-box="false" data-size="4" data-live-search="true" tabindex="null">
                                                         <option value="twitter">Twitter</option>
@@ -230,7 +232,7 @@ id/json-ld-localBusiness-schema-generator
                                         <div class="row">
                                             <div class="col-12 mb-5">
                                                 <div id="form-department">
-                                                    <p class="h6 text-black mb-5">Local Business - Department</p>
+                                                    <p class="h6 text-black mb-5">@lang('localBusiness.label-title-department')</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -286,7 +288,7 @@ id/json-ld-localBusiness-schema-generator
                                         <p>@lang('localBusiness.highlight')</p>
                                         <div class="d-flex align-items-center">
                                             <i class='bx bxs-check-circle text-darkgrey mr-1'></i>
-                                            <span class="text-darkgrey h6 mb-0">@lang('layout.updated') 15 Mar, 2021</span>
+                                            <span class="text-darkgrey h6 mb-0">@lang('layout.updated') 5 Sep, 2023</span>
                                         </div>
                                     </div>
                                 </div>
@@ -330,85 +332,57 @@ id/json-ld-localBusiness-schema-generator
             <p>@lang('localBusiness.desc-1-1')</p>
             <p>@lang('localBusiness.desc-1-2')</p>
         </div>
-    @endslot
-    @slot('subcontent_2')
+        @endslot
+        @slot('subcontent_2')
         <div class="d-none" id="description-tab-2">
+            <p>@lang('localBusiness.desc-1-3')</p>
+            <p>@lang('localBusiness.desc-1-4')</p>
+            <p>@lang('localBusiness.desc-1-5')</p>
             <h2>@lang('localBusiness.desc-2')</h2>
             <p>@lang('localBusiness.desc-2-1')</p>
+            <p>@lang('localBusiness.desc-2-2')</p>
+            <p>@lang('localBusiness.desc-2-3')</p>
             <h4 class="sub-titles">@lang('localBusiness.desc-2-2-1')</h4>
             <p>@lang('localBusiness.desc-2-2-2')</p>
+            <p>@lang('localBusiness.desc-2-2-3')</p>
+            <p>@lang('localBusiness.desc-2-2-4')</p>
+            <p>@lang('localBusiness.desc-2-2-5')</p>
             <h4 class="sub-titles">@lang('localBusiness.desc-2-3-1')</h4>
             <p>@lang('localBusiness.desc-2-3-2')</p>
             <h4 class="sub-titles">@lang('localBusiness.desc-2-4-1')</h4>
             <p>@lang('localBusiness.desc-2-4-2')</p>
-        </div>
-    @endslot
-    @slot('subcontent_3')
-        <div class="d-none" id="description-tab-3">
-            <h2>@lang('localBusiness.desc-3')</h2>
-            <p>@lang('localBusiness.desc-3-1')</p>
-            <h4 class="sub-titles">@lang('localBusiness.desc-3-2-1')</h4>
-            <p>@lang('localBusiness.desc-3-2-2')</p>
-            <h4 class="sub-titles">@lang('localBusiness.desc-3-3-1')</h4>
-            <p>@lang('localBusiness.desc-3-3-2')</p>
-            <h4 class="sub-titles">@lang('localBusiness.desc-3-4-1')</h4>
-            <p>@lang('localBusiness.desc-3-4-2')</p>
-        </div>
-    @endslot
-    @slot('subcontent_4')
-        <div class="d-none" id="description-tab-4">
-            <h2>@lang('localBusiness.desc-4')</h2>
-            <p>@lang('localBusiness.desc-4-1')</p>
-            <p>@lang('localBusiness.desc-4-2')</p>
-            <p>@lang('localBusiness.desc-4-3')</p>
-            <pre class="language-html mb-4">
-                <code class="language-html" style="white-space: pre-wrap; word-break: keep-all;">
-                    &lt;script type="application/ld+json"&gt;
-                    {
-                    "@context": "https://schema.org",
-                    "@type": "BreadcrumbList",
-                    "itemListElement": [{
-                        "@type": "ListItem",
-                        "position": 1,
-                        "name": "Home",
-                        "item": "https://cmlabs.co/"
-                    },{
-                        "@type": "ListItem",
-                        "position": 2,
-                        "name": "About Us",
-                        "item": "https://cmlabs.co/about-us/"
-                    }]
-                    }
-                    &lt;/script&gt;
-                </code>
-            </pre>
-        </div>
-    @endslot
-    @slot('subcontent_5')
-        <div class="d-none" id="description-tab-5">
-            <h2>@lang('localBusiness.desc-5')</h2>
-            <p>@lang('localBusiness.desc-5-1')</p>
+            <h4 class="sub-titles">@lang('localBusiness.desc-2-5-1')</h4>
+            <p>@lang('localBusiness.desc-2-5-2')</p>
+            <p>@lang('localBusiness.desc-2-5-3')</p>
+            <h4 class="sub-titles">@lang('localBusiness.desc-2-6-1')</h4>
+            <p>@lang('localBusiness.desc-2-6-2')</p>
+            <h4 class="sub-titles">@lang('localBusiness.desc-2-7-1')</h4>
+            <p>@lang('localBusiness.desc-2-7-2')</p>
+            <p>@lang('localBusiness.desc-2-7-3')</p>
+            <h4 class="sub-titles">@lang('localBusiness.desc-2-8-1')</h4>
+            <p>@lang('localBusiness.desc-2-8-2')</p>
+            <p>@lang('localBusiness.desc-2-8-3')</p>
+            <h4 class="sub-titles">@lang('localBusiness.desc-2-9-1')</h4>
+            <p>@lang('localBusiness.desc-2-9-2')</p>
+            <h4 class="sub-titles">@lang('localBusiness.desc-2-10-1')</h4>
+            <p>@lang('localBusiness.desc-2-10-2')</p>
         </div>
     @endslot
     @slot('how_to_content')
         <div class="d-none" id="how-to">
             @lang('localBusiness.howto1')
             <div class="expand-text">
-                @lang('localBusiness.howto1-1')
-                <img class="mb-4" src="{{asset('/media/images/breadcrumb_instruction_1.webp')}}" alt="HowTo-Breadcrumb-1" width="80%">
+                <img class="mb-4" src="{{asset('/media/images/local_business_schema_instruction_1.webp')}}" alt="HowTo-Local-Business-1" width="80%">
                 @lang('localBusiness.howto2')
-                <img class="mb-4" src="{{asset('/media/images/breadcrumb_instruction_2.webp')}}" alt="HowTo-Breadcrumb-2" width="80%">
+                <img class="mb-4" src="{{asset('/media/images/local_business_schema_instruction_2.webp')}}" alt="HowTo-Local-Business-2" width="80%">
                 @lang('localBusiness.howto3')
-                <img class="mb-4" src="{{asset('/media/images/breadcrumb_instruction_3.webp')}}" alt="HowTo-Breadcrumb-3" width="80%">
+                <img class="mb-4" src="{{asset('/media/images/local_business_schema_instruction_3.webp')}}" alt="HowTo-Local-Business-3" width="80%">
                 @lang('localBusiness.howto4')
-                <img class="mb-4" src="{{asset('/media/images/breadcrumb_instruction_4.webp')}}" alt="HowTo-Breadcrumb-4" width="80%">
+                <img class="mb-4" src="{{asset('/media/images/local_business_schema_instruction_4.webp')}}" alt="HowTo-Local-Business-4" width="80%">
                 @lang('localBusiness.howto5')
-                <img class="mb-4" src="{{asset('/media/images/breadcrumb_instruction_5.webp')}}" alt="HowTo-Breadcrumb-5" width="80%">
+                <img class="mb-4" src="{{asset('/media/images/local_business_schema_instruction_5.webp')}}" alt="HowTo-Local-Business-5" width="80%">
                 @lang('localBusiness.howto6')
-                <img class="mb-4" src="{{asset('/media/images/breadcrumb_instruction_6.webp')}}" alt="HowTo-Breadcrumb-6" width="80%">
-                @lang('localBusiness.howto7')
-                <img class="mb-4" src="{{asset('/media/images/breadcrumb_instruction_7.webp')}}" alt="HowTo-Breadcrumb-7" width="80%">
-                @lang('localBusiness.howto8')
+                @lang('localBusiness.close')
             </div>
         </div>
     @endslot
@@ -446,9 +420,6 @@ id/json-ld-localBusiness-schema-generator
     const read_more_button = document.getElementById('read-more-button');
     const description_1 = document.getElementById('description-tab-1');
     const description_2 = document.getElementById('description-tab-2');
-    const description_3 = document.getElementById('description-tab-3');
-    const description_4 = document.getElementById('description-tab-4');
-    const description_5 = document.getElementById('description-tab-5');
     const how_to = document.getElementById('how-to');
     let read = false;
 
@@ -457,28 +428,16 @@ id/json-ld-localBusiness-schema-generator
         if(!read){
             description_1.style.display = 'block';
             description_2.style.display = 'block';
-            description_3.style.display = 'block';
-            description_4.style.display = 'block';
-            description_5.style.display = 'block';
             how_to.style.display = 'block';
             description_1.classList.remove("d-none");
             description_2.classList.remove("d-none");
-            description_3.classList.remove("d-none");
-            description_4.classList.remove("d-none");
-            description_5.classList.remove("d-none");
             how_to.classList.remove("d-none");
             read_more_button.innerHTML = 'Show less';
             read = true;
         } else {
             description_2.style.display = 'none';
-            description_3.style.display = 'none';
-            description_4.style.display = 'none';
-            description_5.style.display = 'none';
             how_to.style.display = 'none';
             description_2.classList.add("d-none");
-            description_3.classList.add("d-none");
-            description_4.classList.add("d-none");
-            description_5.classList.add("d-none");
             how_to.classList.add("d-none");
             read_more_button.innerHTML = 'Read more';
             read = false;
