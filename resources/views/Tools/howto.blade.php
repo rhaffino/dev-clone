@@ -43,6 +43,7 @@ id/json-ld-how-to-schema-generator
                                         <option value="local-business">Local Business</option>
                                         <option value="video">Video</option>
                                         <option value="event">Event</option>
+                                        <option value="organization">Organization</option>
                                     </select>
                                 </div>
                             </div>

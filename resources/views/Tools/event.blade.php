@@ -43,6 +43,7 @@ id/json-ld-website-schema-generator
                                         <option value="local-business">Local Business</option>
                                         <option value="video">Video</option>
                                         <option value="event" selected="selected">Event</option>
+                                        <option value="organization">Organization</option>
                                     </select>
                                 </div>
                             </div>
@@ -432,8 +433,8 @@ id/json-ld-website-schema-generator
         }, {
             "@type": "ListItem",
             "position": 3,
-            "name": "JSON-LD Website Schema Generator",
-            "item": "{{url('/')}}/{{$local}}/json-ld-website-schema-generator"
+            "name": "JSON-LD Event Schema Generator",
+            "item": "{{url('/')}}/{{$local}}/json-ld-event-schema-generator"
         }]
     }
 </script>
