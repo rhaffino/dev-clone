@@ -26,7 +26,6 @@ return [
     "label-area-served" => "Area(s) Served",
     "label-language" => "Language(s)",
     "label-options" => "Options",
-
     
     "highlight" => "In the latest version of JSON LD, we added website Schema Generator. This tool is useful for allowing users to grab clicks from a page that is ranked above it if you have website markup and competitors don't. Now users can add schemas. This scheme serves to test your implementation at page or code level with Google's Rich Snippet Testing Tool and ask it to crawl the modified pages of your website. With this tool, you can see your CTR and traffic levels soar.",
     "desc-1" => "What is JSON-LD website Schema Generator by cmlabs?",

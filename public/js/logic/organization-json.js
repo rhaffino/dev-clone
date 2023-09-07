@@ -4,6 +4,8 @@ var counterContact = -1;
 
 let invalid_url = lang === "en" ? "Invalid URL" : "URL Tidak Valid";
 let invalid_phone = lang === "en" ? "Invalid Number Phone" : "Nomor Telepon Tidak Valid";
+let placeholder_type = lang === "en" ? "Type your" : "Ketik URL";
+let placeholder_url = lang === "en" ? "URL here.." : "Anda di sini..";
 let label_type_contact = lang === "en" ? "Type Contact" : "Type Contact";
 let placeholder_type_contact = lang === "en" ? "Search a type contact.." : "Search a type contact..";
 let opt_type_contact_1 = lang === "en" ? "Customer Service" : "Customer Service";
@@ -263,7 +265,7 @@ const socialData = {
 };
 
 // declare first two json-ld website component
-const localBusinessSchema = class {
+const organizationSchema = class {
     constructor() {
         this.type = "Organization";
         this.name = "";
@@ -271,10 +273,8 @@ const localBusinessSchema = class {
         this.url = "";
         this.logo = "";
         this.contactPoint = [];
-
+        
         // temp
-        // this.tempStreetAddress = "";
-
         this.sameAs = [];
         this.tempSocial = [];
         this.facebookVal = "https://facebook.com/";
@@ -302,8 +302,6 @@ const localBusinessSchema = class {
         this.contactPoint = [];
 
         // temp
-        // this.tempStreetAddress = "";
-
         this.sameAs = [];
         this.tempSocial = [];
         this.facebookVal = "https://facebook.com/";
@@ -330,20 +328,15 @@ const localBusinessSchema = class {
         resetObj.url = this.url;
         resetObj.logo = this.logo;
 
-        // if (this.priceRange) resetObj.priceRange = this.priceRange;
-        // resetObj.address = this.address;
-
-        // if (this.openingHoursSpecification) {
-        //     if (this.openingHoursSpecification.length > 0) {
-        //         if (this.openingHoursSpecification.length === 1) {
-        //             obj.openingHoursSpecification =
-        //                 this.openingHoursSpecification[0];
-        //         } else {
-        //             obj.openingHoursSpecification =
-        //                 this.openingHoursSpecification;
-        //         }
-        //     }
-        // }
+        if (this.contactPoint) {
+            if (this.contactPoint.length > 0) {
+                if (this.contactPoint.length === 1) {
+                    obj.contactPoint = this.contactPoint[0];
+                } else {
+                    obj.contactPoint = this.contactPoint;
+                }
+            }
+        }
 
         if (this.sameAs.length > 0) obj.sameAs = this.sameAs;
 
@@ -399,31 +392,17 @@ const localBusinessSchema = class {
         obj.url = this.url;
         obj.logo = this.logo;
 
-        // if (this.menu != undefined) obj.menu = this.menu;
-
-        // if (this.openingHoursSpecification) {
-        //     if (this.openingHoursSpecification.length > 0) {
-        //         if (this.openingHoursSpecification.length === 1) {
-        //             obj.openingHoursSpecification =
-        //                 this.openingHoursSpecification[0];
-        //         } else {
-        //             obj.openingHoursSpecification =
-        //                 this.openingHoursSpecification;
-        //         }
-        //     }
-        // }
+        if (this.contactPoint) {
+            if (this.contactPoint.length > 0) {
+                if (this.contactPoint.length === 1) {
+                    obj.contactPoint = this.contactPoint[0];
+                } else {
+                    obj.contactPoint = this.contactPoint;
+                }
+            }
+        }
 
         if (this.sameAs.length > 0) obj.sameAs = this.sameAs;
-
-        // if (this.department) {
-        //     if (this.department.length > 0) {
-        //         if (this.department.length === 1) {
-        //             obj.department = this.department[0];
-        //         } else {
-        //             obj.department = this.department;
-        //         }
-        //     }
-        // }
 
         $("#json-format").val(
             '<script type="application/ld+json">\n' +
@@ -434,7 +413,7 @@ const localBusinessSchema = class {
     }
 };
 
-let organizationFormat = new localBusinessSchema();
+let organizationFormat = new organizationSchema();
 
 organizationFormat.temp();
 organizationFormat.render();
@@ -516,702 +495,85 @@ function validateSosmed(value, data, id) {
     }
 }
 
-// To be continue..
-
-function updateJSON_imageBusiness(id, value) {
-    if (value.match(regex)) {
-        organizationFormat.image = value;
-        $(`.imageBusiness`).removeClass("is-invalid");
-        $(".invalid-feedback[data-id=" + id + "]").hide();
-    } else {
-        organizationFormat.image = value;
-        $(`.imageBusiness`).addClass("is-invalid");
-        $(".invalid-feedback[data-id=" + id + "]").show();
-    }
-
+function updateJson_typeContact(id, value){
+    organizationFormat.contactPoint[id].contactType = value;
     organizationFormat.render();
 }
 
 function updateJSON_phone(id, value) {
     if (value.match(regexPhone)) {
-        organizationFormat.telephone = value;
-        $(`.phone`).removeClass("is-invalid");
-        $(".invalid-feedback[data-id=" + id + "]").hide();
+        organizationFormat.contactPoint[id].telephone = value;
+        $(".phone[data-id="+ id +"]").removeClass("is-invalid");
+        $(".invalid-feedback.phone[data-id=" + id + "]").hide();
     } else {
-        organizationFormat.telephone = value;
-        $(`.phone`).addClass("is-invalid");
-        $(".invalid-feedback[data-id=" + id + "]").show();
+        organizationFormat.contactPoint[id].telephone = value;
+        $(".phone[data-id="+ id +"]").addClass("is-invalid");
+        $(".invalid-feedback.phone[data-id=" + id + "]").show();
     }
 
     organizationFormat.render();
 }
 
-function updateJSON_priceRange(value) {
-    organizationFormat.priceRange = value;
-    organizationFormat.render();
-}
-
-function updateJSON_menuURL(id, value) {
-    if (value.match(regex)) {
-        organizationFormat.menu = value;
-        $(`.menu-url`).removeClass("is-invalid");
-        $(".invalid-feedback[data-id=" + id + "]").hide();
+function updateJson_areaServed(id, value){
+    if(value.length > 1){
+        organizationFormat.contactPoint[id].areaServed = value;
+    }else if (value.length == 1) {
+        organizationFormat.contactPoint[id].areaServed = "" + value + "";
     } else {
-        organizationFormat.menu = value;
-        $(`.menu-url`).addClass("is-invalid");
-        $(".invalid-feedback[data-id=" + id + "]").show();
+        organizationFormat.contactPoint[id].areaServed = undefined;
     }
 
     organizationFormat.render();
 }
 
-function updateJSON_cuisine(value) {
-    organizationFormat.servesCuisine = value;
-    organizationFormat.render();
-}
-
-function updateJSON_acceptsReservation(value) {
-    if (value) {
-        organizationFormat.acceptsReservations = "true";
-        organizationFormat.render();
+function updateJson_language(id, value) {
+    if (value.length > 1) {
+        organizationFormat.contactPoint[id].availableLanguage = value;
+    } else if (value.length == 1) {
+        organizationFormat.contactPoint[id].availableLanguage = "" + value + "";
     } else {
-        organizationFormat.acceptsReservations = "false";
-        organizationFormat.render();
+        organizationFormat.contactPoint[id].availableLanguage = undefined;
     }
-}
 
-function updateJson_foodEstablishment() {
-    organizationFormat.menu = "";
-    organizationFormat.servesCuisine = "";
-    organizationFormat.acceptsReservations = "false";
     organizationFormat.render();
 }
 
-function updateJson_foodEstablishmentUndefined() {
-    organizationFormat.menu = undefined;
-    organizationFormat.servesCuisine = undefined;
-    organizationFormat.acceptsReservations = undefined;
-    organizationFormat.render();
-}
-
-function updateJSON_street(value) {
-    organizationFormat.tempStreetAddress = value;
-    organizationFormat.address = {
-        "@type": "PostalAddress",
-        streetAddress: value,
-        addressLocality: organizationFormat.tempAddressLocality,
-        addressRegion: organizationFormat.tempAddressRegion,
-        postalCode: organizationFormat.tempPostalCode,
-        addressCountry: organizationFormat.tempAddressCountry,
-    };
-
-    organizationFormat.temp();
-    organizationFormat.render();
-}
-
-function updateJSON_city(value) {
-    organizationFormat.tempAddressLocality = value;
-    organizationFormat.address = {
-        "@type": "PostalAddress",
-        streetAddress: organizationFormat.tempStreetAddress,
-        addressLocality: value,
-        addressRegion: organizationFormat.tempAddressRegion,
-        postalCode: organizationFormat.tempPostalCode,
-        addressCountry: organizationFormat.tempAddressCountry,
-    };
-
-    organizationFormat.temp();
-    organizationFormat.render();
-}
-
-function updateJSON_zip(value) {
-    organizationFormat.tempPostalCode = value;
-    organizationFormat.address = {
-        "@type": "PostalAddress",
-        streetAddress: organizationFormat.tempStreetAddress,
-        addressLocality: organizationFormat.tempAddressLocality,
-        addressRegion: organizationFormat.tempAddressRegion,
-        postalCode: value,
-        addressCountry: organizationFormat.tempAddressCountry,
-    };
-
-    organizationFormat.temp();
-    organizationFormat.render();
-}
-
-function updateJSON_country(value) {
-    organizationFormat.tempAddressCountry = value;
-    if (value == "none") {
-        organizationFormat.address = {
-            "@type": "PostalAddress",
-            streetAddress: organizationFormat.tempStreetAddress,
-            addressLocality: organizationFormat.tempAddressLocality,
-            postalCode: organizationFormat.tempPostalCode,
-            addressCountry: "",
-        };
+function updateJson_options(id, value){
+    if (value.length > 1) {
+        organizationFormat.contactPoint[id].contactOption = value;
+    } else if (value.length == 1) {
+        organizationFormat.contactPoint[id].contactOption = "" + value + "";
     } else {
-        organizationFormat.address = {
-            "@type": "PostalAddress",
-            streetAddress: organizationFormat.tempStreetAddress,
-            addressLocality: organizationFormat.tempAddressLocality,
-            postalCode: organizationFormat.tempPostalCode,
-            addressCountry: value,
-        };
+        organizationFormat.contactPoint[id].contactOption = undefined;
     }
-
-    organizationFormat.temp();
+    
     organizationFormat.render();
 }
 
-function updateJSON_region(value) {
-    organizationFormat.tempAddressRegion = value;
-    organizationFormat.address = {
-        "@type": "PostalAddress",
-        streetAddress: organizationFormat.tempStreetAddress,
-        addressLocality: organizationFormat.tempAddressLocality,
-        addressRegion: value,
-        postalCode: organizationFormat.tempPostalCode,
-        addressCountry: organizationFormat.tempAddressCountry,
-    };
-
-    organizationFormat.temp();
-    organizationFormat.render();
-}
-
-function updateJSON_latitude(value, id) {
-    organizationFormat.tempLatitude = value;
-    organizationFormat.geo = {
-        "@type": "GeoCoordinates",
-        latitude: value,
-        longitude: organizationFormat.tempLongitude,
-    };
-
-    organizationFormat.temp();
+function deleteContact(id) {
+    organizationFormat.contactPoint.splice(id, 1);
     organizationFormat.render();
 
-    if (value.match(regexGeoLocation)) {
-        $(`.latitude`).removeClass("is-invalid");
-        $(".invalid-feedback[data-id=" + id + "]").hide();
-    } else {
-        $(`.latitude`).addClass("is-invalid");
-        $(".invalid-feedback[data-id=" + id + "]").show();
-    }
-}
+    for (let i = id + 1; i < organizationFormat.contactPoint.length + 1; i++) {
+        $(".contact-list[data-id=" + (i - 1) + "]").val($(".contact-list[data-id=" + i + "]").val());
+        $("#typeContact-" + (i - 1) + "").val($("#typeContact-" + i + "").val());
+        $("#typeContact-" + (i - 1) + "").selectpicker("refresh");
 
-function updateJSON_longitude(value, id) {
-    organizationFormat.tempLongitude = value;
-    organizationFormat.geo = {
-        "@type": "GeoCoordinates",
-        latitude: organizationFormat.tempLatitude,
-        longitude: value,
-    };
+        $("#area-served-" + (i - 1) + "").val($("#area-served-" + i + "").val());
+        $("#area-served-" + (i - 1) + "").selectpicker("refresh");
 
-    organizationFormat.temp();
-    organizationFormat.render();
+        $("#language-" + (i - 1) + "").val($("#language-" + i + "").val());
+        $("#language-" + (i - 1) + "").selectpicker("refresh");
 
-    if (value.match(regexGeoLocation)) {
-        $(`.longitude`).removeClass("is-invalid");
-        $(".invalid-feedback[data-id=" + id + "]").hide();
-    } else {
-        $(`.longitude`).addClass("is-invalid");
-        $(".invalid-feedback[data-id=" + id + "]").show();
-    }
-}
+        $("#options-" + (i - 1) + "").val($("#options-" + i + "").val());
+        $("#options-" + (i - 1) + "").selectpicker("refresh");
 
-function showLatitude(position) {
-    $(".latitude").val(position.coords.latitude);
-    updateJSON_latitude("" + position.coords.latitude + "");
-}
-
-function showLongitude(position) {
-    $(".longitude").val(position.coords.longitude);
-    updateJSON_longitude("" + position.coords.longitude + "");
-}
-
-function showCountryRegion(position) {
-    var lat = position.coords.latitude;
-    var lng = position.coords.longitude;
-
-    if (lat && lng) {
-        $.ajax({
-            // Website API GeoCode: https://opencagedata.com/ or https://opencagedata.com/dashboard
-            url: `https://api.opencagedata.com/geocode/v1/json?q=${lat}+${lng}&key=46eb96937e4f48379d3012c67c6aa854`,
-            method: "GET",
-            success: function (data) {
-                if (data.results.length > 0) {
-                    var countryCode = data.results[0].components.country_code;
-                    var region = data.results[0].components.state_code;
-                    var road = data.results[0].components.road;
-                    var village = data.results[0].components.village;
-                    var county = data.results[0].components.county;
-                    var postCode = data.results[0].components.postcode;
-
-                    console.log(data);
-
-                    // Street update
-                    $(".street").val("" + road + ", " + village + "");
-                    updateJSON_street("" + road + ", " + village + "");
-
-                    // City update
-                    $(".city").val("" + county + "");
-                    updateJSON_city("" + county + "");
-
-                    // Zip code
-                    $(".zip").val("" + postCode + "");
-                    updateJSON_zip("" + postCode + "");
-
-                    // Country update
-                    $(".country").val(countryCode.toUpperCase());
-                    $(".country").selectpicker("refresh");
-                    updateJSON_country(countryCode.toUpperCase());
-
-                    // Region update
-                    if (countryCode.toUpperCase() == "ID") {
-                        $(".region").val(region);
-                        updateJSON_region(region);
-                        $(".region").removeAttr("disabled");
-                        $(".region").selectpicker("refresh");
-                    }
-                } else {
-                    console.log(
-                        "Location information not found for the provided latitude and longitude."
-                    );
-                }
-            },
-            error: function () {
-                console.log(
-                    "An error occurred while fetching location information."
-                );
-            },
-        });
-    } else {
-        console.log("Please enter both latitude and longitude.");
-    }
-}
-
-function updateJson_dayOfWeek(value, id) {
-    for (let i = 0; i < 8; i++) {
-        if ($.inArray(value[i], organizationFormat.tempDayOfWeek) == -1) {
-            organizationFormat.openingHoursSpecification[id].dayOfWeek = value;
-        } else {
-            organizationFormat.openingHoursSpecification[id].dayOfWeek = "";
-        }
+        $(".phone[data-id=" + (i - 1) + "]").val($(".phone[data-id=" + i + "]").val());
     }
 
-    organizationFormat.render();
-}
-
-function updateJSON_openAt(value, id) {
-    organizationFormat.openingHoursSpecification[id].opens = value;
-    organizationFormat.render();
-
-    if (value.match(regexHours)) {
-        $(".openAt[data-id=" + id + "]").removeClass("is-invalid");
-        $(".invalid-feedback[data-id=openAt-" + id + "]").hide();
-    } else {
-        $(".openAt[data-id=" + id + "]").addClass("is-invalid");
-        $(".invalid-feedback[data-id=openAt-" + id + "]").show();
-    }
-}
-
-function updateJSON_closeAt(value, id) {
-    organizationFormat.openingHoursSpecification[id].closes = value;
-    organizationFormat.render();
-
-    if (value.match(regexHours)) {
-        $(".closeAt[data-id=" + id + "]").removeClass("is-invalid");
-        $(".invalid-feedback[data-id=closeAt-" + id + "]").hide();
-    } else {
-        $(".closeAt[data-id=" + id + "]").addClass("is-invalid");
-        $(".invalid-feedback[data-id=closeAt-" + id + "]").show();
-    }
-}
-
-function deleteHours(id) {
-    organizationFormat.openingHoursSpecification.splice(id, 1);
-    organizationFormat.render();
-
-    for (
-        let i = id + 1;
-        i < organizationFormat.openingHoursSpecification.length + 1;
-        i++
-    ) {
-        $(".hours-data[data-id=" + (i - 1) + "]").val(
-            $(".hours-data[data-id=" + i + "]").val()
-        );
-        $(".openAt[data-id=" + (i - 1) + "]").val(
-            $(".openAt[data-id=" + i + "]").val()
-        );
-        $(".closeAt[data-id=" + (i - 1) + "]").val(
-            $(".closeAt[data-id=" + i + "]").val()
-        );
-    }
-
-    $(
-        ".hours-data[data-id=" +
-            organizationFormat.openingHoursSpecification.length +
-            "]"
-    ).remove();
-    hoursCounter--;
-}
-
-function changeLocalBusinessType(id) {
-    if ($("#localBusinessType-" + id + "").val() == "none") {
-        $(".spesificType-" + id + "").attr("disabled", true);
-        $(".spesificType-" + id + "").selectpicker("refresh");
-
-        organizationFormat.department[id]["@type"] = "LocalBusiness";
-        organizationFormat.render();
-    } else {
-        $(".spesificType-" + id + "").removeAttr("disabled");
-        $(".spesificType-" + id + "").selectpicker("refresh");
-
-        organizationFormat.department[id]["@type"] = $(
-            "#localBusinessType-" + id + ""
-        ).val();
-        organizationFormat.render();
-
-        jQuery.ajax({
-            url: "/json/local-business.json",
-            type: "GET",
-            dataType: "json",
-            success: function (data) {
-                jQuery.each(data, function (key, value) {
-                    if (
-                        value.localBusinessType ==
-                            $("#localBusinessType-" + id + "").val() &&
-                        value.specificType
-                    ) {
-                        value.specificType.forEach((specificTypeList) => {
-                            jQuery("#SpesificType-" + id + "").append(
-                                '<option value="' +
-                                    specificTypeList +
-                                    '">' +
-                                    specificTypeList +
-                                    "</option>"
-                            );
-                        });
-
-                        $(".spesificType-" + id + "").selectpicker("refresh");
-                    } else if (
-                        value.localBusinessType ==
-                            $("#localBusinessType-" + id + "").val() &&
-                        value.specificType == null
-                    ) {
-                        jQuery("#SpesificType-" + id + "")
-                            .find("option")
-                            .remove()
-                            .end()
-                            .append(
-                                '<option value="none">More Specific</option>'
-                            );
-
-                        $(".spesificType-" + id + "").attr("disabled", true);
-                        $(".spesificType-" + id + "").selectpicker("refresh");
-                    }
-                });
-            },
-        });
-    }
-}
-
-function changeLocalBusinessSpesificType(id) {
-    if ($("#SpesificType-" + id + "").val() == "none") {
-        organizationFormat.department[id]["@type"] = $(
-            "#localBusinessType-" + id + ""
-        ).val();
-        organizationFormat.render();
-    } else {
-        organizationFormat.department[id]["@type"] = $(
-            "#SpesificType-" + id + ""
-        ).val();
-        organizationFormat.render();
-    }
-}
-
-function deleteDepartment(id) {
-    organizationFormat.department.splice(id, 1);
-    organizationFormat.render();
-
-    for (let i = id + 1; i < organizationFormat.department.length + 1; i++) {
-        $(".department-list[data-id=" + (i - 1) + "]").val(
-            $(".department-list[data-id=" + i + "]").val()
-        );
-        $("#localBusinessType-" + (i - 1) + "").val(
-            $("#localBusinessType-" + i + "").val()
-        );
-        $("#localBusinessType-" + (i - 1) + "").selectpicker("refresh");
-
-        jQuery.ajax({
-            url: "/json/local-business.json",
-            type: "GET",
-            dataType: "json",
-            success: function (data) {
-                jQuery.each(data, function (key, value) {
-                    if (
-                        value.localBusinessType ==
-                            $("#localBusinessType-" + (i - 1) + "").val() &&
-                        value.specificType
-                    ) {
-                        value.specificType?.forEach((specificTypeList) => {
-                            jQuery("#SpesificType-" + (i - 1) + "").append(
-                                '<option value="' +
-                                    specificTypeList +
-                                    '">' +
-                                    specificTypeList +
-                                    "</option>"
-                            );
-                        });
-
-                        $("#SpesificType-" + (i - 1) + "").val(
-                            organizationFormat.department[i - 1]["@type"]
-                        );
-                        $(".spesificType-" + (i - 1) + "").removeAttr(
-                            "disabled"
-                        );
-                        $(".spesificType-" + (i - 1) + "").selectpicker(
-                            "refresh"
-                        );
-                    }
-                });
-            },
-        });
-
-        $("#nameBusiness-" + (i - 1) + "").val(
-            $("#nameBusiness-" + i + "").val()
-        );
-        $("#imageBusiness-" + (i - 1) + "").val(
-            $("#imageBusiness-" + i + "").val()
-        );
-        $("#phoneBusiness-" + (i - 1) + "").val(
-            $("#phoneBusiness-" + i + "").val()
-        );
-    }
-
-    $(
-        ".department-list[data-id=" +
-            organizationFormat.department.length +
-            "]"
-    ).remove();
-    $("hr[data-id=" + organizationFormat.department.length + "]").remove();
-    departmentCounter--;
-}
-
-function nameDepartmentKeyup(id) {
-    organizationFormat.department[id].name = $(
-        "#nameBusiness-" + id + ""
-    ).val();
-    organizationFormat.render();
-}
-
-function imageDepartmentKeyup(id) {
-    if (
-        $("#imageBusiness-" + id + "")
-            .val()
-            .match(regex)
-    ) {
-        $("#imageBusiness-" + id + "").removeClass("is-invalid");
-        $(".invalid-feedback.url-department[data-id=" + id + "]").hide();
-    } else {
-        $("#imageBusiness-" + id + "").addClass("is-invalid");
-        $(".invalid-feedback.url-department[data-id=" + id + "]").show();
-    }
-
-    organizationFormat.department[id].image = $(
-        "#imageBusiness-" + id + ""
-    ).val();
-    organizationFormat.render();
-}
-
-function phoneDepartmentKeyup(id) {
-    if (
-        $("#phoneBusiness-" + id + "")
-            .val()
-            .match(regexPhone)
-    ) {
-        $("#phoneBusiness-" + id + "").removeClass("is-invalid");
-        $(".invalid-feedback.phone-department[data-id=" + id + "]").hide();
-    } else {
-        $("#phoneBusiness-" + id + "").addClass("is-invalid");
-        $(".invalid-feedback.phone-department[data-id=" + id + "]").show();
-    }
-
-    organizationFormat.department[id].telephone = $(
-        "#phoneBusiness-" + id + ""
-    ).val();
-    organizationFormat.render();
-}
-
-function updateJson_dayOfWeekDepartment(value, id, select) {
-    for (let i = 0; i < 8; i++) {
-        if (
-            $.inArray(value[i], organizationFormat.tempDayOfWeekDepartment) ==
-            -1
-        ) {
-            organizationFormat.department[id].openingHoursSpecification[
-                select
-            ].dayOfWeek = value;
-        } else {
-            organizationFormat.department[id].openingHoursSpecification[
-                select
-            ].dayOfWeek = "";
-        }
-    }
-
-    organizationFormat.render();
-}
-
-function openAtDepartment(value, id, input) {
-    organizationFormat.department[id].openingHoursSpecification[input].opens =
-        value;
-    organizationFormat.render();
-
-    if (value.match(regexHours)) {
-        $(
-            ".openAtDepartment[data-id=" + id + "][data-id-input=" + input + "]"
-        ).removeClass("is-invalid");
-        $(
-            ".invalid-feedback[data-id=openAt-" +
-                id +
-                "][data-id-input=" +
-                input +
-                "]"
-        ).hide();
-    } else {
-        $(
-            ".openAtDepartment[data-id=" + id + "][data-id-input=" + input + "]"
-        ).addClass("is-invalid");
-        $(
-            ".invalid-feedback[data-id=openAt-" +
-                id +
-                "][data-id-input=" +
-                input +
-                "]"
-        ).show();
-    }
-}
-
-function closeAtDepartment(value, id, input) {
-    organizationFormat.department[id].openingHoursSpecification[input].closes =
-        value;
-    organizationFormat.render();
-
-    if (value.match(regexHours)) {
-        $(
-            ".closeAtDepartment[data-id=" +
-                id +
-                "][data-id-input=" +
-                input +
-                "]"
-        ).removeClass("is-invalid");
-        $(
-            ".invalid-feedback[data-id=closeAt-" +
-                id +
-                "][data-id-input=" +
-                input +
-                "]"
-        ).hide();
-    } else {
-        $(
-            ".closeAtDepartment[data-id=" +
-                id +
-                "][data-id-input=" +
-                input +
-                "]"
-        ).addClass("is-invalid");
-        $(
-            ".invalid-feedback[data-id=closeAt-" +
-                id +
-                "][data-id-input=" +
-                input +
-                "]"
-        ).show();
-    }
-}
-
-function deleteHoursDepartment(id, idDelete) {
-    organizationFormat.department[id].openingHoursSpecification.splice(
-        idDelete,
-        1
-    );
-    organizationFormat.render();
-
-    for (
-        let i = id + 1;
-        i <
-        organizationFormat.department[id].openingHoursSpecification.length + 1;
-        i++
-    ) {
-        $(
-            ".hours-data-department[data-id=" +
-                (id - 1) +
-                "][data-id-department=" +
-                (idDelete - 1) +
-                "]"
-        ).val(
-            $(
-                ".hours-data-department[data-id=" +
-                    id +
-                    "][data-id-department=" +
-                    idDelete +
-                    "]"
-            ).val()
-        );
-        $(
-            ".openAtDepartment[data-id=" +
-                (id - 1) +
-                "][data-id-input=" +
-                (idDelete - 1) +
-                "]"
-        ).val(
-            $(
-                ".openAtDepartment[data-id=" +
-                    id +
-                    "][data-id-input=" +
-                    idDelete +
-                    "]"
-            ).val()
-        );
-        $(
-            ".closeAtDepartment[data-id=" +
-                (id - 1) +
-                "][data-id-input=" +
-                (idDelete - 1) +
-                "]"
-        ).val(
-            $(
-                ".closeAtDepartment[data-id=" +
-                    id +
-                    "][data-id-input=" +
-                    idDelete +
-                    "]"
-            ).val()
-        );
-        $(
-            ".deleteHoursDepartment[data-id=" +
-                (id - 1) +
-                "][data-id-delete=" +
-                (idDelete - 1) +
-                "]"
-        ).val(
-            $(
-                ".deleteHoursDepartment[data-id=" +
-                    id +
-                    "][data-id-delete=" +
-                    idDelete +
-                    "]"
-            ).val()
-        );
-    }
-
-    $(
-        ".hours-data-department[data-id=" +
-            id +
-            "][data-id-department=" +
-            idDelete +
-            "]"
-    ).remove();
-    hoursDepartmentCounter--;
+    $(".contact-list[data-id=" + organizationFormat.contactPoint.length + "]").remove();
+    $("hr[data-id=" + organizationFormat.contactPoint.length + "]").remove();
+    counterContact--;
 }
 
 // Interaction
@@ -1373,9 +735,13 @@ $(document).on("click", "#add-contact", function () {
     counterContact++;
 
     $("#form-contact").append(
-        '<div class="row py-3"><div class="col-sm-6 mb-5"><label class="text-black font-weight-bold" for="typeContact">' +
+        '<div class="row py-3 contact-list" data-id="'+ counterContact +'"><div class="col-sm-6 mb-5"><label class="text-black font-weight-bold" for="typeContact">' +
             label_type_contact +
-            '</label><div class="dropdown bootstrap-select show-tick form-control"><select class="form-control selectpicker custom-select-blue typeContact mb-5 custom-searchbox" data-actions-box="false" data-size="4" data-live-search="true" tabindex="null"><option value="none">' +
+            '</label><div class="dropdown bootstrap-select show-tick form-control"><select id="typeContact-' +
+            counterContact +
+            '" class="form-control selectpicker custom-select-blue typeContact mb-5 custom-searchbox" data-actions-box="false" data-size="4" data-live-search="true" tabindex="null" data-id="' +
+            counterContact +
+            '"><option value="none">' +
             placeholder_type_contact +
             '</option><option value="customer service">' +
             opt_type_contact_1 +
@@ -1403,29 +769,38 @@ $(document).on("click", "#add-contact", function () {
             label_phone +
             '</label><input type="text" id="phone" class="form-control phone" name="" placeholder="' +
             placeholder_phone +
-            '" value=""><div class="invalid-feedback phone" data-id="' +
+            '" value="" data-id="' +
+            counterContact +
+            '"><div class="invalid-feedback phone" data-id="' +
             counterContact +
             '">' +
             invalid_phone +
             '</div></div><div class="col-sm-1 mb-5 align-self-center mt-md-0 mb-md-0"><div class="d-flex justify-content-end mb-md-3"><i class="bx bxs-x-circle bx-md delete deleteContact" data-id="' +
             counterContact +
-            '"></i></div></div></div><div class="row"><div class="col-sm-4 mb-5"><label class="text-black font-weight-bold" for="area-served">' +
+            '"></i></div></div></div><div class="row contact-list" data-id="'+ counterContact +'"><div class="col-sm-4 mb-5"><label class="text-black font-weight-bold" for="area-served">' +
             label_area_served +
             '</label><div class="dropdown bootstrap-select show-tick form-control"><select id="area-served-' +
             counterContact +
-            '" class="form-control selectpicker custom-select-blue area-served mb-5 custom-searchbox" multiple="multiple" data-actions-box="false" data-size="4" data-live-search="true" tabindex="null"></select></div></div><div class="col-sm-4 mb-5"><label class="text-black font-weight-bold" for="language">' +
+            '" class="form-control selectpicker custom-select-blue area-served mb-5 custom-searchbox" multiple="multiple" data-actions-box="false" data-size="4" data-live-search="true" tabindex="null" data-id="' +
+            counterContact +
+            '"></select></div></div><div class="col-sm-4 mb-5"><label class="text-black font-weight-bold" for="language">' +
             label_language +
             '</label><div class="dropdown bootstrap-select show-tick form-control"><select id="language-' +
             counterContact +
-            '" class="form-control selectpicker custom-select-blue language mb-5 custom-searchbox" multiple="multiple" data-actions-box="false" data-size="4" data-live-search="true" tabindex="null"></select></div></div><div class="col-sm-4 mb-5"><label class="text-black font-weight-bold" for="options">' +
+            '" class="form-control selectpicker custom-select-blue language mb-5 custom-searchbox" multiple="multiple" data-actions-box="false" data-size="4" data-live-search="true" tabindex="null" data-id="' +
+            counterContact +
+            '"></select></div></div><div class="col-sm-4 mb-5"><label class="text-black font-weight-bold" for="options">' +
             label_options +
-            '</label><div class="dropdown bootstrap-select show-tick form-control"><select class="form-control selectpicker custom-select-blue options mb-5 custom-searchbox" multiple="multiple" data-actions-box="false" data-size="4" data-live-search="true" tabindex="null"><option value="TollFree">' +
+            '</label><div class="dropdown bootstrap-select show-tick form-control"><select id="options-'+ counterContact +'" class="form-control selectpicker custom-select-blue options mb-5 custom-searchbox" multiple="multiple" data-actions-box="false" data-size="4" data-live-search="true" tabindex="null" data-id="' +
+            counterContact +
+            '"><option value="TollFree">' +
             opt_options_1 +
             '</option><option value="HearingImpairedSupported">' +
             opt_options_2 +
-            "</option></select></div></div></div><hr>"
+            '</option></select></div></div></div><hr data-id="'+ counterContact +'">'
     );
-
+    
+    // area served
     jQuery.ajax({
         url: "/json/regions.json",
         type: "GET",
@@ -1447,6 +822,7 @@ $(document).on("click", "#add-contact", function () {
         },
     });
 
+    // language
     jQuery.ajax({
         url: "/json/languages.json",
         type: "GET",
@@ -1466,409 +842,47 @@ $(document).on("click", "#add-contact", function () {
         },
     });
 
-    // organizationFormat.department.push({
-    //     "@type": "LocalBusiness",
-    //     name: "",
-    //     image: "",
-    //     telephone: "",
-    // });
-    // organizationFormat.render();
-
-    $(".typeContact").selectpicker("refresh");
-    $("#area-served-"+ counterContact +"").selectpicker("refresh");
-    $("#language-"+ counterContact +"").selectpicker("refresh");
-    $(".language").selectpicker("refresh");
-    $(".options").selectpicker("refresh");
-    // $(".spesificType-" + departmentCounter + "").selectpicker("refresh");
-});
-
-// To be continue..
-
-$(".country").change(function (e) {
-    const country = $(this).val();
-
-    if (country !== "none" && country == "ID") {
-        $(".region").removeAttr("disabled");
-        $(".region").selectpicker("refresh");
-    } else {
-        $(".region").val("none");
-        $(".region").attr("disabled", true);
-        $(".region").selectpicker("refresh");
-    }
-});
-
-$("#fecthed-geo-coordinates").click(function (e) {
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(showLatitude);
-        navigator.geolocation.getCurrentPosition(showLongitude);
-        navigator.geolocation.getCurrentPosition(showCountryRegion);
-    } else {
-        console.log("Geolocation is not supported by this browser.");
-    }
-});
-
-$(document).on("click", "#add-hours", function () {
-    $("#form-hours").show();
-    hoursCounter++;
-
-    $("#form-hours").append(
-        '<div class="row mb-5 hours-data" data-id="' +
-            hoursCounter +
-            '"><div class="col-sm-5 mb-5 align-self-center mt-md-2 mb-md-0"><label class="text-black font-weight-bold" for="dayWeek">' +
-            label_days_week +
-            '</label><div class="dropdown bootstrap-select show-tick form-control"><select class="form-control selectpicker custom-select-blue dayWeek custom-searchbox" multiple="multiple" data-actions-box="false" data-size="4" data-live-search="true" tabindex="null" data-id="' +
-            hoursCounter +
-            '"><option value="Monday">' +
-            label_monday +
-            '</option><option value="Tuesday">' +
-            label_tuesday +
-            '</option><option value="Wednesday">' +
-            label_wednesday +
-            '</option><option value="Thursday">' +
-            label_thursday +
-            '</option><option value="Friday">' +
-            label_friday +
-            '</option><option value="Saturday">' +
-            label_saturday +
-            '</option><option value="Sunday">' +
-            label_sunday +
-            '</option></select></div></div><div class="col-sm-3 mb-5 align-self-center mt-md-2 mb-md-0"><label for="openAt" class="font-weight-bold text-black">' +
-            label_openat +
-            '</label><input type="text" id="openAt" class="form-control openAt" name="" placeholder="' +
-            placeholder_openat +
-            '" value="" data-id="' +
-            hoursCounter +
-            '"><div class="invalid-feedback" data-id="openAt-' +
-            hoursCounter +
-            '">' +
-            invalid_hours +
-            '</div></div><div class="col-sm-3 mb-5 align-self-center mt-md-2 mb-md-0"><label for="closeAt" class="font-weight-bold text-black">' +
-            label_closeat +
-            '</label><input type="text" id="closeAt" class="form-control closeAt" name="" placeholder="' +
-            placeholder_closeat +
-            '" value="" data-id="' +
-            hoursCounter +
-            '"><div class="invalid-feedback" data-id="closeAt-' +
-            hoursCounter +
-            '">' +
-            invalid_hours +
-            '</div></div><div class="col-sm-1 mb-5 align-self-center mt-md-2 mb-md-0"><div class="d-flex justify-content-center mt-7"><i class="bx bxs-x-circle bx-md delete deleteHours" data-id="' +
-            hoursCounter +
-            '"></i></div></div></div>'
-    );
-
-    $(".dayWeek").selectpicker("refresh");
-    organizationFormat.openingHoursSpecification.push({
-        "@type": "OpeningHoursSpecification",
-        dayOfWeek: "",
-        opens: "",
-        closes: "",
+    organizationFormat.contactPoint.push({
+        "@type": "ContactPoint",
+        telephone: "",
+        contactType: "",
+        contactOption: "",
+        areaServed: "",
+        availableLanguage: "",
     });
     organizationFormat.render();
+
+    $("#typeContact-"+ counterContact +"").selectpicker("refresh");
+    $("#area-served-"+ counterContact +"").selectpicker("refresh");
+    $("#language-"+ counterContact +"").selectpicker("refresh");
+    $("#options-" + counterContact + "").selectpicker("refresh");
 });
 
-$(document).on("click", ".deleteHours", function () {
-    deleteHours(parseInt($(this).data("id")));
-});
-
-$("#open-fullday").change(function () {
-    if (this.checked) {
-        // format hours everyday open
-        organizationFormat.openingHoursSpecification = [
-            {
-                "@type": "OpeningHoursSpecification",
-                dayOfWeek: [
-                    "Monday",
-                    "Tuesday",
-                    "Wednesday",
-                    "Thursday",
-                    "Friday",
-                    "Saturday",
-                    "Sunday",
-                ],
-                opens: "00:00",
-                closes: "23:59",
-            },
-        ];
-
-        $("#add-hours").prop("disabled", true);
-        $("#form-hours").hide();
-    } else {
-        // render hours
-        organizationFormat.openingHoursSpecification.splice(0, 1);
-        var hoursDataCount = $(".hours-data").length;
-        for (let i = 0; i < hoursDataCount; i++) {
-            organizationFormat.openingHoursSpecification.push({
-                "@type": "OpeningHoursSpecification",
-                dayOfWeek: $(".dayWeek[data-id=" + i + "]").val(),
-                opens: $(".openAt[data-id=" + i + "]").val(),
-                closes: $(".closeAt[data-id=" + i + "]").val(),
-            });
-        }
-
-        $("#add-hours").prop("disabled", false);
-        $("#form-hours").show();
-    }
-    organizationFormat.render();
-});
-
-$(document).on("click", ".add-hours-department", function () {
-    var idHoursDepartment = parseInt($(this).attr("data-id"));
-    $("#form-hours-department-" + idHoursDepartment + "").show();
-    hoursDepartmentCounter++;
-
-    $("#form-hours-department-" + idHoursDepartment + "").append(
-        '<div class="row mb-5 hours-data-department" data-id="' +
-            idHoursDepartment +
-            '" data-id-department="' +
-            hoursDepartmentCounter +
-            '"><div class="col-sm-5 mb-5 align-self-center mt-md-2 mb-md-0"><label class="text-black font-weight-bold" for="dayWeek">' +
-            label_days_week +
-            '</label><div class="dropdown bootstrap-select show-tick form-control"><select class="form-control selectpicker custom-select-blue dayWeekDepartment custom-searchbox" multiple="multiple" data-actions-box="false" data-size="4" data-live-search="true" tabindex="null" data-id="' +
-            idHoursDepartment +
-            '" data-id-select="' +
-            hoursDepartmentCounter +
-            '"><option value="Monday">' +
-            label_monday +
-            '</option><option value="Tuesday">' +
-            label_tuesday +
-            '</option><option value="Wednesday">' +
-            label_wednesday +
-            '</option><option value="Thursday">' +
-            label_thursday +
-            '</option><option value="Friday">' +
-            label_friday +
-            '</option><option value="Saturday">' +
-            label_saturday +
-            '</option><option value="Sunday">' +
-            label_sunday +
-            '</option></select></div></div><div class="col-sm-3 mb-5 align-self-center mt-md-2 mb-md-0"><label for="openAt" class="font-weight-bold text-black">' +
-            label_openat +
-            '</label><input type="text" class="form-control openAtDepartment" name="" placeholder="' +
-            placeholder_openat +
-            '" value="" data-id="' +
-            idHoursDepartment +
-            '" data-id-input="' +
-            hoursDepartmentCounter +
-            '"><div class="invalid-feedback" data-id="openAt-' +
-            idHoursDepartment +
-            '" data-id-input="' +
-            hoursDepartmentCounter +
-            '">' +
-            invalid_hours +
-            '</div></div><div class="col-sm-3 mb-5 align-self-center mt-md-2 mb-md-0"><label for="closeAt" class="font-weight-bold text-black">' +
-            label_closeat +
-            '</label><input type="text" class="form-control closeAtDepartment" name="" placeholder="' +
-            placeholder_closeat +
-            '" value="" data-id="' +
-            idHoursDepartment +
-            '" data-id-input="' +
-            hoursDepartmentCounter +
-            '"><div class="invalid-feedback" data-id="closeAt-' +
-            idHoursDepartment +
-            '" data-id-input="' +
-            hoursDepartmentCounter +
-            '">' +
-            invalid_hours +
-            '</div></div><div class="col-sm-1 mb-5 align-self-center mt-md-2 mb-md-0"><div class="d-flex justify-content-center mt-7"><i class="bx bxs-x-circle bx-md delete deleteHoursDepartment" data-id="' +
-            idHoursDepartment +
-            '" data-id-delete="' +
-            hoursDepartmentCounter +
-            '"></i></div></div></div>'
-    );
-
-    $(".dayWeekDepartment").selectpicker("refresh");
-
-    if (
-        organizationFormat.department[idHoursDepartment]
-            .openingHoursSpecification
-    ) {
-        organizationFormat.department[
-            idHoursDepartment
-        ].openingHoursSpecification.push({
-            "@type": "OpeningHoursSpecification",
-            dayOfWeek: "",
-            opens: "",
-            closes: "",
-        });
-    } else {
-        organizationFormat.department[
-            idHoursDepartment
-        ].openingHoursSpecification = [];
-        organizationFormat.department[
-            idHoursDepartment
-        ].openingHoursSpecification.push({
-            "@type": "OpeningHoursSpecification",
-            dayOfWeek: "",
-            opens: "",
-            closes: "",
-        });
-    }
-
-    organizationFormat.render();
-});
-
-$(document).on("change", ".open-fullday-department", function () {
-    var id = parseInt($(this).attr("data-id"));
-    if (this.checked) {
-        // format hours everyday open
-        organizationFormat.department[id].openingHoursSpecification = [
-            {
-                "@type": "OpeningHoursSpecification",
-                dayOfWeek: [
-                    "Monday",
-                    "Tuesday",
-                    "Wednesday",
-                    "Thursday",
-                    "Friday",
-                    "Saturday",
-                    "Sunday",
-                ],
-                opens: "00:00",
-                closes: "23:59",
-            },
-        ];
-
-        $(".add-hours-department[data-id=" + id + "]").prop("disabled", true);
-        $("#form-hours-department-" + id + "").hide();
-    } else {
-        // render hours
-        organizationFormat.department[id].openingHoursSpecification.splice(
-            0,
-            1
-        );
-        var departmentList = $(".department-list").length;
-        for (let i = 1; i < departmentList + 1; i++) {
-            console.log(departmentList);
-            organizationFormat.department[id].openingHoursSpecification.push({
-                "@type": "OpeningHoursSpecification",
-                dayOfWeek: $(
-                    ".dayWeekDepartment[data-id=" +
-                        id +
-                        "][data-id-select=" +
-                        (i - 1) +
-                        "]"
-                ).val(),
-                opens: $(
-                    ".openAtDepartment[data-id=" +
-                        id +
-                        "][data-id-input=" +
-                        (i - 1) +
-                        "]"
-                ).val(),
-                closes: $(
-                    ".closeAtDepartment[data-id=" +
-                        id +
-                        "][data-id-input=" +
-                        (i - 1) +
-                        "]"
-                ).val(),
-            });
-        }
-
-        $(".add-hours-department[data-id=" + id + "]").prop("disabled", false);
-        $("#form-hours-department-" + id + "").show();
-    }
-    organizationFormat.render();
-});
-
-$(document).on("click", ".deleteDepartment", function () {
-    deleteDepartment(parseInt($(this).data("id")));
-});
-
-$(document).on("change", ".dayWeekDepartment", function () {
-    updateJson_dayOfWeekDepartment(
-        $(this).val(),
+$(document).on("change", ".typeContact", function () {
+    updateJson_typeContact(
         $(this).data("id"),
-        $(this).data("id-select")
+        $(this).val()
     );
-});
-
-$(document).on("keyup", ".openAtDepartment", function () {
-    openAtDepartment(
-        $(this).val(),
-        $(this).data("id"),
-        $(this).data("id-input")
-    );
-});
-
-$(document).on("keyup", ".closeAtDepartment", function () {
-    closeAtDepartment(
-        $(this).val(),
-        $(this).data("id"),
-        $(this).data("id-input")
-    );
-});
-
-$(document).on("click", ".deleteHoursDepartment", function () {
-    deleteHoursDepartment(
-        parseInt($(this).data("id")),
-        parseInt($(this).data("id-delete"))
-    );
-});
-
-$(document).on("keyup", ".imageBusiness", function () {
-    updateJSON_imageBusiness(parseInt($(this).data("id")), $(this).val());
 });
 
 $(document).on("keyup", ".phone", function () {
     updateJSON_phone(parseInt($(this).data("id")), $(this).val());
 });
 
-$(document).on("keyup", ".priceRange", function () {
-    updateJSON_priceRange($(this).val());
+$(document).on("change", ".area-served", function () {
+    updateJson_areaServed($(this).data("id"), $(this).val());
 });
 
-$(document).on("keyup", ".menu-url", function () {
-    updateJSON_menuURL(parseInt($(this).data("id")), $(this).val());
+$(document).on("change", ".language", function () {
+    updateJson_language($(this).data("id"), $(this).val());
 });
 
-$(document).on("keyup", ".cuisine", function () {
-    updateJSON_cuisine($(this).val());
+$(document).on("change", ".options", function () {
+    updateJson_options($(this).data("id"), $(this).val());
 });
 
-$(document).on("change", "#accepts-reservation", function () {
-    updateJSON_acceptsReservation(this.checked);
-});
-
-$(document).on("keyup", ".street", function () {
-    updateJSON_street($(this).val());
-});
-
-$(document).on("keyup", ".city", function () {
-    updateJSON_city($(this).val());
-});
-
-$(document).on("keyup", ".zip", function () {
-    updateJSON_zip($(this).val());
-});
-
-$(document).on("change", "#country", function () {
-    updateJSON_country($(this).val());
-});
-
-$(document).on("change", "#region", function () {
-    updateJSON_region($(this).val());
-});
-
-$(document).on("keyup", ".latitude", function () {
-    updateJSON_latitude($(this).val(), parseInt($(this).data("id")));
-});
-
-$(document).on("keyup", ".longitude", function () {
-    updateJSON_longitude($(this).val(), parseInt($(this).data("id")));
-});
-
-$(document).on("keyup", ".openAt", function () {
-    updateJSON_openAt($(this).val(), $(this).data("id"));
-});
-
-$(document).on("keyup", ".closeAt", function () {
-    updateJSON_closeAt($(this).val(), $(this).data("id"));
-});
-
-$(document).on("change", ".dayWeek", function () {
-    updateJson_dayOfWeek($(this).val(), $(this).data("id"));
+$(document).on("click", ".deleteContact", function () {
+    deleteContact(parseInt($(this).data("id")));
 });
 
 // Layout Action
@@ -1905,7 +919,15 @@ $(".reset").click(function (e) {
     organizationFormat.resetrender();
     
     
+    $(".typeContact").selectpicker("val", "none");
+    $(".typeContact").selectpicker("refresh");
     $(".phone").removeClass("is-invalid");
+    $(".area-served").selectpicker("val", "none");
+    $(".area-served").selectpicker("refresh");
+    $(".language").selectpicker("val", "none");
+    $(".language").selectpicker("refresh");
+    $(".options").selectpicker("val", "none");
+    $(".options").selectpicker("refresh");
 });
 
 $("#form-contact").hide();
