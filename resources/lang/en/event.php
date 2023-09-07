@@ -60,15 +60,15 @@ return [
     "label-performerName" => "Performer's name",
     "placeholder-performerName" => "Type your performer's name here..",
 
-    "label-information" => "Add an offer for each ticket type (e.g. 'General admission', 'Reserved seating', 'VIP Package', etc.).",
+    "label-information" => "Add an offer for each ticket type (e.g. 'General admission', 'Reserved seating', 'VIP Package', etc).",
     "btn-addTicket" => "Add Ticket Type",
     "label-currency" => "Currency",
     "placeholder-currency" => "Search a currency..",
 
     "label-ticket-name" => "Ticket Name",
-    "placeholder-ticket-name" => "Type yout ticket name here..",
+    "placeholder-ticket-name" => "Type your ticket name here..",
     "label-ticket-price" => "Price",
-    "placeholder-ticket-price" => "Type yout ticket price here..",
+    "placeholder-ticket-price" => "Type your ticket price here..",
     "label-available-ticket" => "Available From",
     "placeholder-available-ticket" => "Pick a Date",
     "label-url-ticket" => "URL Ticket",

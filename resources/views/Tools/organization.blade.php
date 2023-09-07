@@ -1,17 +1,17 @@
 @extends('layouts.app')
 
-@section('title', Lang::get('localBusiness.meta-title'))
+@section('title', Lang::get('organization.meta-title'))
 
-@section('meta-desc', Lang::get('localBusiness.meta-desc'))
+@section('meta-desc', Lang::get('organization.meta-desc'))
 
-@section('conical','/en/json-ld-localBusiness-schema-generator')
+@section('conical','/en/json-ld-organization-schema-generator')
 
 @section('en-link')
-en/json-ld-localBusiness-schema-generator
+en/json-ld-organization-schema-generator
 @endsection
 
 @section('id-link')
-id/json-ld-localBusiness-schema-generator
+id/json-ld-organization-schema-generator
 @endsection
 
 @section('content')
@@ -21,8 +21,8 @@ id/json-ld-localBusiness-schema-generator
 <div class="container container-tools mb-10">
     <div class="d-flex flex-column-fluid">
         <div class="container-fluid px-0">
-            <h1 class="text-darkgrey font-weight-normal">@lang('localBusiness.title')</h1>
-            <span class="text-darkgrey h4 font-weight-normal mb-10">@lang('localBusiness.subtitle')</span>
+            <h1 class="text-darkgrey font-weight-normal">@lang('organization.title')</h1>
+            <span class="text-darkgrey h4 font-weight-normal mb-10">@lang('organization.subtitle')</span>
             <div class="card card-custom mt-10 mb-5">
                 <div class="card-body">
                     <div class="row">
@@ -40,171 +40,61 @@ id/json-ld-localBusiness-schema-generator
                                         <option value="product">Product</option>
                                         <option value="recipe">Recipe</option>
                                         <option value="website">Website</option>
-                                        <option value="local-business" selected="selected">Local Business</option>
+                                        <option value="local-business">Local Business</option>
                                         <option value="video">Video</option>
                                         <option value="event">Event</option>
-                                        <option value="organization">Organization</option>
+                                        <option value="organization" selected="selected">Organization</option>
                                     </select>
                                 </div>
                             </div>
-                            <p class="h6 text-black mb-5">Local Business Generator</p>
-                            <form action="" id="form-localBusiness">
+                            <p class="h6 text-black mb-5">Organization Generator</p>
+                            <form action="" id="form-organization">
                                 <div class="row">
                                     <div class="col-12 col-sm-12">
                                         <div class="row">
                                             <div class="col-sm-6 mb-5">
-                                                <label for="localBusinessType" class="font-weight-bold text-black">@lang('localBusiness.label-type')</label>
-                                                <select id="localBusinessType" class="form-control selectpicker custom-select-blue custom-searchbox localBusinessType mb-5" data-size="4" data-live-search="true" tabindex="null">
-                                                    <option value="none">@lang('localBusiness.placeholder-type')</option>
-                                                    @foreach($listLocalBusiness as $lb)
-                                                        <option value="{{ $lb['localBusinessType'] }}">{{ $lb['localBusinessType'] }}</option>
+                                                <label for="organizationType" class="font-weight-bold text-black">@lang('organization.label-type')</label>
+                                                <select id="organizationType" class="form-control selectpicker custom-select-blue custom-searchbox organizationType mb-5" data-size="4" data-live-search="true" tabindex="null">
+                                                    <option value="none">@lang('organization.placeholder-type')</option>
+                                                    @foreach($listOrganization as $lo)
+                                                        <option value="{{ $lo['organizationType'] }}">{{ $lo['organizationType'] }}</option>
                                                     @endforeach
                                                 </select>
                                             </div>
                                             <div class="col-sm-6 mb-5">
-                                                <label for="spesificType" class="font-weight-bold text-black">@lang('localBusiness.label-spesificType')</label>
+                                                <label for="spesificType" class="font-weight-bold text-black">@lang('organization.label-spesificType')</label>
                                                 <select id="SpesificType" class="form-control selectpicker custom-select-blue custom-searchbox spesificType mb-5" data-size="4" data-live-search="true" tabindex="null" disabled>
-                                                    <option value="none">@lang('localBusiness.placeholder-spesificType')</option>
+                                                    <option value="none">@lang('organization.placeholder-spesificType')</option>
                                                 </select>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-sm-12">
-                                        <div class="row">
-                                            <div class="col-sm-4 mb-5">
-                                                <label for="nameBusiness" class="font-weight-bold text-black">@lang('localBusiness.label-nameBusiness')</label>
-                                                <input type="text" id="nameBusiness" class="form-control nameBusiness" name="" placeholder="{{ Lang::get('localBusiness.placeholder-nameBusiness') }}" value="">
-                                            </div>
-                                            <div class="col-sm-4 mb-5">
-                                                <label for="imageBusiness" class="font-weight-bold text-black">@lang('localBusiness.label-imageBusiness')</label>
-                                                <input type="text" id="imageBusiness" class="form-control imageBusiness" name="" placeholder="{{ Lang::get('localBusiness.placeholder-imageBusiness') }}" value="">
-                                                <div class="invalid-feedback" data-id="0">@lang('layout.invalid-url')</div>
-                                            </div>
-                                            <div class="col-sm-4 mb-5">
-                                                <label for="idUrl" class="font-weight-bold text-black">@lang('localBusiness.label-id-url')</label>
-                                                <input type="text" id="idUrl" class="form-control idUrl" name="" placeholder="{{ Lang::get('localBusiness.placeholder-id-url') }}" value="">
-                                                <div class="invalid-feedback" data-id="1">@lang('layout.invalid-url')</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-sm-12">
-                                        <div class="row">
-                                            <div class="col-sm-4 mb-5">
-                                                <label for="url" class="font-weight-bold text-black">@lang('localBusiness.label-url')</label>
-                                                <input type="text" id="url" class="form-control url" name="" placeholder="{{ Lang::get('localBusiness.placeholder-url') }}" value="">
-                                                <div class="invalid-feedback" data-id="2">@lang('layout.invalid-url')</div>
-                                            </div>
-                                            <div class="col-sm-4 mb-5">
-                                                <label for="phone" class="font-weight-bold text-black">@lang('localBusiness.label-phone')</label>
-                                                <input type="text" id="phone" class="form-control phone" name="" placeholder="{{ Lang::get('localBusiness.placeholder-phone') }}" value="">
-                                                <div class="invalid-feedback" data-id="3">@lang('layout.invalid-phone')</div>
-                                            </div>
-                                            <div class="col-sm-4 mb-5">
-                                                <label for="priceRange" class="font-weight-bold text-black">@lang('localBusiness.label-priceRange')</label>
-                                                <input type="text" id="priceRange" class="form-control priceRange" name="" placeholder="{{ Lang::get('localBusiness.placeholder-priceRange') }}" value="">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div id="foodEstablishment" class="col-12 col-sm-12 d-none">
-                                        <div class="row">
-                                            <div class="col-sm-4 mb-5">
-                                                <label for="menu-url" class="font-weight-bold text-black">@lang('localBusiness.label-menu-url')</label>
-                                                <input type="text" id="menu-url" class="form-control menu-url" name="" placeholder="{{ Lang::get('localBusiness.placeholder-menu-url') }}" value="">
-                                                <div class="invalid-feedback" data-id="4">@lang('layout.invalid-url')</div>
-                                            </div>
-                                            <div class="col-sm-4 mb-5">
-                                                <label for="cuisine" class="font-weight-bold text-black">@lang('localBusiness.label-cuisine')</label>
-                                                <input type="text" id="cuisine" class="form-control cuisine" name="" placeholder="{{ Lang::get('localBusiness.placeholder-cuisine') }}" value="">
-                                            </div>
-                                            <div class="col-sm-4 mb-5 align-self-center mt-md-2 mb-md-0">
-                                                <div class="checkbox-list">
-                                                    <label class="checkbox text-black font-weight-bold">
-                                                        <input type="checkbox" id="accepts-reservation" name="" />
-                                                        <span></span>@lang('localBusiness.label-accepts-reservation')</label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-sm-12">
-                                        <div class="row">
-                                            <div class="col-sm-4 mb-5">
-                                                <label for="street" class="font-weight-bold text-black">@lang('localBusiness.label-street')</label>
-                                                <input type="text" id="street" class="form-control street" name="" placeholder="{{ Lang::get('localBusiness.placeholder-street') }}" value="">
-                                            </div>
-                                            <div class="col-sm-4 mb-5">
-                                                <label for="city" class="font-weight-bold text-black">@lang('localBusiness.label-city')</label>
-                                                <input type="text" id="city" class="form-control city" name="" placeholder="{{ Lang::get('localBusiness.placeholder-city') }}" value="">
-                                            </div>
-                                            <div class="col-sm-4 mb-5">
-                                                <label for="zip" class="font-weight-bold text-black">@lang('localBusiness.label-zip')</label>
-                                                <input type="text" id="zip" class="form-control zip" name="" placeholder="{{ Lang::get('localBusiness.placeholder-zip') }}" value="">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-12 col-sm-12">
                                         <div class="row">
                                             <div class="col-sm-6 mb-5">
-                                                <label for="country" class="font-weight-bold text-black">@lang('localBusiness.label-country')</label>
-                                                <select id="country" class="form-control selectpicker custom-select-blue custom-searchbox country mb-5" data-size="4" data-live-search="true" tabindex="null">
-                                                    <option value="none">@lang('localBusiness.placeholder-country')</option>
-                                                    @foreach($country as $c)
-                                                        <option value="{{ $c['code'] }}">{{ $c['name'] }}</option>
-                                                    @endforeach
-                                                </select>
+                                                <label for="nameOrganization" class="font-weight-bold text-black">@lang('organization.label-nameOrganization')</label>
+                                                <input type="text" id="nameOrganization" class="form-control nameOrganization" name="" placeholder="{{ Lang::get('organization.placeholder-nameOrganization') }}" value="">
                                             </div>
                                             <div class="col-sm-6 mb-5">
-                                                <label for="region" class="font-weight-bold text-black">@lang('localBusiness.label-region')</label>
-                                                <select id="region" class="form-control selectpicker custom-select-blue custom-searchbox region mb-5" data-size="4" data-live-search="true" tabindex="null" disabled>
-                                                    <option value="none">@lang('localBusiness.placeholder-region')</option>
-                                                    @foreach($province as $p)
-                                                        <option value="{{ $p['code'] }}">{{ $p['name'] }}</option>
-                                                    @endforeach
-                                                </select>
+                                                <label for="alternateNameOrganization" class="font-weight-bold text-black">@lang('organization.label-alternateNameOrganization')</label>
+                                                <input type="text" id="alternateNameOrganization" class="form-control alternateNameOrganization" name="" placeholder="{{ Lang::get('organization.placeholder-alternateNameOrganization') }}" value="">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-12 col-sm-12">
-                                        <div class="row">
-                                            <div class="col-md-3 col-lg-4 mb-5">
-                                                <label for="latitude" class="font-weight-bold text-black">@lang('localBusiness.label-latitude')</label>
-                                                <input type="text" id="latitude" class="form-control latitude" name="" placeholder="{{ Lang::get('localBusiness.placeholder-latitude') }}" value="">
-                                                <div class="invalid-feedback" data-id="5">@lang('layout.invalid-latitude')</div>
-                                            </div>
-                                            <div class="col-md-3 col-lg-4 mb-5">
-                                                <label for="longitude" class="font-weight-bold text-black">@lang('localBusiness.label-longitude')</label>
-                                                <input type="text" id="longitude" class="form-control longitude" name="" placeholder="{{ Lang::get('localBusiness.placeholder-longitude') }}" value="">
-                                                <div class="invalid-feedback" data-id="6">@lang('layout.invalid-longitude')</div>
-                                            </div>
-                                            <div class="col-md-5 col-lg-4 mb-5 align-self-center mt-md-2 mb-md-0">
-                                                 <button type="button" class="btn btn-add-question mb-5 mt-5" name="button" id="fecthed-geo-coordinates">
-                                                    <i class='bx bx-target-lock'></i> @lang('localBusiness.btn-geo-coordinates')
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-sm-12">
-                                        <div class="row">
-                                             <div class="col-md-5 mb-5 align-self-center mt-md-2 mb-md-0">
-                                                <button type="button" class="btn btn-add-question mb-5 mt-5" name="button" id="add-hours">
-                                                    <i class='bx bx-plus'></i> @lang('localBusiness.btn-add-hours')
-                                                </button>
-                                            </div>
-                                            <div class="col-sm-4 mb-5  align-self-center mt-md-2 mb-md-0">
-                                                <div class="checkbox-list">
-                                                    <label class="checkbox text-black font-weight-bold">
-                                                        <input type="checkbox" id="open-fullday" name="" />
-                                                        <span></span>@lang('localBusiness.label-open-fullday')</label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-12 mb-5">
-                                                <div id="form-hours"></div>
-                                            </div>
-                                        </div>
                                         <div class="row">
                                             <div class="col-sm-4 mb-5">
-                                                <label class="text-black font-weight-bold" for="sosmed">@lang('localBusiness.label-social-profiles')</label>
+                                                <label for="url" class="font-weight-bold text-black">@lang('organization.label-url')</label>
+                                                <input type="text" id="url" class="form-control url" name="" placeholder="{{ Lang::get('organization.placeholder-url') }}" value="" data-id="0">
+                                                <div class="invalid-feedback url" data-id="0">@lang('layout.invalid-url')</div>
+                                            </div>
+                                            <div class="col-sm-4 mb-5">
+                                                <label for="logo-url" class="font-weight-bold text-black">@lang('organization.label-logo-url')</label>
+                                                <input type="text" id="logo-url" class="form-control logo-url" name="" placeholder="{{ Lang::get('organization.placeholder-logo-url') }}" value="" data-id="0">
+                                                <div class="invalid-feedback logo-url" data-id="0">@lang('layout.invalid-url')</div>
+                                            </div>
+                                            <div class="col-sm-4 mb-5">
+                                                <label class="text-black font-weight-bold" for="sosmed">@lang('organization.label-social-profiles')</label>
                                                 <div class="dropdown bootstrap-select show-tick form-control">
                                                     <select class="form-control selectpicker custom-select-blue social-profiles mb-5 custom-searchbox" multiple="multiple" data-actions-box="false" data-size="4" data-live-search="true" tabindex="null">
                                                         <option value="twitter">Twitter</option>
@@ -222,6 +112,8 @@ id/json-ld-localBusiness-schema-generator
                                                 </div>
                                             </div>
                                         </div>
+                                    </div>
+                                    <div class="col-12 col-sm-12">
                                         <div class="row">
                                             <div class="col-12 mb-5">
                                                 <div class="sosial-profile-url">
@@ -232,15 +124,15 @@ id/json-ld-localBusiness-schema-generator
                                     <div class="col-12 col-sm-12">
                                         <div class="row">
                                             <div class="col-12 mb-5">
-                                                <div id="form-department">
-                                                    <p class="h6 text-black mb-5">@lang('localBusiness.label-title-department')</p>
+                                                <div id="form-contact">
+                                                    <p class="h6 text-black mb-5">@lang('organization.title-contact')</p>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="row">
                                              <div class="col-md-5 mb-5 align-self-center mt-md-2 mb-md-0">
-                                                  <button type="button" class="btn btn-add-question mb-5 mt-5" name="button" id="add-department">
-                                                    <i class='bx bx-plus'></i> @lang('localBusiness.btn-add-department')
+                                                  <button type="button" class="btn btn-add-question mb-5 mt-5" name="button" id="add-contact">
+                                                    <i class='bx bx-plus'></i> @lang('organization.btn-add-contact')
                                                 </button>
                                             </div>
                                         </div>
@@ -326,7 +218,7 @@ id/json-ld-localBusiness-schema-generator
 </div>
 @endif
 @component('layouts.new_ui_design', ['local' => $local, 'blogs' => $blogs, 'seo_terms' => $seo_terms, 'seo_guidelines' => $seo_guidelines])
-    @slot('title', 'JSON-LD localBusiness Schema Generator')
+    @slot('title', 'JSON-LD Organization Schema Generator')
     @slot('subcontent_1')
         <div class="" id="description-tab-1">
             <h2>@lang('localBusiness.desc-1')</h2>
@@ -411,8 +303,8 @@ id/json-ld-localBusiness-schema-generator
         }, {
             "@type": "ListItem",
             "position": 3,
-            "name": "JSON-LD localBusiness Schema Generator",
-            "item": "{{url('/')}}/{{$local}}/json-ld-localBusiness-schema-generator"
+            "name": "JSON-LD Organization Schema Generator",
+            "item": "{{url('/')}}/{{$local}}/json-ld-organization-schema-generator"
         }]
     }
 </script>
@@ -447,11 +339,7 @@ id/json-ld-localBusiness-schema-generator
 </script>
 @endpush
 @push('script')
-<script src="{{asset('js/logic/predifine-localstorage.js')}}"></script>
-<script src="{{asset('js/logic/localBusiness-json.js')}}"></script>
-<script type="text/javascript">
-    $('#toggle_button_webmaster').click();
-</script>
+<script src="{{asset('js/logic/organization-json.js')}}"></script>
 @endpush
 
 @section('json-ld')

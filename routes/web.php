@@ -74,6 +74,7 @@ Route::get('/logout','Auth\LoginController@logout');
         Route::get('/{lang}/json-ld-local-business-schema-generator', 'ToolsController@localBusiness');
         Route::get('/{lang}/json-ld-video-schema-generator', 'ToolsController@video');
         Route::get('/{lang}/json-ld-event-schema-generator', 'ToolsController@event');
+        Route::get('/{lang}/json-ld-organization-schema-generator', 'ToolsController@organization');
     });
     Route::get('/en/version', 'ToolsController@englishVersion');
     Route::get('/id/version', 'ToolsController@indonesiaVersion');

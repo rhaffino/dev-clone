@@ -1,0 +1,88 @@
+[
+    {
+        "organizationType": "Organization"
+    },
+    {
+        "organizationType": "Consortium"
+    },
+    {
+        "organizationType": "Corporation"
+    },
+    {
+        "organizationType": "EducationalOrganization",
+        "specificType": [
+            "CollegeOrUniversity",
+            "ElementarySchool",
+            "HighSchool",
+            "MiddleSchool",
+            "Preschool",
+            "School"
+        ]
+    },
+    {
+        "organizationType": "FundingScheme"
+    },
+    {
+        "organizationType": "GovernmentOrganization"
+    },
+    {
+        "organizationType": "LibrarySystem"
+    },
+    {
+        "organizationType": "LocalBusiness"
+    },
+    {
+        "organizationType": "MedicalOrganization",
+        "specificType": [
+            "Dentist",
+            "DiagnosticLab",
+            "Hospital",
+            "MedicalClinic",
+            "Pharmacy",
+            "Physician",
+            "VeterinaryCare"
+        ]
+    },
+    {
+        "organizationType": "NGO"
+    },
+    {
+        "organizationType": "NewsMediaOrganization"
+    },
+    {
+        "organizationType": "OnlineBusiness"
+    },
+    {
+        "organizationType": "PerformingGroup",
+        "specificType": [
+            "DanceGroup",
+            "MusicGroup",
+            "TheaterGroup"
+        ]
+    },
+    {
+        "organizationType": "PoliticalParty"
+    },
+    {
+        "organizationType": "Project",
+        "specificType": [
+            "FundingAgency",
+            "ResearchProject"
+        ]
+    },
+    {
+        "organizationType": "ResearchOrganization"
+    },
+    {
+        "organizationType": "SearchRescueOrganization"
+    },
+    {
+        "organizationType": "SportsOrganization",
+        "specificType" : [
+            "SportsTeam"
+        ]
+    },
+    {
+        "organizationType": "WorkersUnion"
+    }
+]
