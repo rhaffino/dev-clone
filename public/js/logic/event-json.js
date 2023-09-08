@@ -1,19 +1,19 @@
 var ticketCounter = -1;
 
 let invalid_url = lang === "en" ? "Invalid URL" : "URL Tidak Valid";
-let label_ticket = lang === "en" ? "Ticket Name" : "Nama Tiket";
-let placeholder_ticket = lang === "en" ? "Type your ticket name here.." : "Type your ticket name here..";
+let label_ticket = lang === "en" ? "Ticket Name/Category" : "Nama/Kategori Tiket";
+let placeholder_ticket = lang === "en" ? "Type your ticket name/category here.." : "Ketik nama/kategori tiket di sini..";
 let label_price = lang === "en" ? "Price" : "Harga";
-let placeholder_price = lang === "en" ? "Type your price here.." : "Type your harga here..";
-let label_available = lang === "en" ? "Available From" : "Available From";
-let placeholder_available = lang === "en" ? "Pick a Date" : "Pick a Date";
-let label_url_ticket = lang === "en" ? "URL Ticket" : "URL Ticket";
-let placeholder_url_ticket = lang === "en" ? "Type your URL ticket here.." : "Type your URL ticket here..";
-let label_availability = lang === "en" ? "Availability" : "Availability";
-let availability_0 = lang === "en" ? "Not Specified" : "Not Specified";
-let availability_1 = lang === "en" ? "In Stock" : "In Stock";
-let availability_2 = lang === "en" ? "Sold Out" : "Sold Out";
-let availability_3 = lang === "en" ? "Pre Order" : "Pre Order";
+let placeholder_price = lang === "en" ? "Type your ticket price here.." : "Masukkan harga tiket di sini..";
+let label_available = lang === "en" ? "Available From" : "Tersedia mulai";
+let placeholder_available = lang === "en" ? "Pick a Date" : "Pilih tanggal";
+let label_url_ticket = lang === "en" ? "Ticket URL" : "URL Tiket";
+let placeholder_url_ticket = lang === "en" ? "Type your URL ticket here.." : "Masukkan URL tiket di sini..";
+let label_availability = lang === "en" ? "Availability" : "Ketersediaan";
+let availability_0 = lang === "en" ? "Not Specified" : "Tidak Ditentukan";
+let availability_1 = lang === "en" ? "In Stock" : "Tersedia";
+let availability_2 = lang === "en" ? "Sold Out" : "Terjual Habis";
+let availability_3 = lang === "en" ? "Pre-order" : "Pre-order";
 
 const eventSchema = class {
     constructor() {

@@ -320,92 +320,84 @@ id/json-ld-website-schema-generator
 </div>
 @endif
 @component('layouts.new_ui_design', ['local' => $local, 'blogs' => $blogs, 'seo_terms' => $seo_terms, 'seo_guidelines' => $seo_guidelines])
-    @slot('title', 'JSON-LD Website Schema Generator')
+    @slot('title', 'JSON-LD Event Schema Generator')
     @slot('subcontent_1')
         <div class="" id="description-tab-1">
-            <h2>@lang('event.desc-1')</h2>
+            <h2>@lang('event.title-1')</h2>
             <p>@lang('event.desc-1-1')</p>
             <p>@lang('event.desc-1-2')</p>
         </div>
     @endslot
     @slot('subcontent_2')
         <div class="d-none" id="description-tab-2">
-            <h2>@lang('event.desc-2')</h2>
+            @lang('event.desc-1-3')
+            <h2>@lang('event.title-2')</h2>
             <p>@lang('event.desc-2-1')</p>
-            <h4 class="sub-titles">@lang('event.desc-2-2-1')</h4>
+            <p>@lang('event.desc-2-2')</p>
+            <h3 class="sub-titles">@lang('event.desc-2-2-1')</h3>
             <p>@lang('event.desc-2-2-2')</p>
-            <h4 class="sub-titles">@lang('event.desc-2-3-1')</h4>
+            <h3 class="sub-titles">@lang('event.desc-2-3-1')</h3>
             <p>@lang('event.desc-2-3-2')</p>
-            <h4 class="sub-titles">@lang('event.desc-2-4-1')</h4>
+            <h3 class="sub-titles">@lang('event.desc-2-4-1')</h3>
             <p>@lang('event.desc-2-4-2')</p>
+            <h3 class="sub-titles">@lang('event.desc-2-5-1')</h3>
+            <p>@lang('event.desc-2-5-2')</p>
+            <p>@lang('event.desc-2-5-3')</p>
+            <h3 class="sub-titles">@lang('event.desc-2-6-1')</h3>
+            <p>@lang('event.desc-2-6-2')</p>
+            <p>@lang('event.desc-2-6-3')</p>
+            <p>@lang('event.desc-2-6-4')</p>
+            <h3 class="sub-titles">@lang('event.desc-2-7-1')</h3>
+            <p>@lang('event.desc-2-7-2')</p>
+            <p>@lang('event.desc-2-7-3')</p>
+            <h3 class="sub-titles">@lang('event.desc-2-8-1')</h3>
+            <p>@lang('event.desc-2-8-2')</p>
+            <p>@lang('event.desc-2-8-3')</p>
+            <h3 class="sub-titles">@lang('event.desc-2-9-1')</h3>
+            <p>@lang('event.desc-2-9-2')</p>
+            <h3 class="sub-titles">@lang('event.desc-2-10-1')</h3>
+            <p>@lang('event.desc-2-10-2')</p>
         </div>
     @endslot
     @slot('subcontent_3')
         <div class="d-none" id="description-tab-3">
-            <h2>@lang('event.desc-3')</h2>
+            <h2>@lang('event.title-3')</h2>
             <p>@lang('event.desc-3-1')</p>
-            <h4 class="sub-titles">@lang('event.desc-3-2-1')</h4>
-            <p>@lang('event.desc-3-2-2')</p>
-            <h4 class="sub-titles">@lang('event.desc-3-3-1')</h4>
-            <p>@lang('event.desc-3-3-2')</p>
-            <h4 class="sub-titles">@lang('event.desc-3-4-1')</h4>
-            <p>@lang('event.desc-3-4-2')</p>
-        </div>
-    @endslot
-    @slot('subcontent_4')
-        <div class="d-none" id="description-tab-4">
-            <h2>@lang('event.desc-4')</h2>
-            <p>@lang('event.desc-4-1')</p>
-            <p>@lang('event.desc-4-2')</p>
-            <p>@lang('event.desc-4-3')</p>
+            <p>@lang('event.desc-3-2')</p>
             <pre class="language-html mb-4">
                 <code class="language-html" style="white-space: pre-wrap; word-break: keep-all;">
                     &lt;script type="application/ld+json"&gt;
-                    {
-                    "@context": "https://schema.org",
-                    "@type": "BreadcrumbList",
-                    "itemListElement": [{
-                        "@type": "ListItem",
-                        "position": 1,
-                        "name": "Home",
-                        "item": "https://cmlabs.co/"
-                    },{
-                        "@type": "ListItem",
-                        "position": 2,
-                        "name": "About Us",
-                        "item": "https://cmlabs.co/about-us/"
-                    }]
-                    }
+                        {
+                            "@context": "https://schema.org",
+                            "@type": "Event",
+                            "name": "",
+                            "startDate": ""
+                        }
                     &lt;/script&gt;
                 </code>
-            </pre>
-        </div>
-    @endslot
-    @slot('subcontent_5')
-        <div class="d-none" id="description-tab-5">
-            <h2>@lang('event.desc-5')</h2>
-            <p>@lang('event.desc-5-1')</p>
+            </pre>            
         </div>
     @endslot
     @slot('how_to_content')
         <div class="d-none" id="how-to">
-            @lang('event.howto1')
+            @lang('event.howto-title-1')
             <div class="expand-text">
-                @lang('event.howto1-1')
-                <img class="mb-4" src="{{asset('/media/images/breadcrumb_instruction_1.webp')}}" alt="HowTo-Breadcrumb-1" width="80%">
-                @lang('event.howto2')
-                <img class="mb-4" src="{{asset('/media/images/breadcrumb_instruction_2.webp')}}" alt="HowTo-Breadcrumb-2" width="80%">
-                @lang('event.howto3')
-                <img class="mb-4" src="{{asset('/media/images/breadcrumb_instruction_3.webp')}}" alt="HowTo-Breadcrumb-3" width="80%">
-                @lang('event.howto4')
-                <img class="mb-4" src="{{asset('/media/images/breadcrumb_instruction_4.webp')}}" alt="HowTo-Breadcrumb-4" width="80%">
-                @lang('event.howto5')
-                <img class="mb-4" src="{{asset('/media/images/breadcrumb_instruction_5.webp')}}" alt="HowTo-Breadcrumb-5" width="80%">
-                @lang('event.howto6')
-                <img class="mb-4" src="{{asset('/media/images/breadcrumb_instruction_6.webp')}}" alt="HowTo-Breadcrumb-6" width="80%">
-                @lang('event.howto7')
-                <img class="mb-4" src="{{asset('/media/images/breadcrumb_instruction_7.webp')}}" alt="HowTo-Breadcrumb-7" width="80%">
-                @lang('event.howto8')
+                @lang('event.howto-1')
+                <img class="mb-4" src="{{asset('/media/images/breadcrumb_instruction_1.webp')}}" alt="HowTo-Breadcrumb-1 (view of JSON-LD Event Schema Generator)" width="80%">
+                @lang('event.howto-2')
+                <img class="mb-4" src="{{asset('/media/images/breadcrumb_instruction_2.webp')}}" alt="HowTo-Breadcrumb-2 (Select “Event” Schema)" width="80%">
+                @lang('event.howto-3')
+                <img class="mb-4" src="{{asset('/media/images/breadcrumb_instruction_3.webp')}}" alt="HowTo-Breadcrumb-3 (Enter the data in the provided fields)" width="80%">
+                @lang('event.howto-4')
+                <img class="mb-4" src="{{asset('/media/images/breadcrumb_instruction_4.webp')}}" alt="HowTo-Breadcrumb-4 (Select Action: Copy)" width="80%">
+                @lang('event.howto-5')
+                <img class="mb-4" src="{{asset('/media/images/breadcrumb_instruction_5.webp')}}" alt="HowTo-Breadcrumb-5 (Check Option)" width="80%">
+                @lang('event.howto-6')
+                <img class="mb-4" src="{{asset('/media/images/breadcrumb_instruction_6.webp')}}" alt="HowTo-Breadcrumb-6 (Figure 6: Data Reset Option)" width="80%">
+                @lang('event.howto-7')
+                <p>@lang('event.closing-1')</p>
+                <p>@lang('event.closing-2')</p>
+                <p>@lang('event.closing-3')</p>
             </div>
         </div>
     @endslot
@@ -444,8 +436,6 @@ id/json-ld-website-schema-generator
     const description_1 = document.getElementById('description-tab-1');
     const description_2 = document.getElementById('description-tab-2');
     const description_3 = document.getElementById('description-tab-3');
-    const description_4 = document.getElementById('description-tab-4');
-    const description_5 = document.getElementById('description-tab-5');
     const how_to = document.getElementById('how-to');
     let read = false;
 
@@ -455,27 +445,19 @@ id/json-ld-website-schema-generator
             description_1.style.display = 'block';
             description_2.style.display = 'block';
             description_3.style.display = 'block';
-            description_4.style.display = 'block';
-            description_5.style.display = 'block';
             how_to.style.display = 'block';
             description_1.classList.remove("d-none");
             description_2.classList.remove("d-none");
             description_3.classList.remove("d-none");
-            description_4.classList.remove("d-none");
-            description_5.classList.remove("d-none");
             how_to.classList.remove("d-none");
             read_more_button.innerHTML = 'Show less';
             read = true;
         } else {
             description_2.style.display = 'none';
             description_3.style.display = 'none';
-            description_4.style.display = 'none';
-            description_5.style.display = 'none';
             how_to.style.display = 'none';
             description_2.classList.add("d-none");
             description_3.classList.add("d-none");
-            description_4.classList.add("d-none");
-            description_5.classList.add("d-none");
             how_to.classList.add("d-none");
             read_more_button.innerHTML = 'Read more';
             read = false;

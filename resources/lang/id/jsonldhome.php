@@ -41,4 +41,5 @@ return [
     "whats-new-2" => "Sekarang, Pengguna juga bisa menggunakan fitur \"Check Code\" untuk memeriksa langsung keaslian kode tersebut di Google Rich Result. Update versi terbaru ini akan membantu Anda melihat validitas kode tersebut. Anda dapat mencoba fitur ini secara langsung. Kami berharap fitur ini dapat membantu kebutuhan bisnis Anda.",
     "json-ld-website-desc" => "JSON-LD Website Schema adalah tool untuk menghasilkan format data terstruktur di web. Dengan tool ini, Anda dapat meningkatkan strategi SEO melalui visibilitas, aksesibilitas, dan memaksimalkan hasil pencarian.",
     "json-ld-local-business-desc" => "The JSON-LD Local Business Schema Generator adalah tool yang didesain untuk memudahkan para pemilik bisnis dalam proses pembuatan markup yang informatif, strategis, dan ramah SEO guna meningkatkan traffic bisnis Anda secara online.",
+    "json-ld-event-desc" => "JSON-LD Event Schema Generator adalah tool untuk mempermudah proses pembuatan struktur data agar acara Anda dapat menjangkau lebih banyak audiens, mampu menduduki peringkat tinggi di mesin pencari dan meningkatkan organic traffic.",
 ];
