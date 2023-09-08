@@ -60,7 +60,6 @@ return [
     "label-currency" => "Mata Uang",
     "placeholder-currency" => "Cari mata uang..",
     "highlight" => "Ingin mengundang lebih banyak partisipan di acara Anda melalui mesin pencari? Maka, JSON-LD Event Schema Generator dari cmlabs adalah pilihan ideal untuk Anda! Tool ini memudahkan proses generasi struktur data pada website. Dengan Schema Generator ini, Anda dapat memasukkan detail acara yang akan digelar, mulai dari nama, tanggal, waktu, lokasi, deskripsi, penjualan tiket, hingga detail bintang tamu sekalipun. Tingkatkan user experience Anda dengan menampilkan rich snippet acara di SERP dengan tool cmlabs ini sekarang!",
-    
     "title-1" => "Apa itu JSON-LD Event Schema Generator dari cmlabs?",
     "desc-1-1" => "Anda berniat menggelar festival musik atau acara lain yang membutuhkan banyak audiens dari berbagai penjuru negeri? Untuk mengundang perhatian audiens secara online, Anda memerlukan strategi <a href='https://cmlabs.co/id-id/seo-guidelines/jasa-digital-marketing'>digital marketing</a> melalui <a href='https://cmlabs.co/id-id/seo-guidelines/cara-kerja-search-engine'>search engine</a> seperti Google.",    
     "desc-1-2" => "Namun, bagaimanakah cara menampilkan event/acara yang akan digelar pada halaman hasil pencarian (<a href='https://cmlabs.co/id-id/seo-terms/serp'>SERP</a>) di Google? Dalam hal ini, JSON-LD Event Schema Generator dari cmlabs siap membantu Anda.",
@@ -94,7 +93,7 @@ return [
     "desc-2-9-1" => "Meminimalisir Error",
     "desc-2-9-2" => "Tool ini membantu Anda menyusun format struktur data yang tepat dan minim error, sehingga mengurangi kesalahan selama proses <a href='https://cmlabs.co/id-id/seo-terms/apa-itu-index'>index</a> oleh mesin pencari.",
     "desc-2-10-1" => "Menyediakan Beragam Pilihan Schema",
-    "desc-2-10-2" => "Selain schema untuk acara, tool generator kami juga mendukung berbagai jenis schema, termasuk HowTo, Breadcrumb, FAQ Page, Job Posting, Recipe, Product, Website, Local Business, dan banyak lagi.Fleksibilitas ini memungkinkan Anda untuk membuat data terstruktur untuk berbagai jenis konten di situs web Anda. This can lead to higher user engagement and <a href='https://cmlabs.co/en-id/seo-terms/conversion-rate'>conversion rate</a>, as visitors are more likely to click through to your event pages when they find the information they need upfront.",
+    "desc-2-10-2" => "Selain schema untuk acara, tool generator kami juga mendukung berbagai jenis schema, termasuk HowTo, Breadcrumb, FAQ Page, Job Posting, Recipe, Product, Website, Local Business, dan banyak lagi. Fleksibilitas ini memungkinkan Anda untuk membuat data terstruktur untuk berbagai jenis konten di situs web Anda.",
     "title-3" => "Contoh Markup dari JSON-LD Event Schema Generator",
     "desc-3-1" => "Dengan bantuan tool ini, Anda tak perlu lagi menyusun kode JSON-LD secara manual ke dalam situs web Anda. Kini, Anda hanya perlu memasukkan beberapa informasi saja pada kolom yang sudah disediakan.Begitu semua informasi telah terisi, generator ini akan melaksanakan tugas ajaibnya dengan menciptakan potongan kode JSON-LD yang sesuai dengan acara Anda.",
     "desc-3-2" => "Berikut adalah contoh tampilan kode markup JSON-LD yang akan Anda peroleh:",

@@ -383,17 +383,17 @@ id/json-ld-website-schema-generator
             @lang('event.howto-title-1')
             <div class="expand-text">
                 @lang('event.howto-1')
-                <img class="mb-4" src="{{asset('/media/images/breadcrumb_instruction_1.webp')}}" alt="HowTo-Breadcrumb-1 (view of JSON-LD Event Schema Generator)" width="80%">
+                <img class="mb-4" src="{{asset('/media/images/event_schema_instruction_1.webp')}}" alt="HowTo-Event-1" width="80%">
                 @lang('event.howto-2')
-                <img class="mb-4" src="{{asset('/media/images/breadcrumb_instruction_2.webp')}}" alt="HowTo-Breadcrumb-2 (Select “Event” Schema)" width="80%">
+                <img class="mb-4" src="{{asset('/media/images/event_schema_instruction_2.webp')}}" alt="HowTo-Event-2" width="80%">
                 @lang('event.howto-3')
-                <img class="mb-4" src="{{asset('/media/images/breadcrumb_instruction_3.webp')}}" alt="HowTo-Breadcrumb-3 (Enter the data in the provided fields)" width="80%">
+                <img class="mb-4" src="{{asset('/media/images/event_schema_instruction_3.webp')}}" alt="HowTo-Event-3" width="80%">
                 @lang('event.howto-4')
-                <img class="mb-4" src="{{asset('/media/images/breadcrumb_instruction_4.webp')}}" alt="HowTo-Breadcrumb-4 (Select Action: Copy)" width="80%">
+                <img class="mb-4" src="{{asset('/media/images/event_schema_instruction_4.webp')}}" alt="HowTo-Event-4" width="80%">
                 @lang('event.howto-5')
-                <img class="mb-4" src="{{asset('/media/images/breadcrumb_instruction_5.webp')}}" alt="HowTo-Breadcrumb-5 (Check Option)" width="80%">
+                <img class="mb-4" src="{{asset('/media/images/event_schema_instruction_5.webp')}}" alt="HowTo-Event-5" width="80%">
                 @lang('event.howto-6')
-                <img class="mb-4" src="{{asset('/media/images/breadcrumb_instruction_6.webp')}}" alt="HowTo-Breadcrumb-6 (Figure 6: Data Reset Option)" width="80%">
+                <img class="mb-4" src="{{asset('/media/images/event_schema_instruction_6.webp')}}" alt="HowTo-Event-6" width="80%">
                 @lang('event.howto-7')
                 <p>@lang('event.closing-1')</p>
                 <p>@lang('event.closing-2')</p>
