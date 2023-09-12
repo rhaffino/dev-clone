@@ -2641,3 +2641,20 @@ input.input-url-meta-checker:focus {
 #offlineAttendance{
     display: none;
 }
+
+/* Primary checkbox */
+.primary-checkbox .checkbox > input:checked ~ span{
+    background-color: var(--white);
+}
+
+.primary-checkbox .checkbox > input:checked ~ span:after {
+    border-color: var(--primary);
+}
+
+/* Box Result List */
+.box-result-list{
+    border: 1px solid #E4E6EF;
+    padding: 0.65rem 1rem;
+    border-radius: 0.42rem;
+    background: #f5f5f5;
+}

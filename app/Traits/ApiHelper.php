@@ -131,4 +131,9 @@ trait ApiHelper
             return $exceptions;
         }
     }
+
+    protected function requestrobotsChecker($url){
+        $response = $this->request("api/robot-checker/check", 'POST', compact('url'));
+        return \GuzzleHttp\json_decode($response, 1);
+    }
 }
