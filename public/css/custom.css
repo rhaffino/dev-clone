@@ -2658,3 +2658,8 @@ input.input-url-meta-checker:focus {
     border-radius: 0.42rem;
     background: #f5f5f5;
 }
+
+.result-collapse{
+    max-height: 600px;
+    overflow-y: auto;
+}

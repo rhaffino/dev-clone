@@ -62,7 +62,7 @@ id/robotstxt-checker
                 <div class="col-md-8">
                     <div class="px-2 mb-3 d-flex">
                         <span class="text-black font-15px font-weight-bolder mr-2">@lang('robot-checker.label-result')</span>
-                        <span class="font-15px font-weight-bolder d-flex align-items-center text-green" id="result-status">200 OK <i class='bx bxs-check-circle bx-sm ml-1 text-green'></i></span>
+                        <span class="font-15px font-weight-bolder align-items-center text-green" id="result-status" style="display: none">200 OK <i class='bx bxs-check-circle bx-sm ml-1 text-green'></i></span>
                     </div>
                     <div class="card card-custom" id="result-container">
                         <div class="card-body py-4 px-0">
@@ -152,7 +152,7 @@ id/robotstxt-checker
 </div>
 @endif
 @component('layouts.new_ui_design', ['local' => $local, 'blogs' => $blogs, 'seo_terms' => $seo_terms, 'seo_guidelines' => $seo_guidelines])
-    @slot('title', 'Ping Tool')
+    @slot('title', 'Robot.txt Checker')
     @slot('subcontent_1')
         <div class="" id="description-tab-1">
             <h2 class="text-black">@lang('ping.desc-1')</h2>
@@ -385,11 +385,7 @@ id/robotstxt-checker
 </script>
 @endpush
 
-@push('style')
-<link rel="stylesheet" href="{{asset('css/ping-tool.css')}}">
-@endpush
-
-@section('ping-tool')
+@section('robotstxt-checker')
 active
 @endsection
 

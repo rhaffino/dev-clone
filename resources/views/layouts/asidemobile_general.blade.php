@@ -192,6 +192,11 @@
                                                 <span class="menu-text">HTTP Header Checker</span>
                                             </a>
                                         </li>
+                                        <li class="menu-item menu-item-children" aria-haspopup="true">
+                                            <a href="/{{ $local }}/robotstxt-checker" class="menu-link">
+                                                <span class="menu-text">Robot.TXT Checker</span>
+                                            </a>
+                                        </li>
                                     </ul>
                                 </div>
                             </li>
