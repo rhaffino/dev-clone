@@ -1,74 +1,104 @@
 <?php
 return [
-    "meta-title" => "Tool Gratis JSON-LD Video Schema Generator",
-
-
-    "meta-desc" => "Tampilkan letak spesifik halaman website Anda dengan gunakan website schema generator tool secara gratis.",
+    "meta-title" => "JSON-LD Video Schema Generator -  Schema Markup dari cmlabs",
+    "meta-desc" => "Buat schema markup secara efisien untuk optimasi video Anda dari segi SEO dengan JSON-LD Video Schema Generator dari cmlabs. Coba sekarang!",
     "title" => "JSON-LD VIDEO SCHEMA GENERATOR",
-    "subtitle" => "Video Schema Generator Deskripsi",
-    "label-name-website" => "Nama Website",
-    "label-internal-site-search" => "URL penelusuran situs internal",
-    "label-query-keywords" => "Optional: string di URL pencarian setelah kueri",
-    "placeholder-websiteName" => "Ketik nama website Anda di sini ...",
-    "placeholder-url" => "Ketik URL website Anda di sini ...",
-    "placeholder-internalSiteSearch" => "Misalnya https://example.com/search?q=",
-    "placeholder-queryKeywords" => "Ketik query string di sini ...",
-
-
-
-
-    "highlight" => "Pada versi terbaru dari JSON LD , kami menambahkan website Schema Generator. Tool ini berguna untuk memungkinkan pengguna mengambil klik dari halaman yang diberi peringkat diatasnya jika Anda memiliki markup website sedangkan kompetitor tidak. Sekarang pengguna dapat menambahkan skema. Skema ini berfungsi untuk menguji implementasi Anda di halaman atau tingkat kode dengan Rich Snippet Testing Tool Google dan memintanya untuk merayapi laman website Anda yang telah dimodifikasi. Dengan adanya tool ini, Anda dapat melihat CTR dan tingkat kunjungan website Anda melonjak.",
-    "desc-1" => "Apa itu JSON-LD website Schema Generator dari cmlabs?",
-    "desc-1-1" => '<i class="italics">website schema generator</i> adalah sebuah tool gratis dari cmlabs yang dapat membantu webmaster membuat <i class="italics"><a href="https://cmlabs.co/en-id/seo-terms/website">website</a> schema markup</i> secara lebih praktis. Tool ini memungkinkan Anda untuk menghasilkan <i class="italics">schema markup</i> hanya dengan beberapa klik saja, tanpa harus memiliki kemampuan <i class="italics">coding</i> sekalipun.',
-    "desc-1-2" => 'Dengan menggunakan <i class="italics">website schema generator</i> dari cmlabs, Anda akan terhindar dari <i class="italics">error</i> yang mungkin terjadi akibat <i class="italics">script</i> JSON-LD yang tidak dibuat dengan benar.',
-    "desc-2" => 'Manfaat Menggunakan website Schema Generator',
-    "desc-2-1" => 'Beberapa manfaat yang Anda dapatkan dengan menggunakan <i class="italics">website schema generator</i> dari cmlabs adalah sebagai berikut:',
-    "desc-2-2-1" => "Lebih Praktis",
-    "desc-2-2-2" => 'Anda dapat menyesuaikan struktur <i class="italics"><a href="https://cmlabs.co/en-id/seo-terms/website">website</a></i> yang ingin dibuat hanya dengan memasukkan beberapa parameter yang dibutuhkan. Dalam waktu singkat, Anda akan melihat <i class="italics">script website</i> yang berhasil dibuat. Cara ini jelas lebih praktis dibandingkan membuat <i class="italics">website</i> secara manual.',
-    "desc-2-3-1" => 'website Sesuai Pedoman Google',
-    "desc-2-3-2" => '<i class="italics">Script</i> JSON-LD yang dihasilkan melalui <i class="italics">website schema generator</i> telah sesuai dengan <a href="https://developers.google.com/search/docs/appearance/structured-data/website#html">pedoman <i class="italics">website</i> Google</a>. Jika Anda menambahkan <i class="italics">script</i> tersebut pada website Anda, maka website tersebut telah memenuhi syarat untuk ditampilkan dengan <i class="italics">website</i> di penelusuran Google.',
-    'desc-2-4-1' => 'Dapat Menguji Validasi Kode',
-    "desc-2-4-2" => '<i class="italics">website schema generator</i> dari cmlabs telah terintegrasi dengan <a href="https://search.google.com/test/rich-results">Rich Result Test</a> milik Google. Hal ini memungkinkan Anda untuk menguji apakah <i class="italics">script</i> yang dihasilkan dapat berfungsi dengan baik atau tidak di penelusuran Google.',
-    "desc-3" => "Fungsi website Pada Website",
-    "desc-3-1" => 'Penerapan <i class="italics">website</i> dapat meningkatkan pengalaman pengguna dan memberikan keuntungan lain bagi website Anda. Adapun fungsi <i class="italics">website</i> adalah sebagai berikut:',
-    "desc-3-2-1" => 'Memudahkan Navigasi Pengguna',
-    "desc-3-2-2" => 'Fungsi <i class="italics">website</i> adalah sebagai navigasi kedua setelah menu utama. Dengan adanya <i class="italics">website</i>, pengguna web dapat mengetahui dimana posisi mereka saat ini dan dapat menjelajahi website dengan lebih mudah.',
-    "desc-3-3-1" => "Meningkatkan SEO Website",
-    "desc-3-3-2" => 'Fungsi <i class="italics">website</i> lainnya adalah untuk meningkatkan SEO website. Hal ini dikarenakan, penerapan <i class="italics">website</i> dapat mengoptimalkan pengalaman pengguna dan memudahkan Google dalam memahami struktur website. Sehingga, website akan mendapat penilaian yang lebih baik di mata Google.',
-    "desc-3-4-1" => "Meminimalisir Bounce Rate",
-    "desc-3-4-2" => 'Penerapan <i class="italics">website</i> dapat memudahkan pengguna web dalam menemukan konten yang mereka cari. Sebab, <i class="italics">website</i> menyediakan struktur navigasi halaman hingga level terakhir. Hal ini dapat meminimalisir potensi <i class="italics">bounce rate</i> pada halaman website Anda.',
-    "desc-4" => "Contoh JSON-LD website Schema Markup",
-    "desc-4-1" => 'Implementasi <i class="italics">website schema markup</i> dapat dilakukan dengan beberapa cara, yaitu menggunakan kode HTML atau melalui JSON-LD <i class="italics">(Javascript Object Notation for Linked Data)</i>. Untuk membuat <i class="italics">website schema</i> menggunakan JSON-LD, Anda perlu menambahkan script dalam <i class="italics">source code</i> website Anda.',
-    "desc-4-2" => 'Namun, dengan memanfaatkan tool ini, Anda tidak perlu lagi menuliskan <i class="italics">script</i> secara manual. Sebab, Anda bisa mendapatkan <i class="italics">schema markup</i> secara otomatis hanya dengan memasukkan parameter yang dibutuhkan. Cara penggunaan <i class="italics">website schema generator</i> ini pun cukup mudah, sehingga Anda tidak perlu memiliki kemampuan <i class="italics">coding</i> untuk menggunakannya.',
-    "desc-4-3" => 'Contoh kode JSON-LD yang akan Anda terima dari <i class="italics">website schema generator</i> adalah sebagai berikut:',
-    "desc-5" => "Apa yang Terjadi Setelah Skema Diterapkan?",
-    "desc-5-1" => "Setelah diterapkan, Anda dapat menguji implementasi Anda di halaman atau tingkat kode menggunakan Rich Snippet Testing Tool Google. Setelah aktif, Anda dapat meminta Google untuk merayapi halaman Anda yang dimodifikasi. Selanjutnya, pantau CTR dan perform dari halaman tersebut.",
-    "howto-title" => 'Cara Menggunakan website Schema Generator',
-    "howto1" => '<h2>Cara Menggunakan website Schema Generator</h2>
-                    <p><i class="italics">website schema generator</i> adalah tool yang dapat membantu Anda untuk menghasilkan <i class="italics"">website schema markup</i> dengan lebih mudah. Berikut adalah cara membuat <i class="italics"">website</i> yang dapat Anda lakukan melalui tool ini:</p>',
-    "howto1-1" => '<h4 class="sub-titles">Buka Halaman JSON-LD website Schema Generator</h4>
-                    <p>Sebagai langkah awal dalam membuat <i class="italics"">website</i>, Anda perlu membuka halaman <a href="https://tools.cmlabs.co/id/json-ld-website-schema-generator">JSON-LD website Schema Generator</a> terlebih dahulu. Dengan tool ini, Anda tidak perlu khawatir mengalami kendala dalam pembuatan <i class="italics"">website</i>, sebab tool ini akan menyajikan <i class="italics"">website schema markup</i> yang sesuai dengan pedoman penelusuran Google.</p>',
-    "howto2" => '<p>Gambar 1: Tampilan halaman <i class="italics">website</i> schema generator dari cmlabs.</p>
-                    <h4 class="sub-titles">Masukkan Data Yang Dibutuhkan</h4>
-                    <p>Cara membuat <i class="italics">website</i> menggunakan tool JSON-LD generator cmlabs terbilang cukup mudah. Pastikan Anda telah memilih opsi website pada skema yang ingin dibuat. Selanjutnya cukup tambahkan nama halaman dan URL-nya pada field yang tersedia atau hapus field yang tidak dibutuhkan.</p>',
-    "howto3" => '<p>Gambar 2: Masukkan data yang dibutuhkan untuk membuat website schema markup.</p>
-                    <h4 class="sub-titles">Tambah URL Baru</h4>
-                    <p>Secara default, <i class="italics">website schema generator</i> menyediakan 2 field yang dapat Anda gunakan untuk menyusun <i class="italics">script</i> JSON-LD <i class="italics">website</i>. Jika Anda ingin menambah halaman lain, maka Anda bisa menekan tombol <b>&#34;Tambah URL&#34;</b> dan tool ini akan menampilkan field baru yang bisa Anda gunakan untuk menambah halaman baru beserta URL-nya.</p>',
-    "howto4" => '<p>Gambar 3: Tombol <b>&#34;Tambah URL&#34;</b> pada website <i class="italics">schema generator dari cmlabs</i>.</p>
-                    <h4 class="sub-titles">Hapus URL</h4>
-                    <p>Apabila Anda ingin menghapus halaman yang tidak dibutuhkan dari website tersebut, maka Anda bisa menekan ikon silang yang berada di sisi kanan field untuk memasukkan nama halaman dan URL tersebut. Perlu diperhatikan, field yang dihapus tidak dapat dipulihkan kembali.</p>',
-    "howto5" => '<p>Gambar 4: Tombol <b>ikon silang</b> untuk menghapus URL pada <i class="italics">website schema generator</i> dari cmlabs.</p>
-                    <h4 class="sub-titles">Salin Script JSON-LD Yang Dihasilkan</h4>
-                    <p>Setelah memasukkan data yang dibutuhkan, Anda akan melihat pratinjau <i class="italics">website schema markup</i> pada bagian kanan. Cara menambahkan <i class="italics">website</i> schema pada website yaitu dengan menekan opsi salin, kemudian tempel <i class="italics">script</i> yang telah dibuat ke dalam kode program Anda.</p>',
-    "howto6" => '<p>Gambar 5: Opsi salin <i class="italics">website schema markup</i></p>
-                    <h4 class="sub-titles">Cek Validasi Script JSON-LD</h4>
-                    <p>Dengan <i class="italics">website schema generator</i>, Anda juga bisa memeriksa validitas <i class="italics">script</i> JSON-LD yang Anda gunakan untuk membuat <i class="italics">website</i>. Cara cek <i class="italics">website</i> pun cukup mudah, Anda hanya perlu menekan opsi cek yang terdapat di bagian pratinjau <i class="italics">script</i> yang dihasilkan.</p>
-                    <p>Ketika Anda menekan tombol tersebut, maka Anda akan dialihkan menuju laman <a href="https://search.google.com/test/rich-results">Rich Result Test</a> milik Google. Pada halaman tersebut, Anda dapat mengecek apakah <i class="italics">script website</i> dapat berfungsi dengan baik di penelusuran Google.</p>',
-    "howto7" => '<p>Gambar 6: Opsi cek validasi <i class="italics">website schema markup</i></p>
-                    <h4 class="sub-titles">Reset website Schema Generator</h4>
-                    <p>Tool ini juga memberikan opsi yang memudahkan Anda dalam menghapus seluruh data yang telah Anda masukkan sebelumnya. Anda hanya perlu memilih opsi <b>&#34;Reset&#34;</b> dan tool ini akan menampilkan field baru, sehingga Anda bisa membuat <i class="italics">website schema</i> lainnya.</p>',
-    "howto8" => '<p>Gambar 7: Opsi reset data yang ditambahkan pada <i class="italics">website schema generator</i>.</p>',
-
-    "whats-new-1" => "Pada versi terbaru dari JSON LD , kami menambahkan website Schema Generator. Tool ini berguna untuk memungkinkan pengguna mengambil klik dari halaman yang diberi peringkat diatasnya jika Anda memiliki markup website sedangkan kompetitor tidak. Sehingga laman website Anda akan muncul di rich snippet. Kami berharap dengan adanya tool baru ini, Anda dapat membuat laman website yang unggul dibanding kompetitor.", 
-    "whats-new-2" => "Pada JSON LD - website Schema Generator, sekarang pengguna dapat menambahkan skema. Skema ini berfungsi untuk menguji implementasi Anda di halaman atau tingkat kode dengan Rich Snippet Testing Tool Google dan memintanya untuk merayapi laman website Anda yang telah dimodifikasi. Dengan adanya tool ini, Anda dapat melihat CTR dan tingkat kunjungan website Anda melonjak.",
+    "subtitle" => "Memudahkan pembuatan schema markup untuk meningkatkan visibilitas video web Anda.",
+    "label-name" => "Judul Video",
+    "placeholder-name" => "Ketik judul video Anda di sini..",
+    "label-description" => "Deskripsi Video",
+    "placeholder-description" => "Deskripsikan video Anda di sini..",
+    "label-upload-date" => "Tanggal Upload",
+    "placeholder-update-date" => "Pilih tanggal",
+    "label-minutes" => "Menit",
+    "placeholder-minutes" => "0 Menit",
+    "label-seconds" => "Detik",
+    "placeholder-seconds" => "0 Detik",
+    "label-image" => "URL Gambar",
+    "placeholder-image" => "Masukkan URL gambar di sini..",
+    "btn-addImageUrl" => "TAMBAHKAN GAMBAR",
+    "label-contentUrl" => "Content URL",
+    "placeholder-contentUrl" => "Masukkan URL konten di sini..",
+    "label-embedUrl" => "Embed URL",
+    "placeholder-embedUrl" => "Masukkan embed url di sini..",
+    "label-targetUrl" => "Target URL",
+    "placeholder-targetUrl" => "Masukkan URL target di sini..",
+    "highlight" => "JSON-LD Video Schema Generator dari cmlabs adalah tool yang dirancang untuk mempermudah proses implementasi struktur data khusus konten berupa video sembari mengoptimasinya menggunakan strategi SEO. Tool kami dapat menghasilkan kode JSON-LD yang spesifik melalui input data terkait detail video sekaligus memastikan bahwa mesin pencari dapat menginterpretasikan dan menampilkan video Anda secara lebih efektif dalam hasil pencarian (SERP).",
+    "desc-1" => "Apa itu JSON-LD Video Schema Generator dari cmlabs?",
+    "desc-1-1" => "Dengan JSON-LD Video Schema Generator dari cmlabs, kini Anda dapat meningkatkan <a href='https://cmlabs.co/id-id/seo-guidelines/panduan-ctr'>CTR</a>, user experience (<a href='https://cmlabs.co/id-id/seo-terms/user-experience'>UX</a>), serta visibilitas video di mesin pencari secara keseluruhan tanpa memerlukan proses pengembangan yang kompleks.",
+    "desc-1-2" => "Lantas apa itu JSON-LD Video Schema Generator dari cmlabs? Ini adalah tool khusus yang dirancang untuk membantu memudahkan proses penyusunan <a href='https://cmlabs.co/id-id/seo-terms/schema-markup-adalah'>schema markup</a>.",
+    "desc-1-3" => "Secara keseluruhan, tool ini merupakan sebuah generator markup struktur data untuk menyusun markup <a href='https://cmlabs.co/id-id/seo-terms/json-ld-markup'>JSON-LD</a> (JavaScript Object Notation for Linked Data) khusus konten berupa video.",
+    "desc-1-4" => "Dengan tool ini, Anda bisa dengan mudah menyusun markup guna membantu mesin pencari, seperti Google, lebih memahami konteks dan detail dari video yang Anda unggah.",
+    "desc-1-5" => "Dengan tool kami, Anda tidak lagi memerlukan proses developing yang rumit. Anda hanya perlu mengumpulkan sejumlah data/informasi pada kolom yang tersedia untuk memulai proses generasi schema markup.",
+    "desc-1-6" => "Anda dapat menyertakan detail penting seperti judul video, deskripsi, durasi, tanggal unggah, gambar thumbnail, dan masih banyak detail lainnya.",
+    "desc-2" => "Keunggulan JSON-LD Video Schema Generator dari cmlabs",
+    "desc-2-1" => "Di tengah lanskap digital yang serba kompetitif ini, Anda perlu mengutamakan visibilitas konten di hasil pencarian (<a href='https://cmlabs.co/id-id/seo-terms/serp'>SERP</a>).",
+    "desc-2-2" => "Oleh karena itu, tool kami hadir untuk mendukung meningkatkan kualitas <a href='https://cmlabs.co/id-id/seo-guidelines/jasa-digital-marketing'>digital marketing</a> Anda melalui konten berbasis video.",
+    "desc-2-3" => "Setelah mengenal apa itu JSON-LD Video Schema Generator dari cmlabs, ini saatnya Anda mencari tau apa saja keunggulan yang kami tawarkan melalui tool ini. Berikut selengkapnya. mengetahui keunggulan lain dari alat ini, Anda dapat membaca daftar berikut:",
+    "desc-2-1-1" => "1. Meningkatkan Tampilan Video di Mesin Pencari",
+    "desc-2-1-2" => "Tool ini akan membantu mesin pencari mengenal dan mengurai struktur data dengan lebih mudah. Dengan begitu, konten video yang Anda unggah dapat ditampilkan melalui <a href='https://cmlabs.co/id-id/seo-terms/rich-snippet-adalah'>rich snippet</a> sehingga tampak lebih menarik bagi audiens atau calon konsumen.",
+    "desc-2-1-3" => "Melalui pendekatan ini, audens atau user dapat mengklik tautan video yang nantinya akan dikonversi ke dalam jumlah CTR dan views, terhitung sebagai jumlah klik menghasilkan tingkat klik lebih tinggi dan potensial peningkatan jumlah penonton video.",
+    "desc-2-2-1" => "2. Meningkatkan Aksesibilitas",
+    "desc-2-2-2" => "Dengan menyusun struktur data melalui tool kami, Anda dapat memastikan bahwa video tersebut lebih mudah diakses oleh khalayak umum.",
+    "desc-2-2-3" => "Selain itu, memberikan struktur data dalam format yang sesuai juga akan memudahkan mesin pencari, Google misalnya, dalam mengkategorikan konten video Anda dengan presisi luar biasa agar mampu memenangkan visibilitas dan peringkat tinggi dalam hasil pencarian.",
+    "desc-2-3-1" => "3. Mendukung Strategi SEO",
+    "desc-2-3-2" => "Dengan tool JSON-LD Schema Generator dari cmlabs, Anda juga dapat sekaligus meningkatkan strategi <a href='https://cmlabs.co/id-id/seo-guidelines/panduan-seo'>SEO</a> dari segi konten video Anda. Seperti yang telah disinggung sebelumnya, struktur data yang sesuai dapat membantu mesin pencari mengkategorikan dan meranking video secara tepat. Dengan begitu, maka strategi SEO Anda juga akan berhasil seiring berjalannya waktu.",
+    "desc-2-4-1" => "4. Menyederhanakan Proses Penyusunan Struktur Data",
+    "desc-2-4-2" => "Tool kami siap membantu dalam proses penyusunan schema markup/struktur data video Anda agar menjadi lebih efisien, bahkan untuk individu yang tidak memiliki kemampuan teknis tinggi sekalipun.",
+    "desc-2-4-3" => "Terlebih, tool JSON-LD Video Schema Markup dari cmlabs juga menghadirkan tampilan antarmuka (<a href='https://cmlabs.co/id-id/seo-terms/user-interface'>UI</a>) yang mudah dinavigasi sehingga Anda hanya perlu melengkapi sejumlah data yang diperlukan.",
+    "desc-2-5-1" => "5. Meningkatkan Click-Through-Rate (CTR)",
+    "desc-2-5-2" => "Dengan menambahkan struktur data melalui tool generator kami, situs web Anda dapat memaksimalkan strategi rich snippet guna mendominasi laman hasil pencarian.",
+    "desc-2-5-3" => "Di dalam potongan informasi rich snippet, Anda bisa menampilkan sejumlah informasi atau detail terkait video, mulai dari judul video, deskripsi, maupun caption yang memikat.",
+    "desc-2-5-4" => "Selain itu, visualisasi video yang menarik juga perlu diperhatikan agar dapat mengundang pengguna untuk lebih sering mengklik tautan situs web Anda dan meningkatkan <a href='https://cmlabs.co/id-id/seo-guidelines/panduan-organic-traffic#:~:text=People%20Also%20Ask)-,Apa%20Itu%20Organic%20Traffic%3F,yaitu%20dengan%20melakukan%20optimasi%20SEO.'>organic traffic</a>.",
+    "desc-2-6-1" => "6. Meningkatkan Rich Result",
+    "desc-2-6-2" => "Tool JSON Schema Generator kami membantu Anda menandai berbagai jenis struktur data, termasuk artikel, acara, produk, video, dan lainnya.",
+    "desc-2-6-3" => "Dalam kasus markup video, fleksibilitas ini meningkatkan peluang <a href='https://cmlabs.co/id-id/seo-guidelines/rich-results-untuk-subscribed-content'>rich result</a> yang lebih menarik jika dibandingkan dengan proses pembuatan manual.",
+    "desc-2-7-1" => "7. Mengurangi Potensi Error",
+    "desc-2-7-2" => "Dengan otomisasi proses pembuatan, tool ini membantu Anda meminimalisir risiko meminimalkan risiko kesalahan sintaksis atau implementasi schema yang salah.",
+    "desc-2-7-3" => "Tool JSON-LD Video Schema Generator dari cmlabs juga memastikan bahwa struktur yang dihasilkan telah diformat dengan benar guna mengurangi kesalahan <a href='https://cmlabs.co/id-id/seo-terms/apa-itu-index'>index</a> oleh mesin pencari.",
+    "desc-2-8-1" => "8. Pratinjau Secara Real-Time",
+    "desc-2-8-2" => "Tool ini menyediakan pratinjau real-time dari struktur data yang dihasilkan sehingga Anda bisa meninjau skrip secara berkesinambungan. Pratinjau real-time ini juga memungkinkan Anda untuk mendeteksi kesalahan yang mungkin muncul dalam proses input data sesegera mungkin.", 
+    "desc-3" => "Contoh Markup JSON-LD Video Schema Generator dari cmlabs",
+    "desc-3-1" => "Ketika berbicara tentang mengimplementasikan markup skema video, Anda dapat menjumpai sejumlah pendekatan berbeda, seperti menyematkannya dalam kode <a href='https://cmlabs.co/id-id/seo-terms/html'>HTML</a> atau menggunakan JSON-LD. Sebagai gambaran tentang hasil markup JSON-LD Video Schema Generator dari cmlabs, berikut adalah contoh kode JSON-LD yang akan Anda terima ketika menggunakan tool kami.",
+    "howto-title" =>'Cara Menggunakan JSON-LD Video Schema Generator dari cmlabs?',
+    "howto-0" => '<p>Apakah Anda siap untuk memperbarui strategi pemasaran konten video di mesin pencari?</p>
+                <p>Untuk memperoleh berbagai macam keuntungan seperti yang diuraikan sebelumnya, berikut adalah langkah demi langkah yang perlu Anda perhatikan.</p>
+                <h3>Buka Halaman Utama JSON-LD Video Schema Generator dari cmlabs</h3>',
+    "howto1" => '<p>Gambar 1: Halaman Utama JSON-LD Video Generator dari cmlabs.<p>
+                    <p>Pertama, Anda perlu mengakses halaman Tool Generator di situs web resmi cmlabs terlebih dahulu. Jika Anda ingin menghasilkan skrip JSON-LD khusus video, maka Anda dapat memilih Generator Video untuk mulai menghasilkan schema markup.</p>
+                    <h3>Pilih Schema yang Sesuai</h3>
+                    <p>Setelah sampai di halaman JSON-LD Video Schema Generator dari cmlabs seperti pada gambar di atas, Anda dapat mulai memilih jenis skema yang ingin dibuat.</p>
+                    <p>Tool kami menyediakan deretan jenis skema yang beragam sesuai dengan kebutuhan Anda. Beberapa di antaranya meliputi skema HowTo, Breadcrumb, FAQ Page, Website, Local Business, dan masih banyak lagi. Dalam hal ini, Anda peru memilih opsi “<b>Video</b>”.</p>  
+                    <h3>Masukkan Data yang Dibutuhkan</h3>',
+    "howto2" => '<p>Gambar 2: Masukkan data pada kolom yang tersedia.</p>
+                <p>Untuk menghasilkan kode JSON-LD khusus video menggunakan JSON-LD Video Schema Generator ini, Anda perlu memastikan bahwa Anda telah memilih opsi video untuk skema yang ingin Anda buat.</p>
+                <p>Setelah itu, Anda dapat melanjutkan prosesnya dengan mengisi sejumlah kolom, antara lain:</p>
+                <ul>
+                    <li><b>Judul Video:</b> Masukkan judul utama video Anda. Judul akan ditampilkan dalam hasil pencarian sehingga Anda perlu memastikannya agar menarik dan akurat.</li>
+                    <li><b>Tanggal Unggah:</b> Tentukan tanggal saat video Anda diunggah atau diterbitkan. Tanggal ini penting agar mesin pencari memahami kronologi konten Anda dan menampilkannya dengan tepat dalam hasil pencarian.</li>
+                    <li><b>Menit dan Detik:</b> TInformasi ini memberi audiens gambaran tentang durasi video dan membantu mesin pencari mengkategorikan dan menampilkannya dengan akurat.</li>
+                    <li><b>Deskripsi Video:</b> Deskripsi video harus informatif, menarik, dan relevan dengan video.</li>
+                    <li><b>URL Gambar #1, #2, atau Lebih:</b> Gambar-gambar ini dapat berupa thumbnail, poster, atau visual lain yang mewakili konten video Anda. Beberapa URL gambar dapat digunakan untuk memberikan berbagai pilihan visual.</li>
+                    <li><b>Masukkan Content URL:</b> Jika video Anda merupakan bagian dari konten lain seperti blog atau artikel, Anda juga bisa memasukkan URL konten tersebut pada kolom ini guna menjembatani video Anda dengan konten lain di laman website.</li>
+                    <li><b>Masukkan Embed URL:</b> Jika video Anda diunggah pada platform seperti YouTube, Anda juga bisa memasukkan Embed URL agar memudahkan audiens dalam membagikan video Anda di website atau media sosial mereka.</li>
+                    <li><b>Enter Target URL:</b> Tentukan URL target tempat Anda ingin pengguna mendarat saat mereka mengklik video Anda di hasil penelusuran. URL ini dapat berupa halaman video khusus di situs web Anda atau tujuan lain yang relevan.</li>
+                </ul>
+                <h3>Pilih Tindakan Selanjutnya</h3>
+                <p>Dengan tool ini, terdapat tiga pendekatan yang bisa Anda gunakan, yaitu Salin, Cek, dan Reset. Kenali setiap fungsinya di bawah ini!</p>
+                <h4>Salin</h4>',
+    "howto3" => '<p>Gambar 3: Opsi Salin</p>
+                    <p>Untuk mendapatkan versi lengkap dan komprehensif dari skrip yang telah disusun secara otomatis, Anda hanya perlu klik tombol "Salin". Tindakan sederhana memungkinkan Anda untuk menduplikasi seluruh skrip dengan mudah dan efisien.</p>
+                    <h4>Cek</h4>',
+    "howto4" => "<p>Gambar 4: Opsi Cek</p>
+                    <p>Metode ini memungkinkan Anda untuk memverifikasi dan menguji kompatibilitas halaman web dengan rich result dari Google. Dengan melakukan tindakan ini, Anda dapat mengevaluasi efektivitas implementasi struktur data Anda dalam memenuhi kriteria hasil kaya Google.</p>
+                    <p>Evaluasi ini berfungsi sebagai langkah penting dalam memastikan bahwa website Anda sudah mencapai <a href='https://cmlabs.co/id-id/seo-terms/engagement-rate-adalah'>engagement rate</a> dan visibilitas optimal di halaman <a href='https://cmlabs.co/id-id/seo-guidelines/cara-kerja-search-engine'>hasil pencarian</a>.</p>
+                    <h4>Reset</h4>",
+    "howto5" => '<p>Gambar 5: Opsi Reset</p>
+                    <p>Opsi Reset berfungsi sebagai fitur yang memudahkan Anda untuk memulai seluruh proses penyusunan skrip dari langkah pertama.</p>
+                    <p>Fungsionalitas ini sangat berguna ketika Anda merasa perlu untuk melakukan pemeriksaan mendalam atau ingin menghasilkan markup skema yang baru.</p> 
+                    <p>Intinya, tombol ini berfungsi untuk menghapus semua pilihan atau konfigurasi sebelumnya, sehingga memastikan permulaan yang bersih untuk proses generasi skema berikutnya.</p>',
+    "closing-1" => "Secara keseluruhan, JSON-LD Video Schema Generator dari cmlabs adalah tool serbaguna yang siap membantu Anda mendukung optimasi konten video secara online.",
+    "closing-2" => "Selain menyederhanakan proses penyusunan schema markup, tool ini juga membantu Anda mengoptimalkan upaya SEO melalui data struktur yang tertuang dalam format JSON-LD.",
+    "closing-3" => "Kami membantu Anda mengubah cara video ditampilkan dalam hasil pencarian dengan rich snippets guna menyajikan pratinjau yang menarik bagi audiens Anda. Coba JSON-LD Video Schema Generator dari cmlabs sekarang!", 
+    "closing-4" => "",
 ];

@@ -42,4 +42,5 @@ return [
     "json-ld-website-desc" => "JSON-LD Website Schema is a tool for generating structured data format that promotes data interoperability on the web. With this tool, you can enhance your website's visibility, accessibility, and SEO strategy to achieve richer search results.",
     "json-ld-local-business-desc" => "The JSON-LD Local Business Schema Generator is a tool designed to simplify the complex task of constructing rich, SEO-friendly markup for your business and help you enhance your business's online presence without the need for intricate coding skills!",
     "json-ld-event-desc" => "JSON-LD Event Schema Generator is a tool for generating structured data for your events to boost its discoverability on search engines, driving higher attendance, and increasing organic traffic.",
+    "json-ld-video-desc" => "JSON-LD Video Schema Generator is a tool designed to streamline the process of implementing structured data for video content to ensure that search engines can interpret and display the video to boost its discoverability in search results.",
 ];
