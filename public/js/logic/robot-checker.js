@@ -53,6 +53,7 @@ const RobotTemplate = (robots, sitemap, _resource) => {
 
     const scriptEn = `
         <script>
+        $(document).ready(function () {
             const expandButtonClick = document.getElementById('expandButton');
             if (expandButtonClick) {
                 expandButtonClick.addEventListener('click', function () {
@@ -63,11 +64,13 @@ const RobotTemplate = (robots, sitemap, _resource) => {
                     }
                 });
             }
+        });
         </script>
     `;
 
     const scriptId = `
         <script>
+        $(document).ready(function () {
             const expandButtonClick = document.getElementById('expandButton');
             if (expandButtonClick) {
                 expandButtonClick.addEventListener('click', function () {
@@ -78,6 +81,25 @@ const RobotTemplate = (robots, sitemap, _resource) => {
                     }
                 });
             }
+        });
+        </script>
+    `;
+
+    const scriptScroll = `
+        <script>
+           $(document).ready(function(){
+                var clickBtnCollapse = 0;
+
+                $('#expandButton').on('click', function () {
+                    clickBtnCollapse++;
+                    
+                    if (clickBtnCollapse % 2 === 0) {
+                        $('html, body').animate({
+                            scrollTop: $('#resultResourceTable').offset().top
+                        }, 1000);
+                    }
+                });
+            });
         </script>
     `;
 
@@ -92,16 +114,17 @@ const RobotTemplate = (robots, sitemap, _resource) => {
             <textarea name="code_snippet" style="resize:none" rows="16" class="form-control my-3" readonly>${robots.rawRobots}</textarea>
             <div class="row mt-3 ${_resource ? "d-block" : "d-none"}">
                 <div class="col-12 result-collapse">
-                    <table class="table table-striped">
+                    <table id="resultResourceTable" class="table table-striped">
                         <tr>
                             <th>${label_tb_resource}</th>
                             <th>${label_tb_status}</th>
                             <th>${label_tb_result}</th>
                         </tr>
-                        ${tableRows} <!-- Add rows to a table that has already been created -->
+                        ${tableRows}
                     </table>
-                    ${expandButton} <!-- Expand/collapse button -->
+                    ${expandButton}
                     ${lang === 'en' ? scriptEn : scriptId}
+                    ${scriptScroll}
                 </div>
             </div>
         </div>`;
