@@ -27,3 +27,4 @@ Route::post('/ping-tool', 'Tool\ApiController@pingTool')->name('api.ping-tool');
 Route::post('/plagiarism-check', 'Tool\ApiController@plagiarismCheck')->name('api.plagiarism-check');
 Route::post('/header-checker', 'Tool\ApiController@headerChecker')->name('api.header-checker');
 Route::post('/record-activity', 'Tool\ApiController@recordUserActivity')->name('api.record-activity');
+Route::post('/robotstxt-checker', 'Tool\ApiController@robotsChecker')->name('api.robotstxt-checker');

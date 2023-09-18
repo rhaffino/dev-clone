@@ -87,14 +87,20 @@
         [
             'title' => 'Ping Tool',
             'desc' => __('home.ping-tool-desc'),
-            'icon' => "<i class='text-purple-70 bx bx-shape-circle bx-md'></i>",
+            'icon' => "<i class='text-purple-70 bx bx-terminal bx-md'></i>",
             'link' => 'ping-tool',
         ],
         [
             'title' => 'HTTP Header Checker',
             'desc' => __('home.http-header-checker-desc'),
-            'icon' => "<i class='text-purple-70 bx bx-shape-circle bx-md'></i>",
+            'icon' => "<i class='text-purple-70 bx bx-code bx-md'></i>",
             'link' => 'http-header-checker',
+        ],
+        [
+            'title' => 'Robots.txt Checker',
+            'desc' => __('home.robotstxt-checker-desc'),
+            'icon' => "<i class='text-purple-70 bx bx-list-check bx-md'></i>",
+            'link' => 'robotstxt-checker',
         ],
     ];
 @endphp

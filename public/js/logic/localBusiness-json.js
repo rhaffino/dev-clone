@@ -584,7 +584,7 @@ function clearSelect() {
         .append('<option value="none">More Specific</option>');
 }
 
-// Change Json Format
+// All Function
 function updateJSON_localBusinessType(value) {
     if (value == "none") {
         localBusinessFormat.type = "LocalBusiness";
@@ -1201,7 +1201,7 @@ function deleteHoursDepartment(id, idDelete){
     hoursDepartmentCounter--;
 }
 
-// Change Business Type
+// Interaction
 $(".localBusinessType").change(function (e) {
     clearSelect();
     const localBusinessType = $(this).val();
@@ -1247,7 +1247,6 @@ $(".localBusinessType").change(function (e) {
     }
 });
 
-// Change Country Type
 $(".country").change(function (e) {
     const country = $(this).val();
 
@@ -1261,7 +1260,6 @@ $(".country").change(function (e) {
     }
 });
 
-// Fecth Geo Location User
 $("#fecthed-geo-coordinates").click(function (e) {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showLatitude);
@@ -1272,7 +1270,6 @@ $("#fecthed-geo-coordinates").click(function (e) {
     }
 });
 
-// Add Hours Work
 $(document).on("click", "#add-hours", function () {
     $("#form-hours").show();
     hoursCounter++;
@@ -1337,7 +1334,6 @@ $(document).on("click", ".deleteHours", function () {
     deleteHours(parseInt($(this).data("id")));
 });
 
-// Change Fullday
 $("#open-fullday").change(function () {
     if (this.checked) {
         // format hours everyday open
@@ -1377,7 +1373,6 @@ $("#open-fullday").change(function () {
     localBusinessFormat.render();
 });
 
-// Department
 $(document).on("click", "#add-department", function(){
     $("#form-department").show();
     departmentCounter++;
@@ -1488,7 +1483,6 @@ $(document).on("click", "#add-department", function(){
     $('.spesificType-'+ departmentCounter +'').selectpicker("refresh");
 });
 
-// add-hours-department
 $(document).on("click", ".add-hours-department", function () {
     var idHoursDepartment = parseInt($(this).attr("data-id"));
     $("#form-hours-department-" + idHoursDepartment + "").show();
@@ -1648,7 +1642,6 @@ $(document).on("click", ".deleteHoursDepartment", function () {
     deleteHoursDepartment(parseInt($(this).data("id")), parseInt($(this).data("id-delete")));
 });
 
-// Form Action
 $(document).on("change", "#localBusinessType", function () {
     updateJSON_localBusinessType($(this).val());
 
