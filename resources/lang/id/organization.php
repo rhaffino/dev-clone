@@ -1,67 +1,110 @@
 <?php
 return [
-    "meta-title" => "Free Tool JSON-LD Video Schema Generator",
-    "meta-desc" => "Show the specific layout of your website pages list using this free website schema online generator tool.",
-    "title" => "JSON-LD VIDEO SCHEMA GENERATOR",
-    "subtitle" => "Video Schema Generator Desc",
-
-
+    "meta-title" => "JSON-LD Organization Schema Generator dari cmlabs",
+    "meta-desc" => "Tingkatkan strategi SEO dan perkuat visibilitas online organisasi Anda dengan mudah menggunakan JSON-LD Organization Schema Generator dari cmlabs.",
+    "title" => "JSON-LD ORGANIZATION SCHEMA GENERATOR",
+    "subtitle" => "Memudahkan Anda dalam menyusun struktur data dan memastikan detail organisasi Anda ditampilkan secara akurat dalam hasil pencarian.",
+    "label-type" => "Tipe Organisasi",
+    "placeholder-type" => "Cari tipe organisasi..",
+    "label-spesificType" => "Tipe Lebih Spesifik",
+    "placeholder-spesificType" => "Lebih Spesifik",
+    "label-nameOrganization" => "Nama Organisasi",
+    "placeholder-nameOrganization" => "Ketik nama organisasi Anda di sini..",
+    "label-alternateNameOrganization" => "Nama Alternatif",
+    "placeholder-alternateNameOrganization" => "Ketik nama alternatif organisasi Anda di sini..",
+    "label-url" => "URL",
+    "placeholder-url" => "Masukkan URL di sini..",
+    "label-logo-url" => "URL Logo",
+    "placeholder-logo-url" => "Masukkan URL logo Anda di sini..",
+    "label-social-profiles" => "Profil Sosial",
+    "title-contact" => "Daftar Kontak",
+    "btn-add-contact" => "Tambahkan Kontak",
+    "highlight" => "Memastikan visibilitas unggul organisasi atau bisnis Anda merupakan strategi vital di era digital ini. Dengan tool JSON-LD Organization Schema Generator dari cmlabs, Anda tidak hanya menyediakan informasi terkait bisnis, namun juga membantu memperjelas jejak digital Anda di halaman SERP sehingga meningkatkan visibilitas dan user experience terhadap organisasi Anda. Coba tool ini sekarang!",
     
-    "highlight" => "In the latest version of JSON LD, we added website Schema Generator. This tool is useful for allowing users to grab clicks from a page that is ranked above it if you have website markup and competitors don't. Now users can add schemas. This scheme serves to test your implementation at page or code level with Google's Rich Snippet Testing Tool and ask it to crawl the modified pages of your website. With this tool, you can see your CTR and traffic levels soar.",
-    "desc-1" => "What is JSON-LD website Schema Generator by cmlabs?",
-    "desc-1-1" => "website schema generator is a free tool from cmlabs that can help webmasters make website schema markup more practical. This tool allows you to generate schema markup with just a few clicks, without needing coding skills.",
-    "desc-1-2" => "By using the website schema generator from cmlabs, you will avoid errors that may occur due to improperly generated JSON-LD scripts.",
-    "desc-2" => "Benefits of Using website Schema Generator",
-    "desc-2-1" => "Some of the benefits you get by using the website schema generator from cmlabs are as follows:",
-    "desc-2-2-1" => "More Practical",
-    "desc-2-2-2" => 'You can customize the structure of the <a href="https://cmlabs.co/en-id/seo-terms/website">website</a> you want to create by simply entering a few required parameters. In no time, you will see a successfully created website script. This method is definitely more practical than making websites manually.',
-    "desc-2-3-1" => 'Making website According to Google Guidelines',
-    "desc-2-3-2" => 'JSON-LD scripts generated via the website schema generator are compliant with <a href="https://developers.google.com/search/docs/appearance/structured-data/website#html">Google&#39;s website guidelines</a>. If you add the script to your website, then the website is eligible to appear with websites in Google search.',
-    'desc-2-4-1' => 'Code Validation Test',
-    "desc-2-4-2" => 'The website schema generator from cmlabs is integrated with <a href="https://search.google.com/test/rich-results">Google&#39;s Rich Result Test</a>. This allows you to test whether the generated script can work properly or not in Google search.',
-    "desc-2-3" => "Without this mark-up, your search list will appear only as page URLs, for example:",
-    "desc-3" => "website Function On Website",
-    "desc-3-1" => "Implementing websites can improve the user experience and provide other benefits for your website. The website function is as follows:",
-    "desc-3-2-1" => "Easy User Navigation",
-    "desc-3-2-2" => "website function is as second navigation after the main menu. With the website, web users can find out where they are currently and can browse the website more easily.",
-    "desc-3-3-1" => "Improve Website SEO",
-    "desc-3-3-2" => "Another function of websites is to improve website SEO. This is because the application of websites can optimize the user experience and make it easier for Google to understand the structure of the website. So, the website will get a better ranking in the eyes of Google.",
-    "desc-3-4-1" => "Minimize Bounce Rate",
-    "desc-3-4-2" => "The implementation of websites can make it easier for web users to find the content they are looking for. Because websites provide a page navigation structure to the last level. This can minimize the potential bounce rate on your website pages.",
-    "desc-3-5" => "As usual with search engine optimization, performance quickly degrades when problems first appear, and only recovers relatively slowly once they are resolved.",
-    "desc-3-6" => "While CTR may or may not be a direct ranking factor, its impact on sites with potential impressions and clicks like the one in the screenshot above means that increasing search listings via schema mark-up is not an opportunity, not to be missed.",
-    "desc-4" => "Example JSON-LD website Schema Markup",
-    "desc-4-1" => "The implementation of website schema markup can be done in several ways, namely using HTML code or through JSON-LD (Javascript Object Notation for Linked Data). To create a website schema using JSON-LD, you need to add a script in the source code of your website.",
-    "desc-4-2" => "However, by using this tool, you no longer need to write scripts manually. Because you can get schema markup automatically just by entering the required parameters. How to use this website schema generator is also quite easy, so you don't need to have coding skills to use it.",
-    "desc-4-3" => "An example of the JSON-LD code that you will receive from the website schema generator is as follows:",
-    "desc-5" => "What Happens After the Schema Is Implemented?",
-    "desc-5-1" => "Once implemented, you can test your implementation at the page or code level using Google's Rich Snippet Testing Tool. Once it is live, you can ask Google to crawl your modified page. Next, monitor your CTR and traffic levels after the implementation.",
-    "howto-title" =>'How to Use the website Schema Generator?',
-    "howto1" => '<h2>How to Use the website Schema Generator?</h2>
-                <p>website schema generator is a tool that can help you to generate website schema markup more easily. Here&#39;s how to make websites that you can do with this tool:</p>',
-    "howto1-1" => '<h4 class="sub-titles">Open JSON-LD website Schema Generator Page</h4>
-                <p>As a first step in creating websites, you need to open the <a href="https://tools.cmlabs.co/en/json-ld-website-schema-generator">JSON-LD website Schema Generator</a> page first. With this tool, you don&#39;t have to worry about experiencing problems in website creation, because this tool will present a website schema markup that complies with Google search guidelines.</p>',
-    "howto2" => '<p>Figure 1: website schema generator page view from cmlabs.</p>
-                    <h4 class="sub-titles">Input The  Required Data</h4>
-                    <p>To make websites using the JSON-LD generator from cmlabs is quite easy. Make sure you have selected the website option for the scheme you want to create. Then, simply add the page name and URL in the fields provided or delete fields that are not needed.</p>',
-    "howto3" => '<p>Figure 2: Enter the data needed to create a website schema markup.</p>
-                    <h4 class="sub-titles">Add New URL</h4>
-                    <p>By default, the website schema generator provides 2 fields that you can use to construct a JSON-LD website script. If you want to add another page, then you can press the <b>&#34;Add URL&#34;</b> button and this tool will display a new field that you can use to add a new page along with its URL.</p>',
-    "howto4" => '<p>Figure 3: <b>&#34;Add URL / Tambah URL&#34;</b> button on the website schema generator from cmlabs.</p>
-                    <h4 class="sub-titles">Remove URL</h4>
-                    <p>If you want to remove unneeded pages from the website, then you can press the cross icon on the right side of the field to enter the page name and URL. Note that deleted fields cannot be recovered.</p>',
-    "howto5" => '<p>Figure 4: <b>Cross icon</b> button to remove URL in website schema generator from cmlabs.</p>
-                    <h4 class="sub-titles">Copy The Generated JSON-LD Script</h4>
-                    <p>After entering the required data, you will see a preview of the website schema markup on the right side. To add a website schema to a website is by pressing the copy option, then paste the script that has been created into your program code.</p>',
-    "howto6" => '<p>Figure 5: website schema markup copy options</p>
-                    <h4 class="sub-titles">JSON-LD Script Validation Check</h4>
-                    <p>With the website schema generator, you can also check the validity of the JSON-LD script that you use to create the website. To check the website is also quite easy, you only need to press the check option contained in the preview section of the generated script.</p>
-                    <p>When you press the button, you will be redirected to <a href="https://search.google.com/test/rich-results">Google&#39;s Rich Result Test page</a>. On that page, you can check if the website script is working properly in Google search.</p>',
-    "howto7" => '<p>Figure 6: website schema markup validation check options</p>
-                    <h4 class="sub-titles">Reset website Schema Generator</h4>
-                    <p>This tool also provides options that make it easier for you to delete all the data that you have previously entered. You just need to select the <b>&#34;Reset&#34;</b> option and this tool will display a new field, so you can create another website schema.</p>',
-    "howto8" => '<p>Figure 7: Data reset option added to website schema generator.</p>
-                    <p>That&#39;s a brief discussion about how to use the <a href="https://tools.cmlabs.co/en/json-ld-website-schema-generator">JSON-LD website schema markup generator</a> from cmlabs. These tools are easy to use and help you generate schema markup in a relatively short time. Try this tool now!</p>',
-    "whats-new-1" => "In the newest version of JSON LD, we added website Schema Generator. This tool is useful for allowing users to grab clicks from a page that is ranked above it if you have website markup and competitors don't. So that your website page will appear on the rich snippet. We hope that with this new tool, you can create a website page that is superior to competitors.",
-    "whats-new-2" => "Toward JSON LD - website Schema Generator, now users can add schemas. This scheme serves to test your implementation at page or code level with Google's Rich Snippet Testing Tool and ask it to crawl the modified pages of your website. With this tool, you can see your CTR and traffic levels soar.",
+    
+    
+    "desc-1" => "Apa itu JSON-LD Organization Schema Generator dari cmlabs?",
+    "desc-1-1" => "JSON-LD Organization Schema Generator adalah sebuah tool yang digunakan untuk membuat skema organisasi dalam format <a href='https://cmlabs.co/id-id/seo-terms/json-ld-markup'>JSON-LD</a>.",
+    "desc-1-2" => "Secara harfiah, JSON-LD adalah singkatan dari <a href='https://cmlabs.co/id-id/seo-terms/javascript'>JavaScript</a> Object Notation for Linked Data, yang merupakan salah satu bentuk struktur data untuk menyajikan informasi dengan cara yang mudah dibaca oleh mesin dan manusia.",
+    "desc-1-3" => "Skema organisasi dalam JSON-LD Schema Generator memungkinkan pengembang web untuk memberikan informasi penting tentang organisasi mereka kepada mesin pencari dan layanan online lainnya dengan cara yang terstruktur dan terstandarisasi.",
+    "desc-1-4" => "Dengan JSON-LD Organization Schema Generator dari cmlabs, kini Anda dapat meningkatkan <a href='https://cmlabs.co/id-id/seo-guidelines/panduan-ctr'>CTR</a>, user experience (<a href='https://cmlabs.co/id-id/seo-terms/user-experience'>UX</a>), serta visibilitas informasi organisasi Anda di mesin pencari secara keseluruhan tanpa memerlukan proses pengembangan yang kompleks.",
+    "desc-1-5" => "Namun, apa itu JSON-LD Organization Schema Generator dari cmlabs? Secara keseluruhan, tool ini dirancang untuk membantu memudahkan proses penyusunan <a href='https://cmlabs.co/id-id/seo-terms/schema-markup-adalah'>schema markup</a>. Dengan menggunakan JSON-LD Organization Schema Generator, Anda dapat meningkatkan visibilitas situs mereka di hasil pencarian Google.",
+    "desc-1-6" => "Mesin pencari dapat menggunakan skema organisasi ini untuk menampilkan informasi tentang organisasi, seperti alamat, logo organisasi, nomor telepon, dan informasi tambahan lainnya di halaman <a href='https://cmlabs.co/id-id/seo-guidelines/cara-kerja-search-engine'>hasil pencarian</a> sehingga memudahkan pengguna mendapatkan informasi yang lebih lengkap tentang organisasi tanpa harus mengunjungi situs webnya.",
+
+
+
+    "desc-2" => "Keunggulan JSON-LD Organization Schema Generator dari cmlabs",
+    "desc-2-1" => "Mengoptimalkan potensi penuh kehadiran bisnis Anda secara online memerlukan lebih dari sekadar situs web yang menarik secara visual.",
+    "desc-2-2" => "Untuk memaksimalkan strategi ini, Anda membutuhkan optimisasi baik untuk pengguna maupun mesin pencari. Salah satu strategi yang perlu diimplementasikan adalah dengan memperkuat profil bisnis Anda dengan bantuan JSON Schema Generator dari cmlabs.",
+    "desc-2-3" => "Tool ini menawarkan sejumlah keunggulan yang mampu membantu Anda meningkatkan visibilitas organisasi dan bisnis, sekaligus meningkatkan otoritasnya.",
+    "desc-2-4" => "Mari menjelajahi ragam keunggulan yang dapat Anda peroleh dari tool ini untuk meningkatkan visibilitas digital Anda di lanskap online yang kompetitif.",
+    "desc-2-5" => "1. Meningkatkan Optimasi SEO",
+    "desc-2-5-1" => "Mesin pencari umumnya menggunakan <a href='https://cmlabs.co/id-id/seo-guidelines/apa-itu-struktur-data'>struktur data</a> untuk memahami konten dan konteks di suatu halaman web.",
+    "desc-2-5-2" => "Oleh karena itu, dengan menyertakan schema markup khusus organisasi, Anda dapat memberikan informasi yang akurat tentang bisnis Anda kepada mesin pencari.",
+    "desc-2-5-3" => "JSON-LD Organization Schema Generator membantu meningkatkan strategi SEO Anda melalui struktur data yang mudah dipahami oleh mesin pencari seperti Google.",
+    "desc-2-6" => "2. Tampilan yang Menarik di Mesin Pencari",
+    "desc-2-6-1" => "Tool ini akan membantu mesin pencari mengenal dan mengurai struktur data dengan lebih mudah. Dengan begitu, profil organisasi/bisnis Anda dapat ditampilkan dengan lebih ideal sehingga tampak lebih menarik bagi audiens atau calon konsumen. Melalui pendekatan ini, audiens atau user dapat mengklik tautan profil yang nantinya akan dikonversi ke dalam jumlah <a href='https://cmlabs.co/id-id/seo-terms/click-through-rate'>CTR</a>.",
+    "desc-2-7" => "3. Meningkatkan Aksesibilitas",
+    "desc-2-7-1" => "Dengan memberikan struktur data kepada mesin pencari tentang rincian organisasi Anda, Anda juga berpotensi meningkatkan <a href='https://cmlabs.co/id-id/seo-terms/rich-snippet-adalah'>rich snippet</a> dan <a href='https://cmlabs.co/id-id/seo-terms/google-knowledge-graph'>Google Knowledge Graph</a> agar tampil lebih menonjol di laman <a href='https://cmlabs.co/id-id/seo-terms/serp'>SERP</a>.",
+    "desc-2-7-2" => "",
+    "desc-2-8" => "4. Meningkatkan Kepercayaan dan Kredibilitas",
+    "desc-2-8-1" => "Ketika hasil pencarian menampilkan rich snippet tentang organisasi Anda, seperti logo, rincian kontak, dan profil media sosial, Anda juga dapat meningkatkan kredibilitas dan kepercayaan organisasi dari sudut pandang pengguna.",
+    "desc-2-8-2" => "",
+    "desc-2-9" => "5. Konsistensi di Seluruh Platform",
+    "desc-2-9-1" => "Dengan schema markup JSON-LD, Anda dapat memastikan bahwa informasi tentang organisasi disajikan secara konsisten di berbagai platform dan perangkat.",
+    "desc-2-9-2" => "Baik pengguna mengakses situs web Anda melalui komputer desktop atau smartphone, struktur data membantu memastikan representasi organisasi yang konsisten dan akurat.",
+    "desc-2-10" => "6. Mendukung Analitik dan Wawasan yang Kuat",
+    "desc-2-10-1" => "Struktur data juga dapat memberikan wawasan berharga tentang bagaimana mesin pencari menginterpretasikan dan menampilkan informasi organisasi Anda di mesin pencari.",
+    "desc-2-10-2" => "Sehingga, Anda dapat melacak kinerja schema markup Anda melalui tool seperti <a href='https://cmlabs.co/id-id/seo-terms/google-search-console'>Google Search Console</a> untuk melakukan optimasi berdasarkan data analitis.",
+    "desc-2-11" => "7. Meminimalisir Error",
+    "desc-2-11-1" => "Dengan mengotomatisasi proses pembuatan, tool ini dapat membantu Anda mengurangi risiko kesalahan sintaksis atau implementasi skema yang salah. ",
+    "desc-2-11-2" => "",
+    "desc-2-12" => "8. Meningkatkan Click-Through-Rate (CTR)",
+    "desc-2-12-1" => "Dengan menambahkan struktur data melalui tool generator kami, situs web Anda dapat memaksimalkan strategi rich snippet guna mendominasi laman hasil pencarian.",
+    "desc-2-12-2" => "Di dalam potongan informasi rich snippet, Anda bisa menampilkan sejumlah informasi atau detail terkait organisasi, mulai dari logo, profil media sosial, dan informasi penting lainnya. Selain itu, visualisasi profil organisasi yang menarik juga perlu diperhatikan agar dapat mengundang pengguna untuk lebih sering mengklik tautan situs web Anda dan meningkatkan <a href='https://cmlabs.co/id-id/seo-guidelines/panduan-organic-traffic#:~:text=People%20Also%20Ask)-,Apa%20Itu%20Organic%20Traffic%3F,yaitu%20dengan%20melakukan%20optimasi%20SEO.'>organic traffic</a>.",
+        
+    
+    "desc-3" => "Contoh Markup JSON-LD Organization Schema Generator dari cmlabs",
+    "desc-3-1" => "Ketika ingin mengimplementasikan script JSON-LD untuk mendukung profil bisnis Anda di SERP, Anda dapat menjumpai sejumlah pendekatan berbeda, seperti menyematkannya melalui kode <a href='https://cmlabs.co/id-id/seo-terms/html'>HTML</a> atau menggunakan JSON-LD.",
+    "desc-3-2" => "Sebagai gambaran tentang hasil markup JSON-LD Organization Schema Generator dari cmlabs, berikut adalah contoh kode JSON-LD yang akan Anda terima ketika menggunakan tool kami.",
+    
+    
+    "howto-title" =>'<h2>Cara Menggunakan JSON-LD Organization Schema Generator dari cmlabs</h2>',
+    "howto1" => '<p>Untuk menggunakan JSON-LD Organization Schema Generator dari cmlabs, Anda dapat mengikuti langkah-langkah berikut untuk menyajikan informasi organisasi Anda dalam format yang ramah pengguna dan kredibel.</p>
+                <p>Untuk mulai menyusun script JSON-LD, perhatikan langkah-langkah berikut.</p>
+                <h3 class="sub-titles">Buka Halaman JSON-LD Organization Schema Generator</h3>',
+    "howto2" => '<p>Gambar 1: Tampilan halaman JSON-LD Organization Schema Generator dari cmlabs.</p>
+                <p>Pertama, Anda perlu mengakses halaman Tool Generator di situs web resmi cmlabs. Jika Anda ingin menghasilkan skrip JSON-LD untuk meningkatkan aksesibilitas organisasi Anda melalui hasil pencarian, Anda dapat memilih Generator Organisasi untuk mulai menghasilkan schema markup.</p>
+                <h3 class="sub-titles">Pilih Jenis Skema</h3>
+                <p>Di halaman generator, Anda akan disajikan sejumlah pilihan terkait jenis skema yang bisa Anda susun. Pada langkah ini, Anda dapat memilih jenis skema yang sesuai dengan kebutuhan.</p> 
+                <p>Kami menyediakan beberapa pilihan, mulai dari skema HowTo, Breadcrumb, Halaman FAQ, Situs Web, Bisnis Lokal, dan banyak jenis skema lainnya.</p>
+                <p>Jika Anda ingin membuat schema markup untuk organisasi, maka Anda dapat memilih opsi Organisasi dalam kolom tersebut.</p>
+                <h3 class="sub-titles">Masukkan Data yang Dibutuhkan</h3>',
+    "howto3" => '<p>Gambar 2: Masukkan data dalam kolom yang disediakan.</p>
+                <p>Untuk menghasilkan kode JSON-LD menggunakan tool ini, Anda perlu memastikan bahwa Anda telah memilih opsi Organisasi untuk skema yang ingin Anda buat.</p>
+                <p>Setelah itu, Anda hanya perlu mengisi beberapa kolom yang diperlukan, seperti:</p>
+                <ul>
+                    <li><b>Jenis Organisasi:</b> Tentukan kategori atau jenis organisasi Anda. Langkah ini membantu menentukan entitas bisnis, baik organisasi bisnis lokal, korporat, atau klasifikasi khusus lainnya.</li>
+                    <li><b>Nama:</b> Masukkan nama lengkap resmi organisasi Anda.</li>
+                    <li><b>Nama Alternatif:</b> Jika organisasi Anda beroperasi dengan nama samaran, atau memiliki nama alternatif lain, Anda dapat menyertakannya pada kolom ini.</li>
+                    <li><b>URL:</b> Masukkan alamat web (URL) situs web resmi organisasi Anda untuk meningkatkan visibilitas laman web secara online.</li>
+                    <li><b>URL Logo:</b> Sertakan URL di mana logo organisasi Anda agar meningkatkan tampilan visual dalam laman hasil pencarian.</li>
+                    <li><b>Profil Sosial:</b> Pilih profil media sosial organisasi Anda, baik Facebook, Twitter, LinkedIn, Instagram, dan lainnya. Untuk setiap platform yang dipilih, berikan tautan web atau URL yang sesuai dengan profil organisasi Anda.</li>
+                    <h3 class="sub-titles">Pilih Tindakan Selanjutnya</h3>
+                    <p>Dengan tool ini, terdapat tiga pendekatan yang bisa Anda gunakan, yaitu Salin, Cek, dan Reset. Kenali setiap fungsinya di bawah ini!</p>
+                    <h4 class="sub-titles">Salin</h4>',
+    "howto4" => '<p>Gambar 3: Opsi Salin</p>
+                <p>Untuk mendapatkan versi lengkap dan komprehensif dari skrip yang telah disusun secara otomatis, Anda hanya perlu klik tombol "Salin". Tindakan sederhana memungkinkan Anda untuk menduplikasi seluruh skrip dengan mudah dan efisien.</p>
+                <h4 class="sub-titles">Cek</h4>',
+    "howto5" => '<p>Gambar 4: Opsi Cek</p>
+                <p>Metode ini memungkinkan Anda untuk memverifikasi dan menguji kompatibilitas halaman web dengan rich result dari Google. Dengan melakukan tindakan ini, Anda dapat mengevaluasi efektivitas implementasi strukur data Anda dalam memenuhi kriteria hasil kaya Google.</p> 
+                <p>Evaluasi ini berfungsi sebagai langkah penting dalam memastikan bahwa website Anda sudah mencapai <a href="https://cmlabs.co/id-id/seo-terms/engagement-rate-adalah">engagement rate</a> dan visibilitas optimal di halaman <a href="https://cmlabs.co/id-id/seo-guidelines/cara-kerja-search-engine">hasil pencarian</a>.</p>
+                <h4 class="sub-titles">Reset</h4>',
+    "howto6" => '<p>Gambar 5: Opsi Reset</p>
+                <p>Opsi Reset berfungsi sebagai fitur yang memudahkan Anda untuk memulai seluruh proses penyusunan skrip dari langkah pertama. Anda dapat menggunakan opsi reset jika merasa perlu untuk melakukan pemeriksaan mendalam atau ingin menghasilkan markup skema baru.</p>
+                <p>Intinya, tombol ini berfungsi untuk menghapus semua pilihan atau konfigurasi sebelumnya, sehingga memastikan permulaan yang bersih untuk proses generasi skema berikutnya.</p>',
+    "closing-1" => "JSON-LD Organization Schema Generator dari cmlabs adalah tool yang dapat meningkatkan efisiensi kinerja Anda dalam menyusun schema markup untuk profil bisnis. Upaya meningkatkan visibilitas, kredibilitas, dan kinerja SEO situs mereka dapat terbantu dengan tool ini.",
+    "closing-2" => "Dengan menghadirkan informasi organisasi dalam format yang terstruktur dan mudah dimengerti oleh mesin pencari, JSON-LD Organization Schema Generator dari cmlabs membantu organisasi untuk tampil lebih baik di hasil pencarian Google dan platform lainnya.",
+    "closing-3" => "Keunggulan dalam aksesibilitas dan konsistensi di seluruh platform juga memberikan manfaat tambahan dalam menciptakan pengalaman pengguna yang lebih baik.",
+    "closing-4" => "Dengan fleksibilitas yang ditawarkan melalui struktur data, tool ini membuka peluang untuk hasil pencarian yang lebih informatif sehingga berpotensi lebih memikat pengguna dan meningkatkan interaksi mereka dengan situs web. Coba tool ini sekarang!",
 ];

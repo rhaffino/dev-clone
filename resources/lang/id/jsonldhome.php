@@ -43,4 +43,5 @@ return [
     "json-ld-local-business-desc" => "The JSON-LD Local Business Schema Generator adalah tool yang didesain untuk memudahkan para pemilik bisnis dalam proses pembuatan markup yang informatif, strategis, dan ramah SEO guna meningkatkan traffic bisnis Anda secara online.",
     "json-ld-event-desc" => "JSON-LD Event Schema Generator adalah tool untuk mempermudah proses pembuatan struktur data agar acara Anda dapat menjangkau lebih banyak audiens, mampu menduduki peringkat tinggi di mesin pencari dan meningkatkan organic traffic.",
     "json-ld-video-desc" => "JSON-LD Video Schema Generator adalah tool khusus guna mempermudah penyusunan struktur data untuk konten video agar meningkatkan visibilitas di mesin pencari.",
+    "json-ld-organization-desc" => "JSON-LD Organization Schema Generator adalah tool khusus untuk membuat struktur data JSON-LD mengenai organisasi atau perusahaan Anda guna membantu mesin pencari menampilkan informasi tentang organisasi Anda secara lebih efektif dan memberikan pengalaman pengguna yang lebih baik.",
 ];
