@@ -417,7 +417,7 @@
             </div>
         @endslot
         @slot('read_more')
-            <p class="b1-400 b1-m-400 read-more" id="read-more-button">Read more</p>
+            <p class="b1-400 b1-m-400 read-more" id="read-more-button">@lang('layout.read-more')</p>
         @endslot
     @endcomponent
     <span id="titlesizer"></span>
