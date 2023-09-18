@@ -178,10 +178,10 @@ id/json-ld-organization-schema-generator
                                 </div>
                                 <div id="collapseOne2" class="collapse" data-parent="#accordionExample2">
                                     <div class="card-body">
-                                        <p>@lang('localBusiness.highlight')</p>
+                                        <p>@lang('organization.highlight')</p>
                                         <div class="d-flex align-items-center">
                                             <i class='bx bxs-check-circle text-darkgrey mr-1'></i>
-                                            <span class="text-darkgrey h6 mb-0">@lang('layout.updated') 5 Sep, 2023</span>
+                                            <span class="text-darkgrey h6 mb-0">@lang('layout.updated') 18 Sep, 2023</span>
                                         </div>
                                     </div>
                                 </div>
@@ -205,10 +205,10 @@ id/json-ld-organization-schema-generator
                 </div>
                 <div id="collapseOne2" class="collapse" data-parent="#accordionExample2">
                     <div class="card-body">
-                        <p>@lang('localBusiness.highlight')</p>
+                        <p>@lang('organization.highlight')</p>
                         <div class="d-flex align-items-center">
                             <i class='bx bxs-check-circle text-darkgrey mr-1'></i>
-                            <span class="text-darkgrey h6 mb-0">@lang('layout.updated') 15 Mar, 2021</span>
+                            <span class="text-darkgrey h6 mb-0">@lang('layout.updated') 18 Sep, 2023</span>
                         </div>
                     </div>
                 </div>
@@ -221,66 +221,92 @@ id/json-ld-organization-schema-generator
     @slot('title', 'JSON-LD Organization Schema Generator')
     @slot('subcontent_1')
         <div class="" id="description-tab-1">
-            <h2>@lang('localBusiness.desc-1')</h2>
-            <p>@lang('localBusiness.desc-1-1')</p>
-            <p>@lang('localBusiness.desc-1-2')</p>
+            <h2>@lang('organization.desc-1')</h2>
+            <p>@lang('organization.desc-1-1')</p>
+            <p>@lang('organization.desc-1-2')</p>
         </div>
-        @endslot
-        @slot('subcontent_2')
+    @endslot
+    @slot('subcontent_2')
         <div class="d-none" id="description-tab-2">
-            <p>@lang('localBusiness.desc-1-3')</p>
-            <p>@lang('localBusiness.desc-1-4')</p>
-            <p>@lang('localBusiness.desc-1-5')</p>
-            <h2>@lang('localBusiness.desc-2')</h2>
-            <p>@lang('localBusiness.desc-2-1')</p>
-            <p>@lang('localBusiness.desc-2-2')</p>
-            <p>@lang('localBusiness.desc-2-3')</p>
-            <h4 class="sub-titles">@lang('localBusiness.desc-2-2-1')</h4>
-            <p>@lang('localBusiness.desc-2-2-2')</p>
-            <p>@lang('localBusiness.desc-2-2-3')</p>
-            <p>@lang('localBusiness.desc-2-2-4')</p>
-            <p>@lang('localBusiness.desc-2-2-5')</p>
-            <h4 class="sub-titles">@lang('localBusiness.desc-2-3-1')</h4>
-            <p>@lang('localBusiness.desc-2-3-2')</p>
-            <h4 class="sub-titles">@lang('localBusiness.desc-2-4-1')</h4>
-            <p>@lang('localBusiness.desc-2-4-2')</p>
-            <h4 class="sub-titles">@lang('localBusiness.desc-2-5-1')</h4>
-            <p>@lang('localBusiness.desc-2-5-2')</p>
-            <p>@lang('localBusiness.desc-2-5-3')</p>
-            <h4 class="sub-titles">@lang('localBusiness.desc-2-6-1')</h4>
-            <p>@lang('localBusiness.desc-2-6-2')</p>
-            <h4 class="sub-titles">@lang('localBusiness.desc-2-7-1')</h4>
-            <p>@lang('localBusiness.desc-2-7-2')</p>
-            <p>@lang('localBusiness.desc-2-7-3')</p>
-            <h4 class="sub-titles">@lang('localBusiness.desc-2-8-1')</h4>
-            <p>@lang('localBusiness.desc-2-8-2')</p>
-            <p>@lang('localBusiness.desc-2-8-3')</p>
-            <h4 class="sub-titles">@lang('localBusiness.desc-2-9-1')</h4>
-            <p>@lang('localBusiness.desc-2-9-2')</p>
-            <h4 class="sub-titles">@lang('localBusiness.desc-2-10-1')</h4>
-            <p>@lang('localBusiness.desc-2-10-2')</p>
+            <p>@lang('organization.desc-1-3')</p>
+            <p>@lang('organization.desc-1-4')</p>
+            <p>@lang('organization.desc-1-5')</p>
+            <p>@lang('organization.desc-1-6')</p>
+            <h2>@lang('organization.desc-2')</h2>
+            <p>@lang('organization.desc-2-1')</p>
+            <p>@lang('organization.desc-2-2')</p>
+            <p>@lang('organization.desc-2-3')</p>
+            <p>@lang('organization.desc-2-4')</p>
+            <h4 class="sub-titles">@lang('organization.desc-2-5')</h4>
+            <p>@lang('organization.desc-2-5-1')</p>
+            <p>@lang('organization.desc-2-5-2')</p>
+            <p>@lang('organization.desc-2-5-3')</p>
+            <h4 class="sub-titles">@lang('organization.desc-2-6')</h4>
+            <p>@lang('organization.desc-2-6-1')</p>
+            <h4 class="sub-titles">@lang('organization.desc-2-7')</h4>
+            <p>@lang('organization.desc-2-7-1')</p>
+            <p>@lang('organization.desc-2-7-2')</p>
+            <h4 class="sub-titles">@lang('organization.desc-2-8')</h4>
+            <p>@lang('organization.desc-2-8-1')</p>
+            <p>@lang('organization.desc-2-8-2')</p>
+            <h4 class="sub-titles">@lang('organization.desc-2-9')</h4>
+            <p>@lang('organization.desc-2-9-1')</p>
+            <p>@lang('organization.desc-2-9-2')</p>
+            <h4 class="sub-titles">@lang('organization.desc-2-10')</h4>
+            <p>@lang('organization.desc-2-10-1')</p>
+            <p>@lang('organization.desc-2-10-2')</p>
+            <h4 class="sub-titles">@lang('organization.desc-2-11')</h4>
+            <p>@lang('organization.desc-2-11-1')</p>
+            <p>@lang('organization.desc-2-11-2')</p>
+            <h4 class="sub-titles">@lang('organization.desc-2-12')</h4>
+            <p>@lang('organization.desc-2-12-1')</p>
+            <p>@lang('organization.desc-2-12-2')</p>
+        </div>
+    @endslot
+    @slot('subcontent_3')
+        <div class="d-none" id="description-tab-3">
+            <h2>@lang('organization.desc-3')</h2>
+            <p>@lang('organization.desc-3-1')</p>
+            <p>@lang('organization.desc-3-2')</p>
+            <pre class="language-html mb-4">
+                <code class="language-html" style="white-space: pre-wrap; word-break: keep-all;">
+                    &lt;script type="application/ld+json"&gt;
+                        {
+                            "@context": "https://schema.org",
+                            "@type": "Organization",
+                            "name": "",
+                            "url": "",
+                            "logo": ""
+                        }
+                    &lt;/script&gt;
+                </code>
+            </pre>
         </div>
     @endslot
     @slot('how_to_content')
         <div class="d-none" id="how-to">
-            @lang('localBusiness.howto1')
+            @lang('organization.howto-title')
+            @lang('organization.howto1')
             <div class="expand-text">
-                <img class="mb-4" src="{{asset('/media/images/local_business_schema_instruction_1.webp')}}" alt="HowTo-Local-Business-1" width="80%">
-                @lang('localBusiness.howto2')
-                <img class="mb-4" src="{{asset('/media/images/local_business_schema_instruction_2.webp')}}" alt="HowTo-Local-Business-2" width="80%">
-                @lang('localBusiness.howto3')
-                <img class="mb-4" src="{{asset('/media/images/local_business_schema_instruction_3.webp')}}" alt="HowTo-Local-Business-3" width="80%">
-                @lang('localBusiness.howto4')
-                <img class="mb-4" src="{{asset('/media/images/local_business_schema_instruction_4.webp')}}" alt="HowTo-Local-Business-4" width="80%">
-                @lang('localBusiness.howto5')
-                <img class="mb-4" src="{{asset('/media/images/local_business_schema_instruction_5.webp')}}" alt="HowTo-Local-Business-5" width="80%">
-                @lang('localBusiness.howto6')
-                @lang('localBusiness.close')
+                <img class="mb-4" src="{{asset('/media/images/organization_schema_instruction_1.webp')}}" alt="HowTo-Organization-1" width="80%">
+                @lang('organization.howto2')
+                <img class="mb-4" src="{{asset('/media/images/organization_schema_instruction_2.webp')}}" alt="HowTo-Organization-2" width="80%">
+                @lang('organization.howto3')
+                <img class="mb-4" src="{{asset('/media/images/organization_schema_instruction_3.webp')}}" alt="HowTo-Organization-3" width="80%">
+                @lang('organization.howto4')
+                <img class="mb-4" src="{{asset('/media/images/organization_schema_instruction_4.webp')}}" alt="HowTo-Organization-4" width="80%">
+                @lang('organization.howto5')
+                <img class="mb-4" src="{{asset('/media/images/organization_schema_instruction_5.webp')}}" alt="HowTo-Organization-5" width="80%">
+                @lang('organization.howto6')
+                <p>@lang('organization.closing-1')</p>
+                <p>@lang('organization.closing-2')</p>
+                <p>@lang('organization.closing-3')</p>
+                <p>@lang('organization.closing-4')</p>
             </div>
         </div>
     @endslot
     @slot('read_more')
-        <p class="b1-400 b1-m-400 read-more" id="read-more-button">Read more</p>
+        <p class="b1-400 b1-m-400 read-more" id="read-more-button">@lang('layout.read-more')</p>
     @endslot
 @endcomponent
 @endsection
@@ -313,6 +339,7 @@ id/json-ld-organization-schema-generator
     const read_more_button = document.getElementById('read-more-button');
     const description_1 = document.getElementById('description-tab-1');
     const description_2 = document.getElementById('description-tab-2');
+    const description_3 = document.getElementById('description-tab-3');
     const how_to = document.getElementById('how-to');
     let read = false;
 
@@ -321,18 +348,22 @@ id/json-ld-organization-schema-generator
         if(!read){
             description_1.style.display = 'block';
             description_2.style.display = 'block';
+            description_3.style.display = 'block';
             how_to.style.display = 'block';
             description_1.classList.remove("d-none");
             description_2.classList.remove("d-none");
+            description_3.classList.remove("d-none");
             how_to.classList.remove("d-none");
-            read_more_button.innerHTML = 'Show less';
+            read_more_button.innerHTML = @json( __('layout.show-less') );
             read = true;
         } else {
             description_2.style.display = 'none';
+            description_3.style.display = 'none';
             how_to.style.display = 'none';
             description_2.classList.add("d-none");
+            description_3.classList.add("d-none");
             how_to.classList.add("d-none");
-            read_more_button.innerHTML = 'Read more';
+            read_more_button.innerHTML = @json( __('layout.read-more') );
             read = false;
         }
     });
