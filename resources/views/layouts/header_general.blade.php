@@ -16,7 +16,7 @@
                         <img alt="Logo"
                             src="https://cmlabs-co.s3.ap-southeast-1.amazonaws.com/logos/cmlabs-logo-new.webp"
                             class="max-h-35px" />
-                        <span class="h2 title-logo-name ml-2 mt-3">SEO Tools</span>
+                        <span class="h2 h6-700 mb-3 title-logo-name ml-2 mt-3">SEO Tools</span>
                     </a>
                 </div>
                 <ul class="nav custom-nav nav-header">
