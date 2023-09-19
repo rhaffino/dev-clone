@@ -76,6 +76,7 @@ Route::get('/logout','Auth\LoginController@logout');
         Route::get('/{lang}/json-ld-event-schema-generator', 'ToolsController@event');
         Route::get('/{lang}/json-ld-organization-schema-generator', 'ToolsController@organization');
         Route::get('/{lang}/robotstxt-checker', 'ToolsController@robotsChecker');
+        Route::get('/{lang}/serp-simulator', 'ToolsController@serpSimulator');
     });
     Route::get('/en/version', 'ToolsController@englishVersion');
     Route::get('/id/version', 'ToolsController@indonesiaVersion');

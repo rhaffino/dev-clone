@@ -148,6 +148,7 @@
                                 </div>
                             </div>
                         </div>
+                        
                         <div class="col-md-4 word-counter-result-card-desktop">
                             <div class="card card-custom mb-5">
                                 <div class="card-body py-3 px-4">
