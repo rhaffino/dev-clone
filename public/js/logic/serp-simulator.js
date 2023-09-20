@@ -355,3 +355,15 @@ $("#mobile-serp").click(function () {
     $("#desktop-serp").removeClass("active");
     $("#mobile-serp").addClass("active");
 });
+
+$("#ads-serp-preview").click(function () {
+    $(".snippet-ads").toggle();
+});
+
+$("#rating-serp-preview").click(function () {
+    $(".snippet-rating").toggleClass("active");
+});
+
+$("#date-serp-preview").click(function () {
+    $(".snippet-date").toggleClass("active");
+});
