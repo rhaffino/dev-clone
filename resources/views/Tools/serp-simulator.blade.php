@@ -95,7 +95,7 @@ id/serp-simulator
                     </div>
 
                     <div class="card card-custom serp-simulator-result" id="http-header-result-container">
-                        <div class="card-body py-4 px-0">
+                        <div class="card-body py-5 px-0">
                         <!-- Snippet Desktop -->
                             <div id="snippet-desktop">
                                 <div class="snippet-header d-flex">
@@ -341,10 +341,10 @@ id/serp-simulator
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card card-custom mb-5 p-5">
+                    <div class="card card-custom mb-5 p-5 practice-serp-simulator">
                         <div class="row">
                             <div class="col-12 mb-5">
-                                <p class="h6 text-black mb-5">Custom Field</p>
+                                <p class="h6 text-black font-weight-bolder mb-5">Practice SERP Simulator</p>
                                 <label for="URL" class="font-weight-bold text-black">URL</label>
                                 <div class="position-relative">
                                     <input type="text" class="form-control url" name="" placeholder="Type your URL here.." value="">
