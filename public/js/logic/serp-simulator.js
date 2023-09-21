@@ -3,9 +3,28 @@ const HTTP_HEADER_LOCAL_STORAGE_KEY = "http-header-history";
 if (lang == "en") {
     var created_at = "Created at ";
     var localStorageNone = "This is your first impressions, no history yet!";
+
+    // Use en
+    var snippet_website = "cmlabs.co";
+    var snippet_domain = "https://tools.cmlabs.co";
+    var snippet_breadcrumbs = "serp-simulator";
+    var snippet_title = "This is an Example of a Title Tag";
+    var snippet_date = "Sep 20, 2023";
+    var snippet_desc = "Here is an example of what a snippet looks like in Google's SERPs. The content that appears here is usually taken from the Meta Description tag if relevant.";
+    var snippet_rating = "Rating: 4.1/5 - 61 votes";
+    
 } else if (lang == "id") {
     var created_at = "Dibuat pada ";
     var localStorageNone = "Ini adalah kesan pertama Anda, belum ada riwayat!";
+    
+    // Use id
+    var snippet_website = "cmlabs.co";
+    var snippet_domain = "https://tools.cmlabs.co";
+    var snippet_breadcrumbs = "serp-simulator";
+    var snippet_title = "This is an Example of a Title Tag";
+    var snippet_date = "Sep 20, 2023";
+    var snippet_desc = "Here is an example of what a snippet looks like in Google's SERPs. The content that appears here is usually taken from the Meta Description tag if relevant.";
+    var snippet_rating = "Rating: 4.1/5 - 61 votes";
 }
 
 const HttpHeaderTemplate = (title, desc) => `
@@ -342,6 +361,7 @@ $(document).ready(function () {
     $("#snippet-mobile").hide();
 });
 
+// use
 $("#desktop-serp").click(function () {
     $("#snippet-desktop").show();
     $("#snippet-mobile").hide();

@@ -33,16 +33,16 @@ id/serp-simulator
                         <i id="empty-url" class='bx bxs-shield text-white bx-md mr-3'></i>
                         <i id="secure-url" class='bx bxs-check-shield text-white bx-md mr-3' style="display: none"></i>
                         <i id="unsecure-url" class='bx bxs-shield-x text-white bx-md mr-3' style="display: none"></i>
-                        <input type="url" class="form-control lookup-url" name="" value="" placeholder="@lang('serp-simulator.headerchecker-placeholder')" id="input-url" autocomplete="off">
+                        <input type="url" class="form-control lookup-url" name="" value="" placeholder="@lang('serp-simulator.serp-placeholder')" id="input-url" autocomplete="off">
                     </div>
                     <div class="col-sm-3 col-md-2 col-lg-3 col-xl-2 d-flex justify-content-end py-1">
                         @if (session()->has('logged_in') || session()->get('logged_in') == 'true')
-                            <button id="crawl-btn" type="button" class="btn btn-crawl" name="button" data-toggle="tooltip" data-theme="dark" title="@lang('serp-simulator.headerchecker-btn-tooltip')">@lang('serp-simulator.headerchecker-btn')</button>
+                            <button id="crawl-btn" type="button" class="btn btn-crawl" name="button" data-toggle="tooltip" data-theme="dark" title="@lang('serp-simulator.serp-btn-tooltip')">@lang('serp-simulator.serp-btn')</button>
                         @elseif (isset($access_limit) && $access_limit > 0)
-                            <button disabled="disabled" type="button" class="btn btn-crawl" name="button" data-toggle="tooltip" data-theme="dark" title="@lang('serp-simulator.headerchecker-btn-tooltip')">@lang('serp-simulator.headerchecker-btn')</button>
+                            <button disabled="disabled" type="button" class="btn btn-crawl" name="button" data-toggle="tooltip" data-theme="dark" title="@lang('serp-simulator.serp-btn-tooltip')">@lang('serp-simulator.serp-btn')</button>
                         @else
                             <button id="crawl-btn" class="next-button" style="display: none"></button>
-                            <button id="process-button" type="button" class="btn btn-crawl check-limit-button analysist-button-guest" name="button" data-toggle="tooltip" data-theme="dark" title="@lang('serp-simulator.headerchecker-btn-tooltip')">@lang('serp-simulator.headerchecker-btn')</button>
+                            <button id="process-button" type="button" class="btn btn-crawl check-limit-button analysist-button-guest" name="button" data-toggle="tooltip" data-theme="dark" title="@lang('serp-simulator.serp-btn-tooltip')">@lang('serp-simulator.serp-btn')</button>
                         @endif
                         {{-- <button id="crawlButtonDisabled" type="button" class="btn btn-crawl-disabled" name="button" data-toggle="tooltip" data-theme="dark" title="Currently your are reached the limit!">PLEASE WAIT 59:12</button>--}}
                     </div>
@@ -107,22 +107,22 @@ id/serp-simulator
                                             <strong class="snippet-label text-small">
                                                 <i class='bx bx-search bx-sm'></i>
                                             </strong>
-                                            <input class="snippet-input" placeholder="Enter a keyword to get real search results" type="text">
+                                            <input class="snippet-input" placeholder="@lang('serp-simulator.snippet-input')" type="text">
                                         </form>
 
                                         <div class="snippet-menu d-flex">
-                                            <div class="snippet-search-cat menu-active">All</div>
-                                            <div class="snippet-search-cat">Images</div>
-                                            <div class="snippet-search-cat">Videos</div>
-                                            <div class="snippet-search-cat">Maps</div>
-                                            <div class="snippet-search-cat">News</div>
-                                            <div class="snippet-search-cat">More</div>
+                                            <div class="snippet-search-cat menu-active">@lang('serp-simulator.snippet-cat-1')</div>
+                                            <div class="snippet-search-cat">@lang('serp-simulator.snippet-cat-2')</div>
+                                            <div class="snippet-search-cat">@lang('serp-simulator.snippet-cat-3')</div>
+                                            <div class="snippet-search-cat">@lang('serp-simulator.snippet-cat-4')</div>
+                                            <div class="snippet-search-cat">@lang('serp-simulator.snippet-cat-5')</div>
+                                            <div class="snippet-search-cat">@lang('serp-simulator.snippet-cat-6')</div>
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="snippet-results">
-                                    <div class="snippet-count">About 72.600 results (0.42 seconds) </div>
+                                    <div class="snippet-count">About 72.600 results (0.42 seconds)</div>
 
                                     <!-- Ads Google -->
                                     <div class="snippet-result snippet-ads">
@@ -130,30 +130,30 @@ id/serp-simulator
                                             <div class="d-flex flex-column">
                                                 <div class="snippet-domain d-flex align-items-center">
                                                     <div>
-                                                        <span class="ad-label">Ad</span>
-                                                        <span>https://adsense.google.com</span> › ads-google-creation  
+                                                        <span class="ad-label">@lang('serp-simulator.ad-label')</span>
+                                                        <span>@lang('serp-simulator.ad-domain-1')</span> › @lang('serp-simulator.ad-breadcrumbs-1')  
                                                     </div>
                                                     <i class='bx bx-dots-vertical-rounded'></i>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="snippet-title">Google Ad Creation Tools - Boost Your Campaigns</div>
-                                        <div class="snippet-desc snippet-truncate">Discover powerful Google ad creation tools to enhance your advertising campaigns. Create stunning ads effortlessly. Try it for free!</div>
+                                        <div class="snippet-title">@lang('serp-simulator.ad-snippet-title-1')</div>
+                                        <div class="snippet-desc snippet-truncate">@lang('serp-simulator.ad-snippet-desc-1')</div>
                                     </div>
                                     <div class="snippet-result snippet-ads">
                                         <div class="snippet-url snippet-truncate d-flex align-items-center">
                                             <div class="d-flex flex-column">
                                                 <div class="snippet-domain d-flex align-items-center">
                                                     <div>
-                                                        <span class="ad-label">Ad</span>
-                                                        <span>https://tools.cmlabs.co</span> › ads-serp-simulator  
+                                                        <span class="ad-label">@lang('serp-simulator.ad-label')</span>
+                                                        <span>@lang('serp-simulator.ad-domain-2')</span> › @lang('serp-simulator.ad-breadcrumbs-2')  
                                                     </div>
                                                     <i class='bx bx-dots-vertical-rounded'></i>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="snippet-title">Ads SERP Preview: Google Analysis Tool Simulator</div>
-                                        <div class="snippet-desc">Get local SERPs for more than 50k locations. Analyze rich snippets and compare your website with competitors thanks to 45+ SEO metrics. Try it now for free!</div>
+                                        <div class="snippet-title">@lang('serp-simulator.ad-snippet-title-2')</div>
+                                        <div class="snippet-desc">@lang('serp-simulator.ad-snippet-desc-2')</div>
                                     </div>
 
                                     <div class="snippet-result snippet-preview" id="desktop-preview-result">
@@ -172,7 +172,7 @@ id/serp-simulator
                                             </div>
                                         </div>
                                         <div class="snippet-title">This is an Example of a Title Tag</div>
-                                        <div class="snippet-desc"><span class="snippet-date">Sep 20, 2023 - </span><span class="preview-desc">Here is an example of what a snippet looks like in Google's SERPs. The content that appears here is usually taken from the Meta Description tag if relevant.</span></div>
+                                        <div class="snippet-desc"><span class="snippet-date">Sep 20, 2023 - </span><span class="snippet-desc">Here is an example of what a snippet looks like in Google's SERPs. The content that appears here is usually taken from the Meta Description tag if relevant.</span></div>
                                         <div class="snippet-rating align-items-center">
                                             <div class="snippet-rating-vote">
                                                 <i class="bx bxs-star active"></i>
@@ -217,16 +217,16 @@ id/serp-simulator
                                             <strong class="snippet-label text-small">
                                                 <i class='bx bx-search bx-sm'></i>
                                             </strong>
-                                            <input class="snippet-input" placeholder="Enter a keyword to get real search results" type="text">
+                                            <input class="snippet-input" placeholder="@lang('serp-simulator.snippet-input')" type="text">
                                         </form>
 
                                         <div class="snippet-menu d-flex">
-                                            <div class="snippet-search-cat menu-active">All</div>
-                                            <div class="snippet-search-cat">Images</div>
-                                            <div class="snippet-search-cat">Videos</div>
-                                            <div class="snippet-search-cat">News</div>
-                                            <div class="snippet-search-cat">Maps</div>
-                                            <div class="snippet-search-cat">More</div>
+                                            <div class="snippet-search-cat menu-active">@lang('serp-simulator.snippet-cat-1')</div>
+                                            <div class="snippet-search-cat">@lang('serp-simulator.snippet-cat-2')</div>
+                                            <div class="snippet-search-cat">@lang('serp-simulator.snippet-cat-3')</div>
+                                            <div class="snippet-search-cat">@lang('serp-simulator.snippet-cat-4')</div>
+                                            <div class="snippet-search-cat">@lang('serp-simulator.snippet-cat-5')</div>
+                                            <div class="snippet-search-cat">@lang('serp-simulator.snippet-cat-6')</div>
                                         </div>
                                     </div>
                                 </div>
@@ -237,30 +237,30 @@ id/serp-simulator
                                             <div class="d-flex flex-column">
                                                 <div class="snippet-domain d-flex align-items-center">
                                                     <div>
-                                                        <span class="ad-label">Ad</span>
-                                                        <span>https://adsense.google.com</span> › ads-google-creation  
+                                                        <span class="ad-label">@lang('serp-simulator.ad-label')</span>
+                                                        <span>@lang('serp-simulator.ad-domain-1')</span> › @lang('serp-simulator.ad-breadcrumbs-1')  
                                                     </div>
                                                 </div>
                                             </div>
                                             <i class='bx bx-dots-vertical-rounded ms-auto'></i>
                                         </div>
-                                        <div class="snippet-title">Google Ad Creation Tools - Boost Your Campaigns</div>
-                                        <div class="snippet-desc">Discover powerful Google ad creation tools to enhance your advertising campaigns. Create stunning ads effortlessly. Try it for free!</div>
+                                        <div class="snippet-title">@lang('serp-simulator.ad-snippet-title-1')</div>
+                                        <div class="snippet-desc">@lang('serp-simulator.ad-snippet-desc-1')</div>
                                     </div>
                                     <div class="snippet-result snippet-ads">
                                         <div class="snippet-url snippet-truncate d-flex align-items-center">
                                             <div class="d-flex flex-column">
                                                 <div class="snippet-domain d-flex align-items-center">
                                                     <div>
-                                                        <span class="ad-label">Ad</span>
-                                                        <span>https://tools.cmlabs.co</span> › ads-serp-simulator  
+                                                        <span class="ad-label">@lang('serp-simulator.ad-label')</span>
+                                                        <span>@lang('serp-simulator.ad-domain-2')</span> › @lang('serp-simulator.ad-breadcrumbs-2')  
                                                     </div>
                                                 </div>
                                             </div>
                                             <i class='bx bx-dots-vertical-rounded ms-auto'></i>
                                         </div>
-                                        <div class="snippet-title">Ads SERP Preview: Google Analysis Tool Simulator</div>
-                                        <div class="snippet-desc">Get local SERPs for more than 50k locations. Analyze rich snippets and compare your website with competitors thanks to 45+ SEO metrics. Try it now for free!</div>
+                                        <div class="snippet-title">@lang('serp-simulator.ad-snippet-title-2')</div>
+                                        <div class="snippet-desc">@lang('serp-simulator.ad-snippet-desc-2')</div>
                                     </div>
 
                                     <div class="snippet-result snippet-preview">
@@ -280,7 +280,7 @@ id/serp-simulator
                                         </div>
                                         <div class="snippet-title ">This is an Example of a Title Tag</div>
                                         <div class="snippet-desc">
-                                            <span class="snippet-date">Sep 20, 2023 - </span><span class="preview-desc">Here is an example of what a snippet looks like in Google's SERPs. The content that appears here is usually taken from the Meta Description tag if relevant.</span>
+                                            <span class="snippet-date">Sep 20, 2023 - </span><span class="snippet-desc">Here is an example of what a snippet looks like in Google's SERPs. The content that appears here is usually taken from the Meta Description tag if relevant.</span>
                                         </div>
                                         <div class="snippet-rating">
                                             <div class="d-flex align-items-center">
@@ -340,36 +340,37 @@ id/serp-simulator
                         </div>
                     </div>
                 </div>
+
                 <div class="col-md-4">
                     <div class="card card-custom mb-5 p-5 practice-serp-simulator">
                         <div class="row">
                             <div class="col-12 mb-5">
-                                <p class="h6 text-black font-weight-bolder mb-5">Practice SERP Simulator</p>
-                                <label for="URL" class="font-weight-bold text-black">URL</label>
+                                <p class="h6 text-black font-weight-bolder mb-5">@lang('serp-simulator.practice-title')</p>
+                                <label for="URL" class="font-weight-bold text-black">@lang('serp-simulator.label-url')</label>
                                 <div class="position-relative">
-                                    <input type="text" class="form-control url" name="" placeholder="Type your URL here.." value="">
+                                    <input type="text" class="form-control url" name="" placeholder="@lang('serp-simulator.placeholder-url')" value="">
                                     <label class="label-btn-fetch">
-                                        Fetch Data
+                                        @lang('serp-simulator.label-btn-fetch')
                                     </label>
                                 </div>
                             </div>
                             <div class="col-12 mb-5">
                                 <div class="d-flex justify-content-between">
-                                    <label class="text-black font-weight-bold" for="descriptionVideo">Title</label>
-                                    <label class="text-black font-weight-bold" for="descriptionVideo">6 chars (68 / 600px)</label>
+                                    <label class="text-black font-weight-bold" for="title-meta">@lang('serp-simulator.label-title-meta')</label>
+                                    <label class="text-black font-weight-bold" for="title-meta-count">@lang('serp-simulator.label-title-meta-count')</label>
                                 </div>
-                                <textarea name="" class="form-control custom-textarea-82 descriptionVideo mb-5" placeholder="Type your Title here.." data-id="0"></textarea>
+                                <textarea name="" class="form-control custom-textarea-82 title mb-5" placeholder="@lang('serp-simulator.placeholder-title-meta')"></textarea>
                             </div>
                             <div class="col-12 mb-5">
                                 <div class="d-flex justify-content-between">
-                                    <label class="text-black font-weight-bold" for="descriptionVideo">Description</label>
-                                    <label class="text-black font-weight-bold" for="descriptionVideo">0 chars (0 / 960px)</label>
+                                    <label class="text-black font-weight-bold" for="desc-meta">@lang('serp-simulator.label-desc-meta')</label>
+                                    <label class="text-black font-weight-bold" for="desc-meta-count">@lang('serp-simulator.label-desc-meta-count')</label>
                                 </div>
-                                <textarea name="" class="form-control custom-textarea-82 descriptionVideo mb-5" placeholder="Type your Description here.." data-id="0"></textarea>
+                                <textarea name="" class="form-control custom-textarea-82 desc mb-5" placeholder="@lang('serp-simulator.placeholder-desc-meta')"></textarea>
                             </div>
                             <div class="col-12 mb-5">
-                                <label for="keywords" class="font-weight-bold text-black">Keywords</label>
-                                <input type="text" class="form-control keywords" name="" placeholder="Separate with a space or comma" value="">
+                                <label for="keywords" class="font-weight-bold text-black">@lang('serp-simulator.label-keyword')</label>
+                                <input type="text" class="form-control keywords" name="" placeholder="@lang('serp-simulator.placeholder-keyword')" value="">
                             </div>
                         </div>
                     </div>
@@ -389,6 +390,7 @@ id/serp-simulator
                             </ul>
                         </div>
                     </div>
+
                     <div class="desktop-version">
                         <div class="accordion accordion-light accordion-toggle-arrow custom-features-accordion" id="accordionExample2">
                             <div class="card bg-transparent" style="">

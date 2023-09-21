@@ -5,11 +5,62 @@ return [
     "lang" => "en",
     "title" => "Serp Simulator",
     "sub-title" => "Check Your HTTP Header",
-    "headerchecker-btn" => "Check URL",
-    "headerchecker-placeholder" => "https://www.example.com",
+    "serp-btn" => "Check URL",
+    "serp-placeholder" => "https://www.example.com",
+    "serp-btn-tooltip" => "You can only search 5 times in 1 hour",
+
+
+    "serp-desktop" => "Desktop Preview", 
+    "serp-mobile" => "Mobile Preview", 
+    "serp-ads" => "Show Google Ads", 
+    "serp-date" => "Show Publish Date", 
+    "serp-rating" => "Show Rating", 
+    "serp-reset" => "Reset", 
+    "serp-download" => "Download", 
+    "serp-share" => "Share",
+
+    "snippet-input" => "Enter a keyword to get real search results", 
+
+    "snippet-cat-1" => "All",
+    "snippet-cat-2" => "Images",
+    "snippet-cat-3" => "Videos",
+    "snippet-cat-4" => "Maps",
+    "snippet-cat-5" => "News",
+    "snippet-cat-6" => "More",
+
+    "snippet-count" => "About 72.600 results (0.42 seconds)",
+
+    "ad-label" => "Ad",
+    "ad-domain-1" => "https://adsense.google.com",
+    "ad-breadcrumbs-1" => "ads-google-creation",
+    "ad-snippet-title-1" => "Google Ad Creation Tools - Boost Your Campaigns",
+    "ad-snippet-desc-1" => "Discover powerful Google ad creation tools to enhance your advertising campaigns. Create stunning ads effortlessly. Try it for free!",
+    "ad-domain-2" => "https://tools.cmlabs.co",
+    "ad-breadcrumbs-2" => "ads-serp-simulator",
+    "ad-snippet-title-2" => "Ads SERP Preview: Google Analysis Tool Simulator",
+    "ad-snippet-desc-2" => "Get local SERPs for more than 50k locations. Analyze rich snippets and compare your website with competitors thanks to 45+ SEO metrics. Try it now for free!",
+
+    "practice-title" => "Practice SERP Simulator",
+    "label-url" => "URL",
+    "placeholder-url" => "Type your URL here..",
+    "label-btn-fetch" => "Fetch Data",
+    "label-title-meta" => "Title",
+    "label-title-meta-count" => "6 chars (68 / 600px)",
+    "placeholder-title-meta" => "Type your Title here..",
+    "label-desc-meta" => "Description",
+    "label-desc-meta-count" => "0 chars (0 / 960px)",
+    "placeholder-desc-meta" => "Type your Description here..",
+    "label-keyword" => "Keywords",
+    "placeholder-keyword" => "Separate with a space or comma",
+
+
+
+
+
+
+    
     "result" => "Result",
     "result-none" => "No URL tested, please input your domain above!",
-    "headerchecker-btn-tooltip" => "You can only search 5 times in 1 hour",
     "highlight" => "cmlabs HTTP Header Checker is a free and user-friendly tool designed to inspect the HTTP headers of any given website. You can input an URL and quickly retrieve detailed information about the HTTP headers associated with that URL, which are crucial in influencing website performance, security, and compatibility. With this tool, you can obtain a concise report based on the connection, content type, etag, cache control, server type, and more. Try now! ",
     "desc-1" => "What Is HTPP Header Checker by cmlabs?",
     "desc-1-1" => "Welcome to the world of precision and efficiency, where every digital conversation begins and ends with meticulous scrutiny!",

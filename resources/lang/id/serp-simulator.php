@@ -5,11 +5,18 @@ return [
     "lang" => "id",
     "title" => "Serp Simulator",
     "sub-title" => "Cek HTTP Header Anda",
-    "headerchecker-btn" => "Periksa URL",
-    "headerchecker-placeholder" => "https://www.example.com",
+    "serp-btn" => "Periksa URL",
+    "serp-placeholder" => "https://www.example.com",
+    "serp-btn-tooltip" => "Anda hanya dapat mencari 5 kali dalam 1 jam",
+
+
+
+
+
+
+
     "result" => "Hasil",
     "result-none" => "URL belum terdeteksi, masukkan domain Anda di atas!",
-    "headerchecker-btn-tooltip" => "Anda hanya dapat mencari 5 kali dalam 1 jam",
     "highlight" => "HTTP Header Checker dari cmlabs adalah tool gratis yang dirancang untuk memeriksa header HTTP dari website tertentu. Anda dapat memasukkan URL dan memperoleh informasi terperinci tentang header HTTP di URL tersebut. Pemeriksaan ini penting untuk meninjau kinerja, keamanan, dan kompatibilitas suatu website. Dengan HTTP Header Checker dari cmlabs, Anda dapat memperoleh laporan mengenai koneksi, jenis konten, etag, kontrol cache, jenis server, dan lainnya. Coba sekarang!",
     "desc-1" => "Apa Itu HTPP Header Checker dari cmlabs?",
     "desc-1-1" => "Dalam era digital yang semakin kompleks, aspek ketelitian dan efisiensi menjadi kunci utama untuk memastikan website berjalan tanpa hambatan dan terus memberikan kinerja optimal.",
