@@ -348,8 +348,8 @@ id/serp-simulator
                                 <p class="h6 text-black font-weight-bolder mb-5">@lang('serp-simulator.practice-title')</p>
                                 <label for="URL" class="font-weight-bold text-black">@lang('serp-simulator.label-url')</label>
                                 <div class="position-relative">
-                                    <input type="text" class="form-control url" name="" placeholder="@lang('serp-simulator.placeholder-url')" value="">
-                                    <label class="label-btn-fetch">
+                                    <input id="url" type="text" class="form-control url" name="" placeholder="@lang('serp-simulator.placeholder-url')" value="">
+                                    <label class="label-btn-fetch" id="btn-fetch">
                                         @lang('serp-simulator.label-btn-fetch')
                                     </label>
                                 </div>
@@ -357,14 +357,18 @@ id/serp-simulator
                             <div class="col-12 mb-5">
                                 <div class="d-flex justify-content-between">
                                     <label class="text-black font-weight-bold" for="title-meta">@lang('serp-simulator.label-title-meta')</label>
-                                    <label class="text-black font-weight-bold" for="title-meta-count">@lang('serp-simulator.label-title-meta-count')</label>
+                                    <label class="text-black font-weight-bold" for="title-meta-count">
+                                        <span id="char-title">0</span> char (<span id="px-title">0</span> / 600px)
+                                    </label>
                                 </div>
                                 <textarea name="" class="form-control custom-textarea-82 title mb-5" placeholder="@lang('serp-simulator.placeholder-title-meta')"></textarea>
                             </div>
                             <div class="col-12 mb-5">
                                 <div class="d-flex justify-content-between">
                                     <label class="text-black font-weight-bold" for="desc-meta">@lang('serp-simulator.label-desc-meta')</label>
-                                    <label class="text-black font-weight-bold" for="desc-meta-count">@lang('serp-simulator.label-desc-meta-count')</label>
+                                    <label class="text-black font-weight-bold" for="desc-meta-count">
+                                        <span id="char-desc">0</span> char (<span id="px-desc">0</span> / 600px)
+                                    </label>
                                 </div>
                                 <textarea name="" class="form-control custom-textarea-82 desc mb-5" placeholder="@lang('serp-simulator.placeholder-desc-meta')"></textarea>
                             </div>

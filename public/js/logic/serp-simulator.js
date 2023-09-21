@@ -242,13 +242,25 @@ function renderAllData(data) {
     $(".title").val(data.title);
     $(".desc").val(data.description);
     $(".keywords").prop("disabled", false);
-    
+
     // Snippet Preview
     $(".snippet-favicon").attr("src", data.icon);
     $(".snippet-website").text(data.provider);
     $(".snippet-breadcrumbs").text(data.url);
     $(".snippet-title-preview").text(data.title);
     $(".snippet-desc-preview").text(data.description);
+
+    // Title Character Count
+    var charCount = data.title.length;
+    var pixelCount = charCount * 7;
+    $("#char-title").text(charCount);
+    $("#px-title").text(pixelCount);
+
+    // Desc Character Count
+    var charCountDesc = data.description.length;
+    var pixelCountDesc = charCountDesc * 7;
+    $("#char-desc").text(charCountDesc);
+    $("#px-desc").text(pixelCountDesc);
 }
 
 function formatDate(date) {
@@ -298,16 +310,32 @@ function updateSnippet_url(val){
 function updateSnippet_title(val){
     if(val){
         $(".snippet-title-preview").text(val);
+
+        // Title Character Count
+        var charCount = val.length;
+        var pixelCount = charCount * 7;
+        $("#char-title").text(charCount);
+        $("#px-title").text(pixelCount);
     }else{
         $(".snippet-title-preview").text(snippet_title);
+        $("#char-title").text(0);
+        $("#px-title").text(0);
     }
 }
 
 function updateSnippet_desc(val){
     if(val){
         $(".snippet-desc-preview").text(val);
+
+        // Desc Character Count
+        var charCountDesc = val.length;
+        var pixelCountDesc = charCountDesc * 7;
+        $("#char-desc").text(charCountDesc);
+        $("#px-desc").text(pixelCountDesc);
     }else{
         $(".snippet-desc-preview").text(snippet_desc);
+        $("#char-desc").text(0);
+        $("#px-desc").text(0);
     }
 }
 
@@ -367,12 +395,23 @@ $("#input-url").keyup(function () {
 
 $("#crawl-btn").click(function () {
     if ($("#input-url").val() === "" || $("#input-url").val() === null) {
-        $("#http-header-result-list").hide();
-        $("#http-header-empty").show();
+        // $("#http-header-result-list").hide();
+        // $("#http-header-empty").show();
         toastr.error("URL is empty", "Error");
-        KTApp.unblock("#http-header-result-container");
+        KTApp.unblock("#serp-result-container");
     } else {
         analyze($("#input-url").val());
+    }
+});
+
+$("#btn-fetch").click(function () {
+    if ($("#url").val() === "" || $("#url").val() === null) {
+        // $("#http-header-result-list").hide();
+        // $("#http-header-empty").show();
+        toastr.error("URL is empty", "Error");
+        KTApp.unblock("#serp-result-container");
+    } else {
+        analyze($("#url").val());
     }
 });
 
