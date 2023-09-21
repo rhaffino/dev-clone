@@ -136,4 +136,9 @@ trait ApiHelper
         $response = $this->request("api/robot-checker/check", 'POST', compact('url'));
         return \GuzzleHttp\json_decode($response, 1);
     }
+
+    protected function requestserpChecker($url){
+        $response = $this->request("api/metadata-scraper/check", 'POST', compact('url'));
+        return \GuzzleHttp\json_decode($response, 1);
+    }
 }

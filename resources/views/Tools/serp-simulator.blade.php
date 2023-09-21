@@ -33,16 +33,16 @@ id/serp-simulator
                         <i id="empty-url" class='bx bxs-shield text-white bx-md mr-3'></i>
                         <i id="secure-url" class='bx bxs-check-shield text-white bx-md mr-3' style="display: none"></i>
                         <i id="unsecure-url" class='bx bxs-shield-x text-white bx-md mr-3' style="display: none"></i>
-                        <input type="url" class="form-control lookup-url" name="" value="" placeholder="@lang('serp-simulator.headerchecker-placeholder')" id="input-url" autocomplete="off">
+                        <input type="url" class="form-control lookup-url" name="" value="" placeholder="@lang('serp-simulator.serp-placeholder')" id="input-url" autocomplete="off">
                     </div>
                     <div class="col-sm-3 col-md-2 col-lg-3 col-xl-2 d-flex justify-content-end py-1">
                         @if (session()->has('logged_in') || session()->get('logged_in') == 'true')
-                            <button id="crawl-btn" type="button" class="btn btn-crawl" name="button" data-toggle="tooltip" data-theme="dark" title="@lang('serp-simulator.headerchecker-btn-tooltip')">@lang('serp-simulator.headerchecker-btn')</button>
+                            <button id="crawl-btn" type="button" class="btn btn-crawl" name="button" data-toggle="tooltip" data-theme="dark" title="@lang('serp-simulator.serp-btn-tooltip')">@lang('serp-simulator.serp-btn')</button>
                         @elseif (isset($access_limit) && $access_limit > 0)
-                            <button disabled="disabled" type="button" class="btn btn-crawl" name="button" data-toggle="tooltip" data-theme="dark" title="@lang('serp-simulator.headerchecker-btn-tooltip')">@lang('serp-simulator.headerchecker-btn')</button>
+                            <button disabled="disabled" type="button" class="btn btn-crawl" name="button" data-toggle="tooltip" data-theme="dark" title="@lang('serp-simulator.serp-btn-tooltip')">@lang('serp-simulator.serp-btn')</button>
                         @else
                             <button id="crawl-btn" class="next-button" style="display: none"></button>
-                            <button id="process-button" type="button" class="btn btn-crawl check-limit-button analysist-button-guest" name="button" data-toggle="tooltip" data-theme="dark" title="@lang('serp-simulator.headerchecker-btn-tooltip')">@lang('serp-simulator.headerchecker-btn')</button>
+                            <button id="process-button" type="button" class="btn btn-crawl check-limit-button analysist-button-guest" name="button" data-toggle="tooltip" data-theme="dark" title="@lang('serp-simulator.serp-btn-tooltip')">@lang('serp-simulator.serp-btn')</button>
                         @endif
                         {{-- <button id="crawlButtonDisabled" type="button" class="btn btn-crawl-disabled" name="button" data-toggle="tooltip" data-theme="dark" title="Currently your are reached the limit!">PLEASE WAIT 59:12</button>--}}
                     </div>
@@ -54,20 +54,39 @@ id/serp-simulator
                         <div class="card-body py-3 px-4">
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="d-flex align-items-center">
-                                    <div id="desktop-serp" class="active wordcounter-background-text-size wordcounter-background-text-size-left-edge text-white font-weight-bolder d-flex justify-content-center align-items-center p-2" data-toggle="tooltip" data-theme="dark" title="" data-original-title="Desktop">
-                                        <i class='bx bx-laptop bx-sm'></i>
+                                    <div id="desktop-serp" class="active wordcounter-background-text-size wordcounter-background-text-size-left-edge font-weight-bolder d-flex justify-content-center align-items-center p-2" data-toggle="tooltip" data-theme="dark" title="" data-original-title="Desktop">
+                                        <i class='bx bx-laptop bx-sm text-white'></i>
                                     </div>
-                                    <div id="mobile-serp" class="wordcounter-background-text-size wordcounter-background-text-size-right-edge text-white font-weight-bolder d-flex justify-content-center align-items-center p-2" data-toggle="tooltip" data-theme="dark" title="" data-original-title="Mobile">
-                                        <i class='bx bx-mobile-alt bx-sm' ></i>
+                                    <div id="mobile-serp" class="wordcounter-background-text-size wordcounter-background-text-size-right-edge font-weight-bolder d-flex justify-content-center align-items-center p-2" data-toggle="tooltip" data-theme="dark" title="" data-original-title="Mobile">
+                                        <i class='bx bx-mobile-alt bx-sm text-white'></i>
+                                    </div>
+
+                                    <div class="action-preview">
+                                        <i id="ads-serp-preview"
+                                            class='bx bx-money bx-sm mx-2 text-darkgrey text-hover-primaryblue'
+                                            data-toggle="tooltip" data-theme="dark"
+                                            title="Google Ads Preview"></i>
+                                        <i id="date-serp-preview"
+                                            class='bx bxs-calendar bx-sm mx-2 text-darkgrey text-hover-primaryblue'
+                                            data-toggle="tooltip" data-theme="dark"
+                                            title="Show Date"></i>
+                                        <i id="rating-serp-preview"
+                                            class='bx bxs-star bx-sm mx-2 text-darkgrey text-hover-primaryblue'
+                                            data-toggle="tooltip" data-theme="dark"
+                                            title="Show Rating"></i>
                                     </div>
                                 </div>
-                                <div id="autosaveParam" data-autosave="on" class="">
-                                    <i id="save"
-                                        class='bx bxs-save bx-sm mx-2 text-darkgrey text-hover-primaryblue'
+                                <div class="d-flex align-items-center">
+                                    <i id="reset-serp-preview"
+                                        class='bx bx-reset bx-sm mx-2 text-darkgrey text-hover-primaryblue'
                                         data-toggle="tooltip" data-theme="dark"
-                                        title="{{ Lang::get('wordcounter.tooltip-new-local-history') }}"></i>
-                                    <i id="share"
-                                        class='bx bx-share-alt bx-sm mx-2 text-darkgrey text-hover-primaryblue auto-save-off'
+                                        title="Reset"></i>
+                                    <i id="download-serp-preview"
+                                        class='bx bxs-download bx-sm mx-2 text-darkgrey text-hover-primaryblue'
+                                        data-toggle="tooltip" data-theme="dark"
+                                        title="Download"></i>
+                                    <i id="share-serp-preview"
+                                        class='bx bxs-share-alt bx-sm mx-2 text-darkgrey text-hover-primaryblue'
                                         data-toggle="tooltip" data-theme="dark"
                                         title="Share"></i>
                                 </div>
@@ -75,152 +94,245 @@ id/serp-simulator
                         </div>
                     </div>
 
-                    <div class="card card-custom serp-simulator-result" id="http-header-result-container">
-                        <div class="card-body py-4 px-0">
-
-                            <div id="snippet-desktop" aria-hidden="false" class="uk-active">
-                                <div class="search-header d-flex">
-                                    <div class="search-logo">
-                                        <img alt="Logo" width="92" src="{{ asset('media/serp-snippet/google-logo-serp-simulator.webp') }}">
+                    <div class="card card-custom serp-simulator-result" id="serp-result-container">
+                        <div class="card-body py-5 px-0">
+                        <!-- Snippet Desktop -->
+                            <div id="snippet-desktop">
+                                <div class="snippet-header d-flex">
+                                    <div class="snippet-logo">
+                                        <img alt="Google logo" width="92" src="{{ asset('media/serp-snippet/google-logo-serp-simulator.webp') }}">
                                     </div>
-
                                     <div>
-                                        <form action="#" class="serp-form-tag position-relative">
-                                            <strong class="mg-label is-small is-yellow">TIP:</strong>
-                                            <input class="search-input" placeholder="Enter a keyword to get real search results" type="text">
+                                        <form action="#" class="snippet-form-tag position-relative">
+                                            <strong class="snippet-label text-small">
+                                                <i class='bx bx-search bx-sm'></i>
+                                            </strong>
+                                            <input class="snippet-input" placeholder="@lang('serp-simulator.snippet-input')" type="text">
                                         </form>
 
-                                        <div class="search-menu d-flex">
-                                            <div class="search-cat is-active">All</div>
-                                            <div class="search-cat">Images</div>
-                                            <div class="search-cat">Videos</div>
-                                            <div class="search-cat">News</div>
-                                            <div class="search-cat">Maps</div>
-                                            <div class="search-cat">More</div>
+                                        <div class="snippet-menu d-flex">
+                                            <div class="snippet-search-cat menu-active">@lang('serp-simulator.snippet-cat-1')</div>
+                                            <div class="snippet-search-cat">@lang('serp-simulator.snippet-cat-2')</div>
+                                            <div class="snippet-search-cat">@lang('serp-simulator.snippet-cat-3')</div>
+                                            <div class="snippet-search-cat">@lang('serp-simulator.snippet-cat-4')</div>
+                                            <div class="snippet-search-cat">@lang('serp-simulator.snippet-cat-5')</div>
+                                            <div class="snippet-search-cat">@lang('serp-simulator.snippet-cat-6')</div>
                                         </div>
                                     </div>
                                 </div>
 
-                                <div class="search-results">
-                                    <div class="search-count">About 608,000,000 results (0.54 seconds) </div>
+                                <div class="snippet-results">
+                                    <div class="snippet-count">About 72.600 results (0.42 seconds)</div>
 
-                                    <div class="search-result is-ad d-none">
-                                        <div class="snippet-url"><span class="domain">tools.cmlabs.co</span></div>
-                                        <div class="snippet-title">Mangools: Free &amp; Juicy SEO Tools You Will Love</div>
-                                        <div class="snippet-descr mg-truncate">Mangools is a bundle of 5 simple but powerful SEO tools made for an effective SEO workflow. Loved by beginners, trusted by professionals. Try it for free!</div>
-                                    </div>
-
-                                    <div class="search-result is-ad d-none">
-                                        <div class="snippet-url"><span class="domain">tools.cmlabs.co/serpchecker</span></div>
-                                        <div class="snippet-title">SERPChecker: Google SERP Competitor Analysis Tool</div>
-                                        <div class="snippet-descr">Get local SERPs for more than 50k locations. Analyze rich snippets and compare your website with competitors thanks to 45+ SEO metrics. Try it now for free!</div>
-                                    </div>
-
-                                    <!-- <div class="search-result is-map d-none">
-                                        <img alt="map pack" width="600" src="{{ asset('media/serp-snippet/google-map-serp-simulator.webp') }}">
-                                    </div> -->
-
-                                    <div class="search-result is-preview" id="desktop-preview-result">
-                                        <div class="snippet-url preview-url mg-truncate"><span class="domain">tools.cmlabs.co</span> › free-seo-tools › serp-simulator</div>
-                                        <div class="snippet-title preview-title">This is an Example of a Title Tag</div>
-                                        <div class="snippet-descr"><span class="preview-date d-none">Aug 20, 2022 - </span><span class="preview-descr">Here is an example of what a snippet looks like in Google's SERPs. The content that appears here is usually taken from the Meta Description tag if relevant.</span></div>
-                                        <div class="preview-rating d-none d-flex align-items-center">
-                                            <img alt="Rating stars" width="65" style="margin-right: 6px;" src="{{ asset('media/serp-snippet/star-serp-simulator.webp') }}">
-                                            Rating: 4.1/5 - 112 votes
+                                    <!-- Ads Google -->
+                                    <div class="snippet-result snippet-ads">
+                                        <div class="snippet-url  snippet-truncate d-flex align-items-center">
+                                            <div class="d-flex flex-column">
+                                                <div class="snippet-domain d-flex align-items-center">
+                                                    <div>
+                                                        <span class="ad-label">@lang('serp-simulator.ad-label')</span>
+                                                        <span>@lang('serp-simulator.ad-domain-1')</span> › @lang('serp-simulator.ad-breadcrumbs-1')  
+                                                    </div>
+                                                    <i class='bx bx-dots-vertical-rounded'></i>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <!-- <canvas id="canvas" width="720" height="160" style="margin: -20px -60px; opacity:0.75;" class="uk-position-top-left"></canvas> -->
+                                        <div class="snippet-title">@lang('serp-simulator.ad-snippet-title-1')</div>
+                                        <div class="snippet-desc snippet-truncate">@lang('serp-simulator.ad-snippet-desc-1')</div>
+                                    </div>
+                                    <div class="snippet-result snippet-ads">
+                                        <div class="snippet-url snippet-truncate d-flex align-items-center">
+                                            <div class="d-flex flex-column">
+                                                <div class="snippet-domain d-flex align-items-center">
+                                                    <div>
+                                                        <span class="ad-label">@lang('serp-simulator.ad-label')</span>
+                                                        <span>@lang('serp-simulator.ad-domain-2')</span> › @lang('serp-simulator.ad-breadcrumbs-2')  
+                                                    </div>
+                                                    <i class='bx bx-dots-vertical-rounded'></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="snippet-title">@lang('serp-simulator.ad-snippet-title-2')</div>
+                                        <div class="snippet-desc">@lang('serp-simulator.ad-snippet-desc-2')</div>
                                     </div>
 
+                                    <div class="snippet-result snippet-preview" id="desktop-preview-result">
+                                        <div class="snippet-url snippet-truncate d-flex align-items-center">
+                                            <div class="favicon__container">
+                                                <img src="https://www.google.com/s2/favicons?domain=default" class="d-flex-item-none snippet-favicon">
+                                            </div>
+                                            <div class="d-flex flex-column">
+                                                <div class="snippet-website">cmlabs.co</div>
+                                                <div class="snippet-domain d-flex align-items-center">
+                                                    <div>
+                                                        <span class="snippet-breadcrumbs">https://tools.cmlabs.co</span>  
+                                                    </div>
+                                                    <i class='bx bx-dots-vertical-rounded'></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="snippet-title snippet-title-preview">This is an Example of a Title Tag</div>
+                                        <div class="snippet-desc"><span class="snippet-date">Sep 20, 2023 - </span><span class="snippet-desc-preview" id="snippet-desc-preview-desktop">Here is an example of what a snippet looks like in Google's SERPs. The content that appears here is usually taken from the Meta Description tag if relevant.</span></div>
+                                        <div class="snippet-rating align-items-center">
+                                            <div class="snippet-rating-vote">
+                                                <i class="bx bxs-star active"></i>
+                                                <i class="bx bxs-star active"></i>
+                                                <i class="bx bxs-star active"></i>
+                                                <i class="bx bxs-star active"></i>
+                                                <i class="bx bxs-star"></i>
+                                            </div>
+                                            Rating: 4.1/5 - 61 votes
+                                        </div>
+                                    </div>
 
-                                    <div class="search-result is-placeholder">
+                                    <div class="snippet-result is-placeholder">
                                         <div><span class="snippet-url d-block"></span></div>
                                         <div><span class="snippet-title"></span></div>
-                                        <div class="snippet-descr"></div>
+                                        <div class="snippet-desc"></div>
                                     </div>
 
-                                    <div class="search-result is-placeholder">
+                                    <div class="snippet-result is-placeholder">
                                         <div><span class="snippet-url d-block"></span></div>
                                         <div><span class="snippet-title"></span></div>
-                                        <div class="snippet-descr"></div>
+                                        <div class="snippet-desc"></div>
                                     </div>
 
-                                    <div class="search-result is-placeholder">
+                                    <div class="snippet-result is-placeholder">
                                         <div><span class="snippet-url d-block"></span></div>
                                         <div><span class="snippet-title"></span></div>
-                                        <div class="snippet-descr"></div>
+                                        <div class="snippet-desc"></div>
                                     </div>
-
                                 </div>
-
                             </div>
 
-                            <div id="snippet-mobile" aria-hidden="false" class="uk-active">
-                                <div class="search-header">
-                                    <div class="search-logo text-center mg-margin-b-10">
+                            <div id="snippet-mobile">
+                                <div class="snippet-header">
+                                    <div class="snippet-logo text-center">
                                         <img alt="Logo" width="92" src="{{ asset('media/serp-snippet/google-logo-serp-simulator.webp') }}">
                                     </div>
 
                                     <div>
 
-                                        <form action="#" class="serp-form-tag position-relative">
-                                            <strong class="mg-label is-small is-yellow font-10 font-montserrat uk-position-top-left mg-margin-t-15 mg-margin-l-15">TIP:</strong>
-                                            <input class="search-input" placeholder="Enter a keyword to get real search results" type="text">
+                                        <form action="#" class="snippet-form-tag position-relative">
+                                            <strong class="snippet-label text-small">
+                                                <i class='bx bx-search bx-sm'></i>
+                                            </strong>
+                                            <input class="snippet-input" placeholder="@lang('serp-simulator.snippet-input')" type="text">
                                         </form>
 
-                                        <div class="search-menu d-flex">
-                                            <div class="search-cat is-active">All</div>
-                                            <div class="search-cat">Images</div>
-                                            <div class="search-cat">Videos</div>
-                                            <div class="search-cat">News</div>
-                                            <div class="search-cat">Maps</div>
-                                            <div class="search-cat">More</div>
+                                        <div class="snippet-menu d-flex">
+                                            <div class="snippet-search-cat menu-active">@lang('serp-simulator.snippet-cat-1')</div>
+                                            <div class="snippet-search-cat">@lang('serp-simulator.snippet-cat-2')</div>
+                                            <div class="snippet-search-cat">@lang('serp-simulator.snippet-cat-3')</div>
+                                            <div class="snippet-search-cat">@lang('serp-simulator.snippet-cat-4')</div>
+                                            <div class="snippet-search-cat">@lang('serp-simulator.snippet-cat-5')</div>
+                                            <div class="snippet-search-cat">@lang('serp-simulator.snippet-cat-6')</div>
                                         </div>
                                     </div>
                                 </div>
 
-                                <div class="search-results">
-
-                                    <div class="search-result is-ad d-none">
-                                        <div><a href="https://tools.cmlabs.co/?ref=snippet-preview" class="snippet-url uk-display-block">tools.cmlabs.co › SEO-tools</a></div>
-                                        <div class="snippet-title">Mangools: Free &amp; Juicy SEO Tools You Will Love</div>
-                                        <div class="snippet-descr">Mangools is a bundle of 5 simple but powerful SEO tools made for an effective SEO workflow. Loved by beginners, trusted by professionals. Try it for free!</div>
+                                <div class="snippet-results">
+                                    <div class="snippet-result snippet-ads">
+                                        <div class="snippet-url snippet-truncate d-flex align-items-center">
+                                            <div class="d-flex flex-column">
+                                                <div class="snippet-domain d-flex align-items-center">
+                                                    <div>
+                                                        <span class="ad-label">@lang('serp-simulator.ad-label')</span>
+                                                        <span>@lang('serp-simulator.ad-domain-1')</span> › @lang('serp-simulator.ad-breadcrumbs-1')  
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <i class='bx bx-dots-vertical-rounded ms-auto'></i>
+                                        </div>
+                                        <div class="snippet-title">@lang('serp-simulator.ad-snippet-title-1')</div>
+                                        <div class="snippet-desc">@lang('serp-simulator.ad-snippet-desc-1')</div>
+                                    </div>
+                                    <div class="snippet-result snippet-ads">
+                                        <div class="snippet-url snippet-truncate d-flex align-items-center">
+                                            <div class="d-flex flex-column">
+                                                <div class="snippet-domain d-flex align-items-center">
+                                                    <div>
+                                                        <span class="ad-label">@lang('serp-simulator.ad-label')</span>
+                                                        <span>@lang('serp-simulator.ad-domain-2')</span> › @lang('serp-simulator.ad-breadcrumbs-2')  
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <i class='bx bx-dots-vertical-rounded ms-auto'></i>
+                                        </div>
+                                        <div class="snippet-title">@lang('serp-simulator.ad-snippet-title-2')</div>
+                                        <div class="snippet-desc">@lang('serp-simulator.ad-snippet-desc-2')</div>
                                     </div>
 
-                                    <div class="search-result is-ad d-none">
-                                        <div><a href="https://tools.cmlabs.co/serpchecker/?ref=snippet-preview" class="snippet-url uk-display-block">tools.cmlabs.co/serpchecker</a></div>
-                                        <div class="snippet-title">SERPChecker: Google SERP Competitor Analysis Tool</div>
-                                        <div class="snippet-descr">Get local SERPs for more than 50k locations. Analyze rich snippets and compare your website with competitors thanks to 45+ SEO metrics. Try it now for free!</div>
+                                    <div class="snippet-result snippet-preview">
+                                        <div class="snippet-url d-flex align-items-center">
+                                            <div class="favicon__container">
+                                                <img src="https://www.google.com/s2/favicons?domain=default" class="snippet-favicon">
+                                            </div>
+                                            <div class="d-flex flex-column">
+                                                <div class="snippet-website">cmlabs.co</div>
+                                                <div class="snippet-domain d-flex align-items-center">
+                                                    <div>
+                                                        <span class="snippet-breadcrumbs">https://tools.cmlabs.co</span>  
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <i class='bx bx-dots-vertical-rounded ms-auto'></i>
+                                        </div>
+                                        <div class="snippet-title snippet-title-preview">This is an Example of a Title Tag</div>
+                                        <div class="snippet-desc">
+                                            <span class="snippet-date">Sep 20, 2023 - </span><span class="snippet-desc-preview" id="snippet-desc-preview-mobile">Here is an example of what a snippet looks like in Google's SERPs. The content that appears here is usually taken from the Meta Description tag if relevant.</span>
+                                        </div>
+                                        <div class="snippet-rating">
+                                            <div class="d-flex align-items-center">
+                                                4,1 
+                                                <div class="snippet-rating-vote">
+                                                    <i class="bx bxs-star active"></i>
+                                                    <i class="bx bxs-star active"></i>
+                                                    <i class="bx bxs-star active"></i>
+                                                    <i class="bx bxs-star active"></i>
+                                                    <i class="bx bxs-star"></i>
+                                                </div>
+                                                (61)
+                                            </div>
+                                        </div>
+                                        <!-- <canvas id="canvas2" width="720" height="180" style="margin: -20px -60px; opacity:0.75;" class="uk-position-top-left"></canvas> -->
                                     </div>
 
-                                    <!-- <div class="search-result is-map d-none" style="margin-bottom: 10px; padding: 0;">
-                                        <img alt="map pack" width="600" src="https://mangools.com/assets/other/mappack-mobile-d3c0041f9011b5aaa7d1766df361aeece12dc23b60cf911e245333c8f8a104bb.png">
-                                    </div> -->
-
-                                    <div class="search-result is-preview">
-                                        <div class="snippet-url d-flex align-items-center"><img src="https://www.google.com/s2/favicons?domain=default" class="preview-favicon d-flex-item-none"><span class="preview-url mg-truncate"><span class="domain">tools.cmlabs.co</span> › free-seo-tools › serp-simulator</span></div>
-                                        <div class="snippet-title preview-title">This is an Example of a Title Tag</div>
-                                        <div class="snippet-descr"><span class="preview-date d-none">Apr 20, 2018 - </span><span class="preview-descr">Here is an example of what a snippet looks like in Google's SERPs. The content that appears here is usually taken from the Meta Description tag if relevant.</span></div>
-                                        <div class="preview-rating d-none"><span style="color: #3C4043">Rating</span><br>
-                                            <span class="d-flex align-items-center">4.1/5 <img alt="Rating stars" width="65" style="margin-left: 6px;" src="{{ asset('media/serp-snippet/star-serp-simulator.webp') }}"></span></div>
-                                            <!-- <canvas id="canvas2" width="720" height="180" style="margin: -20px -60px; opacity:0.75;" class="uk-position-top-left"></canvas> -->
-                                    </div>
-
-                                    <div class="search-result is-placeholder">
-                                        <div class="snippet-url d-flex align-items-center"><img src="https://www.google.com/s2/favicons?domain=default" class="d-flex-item-none"></div>
+                                    <div class="snippet-result is-placeholder">
+                                        <div class="snippet-url d-flex align-items-center">
+                                            <div class="favicon__container">
+                                                <img src="https://www.google.com/s2/favicons?domain=default">
+                                            </div>
+                                            <div class="d-flex flex-column">
+                                                <div class="snippet-url-mobile"></div>
+                                            </div>
+                                        </div>
                                         <div class="snippet-title"></div>
-                                        <div class="snippet-descr"></div>
+                                        <div class="snippet-desc"></div>
                                     </div>
-
-                                    <div class="search-result is-placeholder">
-                                        <div class="snippet-url d-flex align-items-center"><img src="https://www.google.com/s2/favicons?domain=default" class="d-flex-item-none"></div>
+                                    <div class="snippet-result is-placeholder">
+                                        <div class="snippet-url d-flex align-items-center">
+                                            <div class="favicon__container">
+                                                <img src="https://www.google.com/s2/favicons?domain=default">
+                                            </div>
+                                            <div class="d-flex flex-column">
+                                                <div class="snippet-url-mobile"></div>
+                                            </div>
+                                        </div>
                                         <div class="snippet-title"></div>
-                                        <div class="snippet-descr"></div>
+                                        <div class="snippet-desc"></div>
                                     </div>
-
-                                    <div class="search-result is-placeholder">
-                                        <div class="snippet-url d-flex align-items-center"><img src="https://www.google.com/s2/favicons?domain=default" class="d-flex-item-none"></div>
+                                    <div class="snippet-result is-placeholder">
+                                        <div class="snippet-url d-flex align-items-center">
+                                            <div class="favicon__container">
+                                                <img src="https://www.google.com/s2/favicons?domain=default">
+                                            </div>
+                                            <div class="d-flex flex-column">
+                                                <div class="snippet-url-mobile"></div>
+                                            </div>
+                                        </div>
                                         <div class="snippet-title"></div>
-                                        <div class="snippet-descr"></div>
+                                        <div class="snippet-desc"></div>
                                     </div>
 
                                 </div>
@@ -228,7 +340,41 @@ id/serp-simulator
                         </div>
                     </div>
                 </div>
+
                 <div class="col-md-4">
+                    <div class="card card-custom mb-5 p-5 practice-serp-simulator" id="practice-serp-simulator">
+                        <div class="row">
+                            <div class="col-12 mb-5">
+                                <p class="h6 text-black font-weight-bolder mb-5">@lang('serp-simulator.practice-title')</p>
+                                <label for="URL" class="font-weight-bold text-black">@lang('serp-simulator.label-url')</label>
+                                <div class="position-relative">
+                                    <input type="text" class="form-control url" name="" placeholder="@lang('serp-simulator.placeholder-url')" value="">
+                                    <label class="label-btn-fetch">
+                                        @lang('serp-simulator.label-btn-fetch')
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-12 mb-5">
+                                <div class="d-flex justify-content-between">
+                                    <label class="text-black font-weight-bold" for="title-meta">@lang('serp-simulator.label-title-meta')</label>
+                                    <label class="text-black font-weight-bold" for="title-meta-count">@lang('serp-simulator.label-title-meta-count')</label>
+                                </div>
+                                <textarea name="" class="form-control custom-textarea-82 title mb-5" placeholder="@lang('serp-simulator.placeholder-title-meta')"></textarea>
+                            </div>
+                            <div class="col-12 mb-5">
+                                <div class="d-flex justify-content-between">
+                                    <label class="text-black font-weight-bold" for="desc-meta">@lang('serp-simulator.label-desc-meta')</label>
+                                    <label class="text-black font-weight-bold" for="desc-meta-count">@lang('serp-simulator.label-desc-meta-count')</label>
+                                </div>
+                                <textarea name="" class="form-control custom-textarea-82 desc mb-5" placeholder="@lang('serp-simulator.placeholder-desc-meta')"></textarea>
+                            </div>
+                            <div class="col-12 mb-5">
+                                <label for="keywords" class="font-weight-bold text-black">@lang('serp-simulator.label-keyword')</label>
+                                <input type="text" class="form-control keywords" name="" placeholder="@lang('serp-simulator.placeholder-keyword')" value="" disabled>
+                            </div>
+                        </div>
+                    </div>
+                    
                     <div id="local-collection-desktop" class="local-collection">
                         <div class="local-collection-header d-flex justify-content-between px-2 mb-3">
                             <div class="d-flex flex-row align-items-center">
@@ -244,6 +390,7 @@ id/serp-simulator
                             </ul>
                         </div>
                     </div>
+
                     <div class="desktop-version">
                         <div class="accordion accordion-light accordion-toggle-arrow custom-features-accordion" id="accordionExample2">
                             <div class="card bg-transparent" style="">
@@ -390,7 +537,7 @@ id/serp-simulator
     });
 </script>
 <script>
-    const HTTP_HEADER_CHECK_API_URL = "{{ route('api.header-checker') }}";
+    const SERP_CHECK_API_URL = "{{ route('api.metadata-scraper') }}";
 </script>
 <script src="{{asset('js/logic/serp-simulator.js')}}"></script>
 <script type="application/ld+json">
