@@ -1,5 +1,7 @@
-const HTTP_HEADER_LOCAL_STORAGE_KEY = "http-header-history";
+// Global Variable
+const SERP_LOCAL_STORAGE_KEY = "serp-history";
 
+// Language Variable
 if (lang == "en") {
     var created_at = "Created at ";
     var localStorageNone = "This is your first impressions, no history yet!";
@@ -27,6 +29,7 @@ if (lang == "en") {
     var snippet_rating = "Rating: 4.1/5 - 61 votes";
 }
 
+// Template
 const HttpHeaderTemplate = (title, desc) => `
 <div class="d-flex flex-column">
     <p class="font-weight-bold headercheck-content text-darkgrey"><span class="text-black">${title}</span>: ${desc}</p>
@@ -75,10 +78,11 @@ const EmptyHistoryTemplateMobile = () =>
 </div>
 </div>`;
 
+// All Function
 function getHistories() {
     $("#local-history").empty();
     $("#local-history-mobile").empty();
-    let histories = localStorage.getItem(HTTP_HEADER_LOCAL_STORAGE_KEY);
+    let histories = localStorage.getItem(SERP_LOCAL_STORAGE_KEY);
     histories = histories ? JSON.parse(histories) : [];
     if (!histories || histories.length === 0) {
         $("#local-history").append(EmptyHistoryTemplate());
@@ -100,7 +104,7 @@ function getHistories() {
 }
 
 function addHistory(url, data) {
-    let histories = localStorage.getItem(HTTP_HEADER_LOCAL_STORAGE_KEY);
+    let histories = localStorage.getItem(SERP_LOCAL_STORAGE_KEY);
     histories = histories ? JSON.parse(histories) : [];
     const month = [
         "Jan",
@@ -130,7 +134,7 @@ function addHistory(url, data) {
         date: formatDate,
     });
     localStorage.setItem(
-        HTTP_HEADER_LOCAL_STORAGE_KEY,
+        SERP_LOCAL_STORAGE_KEY,
         JSON.stringify(histories)
     );
     getHistories();
@@ -138,12 +142,12 @@ function addHistory(url, data) {
 
 function deleteHistory(_index) {
     const histories = JSON.parse(
-        localStorage.getItem(HTTP_HEADER_LOCAL_STORAGE_KEY)
+        localStorage.getItem(SERP_LOCAL_STORAGE_KEY)
     );
 
     histories.splice(_index, 1);
     localStorage.setItem(
-        HTTP_HEADER_LOCAL_STORAGE_KEY,
+        SERP_LOCAL_STORAGE_KEY,
         JSON.stringify(histories)
     );
 
@@ -151,7 +155,7 @@ function deleteHistory(_index) {
 }
 
 let clearAllHistory = function () {
-    localStorage.removeItem(HTTP_HEADER_LOCAL_STORAGE_KEY);
+    localStorage.removeItem(SERP_LOCAL_STORAGE_KEY);
     getHistories();
 };
 
@@ -174,7 +178,7 @@ function analyze(_url) {
                     url: _url,
                 },
                 beforeSend: () => {
-                    KTApp.block("#http-header-result-container", {
+                    KTApp.block("#serp-result-container", {
                         overlayColor: "gray",
                         opacity: 0.1,
                         state: "primary",
@@ -183,11 +187,11 @@ function analyze(_url) {
                 success: (res) => {
                     if (res.statusCode === 200) {
                         console.log(res.data);
-                        // renderAllData(res.data);
+                        renderAllData(res.data);
                         // addHistory(_url, res.data);
                         // getHistories();
                         toastr.success(
-                            "Success scan http header checker",
+                            "Success Scan Website",
                             "Success"
                         );
                     } else if (err.responseJSON.statusCode === 429) {
@@ -199,8 +203,8 @@ function analyze(_url) {
                             `Error ${err.responseJSON.message}`
                         );
                     } else {
-                        $("#http-header-result-list").hide();
-                        $("#http-header-empty").show();
+                        // $("#http-header-result-list").hide();
+                        // $("#http-header-empty").show();
                         toastr.error(res.message, "Error");
                     }
                 },
@@ -217,11 +221,11 @@ function analyze(_url) {
                     } else {
                         toastr.error(err.responseJSON.message, "Error");
                     }
-                    $("#http-header-result-list").hide();
-                    $("#http-header-empty").show();
+                    // $("#http-header-result-list").hide();
+                    // $("#http-header-empty").show();
                 },
                 complete: () => {
-                    KTApp.unblock("#http-header-result-container");
+                    KTApp.unblock("#serp-result-container");
                 },
             });
         } else {
@@ -233,13 +237,18 @@ function analyze(_url) {
 }
 
 function renderAllData(data) {
-    $("#http-header-empty").hide();
-    $("#http-header-result-list").empty().show();
-
-    $.each(data, function (key, value) {
-        // Menampilkan hasil perulangan di console browser
-        $("#http-header-result-list").append(HttpHeaderTemplate(key, value));
-    });
+    // Practice SERP Simulator Input
+    $(".url").val(data.url);
+    $(".title").val(data.title);
+    $(".desc").val(data.description);
+    $(".keywords").prop("disabled", false);
+    
+    // Snippet Preview
+    $(".snippet-favicon").attr("src", data.icon);
+    $(".snippet-website").text(data.provider);
+    $(".snippet-breadcrumbs").text(data.url);
+    $(".snippet-title-preview").text(data.title);
+    $(".snippet-desc-preview").text(data.description);
 }
 
 function formatDate(date) {
@@ -278,6 +287,65 @@ function getProtocol(url) {
     }
 }
 
+function updateSnippet_url(val){
+    if(val){
+        $(".snippet-breadcrumbs").text(val);
+    }else{
+        $(".snippet-breadcrumbs").text(snippet_domain);
+    }
+}
+
+function updateSnippet_title(val){
+    if(val){
+        $(".snippet-title-preview").text(val);
+    }else{
+        $(".snippet-title-preview").text(snippet_title);
+    }
+}
+
+function updateSnippet_desc(val){
+    if(val){
+        $(".snippet-desc-preview").text(val);
+    }else{
+        $(".snippet-desc-preview").text(snippet_desc);
+    }
+}
+
+function updateSnippet_keywords(val) {
+    var inputKeywords = val.toLowerCase();
+    var keywordsArray = inputKeywords.split(/[ ,]+/);
+    var paragraf_desktop = $("#snippet-desc-preview-desktop").text();
+    var paragraf_mobile = $("#snippet-desc-preview-mobile").text();
+
+    // Function to perform formatting on matching words
+    function formatKata(match) {
+        return "<strong>" + match + "</strong>";
+    }
+
+    // Loop through each separated keyword
+    for (var i = 0; i < keywordsArray.length; i++) {
+        var keyword = keywordsArray[i].trim(); // Remove extra spaces from keywords
+        if (keyword !== "") {
+            // Create a regular expression to search for words that match the keyword
+            var regex = new RegExp("\\b" + keyword + "\\b", "gi");
+
+            paragraf_desktop = paragraf_desktop.replace(regex, formatKata);
+            paragraf_mobile = paragraf_mobile.replace(regex, formatKata);
+        }
+    }
+
+    // Update paragraphs with formatted text
+    $("#snippet-desc-preview-desktop").html(paragraf_desktop);
+    $("#snippet-desc-preview-mobile").html(paragraf_mobile);
+
+    // Clear format if keyword input is left blank
+    if (inputKeywords === "") {
+        $("#snippet-desc-preview-desktop").html(paragraf_desktop); 
+        $("#snippet-desc-preview-mobile").html(paragraf_mobile);
+    }
+}
+
+// Interaction
 $("#input-url").keyup(function () {
     const _url = $(this).val();
     if (checkUrl(_url)) {
@@ -297,48 +365,6 @@ $("#input-url").keyup(function () {
     }
 });
 
-$("#local-history")
-    .on("click", ".delete-history--btn", function () {
-        deleteHistory($(this).data("index"));
-    })
-    .on("click", ".history--list", function (e) {
-        if (e.target.classList.contains("delete-history--btn")) return;
-        const _url = $(this).data("url");
-
-        let histories = localStorage.getItem(HTTP_HEADER_LOCAL_STORAGE_KEY);
-        histories = histories ? JSON.parse(histories) : [];
-        const history = histories.find((history) => {
-            return history.url === _url;
-        });
-
-        dataResult = history.data;
-
-        renderAllData(history.data);
-    });
-
-$("#local-history-mobile")
-    .on("click", ".delete-history--btn", function () {
-        deleteHistory($(this).data("index"));
-    })
-    .on("click", ".history--list", function (e) {
-        if (e.target.classList.contains("delete-history--btn")) return;
-        const _url = $(this).data("url");
-
-        let histories = localStorage.getItem(HTTP_HEADER_LOCAL_STORAGE_KEY);
-        histories = histories ? JSON.parse(histories) : [];
-        const history = histories.find((history) => {
-            return history.url === _url;
-        });
-
-        dataResult = history.data;
-
-        renderAllData(history.data);
-    });
-
-$(".clear-history--btn").click(function () {
-    clearAllHistory();
-});
-
 $("#crawl-btn").click(function () {
     if ($("#input-url").val() === "" || $("#input-url").val() === null) {
         $("#http-header-result-list").hide();
@@ -350,6 +376,23 @@ $("#crawl-btn").click(function () {
     }
 });
 
+$(document).on("keyup", ".url", function () {
+    updateSnippet_url($(this).val());
+});
+
+$(document).on("keyup", ".title", function () {
+    updateSnippet_title($(this).val());
+});
+
+$(document).on("keyup", ".desc", function () {
+    updateSnippet_desc($(this).val());
+});
+
+$(document).on("input", ".keywords", function () {
+    updateSnippet_keywords($(this).val());
+});
+
+// Layout Action
 $(document).ready(function () {
     getHistories();
 
@@ -386,4 +429,47 @@ $("#rating-serp-preview").click(function () {
 
 $("#date-serp-preview").click(function () {
     $(".snippet-date").toggleClass("active");
+});
+
+// Local History 
+$("#local-history")
+    .on("click", ".delete-history--btn", function () {
+        deleteHistory($(this).data("index"));
+    })
+    .on("click", ".history--list", function (e) {
+        if (e.target.classList.contains("delete-history--btn")) return;
+        const _url = $(this).data("url");
+
+        let histories = localStorage.getItem(SERP_LOCAL_STORAGE_KEY);
+        histories = histories ? JSON.parse(histories) : [];
+        const history = histories.find((history) => {
+            return history.url === _url;
+        });
+
+        dataResult = history.data;
+
+        renderAllData(history.data);
+    });
+
+$("#local-history-mobile")
+    .on("click", ".delete-history--btn", function () {
+        deleteHistory($(this).data("index"));
+    })
+    .on("click", ".history--list", function (e) {
+        if (e.target.classList.contains("delete-history--btn")) return;
+        const _url = $(this).data("url");
+
+        let histories = localStorage.getItem(SERP_LOCAL_STORAGE_KEY);
+        histories = histories ? JSON.parse(histories) : [];
+        const history = histories.find((history) => {
+            return history.url === _url;
+        });
+
+        dataResult = history.data;
+
+        renderAllData(history.data);
+    });
+
+$(".clear-history--btn").click(function () {
+    clearAllHistory();
 });

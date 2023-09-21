@@ -267,6 +267,11 @@
     display: inline-block;
 }
 
+/* Snippet Preview */
+.snippet-favicon{
+    width: 16px;
+}
+
 /* Snippet empty */
 .snippet-url:empty {
     background: #4286f8;

@@ -94,7 +94,7 @@ id/serp-simulator
                         </div>
                     </div>
 
-                    <div class="card card-custom serp-simulator-result" id="http-header-result-container">
+                    <div class="card card-custom serp-simulator-result" id="serp-result-container">
                         <div class="card-body py-5 px-0">
                         <!-- Snippet Desktop -->
                             <div id="snippet-desktop">
@@ -157,22 +157,22 @@ id/serp-simulator
                                     </div>
 
                                     <div class="snippet-result snippet-preview" id="desktop-preview-result">
-                                        <div class="snippet-url  snippet-truncate d-flex align-items-center">
+                                        <div class="snippet-url snippet-truncate d-flex align-items-center">
                                             <div class="favicon__container">
-                                                <img src="https://www.google.com/s2/favicons?domain=default" class=" d-flex-item-none">
+                                                <img src="https://www.google.com/s2/favicons?domain=default" class="d-flex-item-none snippet-favicon">
                                             </div>
                                             <div class="d-flex flex-column">
                                                 <div class="snippet-website">cmlabs.co</div>
                                                 <div class="snippet-domain d-flex align-items-center">
                                                     <div>
-                                                        <span>https://tools.cmlabs.co</span> › serp-simulator  
+                                                        <span class="snippet-breadcrumbs">https://tools.cmlabs.co</span>  
                                                     </div>
                                                     <i class='bx bx-dots-vertical-rounded'></i>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="snippet-title">This is an Example of a Title Tag</div>
-                                        <div class="snippet-desc"><span class="snippet-date">Sep 20, 2023 - </span><span class="snippet-desc">Here is an example of what a snippet looks like in Google's SERPs. The content that appears here is usually taken from the Meta Description tag if relevant.</span></div>
+                                        <div class="snippet-title snippet-title-preview">This is an Example of a Title Tag</div>
+                                        <div class="snippet-desc"><span class="snippet-date">Sep 20, 2023 - </span><span class="snippet-desc-preview" id="snippet-desc-preview-desktop">Here is an example of what a snippet looks like in Google's SERPs. The content that appears here is usually taken from the Meta Description tag if relevant.</span></div>
                                         <div class="snippet-rating align-items-center">
                                             <div class="snippet-rating-vote">
                                                 <i class="bx bxs-star active"></i>
@@ -266,21 +266,21 @@ id/serp-simulator
                                     <div class="snippet-result snippet-preview">
                                         <div class="snippet-url d-flex align-items-center">
                                             <div class="favicon__container">
-                                                <img src="https://www.google.com/s2/favicons?domain=default">
+                                                <img src="https://www.google.com/s2/favicons?domain=default" class="snippet-favicon">
                                             </div>
                                             <div class="d-flex flex-column">
                                                 <div class="snippet-website">cmlabs.co</div>
                                                 <div class="snippet-domain d-flex align-items-center">
                                                     <div>
-                                                        <span>https://tools.cmlabs.co</span> › serp-simulator  
+                                                        <span class="snippet-breadcrumbs">https://tools.cmlabs.co</span>  
                                                     </div>
                                                 </div>
                                             </div>
                                             <i class='bx bx-dots-vertical-rounded ms-auto'></i>
                                         </div>
-                                        <div class="snippet-title ">This is an Example of a Title Tag</div>
+                                        <div class="snippet-title snippet-title-preview">This is an Example of a Title Tag</div>
                                         <div class="snippet-desc">
-                                            <span class="snippet-date">Sep 20, 2023 - </span><span class="snippet-desc">Here is an example of what a snippet looks like in Google's SERPs. The content that appears here is usually taken from the Meta Description tag if relevant.</span>
+                                            <span class="snippet-date">Sep 20, 2023 - </span><span class="snippet-desc-preview" id="snippet-desc-preview-mobile">Here is an example of what a snippet looks like in Google's SERPs. The content that appears here is usually taken from the Meta Description tag if relevant.</span>
                                         </div>
                                         <div class="snippet-rating">
                                             <div class="d-flex align-items-center">
@@ -342,7 +342,7 @@ id/serp-simulator
                 </div>
 
                 <div class="col-md-4">
-                    <div class="card card-custom mb-5 p-5 practice-serp-simulator">
+                    <div class="card card-custom mb-5 p-5 practice-serp-simulator" id="practice-serp-simulator">
                         <div class="row">
                             <div class="col-12 mb-5">
                                 <p class="h6 text-black font-weight-bolder mb-5">@lang('serp-simulator.practice-title')</p>
@@ -370,7 +370,7 @@ id/serp-simulator
                             </div>
                             <div class="col-12 mb-5">
                                 <label for="keywords" class="font-weight-bold text-black">@lang('serp-simulator.label-keyword')</label>
-                                <input type="text" class="form-control keywords" name="" placeholder="@lang('serp-simulator.placeholder-keyword')" value="">
+                                <input type="text" class="form-control keywords" name="" placeholder="@lang('serp-simulator.placeholder-keyword')" value="" disabled>
                             </div>
                         </div>
                     </div>
