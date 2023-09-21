@@ -168,7 +168,7 @@ function analyze(_url) {
     if (checkUrlStr(_url)) {
         if (checkUrl(_url)) {
             $.post({
-                url: HTTP_HEADER_CHECK_API_URL,
+                url: SERP_CHECK_API_URL,
                 data: {
                     _token: $("meta[name=csrf-token]").attr("content"),
                     url: _url,
@@ -183,9 +183,9 @@ function analyze(_url) {
                 success: (res) => {
                     if (res.statusCode === 200) {
                         console.log(res.data);
-                        renderAllData(res.data);
-                        addHistory(_url, res.data);
-                        getHistories();
+                        // renderAllData(res.data);
+                        // addHistory(_url, res.data);
+                        // getHistories();
                         toastr.success(
                             "Success scan http header checker",
                             "Success"
@@ -361,7 +361,7 @@ $(document).ready(function () {
     $("#snippet-mobile").hide();
 });
 
-// use
+// Function Snippet
 $("#desktop-serp").click(function () {
     $("#snippet-desktop").show();
     $("#snippet-mobile").hide();

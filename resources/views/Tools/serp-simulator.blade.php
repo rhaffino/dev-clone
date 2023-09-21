@@ -537,7 +537,7 @@ id/serp-simulator
     });
 </script>
 <script>
-    const HTTP_HEADER_CHECK_API_URL = "{{ route('api.header-checker') }}";
+    const SERP_CHECK_API_URL = "{{ route('api.metadata-scraper') }}";
 </script>
 <script src="{{asset('js/logic/serp-simulator.js')}}"></script>
 <script type="application/ld+json">
