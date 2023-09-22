@@ -9,7 +9,6 @@ return [
     "serp-placeholder" => "https://www.example.com",
     "serp-btn-tooltip" => "You can only search 5 times in 1 hour",
 
-
     "serp-desktop" => "Desktop Preview", 
     "serp-mobile" => "Mobile Preview", 
     "serp-ads" => "Show Google Ads", 

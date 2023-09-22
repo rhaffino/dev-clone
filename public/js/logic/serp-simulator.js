@@ -30,53 +30,6 @@ if (lang == "en") {
 }
 
 // Template
-const HttpHeaderTemplate = (title, desc) => `
-<div class="d-flex flex-column">
-    <p class="font-weight-bold headercheck-content text-darkgrey"><span class="text-black">${title}</span>: ${desc}</p>
-</div>`;
-
-const HistoryTemplate = (index, url, date) => `
-<li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px history--list" data-url="${url}">
-  <div class="d-flex justify-content-between">
-    <div class="local-collection-title">${url}</div>
-    <div class="d-flex align-items-center">
-      <i class='bx bxs-info-circle text-grey bx-sm mr-2' data-toggle="tooltip" data-theme="dark" title="${created_at}${date}"></i>
-      <i class='bx bxs-x-circle bx-sm text-grey delete-history--btn' data-index="${index}"></i>
-    </div>
-  </div>
-</li>
-`;
-
-const EmptyHistoryTemplate = () =>
-    `
-<li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
-  <div class="d-flex justify-content-center text-center">
-    <span>` +
-    localStorageNone +
-    `</span>
-  </div>
-</li>`;
-
-const HistoryTemplateMobile = (index, url, date) => `
-<div class="custom-card py-5 px-3 history--list" data-url="${url}">
-<div class="d-flex align-items-center justify-content-between">
-  <div class="local-collection-title">${url}</div>
-  <div class="d-flex align-items-center">
-    <i class='bx bxs-info-circle text-grey bx-sm mr-2' data-bs-toggle="tooltip" data-bs-placement="top" data-theme="dark" title="${created_at}${date}"></i>
-    <i class='bx bxs-x-circle bx-sm text-grey delete-history--btn' data-index="${index}"></i>
-  </div>
-</div>
-</div>`;
-
-const EmptyHistoryTemplateMobile = () =>
-    `
-<div class="custom-card py-5 px-3">
-<div class="d-flex justify-content-center text-center">
-  <span>` +
-    localStorageNone +
-    `</span>
-</div>
-</div>`;
 
 // All Function
 function getHistories() {
@@ -203,8 +156,6 @@ function analyze(_url) {
                             `Error ${err.responseJSON.message}`
                         );
                     } else {
-                        // $("#http-header-result-list").hide();
-                        // $("#http-header-empty").show();
                         toastr.error(res.message, "Error");
                     }
                 },
@@ -221,8 +172,6 @@ function analyze(_url) {
                     } else {
                         toastr.error(err.responseJSON.message, "Error");
                     }
-                    // $("#http-header-result-list").hide();
-                    // $("#http-header-empty").show();
                 },
                 complete: () => {
                     KTApp.unblock("#serp-result-container");
@@ -395,8 +344,6 @@ $("#input-url").keyup(function () {
 
 $("#crawl-btn").click(function () {
     if ($("#input-url").val() === "" || $("#input-url").val() === null) {
-        // $("#http-header-result-list").hide();
-        // $("#http-header-empty").show();
         toastr.error("URL is empty", "Error");
         KTApp.unblock("#serp-result-container");
     } else {
@@ -406,8 +353,6 @@ $("#crawl-btn").click(function () {
 
 $("#btn-fetch").click(function () {
     if ($("#url").val() === "" || $("#url").val() === null) {
-        // $("#http-header-result-list").hide();
-        // $("#http-header-empty").show();
         toastr.error("URL is empty", "Error");
         KTApp.unblock("#serp-result-container");
     } else {
@@ -441,6 +386,9 @@ $(document).ready(function () {
 
     $("#snippet-desktop").show();
     $("#snippet-mobile").hide();
+
+     var isiSerp = $("#serp-result-container").html();
+     $("#print-screen").html(isiSerp);
 });
 
 // Function Snippet
@@ -460,14 +408,91 @@ $("#mobile-serp").click(function () {
 
 $("#ads-serp-preview").click(function () {
     $(".snippet-ads").toggle();
+    $("#ads-serp-preview").toggleClass("active");
 });
 
 $("#rating-serp-preview").click(function () {
     $(".snippet-rating").toggleClass("active");
+    $("#rating-serp-preview").toggleClass("active");
 });
 
 $("#date-serp-preview").click(function () {
     $(".snippet-date").toggleClass("active");
+    $("#date-serp-preview").toggleClass("active");
+});
+
+$("#reset-serp-preview").click(function () {
+    $(".snippet-ads").hide();
+    $(".snippet-rating").removeClass("active");
+    $(".snippet-date").removeClass("active");
+
+     $(".url").val("");
+     $(".title").val("");
+     $(".desc").val("");
+     $(".keywords").val("");
+     $(".keywords").prop("disabled", true);
+     $("#char-title").text(0);
+     $("#px-title").text(0);
+     $("#char-desc").text(0);
+     $("#px-desc").text(0);
+     
+    $(".snippet-favicon").attr("src", "https://www.google.com/s2/favicons?domain=default");
+    $(".snippet-website").text(snippet_website);
+    $(".snippet-breadcrumbs").text(snippet_domain);
+    $(".snippet-title-preview").text(snippet_title);
+    $(".snippet-desc-preview").text(snippet_desc);
+});
+
+$("#download-serp-preview").click(function () {
+    var container = document.getElementById('serp-result-container');
+
+    // Menyimpan tinggi tampilan saat ini
+    var currentHeight = container.clientHeight;
+    // Mengatur tinggi kontainer ke tinggi scroll (agar seluruh kontennya terlihat)
+    container.style.height = container.scrollHeight + 'px';
+    
+    domtoimage
+        .toPng(container, { 
+            quality: 1.0
+        })
+        .then(function (dataUrl) {
+            var link = document.createElement("a");
+            link.download = "my-image-name.jpeg";
+            link.href = dataUrl;
+            link.click();
+
+            // Mengembalikan tinggi kontainer ke tinggi semula
+            container.style.height = currentHeight + 'px';
+    });
+
+    // Buat elemen canvas yang cukup besar
+    // var canvas = document.createElement('canvas');
+    // canvas.width = container.scrollWidth;
+    // canvas.height = container.scrollHeight;
+    // // Atur konteks canvas
+    // var ctx = canvas.getContext('2d');
+    // var initialScrollTop = container.scrollTop;
+    // var scrollDistance = 200;
+    // container.scrollTop += scrollDistance;
+
+    // html2canvas(container).then(function(screenshotCanvas) {
+    //     // container.scrollTop = initialScrollTop;
+    //     // Salin tangkapan layar ke dalam elemen canvas yang terlihat
+    //     ctx.drawImage(screenshotCanvas, 0, 0);
+
+    //     // Konversi tangkapan layar menjadi data URL
+    //     var dataUrl = canvas.toDataURL('image/png');
+
+    //     // Buat elemen tautan untuk mengunduh gambar
+    //     var link = document.createElement('a');
+    //     link.download = 'full-page-screenshot.png';
+    //     link.href = dataUrl;
+
+    //     document.body.appendChild(link);
+    //     // Klik tautan untuk memulai unduhan
+    //     link.click();
+    //     document.body.removeChild(link);
+    // });
 });
 
 // Local History 

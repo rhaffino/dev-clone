@@ -24,6 +24,7 @@ id/serp-simulator
             <h1 class="text-darkgrey font-weight-normal">@lang('serp-simulator.title')</h1>
             <p class="text-darkgrey h4 font-weight-normal mb-10">@lang('serp-simulator.sub-title')</p>
 
+            <!-- <div id="print-screen"></div> -->
             @include('components.alert_limit')
 
             <div class="header-blue mt-10 mb-5 px-5 py-1">
@@ -54,10 +55,10 @@ id/serp-simulator
                         <div class="card-body py-3 px-4">
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="d-flex align-items-center">
-                                    <div id="desktop-serp" class="active wordcounter-background-text-size wordcounter-background-text-size-left-edge font-weight-bolder d-flex justify-content-center align-items-center p-2" data-toggle="tooltip" data-theme="dark" title="" data-original-title="Desktop">
+                                    <div id="desktop-serp" class="active wordcounter-background-text-size wordcounter-background-text-size-left-edge font-weight-bolder d-flex justify-content-center align-items-center p-2" data-toggle="tooltip" data-theme="dark" title="" data-original-title="@lang('serp-simulator.serp-desktop')">
                                         <i class='bx bx-laptop bx-sm text-white'></i>
                                     </div>
-                                    <div id="mobile-serp" class="wordcounter-background-text-size wordcounter-background-text-size-right-edge font-weight-bolder d-flex justify-content-center align-items-center p-2" data-toggle="tooltip" data-theme="dark" title="" data-original-title="Mobile">
+                                    <div id="mobile-serp" class="wordcounter-background-text-size wordcounter-background-text-size-right-edge font-weight-bolder d-flex justify-content-center align-items-center p-2" data-toggle="tooltip" data-theme="dark" title="" data-original-title="@lang('serp-simulator.serp-mobile')">
                                         <i class='bx bx-mobile-alt bx-sm text-white'></i>
                                     </div>
 
@@ -65,30 +66,30 @@ id/serp-simulator
                                         <i id="ads-serp-preview"
                                             class='bx bx-money bx-sm mx-2 text-darkgrey text-hover-primaryblue'
                                             data-toggle="tooltip" data-theme="dark"
-                                            title="Google Ads Preview"></i>
+                                            title="@lang('serp-simulator.serp-ads')"></i>
                                         <i id="date-serp-preview"
                                             class='bx bxs-calendar bx-sm mx-2 text-darkgrey text-hover-primaryblue'
                                             data-toggle="tooltip" data-theme="dark"
-                                            title="Show Date"></i>
+                                            title="@lang('serp-simulator.serp-date')"></i>
                                         <i id="rating-serp-preview"
                                             class='bx bxs-star bx-sm mx-2 text-darkgrey text-hover-primaryblue'
                                             data-toggle="tooltip" data-theme="dark"
-                                            title="Show Rating"></i>
+                                            title="@lang('serp-simulator.serp-rating')"></i>
                                     </div>
                                 </div>
                                 <div class="d-flex align-items-center">
                                     <i id="reset-serp-preview"
                                         class='bx bx-reset bx-sm mx-2 text-darkgrey text-hover-primaryblue'
                                         data-toggle="tooltip" data-theme="dark"
-                                        title="Reset"></i>
+                                        title="@lang('serp-simulator.serp-reset')"></i>
                                     <i id="download-serp-preview"
                                         class='bx bxs-download bx-sm mx-2 text-darkgrey text-hover-primaryblue'
                                         data-toggle="tooltip" data-theme="dark"
-                                        title="Download"></i>
+                                        title="@lang('serp-simulator.serp-download')"></i>
                                     <i id="share-serp-preview"
                                         class='bx bxs-share-alt bx-sm mx-2 text-darkgrey text-hover-primaryblue'
                                         data-toggle="tooltip" data-theme="dark"
-                                        title="Share"></i>
+                                        title="@lang('serp-simulator.serp-share')"></i>
                                 </div>
                             </div>
                         </div>
@@ -339,6 +340,7 @@ id/serp-simulator
                             </div>
                         </div>
                     </div>
+                    <canvas id="test" width="350" height="206"></canvas>
                 </div>
 
                 <div class="col-md-4">
@@ -543,6 +545,8 @@ id/serp-simulator
 <script>
     const SERP_CHECK_API_URL = "{{ route('api.metadata-scraper') }}";
 </script>
+<script src="{{asset('js/logic/html2canvas.js')}}"></script>
+<script src="{{asset('js/logic/dom-image.js')}}"></script>
 <script src="{{asset('js/logic/serp-simulator.js')}}"></script>
 <script type="application/ld+json">
     {

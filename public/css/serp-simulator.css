@@ -24,6 +24,12 @@
     outline: none;
 }
 
+#ads-serp-preview.active,
+#rating-serp-preview.active,
+#date-serp-preview.active{
+    color: var(--primaryblue);
+}
+
 /* Snippet Desktop */
 #snippet-desktop {
     width: 100%;
@@ -318,6 +324,7 @@
 
 /* Mobile Snipet */
 #snippet-mobile {
+    display: none;
     font-family: arial, sans-serif;
     width: 100%;
     max-width: 360px;
@@ -422,5 +429,27 @@
 @media screen and (max-width: 500px){
     .practice-serp-simulator{
         margin-top: 3rem;
+    }
+}
+
+#print-screen{
+    /* display: none; */
+}
+
+@media print {
+    /* Properti CSS untuk tampilan cetak */
+    @page {
+     margin-left: 0.8in;
+     margin-right: 0.8in;
+     margin-top: 0;
+     margin-bottom: 0;
+   }
+
+    #print-screen {
+        display: block;
+    }
+
+    #kt_body{
+        display: none;
     }
 }
