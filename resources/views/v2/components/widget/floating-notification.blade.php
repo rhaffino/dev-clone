@@ -5,69 +5,37 @@
 <div class="floating-notification-section">
     @isset($notificationData)
         <div class="cards-container-wrapper pe-1">
-            <div class="cards-container notifications card-custom card-floating-popup hide d-none notification-container">
-                @isset($pinnedNotificationData)
-                    @if ($pinnedNotificationData->isNotEmpty())
-                        @component('v2.widget.floating-notification-card')
-                            @slot('title', 'en' == 'en' ? $pinnedNotificationData[0]->title_en :
-                                $pinnedNotificationData[0]->title_id)
-                                @slot('image', $pinnedNotificationData[0]->image)
-                                @slot('url', 'en' == 'en' ? $pinnedNotificationData[0]->url_en : $pinnedNotificationData[0]->url_id)
-                                @slot('isPinned', true)
-                                @slot('id', $pinnedNotificationData[0]->id)
-                            @endcomponent
-                        @endif
-                    @endisset
-
-                    {{-- @foreach ($notificationData as $notif)
-                        @component('v2.widget.floating-notification-card')
-                            @slot('title', 'en' == 'en' ? $notif->title_en : $notif->title_id)
-                            @slot('image', $notif->image)
-                            @slot('url', 'en' == 'en' ? $notif->url_en : $notif->url_id)
-                            @slot('isPinned', false)
-                            @slot('id', $notif->id)
-                        @endcomponent
-                    @endforeach --}}
-
-                    @foreach ($notificationData as $notif)
-                        @component('v2.components.widget.floating-notification-card')
-                            @slot('title', 'en' == 'en' ? $notif['title_en'] : $notif->title_id)
-                            @slot('image', $notif['image'])
-                            @slot('url', 'en' == 'en' ? $notif['url_en'] : $notif->url_id)
-                            @slot('isPinned', false)
-                            @slot('id', $notif['id'])
-                        @endcomponent
-                    @endforeach
-
-                    <div class="notif-card empty">
-                        <div class="notif-card-body">
-                            <p class="b1-400 b1-m-400 text-dark-40 m-0">There is currently no notification...</p>
-                        </div>
+            <div id="notification-container"
+                class="cards-container notifications card-custom card-floating-popup hide d-none notification-container">
+                <div class="notif-card empty">
+                    <div class="notif-card-body">
+                        <p class="b1-400 b1-m-400 text-dark-40 m-0">There is currently no notification...</p>
                     </div>
                 </div>
             </div>
-        @endisset
+        </div>
+    @endisset
 
-        {{-- @isset($satisfactionData)
+    {{-- @isset($satisfactionData)
             <div class="cards-container feedback card-custom card-floating-popup hide d-none user-satisfaction">
                 @include('v2.widget.user-satisfaction-form')
             </div>
         @endisset --}}
 
-        <div class="button-container d-flex gap-3 align-items-end mt-3">
-            @isset($notificationData)
-                <button
-                    class="btn btn-float-notif open align-items-center button-marketing {{ count($notificationData) > 0 && $notificationData != '' ? 'active' : '' }}">
-                    <i class='bx bx-sm bxs-bell'></i>
-                    <div class="red-dot"></div>
-                </button>
-                <button class="btn btn-float-notif align-items-center close">
-                    <i class='bx bx-sm bxs-bell'></i>
-                    <div class="red-dot"></div>
-                </button>
-            @endisset
+    <div class="button-container d-flex gap-3 align-items-end mt-3">
+        @isset($notificationData)
+            <button
+                class="btn btn-float-notif open align-items-center button-marketing {{ count($notificationData) > 0 && $notificationData != '' ? 'active' : '' }}">
+                <i class='bx bx-sm bxs-bell'></i>
+                <div class="red-dot"></div>
+            </button>
+            <button class="btn btn-float-notif align-items-center close">
+                <i class='bx bx-sm bxs-bell'></i>
+                <div class="red-dot"></div>
+            </button>
+        @endisset
 
-            {{-- @isset($satisfactionData)
+        {{-- @isset($satisfactionData)
                 <button
                     class="btn btn-float-feedback btn-float-feedback-toggle align-items-center d-none user-satisfaction {{ count($satisfactionData) > 0 ? 'active' : '' }}">
                     <i class='bx bx-sm bxs-wink-smile'></i>
@@ -78,11 +46,31 @@
                     <div class="red-dot"></div>
                 </button>
             @endisset --}}
-        </div>
     </div>
+</div>
 
-    @push('scripts')
-        <script>
+@push('scripts')
+    <script>
+        const language = "{{$lang}}"
+        const notificationCard = (data, pinned = false, lang = 'en') => `
+            <div class="notif-card notif" data-id="${data.id}">
+                ${data.image ? 
+                    `<div class="notif-card-header"> <img src="https://s3-cdn.cmlabs.co/${data.image}" alt="notif header image"> </div>` : ""
+                }
+                
+                <div class="notif-card-body">
+                    <p class="b1-400 b1-m-400 text-dark-40 m-0 ${data.image ? "pe-4" : ""}">${lang == "en" ? data.title_en : data.title_id}</p>
+                    <a href="${lang == "en" ? data.url_en : data.url_id}" class="text-primary-70 b1-700 b1-m-700">{{__('home.check')}}</a>
+                </div>
+
+                ${pinned ? `<i class='pin-icon bx bxs-pin bx-sm text-gray-100'></i>` : ''}                    
+                <i data-id="${data.id}" class='close-btn close-notif-btn bx bx-x bx-sm text-gray-100'></i>
+            </div>            
+            `
+
+        const notificationContainer = document.getElementById("notification-container")
+
+        const handleNotification = () => {
             const notifCards = document.querySelectorAll(".notif-card.notif")
             notifCards.forEach((notif) => {
                 const closeBtn = notif.querySelector(".close-btn")
@@ -94,7 +82,8 @@
 
                 closeBtn.addEventListener("click", function() {
                     const id = this.getAttribute("data-id")
-                    const closedNotification = JSON.parse(localStorage.getItem("closedNotification")) ?? []
+                    const closedNotification = JSON.parse(localStorage.getItem(
+                        "closedNotification")) ?? []
 
                     closedNotification.push(id)
 
@@ -108,95 +97,126 @@
             } else {
                 document.querySelector(".notif-card.empty").remove()
             }
-        </script>
+        }
 
-        <script>
-            const Notifcard = document.querySelector(".cards-container.notifications");
-            const Feedbackcard = document.querySelector(".cards-container.feedback");
+        fetch("{{ env('CMLABSCO_API_URL') }}/user-engagement/notification", {
+                method: "GET",
+                headers: {
+                    "Content-Type": "application/json",
+                    "Accept": "application/json, text-plain, */*",
+                }
+            })
+            .then(function(response) {
+                if (!response.ok) {
+                    throw new Error("Network response was not ok");
+                }
+                return response.json();
+            })
+            .then(function(response) {
+                const notificationData = response.notificationData;
+                const pinnedNotificationData = response.pinnedNotificationData;
+                const notificationContainer = document.getElementById("notification-container");
 
-            const btnNotif = document.querySelector(".btn-float-notif");
-            const btnNotifClose = document.querySelector(".btn-float-notif.close");
+                pinnedNotificationData.forEach(notif => {
+                    notificationContainer.innerHTML += notificationCard(notif, true, language);
+                });
 
-            const btnFeedback = document.querySelector(".btn-float-feedback");
-            const btnFeedbackClose = document.querySelector(".btn-float-feedback.close");
-            const iconFeedbackClose = document.querySelector("#closeFeedback");
+                notificationData.forEach(notif => {
+                    notificationContainer.innerHTML += notificationCard(notif, false, language);
+                });
 
-            const notifContainer = document.querySelector(".cards-container-wrapper");
+                handleNotification()
+            })
+            .catch(function(error) {
+                console.error("Fetch error:", error);
+            });
+    </script>
 
-            console.log(btnNotif)
+    <script>
+        const Notifcard = document.querySelector(".cards-container.notifications");
+        const Feedbackcard = document.querySelector(".cards-container.feedback");
 
-            const showNotifCard = () => {
-                Notifcard.classList.remove("d-none");
-                setTimeout(() => {
-                    Notifcard.classList.remove("hide");
-                }, 10);
-                setTimeout(() => {
-                    notifContainer.style.overflow = "auto"
-                }, 800);
-                btnNotif.style.display = "none";
-                btnNotifClose.style.display = "flex";
-                notifContainer.style.overflow = "hidden"
-            }
+        const btnNotif = document.querySelector(".btn-float-notif");
+        const btnNotifClose = document.querySelector(".btn-float-notif.close");
 
-            const hideNotifCard = () => {
-                localStorage.setItem("isClosedNotification", "true")
-                setTimeout(() => {
-                    Notifcard.classList.add("d-none");
-                }, 500);
-                Notifcard.classList.add("hide");
-                btnNotifClose.style.display = "none";
-                btnNotif.style.display = "flex";
-                notifContainer.style.overflow = "hidden"
-            }
+        const btnFeedback = document.querySelector(".btn-float-feedback");
+        const btnFeedbackClose = document.querySelector(".btn-float-feedback.close");
+        const iconFeedbackClose = document.querySelector("#closeFeedback");
 
-            const showFeedbackCard = () => {
-                Feedbackcard.classList.remove("d-none");
-                setTimeout(() => {
-                    Feedbackcard.classList.remove("hide");
-                }, 10);
-                btnFeedback.style.display = "none";
-                btnFeedbackClose.style.display = "flex";
-            }
+        const notifContainer = document.querySelector(".cards-container-wrapper");
 
-            const hideFeedbackCard = () => {
-                setTimeout(() => {
-                    Feedbackcard.classList.add("d-none");
-                }, 500);
+        const showNotifCard = () => {
+            Notifcard.classList.remove("d-none");
+            setTimeout(() => {
+                Notifcard.classList.remove("hide");
+            }, 10);
+            setTimeout(() => {
+                notifContainer.style.overflow = "auto"
+            }, 800);
+            btnNotif.style.display = "none";
+            btnNotifClose.style.display = "flex";
+            notifContainer.style.overflow = "hidden"
+        }
+
+        const hideNotifCard = () => {
+            localStorage.setItem("isClosedNotification", "true")
+            setTimeout(() => {
+                Notifcard.classList.add("d-none");
+            }, 500);
+            Notifcard.classList.add("hide");
+            btnNotifClose.style.display = "none";
+            btnNotif.style.display = "flex";
+            notifContainer.style.overflow = "hidden"
+        }
+
+        const showFeedbackCard = () => {
+            Feedbackcard.classList.remove("d-none");
+            setTimeout(() => {
+                Feedbackcard.classList.remove("hide");
+            }, 10);
+            btnFeedback.style.display = "none";
+            btnFeedbackClose.style.display = "flex";
+        }
+
+        const hideFeedbackCard = () => {
+            setTimeout(() => {
+                Feedbackcard.classList.add("d-none");
+            }, 500);
+            Feedbackcard.classList.add("hide");
+            btnFeedbackClose.style.display = "none";
+            btnFeedback.style.display = "flex";
+        }
+
+        btnNotif?.addEventListener("click", () => {
+            if (btnFeedback) {
+                Feedbackcard.classList.add("d-none");
                 Feedbackcard.classList.add("hide");
                 btnFeedbackClose.style.display = "none";
                 btnFeedback.style.display = "flex";
             }
+            showNotifCard()
+        });
 
-            btnNotif?.addEventListener("click", () => {
-                if (btnFeedback) {
-                    Feedbackcard.classList.add("d-none");
-                    Feedbackcard.classList.add("hide");
-                    btnFeedbackClose.style.display = "none";
-                    btnFeedback.style.display = "flex";
-                }
-                showNotifCard()
-            });
+        btnFeedback?.addEventListener("click", () => {
+            if (btnNotif) {
+                Notifcard.classList.add("d-none");
+                Notifcard.classList.add("hide");
+                btnNotifClose.style.display = "none";
+                btnNotif.style.display = "flex";
+            }
+            showFeedbackCard()
+        });
 
-            btnFeedback?.addEventListener("click", () => {
-                if (btnNotif) {
-                    Notifcard.classList.add("d-none");
-                    Notifcard.classList.add("hide");
-                    btnNotifClose.style.display = "none";
-                    btnNotif.style.display = "flex";
-                }
-                showFeedbackCard()
-            });
+        btnFeedbackClose?.addEventListener("click", hideFeedbackCard);
+        iconFeedbackClose?.addEventListener("click", hideFeedbackCard);
+        btnNotifClose?.addEventListener("click", hideNotifCard);
 
-            btnFeedbackClose?.addEventListener("click", hideFeedbackCard);
-            iconFeedbackClose?.addEventListener("click", hideFeedbackCard);
-            btnNotifClose?.addEventListener("click", hideNotifCard);
+        const isAlreadyClose = localStorage.getItem("isClosedNotification")
+        if (isAlreadyClose !== "true")
+            showNotifCard();
+    </script>
 
-            const isAlreadyClose = localStorage.getItem("isClosedNotification")
-            if (isAlreadyClose !== "true")
-                showNotifCard();
-        </script>
-
-        {{-- @isset($satisfactionData)
+    {{-- @isset($satisfactionData)
             <script>
                 $(document).ready(function() {
                     const type = @json($satisfactionData[0]->appear_frequency);
@@ -261,19 +281,19 @@
             </script>
         @endisset --}}
 
-        <script>
-            var storedData = localStorage.getItem('lastFilledUserSatisfaction');
+    <script>
+        var storedData = localStorage.getItem('lastFilledUserSatisfaction');
 
-            if (storedData) {
-                var parsedData = JSON.parse(storedData);
+        if (storedData) {
+            var parsedData = JSON.parse(storedData);
 
-                if (Date.now() > parsedData.expiration) {
-                    localStorage.removeItem('lastFilledUserSatisfaction');
-                } else {
-                    document.querySelectorAll(".user-satisfaction").forEach((item) => {
-                        item?.remove()
-                    })
-                }
+            if (Date.now() > parsedData.expiration) {
+                localStorage.removeItem('lastFilledUserSatisfaction');
+            } else {
+                document.querySelectorAll(".user-satisfaction").forEach((item) => {
+                    item?.remove()
+                })
             }
-        </script>
-    @endpush
+        }
+    </script>
+@endpush
