@@ -150,4 +150,7 @@ return [
     "desc-3-4-3" => "In the audit stage, content writers can check the title length and meta description using the Title & Meta Length Checker. SEO experts and developers can check website performance using the PageSpeed ​​Test. At this stage the developer can also check the SSL certificate using SSL Checker.",
 
     "desc-new-tools-21-aug-2023" => "Embark on a voyage of digital discovery as you engage with real-time metrics that reflect the vitality of your network's health and configuration. Now, you can diagnose your network's health as well as navigate your domain to ensure flawless communication, security, and performance of a website with our best tools, Ping Tool and HTTP Header Checker by cmlabs. Check and elevate your website management now!",
+
+    "check" => "Check",
+    "no_notif" => "There is currently no notification...",
 ];
