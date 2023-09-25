@@ -80,8 +80,8 @@
 
     <!-- Custom Page CSS -->
     <link href="{{ asset('css/custom.css') }}" rel="stylesheet" type="text/css" />
-    <link href="{{ asset('css/header_general.css') }}" rel="stylesheet" type="text/css"/>
-    <link href="{{ asset('css/asidemobile_generale.css') }}" rel="stylesheet" type="text/css"/>
+    <link href="{{ asset('css/header_general.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('css/asidemobile_generale.css') }}" rel="stylesheet" type="text/css" />
 
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
@@ -159,9 +159,14 @@
             <!--end::Svg Icon-->
         </span>
     </div>
+
+    @include('v2.components.widget.floating-notification')
+
     <!--end::Scrolltop-->
     <!--end::Demo Panel-->
     <!--begin::Global Config(global config for global JS scripts)-->
+    @stack("scripts")
+    
     <script>
         var KTAppSettings = {
             "breakpoints": {
@@ -239,7 +244,9 @@
     <script src="{{ asset('js/custom.js?v=20210116213500') }}"></script>
 
     {{-- URL for record user activity --}}
-    <script>const USER_ACTIVITY_API_URL = "{{ route('api.record-activity') }}";</script>
+    <script>
+        const USER_ACTIVITY_API_URL = "{{ route('api.record-activity') }}";
+    </script>
 
     <!--end::Global Theme Bundle-->
     <!--begin::Page Vendors(used by this page)-->
