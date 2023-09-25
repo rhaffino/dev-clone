@@ -378,7 +378,7 @@ $(document).on("input", ".keywords", function () {
 
 // Layout Action
 $(document).ready(function () {
-    getHistories();
+    // getHistories();
 
     $(function () {
         $("body").tooltip({ selector: "[data-toggle=tooltip]" });
@@ -387,8 +387,9 @@ $(document).ready(function () {
     $("#snippet-desktop").show();
     $("#snippet-mobile").hide();
 
-     var isiSerp = $("#serp-result-container").html();
-     $("#print-screen").html(isiSerp);
+    
+    var container = $("#serp-result-container").html();
+    $("#print-screen").html(container);
 });
 
 // Function Snippet
@@ -492,6 +493,23 @@ $("#download-serp-preview").click(function () {
     //     // Klik tautan untuk memulai unduhan
     //     link.click();
     //     document.body.removeChild(link);
+    // });
+});
+
+$("#pdf-serp-preview").click(function () {
+    window.print();
+    // event.preventDefault();
+    // var container = $("#serp-result-container").contentWindow;
+    // // var container = $("#serp-result-container");
+    // container.focus();
+    // container.print();
+    // window.print(container);
+    // html2canvas(container).then((canvas) => {
+    //     let base64image = canvas.toDataURL('image/png');
+    //     // console.log(base64image);
+    //     let pdf = new jsPDF('p', 'px', [1600, 1131]);
+    //     pdf.addImage(base64image, 'PNG', 15, 15, 1110, 360);
+    //     pdf.save('webtylepress-two.pdf');
     // });
 });
 

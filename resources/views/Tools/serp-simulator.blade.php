@@ -14,6 +14,8 @@ en/serp-simulator
 id/serp-simulator
 @endsection
 
+<div id="print-screen"></div>
+
 @section('content')
 @if ($is_maintenance)
     @include('components.maintenance')
@@ -24,7 +26,6 @@ id/serp-simulator
             <h1 class="text-darkgrey font-weight-normal">@lang('serp-simulator.title')</h1>
             <p class="text-darkgrey h4 font-weight-normal mb-10">@lang('serp-simulator.sub-title')</p>
 
-            <!-- <div id="print-screen"></div> -->
             @include('components.alert_limit')
 
             <div class="header-blue mt-10 mb-5 px-5 py-1">
@@ -86,10 +87,10 @@ id/serp-simulator
                                         class='bx bxs-download bx-sm mx-2 text-darkgrey text-hover-primaryblue'
                                         data-toggle="tooltip" data-theme="dark"
                                         title="@lang('serp-simulator.serp-download')"></i>
-                                    <i id="share-serp-preview"
-                                        class='bx bxs-share-alt bx-sm mx-2 text-darkgrey text-hover-primaryblue'
+                                    <i id="pdf-serp-preview"
+                                        class='bx bxs-file-pdf bx-sm mx-2 text-darkgrey text-hover-primaryblue'
                                         data-toggle="tooltip" data-theme="dark"
-                                        title="@lang('serp-simulator.serp-share')"></i>
+                                        title="@lang('serp-simulator.serp-pdf')"></i>
                                 </div>
                             </div>
                         </div>
@@ -545,8 +546,16 @@ id/serp-simulator
 <script>
     const SERP_CHECK_API_URL = "{{ route('api.metadata-scraper') }}";
 </script>
-<script src="{{asset('js/logic/html2canvas.js')}}"></script>
-<script src="{{asset('js/logic/dom-image.js')}}"></script>
+<!-- <script src="{{asset('js/logic/html2canvas.js')}}"></script>
+<script src="{{asset('js/logic/dom-image.js')}}"></script> -->
+
+<!-- <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
+    integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+    ></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
 <script src="{{asset('js/logic/serp-simulator.js')}}"></script>
 <script type="application/ld+json">
     {

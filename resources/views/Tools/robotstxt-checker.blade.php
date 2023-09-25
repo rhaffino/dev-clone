@@ -103,10 +103,10 @@ id/robotstxt-checker
                                 </div>
                                 <div id="collapseOne2" class="collapse" data-parent="#accordionExample2">
                                     <div class="card-body">
-                                        <p>@lang('ping.highlight')</p>
+                                        <p>@lang('robot-checker.highlight')</p>
                                         <div class="d-flex align-items-center">
                                             <i class='bx bxs-check-circle text-darkgrey mr-1'></i>
-                                            <span class="text-darkgrey h6 mb-0">@lang('layout.updated') 21 Aug, 2023</span>
+                                            <span class="text-darkgrey h6 mb-0">@lang('layout.updated') 25 Sep, 2023</span>
                                         </div>
                                     </div>
                                 </div>
@@ -139,10 +139,10 @@ id/robotstxt-checker
                 </div>
                 <div id="collapseOne2" class="collapse" data-parent="#accordionExample2">
                     <div class="card-body">
-                        <p>@lang('lookup.highlight')</p>
+                        <p>@lang('robot-checker.highlight')</p>
                         <div class="d-flex align-items-center">
                             <i class='bx bxs-check-circle text-darkgrey mr-1'></i>
-                            <span class="text-darkgrey h6 mb-0">@lang('layout.updated') 21 Aug, 2023</span>
+                            <span class="text-darkgrey h6 mb-0">@lang('layout.updated') 25 Sep, 2023</span>
                         </div>
                     </div>
                 </div>
@@ -155,48 +155,47 @@ id/robotstxt-checker
     @slot('title', 'Robot.txt Checker')
     @slot('subcontent_1')
         <div class="" id="description-tab-1">
-            <h2 class="text-black">@lang('ping.desc-1')</h2>
-            <p class="text-black">@lang('ping.desc-1-1')</p>
-            <p class="text-black">@lang('ping.desc-1-2')</p>
-            <p class="text-black">@lang('ping.desc-1-3')</p>
-            <p class="text-black">@lang('ping.desc-1-4')</p>
+            <h2 class="text-black">@lang('robot-checker.desc-1')</h2>
+            <p class="text-black">@lang('robot-checker.desc-1-1')</p>
+            <p class="text-black">@lang('robot-checker.desc-1-2')</p>
+            <p class="text-black">@lang('robot-checker.desc-1-3')</p>
         </div>
         @endslot
         @slot('subcontent_2')
         <div class="d-none" id="description-tab-2">
-            <p class="text-black">@lang('ping.desc-1-5')</p>
-            <p class="text-black">@lang('ping.desc-1-6')</p>
-            <p class="text-black">@lang('ping.desc-1-7')</p>
-            <h2 class="text-black">@lang('ping.desc-2')</h2>
-            <p class="text-black">@lang('ping.desc-2-1')</p>
-            <ul>
-                <li><p class="text-black">@lang('ping.desc-2-1-1')</p></li>
-                <li><p class="text-black">@lang('ping.desc-2-1-2')</p></li>
-                <li><p class="text-black">@lang('ping.desc-2-1-3')</p></li>
-                <li><p class="text-black">@lang('ping.desc-2-1-4')</p></li>
-                <li><p class="text-black">@lang('ping.desc-2-1-5')</p></li>
-            </ul>
+            <p class="text-black">@lang('robot-checker.desc-1-4')</p>
+            <p class="text-black">@lang('robot-checker.desc-1-5')</p>
+            <h2 class="text-black">@lang('robot-checker.desc-2')</h2>
+            <p class="text-black">@lang('robot-checker.desc-2-1')</p>
+            <p class="text-black">@lang('robot-checker.desc-2-2')</p>
+            <p class="text-black">@lang('robot-checker.desc-2-3')</p>
+            <h3 class="text-black">@lang('robot-checker.desc-2-4')</h3>
+            <p class="text-black">@lang('robot-checker.desc-2-4-1')</p>
+            <p class="text-black">@lang('robot-checker.desc-2-4-2')</p>
+            <p class="text-black">@lang('robot-checker.desc-2-4-3')</p>
+            <p class="text-black">@lang('robot-checker.desc-2-4-4')</p>
+            <h3 class="text-black">@lang('robot-checker.desc-2-5')</h3>
+            <p class="text-black">@lang('robot-checker.desc-2-5-1')</p>
+            <p class="text-black">@lang('robot-checker.desc-2-5-2')</p>
+            <p class="text-black">@lang('robot-checker.desc-2-5-3')</p>
+            <h3 class="text-black">@lang('robot-checker.desc-2-6')</h3>
+            <p class="text-black">@lang('robot-checker.desc-2-6-1')</p>
+            <p class="text-black">@lang('robot-checker.desc-2-6-2')</p>
         </div>
     @endslot
     @slot('how_to_content')
         <div class="d-none" id="how-to">
-            @lang('ping.howto-title')
-            @lang('ping.howto1')
+            <h2 class="text-black">@lang('robot-checker.howto-title')</h2>
+            @lang('robot-checker.howto1')
             <div class="expand-text">
-                @lang('ping.howto2')
-                <img class="mb-4" src="{{asset('/media/images/ping_instruction_1.webp')}}" alt="HowTo-Ping-1" width="80%">
-                @lang('ping.howto3')
-                @lang('ping.howto4')
-                <img class="mb-4" src="{{asset('/media/images/ping_instruction_2.webp')}}" alt="HowTo-ping-2" width="80%">
-                @lang('ping.howto5')
-                <img class="mb-4" src="{{asset('/media/images/ping_instruction_3.webp')}}" alt="HowTo-ping-3" width="80%">
-                @lang('ping.howto6')
-                <img class="mb-4" src="{{asset('/media/images/ping_instruction_4.webp')}}" alt="HowTo-ping-4" width="80%">
-                @lang('ping.howto7')
-                <img class="mb-4" src="{{asset('/media/images/ping_instruction_5.webp')}}" alt="HowTo-ping-5" width="80%">
-                @lang('ping.howto8')
-                <img class="mb-4" src="{{asset('/media/images/ping_instruction_6.webp')}}" alt="HowTo-ping-6" width="80%">
-                @lang('ping.howto9')
+                @lang('robot-checker.howto2')
+                <img class="mb-4" src="{{asset('/media/images/robots_checker_instruction_1.webp')}}" alt="HowTo-Robots-Checker-1 Halaman Tool Robots.txt Checker" width="80%">
+                @lang('robot-checker.howto3')
+                <img class="mb-4" src="{{asset('/media/images/robots_checker_instruction_2.webp')}}" alt="HowTo-Robots-Checker-2 Periksa URL" width="80%">
+                @lang('robot-checker.howto4')
+                <img class="mb-4" src="{{asset('/media/images/robots_checker_instruction_3.webp')}}" alt="HowTo-Robots-Checker-3 Results of Robots.txt Checker" width="80%">
+                @lang('robot-checker.howto5')
+                @lang('robot-checker.closing-1')
             </div>
         </div>
     @endslot

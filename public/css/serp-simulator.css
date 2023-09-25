@@ -433,16 +433,19 @@
 }
 
 #print-screen{
-    /* display: none; */
+    display: none;
+    /* visibility: visible; */
+    /* visibility: hidden; */
 }
 
 @media print {
     /* Properti CSS untuk tampilan cetak */
     @page {
-     margin-left: 0.8in;
+     /* margin-left: 0.8in;
      margin-right: 0.8in;
      margin-top: 0;
-     margin-bottom: 0;
+     margin-bottom: 0; */
+     margin: 0;
    }
 
     #print-screen {

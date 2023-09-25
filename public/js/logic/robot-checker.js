@@ -16,15 +16,15 @@ if (lang == "en") {
 } else if (lang == "id") {
     var created_at = "Dibuat pada ";
     var localStorageNone = "Ini adalah kesan pertama Anda, belum ada riwayat!";
-    var label_allowed = "Allowed";
+    var label_allowed = "Diizinkan";
     var label_btn_readmore = "Tampilkan Semua";
-    var label_url_website = "URL website";
+    var label_url_website = "Website URL";
     var label_host = "Host";
     var label_sitemap = "Sitemap";
     var label_robotstxt = "File Robots.txt";
-    var label_tb_resource = "Resource URL";
+    var label_tb_resource = "Sumber URL";
     var label_tb_status = "Status";
-    var label_tb_result = "Result";
+    var label_tb_result = "Hasil";
 }
 
 // All Template

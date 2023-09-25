@@ -15,8 +15,8 @@ return [
     "serp-date" => "Show Publish Date", 
     "serp-rating" => "Show Rating", 
     "serp-reset" => "Reset", 
-    "serp-download" => "Download", 
-    "serp-share" => "Share",
+    "serp-download" => "Download Images", 
+    "serp-pdf" => "Download PDF",
 
     "snippet-input" => "Enter a keyword to get real search results", 
 
