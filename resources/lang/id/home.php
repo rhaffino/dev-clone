@@ -150,4 +150,6 @@ return [
     "desc-3-4-3" => "Pada tahap audit, penulis konten dapat memeriksa panjang judul dan deskripsi meta menggunakan Pemeriksa Judul & Panjang Meta. Pakar dan pengembang SEO dapat memeriksa kinerja situs web menggunakan Tes PageSpeed. Pada tahap ini developer juga bisa mengecek sertifikat SSL menggunakan SSL Checker.",
 
     "desc-new-tools-21-aug-2023" => "Pastikan aktivitas website Anda tetap terpantau aman dan terkonfigurasi! Lakukan analisis mendalam terhadap domain Anda dengan memantau metrik real-time vitalitas jaringan mulai dari konektivitas, keamanan, dan kinerjanya dengan menggunakan kedua tool terbaik dari cmlabs, Ping Tool dan HTTP Header Checker. Periksa dan tingkatkan manajemen website Anda sekarang juga!",
+    "check" => "Cek",
+    "no_notif" => "Saat ini tidak ada notifikasi...",
 ];
