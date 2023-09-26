@@ -1,5 +1,4 @@
 // Global Variable
-const SERP_LOCAL_STORAGE_KEY = "serp-history";
 
 // Language Variable
 if (lang == "en") {
@@ -32,86 +31,6 @@ if (lang == "en") {
 // Template
 
 // All Function
-function getHistories() {
-    $("#local-history").empty();
-    $("#local-history-mobile").empty();
-    let histories = localStorage.getItem(SERP_LOCAL_STORAGE_KEY);
-    histories = histories ? JSON.parse(histories) : [];
-    if (!histories || histories.length === 0) {
-        $("#local-history").append(EmptyHistoryTemplate());
-        $("#local-history-mobile").append(EmptyHistoryTemplateMobile());
-        return;
-    }
-
-    let index = 0;
-    for (let history of histories) {
-        $("#local-history").append(
-            HistoryTemplate(index, history.url, history.date)
-        );
-        $("#local-history-mobile").append(
-            HistoryTemplateMobile(index, history.url, history.date)
-        );
-
-        index++;
-    }
-}
-
-function addHistory(url, data) {
-    let histories = localStorage.getItem(SERP_LOCAL_STORAGE_KEY);
-    histories = histories ? JSON.parse(histories) : [];
-    const month = [
-        "Jan",
-        "Feb",
-        "Mar",
-        "Apr",
-        "May",
-        "Jun",
-        "Jul",
-        "Aug",
-        "Sep",
-        "Oct",
-        "Nov",
-        "Des",
-    ];
-    let date = new Date();
-    date.setTime(date.getTime());
-    let formatDate = `${
-        date.getHours() < 10 ? "0" + date.getHours() : date.getHours()
-    }.${
-        date.getMinutes() < 10 ? "0" + date.getMinutes() : date.getMinutes()
-    } | ${date.getDate()}, ${month[date.getMonth()]} ${date.getFullYear()}`;
-
-    histories.push({
-        url: url,
-        data: data,
-        date: formatDate,
-    });
-    localStorage.setItem(
-        SERP_LOCAL_STORAGE_KEY,
-        JSON.stringify(histories)
-    );
-    getHistories();
-}
-
-function deleteHistory(_index) {
-    const histories = JSON.parse(
-        localStorage.getItem(SERP_LOCAL_STORAGE_KEY)
-    );
-
-    histories.splice(_index, 1);
-    localStorage.setItem(
-        SERP_LOCAL_STORAGE_KEY,
-        JSON.stringify(histories)
-    );
-
-    getHistories();
-}
-
-let clearAllHistory = function () {
-    localStorage.removeItem(SERP_LOCAL_STORAGE_KEY);
-    getHistories();
-};
-
 function convertSecond(seconds) {
     let minute = (seconds / 60).toFixed(0);
     let second = seconds % 60;
@@ -141,8 +60,6 @@ function analyze(_url) {
                     if (res.statusCode === 200) {
                         console.log(res.data);
                         renderAllData(res.data);
-                        // addHistory(_url, res.data);
-                        // getHistories();
                         toastr.success(
                             "Success Scan Website",
                             "Success"
@@ -322,6 +239,46 @@ function updateSnippet_keywords(val) {
     }
 }
 
+function serp_noDownload(){
+     $("#serp-result-container").css("overflow", "auto");
+     $(".snippet-header").css("border", "0px");
+     $(".snippet-results").css("border-top", "1px solid #e1e8ed");
+     $(".serp-simulator-result").css({
+         overflow: "auto",
+         "max-height": "600px",
+     });
+     $("#snippet-desktop").css("height", "700px");
+     $("#snippet-mobile").css("height", "fit-content");
+
+    $(".svg-search").hide();
+    $(".svg-dots").hide();
+    $(".svg-favicon").hide();
+    $(".svg-star-active").hide();
+    $(".svg-star").hide();
+    $(".snippet-favicon").show();
+    $("#serp-result-container i").show();
+}
+
+function serp_Download(){
+    $("#serp-result-container").css("overflow", "initial");
+    $(".snippet-header").css("border", "0px");
+    $(".snippet-results").css("border-top", "1px solid #e1e8ed");
+    $(".serp-simulator-result").css({
+        overflow: "initial",
+        "max-height": "fit-content",
+    });
+    $("#snippet-desktop").css("height", "fit-content");
+    $("#snippet-mobile").css("height", "fit-content");
+
+    $(".svg-search").show();
+    $(".svg-dots").show();
+    $(".svg-favicon").show();
+    $(".svg-star-active").show();
+    $(".svg-star").show();
+    $(".snippet-favicon").hide();
+    $("#serp-result-container i").hide();
+}
+
 // Interaction
 $("#input-url").keyup(function () {
     const _url = $(this).val();
@@ -378,8 +335,6 @@ $(document).on("input", ".keywords", function () {
 
 // Layout Action
 $(document).ready(function () {
-    // getHistories();
-
     $(function () {
         $("body").tooltip({ selector: "[data-toggle=tooltip]" });
     });
@@ -387,9 +342,7 @@ $(document).ready(function () {
     $("#snippet-desktop").show();
     $("#snippet-mobile").hide();
 
-    
-    var container = $("#serp-result-container").html();
-    $("#print-screen").html(container);
+    serp_noDownload();
 });
 
 // Function Snippet
@@ -445,113 +398,30 @@ $("#reset-serp-preview").click(function () {
 });
 
 $("#download-serp-preview").click(function () {
-    var container = document.getElementById('serp-result-container');
+    var container = document.getElementById("serp-result-container");
+    serp_Download();
 
-    // Menyimpan tinggi tampilan saat ini
-    var currentHeight = container.clientHeight;
-    // Mengatur tinggi kontainer ke tinggi scroll (agar seluruh kontennya terlihat)
-    container.style.height = container.scrollHeight + 'px';
-    
     domtoimage
-        .toPng(container, { 
-            quality: 1.0
-        })
+        .toPng(container)
         .then(function (dataUrl) {
+            // var img = new Image();
+            // img.src = dataUrl;
+            // document.body.appendChild(img);
+            // console.log(dataUrl);
             var link = document.createElement("a");
-            link.download = "my-image-name.jpeg";
+            link.download = "full-preview-serp.png";
             link.href = dataUrl;
             link.click();
-
-            // Mengembalikan tinggi kontainer ke tinggi semula
-            container.style.height = currentHeight + 'px';
-    });
-
-    // Buat elemen canvas yang cukup besar
-    // var canvas = document.createElement('canvas');
-    // canvas.width = container.scrollWidth;
-    // canvas.height = container.scrollHeight;
-    // // Atur konteks canvas
-    // var ctx = canvas.getContext('2d');
-    // var initialScrollTop = container.scrollTop;
-    // var scrollDistance = 200;
-    // container.scrollTop += scrollDistance;
-
-    // html2canvas(container).then(function(screenshotCanvas) {
-    //     // container.scrollTop = initialScrollTop;
-    //     // Salin tangkapan layar ke dalam elemen canvas yang terlihat
-    //     ctx.drawImage(screenshotCanvas, 0, 0);
-
-    //     // Konversi tangkapan layar menjadi data URL
-    //     var dataUrl = canvas.toDataURL('image/png');
-
-    //     // Buat elemen tautan untuk mengunduh gambar
-    //     var link = document.createElement('a');
-    //     link.download = 'full-page-screenshot.png';
-    //     link.href = dataUrl;
-
-    //     document.body.appendChild(link);
-    //     // Klik tautan untuk memulai unduhan
-    //     link.click();
-    //     document.body.removeChild(link);
-    // });
+            serp_noDownload();
+        })
+        .catch(function (error) {
+            console.error("oops, something went wrong!", error);
+            serp_noDownload();
+        });
 });
 
 $("#pdf-serp-preview").click(function () {
+    serp_Download();
     window.print();
-    // event.preventDefault();
-    // var container = $("#serp-result-container").contentWindow;
-    // // var container = $("#serp-result-container");
-    // container.focus();
-    // container.print();
-    // window.print(container);
-    // html2canvas(container).then((canvas) => {
-    //     let base64image = canvas.toDataURL('image/png');
-    //     // console.log(base64image);
-    //     let pdf = new jsPDF('p', 'px', [1600, 1131]);
-    //     pdf.addImage(base64image, 'PNG', 15, 15, 1110, 360);
-    //     pdf.save('webtylepress-two.pdf');
-    // });
-});
-
-// Local History 
-$("#local-history")
-    .on("click", ".delete-history--btn", function () {
-        deleteHistory($(this).data("index"));
-    })
-    .on("click", ".history--list", function (e) {
-        if (e.target.classList.contains("delete-history--btn")) return;
-        const _url = $(this).data("url");
-
-        let histories = localStorage.getItem(SERP_LOCAL_STORAGE_KEY);
-        histories = histories ? JSON.parse(histories) : [];
-        const history = histories.find((history) => {
-            return history.url === _url;
-        });
-
-        dataResult = history.data;
-
-        renderAllData(history.data);
-    });
-
-$("#local-history-mobile")
-    .on("click", ".delete-history--btn", function () {
-        deleteHistory($(this).data("index"));
-    })
-    .on("click", ".history--list", function (e) {
-        if (e.target.classList.contains("delete-history--btn")) return;
-        const _url = $(this).data("url");
-
-        let histories = localStorage.getItem(SERP_LOCAL_STORAGE_KEY);
-        histories = histories ? JSON.parse(histories) : [];
-        const history = histories.find((history) => {
-            return history.url === _url;
-        });
-
-        dataResult = history.data;
-
-        renderAllData(history.data);
-    });
-
-$(".clear-history--btn").click(function () {
-    clearAllHistory();
+    serp_noDownload();
 });

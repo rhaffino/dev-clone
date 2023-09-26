@@ -102,6 +102,12 @@
             'icon' => "<i class='text-purple-70 bx bx-list-check bx-md'></i>",
             'link' => 'robotstxt-checker',
         ],
+        [
+            'title' => 'SERP Simulator',
+            'desc' => __('home.serp-simulator-desc'),
+            'icon' => "<i class='text-purple-70 bx bxl-google bx-md'></i>",
+            'link' => 'serp-simulator',
+        ],
     ];
 @endphp
 
