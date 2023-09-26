@@ -64,7 +64,7 @@
                 </div>
 
                 ${pinned ? `<i class='pin-icon bx bxs-pin bx-sm text-gray-100'></i>` : ''}                    
-                <i data-id="${data.id}" class='close-btn close-notif-btn bx bx-x bx-sm text-gray-100'></i>
+                <i data-id="${data.id}" class='close-btn close-notif-btn bx bx-x bx-sm text-gray-100' style='opacity: 1'></i>
             </div>            
             `
 
