@@ -24,14 +24,16 @@
     outline: none;
 }
 
+#ads-serp-preview.active,
+#rating-serp-preview.active,
+#date-serp-preview.active{
+    color: var(--primaryblue);
+}
+
 /* Snippet Desktop */
 #snippet-desktop {
     width: 100%;
     height: 700px;
-}
-#snippet-desktop .snippet-result.snippet-preview {
-    margin-top: -15px;
-    padding-top: 15px;
 }
 
 /* Header */
@@ -268,7 +270,8 @@
 }
 
 /* Snippet Preview */
-.snippet-favicon{
+.snippet-favicon,
+.svg-favicon{
     width: 16px;
 }
 
@@ -422,5 +425,50 @@
 @media screen and (max-width: 500px){
     .practice-serp-simulator{
         margin-top: 3rem;
+    }
+}
+
+@media print {
+    /* Properti CSS for print preview */
+    @page {
+     margin-left: 0.8in;
+     margin-right: 0.8in;
+     margin-top: 0;
+     margin-bottom: 0;
+   }
+    #kt_header,
+    #kt_subheader,
+    #kt_header_mobile,
+    #practice-serp-simulator,
+    #local-collection-desktop,
+    #alert-limit,
+    .card.card-custom.mb-5,
+    .header-blue,
+    .desktop-version,
+    .background-white,
+    .footer-bottom,
+    h1,
+    p,
+    .tooltip{
+        display: none;
+    }
+    #serp-result-container{
+        overflow: initial;
+    }
+    .serp-simulator-result{
+        overflow: initial;
+        max-height: fit-content;
+        border: 1px solid #e1e8ed!important;
+    }
+    #snippet-mobile,
+    #snippet-mobile .snippet-result{        
+        border: 1px solid #e1e8ed!important;
+    }
+    #snippet-desktop,
+    #snippet-mobile{
+        height: fit-content;
+    }
+    .background-gray-40{
+        background-color: #fff!important;
     }
 }

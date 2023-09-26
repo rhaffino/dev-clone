@@ -9,15 +9,14 @@ return [
     "serp-placeholder" => "https://www.example.com",
     "serp-btn-tooltip" => "You can only search 5 times in 1 hour",
 
-
     "serp-desktop" => "Desktop Preview", 
     "serp-mobile" => "Mobile Preview", 
     "serp-ads" => "Show Google Ads", 
     "serp-date" => "Show Publish Date", 
     "serp-rating" => "Show Rating", 
     "serp-reset" => "Reset", 
-    "serp-download" => "Download", 
-    "serp-share" => "Share",
+    "serp-download" => "Download Images", 
+    "serp-pdf" => "Download PDF",
 
     "snippet-input" => "Enter a keyword to get real search results", 
 

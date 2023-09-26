@@ -54,10 +54,10 @@ id/serp-simulator
                         <div class="card-body py-3 px-4">
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="d-flex align-items-center">
-                                    <div id="desktop-serp" class="active wordcounter-background-text-size wordcounter-background-text-size-left-edge font-weight-bolder d-flex justify-content-center align-items-center p-2" data-toggle="tooltip" data-theme="dark" title="" data-original-title="Desktop">
+                                    <div id="desktop-serp" class="active wordcounter-background-text-size wordcounter-background-text-size-left-edge font-weight-bolder d-flex justify-content-center align-items-center p-2" data-toggle="tooltip" data-theme="dark" title="" data-original-title="@lang('serp-simulator.serp-desktop')">
                                         <i class='bx bx-laptop bx-sm text-white'></i>
                                     </div>
-                                    <div id="mobile-serp" class="wordcounter-background-text-size wordcounter-background-text-size-right-edge font-weight-bolder d-flex justify-content-center align-items-center p-2" data-toggle="tooltip" data-theme="dark" title="" data-original-title="Mobile">
+                                    <div id="mobile-serp" class="wordcounter-background-text-size wordcounter-background-text-size-right-edge font-weight-bolder d-flex justify-content-center align-items-center p-2" data-toggle="tooltip" data-theme="dark" title="" data-original-title="@lang('serp-simulator.serp-mobile')">
                                         <i class='bx bx-mobile-alt bx-sm text-white'></i>
                                     </div>
 
@@ -65,30 +65,30 @@ id/serp-simulator
                                         <i id="ads-serp-preview"
                                             class='bx bx-money bx-sm mx-2 text-darkgrey text-hover-primaryblue'
                                             data-toggle="tooltip" data-theme="dark"
-                                            title="Google Ads Preview"></i>
+                                            title="@lang('serp-simulator.serp-ads')"></i>
                                         <i id="date-serp-preview"
                                             class='bx bxs-calendar bx-sm mx-2 text-darkgrey text-hover-primaryblue'
                                             data-toggle="tooltip" data-theme="dark"
-                                            title="Show Date"></i>
+                                            title="@lang('serp-simulator.serp-date')"></i>
                                         <i id="rating-serp-preview"
                                             class='bx bxs-star bx-sm mx-2 text-darkgrey text-hover-primaryblue'
                                             data-toggle="tooltip" data-theme="dark"
-                                            title="Show Rating"></i>
+                                            title="@lang('serp-simulator.serp-rating')"></i>
                                     </div>
                                 </div>
                                 <div class="d-flex align-items-center">
                                     <i id="reset-serp-preview"
                                         class='bx bx-reset bx-sm mx-2 text-darkgrey text-hover-primaryblue'
                                         data-toggle="tooltip" data-theme="dark"
-                                        title="Reset"></i>
+                                        title="@lang('serp-simulator.serp-reset')"></i>
                                     <i id="download-serp-preview"
                                         class='bx bxs-download bx-sm mx-2 text-darkgrey text-hover-primaryblue'
                                         data-toggle="tooltip" data-theme="dark"
-                                        title="Download"></i>
-                                    <i id="share-serp-preview"
-                                        class='bx bxs-share-alt bx-sm mx-2 text-darkgrey text-hover-primaryblue'
+                                        title="@lang('serp-simulator.serp-download')"></i>
+                                    <i id="pdf-serp-preview"
+                                        class='bx bxs-file-pdf bx-sm mx-2 text-darkgrey text-hover-primaryblue'
                                         data-toggle="tooltip" data-theme="dark"
-                                        title="Share"></i>
+                                        title="@lang('serp-simulator.serp-pdf')"></i>
                                 </div>
                             </div>
                         </div>
@@ -105,6 +105,7 @@ id/serp-simulator
                                     <div>
                                         <form action="#" class="snippet-form-tag position-relative">
                                             <strong class="snippet-label text-small">
+                                                <svg class="svg-search" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: rgba(66, 133, 244, 1);"><path d="M10 18a7.952 7.952 0 0 0 4.897-1.688l4.396 4.396 1.414-1.414-4.396-4.396A7.952 7.952 0 0 0 18 10c0-4.411-3.589-8-8-8s-8 3.589-8 8 3.589 8 8 8zm0-14c3.309 0 6 2.691 6 6s-2.691 6-6 6-6-2.691-6-6 2.691-6 6-6z"></path></svg>
                                                 <i class='bx bx-search bx-sm'></i>
                                             </strong>
                                             <input class="snippet-input" placeholder="@lang('serp-simulator.snippet-input')" type="text">
@@ -133,6 +134,8 @@ id/serp-simulator
                                                         <span class="ad-label">@lang('serp-simulator.ad-label')</span>
                                                         <span>@lang('serp-simulator.ad-domain-1')</span> › @lang('serp-simulator.ad-breadcrumbs-1')  
                                                     </div>
+                                                    
+                                                    <svg class="svg-dots" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" style="fill: #B5B5C3;"><path d="M12 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0-6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 12c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"></path></svg>
                                                     <i class='bx bx-dots-vertical-rounded'></i>
                                                 </div>
                                             </div>
@@ -148,6 +151,8 @@ id/serp-simulator
                                                         <span class="ad-label">@lang('serp-simulator.ad-label')</span>
                                                         <span>@lang('serp-simulator.ad-domain-2')</span> › @lang('serp-simulator.ad-breadcrumbs-2')  
                                                     </div>
+                                                    
+                                                    <svg class="svg-dots" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" style="fill: #B5B5C3;"><path d="M12 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0-6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 12c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"></path></svg>
                                                     <i class='bx bx-dots-vertical-rounded'></i>
                                                 </div>
                                             </div>
@@ -159,6 +164,7 @@ id/serp-simulator
                                     <div class="snippet-result snippet-preview" id="desktop-preview-result">
                                         <div class="snippet-url snippet-truncate d-flex align-items-center">
                                             <div class="favicon__container">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="fill: rgba(77, 81, 86, 1);margin-left: 0.8px;" class="svg-favicon d-flex-item-none"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zM4 12c0-.899.156-1.762.431-2.569L6 11l2 2v2l2 2 1 1v1.931C7.061 19.436 4 16.072 4 12zm14.33 4.873C17.677 16.347 16.687 16 16 16v-1a2 2 0 0 0-2-2h-4v-3a2 2 0 0 0 2-2V7h1a2 2 0 0 0 2-2v-.411C17.928 5.778 20 8.65 20 12a7.947 7.947 0 0 1-1.67 4.873z"></path></svg>
                                                 <img src="https://www.google.com/s2/favicons?domain=default" class="d-flex-item-none snippet-favicon">
                                             </div>
                                             <div class="d-flex flex-column">
@@ -167,6 +173,7 @@ id/serp-simulator
                                                     <div>
                                                         <span class="snippet-breadcrumbs">https://tools.cmlabs.co</span>  
                                                     </div>
+                                                    <svg class="svg-dots" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" style="fill: #B5B5C3;"><path d="M12 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0-6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 12c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"></path></svg>
                                                     <i class='bx bx-dots-vertical-rounded'></i>
                                                 </div>
                                             </div>
@@ -175,6 +182,11 @@ id/serp-simulator
                                         <div class="snippet-desc"><span class="snippet-date">Sep 20, 2023 - </span><span class="snippet-desc-preview" id="snippet-desc-preview-desktop">Here is an example of what a snippet looks like in Google's SERPs. The content that appears here is usually taken from the Meta Description tag if relevant.</span></div>
                                         <div class="snippet-rating align-items-center">
                                             <div class="snippet-rating-vote">
+                                                <svg class="svg-star-active" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" style="fill: rgba(251, 188, 4, 1);"><path d="M21.947 9.179a1.001 1.001 0 0 0-.868-.676l-5.701-.453-2.467-5.461a.998.998 0 0 0-1.822-.001L8.622 8.05l-5.701.453a1 1 0 0 0-.619 1.713l4.213 4.107-1.49 6.452a1 1 0 0 0 1.53 1.057L12 18.202l5.445 3.63a1.001 1.001 0 0 0 1.517-1.106l-1.829-6.4 4.536-4.082c.297-.268.406-.686.278-1.065z"></path></svg>
+                                                <svg class="svg-star-active" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" style="fill: rgba(251, 188, 4, 1);"><path d="M21.947 9.179a1.001 1.001 0 0 0-.868-.676l-5.701-.453-2.467-5.461a.998.998 0 0 0-1.822-.001L8.622 8.05l-5.701.453a1 1 0 0 0-.619 1.713l4.213 4.107-1.49 6.452a1 1 0 0 0 1.53 1.057L12 18.202l5.445 3.63a1.001 1.001 0 0 0 1.517-1.106l-1.829-6.4 4.536-4.082c.297-.268.406-.686.278-1.065z"></path></svg>
+                                                <svg class="svg-star-active" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" style="fill: rgba(251, 188, 4, 1);"><path d="M21.947 9.179a1.001 1.001 0 0 0-.868-.676l-5.701-.453-2.467-5.461a.998.998 0 0 0-1.822-.001L8.622 8.05l-5.701.453a1 1 0 0 0-.619 1.713l4.213 4.107-1.49 6.452a1 1 0 0 0 1.53 1.057L12 18.202l5.445 3.63a1.001 1.001 0 0 0 1.517-1.106l-1.829-6.4 4.536-4.082c.297-.268.406-.686.278-1.065z"></path></svg>
+                                                <svg class="svg-star-active" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" style="fill: rgba(251, 188, 4, 1);"><path d="M21.947 9.179a1.001 1.001 0 0 0-.868-.676l-5.701-.453-2.467-5.461a.998.998 0 0 0-1.822-.001L8.622 8.05l-5.701.453a1 1 0 0 0-.619 1.713l4.213 4.107-1.49 6.452a1 1 0 0 0 1.53 1.057L12 18.202l5.445 3.63a1.001 1.001 0 0 0 1.517-1.106l-1.829-6.4 4.536-4.082c.297-.268.406-.686.278-1.065z"></path></svg>
+                                                <svg class="svg-star" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" style="fill: #B5B5C3;"><path d="M21.947 9.179a1.001 1.001 0 0 0-.868-.676l-5.701-.453-2.467-5.461a.998.998 0 0 0-1.822-.001L8.622 8.05l-5.701.453a1 1 0 0 0-.619 1.713l4.213 4.107-1.49 6.452a1 1 0 0 0 1.53 1.057L12 18.202l5.445 3.63a1.001 1.001 0 0 0 1.517-1.106l-1.829-6.4 4.536-4.082c.297-.268.406-.686.278-1.065z"></path></svg>
                                                 <i class="bx bxs-star active"></i>
                                                 <i class="bx bxs-star active"></i>
                                                 <i class="bx bxs-star active"></i>
@@ -215,6 +227,7 @@ id/serp-simulator
 
                                         <form action="#" class="snippet-form-tag position-relative">
                                             <strong class="snippet-label text-small">
+                                                <svg class="svg-search" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: rgba(66, 133, 244, 1);"><path d="M10 18a7.952 7.952 0 0 0 4.897-1.688l4.396 4.396 1.414-1.414-4.396-4.396A7.952 7.952 0 0 0 18 10c0-4.411-3.589-8-8-8s-8 3.589-8 8 3.589 8 8 8zm0-14c3.309 0 6 2.691 6 6s-2.691 6-6 6-6-2.691-6-6 2.691-6 6-6z"></path></svg>
                                                 <i class='bx bx-search bx-sm'></i>
                                             </strong>
                                             <input class="snippet-input" placeholder="@lang('serp-simulator.snippet-input')" type="text">
@@ -242,6 +255,7 @@ id/serp-simulator
                                                     </div>
                                                 </div>
                                             </div>
+                                            <svg class="svg-dots ms-auto" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" style="fill: #B5B5C3;"><path d="M12 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0-6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 12c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"></path></svg>
                                             <i class='bx bx-dots-vertical-rounded ms-auto'></i>
                                         </div>
                                         <div class="snippet-title">@lang('serp-simulator.ad-snippet-title-1')</div>
@@ -257,6 +271,7 @@ id/serp-simulator
                                                     </div>
                                                 </div>
                                             </div>
+                                            <svg class="svg-dots ms-auto" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" style="fill: #B5B5C3;"><path d="M12 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0-6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 12c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"></path></svg>
                                             <i class='bx bx-dots-vertical-rounded ms-auto'></i>
                                         </div>
                                         <div class="snippet-title">@lang('serp-simulator.ad-snippet-title-2')</div>
@@ -266,6 +281,7 @@ id/serp-simulator
                                     <div class="snippet-result snippet-preview">
                                         <div class="snippet-url d-flex align-items-center">
                                             <div class="favicon__container">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="fill: rgba(77, 81, 86, 1);margin-left: 0.8px;" class="svg-favicon d-flex-item-none"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zM4 12c0-.899.156-1.762.431-2.569L6 11l2 2v2l2 2 1 1v1.931C7.061 19.436 4 16.072 4 12zm14.33 4.873C17.677 16.347 16.687 16 16 16v-1a2 2 0 0 0-2-2h-4v-3a2 2 0 0 0 2-2V7h1a2 2 0 0 0 2-2v-.411C17.928 5.778 20 8.65 20 12a7.947 7.947 0 0 1-1.67 4.873z"></path></svg>
                                                 <img src="https://www.google.com/s2/favicons?domain=default" class="snippet-favicon">
                                             </div>
                                             <div class="d-flex flex-column">
@@ -276,6 +292,7 @@ id/serp-simulator
                                                     </div>
                                                 </div>
                                             </div>
+                                            <svg class="svg-dots ms-auto" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" style="fill: #B5B5C3;"><path d="M12 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0-6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 12c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"></path></svg>
                                             <i class='bx bx-dots-vertical-rounded ms-auto'></i>
                                         </div>
                                         <div class="snippet-title snippet-title-preview">This is an Example of a Title Tag</div>
@@ -286,6 +303,11 @@ id/serp-simulator
                                             <div class="d-flex align-items-center">
                                                 4,1 
                                                 <div class="snippet-rating-vote">
+                                                    <svg class="svg-star-active" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" style="fill: rgba(251, 188, 4, 1);"><path d="M21.947 9.179a1.001 1.001 0 0 0-.868-.676l-5.701-.453-2.467-5.461a.998.998 0 0 0-1.822-.001L8.622 8.05l-5.701.453a1 1 0 0 0-.619 1.713l4.213 4.107-1.49 6.452a1 1 0 0 0 1.53 1.057L12 18.202l5.445 3.63a1.001 1.001 0 0 0 1.517-1.106l-1.829-6.4 4.536-4.082c.297-.268.406-.686.278-1.065z"></path></svg>
+                                                    <svg class="svg-star-active" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" style="fill: rgba(251, 188, 4, 1);"><path d="M21.947 9.179a1.001 1.001 0 0 0-.868-.676l-5.701-.453-2.467-5.461a.998.998 0 0 0-1.822-.001L8.622 8.05l-5.701.453a1 1 0 0 0-.619 1.713l4.213 4.107-1.49 6.452a1 1 0 0 0 1.53 1.057L12 18.202l5.445 3.63a1.001 1.001 0 0 0 1.517-1.106l-1.829-6.4 4.536-4.082c.297-.268.406-.686.278-1.065z"></path></svg>
+                                                    <svg class="svg-star-active" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" style="fill: rgba(251, 188, 4, 1);"><path d="M21.947 9.179a1.001 1.001 0 0 0-.868-.676l-5.701-.453-2.467-5.461a.998.998 0 0 0-1.822-.001L8.622 8.05l-5.701.453a1 1 0 0 0-.619 1.713l4.213 4.107-1.49 6.452a1 1 0 0 0 1.53 1.057L12 18.202l5.445 3.63a1.001 1.001 0 0 0 1.517-1.106l-1.829-6.4 4.536-4.082c.297-.268.406-.686.278-1.065z"></path></svg>
+                                                    <svg class="svg-star-active" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" style="fill: rgba(251, 188, 4, 1);"><path d="M21.947 9.179a1.001 1.001 0 0 0-.868-.676l-5.701-.453-2.467-5.461a.998.998 0 0 0-1.822-.001L8.622 8.05l-5.701.453a1 1 0 0 0-.619 1.713l4.213 4.107-1.49 6.452a1 1 0 0 0 1.53 1.057L12 18.202l5.445 3.63a1.001 1.001 0 0 0 1.517-1.106l-1.829-6.4 4.536-4.082c.297-.268.406-.686.278-1.065z"></path></svg>
+                                                    <svg class="svg-star" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" style="fill: #B5B5C3;"><path d="M21.947 9.179a1.001 1.001 0 0 0-.868-.676l-5.701-.453-2.467-5.461a.998.998 0 0 0-1.822-.001L8.622 8.05l-5.701.453a1 1 0 0 0-.619 1.713l4.213 4.107-1.49 6.452a1 1 0 0 0 1.53 1.057L12 18.202l5.445 3.63a1.001 1.001 0 0 0 1.517-1.106l-1.829-6.4 4.536-4.082c.297-.268.406-.686.278-1.065z"></path></svg>
                                                     <i class="bx bxs-star active"></i>
                                                     <i class="bx bxs-star active"></i>
                                                     <i class="bx bxs-star active"></i>
@@ -301,7 +323,8 @@ id/serp-simulator
                                     <div class="snippet-result is-placeholder">
                                         <div class="snippet-url d-flex align-items-center">
                                             <div class="favicon__container">
-                                                <img src="https://www.google.com/s2/favicons?domain=default">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="fill: rgba(77, 81, 86, 1);margin-left: 0.8px;" class="svg-favicon d-flex-item-none"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zM4 12c0-.899.156-1.762.431-2.569L6 11l2 2v2l2 2 1 1v1.931C7.061 19.436 4 16.072 4 12zm14.33 4.873C17.677 16.347 16.687 16 16 16v-1a2 2 0 0 0-2-2h-4v-3a2 2 0 0 0 2-2V7h1a2 2 0 0 0 2-2v-.411C17.928 5.778 20 8.65 20 12a7.947 7.947 0 0 1-1.67 4.873z"></path></svg>
+                                                <img src="https://www.google.com/s2/favicons?domain=default" class="snippet-favicon">
                                             </div>
                                             <div class="d-flex flex-column">
                                                 <div class="snippet-url-mobile"></div>
@@ -313,7 +336,8 @@ id/serp-simulator
                                     <div class="snippet-result is-placeholder">
                                         <div class="snippet-url d-flex align-items-center">
                                             <div class="favicon__container">
-                                                <img src="https://www.google.com/s2/favicons?domain=default">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="fill: rgba(77, 81, 86, 1);margin-left: 0.8px;" class="svg-favicon d-flex-item-none"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zM4 12c0-.899.156-1.762.431-2.569L6 11l2 2v2l2 2 1 1v1.931C7.061 19.436 4 16.072 4 12zm14.33 4.873C17.677 16.347 16.687 16 16 16v-1a2 2 0 0 0-2-2h-4v-3a2 2 0 0 0 2-2V7h1a2 2 0 0 0 2-2v-.411C17.928 5.778 20 8.65 20 12a7.947 7.947 0 0 1-1.67 4.873z"></path></svg>
+                                                <img src="https://www.google.com/s2/favicons?domain=default" class="snippet-favicon">
                                             </div>
                                             <div class="d-flex flex-column">
                                                 <div class="snippet-url-mobile"></div>
@@ -325,7 +349,8 @@ id/serp-simulator
                                     <div class="snippet-result is-placeholder">
                                         <div class="snippet-url d-flex align-items-center">
                                             <div class="favicon__container">
-                                                <img src="https://www.google.com/s2/favicons?domain=default">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="fill: rgba(77, 81, 86, 1);margin-left: 0.8px;" class="svg-favicon d-flex-item-none"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zM4 12c0-.899.156-1.762.431-2.569L6 11l2 2v2l2 2 1 1v1.931C7.061 19.436 4 16.072 4 12zm14.33 4.873C17.677 16.347 16.687 16 16 16v-1a2 2 0 0 0-2-2h-4v-3a2 2 0 0 0 2-2V7h1a2 2 0 0 0 2-2v-.411C17.928 5.778 20 8.65 20 12a7.947 7.947 0 0 1-1.67 4.873z"></path></svg>
+                                                <img src="https://www.google.com/s2/favicons?domain=default" class="snippet-favicon">
                                             </div>
                                             <div class="d-flex flex-column">
                                                 <div class="snippet-url-mobile"></div>
@@ -348,8 +373,8 @@ id/serp-simulator
                                 <p class="h6 text-black font-weight-bolder mb-5">@lang('serp-simulator.practice-title')</p>
                                 <label for="URL" class="font-weight-bold text-black">@lang('serp-simulator.label-url')</label>
                                 <div class="position-relative">
-                                    <input type="text" class="form-control url" name="" placeholder="@lang('serp-simulator.placeholder-url')" value="">
-                                    <label class="label-btn-fetch">
+                                    <input id="url" type="text" class="form-control url" name="" placeholder="@lang('serp-simulator.placeholder-url')" value="">
+                                    <label class="label-btn-fetch" id="btn-fetch">
                                         @lang('serp-simulator.label-btn-fetch')
                                     </label>
                                 </div>
@@ -357,14 +382,18 @@ id/serp-simulator
                             <div class="col-12 mb-5">
                                 <div class="d-flex justify-content-between">
                                     <label class="text-black font-weight-bold" for="title-meta">@lang('serp-simulator.label-title-meta')</label>
-                                    <label class="text-black font-weight-bold" for="title-meta-count">@lang('serp-simulator.label-title-meta-count')</label>
+                                    <label class="text-black font-weight-bold" for="title-meta-count">
+                                        <span id="char-title">0</span> char (<span id="px-title">0</span> / 600px)
+                                    </label>
                                 </div>
                                 <textarea name="" class="form-control custom-textarea-82 title mb-5" placeholder="@lang('serp-simulator.placeholder-title-meta')"></textarea>
                             </div>
                             <div class="col-12 mb-5">
                                 <div class="d-flex justify-content-between">
                                     <label class="text-black font-weight-bold" for="desc-meta">@lang('serp-simulator.label-desc-meta')</label>
-                                    <label class="text-black font-weight-bold" for="desc-meta-count">@lang('serp-simulator.label-desc-meta-count')</label>
+                                    <label class="text-black font-weight-bold" for="desc-meta-count">
+                                        <span id="char-desc">0</span> char (<span id="px-desc">0</span> / 600px)
+                                    </label>
                                 </div>
                                 <textarea name="" class="form-control custom-textarea-82 desc mb-5" placeholder="@lang('serp-simulator.placeholder-desc-meta')"></textarea>
                             </div>
@@ -372,22 +401,6 @@ id/serp-simulator
                                 <label for="keywords" class="font-weight-bold text-black">@lang('serp-simulator.label-keyword')</label>
                                 <input type="text" class="form-control keywords" name="" placeholder="@lang('serp-simulator.placeholder-keyword')" value="" disabled>
                             </div>
-                        </div>
-                    </div>
-                    
-                    <div id="local-collection-desktop" class="local-collection">
-                        <div class="local-collection-header d-flex justify-content-between px-2 mb-3">
-                            <div class="d-flex flex-row align-items-center">
-                                <i class='bx bxs-collection bx-sm text-darkgrey mr-2'></i>
-                                <span class="text-black font-15px">@lang('layout.local-history')</span>
-                            </div>
-                            <div>
-                                <span class="clear-all font-15px pointer mr-3 clear-history--btn">@lang('layout.clear-all')</span>
-                            </div>
-                        </div>
-                        <div class="local-collection-body">
-                            <ul class="list-group flex-column-reverse" id="local-history">
-                            </ul>
                         </div>
                     </div>
 
@@ -416,18 +429,9 @@ id/serp-simulator
         </div>
     </div>
 </div>
+
 <div class="w-100">
     <div class="local-collection-mobile bg-white py-5">
-        <div class="local-collection-header d-flex justify-content-between mb-3 w-100 px-5">
-            <div class="d-flex flex-row align-items-center">
-                <i class='bx bxs-collection bx-sm text-darkgrey mr-2'></i>
-                <span class="text-black font-15px">@lang('layout.local-history')</span>
-            </div>
-            <div>
-                <span class="clear-all font-15px pointer clear-history--btn">@lang('layout.clear-all')</span>
-            </div>
-        </div>
-        <div class="local-collection-body mt-3 px-5 d-flex flex-wrap-reverse" id="local-history-mobile"></div>
         <div id="mobile-version" class="px-5 accordion accordion-light accordion-toggle-arrow custom-features-accordion" id="accordionExample2">
             <div class="card bg-transparent" style="">
                 <div class="card-header" id="headingOne2">
@@ -539,6 +543,8 @@ id/serp-simulator
 <script>
     const SERP_CHECK_API_URL = "{{ route('api.metadata-scraper') }}";
 </script>
+<script src="{{asset('js/logic/html2canvas.js')}}"></script>
+<script src="{{asset('js/logic/dom-image.js')}}"></script>
 <script src="{{asset('js/logic/serp-simulator.js')}}"></script>
 <script type="application/ld+json">
     {
