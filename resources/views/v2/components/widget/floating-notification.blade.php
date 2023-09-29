@@ -26,11 +26,11 @@
         @isset($notificationData)
             <button
                 class="btn btn-float-notif open align-items-center button-marketing {{ count($notificationData) > 0 && $notificationData != '' ? 'active' : '' }}">
-                <i class='bx bx-sm bxs-bell'></i>
+                <i class='bx bx-sm bxs-bell' style="padding: 0"></i>
                 <div class="red-dot"></div>
             </button>
             <button class="btn btn-float-notif align-items-center close">
-                <i class='bx bx-sm bxs-bell'></i>
+                <i class='bx bx-sm bxs-bell' style="padding: 0"></i>
                 <div class="red-dot"></div>
             </button>
         @endisset
