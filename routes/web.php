@@ -70,6 +70,13 @@ Route::middleware([ManualAuth::class])->group(function (){
         Route::get('/{lang}/plagiarism-checker', 'ToolsController@plagiarismChecker');
         Route::get('/{lang}/download-plagiarism-check-logs/{type}', 'ToolsController@downloadPlagiarismCheckLogs');
         Route::get('/{lang}/http-header-checker', 'ToolsController@headerChecker');
+        Route::get('/{lang}/json-ld-website-schema-generator', 'ToolsController@website');
+        Route::get('/{lang}/json-ld-local-business-schema-generator', 'ToolsController@localBusiness');
+        Route::get('/{lang}/json-ld-video-schema-generator', 'ToolsController@video');
+        Route::get('/{lang}/json-ld-event-schema-generator', 'ToolsController@event');
+        Route::get('/{lang}/json-ld-organization-schema-generator', 'ToolsController@organization');
+        Route::get('/{lang}/robotstxt-checker', 'ToolsController@robotsChecker');
+        Route::get('/{lang}/serp-simulator', 'ToolsController@serpSimulator');
     });
     Route::get('/en/version', 'ToolsController@englishVersion');
     Route::get('/id/version', 'ToolsController@indonesiaVersion');

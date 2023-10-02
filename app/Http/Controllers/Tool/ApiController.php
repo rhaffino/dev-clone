@@ -407,4 +407,26 @@ class ApiController extends Controller
             return new BaseApiResource(null, $exception->getMessage(), 500);
         }
     }
+
+    public function robotsChecker(Request $request)
+    {
+        $url = $request->get('url');
+
+        if (!filter_var($url, FILTER_VALIDATE_URL)) {
+            return new BaseApiResource(null, 'URL is not valid', 422, 'danger');
+        }
+        $response = $this->requestrobotsChecker($url);
+        return new BaseApiResource($response['data'] ?? [], $response['message'], $response['statusCode']);
+    }
+
+    public function serpChecker(Request $request)
+    {
+        $url = $request->get('url');
+
+        if (!filter_var($url, FILTER_VALIDATE_URL)) {
+            return new BaseApiResource(null, 'URL is not valid', 422, 'danger');
+        }
+        $response = $this->requestserpChecker($url);
+        return new BaseApiResource($response['data'] ?? [], $response['message'], $response['statusCode']);
+    }
 }

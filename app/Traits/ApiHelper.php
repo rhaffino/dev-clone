@@ -28,7 +28,6 @@ trait ApiHelper
             }
 
             $response = $this->client->request($method, env('TOOLS_API_URL') . $path . "?key=$key" , $options);
-//            dd($response->getBody()->getContents());
             return $response->getBody()->getContents();
             
         } catch (ClientException $exception) {
@@ -131,5 +130,15 @@ trait ApiHelper
             $exceptions['statusCode'] = 500;
             return $exceptions;
         }
+    }
+
+    protected function requestrobotsChecker($url){
+        $response = $this->request("api/robot-checker/check", 'POST', compact('url'));
+        return \GuzzleHttp\json_decode($response, 1);
+    }
+
+    protected function requestserpChecker($url){
+        $response = $this->request("api/metadata-scraper/check", 'POST', compact('url'));
+        return \GuzzleHttp\json_decode($response, 1);
     }
 }
