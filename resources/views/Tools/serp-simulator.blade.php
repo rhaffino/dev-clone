@@ -123,7 +123,7 @@ id/serp-simulator
                                 </div>
 
                                 <div class="snippet-results">
-                                    <div class="snippet-count">About 72.600 results (0.42 seconds)</div>
+                                    <div class="snippet-count">@lang('serp-simulator.snippet-count')</div>
 
                                     <!-- Ads Google -->
                                     <div class="snippet-result snippet-ads">
@@ -178,8 +178,8 @@ id/serp-simulator
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="snippet-title snippet-title-preview">This is an Example of a Title Tag</div>
-                                        <div class="snippet-desc"><span class="snippet-date">Sep 20, 2023 - </span><span class="snippet-desc-preview" id="snippet-desc-preview-desktop">Here is an example of what a snippet looks like in Google's SERPs. The content that appears here is usually taken from the Meta Description tag if relevant.</span></div>
+                                        <div class="snippet-title snippet-title-preview">@lang('serp-simulator.snippet_title')</div>
+                                        <div class="snippet-desc"><span class="snippet-date">Sep 20, 2023 - </span><span class="snippet-desc-preview" id="snippet-desc-preview-desktop">@lang('serp-simulator.snippet_desc')</span></div>
                                         <div class="snippet-rating align-items-center">
                                             <div class="snippet-rating-vote">
                                                 <svg class="svg-star-active" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" style="fill: rgba(251, 188, 4, 1);"><path d="M21.947 9.179a1.001 1.001 0 0 0-.868-.676l-5.701-.453-2.467-5.461a.998.998 0 0 0-1.822-.001L8.622 8.05l-5.701.453a1 1 0 0 0-.619 1.713l4.213 4.107-1.49 6.452a1 1 0 0 0 1.53 1.057L12 18.202l5.445 3.63a1.001 1.001 0 0 0 1.517-1.106l-1.829-6.4 4.536-4.082c.297-.268.406-.686.278-1.065z"></path></svg>
@@ -193,7 +193,7 @@ id/serp-simulator
                                                 <i class="bx bxs-star active"></i>
                                                 <i class="bx bxs-star"></i>
                                             </div>
-                                            Rating: 4.1/5 - 61 votes
+                                            @lang('serp-simulator.snippet_rating')
                                         </div>
                                     </div>
 
@@ -383,7 +383,7 @@ id/serp-simulator
                                 <div class="d-flex justify-content-between">
                                     <label class="text-black font-weight-bold" for="title-meta">@lang('serp-simulator.label-title-meta')</label>
                                     <label class="text-black font-weight-bold" for="title-meta-count">
-                                        <span id="char-title">0</span> char (<span id="px-title">0</span> / 600px)
+                                        <span id="char-title">0</span> @lang('serp-simulator.label-char') (<span id="px-title">0</span> / 600px)
                                     </label>
                                 </div>
                                 <textarea name="" class="form-control custom-textarea-82 title mb-5" placeholder="@lang('serp-simulator.placeholder-title-meta')"></textarea>
@@ -392,7 +392,7 @@ id/serp-simulator
                                 <div class="d-flex justify-content-between">
                                     <label class="text-black font-weight-bold" for="desc-meta">@lang('serp-simulator.label-desc-meta')</label>
                                     <label class="text-black font-weight-bold" for="desc-meta-count">
-                                        <span id="char-desc">0</span> char (<span id="px-desc">0</span> / 600px)
+                                        <span id="char-desc">0</span> @lang('serp-simulator.label-char') (<span id="px-desc">0</span> / 600px)
                                     </label>
                                 </div>
                                 <textarea name="" class="form-control custom-textarea-82 desc mb-5" placeholder="@lang('serp-simulator.placeholder-desc-meta')"></textarea>
@@ -471,49 +471,48 @@ id/serp-simulator
             <p class="text-black">@lang('serp-simulator.desc-1-7')</p>
             <h2 class="text-black">@lang('serp-simulator.desc-2')</h2>
             <p class="text-black">@lang('serp-simulator.desc-2-1')</p>
-            <ul>
-                <li><p class="text-black">@lang('serp-simulator.desc-2-1-1')</p></li>
-                <li><p class="text-black">@lang('serp-simulator.desc-2-1-2')</p></li>
-                <li><p class="text-black">@lang('serp-simulator.desc-2-1-3')</p></li>
-                <li><p class="text-black">@lang('serp-simulator.desc-2-1-4')</p></li>
-            </ul>
-            <h2 class="text-black">@lang('serp-simulator.desc-table-title')</h2>
-            <div class="table-responsive">
-                <table class="table table-bordered">
-                    <thead class="thead-light">
-                        <tr>
-                            <th scope="col">HTTP Header</th>
-                            <th scope="col">@lang('serp-simulator.table-header')</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                    </tbody>
-                </table>
-            </div>
-
+            @lang('serp-simulator.desc-2-1-1')
+            <p class="text-black">@lang('serp-simulator.desc-2-1-2')</p>
+            <p class="text-black">@lang('serp-simulator.desc-2-1-3')</p>
+            <p class="text-black">@lang('serp-simulator.desc-2-1-4')</p>
+            @lang('serp-simulator.desc-2-2-1')
+            <p class="text-black">@lang('serp-simulator.desc-2-2-2')</p>
+            <p class="text-black">@lang('serp-simulator.desc-2-2-3')</p>
+            @lang('serp-simulator.desc-2-3-1')
+            <p class="text-black">@lang('serp-simulator.desc-2-3-2')</p>
+            <p class="text-black">@lang('serp-simulator.desc-2-3-3')</p>
+            <p class="text-black">@lang('serp-simulator.desc-2-3-4')</p>
+            <p class="text-black">@lang('serp-simulator.desc-2-3-5')</p>
+            @lang('serp-simulator.desc-2-4-1')
+            <p class="text-black">@lang('serp-simulator.desc-2-4-2')</p>
+            <p class="text-black">@lang('serp-simulator.desc-2-4-3')</p>
+            <p class="text-black">@lang('serp-simulator.desc-2-4-4')</p>
+            @lang('serp-simulator.desc-2-5-1')
+            <p class="text-black">@lang('serp-simulator.desc-2-5-2')</p>
+            <p class="text-black">@lang('serp-simulator.desc-2-5-3')</p>
+            <p class="text-black">@lang('serp-simulator.desc-2-5-4')</p>
+            <p class="text-black">@lang('serp-simulator.desc-2-5-5')</p>
+            @lang('serp-simulator.desc-2-6-1')
+            <p class="text-black">@lang('serp-simulator.desc-2-6-2')</p>
+            <p class="text-black">@lang('serp-simulator.desc-2-6-3')</p>
         </div>
     @endslot
     @slot('how_to_content')
         <div class="d-none" id="how-to">
             @lang('serp-simulator.howto-title')
-            @lang('serp-simulator.howto1')
             <div class="expand-text">
+                @lang('serp-simulator.howto1')
+                <img class="mb-4" src="{{asset('/media/images/SERP_simulator_instruction_1.webp')}}" alt="HowTo-SERP-Simulator-1" width="80%">
                 @lang('serp-simulator.howto2')
-                <img class="mb-4" src="{{asset('/media/images/http_header_instruction_1.webp')}}" alt="HowTo-http_header-1" width="80%">
+                <img class="mb-4" src="{{asset('/media/images/SERP_simulator_instruction_2.webp')}}" alt="HowTo-SERP-Simulator-2" width="80%">
                 @lang('serp-simulator.howto3')
-                <img class="mb-4" src="{{asset('/media/images/http_header_instruction_2.webp')}}" alt="HowTo-http_header-2" width="80%">
+                <img class="mb-4" src="{{asset('/media/images/SERP_simulator_instruction_3.webp')}}" alt="HowTo-SERP-Simulator-3" width="80%">
                 @lang('serp-simulator.howto4')
-                <img class="mb-4" src="{{asset('/media/images/http_header_instruction_3.webp')}}" alt="HowTo-http_header-3" width="80%">
+                <img class="mb-4" src="{{asset('/media/images/SERP_simulator_instruction_4.webp')}}" alt="HowTo-SERP-Simulator-4" width="80%">
                 @lang('serp-simulator.howto5')
-                <img class="mb-4" src="{{asset('/media/images/http_header_instruction_4.webp')}}" alt="HowTo-http_header-4" width="80%">
-                @lang('serp-simulator.howto6')
-                @lang('serp-simulator.howto7')
-                <img class="mb-4" src="{{asset('/media/images/http_header_instruction_5.webp')}}" alt="HowTo-http_header-5" width="80%">
-                @lang('serp-simulator.howto8')
-                <img class="mb-4" src="{{asset('/media/images/http_header_instruction_6.webp')}}" alt="HowTo-http_header-6" width="80%">
-                @lang('serp-simulator.howto9')
-                <img class="mb-4" src="{{asset('/media/images/http_header_instruction_7.webp')}}" alt="HowTo-http_header-7" width="80%">
-                @lang('serp-simulator.howto10')
+                @lang('serp-simulator.closing-1')
+                @lang('serp-simulator.closing-2')
+                @lang('serp-simulator.closing-3')
             </div>
         </div>
     @endslot
