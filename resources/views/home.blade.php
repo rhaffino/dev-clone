@@ -254,6 +254,34 @@ id
                         </div>
                     </div>
                 </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-8">
+                    <div class="card card-custom card-stretch card-home">
+                        <div class="card-body p-7">
+                            <div class="text-center">
+                                <i class='text-darkgrey bx bx-list-check bx-lg'></i>
+                                <h2 class="h6 text-darkgrey font-weight-bolder">Robots.txt Checker</h2>
+                                <p class="text-darkgrey mb-0">@lang('home.robotstxt-checker-desc')</p>
+                            </div>
+                        </div>
+                        <div class="card-footer text-center border-top-0 pt-0">
+                            <a href="/{{ $local }}/robotstxt-checker" type="button" class="btn btn-launch" name="button">LAUNCH</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-8">
+                    <div class="card card-custom card-stretch card-home">
+                        <div class="card-body p-7">
+                            <div class="text-center">
+                                <i class='text-darkgrey bx bxl-google bx-lg'></i>
+                                <h2 class="h6 text-darkgrey font-weight-bolder">SERP Simulator</h2>
+                                <p class="text-darkgrey mb-0">@lang('home.serp-simulator-desc')</p>
+                            </div>
+                        </div>
+                        <div class="card-footer text-center border-top-0 pt-0">
+                            <a href="/{{ $local }}/serp-simulator" type="button" class="btn btn-launch" name="button">LAUNCH</a>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="d-flex align-items-center">
                 <i class='bx bxs-check-circle text-darkgrey mr-1'></i>
@@ -439,7 +467,7 @@ id
         </div>
     @endslot
     @slot('read_more')
-        <p class="b1-400 b1-m-400 read-more" id="read-more-button">Read more</p>
+        <p class="b1-400 b1-m-400 read-more" id="read-more-button">@lang('layout.read-more')</p>
     @endslot
 @endcomponent
 @endsection
@@ -477,14 +505,14 @@ id
             description_1.classList.remove("d-none");
             description_2.classList.remove("d-none");
             description_3.classList.remove("d-none");
-            read_more_button.innerHTML = 'Show less';
+            read_more_button.innerHTML = @json( __('layout.show-less') );
             read = true;
         } else {
             description_2.style.display = 'none';
             description_3.style.display = 'none';
             description_2.classList.add("d-none");
             description_3.classList.add("d-none");
-            read_more_button.innerHTML = 'Read more';
+            read_more_button.innerHTML = @json( __('layout.read-more') );
             read = false;
         }
     });

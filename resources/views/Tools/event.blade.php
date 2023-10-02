@@ -17,281 +17,461 @@ id/json-ld-event-schema-generator
 @endsection
 
 @section('content')
-@push('style')
-<style media="screen">
-  @media only screen and (max-width: 1200px) and (min-width: 992px) {
-    #copy {
-      height: 50px;
-    }
+@if ($is_maintenance)
+@include('layouts.maintenance')
+@else
+<div class="container container-tools mb-10">
+    <div class="d-flex flex-column-fluid">
+        <div class="container-fluid px-0">
+            <h1 class="text-darkgrey font-weight-normal">@lang('event.title')</h1>
+            <span class="text-darkgrey h4 font-weight-normal mb-10">@lang('event.subtitle')</span>
+            <div class="card card-custom mt-10 mb-5">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-8 mb-5">
+                            <div class="row mb-8">
+                                <div class="col-12">
+                                    <label for="schema-json-ld" class="font-weight-bold text-black h6">@lang('layout.which-schema')</label>
+                                    <select class="form-control selectpicker custom-select-blue custom-searchbox" tabindex="null" data-size="4" data-live-search="true" id="schema-json-ld">
+                                        <option value="home">Home</option>
+                                        <option value="breadcrumb">Breadcrumb</option>
+                                        <option value="faq">FAQ Page</option>
+                                        <option value="how-to">How-to</option>
+                                        <option value="job-posting">Job Posting</option>
+                                        <option value="person">Person</option>
+                                        <option value="product">Product</option>
+                                        <option value="recipe">Recipe</option>
+                                        <option value="website">Website</option>
+                                        <option value="local-business">Local Business</option>
+                                        <option value="video">Video</option>
+                                        <option value="event" selected="selected">Event</option>
+                                        <option value="organization">Organization</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <p class="h6 text-black mb-5">Events Generator</p>
+                            <form action="" id="form-event">
+                                <div class="row">
+                                    <div class="col-12 col-lg-6">
+                                        <label class="text-black font-weight-bold" for="nameEvent">@lang('event.label-name')</label>
+                                        <input type="text" name="" class="form-control nameEvent mb-5" placeholder="@lang('event.placeholder-name')" value="">
+                                        <div class="row">
+                                            <div class="col-12 mb-5">
+                                                <label class="text-black font-weight-bold" for="imageUrl">@lang('event.label-imageUrl')</label>
+                                                <input type="text" name="" class="form-control imageUrl" placeholder="@lang('event.placeholder-imageUrl')" value=""  data-id="0">
+                                                <div class="invalid-feedback imageUrl" data-id="0">@lang('layout.invalid-url')</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-lg-6 mb-8 mb-lg-5">
+                                        <label class="text-black font-weight-bold" for="descriptionVideo">@lang('event.label-description')</label>
+                                        <textarea name="" class="form-control custom-textarea-82 descriptionVideo" placeholder="@lang('event.placeholder-description')" data-id="0"></textarea>
+                                    </div>
+                                </div>
 
-    #test {
-      height: 50px;
-    }
-  }
-</style>
-@endpush
-<div class="d-flex flex-column-fluid">
-    <div class="container-fluid">
-<nav aria-label="event">
-  <ol class="event" style="background-color:#EEF0F8 !important;">
-    <li class="event-item"><a href="/{{$local}}" class="menu-event">@lang('home.homepage')</a></li>
-    <li class="event-item active" style="color:#2F80ED"><b>JSON-LD event Schema Generator</b></li>
-  </ol>
-</nav>
-<div class="card card-custom mb-5">
-  <div class="card-header">
-    <div class="card-title">
-      <h1 class="card-label">JSON-LD event SCHEMA GENERATOR </h1>
-      <small>@lang('event.subtitle')</small>
-    </div>
-  </div>
-</div>
-<div class="row">
-  <div class="col-lg-6">
-    <!--begin::Card-->
-    <div class="card card-custom card-stretch gutter-b">
-      <div class="card-body">
-        <div class="mb-5" id="formevent">
-          <input type="text" name="" class="form-control mb-5 name" placeholder="@lang('event.name') :" value="" data-id="0">
-          {{-- <input type="text" name="" class="form-control mb-5 imageUrl" placeholder="@lang('event.imageUrl') :" value="" data-id="0"> --}}
-          <input type="text" name="" class="form-control mb-5 description" placeholder="@lang('event.description') :" value="" data-id="0">
-          <input type="date" name="" class="form-control mb-5 startDate" placeholder="@lang('event.startDate') :" value="" data-id="0">
-          <input type="time" name="" class="form-control mb-5 starttime" placeholder="@lang('event.starttime') :" value="" data-id="0">
-          <input type="date" name="" class="form-control mb-5 endDate" placeholder="@lang('event.endDate') :" value="" data-id="0">
-          <input type="time" name="" class="form-control mb-5 endtime" placeholder="@lang('event.endtime') :" value="" data-id="0">
-          <select name="" id="" class="form-control mb-5 eventStatus" data-id="0">
-            <option value="">Event Status</option>
-            <option value="scheduled">Scheduled</option>
-            <option value="postponed">postponed</option>
-            <option value="cancelled">Cancelled</option>
-          </select>
+                                <div class="row mb-5">
+                                    <div class="col-12 col-xl-6">
+                                        <div class="row mb-5">
+                                            <div class="col-6">
+                                                <label class="text-black font-weight-bold" for="startDate">@lang('event.label-start-date')</label>
+                                                <div class="input-group date">
+                                                    <div class="input-group-append">
+                                                        <span class="input-group-text">
+                                                            <i class="bx bx-calendar text-darkgrey"></i>
+                                                        </span>
+                                                    </div>
+                                                    <input type="text" id="kt_datepicker_2" name="" class="form-control custom-date startDate" readonly placeholder="@lang('event.placeholder-start-date')" value="" />
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <label for="startTime" class="font-weight-bold text-black">@lang('event.label-startTime')</label>
+                                                <input type="text" class="form-control startTime" name="" placeholder="@lang('event.placeholder-startTime')" value="" data-id="0" disabled>
+                                                <div class="invalid-feedback startTime" data-id="0">@lang('layout.invalid-hours')</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-xl-6">
+                                        <div class="row mb-5">
+                                            <div class="col-6">
+                                                <label class="text-black font-weight-bold" for="endDate">@lang('event.label-end-date')</label>
+                                                <div class="input-group date">
+                                                    <div class="input-group-append">
+                                                        <span class="input-group-text">
+                                                            <i class="bx bx-calendar text-darkgrey"></i>
+                                                        </span>
+                                                    </div>
+                                                    <input type="text" id="kt_datepicker_2" name="" class="form-control custom-date endDate" readonly placeholder="@lang('event.placeholder-end-date')" value="" />
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <label for="endTime" class="font-weight-bold text-black">@lang('event.label-endTime')</label>
+                                                <input type="text" class="form-control endTime" name="" placeholder="@lang('event.placeholder-endTime')" value="" data-id="0" disabled>
+                                                <div class="invalid-feedback endTime" data-id="0">@lang('layout.invalid-hours')</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
 
-          <select name="" id="" class="form-control mb-5 attendance" data-id="0">
-            <option value="">Attendance Mode</option>
-            <option value="online">Online</option>
-            <option value="offline">Offline</option>
-            <option value="mixed">Mixed</option>
-          </select>
+                                <div class="row mb-5">
+                                    <div class="col-12 col-xl-6 mb-5">
+                                        <label class="text-black font-weight-bold" for="eventStatus">@lang('event.label-event-status')</label>
+                                        <select class="form-control selectpicker custom-select-blue eventStatus">
+                                            <option value="EventScheduled">@lang('event.event-status-opt-1')</option>
+                                            <option value="EventPostponed">@lang('event.event-status-opt-2')</option>
+                                            <option value="EventCancelled">@lang('event.event-status-opt-3')</option>
+                                            <option value="EventMovedOnline">@lang('event.event-status-opt-4')</option>
+                                            <option selected="selected" value="none">@lang('event.event-status-opt-0')</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12 col-xl-6">
+                                        <label class="text-black font-weight-bold" for="attendanceMode">@lang('event.label-attendance')</label>
+                                        <select class="form-control selectpicker custom-select-blue attendanceMode">
+                                            <option value="OnlineEventAttendanceMode">@lang('event.attendance-opt-1')</option>
+                                            <option value="OfflineEventAttendanceMode">@lang('event.attendance-opt-2')</option>
+                                            <option value="MixedEventAttendanceMode">@lang('event.attendance-opt-3')</option>
+                                            <option selected="selected" value="none">@lang('event.attendance-opt-0')</option>
+                                        </select>
+                                    </div>
+                                </div>
 
-          <select name="" id="" class="form-control mb-5 performer" data-id="0">
-            <option value="">Performer @type</option>
-            <option value="person">Person</option>
-            <option value="musicgroup">Music Group</option>
-            <option value="dancegroup">Dance Group</option>
-          </select>
-          <input type="text" name="" class="form-control mb-5 namePerformer" placeholder="@lang('event.namePerformer') :" value="" data-id="0">
-          <select name="" id="" class="form-control mb-5 currency" data-id="0">
-            <option value="">Currency</option>
-            <option value="USD">United States Dollar</option>
-            <option value="GBP">British Pound Sterling</option>
-            <option value="CAD">Canadian Dollar</option>
-          </select>
-          <div id="formevent2"></div>
-        </div>
-        <button type="button" class="btn btn-primary" name="button" id="add-event">
-        <i class="flaticon2-plus"></i> @lang('event.btn-add-ticket-type')
-        </button>
-      </div>
-    </div>
-    <!--end::Card-->
-  </div>
-  <div class="col-lg-6">
-    <!--begin::Card-->
-    <div class="card card-custom card-stretch gutter-b">
-      <form class="" target="_blank" rel="nofollow noopener noreferrer" action="https://search.google.com/test/rich-results" method="post">
-        <div class="card-body">
-          <div class="row">
-            <div class="col-lg-6">
-              <button type="button" id="copy" class="btn btn-text-dark-50 btn-icon-primary font-weight-bold btn-hover-bg-light mr-3 form-control mb-5" name="button">
-              <i class="far fa-copy"></i> @lang('event.btn-copy')
-              </button>
+                                <div id="onlineAttendance">
+                                    <div class="row">
+                                        <div class="col-12 col-xl-8 mb-5">
+                                            <label class="text-black font-weight-bold" for="streamUrl">@lang('event.label-stream-url')</label>
+                                            <input type="text" name="" class="form-control streamUrl" placeholder="@lang('event.placeholder-stream-url')" value="" data-id="0">
+                                            <div class="invalid-feedback streamUrl" data-id="0">@lang('layout.invalid-url')</div>
+                                        </div>
+                                        <div class="col-12 col-xl-4 mb-5">
+                                            <label class="text-black font-weight-bold" for="timeZone">@lang('event.label-time-zone')</label>
+                                            <select id="timeZone" class="form-control selectpicker custom-select-blue custom-searchbox timeZone" data-size="4" data-live-search="true" tabindex="null">
+                                                <option value="none">@lang('event.placeholder-time-zone')</option>
+                                                @foreach($timezone as $t)
+                                                    <option value="{{ $t['value'] }}">{{ $t['text'] }}</option>
+                                                @endforeach
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div id="offlineAttendance">
+                                    <div class="row">
+                                        <div class="col-12 col-xl-4 mb-5">
+                                            <label class="text-black font-weight-bold" for="vanue">@lang('event.label-vanue')</label>
+                                            <input type="text" name="" class="form-control vanue" placeholder="@lang('event.placeholder-vanue')" value="">
+                                        </div>
+    
+                                        <div class="col-12 col-xl-4 mb-5">
+                                            <label class="text-black font-weight-bold" for="street">@lang('event.label-street')</label>
+                                            <input type="text" name="" class="form-control street" placeholder="@lang('event.placeholder-street')" value="">
+                                        </div>
+    
+                                        <div class="col-12 col-xl-4 mb-5">
+                                            <label class="text-black font-weight-bold" for="city">@lang('event.label-city')</label>
+                                            <input type="text" name="" class="form-control city" placeholder="@lang('event.placeholder-city')" value="">
+                                        </div>
+                                    </div>
+    
+                                    <div class="row">
+                                        <div class="col-12 col-xl-4 mb-5">
+                                            <label class="text-black font-weight-bold" for="country">@lang('event.label-country')</label>
+                                            <select id="country" class="form-control selectpicker custom-select-blue custom-searchbox country mb-5" data-size="4" data-live-search="true" tabindex="null">
+                                                <option value="none">@lang('event.placeholder-country')</option>
+                                                @foreach($country as $c)
+                                                    <option value="{{ $c['code'] }}">{{ $c['name'] }}</option>
+                                                @endforeach
+                                            </select>
+                                        </div>
+    
+                                        <div class="col-12 col-xl-4 mb-5">
+                                            <label class="text-black font-weight-bold" for="region">@lang('event.label-region')</label>
+                                            <select id="region" class="form-control selectpicker custom-select-blue custom-searchbox region mb-5" data-size="4" data-live-search="true" tabindex="null" disabled>
+                                                <option value="none">@lang('event.placeholder-region')</option>
+                                                @foreach($province as $p)
+                                                    <option value="{{ $p['code'] }}">{{ $p['name'] }}</option>
+                                                @endforeach
+                                            </select>
+                                        </div>
+    
+                                        <div class="col-12 col-xl-4 mb-5">
+                                            <label class="text-black font-weight-bold" for="zip">@lang('event.label-zip')</label>
+                                            <input type="text" name="" class="form-control zip" placeholder="@lang('event.placeholder-zip')" value="">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row mb-5">
+                                    <div class="col-12 col-xl-6 mb-5">
+                                        <label class="text-black font-weight-bold" for="performerType">@lang('event.label-performer-type')</label>
+                                        <select class="form-control selectpicker custom-select-blue performerType">
+                                            <option value="Person">@lang('event.performer-type-opt-1')</option>
+                                            <option value="PerformingGroup">@lang('event.performer-type-opt-2')</option>
+                                            <option value="MusicGroup">@lang('event.performer-type-opt-3')</option>
+                                            <option value="DanceGroup">@lang('event.performer-type-opt-4')</option>
+                                            <option value="TheaterGroup">@lang('event.performer-type-opt-5')</option>
+                                            <option selected="selected" value="none">@lang('event.performer-type-opt-0')</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12 col-xl-6">
+                                        <label class="text-black font-weight-bold" for="performerName">@lang('event.label-performerName')</label>
+                                        <input type="text" name="" class="form-control performerName mb-5" placeholder="@lang('event.placeholder-performerName')" value="" disabled>
+                                    </div>
+                                </div>
+                                <hr>
+
+                                <div class="row mb-5">
+                                    <div class="col-12 col-md-4 mb-5 mb-md-0 d-flex align-items-end">
+                                        <label class="text-black font-weight-bold" for="contentUrl">@lang('event.label-information')</label>
+                                    </div>
+                                    <div class="col-6 col-md-4">
+                                        <button type="button" class="btn btn-block btn-add-question mt-8" name="button" id="add-ticket" disabled>
+                                            <i class='bx bx-plus'></i> @lang('event.btn-addTicket')
+                                        </button>
+                                    </div>
+                                    <div class="col-6 col-md-4">
+                                        <label class="text-black font-weight-bold" for="currency">@lang('event.label-currency')</label>
+                                        <select id="currency" class="form-control selectpicker custom-select-blue custom-searchbox currency mb-5" data-size="4" data-live-search="true">
+                                            <option value="none">@lang('event.placeholder-currency')</option>
+                                            @foreach($currencies as $c)
+                                                <option value="{{ $c['code'] }}">{{ $c['name'] }}</option>
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <!-- Add ticket Type = Dinamic -->
+                                <div id="ticket-offers"></div>
+                                
+                            </form>
+                        </div>
+
+                        <div class="col-md-4 mb-5">
+                            <div class="p-2" style="border: 1px solid #E4E6EF; border-radius: 0.42rem;">
+                                <form class="" style="" target="_blank" rel="nofollow noopener noreferrer" action="https://search.google.com/test/rich-results" method="post">
+                                    <div class="row mb-2">
+                                        <div class="col-4 d-flex justify-content-center px-0 button-result">
+                                            <button type="button" id="copy" class="btn font-weight-bold" name="button">
+                                                <i class='bx bx-copy'></i> <span>@lang('layout.btn-copy')</span></button>
+                                        </div>
+                                        <div class="col-4 d-flex justify-content-center px-0 button-result">
+                                            <button type="submit" id="test" class="btn font-weight-bold " name="button">
+                                                <i class='bx bx-check-circle'></i> <span>@lang('layout.btn-check')</span></button>
+                                        </div>
+                                        <div id="reset" class="col-4 d-flex justify-content-center px-0 button-result">
+                                            <button type="button" class="btn font-weight-bold reset" name="button">
+                                                <i class='bx bx-refresh'></i> <span>@lang('layout.btn-reset')</span></button>
+                                        </div>
+                                    </div>
+                                    <textarea name="code_snippet" style="resize:none" rows="16" class="form-control" id="json-format" data-key="{{time()}}" readonly></textarea>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-lg-6">
-              <button type="submit" id="test" class="btn btn-text-dark-50 btn-icon-primary font-weight-bold btn-hover-bg-light mr-3 form-control mb-5" name="button">
-              <i class="fas fa-circle"></i> @lang('event.btn-test')</button>
+            <div class="row">
+                <div class="col-md-8">
+                </div>
+                <div class="col-md-4">
+                    <div class="desktop-version">
+                        <div class="accordion accordion-light accordion-toggle-arrow custom-features-accordion" id="accordionExample2">
+                            <div class="card bg-transparent" style="">
+                                <div class="card-header" id="headingOne2">
+                                    <div class="card-title collapsed" data-toggle="collapse" data-target="#collapseOne2">
+                                        @lang('layout.version') 1.0
+                                    </div>
+                                </div>
+                                <div id="collapseOne2" class="collapse" data-parent="#accordionExample2">
+                                    <div class="card-body">
+                                        <p>@lang('event.highlight')</p>
+                                        <div class="d-flex align-items-center">
+                                            <i class='bx bxs-check-circle text-darkgrey mr-1'></i>
+                                            <span class="text-darkgrey h6 mb-0">@lang('layout.updated') 15 Mar, 2021</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-          <textarea name="code_snippet" style="resize:none" rows="50" class="form-control" id="json-format"></textarea>
         </div>
-      </form>
     </div>
-    <!--end::Card-->
-  </div>
-  <!--end::Card-->
-</div>
-<div class="row" data-sticky-container>
-  <div class="col-lg-8 mb-5">
-    <!--begin::Card-->
-    <div class="card card-custom">
-      <div class="card-header">
-        <div class="card-title">
-          <h2 class="card-label">@lang('event.title')</h2>
-        </div>
-      </div>
-      <div class="card-body">
-        <table class="table table-striped">
-          <tbody>
-            <tr>
-              <td style="width:60%;" class="align-middle">
-                <p>@lang('event.desc-1-1')</p>
-              </td>
-              <td class="align-middle"> <img id="1" data-toggle="modal" data-target="#myModal" src="https://cmlabs.co/wp-content/uploads/2020/06/json-1-min-1024x898.png" class="form-control" style="height:auto" alt="json 1 min"> </td>
-            </tr>
-            <tr>
-              <td class="align-middle">
-                <p>@lang('event.desc-1-2')</p>
-              </td>
-              <td class="align-middle"> <img id="2" data-toggle="modal" data-target="#myModal" src="https://cmlabs.co/wp-content/uploads/2020/06/json-2-min-1024x509.png" class="form-control" style="height:auto" alt="json 2 min"> </td>
-            </tr>
-            <tr>
-              <td class="align-middle">
-                <p>@lang('event.desc-1-3')</p>
-              </td>
-              <td class="align-middle"> <img id="3" data-toggle="modal" data-target="#myModal" src="https://cmlabs.co/wp-content/uploads/2020/06/json-3-min-1024x502.png" class="form-control" style="height:auto" alt="json 3 min"> </td>
-            </tr>
-            <tr>
-              <td class="align-middle">
-                <p>@lang('event.desc-1-4')</p>
-                <p>@lang('event.desc-1-5')</p>
-              </td>
-              <td class="align-middle"> <img id="4" data-toggle="modal" data-target="#myModal" src="https://cmlabs.co/wp-content/uploads/2020/06/json-4-min-1024x556.png" class="form-control" style="height:auto" alt="json 4 min"> </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="card-header">
-        <div class="card-title">
-          <h2 class="card-label">@lang('event.title-2')</h2>
-        </div>
-      </div>
-      <div class="card-body">
-        <p>@lang('event.desc-2-1')</p>
-        <p>@lang('event.desc-2-2')</p>
-      </div>
-      <div class="card-header">
-        <div class="card-title">
-          <h2 class="card-label">@lang('event.title-3')</h2>
-        </div>
-      </div>
-      <div class="card-body">
-        <p>@lang('event.desc-3-1')</p>
-        <p>@lang('event.desc-3-2')</p>
-        <table class="table" border="1px" bordercolor="#EBEDF3">
-          <tbody>
-            <tr>
-              <th class="align-middle"> <i class="far fa-lightbulb icon-2x"></i> </th>
-              <td>@lang('event.desc-3-3')</td>
-            </tr>
-          </tbody>
-        </table>
-        <p>@lang('event.desc-3-4')</p>
-        <ul>
-          <li>@lang('event.li-1')</li>
-          <li>@lang('event.li-2')</li>
-          <li>@lang('event.li-3')</li>
-        </ul>
-        <p>@lang('event.desc-3-5')</p>
-      </div>
-      <div class="card-header">
-        <div class="card-title">
-          <h2 class="card-label">@lang('event.title-4')</h2>
-        </div>
-      </div>
-      <div class="card-body">
-        <p>@lang('event.desc-4-1')</p>
-        <p>@lang('event.desc-4-2')</p>
-        <p>@lang('event.desc-4-3')</p>
-        <p>@lang('event.desc-4-4')</p>
-        <p>@lang('event.desc-4-5')</p>
-        <p>@lang('event.desc-4-6')</p>
-        <p>@lang('event.desc-4-7')</p>
-        <p>@lang('event.desc-4-8')</p>
-        <p>@lang('event.desc-4-9')</p>
-      </div>
-      <div class="card-header">
-        <div class="card-title">
-          <h2 class="card-label">@lang('event.title-5')</h2>
-        </div>
-      </div>
-      <div class="card-body">
-        <p>@lang('event.desc-5-1')</p>
-        <p>@lang('event.desc-5-2')</p>
-        <h3 class="font-weight-bold py-5">@lang('event.title-6')</h3>
-        <p>@lang('event.desc-6-1')</p>
-        <p>@lang('event.desc-6-2')</p>
-        <p>@lang('event.desc-6-3')</p>
-        <h3 class="font-weight-bold py-5">@lang('event.title-7')</h3>
-        <p>@lang('event.desc-7-1')</p>
-        <p>@lang('event.desc-7-2')</p>
-        <p>@lang('event.desc-7-3')</p>
-        <p>@lang('event.desc-7-4')</p>
-        <h3 class="font-weight-bold py-5">@lang('event.title-8')</h3>
-        <p>@lang('event.desc-8-1')</p>
-        <p>@lang('event.desc-8-2')</p>
-        <p>@lang('event.desc-8-3')</p>
-        <p>@lang('event.desc-8-4')</p>
-        <h3 class="font-weight-bold py-5">@lang('event.title-9')</h3>
-        <p>@lang('event.desc-9-1')</p>
-        <p>@lang('event.desc-9-2')</p>
-        <p>@lang('event.desc-9-3')</p>
-        <p>@lang('event.desc-9-4')</p>
-        <p>@lang('event.desc-9-5')</p>
-      </div>
-    </div>
-    <!--end::Card-->
-  </div>
-  @include('layouts/stickybar')
-</div>
-</div>
 </div>
 
-<div id="myModal" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-body">
-        <img class="img-responsive form-control" alt="image modal" style="height:auto;" src="" />
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-      </div>
+<div class="w-100">
+    <div class="local-collection-mobile bg-white py-5">
+        <div id="mobile-version" class="px-5 accordion accordion-light accordion-toggle-arrow custom-features-accordion" id="accordionExample2">
+            <div class="card bg-transparent" style="">
+                <div class="card-header" id="headingOne2">
+                    <div class="card-title collapsed" data-toggle="collapse" data-target="#collapseOne2">
+                        @lang('layout.version') 1.0
+                    </div>
+                </div>
+                <div id="collapseOne2" class="collapse" data-parent="#accordionExample2">
+                    <div class="card-body">
+                        <p>@lang('event.highlight')</p>
+                        <div class="d-flex align-items-center">
+                            <i class='bx bxs-check-circle text-darkgrey mr-1'></i>
+                            <span class="text-darkgrey h6 mb-0">@lang('layout.updated') 15 Mar, 2021</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
 </div>
-
-
+@endif
+@component('layouts.new_ui_design', ['local' => $local, 'blogs' => $blogs, 'seo_terms' => $seo_terms, 'seo_guidelines' => $seo_guidelines])
+    @slot('title', 'JSON-LD Event Schema Generator')
+    @slot('subcontent_1')
+        <div class="" id="description-tab-1">
+            <h2>@lang('event.title-1')</h2>
+            <p>@lang('event.desc-1-1')</p>
+            <p>@lang('event.desc-1-2')</p>
+        </div>
+    @endslot
+    @slot('subcontent_2')
+        <div class="d-none" id="description-tab-2">
+            @lang('event.desc-1-3')
+            <h2>@lang('event.title-2')</h2>
+            <p>@lang('event.desc-2-1')</p>
+            <p>@lang('event.desc-2-2')</p>
+            <h3 class="sub-titles">@lang('event.desc-2-2-1')</h3>
+            <p>@lang('event.desc-2-2-2')</p>
+            <h3 class="sub-titles">@lang('event.desc-2-3-1')</h3>
+            <p>@lang('event.desc-2-3-2')</p>
+            <h3 class="sub-titles">@lang('event.desc-2-4-1')</h3>
+            <p>@lang('event.desc-2-4-2')</p>
+            <h3 class="sub-titles">@lang('event.desc-2-5-1')</h3>
+            <p>@lang('event.desc-2-5-2')</p>
+            <p>@lang('event.desc-2-5-3')</p>
+            <h3 class="sub-titles">@lang('event.desc-2-6-1')</h3>
+            <p>@lang('event.desc-2-6-2')</p>
+            <p>@lang('event.desc-2-6-3')</p>
+            <p>@lang('event.desc-2-6-4')</p>
+            <h3 class="sub-titles">@lang('event.desc-2-7-1')</h3>
+            <p>@lang('event.desc-2-7-2')</p>
+            <p>@lang('event.desc-2-7-3')</p>
+            <h3 class="sub-titles">@lang('event.desc-2-8-1')</h3>
+            <p>@lang('event.desc-2-8-2')</p>
+            <p>@lang('event.desc-2-8-3')</p>
+            <h3 class="sub-titles">@lang('event.desc-2-9-1')</h3>
+            <p>@lang('event.desc-2-9-2')</p>
+            <h3 class="sub-titles">@lang('event.desc-2-10-1')</h3>
+            <p>@lang('event.desc-2-10-2')</p>
+        </div>
+    @endslot
+    @slot('subcontent_3')
+        <div class="d-none" id="description-tab-3">
+            <h2>@lang('event.title-3')</h2>
+            <p>@lang('event.desc-3-1')</p>
+            <p>@lang('event.desc-3-2')</p>
+            <pre class="language-html mb-4">
+                <code class="language-html" style="white-space: pre-wrap; word-break: keep-all;">
+                    &lt;script type="application/ld+json"&gt;
+                        {
+                            "@context": "https://schema.org",
+                            "@type": "Event",
+                            "name": "",
+                            "startDate": ""
+                        }
+                    &lt;/script&gt;
+                </code>
+            </pre>            
+        </div>
+    @endslot
+    @slot('how_to_content')
+        <div class="d-none" id="how-to">
+            @lang('event.howto-title-1')
+            <div class="expand-text">
+                @lang('event.howto-1')
+                <img class="mb-4" src="{{asset('/media/images/event_schema_instruction_1.webp')}}" alt="HowTo-Event-1" width="80%">
+                @lang('event.howto-2')
+                <img class="mb-4" src="{{asset('/media/images/event_schema_instruction_2.webp')}}" alt="HowTo-Event-2" width="80%">
+                @lang('event.howto-3')
+                <img class="mb-4" src="{{asset('/media/images/event_schema_instruction_3.webp')}}" alt="HowTo-Event-3" width="80%">
+                @lang('event.howto-4')
+                <img class="mb-4" src="{{asset('/media/images/event_schema_instruction_4.webp')}}" alt="HowTo-Event-4" width="80%">
+                @lang('event.howto-5')
+                <img class="mb-4" src="{{asset('/media/images/event_schema_instruction_5.webp')}}" alt="HowTo-Event-5" width="80%">
+                @lang('event.howto-6')
+                <img class="mb-4" src="{{asset('/media/images/event_schema_instruction_6.webp')}}" alt="HowTo-Event-6" width="80%">
+                @lang('event.howto-7')
+                <p>@lang('event.closing-1')</p>
+                <p>@lang('event.closing-2')</p>
+                <p>@lang('event.closing-3')</p>
+            </div>
+        </div>
+    @endslot
+    @slot('read_more')
+        <p class="b1-400 b1-m-400 read-more" id="read-more-button">@lang('layout.read-more')</p>
+    @endslot
+@endcomponent
 @endsection
 
 @push('script')
-<script type="text/javascript">
-  $(document).ready(function() {
-    $('#myModal').on('show.bs.modal', function(e) {
-      var image = $(e.relatedTarget).attr('src');
-      $(".img-responsive").attr("src", image);
-    });
-  });
-</script>
-@endpush
-@push('script')
 <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "eventList",
-    "itemListElement": [{
-      "@type": "ListItem",
-      "position": 1,
-      "name": "@lang('home.homepage')",
-      "item": "{{url('/')}}/{{$local}}"
-    },{
-      "@type": "ListItem",
-      "position": 2,
-      "name": "JSON-LD event Schema Generator"
-    }]
-  }
+    {
+        "@context": "https://schema.org/",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+            "@type": "ListItem",
+            "position": 1,
+            "name": "@lang('layout.home')",
+            "item": "{{url('/')}}/{{$local}}"
+        }, {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "JSON-LD Schema Generator",
+            "item": "{{url('/')}}/{{$local}}/json-ld-schema-generator"
+        }, {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "JSON-LD Event Schema Generator",
+            "item": "{{url('/')}}/{{$local}}/json-ld-event-schema-generator"
+        }]
+    }
+</script>
+<script>
+    // Get the element by its id
+    const read_more_button = document.getElementById('read-more-button');
+    const description_1 = document.getElementById('description-tab-1');
+    const description_2 = document.getElementById('description-tab-2');
+    const description_3 = document.getElementById('description-tab-3');
+    const how_to = document.getElementById('how-to');
+    let read = false;
+
+    // Add a click event listener
+    read_more_button.addEventListener('click', function() {
+        if(!read){
+            description_1.style.display = 'block';
+            description_2.style.display = 'block';
+            description_3.style.display = 'block';
+            how_to.style.display = 'block';
+            description_1.classList.remove("d-none");
+            description_2.classList.remove("d-none");
+            description_3.classList.remove("d-none");
+            how_to.classList.remove("d-none");
+            read_more_button.innerHTML = @json( __('layout.show-less') );
+            read = true;
+        } else {
+            description_2.style.display = 'none';
+            description_3.style.display = 'none';
+            how_to.style.display = 'none';
+            description_2.classList.add("d-none");
+            description_3.classList.add("d-none");
+            how_to.classList.add("d-none");
+            read_more_button.innerHTML = @json( __('layout.read-more') );
+            read = false;
+        }
+    });
 </script>
 @endpush
 @push('script')
 <script src="{{asset('js/logic/event-json.js')}}"></script>
+<script src="{{asset('js/pages/crud/forms/widgets/bootstrap-datepicker.min.js')}}"></script>
 @endpush
-@section('json-ld-event')
+
+@section('json-ld')
 active
 @endsection

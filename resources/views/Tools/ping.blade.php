@@ -134,7 +134,7 @@ id/ping
                 </div>
                 <div id="collapseOne2" class="collapse" data-parent="#accordionExample2">
                     <div class="card-body">
-                        <p>@lang('lookup.highlight')</p>
+                        <p>@lang('ping.highlight')</p>
                         <div class="d-flex align-items-center">
                             <i class='bx bxs-check-circle text-darkgrey mr-1'></i>
                             <span class="text-darkgrey h6 mb-0">@lang('layout.updated') 21 Aug, 2023</span>
