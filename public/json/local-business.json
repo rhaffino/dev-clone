@@ -1,0 +1,227 @@
+[
+    {
+        "localBusinessType": "AnimalShelter"
+    },
+    {
+        "localBusinessType": "ArchiveOrganization"
+    },
+    {
+        "localBusinessType": "AutomotiveBusiness",
+        "specificType": [
+            "AutoBodyShop",
+            "AutoDealer",
+            "AutoPartsStore",
+            "AutoRental",
+            "AutoRepair",
+            "AutoWash",
+            "GasStation",
+            "MotorcycleDealer",
+            "MotorcycleRepair"
+        ]
+    },
+    {
+        "localBusinessType": "ChildCare"
+    },
+    {
+        "localBusinessType": "Dentist"
+    },
+    {
+        "localBusinessType": "DryCleaningOrLaundry"
+    },
+    {
+        "localBusinessType": "EmergencyService",
+        "specificType": ["FireStation", "Hospital", "PoliceStation"]
+    },
+    {
+        "localBusinessType": "EmploymentAgency"
+    },
+    {
+        "localBusinessType": "EntertainmentBusiness",
+        "specificType": [
+            "AdultEntertainment",
+            "AmusementPark",
+            "ArtGallery",
+            "Casino",
+            "ComedyClub",
+            "MovieTheater",
+            "NightClub"
+        ]
+    },
+    {
+        "localBusinessType": "FinancialService",
+        "specificType": [
+            "AccountingService",
+            "AutomatedTeller",
+            "BankOrCreditUnion",
+            "InsuranceAgency"
+        ]
+    },
+    {
+        "localBusinessType": "FoodEstablishment",
+        "specificType": [
+            "Bakery",
+            "BarOrPub",
+            "Brewery",
+            "CafeOrCoffeeShop",
+            "Distillery",
+            "FastFoodRestaurant",
+            "IceCreamShop",
+            "Restaurant",
+            "Winery"
+        ]
+    },
+    {
+        "localBusinessType": "GovernmentOffice",
+        "specificType": ["PostOffice"]
+    },
+    {
+        "localBusinessType": "HealthAndBeautyBusiness",
+        "specificType": [
+            "BeautySalon",
+            "DaySpa",
+            "HairSalon",
+            "HealthClub",
+            "NailSalon",
+            "TattooParlor"
+        ]
+    },
+    {
+        "localBusinessType": "HomeAndConstructionBusiness",
+        "specificType": [
+            "Electrician",
+            "GeneralContractor",
+            "HVACBusiness",
+            "HousePainter",
+            "Locksmith",
+            "MovingCompany",
+            "Plumber",
+            "RoofingContractor"
+        ]
+    },
+    {
+        "localBusinessType": "InternetCafe"
+    },
+    {
+        "localBusinessType": "LegalService",
+        "specificType": ["Attorney", "Notary"]
+    },
+    {
+        "localBusinessType": "Library"
+    },
+    {
+        "localBusinessType": "LodgingBusiness",
+        "specificType": [
+            "BedAndBreakfast",
+            "Campground",
+            "Hostel",
+            "Hotel",
+            "Motel",
+            "Resort"
+        ]
+    },
+    {
+        "localBusinessType": "MedicalBusiness",
+        "specificType": [
+            "CommunityHealth",
+            "Dentist",
+            "Dermatology",
+            "DietNutrition",
+            "Emergency",
+            "Geriatric",
+            "Gynecologic",
+            "MedicalClinic (COVIDTestingFacility)",
+            "Midwifery",
+            "Nursing",
+            "Obstetric",
+            "Oncologic",
+            "Optician",
+            "Optometric",
+            "Otolaryngologic",
+            "Pediatric",
+            "Pharmacy",
+            "Physician",
+            "Physiotherapy",
+            "PlasticSurgery",
+            "Podiatric",
+            "PrimaryCare",
+            "Psychiatric",
+            "PublicHealth"
+        ]
+    },
+    {
+        "localBusinessType": "ProfessionalService"
+    },
+    {
+        "localBusinessType": "RadioStation"
+    },
+    {
+        "localBusinessType": "RealEstateAgent"
+    },
+    {
+        "localBusinessType": "RecyclingCenter"
+    },
+    {
+        "localBusinessType": "SelfStorage"
+    },
+    {
+        "localBusinessType": "ShoppingCenter"
+    },
+    {
+        "localBusinessType": "SportsActivityLocation",
+        "specificType": [
+            "BowlingAlley",
+            "ExerciseGym",
+            "GolfCourse",
+            "HealthClub",
+            "PublicSwimmingPool",
+            "SkiResort",
+            "SportsClub",
+            "StadiumOrArena",
+            "TennisComplex"
+        ]
+    },
+    {
+        "localBusinessType": "Store",
+        "specificType": [
+            "AutoPartsStore",
+            "BikeStore",
+            "BookStore",
+            "ClothingStore",
+            "ComputerStore",
+            "ConvenienceStore",
+            "DepartmentStore",
+            "ElectronicStore",
+            "Florist",
+            "FurnitureStore",
+            "GardenStore",
+            "GroceryStore",
+            "HardwareStore",
+            "HobbyShop",
+            "HomeGoodsStore",
+            "JewelryStore",
+            "LiquorStore",
+            "MensClothingStore",
+            "MobilePhoneStore",
+            "MovieRentalStore",
+            "MusicStore",
+            "OfficeEquipmentStore",
+            "OutletStore",
+            "PawnShop",
+            "PetStore",
+            "ShoeStore",
+            "SportingGoodsStore",
+            "TireShop",
+            "ToyStore",
+            "WholesaleStore"
+        ]
+    },
+    {
+        "localBusinessType": "TelevisionStation"
+    },
+    {
+        "localBusinessType": "TouristInformationCenter"
+    },
+    {
+        "localBusinessType": "TravelAgency"
+    }
+]
