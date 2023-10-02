@@ -22,9 +22,9 @@ if (lang == "en") {
     var snippet_website = "cmlabs.co";
     var snippet_domain = "https://tools.cmlabs.co";
     var snippet_breadcrumbs = "serp-simulator";
-    var snippet_title = "This is an Example of a Title Tag";
+    var snippet_title = "Ini adalah contoh Tag Judul";
     var snippet_date = "Sep 20, 2023";
-    var snippet_desc = "Here is an example of what a snippet looks like in Google's SERPs. The content that appears here is usually taken from the Meta Description tag if relevant.";
+    var snippet_desc = "Berikut adalah contoh snippet yang terlihat di SERP Google. Konten yang muncul di sini biasanya diambil dari tag Deskripsi Meta berdasarkan relevansi.";
     var snippet_rating = "Rating: 4.1/5 - 61 votes";
 }
 
