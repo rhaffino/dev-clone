@@ -1,7 +1,7 @@
 <?php
 $data = count(json_decode(file_get_contents(base_path('resources/js/json/tools.json')),true));
 return [
-    "meta-title" => "22 SEO Tools (Gratis) Versi Bahasa Indonesia \ cmlabs",
+    "meta-title" => "29 SEO Tools (Gratis) Versi Bahasa Indonesia \ cmlabs",
     "meta-desc" => "Cek website dengan Free SEO Tools cmlabs: Page Speed Test, Sitemap Generator, Word Counter, Title & Meta Desc Checker, dll",
     "lang" => "id",
     "title" => "SEO Tool Gratis oleh CMLABS",
@@ -24,6 +24,8 @@ return [
     "plagiarism-checker-desc" => "Sekarang, tingkatkan tulisan Anda dengan perlindungan utama kami terhadap duplikasi konten, Plagiarism Checker (oleh Copyscape). Didukung oleh algoritma canggih, alat kami akan memindai teks Anda dengan kecepatan kilat sehingga Anda dapat tenang mengetahui konten Anda asli.",
     "ping-tool-desc" => "Online Ping Tool adalah utilitas jaringan untuk menguji keberadaan alamat IP atau domain situs web dan menganalisis kualitas jaringan dan daya tanggap server perangkat target dalam suatu jaringan.",
     "http-header-checker-desc" => "HTTP Header Checker adalah alat yang dirancang untuk memeriksa dan menganalisis header permintaan Hypertext Transfer Protocol (HTTP) serta respons yang dipertukarkan antara klien dan server.",
+    "robotstxt-checker-desc" => "Robots.txt Checker adalah tool yang dirancang khusus untuk menyederhanakan proses validasi file robots.txt, melindungi aset berharga situs web Anda, serta membantu Anda menyesuaikan strategi SEO yang akurat.",
+    "serp-simulator-desc" => "SERP Simulator dari cmlabs adalah tool yang memudahkan pengguna dalam mengoptimasi elemen-elemen penting seperti tag judul, meta description atau keywords, sembari meninjau bagaimana website muncul dalam laman hasil pencarian (SERP).",
     "last-update" => "Terakhir Diperbarui",
     "desc-1" => "Catatan Penting",
     "desc-1-1" => "Dalam menggunakan beberapa tool yang mengharuskan Anda memasukkan URL, pastikan itu valid. Jika tidak, tool tidak akan berfungsi dengan baik.",
