@@ -289,7 +289,7 @@ id/json-ld-localBusiness-schema-generator
                                         <p>@lang('localBusiness.highlight')</p>
                                         <div class="d-flex align-items-center">
                                             <i class='bx bxs-check-circle text-darkgrey mr-1'></i>
-                                            <span class="text-darkgrey h6 mb-0">@lang('layout.updated') 5 Sep, 2023</span>
+                                            <span class="text-darkgrey h6 mb-0">@lang('layout.updated') 3 Oct, 2023</span>
                                         </div>
                                     </div>
                                 </div>
@@ -316,7 +316,7 @@ id/json-ld-localBusiness-schema-generator
                         <p>@lang('localBusiness.highlight')</p>
                         <div class="d-flex align-items-center">
                             <i class='bx bxs-check-circle text-darkgrey mr-1'></i>
-                            <span class="text-darkgrey h6 mb-0">@lang('layout.updated') 15 Mar, 2021</span>
+                            <span class="text-darkgrey h6 mb-0">@lang('layout.updated') 3 Oct, 2023</span>
                         </div>
                     </div>
                 </div>

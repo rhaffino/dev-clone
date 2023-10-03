@@ -31,6 +31,32 @@ if (lang == "en") {
 const RobotTemplate = (robots, sitemap, _resource) => {
     const minRows = 10;
     const totalRows = Math.max(minRows, sitemap.length);
+            
+    if (robots.rawRobots === null) {
+        $("#result-status").css("color", "red");
+        $("#result-status").html("404 Not Found");
+    } else {
+        $("#result-status").css("color", "#67B405");
+        $("#result-status").html("200 OK <i class='bx bxs-check-circle bx-sm ml-1 text-green'></i>");
+    }
+
+    if (robots.parser) {
+        if (robots.parser.host === null){
+            var ParserRobots = "-";
+        }else{
+            var ParserRobots = robots.parser.host;
+        }
+        
+        if (robots.parser.sitemaps === null){
+            var ParserSitemap = "-";
+        }else{
+            var ParserSitemap = robots.parser.sitemaps;
+        }
+    } else {
+        var ParserRobots = "-";
+        var ParserSitemap = "-";
+    }
+
     const tableRows = sitemap
         .map(
             (value, index) =>
@@ -99,6 +125,14 @@ const RobotTemplate = (robots, sitemap, _resource) => {
                         }, 1000);
                     }
                 });
+
+                if (`+ robots.rawRobots +` === null) {
+                    $("#labelRobots").addClass("d-none");
+                    $("#textRobots").addClass("d-none");
+                }else{
+                    $("#labelRobots").removeClass("d-none");
+                    $("#textRobots").removeClass("d-none");
+                }
             });
         </script>
     `;
@@ -106,12 +140,16 @@ const RobotTemplate = (robots, sitemap, _resource) => {
     return `
         <div class="d-flex flex-column px-5">
             <div class="box-result-list my-3">
-                <p class="font-weight-bold headercheck-content text-darkgrey"><span class="text-black">${label_url_website}</span>: ${robots.url}</p>
-                <p class="font-weight-bold headercheck-content text-darkgrey"><span class="text-black">${label_host}</span>: ${robots.parser.host}</p>
-                <p class="font-weight-bold headercheck-content text-darkgrey"><span class="text-black">${label_sitemap}</span>: ${robots.parser.sitemaps}</p>
+                <p class="font-weight-bold headercheck-content text-darkgrey"><span class="text-black">${label_url_website}</span>: ${
+        robots.url
+    }</p>
+                <p class="font-weight-bold headercheck-content text-darkgrey"><span class="text-black">${label_host}</span>: ${ParserRobots}</p>
+                <p class="font-weight-bold headercheck-content text-darkgrey"><span class="text-black">${label_sitemap}</span>: ${ParserSitemap}</p>
             </div>
-            <span class="text-black font-15px font-weight-bolder mr-2">${label_robotstxt}</span>
-            <textarea name="code_snippet" style="resize:none" rows="16" class="form-control my-3" readonly>${robots.rawRobots}</textarea>
+            <span id="labelRobots" class="text-black font-15px font-weight-bolder mr-2">${label_robotstxt}</span>
+            <textarea id="textRobots" name="code_snippet" style="resize:none" rows="16" class="form-control my-3" readonly>${
+                robots.rawRobots
+            }</textarea>
             <div class="row mt-3 ${_resource ? "d-block" : "d-none"}">
                 <div class="col-12 result-collapse">
                     <table id="resultResourceTable" class="table table-striped">
@@ -123,7 +161,7 @@ const RobotTemplate = (robots, sitemap, _resource) => {
                         ${tableRows}
                     </table>
                     ${expandButton}
-                    ${lang === 'en' ? scriptEn : scriptId}
+                    ${lang === "en" ? scriptEn : scriptId}
                     ${scriptScroll}
                 </div>
             </div>
