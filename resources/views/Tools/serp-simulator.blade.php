@@ -417,7 +417,7 @@ id/serp-simulator
                                         <p>@lang('serp-simulator.highlight')</p>
                                         <div class="d-flex align-items-center">
                                             <i class='bx bxs-check-circle text-darkgrey mr-1'></i>
-                                            <span class="text-darkgrey h6 mb-0">@lang('layout.updated') 21 Aug, 2023</span>
+                                            <span class="text-darkgrey h6 mb-0">@lang('layout.updated') 3 Oct, 2023</span>
                                         </div>
                                     </div>
                                 </div>
@@ -444,7 +444,7 @@ id/serp-simulator
                         <p>@lang('serp-simulator.highlight')</p>
                         <div class="d-flex align-items-center">
                             <i class='bx bxs-check-circle text-darkgrey mr-1'></i>
-                            <span class="text-darkgrey h6 mb-0">@lang('layout.updated') 21 Aug, 2023</span>
+                            <span class="text-darkgrey h6 mb-0">@lang('layout.updated') 3 Oct, 2023</span>
                         </div>
                     </div>
                 </div>
