@@ -3,7 +3,9 @@
         <a href="{{ $cmlabs_url . '/' . $lang_reg . '/blog' . '/' . $blogs->slug }}" class="resource-card">
             <div class="card-header p-0 m-0">
                 <!-- <img class="img-fluid w-100" src="{{ asset('media/images/resources-example.png') }}" alt=""> -->
-                <img class="img-fluid w-100" src="{{ 'https://s3-cdn.cmlabs.co/' . $blogs->image }}" alt="">
+                <img class="img-fluid w-100"
+                    src="{{ $blogs->image ? 'https://s3-cdn.cmlabs.co/' . $blogs->image : asset('/media/images/default-cover.webp') }}"
+                    alt="">
             </div>
             <div class="card-body">
                 <div class="text-purple-70 b2-700 b2-m-700">BLOGS</div>
@@ -16,7 +18,9 @@
         <a href="{{ $cmlabs_url . '/' . $lang_reg . '/seo-terms' . '/' . $seo_terms->slug }}" class="resource-card">
             <div class="card-header p-0 m-0">
                 <!-- <img class="img-fluid w-100" src="{{ asset('media/images/resources-example.png') }}" alt=""> -->
-                <img class="img-fluid w-100" src="{{ 'https://s3-cdn.cmlabs.co/' . $seo_terms->image }}" alt="">
+                <img class="img-fluid w-100"
+                    src="{{ $seo_terms->image ? 'https://s3-cdn.cmlabs.co/' . $seo_terms->image : asset('/media/images/default-cover.webp') }}"
+                    alt="">
             </div>
             <div class="card-body">
                 <div class="text-purple-70 b2-700 b2-m-700">SEO TERMS</div>
@@ -30,7 +34,8 @@
             class="resource-card">
             <div class="card-header p-0 m-0">
                 <!-- <img class="img-fluid w-100" src="{{ asset('media/images/resources-example.png') }}" alt=""> -->
-                <img class="img-fluid w-100" src{{ 'https://s3-cdn.cmlabs.co/' . $seo_guidelines->image }}"
+                <img class="img-fluid w-100"
+                    src="{{ $seo_guidelines->image ? 'https://s3-cdn.cmlabs.co/' . $seo_guidelines->image : asset('/media/images/default-cover.webp') }}"
                     alt="">
             </div>
             <div class="card-body">

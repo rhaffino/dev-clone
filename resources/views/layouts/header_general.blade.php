@@ -16,7 +16,7 @@
                         <img alt="Logo"
                             src="https://cmlabs-co.s3.ap-southeast-1.amazonaws.com/logos/cmlabs-logo-new.webp"
                             class="max-h-35px" />
-                        <span class="h2 title-logo-name ml-2 mt-3">SEO Tools</span>
+                        <span class="h2 h6-700 mb-3 title-logo-name ml-2 mt-3">SEO Tools</span>
                     </a>
                 </div>
                 <ul class="nav custom-nav nav-header">
@@ -60,6 +60,9 @@
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item"
                                 href="https://cmlabs.co/{{ $local }}-id/pricing/content-writing">@lang('layout.nav-pricing-writing')</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item"
+                                href="https://cmlabs.co/{{ $local }}-id/pricing/expert-writing">Expert Writing</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item"
                                 href="https://cmlabs.co/{{ $local }}-id/pricing/media-buying">@lang('layout.nav-pricing-media-buying')</a>
