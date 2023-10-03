@@ -1,7 +1,7 @@
 <?php
 $data = count(json_decode(file_get_contents(base_path('resources/js/json/tools.json')),true));
 return [
-    "meta-title" => "22 SEO Tools (Free) English Version \ cmlabs",
+    "meta-title" => "29 SEO Tools (Free) English Version \ cmlabs",
     "meta-desc" => "Check your website with Free SEO tools cmlabs: Page Speed Test, Sitemap Generator, Word Counter, Title & Meta Desc Checker, etc.",
     "lang" => "en",
     "title" => "Free SEO Tools by CMLABS",
@@ -24,6 +24,8 @@ return [
     "plagiarism-checker-desc" => "Now, embrace your writing with our ultimate safeguard against content duplication, Plagiarism Checker (by Copyscape). Powered by cutting-edge algorithms, our tool will scan your text with lightning speed so that you can rest easy knowing your content is authentic.",
     "ping-tool-desc" => "Online Ping Tool is a network utility to test the existence of a website's IP address or domain and analyzes the network quality and responsiveness of a target device server on a network.",
     "http-header-checker-desc" => "The HTTP Header Checker is a tool designed to inspect and analyze the headers of Hypertext Transfer Protocol (HTTP) requests as well as responses exchanged between client and server.",
+    "robotstxt-checker-desc" => "Robots.txt Checker is a tool designed to simplify the process of validating robots.txt files, maintaining order, protecting your website's valuable assets, and help you align with an accurate SEO strategy.",
+    "serp-simulator-desc" => "The SERP Simulator by cmlabs is a tool that allows users to optimize various elements such as title tags, meta descriptions, or keywords, and preview how their website appears in search engine results (SERP).",
     "last-update" => "Last Update",
     "desc-1" => "Important Note",
     "desc-1-1" => "In using some tools that require you to enter a URL, make sure it is valid. Otherwise, the tool will not function properly.",
@@ -148,9 +150,8 @@ return [
     "desc-3-4-1" => "At the research, production, and audit stages, the cmlabs tool can be used. At the research stage, marketers can see the keyword density of competitors by using the Word Counter tool.",
     "desc-3-4-2" => "At the development stage, the Product Manager can create an FAQ schema in the SERP by using the JSON-LD Schema FAQ. Apart from that, they can also optimize the appearance of websites on mobile devices using Mobile Friendly Testing. In order to speed up crawling using the Robot.txt Generator, you can also connect robot.txt to the website. The developer at this stage can create an XML sitemap using the Sitemap Generator.",
     "desc-3-4-3" => "In the audit stage, content writers can check the title length and meta description using the Title & Meta Length Checker. SEO experts and developers can check website performance using the PageSpeed ​​Test. At this stage the developer can also check the SSL certificate using SSL Checker.",
-
+    "update_desc" => "cmlabs has recently unveiled 7 cutting-edge tools designed to elevate your SEO games and streamline the process of creating SEO-friendly markup. We released 5 advanced JSON-LD Generators for Websites, Local Businesses, Events, Videos, and Organizations, each catering to specific needs and content types. There is also Robots.txt Checker which enables users to meticulously review and validate their robots.txt files, ensuring that search engine crawlers can efficiently index the content. Lastly, we have SERP Simulator, a tool designed to visualize how your web pages will appear in SERP and help you refine your meta tags and snippets to optimize the presentation of your content and increase organic traffic. Together, these seven tools from cmlabs will be your best allies in maximizing your SEO efforts. Try these tools now!",
     "desc-new-tools-21-aug-2023" => "Embark on a voyage of digital discovery as you engage with real-time metrics that reflect the vitality of your network's health and configuration. Now, you can diagnose your network's health as well as navigate your domain to ensure flawless communication, security, and performance of a website with our best tools, Ping Tool and HTTP Header Checker by cmlabs. Check and elevate your website management now!",
-
     "check" => "Check",
     "no_notif" => "There is currently no notification...",
 ];

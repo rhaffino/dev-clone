@@ -125,10 +125,80 @@ id/json-ld-schema-generator
                         </div>
                     </div>
                 </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-8">
+                    <div class="card card-custom card-stretch card-home">
+                        <div class="card-body p-7">
+                            <div class="">
+                                <i class='bx bx-globe text-darkgrey bx-lg'></i>
+                                <h2 class="h6 text-darkgrey font-weight-bolder">Website</h2>
+                                <p class="text-darkgrey mb-0">@lang('jsonldhome.json-ld-website-desc')</p>
+                            </div>
+                        </div>
+                        <div class="card-footer text-right border-top-0 pt-0">
+                            <a href="/{{ $local }}/json-ld-website-schema-generator" type="button" class="btn btn-launch" name="button">LAUNCH</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-8">
+                    <div class="card card-custom card-stretch card-home">
+                        <div class="card-body p-7">
+                            <div class="">
+                                <i class='bx bxs-store text-darkgrey bx-lg'></i>
+                                <h2 class="h6 text-darkgrey font-weight-bolder">Local Business</h2>
+                                <p class="text-darkgrey mb-0">@lang('jsonldhome.json-ld-local-business-desc')</p>
+                            </div>
+                        </div>
+                        <div class="card-footer text-right border-top-0 pt-0">
+                            <a href="/{{ $local }}/json-ld-local-business-schema-generator" type="button" class="btn btn-launch" name="button">LAUNCH</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-8">
+                    <div class="card card-custom card-stretch card-home">
+                        <div class="card-body p-7">
+                            <div class="">
+                                <i class='bx bxs-video text-darkgrey bx-lg'></i>
+                                <h2 class="h6 text-darkgrey font-weight-bolder">Video</h2>
+                                <p class="text-darkgrey mb-0">@lang('jsonldhome.json-ld-video-desc')</p>
+                            </div>
+                        </div>
+                        <div class="card-footer text-right border-top-0 pt-0">
+                            <a href="/{{ $local }}/json-ld-video-schema-generator" type="button" class="btn btn-launch" name="button">LAUNCH</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-8">
+                    <div class="card card-custom card-stretch card-home">
+                        <div class="card-body p-7">
+                            <div class="">
+                                <i class='bx bxs-calendar-event text-darkgrey bx-lg'></i>
+                                <h2 class="h6 text-darkgrey font-weight-bolder">Event</h2>
+                                <p class="text-darkgrey mb-0">@lang('jsonldhome.json-ld-event-desc')</p>
+                            </div>
+                        </div>
+                        <div class="card-footer text-right border-top-0 pt-0">
+                            <a href="/{{ $local }}/json-ld-event-schema-generator" type="button" class="btn btn-launch" name="button">LAUNCH</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-8">
+                    <div class="card card-custom card-stretch card-home">
+                        <div class="card-body p-7">
+                            <div class="">
+                                <i class='bx bxs-business text-darkgrey bx-lg'></i>
+                                <h2 class="h6 text-darkgrey font-weight-bolder">Organization</h2>
+                                <p class="text-darkgrey mb-0">@lang('jsonldhome.json-ld-organization-desc')</p>
+                            </div>
+                        </div>
+                        <div class="card-footer text-right border-top-0 pt-0">
+                            <a href="/{{ $local }}/json-ld-organization-schema-generator" type="button" class="btn btn-launch" name="button">LAUNCH</a>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="d-flex align-items-center">
                 <i class='bx bxs-check-circle text-darkgrey mr-1'></i>
-                <span class="text-darkgrey">@lang('layout.whats-new-update') 15 Mar, 2021 | @lang('layout.version') 1.0</span>
+                <span class="text-darkgrey">@lang('layout.whats-new-update') 3 Oct, 2023 | @lang('layout.version') 1.0</span>
             </div>
         </div>
     </div>

@@ -6,3 +6,9 @@
 .header-general .nav-header .dropdown-toggle.btn:after {
     content: none;
 }
+.header-general .nav-header .nav-item.show .dropdown-toggle i,
+.subheader .nav .nav-item.show .nav-link.dropdown-toggle:after{
+    transition: transform .2s;
+    -webkit-transform: scaleY(-1);
+    transform: scaleY(-1);
+}

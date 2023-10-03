@@ -1624,6 +1624,466 @@ class ToolsController extends Controller
         return view('Tools/ping', compact('local', 'dataID', 'dataEN', 'is_maintenance', 'lang', 'blogs', 'seo_terms', 'seo_guidelines'));
     }
 
+    public function website($lang)
+    {
+        App::setLocale($lang);
+        $dataID = $this->HomeController->getBlogWordpressId();
+        $dataEN = $this->HomeController->getBlogWordpressEn();
+        $local = App::getLocale();
+
+        // Fetch Seo Term
+        $seo_terms = Page::select('pages.id', 'pages.published_at', 'pages.title', 'pages.slug', 'pages.image', 'pages.created_by', DB::raw($lang == 'id' ? "'KAMUSSEO'" : "'SEOTERMS'" . " as 'type'"), DB::raw("'seo-terms' as 'link'"))
+        ->join('page_categories', function ($join) use($lang) {
+            $join->on('pages.page_category_id', '=', 'page_categories.id')
+            ->where('page_categories.language', $lang)
+            ->where('page_categories.slug', '=', 'seo-terms');
+        })
+        ->where('pages.language', $lang)
+        ->where('pages.slug', '!=', 'about')
+        ->where('pages.status', '1')
+        ->orderBy('pages.created_at','DESC')
+        ->first();
+
+        $seo_terms->published_at = Carbon::parse($seo_terms->published_at)->format('d F Y');
+
+        // Fetch Seo Guidelines
+        $seo_guidelines = Page::select('pages.id', 'pages.published_at', 'pages.title', 'pages.slug', 'pages.image', 'pages.created_by', DB::raw($lang == 'id' ? "'PANDUANSEO'" : "'SEOGUIDELINES'" . " as 'type'"), DB::raw("'seo-guide' as 'link'"))
+        ->join('page_categories', function ($join) use($lang) {
+            $join->on('pages.page_category_id', '=', 'page_categories.id')
+            ->where('page_categories.language', $lang)
+            ->where('page_categories.slug', '=', 'seo-guide');
+        })
+        ->where('pages.language', $lang)
+        ->where('pages.slug', '!=', 'about')
+        ->orderBy('pages.created_at','DESC')
+        ->where('pages.status', '1')->first();
+
+        $seo_guidelines->published_at = Carbon::parse($seo_terms->published_at)->format('d F Y');
+
+        // Fetch Blogs
+        $blogCategories = BlogCategory::select('id', 'slug', 'name')
+        ->where('language', $lang)
+        ->where('slug', '!=', 'press-release')
+        ->where('slug', '!=', 'promo-campaign')
+        ->where('slug', '!=', 'event')
+        ->isPublish()
+        ->get();
+
+        $blogs = Blog::select('id', 'published_at', 'title', 'slug', 'image', 'created_by', DB::raw($lang == 'id' ? "'BLOG'" : "'BLOGS'" . " as 'type'"), DB::raw("'blog' as 'link'"))
+            ->where('language', $lang)
+            ->where('status', '1')
+            ->whereIn('blog_category_id', $blogCategories->pluck('id'))
+            ->orderBy('published_at', 'desc')
+            ->first();
+
+        $blogs->published_at = Carbon::parse($seo_terms->published_at)->format('d F Y');
+
+        $is_maintenance = in_array('website', explode(',', env('TOOLS_MAINTENANCE'))) && env('APP_ENV') === 'production';
+
+        return view('Tools/website', compact('local', 'dataID', 'dataEN', 'is_maintenance', 'lang', 'blogs', 'seo_terms', 'seo_guidelines'));
+    }
+    
+    public function localBusiness($lang)
+    {
+        App::setLocale($lang);
+        $dataID = $this->HomeController->getBlogWordpressId();
+        $dataEN = $this->HomeController->getBlogWordpressEn();
+        $local = App::getLocale();
+
+        // Fetch Seo Term
+        $seo_terms = Page::select('pages.id', 'pages.published_at', 'pages.title', 'pages.slug', 'pages.image', 'pages.created_by', DB::raw($lang == 'id' ? "'KAMUSSEO'" : "'SEOTERMS'" . " as 'type'"), DB::raw("'seo-terms' as 'link'"))
+        ->join('page_categories', function ($join) use($lang) {
+            $join->on('pages.page_category_id', '=', 'page_categories.id')
+            ->where('page_categories.language', $lang)
+            ->where('page_categories.slug', '=', 'seo-terms');
+        })
+        ->where('pages.language', $lang)
+        ->where('pages.slug', '!=', 'about')
+        ->where('pages.status', '1')
+        ->orderBy('pages.created_at','DESC')
+        ->first();
+
+        $seo_terms->published_at = Carbon::parse($seo_terms->published_at)->format('d F Y');
+
+        // Fetch Seo Guidelines
+        $seo_guidelines = Page::select('pages.id', 'pages.published_at', 'pages.title', 'pages.slug', 'pages.image', 'pages.created_by', DB::raw($lang == 'id' ? "'PANDUANSEO'" : "'SEOGUIDELINES'" . " as 'type'"), DB::raw("'seo-guide' as 'link'"))
+        ->join('page_categories', function ($join) use($lang) {
+            $join->on('pages.page_category_id', '=', 'page_categories.id')
+            ->where('page_categories.language', $lang)
+            ->where('page_categories.slug', '=', 'seo-guide');
+        })
+        ->where('pages.language', $lang)
+        ->where('pages.slug', '!=', 'about')
+        ->orderBy('pages.created_at','DESC')
+        ->where('pages.status', '1')->first();
+
+        $seo_guidelines->published_at = Carbon::parse($seo_terms->published_at)->format('d F Y');
+
+        // Fetch Blogs
+        $blogCategories = BlogCategory::select('id', 'slug', 'name')
+        ->where('language', $lang)
+        ->where('slug', '!=', 'press-release')
+        ->where('slug', '!=', 'promo-campaign')
+        ->where('slug', '!=', 'event')
+        ->isPublish()
+        ->get();
+
+        $blogs = Blog::select('id', 'published_at', 'title', 'slug', 'image', 'created_by', DB::raw($lang == 'id' ? "'BLOG'" : "'BLOGS'" . " as 'type'"), DB::raw("'blog' as 'link'"))
+            ->where('language', $lang)
+            ->where('status', '1')
+            ->whereIn('blog_category_id', $blogCategories->pluck('id'))
+            ->orderBy('published_at', 'desc')
+            ->first();
+
+        $blogs->published_at = Carbon::parse($seo_terms->published_at)->format('d F Y');
+
+        // Local Business
+        $path = public_path('json/local-business.json');
+        $listLocalBusiness = json_decode(file_get_contents($path), true);
+
+        // country
+        $path = public_path('json/regions.json');
+        $country = json_decode(file_get_contents($path), true);
+
+        // province
+        $path_province = public_path('json/province-id.json');
+        $province = json_decode(file_get_contents($path_province), true);
+
+
+        $is_maintenance = in_array('local-business', explode(',', env('TOOLS_MAINTENANCE'))) && env('APP_ENV') === 'production';
+
+        return view('Tools/localBusiness', compact('local', 'dataID', 'dataEN', 'is_maintenance', 'lang', 'blogs', 'seo_terms', 'seo_guidelines', 'listLocalBusiness', 'country', 'province'));
+    }
+
+    public function video($lang)
+    {
+        App::setLocale($lang);
+        $dataID = $this->HomeController->getBlogWordpressId();
+        $dataEN = $this->HomeController->getBlogWordpressEn();
+        $local = App::getLocale();
+
+        // Fetch Seo Term
+        $seo_terms = Page::select('pages.id', 'pages.published_at', 'pages.title', 'pages.slug', 'pages.image', 'pages.created_by', DB::raw($lang == 'id' ? "'KAMUSSEO'" : "'SEOTERMS'" . " as 'type'"), DB::raw("'seo-terms' as 'link'"))
+        ->join('page_categories', function ($join) use($lang) {
+            $join->on('pages.page_category_id', '=', 'page_categories.id')
+            ->where('page_categories.language', $lang)
+            ->where('page_categories.slug', '=', 'seo-terms');
+        })
+        ->where('pages.language', $lang)
+        ->where('pages.slug', '!=', 'about')
+        ->where('pages.status', '1')
+        ->orderBy('pages.created_at','DESC')
+        ->first();
+
+        $seo_terms->published_at = Carbon::parse($seo_terms->published_at)->format('d F Y');
+
+        // Fetch Seo Guidelines
+        $seo_guidelines = Page::select('pages.id', 'pages.published_at', 'pages.title', 'pages.slug', 'pages.image', 'pages.created_by', DB::raw($lang == 'id' ? "'PANDUANSEO'" : "'SEOGUIDELINES'" . " as 'type'"), DB::raw("'seo-guide' as 'link'"))
+        ->join('page_categories', function ($join) use($lang) {
+            $join->on('pages.page_category_id', '=', 'page_categories.id')
+            ->where('page_categories.language', $lang)
+            ->where('page_categories.slug', '=', 'seo-guide');
+        })
+        ->where('pages.language', $lang)
+        ->where('pages.slug', '!=', 'about')
+        ->orderBy('pages.created_at','DESC')
+        ->where('pages.status', '1')->first();
+
+        $seo_guidelines->published_at = Carbon::parse($seo_terms->published_at)->format('d F Y');
+
+        // Fetch Blogs
+        $blogCategories = BlogCategory::select('id', 'slug', 'name')
+        ->where('language', $lang)
+        ->where('slug', '!=', 'press-release')
+        ->where('slug', '!=', 'promo-campaign')
+        ->where('slug', '!=', 'event')
+        ->isPublish()
+        ->get();
+
+        $blogs = Blog::select('id', 'published_at', 'title', 'slug', 'image', 'created_by', DB::raw($lang == 'id' ? "'BLOG'" : "'BLOGS'" . " as 'type'"), DB::raw("'blog' as 'link'"))
+            ->where('language', $lang)
+            ->where('status', '1')
+            ->whereIn('blog_category_id', $blogCategories->pluck('id'))
+            ->orderBy('published_at', 'desc')
+            ->first();
+
+        $blogs->published_at = Carbon::parse($seo_terms->published_at)->format('d F Y');
+
+
+        $is_maintenance = in_array('video', explode(',', env('TOOLS_MAINTENANCE'))) && env('APP_ENV') === 'production';
+
+        return view('Tools/video', compact('local', 'dataID', 'dataEN', 'is_maintenance', 'lang', 'blogs', 'seo_terms', 'seo_guidelines'));
+    }
+
+    public function event($lang)
+    {
+        App::setLocale($lang);
+        $dataID = $this->HomeController->getBlogWordpressId();
+        $dataEN = $this->HomeController->getBlogWordpressEn();
+        $local = App::getLocale();
+
+        // Fetch Seo Term
+        $seo_terms = Page::select('pages.id', 'pages.published_at', 'pages.title', 'pages.slug', 'pages.image', 'pages.created_by', DB::raw($lang == 'id' ? "'KAMUSSEO'" : "'SEOTERMS'" . " as 'type'"), DB::raw("'seo-terms' as 'link'"))
+        ->join('page_categories', function ($join) use($lang) {
+            $join->on('pages.page_category_id', '=', 'page_categories.id')
+            ->where('page_categories.language', $lang)
+            ->where('page_categories.slug', '=', 'seo-terms');
+        })
+        ->where('pages.language', $lang)
+        ->where('pages.slug', '!=', 'about')
+        ->where('pages.status', '1')
+        ->orderBy('pages.created_at','DESC')
+        ->first();
+
+        $seo_terms->published_at = Carbon::parse($seo_terms->published_at)->format('d F Y');
+
+        // Fetch Seo Guidelines
+        $seo_guidelines = Page::select('pages.id', 'pages.published_at', 'pages.title', 'pages.slug', 'pages.image', 'pages.created_by', DB::raw($lang == 'id' ? "'PANDUANSEO'" : "'SEOGUIDELINES'" . " as 'type'"), DB::raw("'seo-guide' as 'link'"))
+        ->join('page_categories', function ($join) use($lang) {
+            $join->on('pages.page_category_id', '=', 'page_categories.id')
+            ->where('page_categories.language', $lang)
+            ->where('page_categories.slug', '=', 'seo-guide');
+        })
+        ->where('pages.language', $lang)
+        ->where('pages.slug', '!=', 'about')
+        ->orderBy('pages.created_at','DESC')
+        ->where('pages.status', '1')->first();
+
+        $seo_guidelines->published_at = Carbon::parse($seo_terms->published_at)->format('d F Y');
+
+        // Fetch Blogs
+        $blogCategories = BlogCategory::select('id', 'slug', 'name')
+        ->where('language', $lang)
+        ->where('slug', '!=', 'press-release')
+        ->where('slug', '!=', 'promo-campaign')
+        ->where('slug', '!=', 'event')
+        ->isPublish()
+        ->get();
+
+        $blogs = Blog::select('id', 'published_at', 'title', 'slug', 'image', 'created_by', DB::raw($lang == 'id' ? "'BLOG'" : "'BLOGS'" . " as 'type'"), DB::raw("'blog' as 'link'"))
+            ->where('language', $lang)
+            ->where('status', '1')
+            ->whereIn('blog_category_id', $blogCategories->pluck('id'))
+            ->orderBy('published_at', 'desc')
+            ->first();
+
+        $blogs->published_at = Carbon::parse($seo_terms->published_at)->format('d F Y');
+
+         // currencies
+        $path_currencies = public_path('json/currencies.json');
+        $currencies = json_decode(file_get_contents($path_currencies), true);
+
+        // time zone
+        $path_timezone = public_path('json/time-zone.json');
+        $timezone = json_decode(file_get_contents($path_timezone), true);
+
+        // country
+        $path_country = public_path('json/regions.json');
+        $country = json_decode(file_get_contents($path_country), true);
+        
+        // province
+        $path_province = public_path('json/province-id.json');
+        $province = json_decode(file_get_contents($path_province), true);
+
+        $is_maintenance = in_array('event', explode(',', env('TOOLS_MAINTENANCE'))) && env('APP_ENV') === 'production';
+
+        return view('Tools/event', compact('local', 'dataID', 'dataEN', 'is_maintenance', 'lang', 'blogs', 'seo_terms', 'seo_guidelines', 'currencies', 'timezone', 'country', 'province'));
+    }
+
+    public function organization($lang)
+    {
+        App::setLocale($lang);
+        $dataID = $this->HomeController->getBlogWordpressId();
+        $dataEN = $this->HomeController->getBlogWordpressEn();
+        $local = App::getLocale();
+
+        // Fetch Seo Term
+        $seo_terms = Page::select('pages.id', 'pages.published_at', 'pages.title', 'pages.slug', 'pages.image', 'pages.created_by', DB::raw($lang == 'id' ? "'KAMUSSEO'" : "'SEOTERMS'" . " as 'type'"), DB::raw("'seo-terms' as 'link'"))
+        ->join('page_categories', function ($join) use($lang) {
+            $join->on('pages.page_category_id', '=', 'page_categories.id')
+            ->where('page_categories.language', $lang)
+            ->where('page_categories.slug', '=', 'seo-terms');
+        })
+        ->where('pages.language', $lang)
+        ->where('pages.slug', '!=', 'about')
+        ->where('pages.status', '1')
+        ->orderBy('pages.created_at','DESC')
+        ->first();
+
+        $seo_terms->published_at = Carbon::parse($seo_terms->published_at)->format('d F Y');
+
+        // Fetch Seo Guidelines
+        $seo_guidelines = Page::select('pages.id', 'pages.published_at', 'pages.title', 'pages.slug', 'pages.image', 'pages.created_by', DB::raw($lang == 'id' ? "'PANDUANSEO'" : "'SEOGUIDELINES'" . " as 'type'"), DB::raw("'seo-guide' as 'link'"))
+        ->join('page_categories', function ($join) use($lang) {
+            $join->on('pages.page_category_id', '=', 'page_categories.id')
+            ->where('page_categories.language', $lang)
+            ->where('page_categories.slug', '=', 'seo-guide');
+        })
+        ->where('pages.language', $lang)
+        ->where('pages.slug', '!=', 'about')
+        ->orderBy('pages.created_at','DESC')
+        ->where('pages.status', '1')->first();
+
+        $seo_guidelines->published_at = Carbon::parse($seo_terms->published_at)->format('d F Y');
+
+        // Fetch Blogs
+        $blogCategories = BlogCategory::select('id', 'slug', 'name')
+        ->where('language', $lang)
+        ->where('slug', '!=', 'press-release')
+        ->where('slug', '!=', 'promo-campaign')
+        ->where('slug', '!=', 'event')
+        ->isPublish()
+        ->get();
+
+        $blogs = Blog::select('id', 'published_at', 'title', 'slug', 'image', 'created_by', DB::raw($lang == 'id' ? "'BLOG'" : "'BLOGS'" . " as 'type'"), DB::raw("'blog' as 'link'"))
+            ->where('language', $lang)
+            ->where('status', '1')
+            ->whereIn('blog_category_id', $blogCategories->pluck('id'))
+            ->orderBy('published_at', 'desc')
+            ->first();
+
+        $blogs->published_at = Carbon::parse($seo_terms->published_at)->format('d F Y');
+
+        // Organization
+        $path = public_path('json/organization.json');
+        $listOrganization = json_decode(file_get_contents($path), true);
+
+        // country
+        $path = public_path('json/regions.json');
+        $country = json_decode(file_get_contents($path), true);
+
+
+        $is_maintenance = in_array('organization', explode(',', env('TOOLS_MAINTENANCE'))) && env('APP_ENV') === 'production';
+
+        return view('Tools/organization', compact('local', 'dataID', 'dataEN', 'is_maintenance', 'lang', 'blogs', 'seo_terms', 'seo_guidelines', 'listOrganization', 'country'));
+    }
+
+    public function robotsChecker($lang)
+    {
+        App::setLocale($lang);
+        $dataID = [];
+        $dataEN = [];
+    //    $dataID = $this->HomeController->getBlogWordpressId();
+    //    $dataEN = $this->HomeController->getBlogWordpressEn();
+        $local = App::getLocale();
+
+        // Fetch Seo Term
+        $seo_terms = Page::select('pages.id', 'pages.published_at', 'pages.title', 'pages.slug', 'pages.image', 'pages.created_by', DB::raw($lang == 'id' ? "'KAMUSSEO'" : "'SEOTERMS'" . " as 'type'"), DB::raw("'seo-terms' as 'link'"))
+        ->join('page_categories', function ($join) use($lang) {
+            $join->on('pages.page_category_id', '=', 'page_categories.id')
+            ->where('page_categories.language', $lang)
+            ->where('page_categories.slug', '=', 'seo-terms');
+        })
+        ->where('pages.language', $lang)
+        ->where('pages.slug', '!=', 'about')
+        ->where('pages.status', '1')
+        ->orderBy('pages.created_at','DESC')
+        ->first();
+
+        $seo_terms->published_at = Carbon::parse($seo_terms->published_at)->format('d F Y');
+
+        // Fetch Seo Guidelines
+        $seo_guidelines = Page::select('pages.id', 'pages.published_at', 'pages.title', 'pages.slug', 'pages.image', 'pages.created_by', DB::raw($lang == 'id' ? "'PANDUANSEO'" : "'SEOGUIDELINES'" . " as 'type'"), DB::raw("'seo-guide' as 'link'"))
+        ->join('page_categories', function ($join) use($lang) {
+            $join->on('pages.page_category_id', '=', 'page_categories.id')
+            ->where('page_categories.language', $lang)
+            ->where('page_categories.slug', '=', 'seo-guide');
+        })
+        ->where('pages.language', $lang)
+        ->where('pages.slug', '!=', 'about')
+        ->orderBy('pages.created_at','DESC')
+        ->where('pages.status', '1')->first();
+
+        $seo_guidelines->published_at = Carbon::parse($seo_terms->published_at)->format('d F Y');
+
+        // Fetch Blogs
+        $blogCategories = BlogCategory::select('id', 'slug', 'name')
+        ->where('language', $lang)
+        ->where('slug', '!=', 'press-release')
+        ->where('slug', '!=', 'promo-campaign')
+        ->where('slug', '!=', 'event')
+        ->isPublish()
+        ->get();
+
+        $blogs = Blog::select('id', 'published_at', 'title', 'slug', 'image', 'created_by', DB::raw($lang == 'id' ? "'BLOG'" : "'BLOGS'" . " as 'type'"), DB::raw("'blog' as 'link'"))
+            ->where('language', $lang)
+            ->where('status', '1')
+            ->whereIn('blog_category_id', $blogCategories->pluck('id'))
+            ->orderBy('published_at', 'desc')
+            ->first();
+
+        // User Agent
+        $path = public_path('json/useragent.json');
+        $userAgent = json_decode(file_get_contents($path), true);
+
+        $blogs->published_at = Carbon::parse($seo_terms->published_at)->format('d F Y');
+
+        $is_maintenance = in_array('robotstxt-checker', explode(',', env('TOOLS_MAINTENANCE'))) && env('APP_ENV') === 'production';
+
+        return view('Tools/robotstxt-checker', compact('local', 'dataID', 'dataEN', 'is_maintenance', 'lang', 'blogs', 'seo_terms', 'seo_guidelines', 'userAgent'));
+    }
+
+    public function serpSimulator($lang)
+    {
+        App::setLocale($lang);
+        $dataID = [];
+        $dataEN = [];
+    //    $dataID = $this->HomeController->getBlogWordpressId();
+    //    $dataEN = $this->HomeController->getBlogWordpressEn();
+        $local = App::getLocale();
+
+        // Fetch Seo Term
+        $seo_terms = Page::select('pages.id', 'pages.published_at', 'pages.title', 'pages.slug', 'pages.image', 'pages.created_by', DB::raw($lang == 'id' ? "'KAMUSSEO'" : "'SEOTERMS'" . " as 'type'"), DB::raw("'seo-terms' as 'link'"))
+        ->join('page_categories', function ($join) use($lang) {
+            $join->on('pages.page_category_id', '=', 'page_categories.id')
+            ->where('page_categories.language', $lang)
+            ->where('page_categories.slug', '=', 'seo-terms');
+        })
+        ->where('pages.language', $lang)
+        ->where('pages.slug', '!=', 'about')
+        ->where('pages.status', '1')
+        ->orderBy('pages.created_at','DESC')
+        ->first();
+
+        $seo_terms->published_at = Carbon::parse($seo_terms->published_at)->format('d F Y');
+
+        // Fetch Seo Guidelines
+        $seo_guidelines = Page::select('pages.id', 'pages.published_at', 'pages.title', 'pages.slug', 'pages.image', 'pages.created_by', DB::raw($lang == 'id' ? "'PANDUANSEO'" : "'SEOGUIDELINES'" . " as 'type'"), DB::raw("'seo-guide' as 'link'"))
+        ->join('page_categories', function ($join) use($lang) {
+            $join->on('pages.page_category_id', '=', 'page_categories.id')
+            ->where('page_categories.language', $lang)
+            ->where('page_categories.slug', '=', 'seo-guide');
+        })
+        ->where('pages.language', $lang)
+        ->where('pages.slug', '!=', 'about')
+        ->orderBy('pages.created_at','DESC')
+        ->where('pages.status', '1')->first();
+
+        $seo_guidelines->published_at = Carbon::parse($seo_terms->published_at)->format('d F Y');
+
+        // Fetch Blogs
+        $blogCategories = BlogCategory::select('id', 'slug', 'name')
+        ->where('language', $lang)
+        ->where('slug', '!=', 'press-release')
+        ->where('slug', '!=', 'promo-campaign')
+        ->where('slug', '!=', 'event')
+        ->isPublish()
+        ->get();
+
+        $blogs = Blog::select('id', 'published_at', 'title', 'slug', 'image', 'created_by', DB::raw($lang == 'id' ? "'BLOG'" : "'BLOGS'" . " as 'type'"), DB::raw("'blog' as 'link'"))
+            ->where('language', $lang)
+            ->where('status', '1')
+            ->whereIn('blog_category_id', $blogCategories->pluck('id'))
+            ->orderBy('published_at', 'desc')
+            ->first();
+
+        $blogs->published_at = Carbon::parse($seo_terms->published_at)->format('d F Y');
+
+        $is_maintenance = in_array('serp-simulator', explode(',', env('TOOLS_MAINTENANCE'))) && env('APP_ENV') === 'production';
+
+        return view('Tools/serp-simulator', compact('local', 'dataID', 'dataEN', 'is_maintenance', 'lang', 'blogs', 'seo_terms', 'seo_guidelines'));
+    }
+
     public function englishVersion()
     {
         $previous = url()->previous();

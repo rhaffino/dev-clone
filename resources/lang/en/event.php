@@ -1,73 +1,157 @@
 <?php
 return [
-    "subtitle" => "ACTIVATE RICH SNIPPET IN SERP",
-    "btn-add" => "Add Another event",
-    "btn-add-ticket-type" => "Add Ticket Type",
-    "btn-copy" => "Copy to Clipboard",
-    "btn-test" => "Live Test Rich Result",
-    "btn-delete" => "Delete",
-    "headline" => "Headline",
-    "url"=>"URL",
-    "pictureUrl"=>"Picture Url",
-    "authorType"=>"Author Type",
-    "author"=>"Author",
-    "publisherType"=>"PublisherType",
-    "publisher" => "Publisher",
-    "publisherLogoUrl"=>"Publisher Logo Url",
-    "datePublishded" =>"Date Published",
-    "dateModified"=>"Date Modified",
-    "title" => "The Steps to Check event Rich Result on Google",
-    "desc-1-1" => "1. After typing in the event, a code will appear in the right box that you can copy. To see how this event appears on Google, click <b>“Test Rich Result“</b>.",
-    "desc-1-2" => "2. On this page, you will check whether the code can be displayed in rich result by clicking <b>“TEST CODE“</b>.",
-    "desc-1-3" => "3. You will see a green check icon which means that the event can appear in the rich result. Once you know that the event you type can appear in SERP's rich result, you can see the preview in the smartphone display. Just click <b>“PREVIEW RESULTS“</b>",
-    "desc-1-4" => "4. Next, you will be directed to a Google page display that contains the event you typed. This is the appearance of your event in Google rich result.",
-    "desc-1-5" => "<b>Important note:</b> In order for the event to appear in rich result, write at least 3 questions and answers.",
-    "title-2" => "What is the Schema event?",
-    "desc-2-1" => "Frequently Asked Questions (event) is the page containing questions and answers related to topics, products, and services of specific companies. Interestingly, search engines like Google support the display of events for your website to appear on SERP. Of course, you you need to follow the procedures and conditions that have been made.",
-    "desc-2-2" => "Now, your activities on SEO would become easier with the third cmlabs tool: the event Schema JSON Generator. With a simple process that doesn't even require coding knowledge of certain programming languages, you can enable rich snippets in SERP.",
-    "title-3" => "Why Does Your Website Need a Schema event?",
-    "desc-3-1" => "Before answering the main question, we take you back two steps, and ask \"What information do users need most about your product or company?\"",
-    "desc-3-2" => "Then, the next step is, you have to prepare all the information they need, of course it is better if it is published online. Since when users have one particular question, they could immediately get the answer.",
-    "desc-3-3" => "Pay attention, <b>users need answers immediately</b>. So they expect important information to answer the difficult questions they are thinking about, of course relating to your product/service and other information about your company.",
-    "desc-3-4" => "Therefore, the Schema event is the solution. This rich snippet feature was released by Google to answer the speed problem. When users really expect accurate and fast answers, sometimes:",
-    "li-1" => "Website pages are slower than expectations,",
-    "li-2" => "The information displays the list of unstructured questions and answers, and",
-    "li-3" => "Placement of event information that is difficult to find by most internet users;",
-    "desc-3-5" => "Regardless of how it is applied and how difficult it is, those are three fundamental reasons why the event Schema is important for the website owners to activate it. In the next section, we will provide a tutorial on how to install the Schema event on the website.",
-    "title-4" => "Why Is Having an event Page Important for Your Website?",
-    "desc-4-1" => "A good event list is one of the most important elements of a business website. True, all companies need to have quality content and attractive appearance to provide a good user experience. However, you need events on your site to attract large traffic and convert more customers.",
-    "desc-4-2" => "The Shema event is an integral part of good navigation and a customer's journey through the website. This event is an information center for your audience who wants to learn more about the business and find out about the products and services provided, and see if they are what they want.",
-    "desc-4-3" => "Every time someone clicks on the Shema event, they have entered your business. For many people, the event page is the second page they visit after the Home or Service page.",
-    "desc-4-4" => "Instead of guessing what topics you should write about, you can use online marketing tools for small businesses to help you understand customer needs. This is the best way to optimize your Shema event before spending a lot of time or resources.",
-    "desc-4-5" => "For many people, the event page on the website is the second page that they visit after the Home or Service page. In the event section you need to include high quality content that will help customers understand products and services quickly.",
-    "desc-4-6" => "This means that your Shema event can play an important role in directing your audience to become potential customers. You should know that investing in high quality content for the event page will greatly impact conversion rates and help your business improve rapidly.",
-    "desc-4-7" => "Along with technical questions and answers, the event page will give the impression that your website is an official and trusted site. The Shema event shows that your company knows a lot about products and services so that it can answer questions before they are even asked.",
-    "desc-4-8" => "You can also use the event page as a form of social proof because your business can establish a company's website as a valuable asset to drive sales.",
-    "desc-4-9" => "Finally, the event page on the website will reduce a lot of pressure from customer service. Instead of making lots of questions accessible to answer customer questions, it's best to promote your event page to clients as a source of practical information about the company.",
-    "title-5" => "Main benefits of the event page",
-    "desc-5-1" => "In addition to the homepage and other important pages on your website, visitors will also go to the event page if they want to learn more about available products and offers.",
-    "desc-5-2" => "Because the event page will be a favorite page on the company's website, you must provide a link to the product page. This will help internal linking strategies on your website and improve SEO strategies that also affect other areas on your website.",
-    "title-6" => "1. event Page Helps You Overcome Your Reader Needs",
-    "desc-6-1" => "If you want to increase the practical value of your site, increase business authority, and increase conversions, then you need to have a complete and targeted Shema event. The Shema event is the main center customers go to when they have a question.",
-    "desc-6-2" => "One of the strongest reasons to have a event section is to answer customer needs, because customers are potential buyers who want to know more information about products and services by reading on the event page. You must provide quality content about your business on the event page.",
-    "desc-6-3" => "The best way you can overcome objections and increase sales is to provide accurate information to answer questions that are likely to be asked by customers.",
-    "title-7" => "2. Make Your Company Website As a Main Reference",
-    "desc-7-1" => "When there are questions that hang, people will search on your website because they believe your website is the main reference. The same thing happens when your customers ask questions about your products and services. Because your customers want to know information about problems that are known to your business, use the event page as a way to build a company website as a trusted expert.",
-    "desc-7-2" => "Every time your audience asks product and service questions, you can prove yourself an expert through answers that contain complete and accurate information.",
-    "desc-7-3" => "Your job is to get people interested, so you have to do everything you can to make yourself a trusted expert. Providing exceptional answers to questions asked by customers is the best way for you to become a reliable source of information.",
-    "desc-7-4" => "Use the Shema event to help your business win the trust of customers. You can use the event page as the first point of contact with customers, after which you can direct them to be buyers.",
-    "title-8" => "3. Increase Your Sales",
-    "desc-8-1" => "If your business has an optimized event page on your website, you will see an increase in conversions because the percentage of visitors to your website will buy the products and services available.",
-    "desc-8-2" => "However, having an event page that contains information that is too diverse will not succeed.",
-    "desc-8-3" => "Your event page needs to be tailored to the specific needs of the customer. In addition to having focused content, you must have a link from your event page to the product page and online store.",
-    "desc-8-4" => "A better tactic for the event page is to compare your products and services with competitors. This strategy is a natural way to show the superiority of your business compared to other competitors.",
-    "title-9" => "4. Improve SEO",
-    "desc-9-1" => "Search engines like the event page because they provide relevant content to help Google understand your business.",
-    "desc-9-2" => "This means that you need lots of good content to help your website appear in search engines. Your website's event page is a great place to publish lots of interesting information about your business, products and services.",
-    "desc-9-3" => "You can also use your event page to enter the long tail keywords that customers are looking for. Because you have already provided information about your business, you can add keyword-rich content so that when someone searches for related products and services, they will find an event page.",
-    "desc-9-4" => "The questions and answers that you include on your event page must represent the customer's thoughts. When the event is full and complete, this page will rank highly in search engines.",
-    "desc-9-5" => "This is why you must enter specific and detailed questions on your event page. This page must contain relevant information about your business so that it can appear on search engines like Google and Bing.",
-    "meta-title" => "event Page — Realtime JSON-LD Schema Generator",
-    "meta-desc" => "Use the realtime JSON-LD Schema Generator (event Page) to help SEO activities create a Schema event and activate SERP rich snippets on Google.",
-    "meta-keyword" => "event, event schema, google rich result, schema generator, google serp"
+    "meta-title" => "JSON-LD Event Schema Generator - Easy Markup for Events",
+    "meta-desc" => "Use JSON-LD Event Schema Generator by cmlabs to create structured data markup for events embedded within the HTML of your web pages.",
+    "meta-keyword" => "event, event schema, google rich result, schema generator, google serp",
+    "title" => "JSON-LD EVENT SCHEMA GENERATOR",
+    "subtitle" => "Generate structured data (schema markup) to display events on the SERP in an easy and SEO-optimized approach.",
+    "label-name" => "Events Name",
+    "placeholder-name" => "Type your Events Name here..",
+    "label-imageUrl" => "Image URL",
+    "placeholder-imageUrl" => "Type your Image URL here..",
+    "label-description" => "Event's Description",
+    "placeholder-description" => "Type your description here..",
+    "label-start-date" => "Start Date",
+    "placeholder-start-date" => "Pick a date",
+    "label-startTime" => "Start Time",
+    "placeholder-startTime" => "(e.g 08:00)",
+    "label-end-date" => "End Date",
+    "placeholder-end-date" => "Pick a date",
+    "label-endTime" => "End Time",
+    "placeholder-endTime" => "(e.g 17:30)",
+    "label-event-status" => "Event Status",
+    "event-status-opt-0" => "Choice a Event..",
+    "event-status-opt-1" => "Scheduled",
+    "event-status-opt-2" => "Postponed",
+    "event-status-opt-3" => "Cancelled",
+    "event-status-opt-4" => "Moved Online",
+    "label-attendance" => "Attendance Mode",
+    "attendance-opt-0" => "Choose your attendance mode..",
+    "attendance-opt-1" => "Online",
+    "attendance-opt-2" => "Offline",
+    "attendance-opt-3" => "Mixed",
+    "label-stream-url" => "Stream Url",
+    "placeholder-stream-url" => "Type your Stream URL here..",
+    "label-time-zone" => "Time Zone",
+    "placeholder-time-zone" => "Search a timezone..",
+    "label-vanue" => "Vanue Name",
+    "placeholder-vanue" => "Type your vanue name here..",
+    "label-street" => "Street",
+    "placeholder-street" => "Type your street here..",
+    "label-city" => "City",
+    "placeholder-city" => "Type your city here..",
+    "label-country" => "Country",
+    "placeholder-country" => "Search a country..",
+    "label-region" => "Region",
+    "placeholder-region" => "State/Province/Region",
+    "label-zip" => "Zip Code",
+    "placeholder-zip" => "Type your zip code here..",
+    "label-performer-type" => "Performer/Guest",
+    "performer-type-opt-0" => "Choose the performer..",
+    "performer-type-opt-1" => "Person",
+    "performer-type-opt-2" => "Performing Group",
+    "performer-type-opt-3" => "Music Group",
+    "performer-type-opt-4" => "Dance Group",
+    "performer-type-opt-5" => "Theater Group",
+    "label-performerName" => "Performer/Guest Name",
+    "placeholder-performerName" => "Type your performer's name here..",
+    "label-information" => "Add an offer for each ticket type (e.g. 'General admission', 'Reserved seating', 'VIP Package', etc).",
+    "btn-addTicket" => "Add Ticket Type",
+    "label-currency" => "Currency",
+    "placeholder-currency" => "Search a currency..",
+    "highlight" => "Want to make your events stand out and attract more attendees through search engines? Then, JSON-LD Event Schema Generator is the ideal choice for efficiently optimizing event-related web pages and attracting more traffic to your events. Our tool simplifies the process of creating structured data for events. With this tool, you can input essential event details, including name, date, time, location, description, ticketing, and even guest/performer details. Enhance your user experience by displaying rich snippets on SERP with this tool now!",    
+    "title-1" => "What is JSON-LD Event Schema Generator by cmlabs?",
+    "desc-1-1" => "Now that you are in a vast online marketplace, where websites are like colorful stalls vying for attention, you surely want your event to stand out.",
+    "desc-1-2" => "Imagine you're running a popular music festival and you want to make sure that when people search for it online, they find all the key details about the event right in the search results.",
+    "desc-1-3" => "<p>In this case, the JSON-LD Schema Generator by cmlabs is like a magical lamp that can make your event information sparkle and shine greatly in <a href='https://cmlabs.co/en-id/seo-guidelines/how-search-engine-works'>search engines</a>.</p>
+                    <p>JSON-LD Event Schema Generator by cmlabs is a specialized tool designed to assist website owners, <a href='https://cmlabs.co/en-id/seo-guidelines/devops-engineer'>DevOps engineers</a>, and marketers in creating <a href='https://cmlabs.co/en-id/seo-guidelines/structured-data-for-seo'>structured data</a> markups for events on their websites.</p>
+                    <p>This tool simplifies the complex task of generating <a href='https://cmlabs.co/en-id/seo-terms/json-ld-markup#:~:text=JSON%2DLD%20is%20a%20markup,Object%2DNotation%20for%20Linked%20Data.'>JSON-LD</a>, a short form of <a href='https://cmlabs.co/en-id/seo-terms/javascript'>JavaScript</a> Object Notation for Linked Data. To put it simply, this markup is specifically tailored to describe events in a machine-readable format.</p>
+                    <p>Structured data is a crucial component of modern web development, as it helps search engines like Google, Bing, and others understand various <a href='https://cmlabs.co/en-id/seo-terms/web-content'>web content</a>.</p>
+                    <p>In the case of event-related content, JSON Schema Generator provides a standardized way to convey essential details about events, such as event names, dates, times, locations, ticket prices, descriptions, and more.</p>
+                    <p>The primary function of a JSON-LD Event Schema Generator is to streamline the process of creating this structured data markup.</p>
+                    <p>It does so by offering users to input event-specific information. These details may include the event's name, start and end times, venue location, organizer information, and any additional properties necessary to accurately describe the event.</p>
+                    <p>These tools are designed to cater to a broad audience, ranging from individuals with limited technical knowledge to experienced developers.</p>
+                    <p>By offering straightforward forms and customizable fields, our tool ensures that even those without a deep understanding of coding or <a href='https://cmlabs.co/en-id/seo-terms/schema-markup'>schema markup</a> can effectively generate JSON-LD Event Schema. Interested to learn more about our tool? Below are the complete explanations!</p>",
+    "title-2" => "Advantages of JSON-LD Event Schema Generator by cmlabs",
+    "desc-2-1" => "Implementing a good schema generator yields several benefits. From an SEO perspective especially, it enhances a website's visibility in <a href='https://cmlabs.co/en-id/seo-terms/serp'>SERP</a> by providing structured information that search engines can easily comprehend.",
+    "desc-2-2" => "Our JSON Schema Generator for events offers several significant advantages that make it a valuable tool for website owners and developers. Here are some of them:",
+    "desc-2-2-1" => "Enhance SEO Strategy",
+    "desc-2-2-2" => "Our tool can help you enhance search engine optimization (<a href='https://cmlabs.co/en-id/seo-guidelines/seo-guideline'>SEO</a>). By providing structured data in the JSON-LD format, this generator helps search engines better understand the content and context of your events.",
+    "desc-2-3-1" => "Display Rich Snippets",
+    "desc-2-3-2" => "Search engines like Google can use this structured data to display <a href='https://cmlabs.co/en-id/seo-terms/rich-snippet'>rich snippets</a> in search results, offering users a quick preview of event details, such as dates, times, and venues. This enhanced visibility can lead to higher click-through rates (<a href='https://cmlabs.co/en-id/seo-guidelines/ctr-guideline#:~:text=CTR%20stands%20for%20click%2Dthrough,more%20money%20search%20engines%20make.'>CTR</a>) and increased traffic to your website.",
+    "desc-2-4-1" => "Simplify Structured Data Implementation",
+    "desc-2-4-2" => "JSON-LD Event Schema Generator by cmlabs also simplifies the implementation of structured data. It offers an easily accessible and friendly user interface (<a href='https://cmlabs.co/en-id/seo-terms/user-interface'>UI</a>), allowing individuals with various levels of technical expertise to create JSON-LD markup for their events. ",
+    "desc-2-5-1" => "Easy Monitoring and Updates",
+    "desc-2-5-2" => "If your events often change, then keeping your structured data up-to-date is crucial. With this tool, you can quickly and easily make adjustments to the markup as event details evolve.",
+    "desc-2-5-3" => "This ensures that search engines consistently display accurate and current information in search results, maintaining the credibility and reliability of your website.",
+    "desc-2-6-1" => "Enhanced The User Experience",
+    "desc-2-6-2" => "Implementing structured data generated by this tool can help you provide a richer and more informative experience for users.",
+    "desc-2-6-3" => "When search engines display rich snippets containing event details directly in search results, it allows users to quickly assess the relevance and appeal of your events without even visiting your website.",
+    "desc-2-6-4" => "This can lead to higher user engagement and <a href='https://cmlabs.co/en-id/seo-terms/conversion-rate'>conversion rate</a>, as visitors are more likely to click through to your event pages when they find the information they need upfront.",
+    "desc-2-7-1" => "Get Competitive in Digital Landscape",
+    "desc-2-7-2" => "By utilizing JSON-LD Event Schema, you will gain a competitive edge in the digital landscape. It is important to remember that websites that provide structured data rank higher in search results and appear more trustworthy and authoritative.",
+    "desc-2-7-3" => "This can be particularly advantageous in industries where event promotion and attendance are highly competitive, as your events will have a better chance of standing out.",
+    "desc-2-8-1" => "Cross-Platform Compatibility",
+    "desc-2-8-2" => "JSON-LD is a versatile format that works well across different platforms and devices. Whether users access your <a href='https://cmlabs.co/en-id/seo-terms/what-is-website'>website</a> on desktop computers, smartphones, or tablets, the structured data generated by the JSON-LD Event Schema Generator remains consistent and effective.",
+    "desc-2-8-3" => "This ensures that your events are accessible and well-represented regardless of the device or platform your audience uses.",
+    "desc-2-9-1" => "Error Reduction",
+    "desc-2-9-2" => "This tool guarantees the precise formatting of structured data, thereby diminishing the chances of encountering problems during search engine <a href='https://cmlabs.co/en-id/seo-terms/what-is-index'>indexing</a>.",
+    "desc-2-10-1" => "Schema Variety",
+    "desc-2-10-2" => "In addition to schema for events, our generator tool significantly supports a wide range of schema types, including HowTo, Breadcrumb, FAQ Page, Job Posting, Recipe, Product, Website, Local Business, and many more. This versatility allows you to create structured data for various types of content on your websites.",
+    "title-3" => "Example of Markup by JSON-LD Event Schema Generator",
+    "desc-3-1" => "Instead of manually coding the event details into your website, the generator allows you to simply input several data. Thus, once you've filled in these details, the generator works its magic and produces a JSON-LD code snippet that's tailored specifically for your event.",
+    "desc-3-2" => "As a glimpse of what you can expect, here's an example of the JSON-LD code you'll receive when using this tool:",
+    "howto-title-1" => "<h2>How to Use JSON-LD Event Schema Generator by cmlabs?</h2>",
+    "howto-1" => "<p>Using JSON-LD Event Schema Generator by cmlabs is not only a straightforward endeavor but also an exceptionally efficient one.</p>
+                <p>For those looking to enrich their website with structured data that highlights their events, this tool provides a seamless solution.</p> 
+                <p>Now, please allow us to walk you through a detailed step-by-step guide on how to effectively employ this innovative tool to create structured data that amplifies the visibility and accessibility of your events. Here’s how:</p>
+                <h3>Open the JSON-LD Event Schema Generator Page</h3>",
+    "howto-2" => "<p>Figure 1: Page view of JSON-LD Event Schema Generator by cmlabs.</p>
+                <p>The initial step is to navigate to the dedicated JSON-LD Schema Generator tools page provided by cmlabs.</p>
+                <p>Once you are on this page, you'll have access to a range of schema generators tailored to various types of content and entities. In this instance, we'll be focusing on the \"Event Generator\" to create schema markup specifically designed to represent your event.</p>
+                <h3>Select the Schema Type</h3>",
+    "howto-3" => "<p>Figure 2: Select “Event” Schema</p>
+                <p>To embark on your journey of enhancing your event's online presence, start by accessing the JSON-LD Event Schema Generator by cmlabs. As you begin, the tool welcomes you with a pivotal choice – selecting the most appropriate schema type for your event. This initial decision shapes the nature of the structured data that will be generated.</p> 
+                <h3>Input The Event Information</h3>",
+    "howto-4" => "<p>Figure 3: Enter the data in the provided fields.</p>
+                <p>With your schema type chosen, it's time to delve into your event's representation. You can start this process by inputting the Event Name, a succinct yet captivating title that encapsulates the essence of your event.</p>
+                <p>Following this, include an Image URL, allowing you to visually represent your event in a way that instantly captivates and engages potential attendees.</p>
+                <p>To complete this section, you should also input the Event Description which provides a clear and enticing overview of what your event has to offer. This brief yet informative description is vital in attracting the curiosity of users.</p>
+                <h3>Input Date and Time</h3>
+                <p>Accurate timing information is vital for your audience to plan their attendance effectively. In this step, you can enter the Start Date and Time, ensuring precision in defining when your event kicks off.</p>
+                <p>Then, you can also specify the End Date and Time, marking the conclusion of your event. These details contribute significantly to the user's understanding of the event's timeline and scheduling.</p>
+                <h3>Choose The Event Status</h3>
+                <p>In a world of dynamic events, keeping your audience informed is paramount. Thus, you need to indicate the current status of your event, whether it's scheduled as planned, postponed to a later date, or rescheduled.</p> 
+                <p>Transparency in this regard ensures that your event's representation in search results is always aligned with its real-world status.</p>
+                <h3>Choose The Attendance Mode</h3>
+                <p>Events come in various formats, and defining the mode of attendance is essential for potential attendees.</p>
+                <p>Whether it's an in-person gathering, a virtual experience, or a hybrid event, selecting the appropriate attendance mode offers clarity to those interested in participating.</p>
+                <h3>Fill In The Performer Details</h3>
+                <p>If your event features performers, speakers, or special guests, this section is where you provide additional depth to your event schema.</p>
+                <p>Specify the Performer Type (e.g., musical band, solo performer, etc.) and, most importantly, the Performer's Name.</p>
+                <p>This information not only enriches your event's representation but also caters to the preferences of attendees who may be drawn to specific performers.</p>
+                <h3>Explain The Ticketing Information</h3>
+                <p>For events requiring tickets, our tool also accommodates you with a feature to choose the ticketing information.</p>
+                <p>This feature is particularly valuable for events offering multiple ticket tiers or categories. It enables potential attendees to understand the ticketing options and costs associated with your event. Additionally, you can choose the preferred currency for displaying ticket prices.</p>
+                <h3>See The Final Results</h3>
+                <p>Upon completing these vital steps, the JSON-LD Event Schema Generator by cmlabs swings into action, promptly generating a tailored JSON-LD code snippet designed exclusively for your event.</p>
+                <p>This snippet encapsulates all the essential event details and structured data, ensuring that your event is accurately represented to search engines and, subsequently, to potential attendees.</p>
+                <p>The seamless integration of this generated code into your website's source code is the final step in this process. By doing so, you equip search engines like Google with the capability to comprehensively understand and display your event's information in search results.</p>
+                <h3>Select Your Action</h3>
+                <p>Within this tool, there are three approaches you can use: Copy, Check, and Reset. Understand each function below!</p>
+                <h4>Copy</h4>",
+    "howto-5" => "<p>Figure 4: Copy Option</p>
+                <p>If you want to copy the available script, you can click on the copy section. With this step, you can obtain a complete and comprehensive version of the script.</p>
+                <h4>Check</h4>",
+    "howto-6" => "<p>Figure 5: Check Option</p>
+                <p>This method provides a valuable avenue for you to validate and assess your page's compatibility with rich results.</p>
+                <p>It empowers you to gauge the precision of your structured data implementation in accordance with Google's rich results standards.</p>
+                <p>Through this comprehensive evaluation, you have the capacity to ensure that your website is meticulously fine-tuned, striving for nothing less than achieving peak visibility and fostering enhanced user engagement within the dynamic realm of search engine results pages.</p>
+                <h4>Reset</h4>",
+    "howto-7" => "<p>Figure 6: Data Reset Option</p>
+                <p>This Reset option offers you the convenience of starting the entire process afresh, right from the initial step. It can streamline your workflow, particularly when you have the intention of conducting multiple checks or generating a brand-new schema markup for your content.</p> 
+                <p>Whether you're fine-tuning existing structured data or embarking on a fresh venture, the Reset button stands ready to assist you in efficiently navigating the intricate terrain of schema markup implementation.</p>",
+    "closing-1" => "In conclusion, the JSON-LD Event Schema Generator by cmlabs stands as an indispensable tool for those seeking to elevate the visibility and impact of their events in the digital landscape.",
+    "closing-2" => "This tool empowers users of all backgrounds to effortlessly create structured data that search engines readily comprehend, to not only enhance the discoverability of events but also improve the user experience by providing rich and accurate event previews in search results.",
+    "closing-3" => "Ready to generate the JSON-LD code specifically built for your event? Try our tool now!",
 ];

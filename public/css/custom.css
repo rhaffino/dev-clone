@@ -1877,6 +1877,11 @@ input.input-url-meta-checker:focus {
     border-radius: 20px;
 }
 
+.btn-add-question:disabled:hover,
+.btn-add-question[disabled]:hover{
+    cursor: no-drop;
+}
+
 .btn-add-question i {
     color: white;
 }
@@ -2630,4 +2635,31 @@ input.input-url-meta-checker:focus {
     color: var(--darkgrey) !important;
     font-weight: 700;
     padding: 0 !important;
+}
+
+#onlineAttendance,
+#offlineAttendance{
+    display: none;
+}
+
+/* Primary checkbox */
+.primary-checkbox .checkbox > input:checked ~ span{
+    background-color: var(--white);
+}
+
+.primary-checkbox .checkbox > input:checked ~ span:after {
+    border-color: var(--primary);
+}
+
+/* Box Result List */
+.box-result-list{
+    border: 1px solid #E4E6EF;
+    padding: 0.65rem 1rem;
+    border-radius: 0.42rem;
+    background: #f5f5f5;
+}
+
+.result-collapse{
+    max-height: 600px;
+    overflow-y: auto;
 }

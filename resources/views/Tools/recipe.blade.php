@@ -30,7 +30,7 @@ id/json-ld-recipe-schema-generator
                             <div class="row mb-8">
                                 <div class="col-12">
                                     <label for="schema-json-ld" class="text-black font-weight-bold h6">@lang('layout.which-schema')</label>
-                                    <select class="form-control selectpicker custom-select-blue" tabindex="null" id="schema-json-ld">
+                                    <select class="form-control selectpicker custom-select-blue custom-searchbox" tabindex="null" data-size="4" data-live-search="true" id="schema-json-ld">
                                         <option value="home">Home</option>
                                         <option value="breadcrumb">Breadcrumb</option>
                                         <option value="faq">FAQ Page</option>
@@ -39,6 +39,11 @@ id/json-ld-recipe-schema-generator
                                         <option value="person">Person</option>
                                         <option value="product">Product</option>
                                         <option value="recipe" selected="selected">Recipe</option>
+                                        <option value="website">Website</option>
+                                        <option value="local-business">Local Business</option>
+                                        <option value="video">Video</option>
+                                        <option value="event">Event</option>
+                                        <option value="organization">Organization</option>
                                     </select>
                                 </div>
                             </div>
@@ -431,7 +436,7 @@ id/json-ld-recipe-schema-generator
         </div>
     @endslot
     @slot('read_more')
-        <p class="b1-400 b1-m-400 read-more" id="read-more-button">Read more</p>
+        <p class="b1-400 b1-m-400 read-more" id="read-more-button">@lang('layout.read-more')</p>
     @endslot
 @endcomponent
 @endsection
@@ -488,7 +493,7 @@ id/json-ld-recipe-schema-generator
             description_3.classList.remove("d-none");
             description_4.classList.remove("d-none");
             how_to.classList.remove("d-none");
-            read_more_button.innerHTML = 'Show less';
+            read_more_button.innerHTML = @json( __('layout.show-less') );
             read = true;
         } else {
             description_2.style.display = 'none';
@@ -499,7 +504,7 @@ id/json-ld-recipe-schema-generator
             description_3.classList.add("d-none");
             description_4.classList.add("d-none");
             how_to.classList.add("d-none");
-            read_more_button.innerHTML = 'Read more';
+            read_more_button.innerHTML = @json( __('layout.read-more') );
             read = false;
         }
     });

@@ -45,6 +45,8 @@
                             <a class="dropdown-item @yield('ping-tool')" href="/{{ $local }}/ping-tool">Ping Tool</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item @yield('header-checker')" href="/{{ $local }}/http-header-checker">HTTP Header Checker</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item @yield('robottxt-checker')" href="/{{ $local }}/robottxt-checker">Robot.TXT Checker</a>
                         </div>
                     </li>
                     <li class="nav-item ml-7">

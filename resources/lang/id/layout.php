@@ -94,4 +94,9 @@ return [
     "edited-at" => "Pembaruan terakhir",
     "read-more" => "Baca Selengkapnya",
     "show-less" => "Tampilkan lebih sedikit",
+    "invalid-phone" => "Nomor Telepon Tidak Valid",
+    "invalid-latitude" => "Latitude Tidak Valid",
+    "invalid-longitude" => "Longitude Tidak Valid",
+    "invalid_number" => "Nilai harus lebih dari 0",
+    "invalid-hours" => "Jam Tidak Valid",
 ];

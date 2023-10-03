@@ -87,14 +87,26 @@
         [
             'title' => 'Ping Tool',
             'desc' => __('home.ping-tool-desc'),
-            'icon' => "<i class='text-purple-70 bx bx-shape-circle bx-md'></i>",
+            'icon' => "<i class='text-purple-70 bx bx-terminal bx-md'></i>",
             'link' => 'ping-tool',
         ],
         [
             'title' => 'HTTP Header Checker',
             'desc' => __('home.http-header-checker-desc'),
-            'icon' => "<i class='text-purple-70 bx bx-shape-circle bx-md'></i>",
+            'icon' => "<i class='text-purple-70 bx bx-code bx-md'></i>",
             'link' => 'http-header-checker',
+        ],
+        [
+            'title' => 'Robots.txt Checker',
+            'desc' => __('home.robotstxt-checker-desc'),
+            'icon' => "<i class='text-purple-70 bx bx-list-check bx-md'></i>",
+            'link' => 'robotstxt-checker',
+        ],
+        [
+            'title' => 'SERP Simulator',
+            'desc' => __('home.serp-simulator-desc'),
+            'icon' => "<i class='text-purple-70 bx bxl-google bx-md'></i>",
+            'link' => 'serp-simulator',
         ],
     ];
 @endphp
@@ -111,20 +123,39 @@
             <div class="carousel-item {{ $index === 0 ? 'active' : '' }}">
                 <div class="row">
                     @foreach ($item as $tool)
-                        <div class="col-4">
-                            <div class="tools-card">
-                                <div class="icon-container">
-                                    {!! $tool['icon'] !!}
+                        @if($tool['title'] == 'Plagiarism Checker')
+                            @if (auth()->check() && (auth()->check() ? auth()->user()->user_role_id == 3 : false))
+                                <div class="col-4">
+                                    <div class="tools-card">
+                                        <div class="icon-container">
+                                            {!! $tool['icon'] !!}
+                                        </div>
+                                        <div class="tools-card-body">
+                                            <h3 class="h6-700 h6-m-700">{{ $tool['title'] }}</h3>
+                                            <p class="s-400 text-dark-40">{{ $tool['desc'] }}</p>
+                                            <a href="/{{ $local }}/{{ $tool['link'] }}"
+                                                class="mt-8 b2-700 b2-m-700 text-dark-70 d-flex align-items-center"><u>@lang('plagiarism.launch')</u> <i
+                                                    class='bx bx-right-arrow-alt'></i></a>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="tools-card-body">
-                                    <h3 class="h6-700 h6-m-700">{{ $tool['title'] }}</h3>
-                                    <p class="s-400 text-dark-40">{{ $tool['desc'] }}</p>
-                                    <a href="/{{ $local }}/{{ $tool['link'] }}"
-                                        class="mt-8 b2-700 b2-m-700 text-dark-70"><u>@lang('plagiarism.launch')</u> <i
-                                            class='bx bx-right-arrow-alt'></i></a>
+                            @endif
+                        @else
+                            <div class="col-4">
+                                <div class="tools-card">
+                                    <div class="icon-container">
+                                        {!! $tool['icon'] !!}
+                                    </div>
+                                    <div class="tools-card-body">
+                                        <h3 class="h6-700 h6-m-700">{{ $tool['title'] }}</h3>
+                                        <p class="s-400 text-dark-40">{{ $tool['desc'] }}</p>
+                                        <a href="/{{ $local }}/{{ $tool['link'] }}"
+                                            class="mt-8 b2-700 b2-m-700 text-dark-70 d-flex align-items-center"><u>@lang('plagiarism.launch')</u> <i
+                                                class='bx bx-right-arrow-alt'></i></a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        @endif
                     @endforeach
                 </div>
             </div>
@@ -155,7 +186,7 @@
                                         <p class="s-400 text-dark-40 mt-3">{{ $tool['desc'] }}</p>
                                     </div>
                                     <a href="/{{ $local }}/{{ $tool['link'] }}"
-                                        class="mt-8 b2-700 b2-m-700 text-dark-70"><u>LAUNCH</u> <i
+                                        class="mt-8 b2-700 b2-m-700 text-dark-70 d-flex align-items-center"><u>LAUNCH</u> <i
                                             class='bx bx-right-arrow-alt'></i></a>
                                 </div>
                             </div>
