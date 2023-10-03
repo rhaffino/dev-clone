@@ -198,7 +198,7 @@ id/json-ld-schema-generator
             </div>
             <div class="d-flex align-items-center">
                 <i class='bx bxs-check-circle text-darkgrey mr-1'></i>
-                <span class="text-darkgrey">@lang('layout.whats-new-update') 15 Mar, 2021 | @lang('layout.version') 1.0</span>
+                <span class="text-darkgrey">@lang('layout.whats-new-update') 3 Oct, 2023 | @lang('layout.version') 1.0</span>
             </div>
         </div>
     </div>

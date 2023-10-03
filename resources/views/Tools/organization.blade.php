@@ -181,7 +181,7 @@ id/json-ld-organization-schema-generator
                                         <p>@lang('organization.highlight')</p>
                                         <div class="d-flex align-items-center">
                                             <i class='bx bxs-check-circle text-darkgrey mr-1'></i>
-                                            <span class="text-darkgrey h6 mb-0">@lang('layout.updated') 18 Sep, 2023</span>
+                                            <span class="text-darkgrey h6 mb-0">@lang('layout.updated') 3 Oct, 2023</span>
                                         </div>
                                     </div>
                                 </div>
@@ -208,7 +208,7 @@ id/json-ld-organization-schema-generator
                         <p>@lang('organization.highlight')</p>
                         <div class="d-flex align-items-center">
                             <i class='bx bxs-check-circle text-darkgrey mr-1'></i>
-                            <span class="text-darkgrey h6 mb-0">@lang('layout.updated') 18 Sep, 2023</span>
+                            <span class="text-darkgrey h6 mb-0">@lang('layout.updated') 3 Oct, 2023</span>
                         </div>
                     </div>
                 </div>
