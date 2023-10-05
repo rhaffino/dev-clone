@@ -77,6 +77,7 @@ Route::middleware([ManualAuth::class])->group(function (){
         Route::get('/{lang}/json-ld-organization-schema-generator', 'ToolsController@organization');
         Route::get('/{lang}/robotstxt-checker', 'ToolsController@robotsChecker');
         Route::get('/{lang}/serp-simulator', 'ToolsController@serpSimulator');
+        Route::get('/{lang}/meta-generator', 'ToolsController@metagenerator');
     });
     Route::get('/en/version', 'ToolsController@englishVersion');
     Route::get('/id/version', 'ToolsController@indonesiaVersion');

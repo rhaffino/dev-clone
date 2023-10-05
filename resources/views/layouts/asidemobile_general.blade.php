@@ -132,6 +132,11 @@
                                                 <span class="menu-text">Robots .TXT Generator</span>
                                             </a>
                                         </li>
+                                        <li class="menu-item menu-item-children" aria-haspopup="true">
+                                            <a href="/{{ $local }}/meta-generator" class="menu-link">
+                                                <span class="menu-text">Meta Generator</span>
+                                            </a>
+                                        </li>
                                     </ul>
                                 </div>
                             </li>

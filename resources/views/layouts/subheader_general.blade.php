@@ -12,6 +12,8 @@
                             <a class="dropdown-item @yield('sitemap')" href="/{{ $local }}/sitemap-generator">Sitemap .XML Generator</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item @yield('robotstxt-generator')" href="/{{ $local }}/robotstxt-generator">Robots .TXT Generator</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item @yield('meta-generator')" href="/{{ $local }}/meta-generator">Meta Generator</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown ml-7">
