@@ -26,7 +26,12 @@
                             <form class="" id="form">
                                 <div class="row">
                                     <div class="col-12 col-lg-6">
-                                        <label class="text-black font-weight-bold" for="title">@lang('metagenerator.label-title')</label>
+                                        <div class="d-flex justify-content-between">
+                                            <label class="text-black font-weight-bold" for="title">@lang('metagenerator.label-title')</label>
+                                            <label class="text-black font-weight-bold" for="title-meta-count">
+                                                <span id="char-title">0</span> @lang('serp-simulator.label-char') (<span id="px-title">0</span> / 600px)
+                                            </label>
+                                        </div>
                                         <input type="text" name="" class="form-control title mb-5" placeholder="@lang('metagenerator.placeholder-title')" value="">
                                         <div class="row">
                                             <div class="col-12 mb-5">
@@ -41,7 +46,12 @@
                                         </div>
                                     </div>
                                     <div class="col-12 col-lg-6 mb-8 mb-lg-5">
-                                        <label class="text-black font-weight-bold" for="description">@lang('metagenerator.label-description')</label>
+                                        <div class="d-flex justify-content-between">
+                                            <label class="text-black font-weight-bold" for="description">@lang('metagenerator.label-description')</label>
+                                            <label class="text-black font-weight-bold" for="desc-meta-count">
+                                                <span id="char-desc">0</span> @lang('serp-simulator.label-char') (<span id="px-desc">0</span> / 600px)
+                                            </label>
+                                        </div>
                                         <textarea name="" class="form-control custom-textarea-89 description" placeholder="@lang('metagenerator.placeholder-description')"></textarea>
                                     </div>
                                 </div>

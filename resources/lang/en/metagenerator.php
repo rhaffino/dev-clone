@@ -63,7 +63,6 @@ return [
     "type-opt-25" => "Video Movie",
     "type-opt-26" => "Video TV Show",
     "type-opt-27" => "Video Other",
-    "label-number-images" => "Number of Images",
     "label-images" => "Image URL",
     "placeholder-images" => "Type your URL images here..",
     "label-type-twitter" => "Twitter card Type",

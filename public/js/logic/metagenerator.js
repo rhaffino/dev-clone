@@ -204,6 +204,16 @@ var regex = new RegExp(expression);
 
 // All Function
 function updateJSON_title(value) {
+    if (value) {
+        var charCount = value.length;
+        var pixelCount = charCount * 7;
+        $("#char-title").text(charCount);
+        $("#px-title").text(pixelCount);
+    } else {
+        $("#char-title").text(0);
+        $("#px-title").text(0);
+    }
+
     metaGeneratorFormat.title = value;
     metaGeneratorFormat.render();
 }
@@ -228,6 +238,16 @@ function updateJSON_url(value) {
 }
 
 function updateJSON_description(value) {
+    if (value) {
+        var charCountDesc = value.length;
+        var pixelCountDesc = charCountDesc * 7;
+        $("#char-desc").text(charCountDesc);
+        $("#px-desc").text(pixelCountDesc);
+    } else {
+        $("#char-desc").text(0);
+        $("#px-desc").text(0);
+    }
+
     metaGeneratorFormat.description = value;
     metaGeneratorFormat.render();
 }
@@ -369,6 +389,10 @@ jQuery("#copy").click(function () {
 });
 
 jQuery("#reset").click(function () {
+    $("#char-title").text(0);
+    $("#px-title").text(0);
+    $("#char-desc").text(0);
+    $("#px-desc").text(0);
     $(".url").removeClass("is-invalid");  
     $(".imageUrl").removeClass("is-invalid");  
     $("#chatSet").selectpicker("val", "UTF-8");
