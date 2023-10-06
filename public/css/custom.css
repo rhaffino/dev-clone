@@ -2307,6 +2307,11 @@ input.input-url-meta-checker:focus {
     height: 82%;
 }
 
+.form-control.custom-textarea-89 {
+    resize: none;
+    height: 89%;
+}
+
 .form-control.custom-textarea-100px {
     resize: none;
     height: 100px;
