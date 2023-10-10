@@ -26,6 +26,7 @@ return [
     "http-header-checker-desc" => "The HTTP Header Checker is a tool designed to inspect and analyze the headers of Hypertext Transfer Protocol (HTTP) requests as well as responses exchanged between client and server.",
     "robotstxt-checker-desc" => "Robots.txt Checker is a tool designed to simplify the process of validating robots.txt files, maintaining order, protecting your website's valuable assets, and help you align with an accurate SEO strategy.",
     "serp-simulator-desc" => "The SERP Simulator by cmlabs is a tool that allows users to optimize various elements such as title tags, meta descriptions, or keywords, and preview how their website appears in search engine results (SERP).",
+    "meta-generator-desc" => "The Meta Generator is a tool designed to assist the process of creating meta tags and generating them in the appropriate format within the HTML code to ensure that web pages are effectively crawled and indexed by search engines.",
     "last-update" => "Last Update",
     "desc-1" => "Important Note",
     "desc-1-1" => "In using some tools that require you to enter a URL, make sure it is valid. Otherwise, the tool will not function properly.",

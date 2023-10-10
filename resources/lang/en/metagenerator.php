@@ -1,15 +1,14 @@
 <?php
 return [
-    "meta-title" => "Robots.txt Generator for SEO - Custom and Check robots.txt File in Free",
-    "meta-desc" => "Use robots.txt generator to set the index status of the link on your website. Helps Google optimize dan improve your web performance.",
+    "meta-title" => "Meta Generator by cmlabs - Create Meta Tags Efficiently",
+    "meta-desc" => "Meta Generator by cmlabs is a tool that simplifies the process of generating HTML meta tags for a web page. Try now for free!",
     "title" => "META GENERATOR",
-    "subtitle" => "Generate Meta Code file easily",
-
+    "subtitle" => "Helps you craft meta tags and vital details about your webpage.",
 
     "label-title" => "Site Title",
-    "placeholder-title" => "Title mush be within 60 Characters",
+    "placeholder-title" => "Title must be within 60 characters",
     "label-description" => "Site Description",
-    "placeholder-description" => "Description mush be within 150 Characters",
+    "placeholder-description" => "Description must be within 150 Characters",
     "label-name" => "Site Name",
     "placeholder-name" => "Type your name website here..",
     "label-url" => "Site URL",
@@ -44,7 +43,7 @@ return [
     "type-opt-6" => "Business",
     "type-opt-7" => "Fitness Course",
     "type-opt-8" => "Music Album",
-    "type-opt-9" => "Music Musician",
+    "type-opt-9" => "Musician",
     "type-opt-10" => "Music Playlist",
     "type-opt-11" => "Music Radio Station",
     "type-opt-12" => "Music Song",
@@ -62,92 +61,102 @@ return [
     "type-opt-24" => "Video Episode",
     "type-opt-25" => "Video Movie",
     "type-opt-26" => "Video TV Show",
-    "type-opt-27" => "Video Other",
+    "type-opt-27" => "Other Video",
     "label-images" => "Image URL",
     "placeholder-images" => "Type your URL images here..",
     "label-type-twitter" => "Twitter card Type",
     "type-twitter-opt-1" => "Summary with Large Image",
     "type-twitter-opt-2" => "Summary",
 
+    "highlight" => "The Meta Generator by cmlabs serves as a powerful tool that will help users streamline the complex process of crafting essential meta tags for web pages with only some key elements such as the Site Title, Name, URL, Description, and more. This tool helps you generate meta tags in the precise format required within the HTML code. Try now!",
+    "desc-1" => "What is The Meta Generator Tool by cmlabs?",
+    "desc-1-1" => "The Meta Generator Tool by cmlabs is a valuable resource in the realm of <a href='https://cmlabs.co/en-id/seo-guidelines/seo-for-web-development'>web development</a> and search engine optimization (<a href='https://cmlabs.co/en-id/seo-guidelines/seo-guideline'>SEO</a>). How can it be? Let’s unveil the concept, benefits, and how you can use this tool within the following discussion.",
+    "desc-1-2" => "The Meta Generator by cmlabs is specifically designed to simplify the creation of meta tags or <a href='https://cmlabs.co/en-id/seo-terms/metadata'>metadata</a> which is a fundamental component of a webpage's <a href='https://cmlabs.co/en-id/seo-terms/html'>HTML</a> code.",
+    "desc-1-3" => "Meta tags are snippets of information that provide vital details about a webpage's content, aiding <a href='https://cmlabs.co/en-id/seo-guidelines/how-search-engine-works'>search engines</a> in understanding and categorizing the page effectively. This tool simplifies the often intricate process of crafting such important tags and empowering <a href='https://cmlabs.co/en-id/seo-guidelines/web-developer'>website developers</a> to optimize web page visibility.",
+    "desc-1-4" => "When utilizing this Meta Generator by cmlabs, you can simply input several essential information about your webpage, including the site title, description, <a href='https://cmlabs.co/en-id/seo-terms/url#:~:text=URL%20stands%20for%20Uniform%20Resource,be%20shorter%20than%202.083%20characters.'>URL</a>, and some more.",
+    "desc-1-5" => "After gathering those data, this tool then processes this information and generates the corresponding meta tags, formatted for seamless integration into the HTML code.",
+    "desc-1-6" => "Now that you've grasped the fundamental concept of this tool, let's delve deeper into its advantages, exploring how it streamlines processes, enhances efficiency, and contributes to an overall improvement in web presence.",
+    "desc-2" => "What is a Meta Tag?",
+    "desc-2-1" => "A meta tag is a crucial component in the HTML code of a webpage that provides additional information about the content to browsers and search engines.",
+    "desc-2-2" => "These tags do not necessarily appear on the visible part of the webpage, yet they still play a significant role in how search engines index and display the page in search results.",
+    "desc-2-3" => "Meta tags are placed within the <b><head></b> section of the HTML code, and they consist of metadata that offer insights into the site title, name, description, <a href='https://cmlabs.co/en-id/seo-guidelines/keywords-guideline'>keywords</a>, and other attributes.",
+    "desc-3" => "The Advantages of Using Meta Generator Tool by cmlabs",
+    "desc-3-1" => "This HTML Meta Generator by cmlabs serves as a user-friendly solution, streamlining the otherwise complex process of crafting meta tags for web pages.",
+    "desc-3-2" => "It is primarily designed for individuals lacking extensive coding knowledge or expertise in web development.",
+    "desc-3-3" => "The functionality of the Meta Generator Tool by cmlabs efficiently generates meta tags based on several data provided by the user. Below are the advantages you can get by using the Meta Generator Tool by cmlabs.",
+    "desc-3-4" => "1. Time Efficiency",
+    "desc-3-4-1" => "Utilizing this Meta Tag Generator tool significantly reduces the time and effort you require to create HTML meta tags for web pages.",
+    "desc-3-4-2" => "Instead of manually coding these tags, you can simply input essential information into the tool and it will generate the tags automatically. This time-saving feature is especially beneficial for web developers and content creators who seek a streamlined approach to SEO optimization.",
+    "desc-3-5" => "2. Enhance Accuracy in Creating Meta Tags",
+    "desc-3-5-1" => "You need to note that precision in meta tags is one of the utmost importance in the realm of SEO as it affects the website's <a href='https://cmlabs.co/en-id/seo-terms/what-is-index'>indexing</a> by search engines.",
+    "desc-3-5-2" => "In that case, this tool ensures accuracy in meta tags as it eliminates the possibility of human error.",
+    "desc-3-5-3" => "Users can trust that the generated meta tags are consistent with the provided information by inputting relevant details such as the Site Title, Name, Description, and several more, to generate precise meta tags that contribute to better indexing by search engines.",
+    "desc-3-6" => "3. SEO Best Practices",
+    "desc-3-6-1" => "Our HTML Meta Generator Tool incorporates SEO best practices into its algorithm. Our tool helps you generate the use of specific tag format and offer guidance on optimizing meta tag lengths. ",
+    "desc-3-6-2" => "By incorporating these SEO best practices into the tool's algorithm, we aim to simplify the process for you.",
+    "desc-3-6-3" => "Now, you don't need to worry about the technical details, since our tool will take care of it for you and ensure your meta tags align with what search engines look for when ranking web pages.",
+    "desc-3-7" => "4. Friendly User Interface",
+    "desc-3-7-1" => "Our tool features an easy-to-navigate user interface (<a href='https://cmlabs.co/en-id/seo-terms/user-interface'>UI</a>) to make it accessible to a broad range of users, including those with limited technical expertise. ",
+    "desc-3-7-2" => "We provide an intuitive design that allows users to navigate through the tool seamlessly, input information effortlessly, and generate meta tags with minimal learning curve.",
+    "desc-3-8" => "5. Real-Time Preview",
+    "desc-3-8-1" => "Our tool provides you with a preview function so that you can see how your generated meta tags will appear in search engine results. This feature empowers users to fine-tune their meta tags for better visual presentation, ensuring that the information can be greatly indexed by search engines.",
+    "desc-3-8-2" => "With the SEO Meta Generator by cmlabs, all you have to do is input a few pieces of information, and you're good to go! ",
+    "desc-3-9" => "6. SEO-Optimized Technology",
+    "desc-3-9-1" => "Our Meta Generator Tool stands out by staying current with the latest trends and guidelines in the ever-evolving landscape of SEO.",
+    "desc-3-9-2" => "We take pride in ensuring that our tool is always in sync with the dynamic changes in search engine algorithms and optimization practices.",
+    "desc-3-10" => "7. Stick to Google's Guidelines",
+    "desc-3-10-1" => "Rest assured that with our tool, your website remains fully compliant with the ever-evolving criteria set by Google. ",
+    "desc-3-10-2" => "The intricacies of search engine algorithms can be complex, but our tool simplifies the process, ensuring that your website is optimized to perform at its best within the parameters defined by Google.",
+    "desc-4" => "HTML Meta Tag Attributes",
+    "desc-4-1" => "Attributes in the HTML <meta> tag play a crucial role in providing additional information about the webpage's content. Here's an overview of some commonly used attributes:",
+    "table-header-1" => "Attributes",
+    "table-header-2" => "Value",
+    "table-header-3" => "Description",
+    "desc-5" => "Example of HTML Code Generated with The Meta Generator by cmlabs",
+    "desc-5-1" => "If you're curious about how our HTML Meta Generator by cmlabs functions, you can consider the following example.",
+    "desc-5-2" => "To provide you with a preview of the output, here's an illustration of HTML code meta information and OpenGraph information for social media platforms such as Facebook, LinkedIn, and Twitter. ",
 
-    "highlight" => "In this latest version, we develop the Robot TXT Generator tool with export features and useragent features. The export feature will make it easier for you to check the code on Google Rich Result. Meanwhile, the useragent feature will allow you to add more commands to the Robot TXT Generator. This makes it easier for the txt Robot to specifically sort out which content you want to cover and which ones are displayed.",
-    "desc-1" => "What is Robots.txt Generator?",
-    "desc-1-1" => "Robots.txt generator is a tool that is able to make it easier for you to make configurations in the robots.txt file. The robots.txt generator from cmlabs contains all the commands you can use to create a robots.txt file, from specifying a user-agent, entering a sitemap path, specifying access permissions (allow or disallow), to setting crawl-delay.",
-    "desc-2" => "Why Do You Need a Robots.txt Generator?",
-    "desc-2-1" => "By using the <a href='https://tools.cmlabs.co/id/robotstxt-generator'>robots.txt generator</a>, you do not need to manually write the robots.txt file. Just enter the command you want to give the web crawler, then set which pages are allowed or not allowed to be crawled. How to use the robots.txt generator is quite easy, with just a few clicks.",
-    "desc-3" => "Robots.txt Functions For Your Website",
-    "desc-3-1" => "Robots.txt is a file containing certain commands that decide whether the user-agent (web crawler of each search engine) is allowed or not to crawl website elements. The functions of robots.txt for your website are as follows:",
-    "desc-3-1-1" => "Tells crawlers which page URLs they can or can't access",
-    "desc-3-1-2" => "Helping websites avoid the burden of too many crawl requests",
-    "desc-3-1-3" => "Help manage crawler traffic to your website",
-    "desc-4" => "Robots.txt File Location In Website",
-    "desc-4-1" => "Generally, the location of the robots.txt file is in the main directory of the website (e.g domain root or homepage). Before you add it, the robots.txt file is already in the root folder on the file storage server (public_html).",
-    "desc-4-2" => "However, you will not find the file when you open public_html. This is because this file is virtual and cannot be modified or accessed from other directories. To change commands in robots.txt, you need to add a new robots.txt file and save it in the public_html folder. In this way, the configuration in the new file will replace the previous file.",
-    "desc-5" => "Syntax on Robots.txt",
-    "desc-5-1" => "The robots.txt syntax can be interpreted as the command you use to notify web crawlers. The robots.txt generator from cmlabs also provides a syntax that the web crawler recognizes. The five terms commonly found in a robots.txt file are as follows:",
-    "desc-5-1-1" => "User-Agent",
-    "desc-5-1-2" => "What is meant by a user-agent in robots.txt is the specific type of web crawler that you give the command to crawl. This web crawler usually varies depending on the search engine used.",
-    "desc-5-1-3" => "Some examples of user agents that are often used are Googlebot, Googlebot-Mobile, Googlebot-Image, Bingbot, Baiduspider, Gigabot, Yandex, and so on.",
-    "desc-5-2-1" => "Disallow",
-    "desc-5-2-2" => "The command used to tell the user-agent not to crawl the specified URL path. Make sure you have entered the correct path because this command is case-sensitive (eg “/File” and “/file” are considered different paths). You can only use one “Disallow” command for each URL.",
-    "desc-5-3-1" => "Allow",
-    "desc-5-3-2" => "This command is used to tell web crawlers that they are allowed to access the path of a page or subfolder even if the parent page of that page or subfolder is disallowed.In practice, the allow and disallow commands are always followed by the “directive: [path]” command to specify the path that may or may not be crawled. Careful attention must be paid to writing the path because this command distinguishes between upper/lower case letters (eg “/File” and “/file” are considered as different paths).",
-    "desc-5-4-1" => "Crawl-Delay",
-    "desc-5-4-2" => "The function of this command in robots.txt is to tell web crawlers that they should wait a while before loading and crawling the page content. This command does not apply to Googlebot, but you can adjust the crawl speed via Google Search Console.",
-    "desc-5-5-1" => "Sitemap",
-    "desc-5-5-2" => "This command is used to call the XML sitemap location associated with a URL. It is also important to pay attention to the writing of the sitemap command because this command distinguishes upper / lower case letters (eg &#34;/Sitemap.xml&#34; and &#34;/sitemap.xml&#34; are considered different paths).",
-    "desc-6" => "Example Robots.txt",
-    "desc-6-1" => "After understanding the commands you can give the web crawler, we will next show an example of the www.example.com website's robots.txt, which is stored in the following www.example.com/robots.txt directory:",
-    "desc-6-2" => "The first and second lines are commands that tell the default web crawler that they are allowed to crawl URLs. Meanwhile, the third line is used to call the sitemap location associated with that URL.",
-    "desc-6-3" => "The fourth and fifth lines are the commands given to Google's web crawler. This command does not allow Googlebot to crawl your website directory (forbids Google from crawling the “/nogooglebot” file path).",
-    "desc-7" => "The Limitation of Robots.txt",
-    "desc-7-1" => "Before creating a robots.txt, you need to know the limitations that the following robots.txt file has:s",
-    "desc-7-1-1" => "May not be supported on certain search engines",
-    "desc-7-1-2" => "While Google and other major search engines have complied with the commands in the robots.txt file, some crawlers belonging to other search engines may not comply.",
-    "desc-7-2-1" => "Different crawlers interpret the syntax in different ways",
-    "desc-7-2-2" => "Each search engine has a different web crawler, each crawler may interpret commands in different ways. Although a number of well-known crawlers have followed the syntax written in the robots.txt file, some crawlers may not understand certain commands.",
-    "desc-7-3-1" => "Pages that are not allowed on robots.txt can still be indexed if they are linked to other pages",
-    "desc-7-3-2" => "While Google doesn't crawl or index content that robots.txt doesn't allow, Google can still find and index those URLs if they're linked from other websites. Thus, URL addresses and publicly available information can appear in Google search results.",
-    "desc-7-3-3" => "Thus the discussion about the <a href='https://tools.cmlabs.co/id/robotstxt-generator'>robots.txt generator from cmlabs</a>. Using this tool, you can simplify the workflow of creating robots.txt files. With just a few clicks, you can add configurations to the new robots.txt file.",
-    "howto-title" => 'How to Use Robots.txt Generator',
-    "howto1" => '<h2>How to Use Robots.txt Generator</h2>
-                    <p>To create a robots.txt file using this tool, follow these steps:</p>',
-    "howto2" => '<h4 class="sub-titles">Go to Robots.txt Generator Page</h4>
-                    <p>One way to create a robots.txt file is to visit the robots.txt generator page. On that page, you can set the commands you will give the web crawler.</p>',
-    "howto3" => '<p>Figure 1: The robot.txt generator page view from cmlabs</p>
-                    <h4 class="sub-titles">Select Access Permission For Default Robot</h4>
-                    <p>Specify access permissions for the default web crawlers, whether they are allowed to crawl URLs or not. There are two options that you can choose, namely, allow and disallow.</p>',
-    "howto4" => '<p>Figure 2: Dropdown view of the permission options granted to the default robot</p>
-                    <h4 class="sub-titles">Set Crawl Delay</h4>
-                    <p>You can set how long the crawl delay will be for the web crawler. If you set crawl-delay then the web crawler will wait for some time before crawling your URL. Robots.txt generator allows you to choose without crawl delay or delay for 5 to 120 seconds.</p>',
-    "howto5" => '<p>Figure 3: A dropdown view of the crawl delay options provided to the default robot</p>
-                    <h4 class="sub-titles">Enter Sitemap (If Any)</h4>
-                    <p>A sitemap is a file that lists the URLs of your website, with this file, web crawlers will find it easier to crawl and index your site. You can enter the sitemap path into the field provided.</p>
-                    <p>Make sure you have entered the correct sitemap path because this command is case sensitive (eg “/Sitemap.xml” and “/sitemap.xml” are considered different paths).</p>',
-    "howto6" => '<p>Figure 4: The display field for entering the sitemap path associated with your URL</p>
-                    <h4 class="sub-titles">Add Directive In Robots.txt</h4>
-                    <p>You can add directives to the robots.txt file by pressing the <b>&#34;Add Directive&#34;</b> button. Directives are commands given to web crawlers to tell you whether you allow or deny them to crawl certain URLs.</p>',
-    "howto7" => '<p>Figure 5: Button for adding commands to be executed by the web crawler</p>
-                    <p>In the robots.txt generator, there are three rules that you need to adjust in the directive section, namely:</p>
-                    <h6 class="sub-titles">Set Access Permission</h6>
-                    <p>You can set the access permissions granted to web crawlers, whether you allow or disallow them from crawling your web pages. The options that can be used allow and disallow.</p>',
-    "howto8" => '<p>Figure 6: Choice of access permissions to be granted to web crawlers</p>
-                    <h6 class="sub-titles">Select User-Agent</h6>
-                    <p>A user-agent is the type of web crawler that you will instruct to crawl. The choice of this web crawler depends on the search engine used, such as Baiduspider, Bingbot, Googlebot, and others. The web crawler option can be selected via the available user-agent dropdown.</p>',
-    "howto9" => '<p>Figure 7: User-agent options available in cmlabs robots.txt generator</p>
-                    <h6 class="sub-titles">Enter Directory / File Path</h6>
-                    <p>A directory or file path is a specific location of a page that web crawlers may or may not crawl. You must pay close attention to writing the path because this command distinguishes between upper and lower case letters (eg "/File" and "/file" are considered different paths).</p>',
-    "howto10" => '<p>Figure 8: Field to add the path to be crawled by the crawler</p>
-                    <h4 class="sub-titles">Copy Robot.txt</h4>
-                    <p>After entering the command for the web crawler in the field provided, you will see a preview of the robots.txt file in the right section. You can copy the generated syntax and paste it into the robots.txt file that you have created.</p>',
-    "howto11" => '<p>Figure 9: Syntax copy options in the robots.txt generator.</p>
-                    <h4 class="sub-titles">Export Syntax Robots.txt</h4>
-                    <p>If you don&#39;t know how to create your own robots.txt file, you can export the file that cmlabs has generated. Downloading the robots file is quite easy. You can select the <b>&#34;Export&#34;</b> option contained in the robots.text generator tools. Next, the tool will start the download and you will receive a robots.txt file.</p>',
-    "howto12" => '<p>Figure 10: Data export options in the robots.txt generator.</p>
-                    <h4 class="sub-titles">Remove Unnecessary Directives</h4>
-                    <p>If you want to delete unneeded directives, then you can click the cross icon to the right of the field to enter the directive. Please note that deleted fields cannot be recovered.</p>',
-    "howto13" => '<p>Figure 11: The delete data directive option in the robots.txt generator</p>
-                    <h4 class="sub-titles">Reset Robots.txt Generator</h4>
-                    <p>This tool has options that make it easier for you to find out how to create another robots.txt file. Click the <b>&#34;Reset&#34;</b> option to delete all the commands you set in robots.txt earlier. Next, you can create a new robots.txt configuration file.</p>',
-    "howto14" => '<p>Figure 12: Data reset options in the robots.txt generator.</p>',
+    "howto1" => '<h2>How to Use Meta Generator by cmlabs?</h2>
+                    <p>Are you ready to explore this powerful meta tag generator tool to elevate your website\'s visibility and search engine performance?</p>
+                    <p>Whether you\'re a newcomer to this tool or an experienced user seeking guidance, we\'re here to assist you at every stage of the process!</p>',
+    "howto2" => '<h3 class="sub-titles">Open the Meta Generator Page</h3>',
+    "howto3" => '<p>Figure 1: Page view of Meta Generator by cmlabs.</p>
+                    <p>The first thing you need to do is go to the Generator tools page by cmlabs. Then, choose Meta Generator to start generating your HTML meta tags.</p>
+                    <h4 class="sub-titles">1. Input The Required Data</h4>
+                    <p>This initial step is crucial for customizing your meta tags effectively. It involves providing various pieces of information that will shape how your website\'s content is presented across different platforms.</p>
+                    <h5>a. Input The Site Title.</h5>
+                    <p>The site title is a concise representation of your website. It\'s important to keep it within 60 characters to ensure it is displayed properly in search engine results and on other platforms.</p>
+                    <h5>b. Input Site Name, Site URL, Site Description, and Image URL.</h5>
+                    <p>These details are fundamental to how your website is perceived and shared. The site name, URL, a brief yet compelling site description (limited to 150 characters), and image URL all contribute to creating an engaging and informative representation of your content.</p>',
+    "howto4" => '<p>Figure 2: Enter the site information in the provided fields.</p>
+                    <h4 class="sub-titles">2. Choose Type of Content</h4>
+                    <p>Selecting the type of content on your website helps categorize it appropriately. Whether it\'s an article, book, or authored content, this information aids search engines and platforms in understanding the nature of your website.</p>
+                    <h4 class="sub-titles">3. Write Down the Author\'s Name (Optional)</h4>
+                    <p>In the event that the content on your website is attributed to a particular author, you are granted the option to supply their name.</p>
+                    <p>This deliberate inclusion of authorship information serves as a pivotal element in augmenting the overall credibility and personalization of your content.</p>
+                    <h4 class="sub-titles">4. Choose and Allow Robots to</h4>
+                    <p>Within this tool, you can choose and allow Robots to:</p>
+                    <h5>a. Index Your Website</h5>
+                    <p>This decision impacts how search engines include your site in their search results. Allowing robots to index your website means that search engines can include information from your site in their database.</p>
+                    <h5>b. Follow All Links</h5>
+                    <p>Determining whether search engine robots should follow all <a href="https://cmlabs.co/en-id/seo-terms/what-is-backlink">links</a> on your website influences how search engines navigate through your site. It can impact the indexing and ranking of your pages.</p>
+                    <h4 class="sub-titles">5. Select Content Type</h4>
+                    <p>Refining the type of content further categorizes it. This information is valuable for search engines and social media platforms to better understand and appropriately present your content in relevant contexts, whether it is an Article, Book, Book Author or others.</p>
+                    <h4 class="sub-titles">6. Select Twitter Card Type</h4>
+                    <p>Twitter Cards to enhance how your content appears when shared on Twitter, whether it is just a simple summary or a summary with a large image.</p>
+                    <p>Choosing the appropriate card type ensures that your tweets stand out and provide additional context and media elements.</p>
+                    <h4 class="sub-titles">7. Choose Your Site Primary Language</h4>
+                    <p>Specifying the primary language of your website is crucial for accurate presentation on various platforms. It helps search engines and social media platforms understand and present your content to the right audience.</p>
+                    <h4 class="sub-titles">8. Select Your Action</h4>
+                    <p>Within this tool, there are two approaches you can use: <b>Copy</b> and <b>Reset</b>. Understand each function below!</p>
+                    <h5><b>Copy</b></h5>
+                    ',
+    "howto5" => '<p>Figure 3: Copy Option</p>
+                    <p>If you want to copy the available script, you can click on the copy section. With this step, you can obtain a complete and comprehensive version of the script.</p>
+                    <h5><b>Reset</b></h5>',
+    "howto6" => '<p>Figure 4: Reset Option</p>
+                    <p>The Reset option makes it easy for you to start the entire process from step one. This button can expedite your workflow if you wish to perform checks or regenerate a new HTML code in the meta tag.</p>',
+    "closing-1" => "In conclusion, this SEO Meta Generator by cmlabs stands out as a valuable tool to optimize your online presence.",
+    "closing-2" => "By simplifying the process of meta tag creation, this tool empowers users to tailor critical metadata, enhancing the way their content is presented across various search engine platforms.",
+    "closing-3" => "Our tool also ensures accessibility for both beginners and experienced users to efficiently input essential information such as site title, URL, description, authorship details, and more. It also significantly streamlines the technical aspects of meta-tag implementation. So, what are you waiting for? Let’s optimize your web page’s metadata effectively and try this tool now for free!",
 ];
