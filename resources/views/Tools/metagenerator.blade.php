@@ -10,6 +10,58 @@
 
 @section('id-link','/id/meta-generator')
 
+@if ($local == 'id')
+    @php
+        $listData = [
+            [
+                'attributes' => 'content',
+                'value' => 'text',
+                'description' => 'Menunjukkan nilai terkait baik atribut http-equiv atau nama.',
+            ],
+            [
+                'attributes' => 'http-equiv',
+                'value' => 'content-security-policy <br> default-style <br> content-type <br> refresh',
+                'description' => 'Memberikan header <a href="https://cmlabs.co/id-id/seo-terms/http-adalah">HTTP</a> untuk informasi atau nilai yang terkait dengan atribut konten.',
+            ],
+            [
+                'attributes' => 'name',
+                'value' => 'application-name <br> description <br> author <br> generator <br> keywords <br> viewport',
+                'description' => 'Menunjukkan nama yang tercantum dalam metadata.',
+            ],
+            [
+                'attributes' => 'charset',
+                'value' => 'character_set',
+                'description' => 'Menunjukkan kode karakter yang digunakan untuk dokumen HTML.',
+            ],
+        ];
+    @endphp
+@else
+    @php
+        $listData = [
+            [
+                'attributes' => 'content',
+                'value' => 'text',
+                'description' => 'Indicates the value linked to either the http-equiv or name attributes.',
+            ],
+            [
+                'attributes' => 'http-equiv',
+                'value' => 'content-security-policy <br> default-style <br> content-type <br> refresh',
+                'description' => 'Supplies the HTTP header for the information or value associated with the content attribute.',
+            ],
+            [
+                'attributes' => 'name',
+                'value' => 'application-name <br> description <br> author <br> generator <br> keywords <br> viewport',
+                'description' => 'Indicates the name listed in the metadata.',
+            ],
+            [
+                'attributes' => 'charset',
+                'value' => 'character_set',
+                'description' => 'Indicates the character encoding used for the HTML document.',
+            ],
+        ];
+    @endphp
+@endif
+
 @section('content')
 @if ($is_maintenance)
     @include('layouts.maintenance')
@@ -162,12 +214,6 @@
                                     </div>
                                 </div>
                             </form>
-
-                            <!-- <button type="button" class="btn btn-add-question d-flex align-items-center justify-content-center" name="button" id="add">
-                                <i class='bx bx-plus'></i>
-                                <span id="add-directive">@lang('metagenerator.btn-add')</span>
-                                <span class="d-none" id="add-more-directive">@lang('metagenerator.btn-add')</span>
-                            </button> -->
                         </div>
 
                         <div class="col-md-4 mb-5">
@@ -183,7 +229,7 @@
                                                 <i class='bx bx-refresh'></i> <span>@lang('layout.btn-reset')</span></button>
                                         </div>
                                     </div>
-                                    <textarea name="code_snippet" style="resize:none" rows="16" class="form-control" id="json-format" readonly></textarea>
+                                    <textarea name="code_snippet" style="resize:none" rows="25" class="form-control" id="json-format" readonly></textarea>
                                 </form>
                             </div>
                         </div>
@@ -207,7 +253,7 @@
                                         <p>@lang('metagenerator.highlight')</p>
                                         <div class="d-flex align-items-center">
                                             <i class='bx bxs-check-circle text-darkgrey mr-1'></i>
-                                            <span class="text-darkgrey h6 mb-0">@lang('layout.updated') 15 Mar, 2021</span>
+                                            <span class="text-darkgrey h6 mb-0">@lang('layout.updated') 6 Oct, 2023</span>
                                         </div>
                                     </div>
                                 </div>
@@ -233,7 +279,7 @@
                         <p>@lang('metagenerator.highlight')</p>
                         <div class="d-flex align-items-center">
                             <i class='bx bxs-check-circle text-darkgrey mr-1'></i>
-                            <span class="text-darkgrey h6 mb-0">@lang('layout.updated') 15 Mar, 2021</span>
+                            <span class="text-darkgrey h6 mb-0">@lang('layout.updated') 6 Oct, 2023</span>
                         </div>
                     </div>
                 </div>
@@ -248,111 +294,98 @@
         <div class="" id="description-tab-1">
             <h2>@lang('metagenerator.desc-1')</h2>
             <p>@lang('metagenerator.desc-1-1')</p>
+            <p>@lang('metagenerator.desc-1-2')</p>
         </div>
-    @endslot
-    @slot('subcontent_2')
+        @endslot
+        @slot('subcontent_2')
         <div class="d-none" id="description-tab-2">
-                    <h2>@lang('metagenerator.desc-2')</h2>
-                    <p>@lang('metagenerator.desc-2-1')</p>
-                </div>
+            <p>@lang('metagenerator.desc-1-3')</p>
+            <p>@lang('metagenerator.desc-1-4')</p>
+            <p>@lang('metagenerator.desc-1-5')</p>
+            <p>@lang('metagenerator.desc-1-6')</p>
+            <h2>@lang('metagenerator.desc-2')</h2>
+            <p>@lang('metagenerator.desc-2-1')</p>
+            <p>@lang('metagenerator.desc-2-2')</p>
+            <p>@lang('metagenerator.desc-2-3')</p>
+        </div>
     @endslot
     @slot('subcontent_3')
         <div class="d-none" id="description-tab-3">
-                    <h2>@lang('metagenerator.desc-3')</h2>
-                    <p>@lang('metagenerator.desc-3-1')</p>
-                    <ul>
-                        <li>@lang('metagenerator.desc-3-1-1')</li>
-                        <li>@lang('metagenerator.desc-3-1-2')</li>
-                        <li>@lang('metagenerator.desc-3-1-3')</li>
-                    </ul>
-                </div>
-    @endslot
-    @slot('subcontent_4')
-        <div class="d-none" id="description-tab-4">
-                    <h2>@lang('metagenerator.desc-4')</h2>
-                    <p>@lang('metagenerator.desc-4-1')</p>
-                    <p>@lang('metagenerator.desc-4-2')</p>
-                </div>
-    @endslot
-    @slot('subcontent_5')
-        <div class="d-none" id="description-tab-5">
-                    <h2>@lang('metagenerator.desc-5')</h2>
-                    <p>@lang('metagenerator.desc-5-1')</p>
-                    <h4 class="sub-titles">@lang('metagenerator.desc-5-1-1')</h4>
-                    <p>@lang('metagenerator.desc-5-1-2')</p>
-                    <p>@lang('metagenerator.desc-5-1-3')</p>
-                    <h4 class="sub-titles">@lang('metagenerator.desc-5-2-1')</h4>
-                    <p>@lang('metagenerator.desc-5-2-2')</p>
-                    <h4 class="sub-titles">@lang('metagenerator.desc-5-3-1')</h4>
-                    <p>@lang('metagenerator.desc-5-3-2')</p>
-                    <h4 class="sub-titles">@lang('metagenerator.desc-5-4-1')</h4>
-                    <p>@lang('metagenerator.desc-5-4-2')</p>
-                    <h4 class="sub-titles">@lang('metagenerator.desc-5-5-1')</h4>
-                    <p>@lang('metagenerator.desc-5-5-2')</p>
-                </div>
-    @endslot
-    @slot('subcontent_6')
-        <div class="d-none" id="description-tab-6">
-                    <h2>@lang('metagenerator.desc-6')</h2>
-                    <p>@lang('metagenerator.desc-6-1')</p>
-                    <pre class="language-html mb-4">
-                        <code class="language-html" style="white-space: pre-wrap; word-break: keep-all;">
-                        User-agent: *
-                         Allow: /
+            <h2>@lang('metagenerator.desc-3')</h2>
+            <p>@lang('metagenerator.desc-3-1')</p>
+            <p>@lang('metagenerator.desc-3-2')</p>
+            <p>@lang('metagenerator.desc-3-3')</p>
+            <h3>@lang('metagenerator.desc-3-4')</h3>
+            <p>@lang('metagenerator.desc-3-4-1')</p>
+            <p>@lang('metagenerator.desc-3-4-2')</p>
+            <h3>@lang('metagenerator.desc-3-5')</h3>
+            <p>@lang('metagenerator.desc-3-5-1')</p>
+            <p>@lang('metagenerator.desc-3-5-2')</p>
+            <p>@lang('metagenerator.desc-3-5-3')</p>
+            <h3>@lang('metagenerator.desc-3-6')</h3>
+            <p>@lang('metagenerator.desc-3-6-1')</p>
+            <p>@lang('metagenerator.desc-3-6-2')</p>
+            <p>@lang('metagenerator.desc-3-6-3')</p>
+            <h3>@lang('metagenerator.desc-3-7')</h3>
+            <p>@lang('metagenerator.desc-3-7-1')</p>
+            <p>@lang('metagenerator.desc-3-7-2')</p>
+            <h3>@lang('metagenerator.desc-3-8')</h3>
+            <p>@lang('metagenerator.desc-3-8-1')</p>
+            <p>@lang('metagenerator.desc-3-8-2')</p>
+            <h3>@lang('metagenerator.desc-3-9')</h3>
+            <p>@lang('metagenerator.desc-3-9-1')</p>
+            <p>@lang('metagenerator.desc-3-9-2')</p>
+            <h3>@lang('metagenerator.desc-3-10')</h3>
+            <p>@lang('metagenerator.desc-3-10-1')</p>
+            <p>@lang('metagenerator.desc-3-10-2')</p>
+            
+            <h2>@lang('metagenerator.desc-4')</h2>
+            <p>@lang('metagenerator.desc-4-1')</p>
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead class="thead-light">
+                        <tr>
+                            <th scope="col">@lang('metagenerator.table-header-1')</th>
+                            <th scope="col">@lang('metagenerator.table-header-2')</th>
+                            <th scope="col">@lang('metagenerator.table-header-3')</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    @foreach (collect($listData)->chunk(2) as $index => $item)
+                        @foreach ($item as $listTable)
+                        <tr>
+                            <td scope="row" width="100px">{!! $listTable['attributes'] !!}</td>
+                            <td>{!! $listTable['value'] !!}</td>
+                            <td>{!! $listTable['description'] !!}</td>
+                        </tr>
+                        @endforeach
+                    @endforeach
+                    </tbody>
+                </table>
+            </div>
 
-                         Sitemap: https://example.com/sitemap.xml
-
-                         User-agent: Googlebot
-                         Disallow: /nogooglebot
-
-                        </code>
-                      </pre>
-                    <p>@lang('metagenerator.desc-6-2')</p>
-                    <p>@lang('metagenerator.desc-6-3')</p>
-                </div>
-    @endslot
-    @slot('subcontent_7')
-        <div class="d-none" id="description-tab-7">
-                    <h2>@lang('metagenerator.desc-7')</h2>
-                    <p>@lang('metagenerator.desc-7-1')</p>
-                    <h4 class="sub-titles">@lang('metagenerator.desc-7-1-1')</h4>
-                    <p>@lang('metagenerator.desc-7-1-2')</p>
-                    <h4 class="sub-titles">@lang('metagenerator.desc-7-2-1')</h4>
-                    <p>@lang('metagenerator.desc-7-2-2')</p>
-                    <h4 class="sub-titles">@lang('metagenerator.desc-7-3-1')</h4>
-                    <p>@lang('metagenerator.desc-7-3-2')</p>
-                    <p>@lang('metagenerator.desc-7-3-3')</p>
-                </div>
+            <h2>@lang('metagenerator.desc-5')</h2>
+            <p>@lang('metagenerator.desc-5-1')</p>
+            <p>@lang('metagenerator.desc-5-2')</p>
+            <img class="mb-4" src="{{asset('/media/images/meta_generator_instruction_3.webp')}}" alt="Example-Meta-Generator" width="80%">
+        </div>
     @endslot
     @slot('how_to_content')
         <div class="d-none" id="how-to">
             @lang('metagenerator.howto1')
             <div class="expand-text">
             @lang('metagenerator.howto2')
-                <img class="mb-4" src="{{asset('/media/images/robot_instruction_1.webp')}}" alt="HowTo-robot-1" width="80%">
+                <img class="mb-4" src="{{asset('/media/images/meta_generator_instruction_1.webp')}}" alt="HowTo-Meta-Generator-1" width="80%">
                 @lang('metagenerator.howto3')
-                <img class="mb-4" src="{{asset('/media/images/robot_instruction_2.webp')}}" alt="HowTo-robot-2" width="80%">
+                <img class="mb-4" src="{{asset('/media/images/meta_generator_instruction_2.webp')}}" alt="HowTo-Meta-Generator-2" width="80%">
                 @lang('metagenerator.howto4')
-                <img class="mb-4" src="{{asset('/media/images/robot_instruction_3.webp')}}" alt="HowTo-robot-3" width="80%">
+                <img class="mb-4" src="{{asset('/media/images/meta_generator_instruction_4.webp')}}" alt="HowTo-Meta-Generator-3" width="80%">
                 @lang('metagenerator.howto5')
-                <img class="mb-4" src="{{asset('/media/images/robot_instruction_4.webp')}}" alt="HowTo-robot-4" width="80%">
+                <img class="mb-4" src="{{asset('/media/images/meta_generator_instruction_5.webp')}}" alt="HowTo-Meta-Generator-4" width="80%">
                 @lang('metagenerator.howto6')
-                <img class="mb-4" src="{{asset('/media/images/robot_instruction_5.webp')}}" alt="HowTo-robot-5" width="80%">
-                @lang('metagenerator.howto7')
-                <img class="mb-4" src="{{asset('/media/images/robot_instruction_6.webp')}}" alt="HowTo-robot-6" width="80%">
-                @lang('metagenerator.howto8')
-                <img class="mb-4" src="{{asset('/media/images/robot_instruction_7.webp')}}" alt="HowTo-robot-7" width="80%">
-                @lang('metagenerator.howto9')
-                <img class="mb-4" src="{{asset('/media/images/robot_instruction_8.webp')}}" alt="HowTo-robot-8" width="80%">
-                @lang('metagenerator.howto10')
-                <img class="mb-4" src="{{asset('/media/images/robot_instruction_9.webp')}}" alt="HowTo-robot-9" width="80%">
-                @lang('metagenerator.howto11')
-                <img class="mb-4" src="{{asset('/media/images/robot_instruction_10.webp')}}" alt="HowTo-robot-10" width="80%">
-                @lang('metagenerator.howto12')
-                <img class="mb-4" src="{{asset('/media/images/robot_instruction_11.webp')}}" alt="HowTo-robot-11" width="80%">
-                @lang('metagenerator.howto13')
-                <img class="mb-4" src="{{asset('/media/images/robot_instruction_12.webp')}}" alt="HowTo-robot-12" width="80%">
-                @lang('metagenerator.howto14')
+                @lang('metagenerator.closing-1')
+                @lang('metagenerator.closing-2')
+                @lang('metagenerator.closing-3')
             </div>
         </div>
     @endslot
@@ -390,10 +423,6 @@
     const description_1 = document.getElementById('description-tab-1');
     const description_2 = document.getElementById('description-tab-2');
     const description_3 = document.getElementById('description-tab-3');
-    const description_4 = document.getElementById('description-tab-4');
-    const description_5 = document.getElementById('description-tab-5');
-    const description_6 = document.getElementById('description-tab-6');
-    const description_7 = document.getElementById('description-tab-7');
     const how_to = document.getElementById('how-to');
     let read = false;
 
@@ -403,35 +432,19 @@
             description_1.style.display = 'block';
             description_2.style.display = 'block';
             description_3.style.display = 'block';
-            description_4.style.display = 'block';
-            description_5.style.display = 'block';
-            description_6.style.display = 'block';
-            description_7.style.display = 'block';
             how_to.style.display = 'block';
             description_1.classList.remove("d-none");
             description_2.classList.remove("d-none");
             description_3.classList.remove("d-none");
-            description_4.classList.remove("d-none");
-            description_5.classList.remove("d-none");
-            description_6.classList.remove("d-none");
-            description_7.classList.remove("d-none");
             how_to.classList.remove("d-none");
             read_more_button.innerHTML = @json( __('layout.show-less') );
             read = true;
         } else {
             description_2.style.display = 'none';
             description_3.style.display = 'none';
-            description_4.style.display = 'none';
-            description_5.style.display = 'none';
-            description_6.style.display = 'none';
-            description_7.style.display = 'none';
             how_to.style.display = 'none';
             description_2.classList.add("d-none");
             description_3.classList.add("d-none");
-            description_4.classList.add("d-none");
-            description_5.classList.add("d-none");
-            description_6.classList.add("d-none");
-            description_7.classList.add("d-none");
             how_to.classList.add("d-none");
             read_more_button.innerHTML = @json( __('layout.read-more') );
             read = false;
