@@ -155,4 +155,5 @@ return [
     "desc-new-tools-21-aug-2023" => "Embark on a voyage of digital discovery as you engage with real-time metrics that reflect the vitality of your network's health and configuration. Now, you can diagnose your network's health as well as navigate your domain to ensure flawless communication, security, and performance of a website with our best tools, Ping Tool and HTTP Header Checker by cmlabs. Check and elevate your website management now!",
     "check" => "Check",
     "no_notif" => "There is currently no notification...",
+    "desc-new-tools-13-Oct-2023" => "30 Tools for Countless Solutions! cmlabs has reached a remarkable milestone with the release of 30 cutting-edge tools designed to empower businesses and individuals in the digital realm. All 30 tools, from Test & Checker, Sitemap.XML, and Robots.TXT to various JSON-LD Schema Generator, have been launched to address specific needs and challenges across diverse industries. Together with cmlabs tools, you can stand at the forefront of technological advancements. Try our tools based on your needs now!",
 ];

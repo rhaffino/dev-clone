@@ -155,4 +155,5 @@ return [
     "desc-new-tools-21-aug-2023" => "Pastikan aktivitas website Anda tetap terpantau aman dan terkonfigurasi! Lakukan analisis mendalam terhadap domain Anda dengan memantau metrik real-time vitalitas jaringan mulai dari konektivitas, keamanan, dan kinerjanya dengan menggunakan kedua tool terbaik dari cmlabs, Ping Tool dan HTTP Header Checker. Periksa dan tingkatkan manajemen website Anda sekarang juga!",
     "check" => "Cek",
     "no_notif" => "Saat ini tidak ada notifikasi...",
+    "desc-new-tools-13-Oct-2023" => "30 tools untuk berbagai solusi! cmlabs telah sukses merilis 30 t tool mutakhir yang dirancang untuk memberdayakan bisnis dan individu yang berkecimpung di ranah digital. Sebanyak 30 tools, mulai dari Test & Checker, Sitemap.XML, dan Robots.TXT hingga beragam JSON-LD Schema Generator, telah diluncurkan untuk mengatasi kebutuhan dan tantangan spesifik di berbagai industri. Bersama rangkaian tool dari cmlabs, Anda dapat berdiri di garis terdepan kemajuan teknologi. Coba masing-masing tool cmlabs berdasarkan kebutuhan Anda sekarang!",
 ];
