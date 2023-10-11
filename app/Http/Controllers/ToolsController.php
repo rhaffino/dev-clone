@@ -2139,12 +2139,12 @@ class ToolsController extends Controller
         $blogs->published_at = Carbon::parse($seo_terms->published_at)->format('d F Y');
 
         // country
-        $path = public_path('json/regions.json');
-        $country = json_decode(file_get_contents($path), true);
+        $path = public_path('json/languages.json');
+        $languages = json_decode(file_get_contents($path), true);
 
         $is_maintenance = in_array('meta-generator', explode(',', env('TOOLS_MAINTENANCE'))) && env('APP_ENV') === 'production';
 
-        return view('Tools/metagenerator', compact('local', 'dataID', 'dataEN', 'is_maintenance', 'lang', 'blogs', 'seo_terms', 'seo_guidelines', 'country'));
+        return view('Tools/metagenerator', compact('local', 'dataID', 'dataEN', 'is_maintenance', 'lang', 'blogs', 'seo_terms', 'seo_guidelines', 'languages'));
     }
 
     public function englishVersion()
