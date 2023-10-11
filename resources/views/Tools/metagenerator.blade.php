@@ -253,7 +253,7 @@
                                         <p>@lang('metagenerator.highlight')</p>
                                         <div class="d-flex align-items-center">
                                             <i class='bx bxs-check-circle text-darkgrey mr-1'></i>
-                                            <span class="text-darkgrey h6 mb-0">@lang('layout.updated') 6 Oct, 2023</span>
+                                            <span class="text-darkgrey h6 mb-0">@lang('layout.updated') 13 Oct, 2023</span>
                                         </div>
                                     </div>
                                 </div>
@@ -279,7 +279,7 @@
                         <p>@lang('metagenerator.highlight')</p>
                         <div class="d-flex align-items-center">
                             <i class='bx bxs-check-circle text-darkgrey mr-1'></i>
-                            <span class="text-darkgrey h6 mb-0">@lang('layout.updated') 6 Oct, 2023</span>
+                            <span class="text-darkgrey h6 mb-0">@lang('layout.updated') 13 Oct, 2023</span>
                         </div>
                     </div>
                 </div>
@@ -383,9 +383,9 @@
                 @lang('metagenerator.howto5')
                 <img class="mb-4" src="{{asset('/media/images/meta_generator_instruction_5.webp')}}" alt="HowTo-Meta-Generator-4" width="80%">
                 @lang('metagenerator.howto6')
-                @lang('metagenerator.closing-1')
-                @lang('metagenerator.closing-2')
-                @lang('metagenerator.closing-3')
+                <p>@lang('metagenerator.closing-1')</p>
+                <p>@lang('metagenerator.closing-2')</p>
+                <p>@lang('metagenerator.closing-3')</p>
             </div>
         </div>
     @endslot

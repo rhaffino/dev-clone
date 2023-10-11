@@ -14,7 +14,7 @@
             <div class="col-12 col-lg-9">
                 <div>
                     @component('v2.components.notification-card')
-                        @slot('last_updated', 'Oct 3, 2023')
+                        @slot('last_updated', 'Oct 13, 2023')
                         @slot('desc', __('home.update_desc'))
                         @slot('lang', $lang)
                     @endcomponent
