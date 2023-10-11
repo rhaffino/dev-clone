@@ -203,8 +203,8 @@
                                         <label for="country" class="font-weight-bold text-black">@lang('metagenerator.label-country')</label>
                                         <select id="country" class="form-control selectpicker custom-select-blue custom-searchbox mb-5" data-size="4" data-live-search="true" tabindex="null">
                                             <option value="none">@lang('metagenerator.placeholder-country')</option>
-                                            @foreach($country as $c)
-                                                <option value="{{ $c['name'] }}">{{ $c['name'] }}</option>
+                                            @foreach($languages as $language)
+                                                <option value="{{ $language['language_name'] }}">{{ $language['language_name'] }}</option>
                                             @endforeach
                                         </select>
                                     </div>
