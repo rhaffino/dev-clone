@@ -79,12 +79,6 @@
             'link' => 'keyword-permutation',
         ],
         [
-            'title' => 'Plagiarism Checker',
-            'desc' => __('home.plagiarism-checker-desc'),
-            'icon' => "<i class='text-purple-70 bx bx-shape-circle bx-md'></i>",
-            'link' => 'plagiarism-checker',
-        ],
-        [
             'title' => 'Ping Tool',
             'desc' => __('home.ping-tool-desc'),
             'icon' => "<i class='text-purple-70 bx bx-terminal bx-md'></i>",
@@ -108,39 +102,44 @@
             'icon' => "<i class='text-purple-70 bx bxl-google bx-md'></i>",
             'link' => 'serp-simulator',
         ],
+        [
+            'title' => 'Meta Generator',
+            'desc' => __('home.meta-generator-desc'),
+            'icon' => "<i class='text-purple-70 bx bx-purchase-tag-alt bx-md'></i>",
+            'link' => 'meta-generator',
+        ],
+        [
+            'title' => 'Plagiarism Checker',
+            'desc' => __('home.plagiarism-checker-desc'),
+            'icon' => "<i class='text-purple-70 bx bx-shape-circle bx-md'></i>",
+            'link' => 'plagiarism-checker',
+        ],
     ];
 @endphp
 
 <div id="carouselToolsDesktop" class="carousel slide d-none d-lg-block" data-ride="carousel">
     <ol class="carousel-indicators">
         @foreach (collect($tools)->chunk(3) as $index => $item)
-            <li data-target="#carouselToolsDesktop" data-slide-to="{{ $index }}"
-                class="{{ $index === 0 ? 'active' : '' }}"></li>
+            @if($index === 6)
+                @if (auth()->check() && (auth()->check() ? auth()->user()->user_role_id == 3 : false))
+                    <li data-target="#carouselToolsDesktop" data-slide-to="{{ $index }}"
+                        class="{{ $index === 0 ? 'active' : '' }}">
+                    </li>
+                @endif
+            @else
+                <li data-target="#carouselToolsDesktop" data-slide-to="{{ $index }}"
+                    class="{{ $index === 0 ? 'active' : '' }}">
+                </li>
+            @endif
         @endforeach
     </ol>
     <div class="carousel-inner">
         @foreach (collect($tools)->chunk(3) as $index => $item)
-            <div class="carousel-item {{ $index === 0 ? 'active' : '' }}">
-                <div class="row">
-                    @foreach ($item as $tool)
-                        @if($tool['title'] == 'Plagiarism Checker')
-                            @if (auth()->check() && (auth()->check() ? auth()->user()->user_role_id == 3 : false))
-                                <div class="col-4">
-                                    <div class="tools-card">
-                                        <div class="icon-container">
-                                            {!! $tool['icon'] !!}
-                                        </div>
-                                        <div class="tools-card-body">
-                                            <h3 class="h6-700 h6-m-700">{{ $tool['title'] }}</h3>
-                                            <p class="s-400 text-dark-40">{{ $tool['desc'] }}</p>
-                                            <a href="/{{ $local }}/{{ $tool['link'] }}"
-                                                class="mt-8 b2-700 b2-m-700 text-dark-70 d-flex align-items-center"><u>@lang('plagiarism.launch')</u> <i
-                                                    class='bx bx-right-arrow-alt'></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            @endif
-                        @else
+        @if($index === 6)
+            @if (auth()->check() && (auth()->check() ? auth()->user()->user_role_id == 3 : false))
+                <div class="carousel-item {{ $index === 0 ? 'active' : '' }}">
+                    <div class="row">
+                        @foreach ($item as $tool)
                             <div class="col-4">
                                 <div class="tools-card">
                                     <div class="icon-container">
@@ -155,38 +154,24 @@
                                     </div>
                                 </div>
                             </div>
-                        @endif
-                    @endforeach
+                        @endforeach
+                    </div>
                 </div>
-            </div>
-        @endforeach
-    </div>
-</div>
-
-<div id="carouselToolsMobile" class="carousel slide d-lg-none" data-ride="carousel">
-    <ol class="carousel-indicators">
-        @foreach (collect($tools)->chunk(2) as $index => $item)
-            <li data-target="#carouselToolsMobile" data-slide-to="{{ $index }}"
-                class="{{ $index === 0 ? 'active' : '' }}"></li>
-        @endforeach
-    </ol>
-    <div class="carousel-inner">
-        @foreach (collect($tools)->chunk(2) as $index => $item)
+            @endif
+        @else
             <div class="carousel-item {{ $index === 0 ? 'active' : '' }}">
                 <div class="row">
                     @foreach ($item as $tool)
-                        <div class="col-6">
+                        <div class="col-4">
                             <div class="tools-card">
                                 <div class="icon-container">
                                     {!! $tool['icon'] !!}
                                 </div>
                                 <div class="tools-card-body">
-                                    <div class="d-flex flex-column">
-                                        <h3 class="h6-700 h6-m-700">{{ $tool['title'] }}</h3>
-                                        <p class="s-400 text-dark-40 mt-3">{{ $tool['desc'] }}</p>
-                                    </div>
+                                    <h3 class="h6-700 h6-m-700">{{ $tool['title'] }}</h3>
+                                    <p class="s-400 text-dark-40">{{ $tool['desc'] }}</p>
                                     <a href="/{{ $local }}/{{ $tool['link'] }}"
-                                        class="mt-8 b2-700 b2-m-700 text-dark-70 d-flex align-items-center"><u>LAUNCH</u> <i
+                                        class="mt-8 b2-700 b2-m-700 text-dark-70 d-flex align-items-center"><u>@lang('plagiarism.launch')</u> <i
                                             class='bx bx-right-arrow-alt'></i></a>
                                 </div>
                             </div>
@@ -194,6 +179,74 @@
                     @endforeach
                 </div>
             </div>
+        @endif
+        @endforeach
+    </div>
+</div>
+
+<div id="carouselToolsMobile" class="carousel slide d-lg-none" data-ride="carousel">
+    <ol class="carousel-indicators">
+        @foreach (collect($tools)->chunk(2) as $index => $item)
+            @if($index === 9)
+                @if (auth()->check() && (auth()->check() ? auth()->user()->user_role_id == 3 : false))
+                    <li data-target="#carouselToolsMobile" data-slide-to="{{ $index }}" class="{{ $index === 0 ? 'active' : '' }}"></li>
+                @endif
+            @else
+                <li data-target="#carouselToolsMobile" data-slide-to="{{ $index }}" class="{{ $index === 0 ? 'active' : '' }}"></li>
+            @endif
+        @endforeach
+    </ol>
+    <div class="carousel-inner">
+        @foreach (collect($tools)->chunk(2) as $index => $item)
+            @if($index === 9)
+                @if (auth()->check() && (auth()->check() ? auth()->user()->user_role_id == 3 : false))
+                    <div class="carousel-item {{ $index === 0 ? 'active' : '' }}">
+                        <div class="row">
+                            @foreach ($item as $tool)
+                                <div class="col-6">
+                                    <div class="tools-card">
+                                        <div class="icon-container">
+                                            {!! $tool['icon'] !!}
+                                        </div>
+                                        <div class="tools-card-body">
+                                            <div class="d-flex flex-column">
+                                                <h3 class="h6-700 h6-m-700">{{ $tool['title'] }}</h3>
+                                                <p class="s-400 text-dark-40 mt-3">{{ $tool['desc'] }}</p>
+                                            </div>
+                                            <a href="/{{ $local }}/{{ $tool['link'] }}"
+                                                class="mt-8 b2-700 b2-m-700 text-dark-70 d-flex align-items-center"><u>LAUNCH</u> <i
+                                                    class='bx bx-right-arrow-alt'></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            @endforeach
+                        </div>
+                    </div>
+                @endif
+            @else
+                <div class="carousel-item {{ $index === 0 ? 'active' : '' }}">
+                    <div class="row">
+                        @foreach ($item as $tool)
+                            <div class="col-6">
+                                <div class="tools-card">
+                                    <div class="icon-container">
+                                        {!! $tool['icon'] !!}
+                                    </div>
+                                    <div class="tools-card-body">
+                                        <div class="d-flex flex-column">
+                                            <h3 class="h6-700 h6-m-700">{{ $tool['title'] }}</h3>
+                                            <p class="s-400 text-dark-40 mt-3">{{ $tool['desc'] }}</p>
+                                        </div>
+                                        <a href="/{{ $local }}/{{ $tool['link'] }}"
+                                            class="mt-8 b2-700 b2-m-700 text-dark-70 d-flex align-items-center"><u>LAUNCH</u> <i
+                                                class='bx bx-right-arrow-alt'></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        @endforeach
+                    </div>
+                </div>
+            @endif
         @endforeach
     </div>
 </div>

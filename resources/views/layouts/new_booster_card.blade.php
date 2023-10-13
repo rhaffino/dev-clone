@@ -12,9 +12,9 @@
         <div>|</div>
         <p class="m-0 b2-400 b2-m-400">
             @if($local === 'en')
-            Published at Oct 3, 2023
+            Published at Oct 13, 2023
             @else
-            Dipublikasikan pada 3 Oktober 2023
+            Dipublikasikan pada 13 Oktober 2023
             @endif
         </p>
     </div>
@@ -54,9 +54,9 @@
     </div>
     <p class="m-0 b2-400 b2-m-400" style="color:#959595">
         @if($local === 'en')
-        Edited at Oct 3, 2023
+        Edited at Oct 13, 2023
         @else
-        Dipublikasikan pada 3 Oktober 2023
+        Dipublikasikan pada 13 Oktober 2023
         @endif
     </p>
 </div>

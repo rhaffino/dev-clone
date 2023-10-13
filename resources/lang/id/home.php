@@ -1,7 +1,7 @@
 <?php
 $data = count(json_decode(file_get_contents(base_path('resources/js/json/tools.json')),true));
 return [
-    "meta-title" => "29 SEO Tools (Gratis) Versi Bahasa Indonesia \ cmlabs",
+    "meta-title" => "30 SEO Tools (Gratis) Versi Bahasa Indonesia \ cmlabs",
     "meta-desc" => "Cek website dengan Free SEO Tools cmlabs: Page Speed Test, Sitemap Generator, Word Counter, Title & Meta Desc Checker, dll",
     "lang" => "id",
     "title" => "SEO Tool Gratis oleh CMLABS",
@@ -26,6 +26,7 @@ return [
     "http-header-checker-desc" => "HTTP Header Checker adalah alat yang dirancang untuk memeriksa dan menganalisis header permintaan Hypertext Transfer Protocol (HTTP) serta respons yang dipertukarkan antara klien dan server.",
     "robotstxt-checker-desc" => "Robots.txt Checker adalah tool yang dirancang khusus untuk menyederhanakan proses validasi file robots.txt, melindungi aset berharga situs web Anda, serta membantu Anda menyesuaikan strategi SEO yang akurat.",
     "serp-simulator-desc" => "SERP Simulator dari cmlabs adalah tool yang memudahkan pengguna dalam mengoptimasi elemen-elemen penting seperti tag judul, meta description atau keywords, sembari meninjau bagaimana website muncul dalam laman hasil pencarian (SERP).",
+    "meta-generator-desc" => "Meta Generator adalah tool yang dirancang untuk membantu proses pembuatan meta tag dan menyusunnya dalam format kode HTML untuk memastikan bahwa mesin pencari dapat mengindeks dan melakukan crawl secara efektif pada halaman web.",
     "last-update" => "Terakhir Diperbarui",
     "desc-1" => "Catatan Penting",
     "desc-1-1" => "Dalam menggunakan beberapa tool yang mengharuskan Anda memasukkan URL, pastikan itu valid. Jika tidak, tool tidak akan berfungsi dengan baik.",
@@ -154,4 +155,5 @@ return [
     "desc-new-tools-21-aug-2023" => "Pastikan aktivitas website Anda tetap terpantau aman dan terkonfigurasi! Lakukan analisis mendalam terhadap domain Anda dengan memantau metrik real-time vitalitas jaringan mulai dari konektivitas, keamanan, dan kinerjanya dengan menggunakan kedua tool terbaik dari cmlabs, Ping Tool dan HTTP Header Checker. Periksa dan tingkatkan manajemen website Anda sekarang juga!",
     "check" => "Cek",
     "no_notif" => "Saat ini tidak ada notifikasi...",
+    "desc-new-tools-13-Oct-2023" => "30 tools untuk berbagai solusi! cmlabs telah sukses merilis 30 t tool mutakhir yang dirancang untuk memberdayakan bisnis dan individu yang berkecimpung di ranah digital. Sebanyak 30 tools, mulai dari Test & Checker, Sitemap.XML, dan Robots.TXT hingga beragam JSON-LD Schema Generator, telah diluncurkan untuk mengatasi kebutuhan dan tantangan spesifik di berbagai industri. Bersama rangkaian tool dari cmlabs, Anda dapat berdiri di garis terdepan kemajuan teknologi. Coba masing-masing tool cmlabs berdasarkan kebutuhan Anda sekarang!",
 ];

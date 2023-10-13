@@ -1,7 +1,7 @@
 <?php
 $data = count(json_decode(file_get_contents(base_path('resources/js/json/tools.json')),true));
 return [
-    "meta-title" => "29 SEO Tools (Free) English Version \ cmlabs",
+    "meta-title" => "30 SEO Tools (Free) English Version \ cmlabs",
     "meta-desc" => "Check your website with Free SEO tools cmlabs: Page Speed Test, Sitemap Generator, Word Counter, Title & Meta Desc Checker, etc.",
     "lang" => "en",
     "title" => "Free SEO Tools by CMLABS",
@@ -26,6 +26,7 @@ return [
     "http-header-checker-desc" => "The HTTP Header Checker is a tool designed to inspect and analyze the headers of Hypertext Transfer Protocol (HTTP) requests as well as responses exchanged between client and server.",
     "robotstxt-checker-desc" => "Robots.txt Checker is a tool designed to simplify the process of validating robots.txt files, maintaining order, protecting your website's valuable assets, and help you align with an accurate SEO strategy.",
     "serp-simulator-desc" => "The SERP Simulator by cmlabs is a tool that allows users to optimize various elements such as title tags, meta descriptions, or keywords, and preview how their website appears in search engine results (SERP).",
+    "meta-generator-desc" => "The Meta Generator is a tool designed to assist the process of creating meta tags and generating them in the appropriate format within the HTML code to ensure that web pages are effectively crawled and indexed by search engines.",
     "last-update" => "Last Update",
     "desc-1" => "Important Note",
     "desc-1-1" => "In using some tools that require you to enter a URL, make sure it is valid. Otherwise, the tool will not function properly.",
@@ -154,4 +155,5 @@ return [
     "desc-new-tools-21-aug-2023" => "Embark on a voyage of digital discovery as you engage with real-time metrics that reflect the vitality of your network's health and configuration. Now, you can diagnose your network's health as well as navigate your domain to ensure flawless communication, security, and performance of a website with our best tools, Ping Tool and HTTP Header Checker by cmlabs. Check and elevate your website management now!",
     "check" => "Check",
     "no_notif" => "There is currently no notification...",
+    "desc-new-tools-13-Oct-2023" => "30 Tools for Countless Solutions! cmlabs has reached a remarkable milestone with the release of 30 cutting-edge tools designed to empower businesses and individuals in the digital realm. All 30 tools, from Test & Checker, Sitemap.XML, and Robots.TXT to various JSON-LD Schema Generator, have been launched to address specific needs and challenges across diverse industries. Together with cmlabs tools, you can stand at the forefront of technological advancements. Try our tools based on your needs now!",
 ];
