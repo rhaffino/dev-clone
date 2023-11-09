@@ -2668,3 +2668,17 @@ input.input-url-meta-checker:focus {
     max-height: 600px;
     overflow-y: auto;
 }
+
+.partnership-highlight {
+    display: flex;
+    max-width: 202px;
+    padding: 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background: #252a38;
+}
