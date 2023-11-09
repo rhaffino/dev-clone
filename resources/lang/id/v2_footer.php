@@ -150,7 +150,7 @@ return [
     
     "explore-comp" => "Jelajahi penyesuaian kami",
 
-    "partnership-tag" => "BIAYA RENDAH HINGGA 5% BIAYA",
+    "partnership-tag" => "BIAYA COST-EFFECTIVE, HINGGA 5%!",
     "partnership-title" => "KAMI TERBUKA UNTUK KERJASAMA DENGAN BERBAGAI NICHE",
     "partnerships" => [
         "Organisasi Waralaba",

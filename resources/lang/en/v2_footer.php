@@ -142,8 +142,8 @@ return [
 
     "explore-comp" => "Explore our compliance",
 
-    "partnership-tag" => "LOW FEES UP TO 5% FEES",
-    "partnership-title" => "WE ARE OPEN TO PARTNER-SHIP WITH VARIOUS NICHE",
+    "partnership-tag" => "COST-EFFECTIVE FEES, UP TO 5%!",
+    "partnership-title" => "WE ARE OPEN TO PARTNERSHIP WITH VARIOUS NICHES",
     "partnerships" => [
         "Franchise Organizations",
         "Educational Institutions",
