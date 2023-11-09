@@ -157,34 +157,36 @@
                                         <ul class="dropdown-menu rounded-3 p-3 border-0 dropdown-compliance"
                                             aria-labelledby="dropdownMenuButton1">
                                             <li class="s-400 text-gray-90">@lang('v2_footer.explore-comp')</li>
-                                            <li class="my-1 my-lg-2"><a
-                                                    class="mktcmlgtm_footer_anti_corruption_gratification text-dark-70 b2-400 b2-m-400"
-                                                    href="https://cmlabs.co/{{ $lang_region }}/company/anti-corruption-policy">@lang('v2_footer.menu_antigratification')</a>
-                                            </li>
-                                            <li class="my-1 my-lg-2"><a
-                                                    class="mktcmlgtm_footer_generative_AI text-dark-70 b2-400 b2-m-400"
-                                                    href="https://cmlabs.co/{{ $lang_region }}/company/generative-ai-policy">@lang('v2_footer.menu_generative')</a>
-                                            </li>
-                                            <li class="my-1 my-lg-2"><a
-                                                    class="mktcmlgtm_footer_image_guarantee text-dark-70 b2-400 b2-m-400"
-                                                    href="https://cmlabs.co/{{ $lang_region }}/company/image-commercial-use-guarantee">@lang('v2_footer.menu_image')</a>
-                                            </li>
-                                            <li class="my-1 my-lg-2"><a
-                                                    class="mktcmlgtm_footer_off_page_guideliness text-dark-70 b2-400 b2-m-400"
-                                                    href="https://cmlabs.co/{{ $lang_region }}/company/seo-off-page-activity-guidelines">@lang('v2_footer.menu_off-page')</a>
-                                            </li>
-                                            <li class="my-1 my-lg-2"><a
-                                                    class="mktcmlgtm_footer_eeat_content_assessment text-dark-70 b2-400 b2-m-400"
-                                                    href="https://cmlabs.co/{{ $lang_region }}/company/eeat-content-assessment">@lang('v2_footer.menu_eeat')</a>
-                                            </li>
-                                            <li class="my-1 my-lg-2"><a
-                                                    class="mktcmlgtm_footer_publication_and_plagiarism_policy text-dark-70 b2-400 b2-m-400"
-                                                    href="https://cmlabs.co/{{ $lang_region }}/company/plagiarism-guarantee-policy">@lang('v2_footer.menu_plagiarism')</a>
-                                            </li>
-                                            <li class="my-1 my-lg-2"><a
-                                                    class="mktcmlgtm_footer_local_regulator_compliance_indonesia_only text-dark-70 b2-400 b2-m-400"
-                                                    href="https://cmlabs.co/{{ $lang_region }}/company/local-regulatory-compliance">@lang('v2_footer.menu_local-regulator')</a>
-                                            </li>
+                                            <div id="compliance-container">
+                                                {{-- <li class="my-1 my-lg-2"><a
+                                                        class="mktcmlgtm_footer_anti_corruption_gratification text-dark-70 b2-400 b2-m-400"
+                                                        href="https://cmlabs.co/{{ $lang_region }}/company/anti-corruption-policy">@lang('v2_footer.menu_antigratification')</a>
+                                                </li>
+                                                <li class="my-1 my-lg-2"><a
+                                                        class="mktcmlgtm_footer_generative_AI text-dark-70 b2-400 b2-m-400"
+                                                        href="https://cmlabs.co/{{ $lang_region }}/company/generative-ai-policy">@lang('v2_footer.menu_generative')</a>
+                                                </li>
+                                                <li class="my-1 my-lg-2"><a
+                                                        class="mktcmlgtm_footer_image_guarantee text-dark-70 b2-400 b2-m-400"
+                                                        href="https://cmlabs.co/{{ $lang_region }}/company/image-commercial-use-guarantee">@lang('v2_footer.menu_image')</a>
+                                                </li>
+                                                <li class="my-1 my-lg-2"><a
+                                                        class="mktcmlgtm_footer_off_page_guideliness text-dark-70 b2-400 b2-m-400"
+                                                        href="https://cmlabs.co/{{ $lang_region }}/company/seo-off-page-activity-guidelines">@lang('v2_footer.menu_off-page')</a>
+                                                </li>
+                                                <li class="my-1 my-lg-2"><a
+                                                        class="mktcmlgtm_footer_eeat_content_assessment text-dark-70 b2-400 b2-m-400"
+                                                        href="https://cmlabs.co/{{ $lang_region }}/company/eeat-content-assessment">@lang('v2_footer.menu_eeat')</a>
+                                                </li>
+                                                <li class="my-1 my-lg-2"><a
+                                                        class="mktcmlgtm_footer_publication_and_plagiarism_policy text-dark-70 b2-400 b2-m-400"
+                                                        href="https://cmlabs.co/{{ $lang_region }}/company/plagiarism-guarantee-policy">@lang('v2_footer.menu_plagiarism')</a>
+                                                </li>
+                                                <li class="my-1 my-lg-2"><a
+                                                        class="mktcmlgtm_footer_local_regulator_compliance_indonesia_only text-dark-70 b2-400 b2-m-400"
+                                                        href="https://cmlabs.co/{{ $lang_region }}/company/local-regulatory-compliance">@lang('v2_footer.menu_local-regulator')</a>
+                                                </li> --}}
+                                            </div>
                                         </ul>
                                     </div>
                                 </ul>
@@ -293,7 +295,8 @@
                                             </div>
                                             <ul class="d-flex gap-2 flex-column">
                                                 @foreach (trans('v2_footer.partnerships') as $item)
-                                                    <li class="b2-400 b2-m-400 text-white mt-2">{{ $item }}</li>
+                                                    <li class="b2-400 b2-m-400 text-white mt-2">{{ $item }}
+                                                    </li>
                                                 @endforeach
                                             </ul>
                                         </a>
@@ -375,14 +378,14 @@
                 <div class="col-lg-8 d-lg-flex align-items-center justify-content-end">
                     <div class="disclaimer-term s-400 s-m-400">
                         <ul class="d-flex flex-wrap justify-content-center justify-content-lg-start">
-                            <li><a
-                                    href="https://cmlabs.co/{{ $lang_region }}/terms-and-conditions" class="text-footer s-400 s-m-400">
+                            <li><a href="https://cmlabs.co/{{ $lang_region }}/terms-and-conditions"
+                                    class="text-footer s-400 s-m-400">
                                     @lang('v2_footer.menu_tnc')</a></li>
-                            <li><a
-                                    href="https://cmlabs.co/{{ $lang_region }}/privacy-policy" class="text-footer s-400 s-m-400">
+                            <li><a href="https://cmlabs.co/{{ $lang_region }}/privacy-policy"
+                                    class="text-footer s-400 s-m-400">
                                     @lang('v2_footer.menu_privacy')</a></li>
-                            <li><a
-                                    href="https://cmlabs.co/{{ $lang_region }}/terms-of-services" class="text-footer s-400 s-m-400">
+                            <li><a href="https://cmlabs.co/{{ $lang_region }}/terms-of-services"
+                                    class="text-footer s-400 s-m-400">
                                     @lang('v2_footer.menu_tos')</a></li>
                             {{-- <li><a href="{{ route('v2.company.disclaimer', ['lang' => $lang_region]) }}">{{
 									__('v2_footer.menu_disclaimer') </a></li> --}}
@@ -401,3 +404,37 @@
         </div>
     </div>
 </div>
+
+@push('script')
+    <script>
+        fetch("{{ env('CMLABSCO_API_URL') }}/{{$lang}}-id/service-compliances-lists", {
+                method: "GET",
+                headers: {
+                    "Content-Type": "application/json",
+                    "Accept": "application/json, text-plain, */*",
+                }
+            })
+            .then(function(response) {
+                if (!response.ok) {
+                    throw new Error("Network response was not ok");
+                }
+                return response.json();
+            })
+            .then(function(response) {
+                const list = response.data
+                const container = document.getElementById('compliance-container')
+
+                list.forEach(item => {
+                    container.innerHTML += `
+                    <li class="my-1 my-lg-2"><a 
+                        class="mktcmlgtm_footer_local_regulator_compliance_indonesia_only text-dark-70 b2-400 b2-m-400"
+                        href="https://cmlabs.co/${item.language}-${item.region}/company/${item.slug}">${item.title}</a>
+                    </li>
+                    `;
+                });
+            })
+            .catch(function(error) {
+                console.error("Fetch error:", error);
+            });
+    </script>
+@endpush
