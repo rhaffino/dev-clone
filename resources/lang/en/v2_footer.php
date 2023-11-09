@@ -13,7 +13,7 @@ return [
         'title_second' => 'Full access to SEO guideline and terms',
         'sub_second' => 'Learn more about SEO at cmlabs resources'
     ],
-    'paragraph' => 'cmlabs is strive to help enterprises to step up their SEO activities. We called it end-to-end SEO through the product, tools and services (consist of SEO Consultant, SEO Content Writing, and Digital Media Buying). Aside of that, cmlabs still have SEO tools that is designed for webmaster and writer to fulfill their needs. Here are several free access SEO Tools for you!',
+    'paragraph' => 'cmlabs is strive to help enterprises to step up their SEO activities. We called it end-to-end SEO through the product, tools and services (consist of SEO Consultant, SEO Content Writing, and Media Buying). Aside of that, cmlabs still have SEO tools that is designed for webmaster and writer to fulfill their needs. Here are several free access SEO Tools for you!',
     'usp_1' => 'Unlimited crawl on SEO Tools',
     'usp_1_desc' => 'Audit and optimize your website with our SEO Tools',
     'usp_2' => 'Free 180k on Keyword Rank Tracker',
@@ -26,10 +26,10 @@ return [
     'sub_product' => 'SEO Product',
     'sub_service' => 'Solutions',
     'sub_tool' => 'SEO Tools',
-    'sub_partner' => 'Partnership & Alliance',
+    'sub_partner' => 'Partnerships',
     'sub_company' => 'Company',
     'sub_resource' => 'Resources',
-    'sub_compliance' => 'Compliance',
+    'sub_compliance' => 'Services Compliance',
     'sub_info' => 'Information',
     'sub_join' => 'Join us!',
 
@@ -90,14 +90,14 @@ return [
 
     'menu_serp' => 'Keyword Tracker',
 
-    'menu_service_seo' => 'SEO Services <br><i class="text-primary-70 s-700 b2-m-700">starting from Rp10m</i>',
-    'menu_service_writing' => 'SEO Writing <br><i class="text-primary-70 s-700 b2-m-700">starting from Rp450k</i>',
-    'menu_service_expert_writing' => 'Expert Writing <br><i class="text-primary-70 s-700 b2-m-700">starting from Rp800k</i>',    
-    'menu_service_marketing' => 'Media Buying <br><i class="text-primary-70 s-700 b2-m-700">starting from Rp100m</i>',
+    'menu_service_seo' => 'SEO Services <br><i class="text-primary-70 s-700 b2-m-700">starting from <span class="update-cost" data-id="Rp10m" data-usd="USD 698" data-cost="10000000"></span></i>',
+    'menu_service_writing' => 'SEO Writing <br><i class="text-primary-70 s-700 b2-m-700">starting from <span class="update-cost" data-id="Rp450k" data-usd="-" data-cost="450000"></span></i>',
+    'menu_service_expert_writing' => 'Expert Writing <br><i class="text-primary-70 s-700 b2-m-700">starting from <span class="update-cost" data-id="Rp800k" data-usd="-" data-cost="800000"></span></i>',
+    'menu_service_marketing' => 'Media Buying <br><i class="text-primary-70 s-700 b2-m-700">starting from <span class="update-cost" data-id="Rp100m" data-usd="-" data-cost="100000000"></span></i>',
     'menu_service_backlink' => 'Blogger Backlink',
     'menu_service_political' => 'SEO for Political Campaign',
     'menu_service_pr' => 'PR / Advertorial',
-    'menu_service_cta' => 'Only for you!!<br><i class="s-700 b2-m-700 font-italic">Grab now..</i>',
+    'menu_service_cta' => 'Only for you!!<br><i class="s-700 b2-m-700 font-italic text-danger-70">Grab now..</i>',
 
     "menu_become-partner" => "Become Partner,<br><i class='text-success-70 s-700 b2-m-700'>for Agencies</i>",
     "menu_affiliate" => "Affiliate Program,<br><i class='text-success-70 s-700 b2-m-700'>for Bizdev</i>",
@@ -119,10 +119,10 @@ return [
     "menu_blog" => "cmlabs Blog",
     "menu_terms" => "SEO Terms",
     "menu_guidelines" => "SEO Guidelines",
-    "menu_insight" => "Insight",
+    "menu_insight" => "General Insight",
     "menu_ebook" => "Free E-Book",
     "menu_news" => "cmlabs News",
-    'menu_class' => 'cmlabs Class<br><i class="text-yellow-80 s-700 b2-m-700">Exclusive Event</i>',
+    'menu_class' => 'cmlabs Class<br><i class="text-purple-70 s-700 b2-m-700">Exclusive Event</i>',
 
     "menu_notif" => "Notification Center",
     "menu_client" => "Client's Testimony",
@@ -138,5 +138,17 @@ return [
     "badge-desc" => "Psst! Hey there, SEO Stats and Tools SEO company! <strong>If you've ever planned of conquering the Indonesian market</strong>, you've come to the right place!",
     "badge-desc-cta" => "Let's turn those plan into reality, shall we?",
 
-    "copyright" => "COPYRIGHT"
+    "copyright" => "COPYRIGHT",
+
+    "explore-comp" => "Explore our compliance",
+
+    "partnership-tag" => "LOW FEES UP TO 5% FEES",
+    "partnership-title" => "WE ARE OPEN TO PARTNER-SHIP WITH VARIOUS NICHE",
+    "partnerships" => [
+        "Franchise Organizations",
+        "Educational Institutions",
+        "Professional Services Firms",
+        "Startup Incubators / Accelerators",
+        "...and 34 more"
+    ]
 ];
