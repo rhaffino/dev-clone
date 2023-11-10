@@ -33,12 +33,13 @@ $(document).ready(function() {
     cancel(false)
     refreshLocalStorage()
     clearTable();
-    const socket = io(URL_API, {
-        transports: ['websocket'],
-        secure: true
-    });
+    let socket;
     triggerEnter('#generate', '#url');
     $('#generate').click(function() {
+        socket = io(URL_API, {
+            transports: ['websocket'],
+            secure: true
+        });
         $(this).prop('disabled', true)
         clearTable();
         rendering.skip = 0;
