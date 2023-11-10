@@ -56,10 +56,37 @@ $(document).ready(function() {
         buttonOn(false)
         $("#result").empty();
         isCanceled = false;
+
+        socket.on('update queue', data => {
+            if (!isCanceled) {
+                $('#detail-progress').show()
+                $('#detail-progress').html(data.site_length + has_crawled)
+            }
+        });
+    
+        socket.on('result', response => {
+            clearTable();
+            $('#length-result').html(`(${response.data.length})`)
+            $('#detail-progress').empty()
+            $('#info').html(robot_done)
+            $('#noCrawlResult').hide();
+            buttonOn(true, response.hash)
+            DATA_FINAL = response.data;
+            removeShowMore()
+            renderData()
+            cancel(false)
+            $('#generate').prop('disabled', false)
+            saveData(response)
+            refreshLocalStorage()
+        });
+    
+        socket.on('notfound', msg => {
+            toastr.error('Error', msg)
+        })
     });
 
     $('#cancelOn').on('click', function() {
-        socket.emit('stop');
+        socket?.emit('stop');
         cancel(false)
         $("#noCrawlResult").show();
         $("#generateCrawlResult").hide();
@@ -69,34 +96,7 @@ $(document).ready(function() {
         updateProgressBar(0)
         toastr.error('Cancel your task')
         $('#generate').prop('disabled', false)
-    });
-
-    socket.on('update queue', data => {
-        if (!isCanceled) {
-            $('#detail-progress').show()
-            $('#detail-progress').html(data.site_length + has_crawled)
-        }
-    });
-
-    socket.on('result', response => {
-        clearTable();
-        $('#length-result').html(`(${response.data.length})`)
-        $('#detail-progress').empty()
-        $('#info').html(robot_done)
-        $('#noCrawlResult').hide();
-        buttonOn(true, response.hash)
-        DATA_FINAL = response.data;
-        removeShowMore()
-        renderData()
-        cancel(false)
-        $('#generate').prop('disabled', false)
-        saveData(response)
-        refreshLocalStorage()
-    });
-
-    socket.on('notfound', msg => {
-        toastr.error('Error', msg)
-    })
+    });    
 });
 
 $('#url').on('input', function() {
