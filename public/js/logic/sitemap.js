@@ -83,19 +83,19 @@ $(document).ready(function() {
         socket.on('notfound', msg => {
             toastr.error('Error', msg)
         })
-    });
 
-    $('#cancelOn').on('click', function() {
-        socket?.emit('stop');
-        cancel(false)
-        $("#noCrawlResult").show();
-        $("#generateCrawlResult").hide();
-        $('#info').html(robot_sleep)
-        $('#detail-progress').empty();
-        isCanceled = true;
-        updateProgressBar(0)
-        toastr.error('Cancel your task')
-        $('#generate').prop('disabled', false)
+        $('#cancelOn').on('click', function() {
+            socket?.emit('stop');
+            cancel(false)
+            $("#noCrawlResult").show();
+            $("#generateCrawlResult").hide();
+            $('#info').html(robot_sleep)
+            $('#detail-progress').empty();
+            isCanceled = true;
+            updateProgressBar(0)
+            toastr.error('Cancel your task')
+            $('#generate').prop('disabled', false)
+        });    
     });    
 });
 
