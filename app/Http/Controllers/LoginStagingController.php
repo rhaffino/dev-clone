@@ -22,6 +22,7 @@ class LoginStagingController extends Controller
 
             return redirect('/');
         } else {
+            Session::remove('isStagingLogin');
             return redirect()->route('staging-login')->with('error', 'Incorrect email or password');
         }
     }
