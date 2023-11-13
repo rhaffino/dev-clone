@@ -16,7 +16,7 @@ class ManualAuth
     public function handle($request, Closure $next)
     {
         if (env('APP_ENV') === 'development') {
-            if ($request->session()->has('isStagingLogin')) {
+            if (session()->exists('isStagingLogin')) {
                 return $next($request);
             } else {
                 return redirect('/login');
