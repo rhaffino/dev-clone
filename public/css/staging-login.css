@@ -21,7 +21,7 @@ body {
   body .input-with-icon i.input-icon {
     position: absolute;
     right: 8px;
-    top: 9px;
+    top: 13px;
   }
   body .input-with-icon i.input-icon.show-icon {
     cursor: pointer;
