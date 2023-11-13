@@ -11,36 +11,37 @@
 |
 */
 
+use App\Http\Controllers\LoginStagingController;
 use App\Http\Middleware\EnsureUrlIsValid;
 use App\Http\Middleware\ManualAuth;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/login', 'Auth\LoginController@loginView');
-Route::post('/validate','Auth\LoginController@validateLogin');
-Route::get('/logout','Auth\LoginController@logout');
+Route::post('/validate', 'Auth\LoginController@validateLogin');
+Route::get('/logout', 'Auth\LoginController@logout');
 
-// Route::middleware([ManualAuth::class])->group(function (){
+Route::middleware([ManualAuth::class])->group(function () {
     Route::redirect('/', '/en');
-    
-    Route::get('/analytics', function (){
+
+    Route::get('/analytics', function () {
         return view('premiumtools');
     });
-    
-    Route::get('/construction', function (){
+
+    Route::get('/construction', function () {
         return redirect('/analytics');
     });
-    
+
     Route::get('/url', 'ToolsController@loadssl');
-    
+
     // Route::get('blog/data', 'HomeController@getBlogData');
 
-    Route::middleware([EnsureUrlIsValid::class])->group(function (){
-        Route::get('/{lang}','HomeController@index');
+    Route::middleware([EnsureUrlIsValid::class])->group(function () {
+        Route::get('/{lang}', 'HomeController@index');
         // login
         Route::group(['as' => 'auth.'], function () {
-            Route::get('/{lang}/login/google','AuthController@googleLogin')->name('login.google');
-            Route::get('/{lang}/login/google/callback','AuthController@googleCallback')->name('login.google.callback');
-            Route::get('/{lang}/logout','AuthController@logout');
+            Route::get('/{lang}/login/google', 'AuthController@googleLogin')->name('login.google');
+            Route::get('/{lang}/login/google/callback', 'AuthController@googleCallback')->name('login.google.callback');
+            Route::get('/{lang}/logout', 'AuthController@logout');
         });
         Route::get('/{lang}/strikethrough', 'ToolsController@strikethrough');
         Route::get('/{lang}/json-ld-schema-generator', 'ToolsController@jsonld');
@@ -81,10 +82,17 @@ Route::get('/logout','Auth\LoginController@logout');
     });
     Route::get('/en/version', 'ToolsController@englishVersion');
     Route::get('/id/version', 'ToolsController@indonesiaVersion');
-// });
+});
 
 Route::post('/api/cta', 'Tool\ApiController@ctaEmail')->name('api.cta-email');
 Route::post('/api/count', 'Tool\ApiController@accessCount')->name('api.count');
 Route::post('/api/limit', 'Tool\ApiController@accessLimit')->name('api.limit');
 Route::get('/api/plagiarism-checker-logs', 'Tool\ApiController@plagiarismCheckLogs')->name('api.plagiarism-check-logs');
 Route::get('/api/plagiarism-checker-calendar', 'Tool\ApiController@plagiarismCheckCalendarLogs')->name('api.plagiarism-check-calendar-logs');
+
+if (env('APP_ENV') === 'development') {
+    Route::get('/login', function () {
+        return view('staging-login.index');
+    })->name('staging-login');
+    Route::post('/staging-login', [LoginStagingController::class, 'login'])->name('staging-login.post');
+}
