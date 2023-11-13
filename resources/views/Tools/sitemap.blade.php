@@ -335,7 +335,7 @@ id/sitemap-generator
 <script src="{{asset('js/logic/download.js')}}"></script>
 <script src="{{asset('js/logic/vkbeautify.0.99.00.beta.js')}}"></script>
 <script src="{{asset('js/logic/trigerEnterButton.js')}}"></script>
-<script src="{{asset('js/logic/sitemap.js')}}"></script>
+<script src="{{asset('js/logic/sitemap.js')}}?112102023"></script>
 <script type="application/ld+json">
     {
         "@context": "https://schema.org/",
