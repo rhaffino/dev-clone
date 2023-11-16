@@ -1417,17 +1417,19 @@ class ToolsController extends Controller
 
     public function plagiarismChecker($lang)
     {
-        if (Auth::check()  && (Auth::check() ? Auth::user()->user_role_id == 3 : false)) {
-            $data = [];
-            App::setLocale($lang);
+        $data = [];
+        App::setLocale($lang);
+        $data['local'] = App::getLocale();
+        $data['is_maintenance'] = in_array('plagiarism-checker', explode(',', env('TOOLS_MAINTENANCE'))) && env('APP_ENV') === 'production';
+        $data["lang"] = $lang;
+        // Get user data
+        $data['userId'] = Crypt::encrypt(Auth::user()->id . '-' . time());
+
+        // return view('Tools/plagiarism-checker/survey', $data);
+        
+        if (Auth::check()  && (Auth::check() ? Auth::user()->user_role_id == 3 : false)) {            
             $data['dataID'] = $this->HomeController->getBlogWordpressId();
             $data['dataEN'] = $this->HomeController->getBlogWordpressEn();
-            $data['local'] = App::getLocale();
-            $data['is_maintenance'] = in_array('plagiarism-checker', explode(',', env('TOOLS_MAINTENANCE'))) && env('APP_ENV') === 'production';
-            
-            // Get user data
-            $data['userId'] = Crypt::encrypt(Auth::user()->id . '-' . time());
-
             // Get user plagiarism check logs
             $data['userLogs'] = PlagiarismCheckLog::where('user_id', Auth::user()->id)
                 ->orderBy('created_at', 'desc')
@@ -1489,12 +1491,11 @@ class ToolsController extends Controller
 
             $data["seo_terms"] = $seoTerms;
             $data["seo_guidelines"] = $seoGuidelines;
-            $data["blogs"] = $blogs;
-            $data["lang"] = $lang;
+            $data["blogs"] = $blogs;            
             
             return view('Tools/plagiarism-checker/index', $data);
         } else {
-            return redirect('/');
+            return view('Tools/plagiarism-checker/survey');
         }
     }
 
