@@ -24,8 +24,11 @@ Route::post('/analyze-redirect-chain', 'Tool\ApiController@analyzeRedirectChain'
 Route::post('/analyze-ssl', 'Tool\ApiController@analyzeSsl')->name('api.analyze-ssl');
 Route::post('/analyze-meta', 'Tool\ApiController@analyzeMeta')->name('api.analyze-meta');
 Route::post('/ping-tool', 'Tool\ApiController@pingTool')->name('api.ping-tool');
-Route::post('/plagiarism-check', 'Tool\ApiController@plagiarismCheck')->name('api.plagiarism-check');
 Route::post('/header-checker', 'Tool\ApiController@headerChecker')->name('api.header-checker');
 Route::post('/record-activity', 'Tool\ApiController@recordUserActivity')->name('api.record-activity');
 Route::post('/robotstxt-checker', 'Tool\ApiController@robotsChecker')->name('api.robotstxt-checker');
 Route::post('/metadata-scraper', 'Tool\ApiController@serpChecker')->name('api.metadata-scraper');
+
+// plagiarism checker
+Route::post('/plagiarism-check', 'Tool\ApiController@plagiarismCheck')->name('api.plagiarism-check');
+Route::post('/plagiarism-survey', 'Tool\ApiController@plagiarismSurvey')->name('api.plagiarism.survey');
