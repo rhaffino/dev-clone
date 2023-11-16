@@ -78,10 +78,14 @@ $(document).ready(function() {
             $('#generate').prop('disabled', false)
             saveData(response)
             refreshLocalStorage()
+            socket.disconnect()
+            socket = null
         });
     
         socket.on('notfound', msg => {
             toastr.error('Error', msg)
+            socket.disconnect()
+            socket = null
         })
 
         $('#cancelOn').on('click', function() {
@@ -95,6 +99,8 @@ $(document).ready(function() {
             updateProgressBar(0)
             toastr.error('Cancel your task')
             $('#generate').prop('disabled', false)
+            socket.disconnect()
+            socket = null
         });    
     });    
 });
