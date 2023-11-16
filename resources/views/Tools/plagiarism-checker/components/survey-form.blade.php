@@ -55,7 +55,7 @@
         <button type="button" class="btn button-gray-10" onclick="$('#nav-hiw-tab').trigger('click')">
             Back
         </button>
-        <button type="submit" class="btn button-primary-70">
+        <button type="submit" id="submit-survey-btn" class="btn button-primary-70">
             Submit
         </button>
     </div>
@@ -66,6 +66,7 @@
         $("#plagiarism-checker-form").on('submit', function(e) {
             const url = ''
             e.preventDefault();
+            $("#submit-survey-btn").prop("disabled", true)
 
             $.ajax({
                 type: 'POST',
@@ -75,13 +76,21 @@
                     frequency: $("#frequency").val(),
                 },
                 success: (res) => {
-                    // $(".calendar").html("")
+                    window.scrollTo(0, 0)
+                    $(".form-element").hide()
+                    $(".survey-success-container").show()
+
+                    $("#submit-survey-btn").prop("disabled", false)
                 },
                 error: (e) => {
                     console.log('error', e);
+                    toastr.error('Something error, please try again')
+                    $("#submit-survey-btn").prop("disabled", false)
                 },
                 failed: () => {
                     console.log('failed');
+                    toastr.error('Something error, please try again')
+                    $("#submit-survey-btn").prop("disabled", false)
                 }
             });
         })

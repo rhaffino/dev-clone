@@ -22,8 +22,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.thumbs.css" />
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
 @endpush
 
 @section('content')
@@ -32,7 +34,7 @@
     @else
         <div class="container container-tools mt-5 mb-10 py-4">
             <div class="row survey-container background-gray-10">
-                <div class="col-lg-3 col-12 px-0" >
+                <div class="col-lg-3 col-12 px-0 form-element">
                     <div class="nav" id="nav-tab" role="tablist">
                         <button class="flex-1 nav-link active" id="nav-intro-tab" data-toggle="tab" data-target="#nav-intro"
                             type="button" role="tab" aria-controls="nav-intro" aria-selected="true"><i
@@ -45,7 +47,7 @@
                                 class="bx bx-sm bx-spreadsheet"></i> Survey</button>
                     </div>
                 </div>
-                <div class="col-lg-9 col-12 background-white content">
+                <div class="col-lg-9 col-12 background-white content form-element">
                     <div class="tab-content survey-tabs" id="nav-tabContent">
                         <div class="tab-pane intro-tab fade show active" id="nav-intro" role="tabpanel"
                             aria-labelledby="nav-intro-tab">
@@ -60,12 +62,17 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="survey-success-container" style="display: none">
+                    @include('Tools.plagiarism-checker.components.survey-success')
+                </div>
             </div>
         </div>
     @endif
 @endsection
 
 @push('script')
+    <script src="{{ asset('js/logic/plagiarism-survey.js') }}"></script>
     <script type="application/ld+json">
     {
         "@context": "https://schema.org/",
