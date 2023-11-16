@@ -1423,7 +1423,7 @@ class ToolsController extends Controller
         $data['is_maintenance'] = in_array('plagiarism-checker', explode(',', env('TOOLS_MAINTENANCE'))) && env('APP_ENV') === 'production';
         $data["lang"] = $lang;
         // Get user data
-        $data['userId'] = Crypt::encrypt(Auth::user()->id . '-' . time());
+        $data['userId'] = Auth::user() ? Crypt::encrypt(Auth::user()->id . '-' . time()) : '';
 
         // return view('Tools/plagiarism-checker/survey', $data);
         
@@ -1495,7 +1495,7 @@ class ToolsController extends Controller
             
             return view('Tools/plagiarism-checker/index', $data);
         } else {
-            return view('Tools/plagiarism-checker/survey');
+            return view('Tools/plagiarism-checker/survey', $data);
         }
     }
 
