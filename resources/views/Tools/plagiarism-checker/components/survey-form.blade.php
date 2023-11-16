@@ -18,7 +18,7 @@
                         <div class="flex-1">9</div>
                         <div class="flex-1">10</div>
                     </div>
-                    <input type="range" name="interest" class="form-range w-100" min="1" max="10"
+                    <input type="range" name="interest" id="interest" class="form-range w-100" min="1" max="10"
                         step="1" value="5">
                     <div class="d-flex justify-content-between align-items-center w-100 text-dark-20">
                         <div>Not Interested</div>
@@ -41,7 +41,7 @@
                         <div class="flex-1">9</div>
                         <div class="flex-1">10</div>
                     </div>
-                    <input type="range" name="frequency" class="form-range w-100" min="1" max="10"
+                    <input type="range" name="frequency" id="frequency" class="form-range w-100" min="1" max="10"
                         step="1" value="5">
                     <div class="d-flex justify-content-between align-items-center w-100 text-dark-20">
                         <div>Very rarely</div>
@@ -64,9 +64,9 @@
 @push('scripts')
     <script>
         $("#plagiarism-checker-form").on('submit', function(e) {
-            const url = ''
+            const url = "{{ route('api.plagiarism.survey') }}";
             e.preventDefault();
-            $("#submit-survey-btn").prop("disabled", true)
+            $("#submit-survey-btn").prop("disabled", true);
 
             $.ajax({
                 type: 'POST',

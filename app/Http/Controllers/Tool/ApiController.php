@@ -21,6 +21,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Crypt;
 use Mockery\Exception;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\Log;
 use Jenssegers\Agent\Agent;
 use Revolution\Google\Sheets\Facades\Sheets;
 use Stevebauman\Location\Facades\Location;
@@ -218,18 +219,18 @@ class ApiController extends Controller
             $access_count = session()->has('access_count') ? session()->get('access_count') : 0;
             $access_count += 1;
             session()->put('access_count', $access_count);
-    
+
             $access_limit = $access_count > 5 ? 1 : 0;
-    
+
             $message = $access_limit ? Lang::get("alert.alert-limit") : 'recorded';
-    
+
             $data = [
                 'count' => $access_count,
                 'limit' => $access_limit,
                 'message' => $message,
                 'logged_target' => (url('/' . (App::isLocale('id') ? 'id' : 'en') . '/login'))
             ];
-    
+
             //return success response
             return new BaseApiResource($data, $message, 200);
         }
@@ -246,7 +247,7 @@ class ApiController extends Controller
         $user = User::find($userId);
         if ($user && $user->user_role_id == 3) {
             $text = $request->get('text');
-    
+
             try {
                 $response = $this->requestPlagiarismCheck($text, $user->id);
                 return new BaseApiResource($response['data'] ?? null, $response['message'], $response['statusCode']);
@@ -273,7 +274,7 @@ class ApiController extends Controller
                 ->get();
             $data['cummulativeSummaryLogs'] = PlagiarismCheckLog::selectRaw("COUNT(id) as 'team_requests', COUNT(DISTINCT(user_id)) as 'total_users', SUM(word_count) as 'total_words', SUM(cost) as 'total_cost'")
                 ->first();
-                
+
             return new BaseApiResource($data, "success", 200);
         } catch (Exception $exception){
             return new BaseApiResource($response['data'] ?? null, $response['message'], $response['statusCode']);
@@ -361,21 +362,50 @@ class ApiController extends Controller
                 $userId = explode('-', $userId)[0];
                 $logs->where('user_id', $userId);
             }
-            
+
             $logs = $logs->whereBetween('created_at', [array_key_first($calendar), array_key_last($calendar)])
                 ->get();
-            
+
             foreach ($logs as $log) {
                 $createdAt = date_format($log->created_at, "Y-m-d");
-                $calendar[$createdAt]['cost'] += $log->cost; 
-                $calendar[$createdAt]['request'] += 1; 
+                $calendar[$createdAt]['cost'] += $log->cost;
+                $calendar[$createdAt]['request'] += 1;
             }
-            
+
             $data['calendar'] =  $calendar;
             return new BaseApiResource($data, "success", 200);
         } catch (Exception $exception){
             return new BaseApiResource($response['data'] ?? null, $response['message'], $response['statusCode']);
         }
+    }
+
+    /**
+     * Plagiarism survey submission
+     *
+     * @param Request $request
+     * @return BaseApiResource
+     */
+    public function plagiarismSurvey(Request $request) {
+        try {
+            if(env('APP_ENV') == 'production' || env('APP_ENV') == 'development') {
+                $ipAddress = $request->ip();
+                $location = Location::get($ipAddress);
+                $fullLocation = "IP: $location->ip, Country Code: $location->countryCode, Region Code: $location->regionCode, Region Name:  $location->regionName, City Name: $location->cityName, Zipcode: $location->zipCode, Latitude: $location->latitude, Longitude: $location->longitude";
+            }
+
+            $spreadsheet = Sheets::spreadsheet(env('SUBMISSION_SPREADSHEET_ID'));
+            $spreadsheet->sheet('cmlabs Tools - Plagiarism Checker')->append([[
+                Carbon::now('Asia/Jakarta')->format('l, d F Y H:i:s'),
+                $request->interest ?? 0,
+                $request->frequency ?? 0,
+                $fullLocation ?? 'N/A',
+            ]]);
+
+            return new BaseApiResource(null, 'Submitted');
+        } catch (\Exception $exception) {
+            Log::info($exception->getMessage());
+        }
+        return new BaseApiResource(null, 'Sorry, something went wrong.', 500, 'error');
     }
 
     public function recordUserActivity(Request $request)
@@ -384,11 +414,11 @@ class ApiController extends Controller
             if (env('APP_ENV') == 'production' || env('APP_ENV') == 'local') {
                 $spreadsheet = Sheets::spreadsheet(env('SUBMISSION_SPREADSHEET_ID'));
                 $agent = new Agent();
-    
+
                 $ipAddress = env('APP_ENV') == 'local' ? '66.102.0.0' : $request->ip();
                 $location = Location::get($ipAddress);
                 $fullLocation = "IP: $location->ip, Country Code: $location->countryCode, Region Code: $location->regionCode, Region Name:  $location->regionName, City Name: $location->cityName, Zipcode: $location->zipCode, Latitude: $location->latitude, Longitude: $location->longitude";
-                
+
                 $row = array("", "", "", "", "", "", "");
                 $row = [
                     date("l, d F Y H:i:s", strtotime('+7 hours')),
@@ -399,7 +429,7 @@ class ApiController extends Controller
                     $request->width_height,
                     $fullLocation
                 ];
-                
+
                 $spreadsheet->sheet('cmlabs Tools - User Activities')->append([$row]);
             }
             return new BaseApiResource(null, "success", 200);
