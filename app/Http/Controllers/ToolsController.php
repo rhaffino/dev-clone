@@ -1425,7 +1425,7 @@ class ToolsController extends Controller
         // Get user data
         $data['userId'] = Crypt::encrypt(Auth::user()->id . '-' . time());
 
-        return view('Tools/plagiarism-checker/survey', $data);
+        // return view('Tools/plagiarism-checker/survey', $data);
         
         if (Auth::check()  && (Auth::check() ? Auth::user()->user_role_id == 3 : false)) {            
             $data['dataID'] = $this->HomeController->getBlogWordpressId();
