@@ -1,5 +1,6 @@
 @use "sass:map";
 @import "./color.scss";
+@import "./typography.scss";
 
 body.cmlabs-tools .swal2-actions {
     flex-direction: row !important;
@@ -469,8 +470,8 @@ button.radio,
         opacity: 1;
     }
     .carousel-indicators li {
-        width: 8px;
-        height: 8px;
+        width: 24px !important;
+        height: 6px !important;
         border-radius: 8px;
         background-color: #bcdffc;
         border-top: 0;
@@ -582,6 +583,208 @@ button.radio,
             align-self: stretch;
             background-color: white;
             width: 100%;
+        }
+    }
+}
+
+// SURVEY
+.survey-container {
+    max-width: 866px;
+    margin: 0 auto;
+    border-radius: 4px;
+    overflow: hidden;
+    .survey-tabs {
+        padding: 36px;
+        min-height: 620px;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: stretch;
+        .tab-pane {
+            height: 100%;
+            flex-grow: 1;
+            &.active {
+                display: flex;
+            }
+            .tab-pane-inner {
+                width: 100%;
+                flex-grow: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                gap: 24px;
+            }
+        }
+    }
+    .nav {
+        display: flex;
+        flex-direction: column;
+        padding: 36px 0;
+        .nav-link {
+            display: flex;
+            padding: 12px 32px;
+            align-items: flex-end;
+            gap: 8px;
+            align-self: stretch;
+            color: map.get($colors, "gray-100");
+            &.active {
+                border-left: 2px solid map.get($colors, "primary-70");
+                color: map.get($colors, "primary-70");
+                font-weight: bold;
+                i {
+                    color: map.get($colors, "primary-70");
+                }
+            }
+        }
+    }
+
+    .intro-tab {
+        ul {
+            @extend .b1-400;
+            @extend .b1-m-400;
+            list-style: none;
+            padding-left: 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            li {
+                display: flex;
+                align-items: start;
+                gap: 8px;
+            }
+        }
+    }
+
+    #myCarousel {
+        max-width: 640px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    #myCarousel .f-carousel__slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .f-carousel {
+        position: relative;
+        border-radius: 6px;
+        overflow: hidden;
+        .fullscreen-indicator {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            opacity: 0;
+            display: flex;
+            padding: 4px 8px;
+            align-items: center;
+            gap: 8px;
+            border-radius: 4px;
+            background: #fff;
+        }
+        &:hover {
+            .fullscreen-indicator {
+                opacity: 0.8;
+                transition: all 300ms;
+            }
+        }
+    }
+    .f-thumbs__slide__button {
+        border-radius: 6px;
+        overflow: hidden;
+    }
+
+    .form-container {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    input[type="range"] {
+        cursor: pointer;
+    }
+
+    .buttons {
+        gap: 24px;
+        position: sticky;
+        bottom: -16px;
+        background: white;
+    }
+
+    .image-gallery {
+        height: 320px;
+    }
+
+    @media screen and (max-width: 991px) {
+        .survey-tabs {
+            padding: 24px;
+            max-height: 360px;
+            min-height: 360px;
+        }
+        .content {
+            max-height: 378px;
+            overflow: auto;
+        }
+        .nav {
+            flex-direction: row;
+            padding: 0;
+            flex-grow: 1;
+            .nav-link {
+                flex-grow: 1;
+                display: flex;
+                padding: 12px;
+                align-items: flex-end;
+                justify-content: center;
+                gap: 8px;
+                align-self: stretch;
+                color: map.get($colors, "gray-100");
+                &.active {
+                    border-bottom: 2px solid map.get($colors, "primary-70");
+                    border-left: 0;
+                }
+            }
+        }
+        .buttons {
+            bottom: -16px;
+            padding-top: 12px;
+            padding-bottom: 12px;
+        }
+        .image-gallery {
+            height: 200px;
+        }
+    }
+
+    .carousel-indicators {
+        bottom: -32px !important;
+        opacity: 1;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    .carousel-indicators [data-target] {
+        height: 8px;
+        border-radius: 8px;
+        background-color: #eeeeee;
+        border-top: 0;
+        border-bottom: 0;
+        opacity: 1;
+        position: relative;
+        transition: all 300ms ease-in-out;
+    }
+    .carousel-indicators [data-target].active {
+        opacity: 1;
+        flex: 10%;
+        position: relative;
+        background: #b3b3b3;
+        span {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background: #959595 !important;
+            border-radius: inherit;
         }
     }
 }
