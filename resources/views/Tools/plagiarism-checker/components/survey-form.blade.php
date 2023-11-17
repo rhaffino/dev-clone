@@ -18,8 +18,8 @@
                         <div class="flex-1">9</div>
                         <div class="flex-1">10</div>
                     </div>
-                    <input type="range" name="interest" id="interest" class="form-range w-100" min="1" max="10"
-                        step="1" value="5">
+                    <input type="range" name="interest" id="interest" class="form-range w-100" min="1"
+                        max="10" step="1" value="5">
                     <div class="d-flex justify-content-between align-items-center w-100 text-dark-20">
                         <div>Not Interested</div>
                         <div>Very interested</div>
@@ -41,8 +41,8 @@
                         <div class="flex-1">9</div>
                         <div class="flex-1">10</div>
                     </div>
-                    <input type="range" name="frequency" id="frequency" class="form-range w-100" min="1" max="10"
-                        step="1" value="5">
+                    <input type="range" name="frequency" id="frequency" class="form-range w-100" min="1"
+                        max="10" step="1" value="5">
                     <div class="d-flex justify-content-between align-items-center w-100 text-dark-20">
                         <div>Very rarely</div>
                         <div>Very often</div>
@@ -81,6 +81,8 @@
                     $(".survey-success-container").show()
                     toastr.success('Form submitted, thank you!')
                     $("#submit-survey-btn").prop("disabled", false)
+
+                    localStorage.setItem('isFilledPlagiarism', 'true');
                 },
                 error: (e) => {
                     console.log('error', e);

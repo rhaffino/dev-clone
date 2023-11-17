@@ -73,6 +73,13 @@
 
 @push('script')
     <script src="{{ asset('js/logic/plagiarism-survey.js') }}"></script>
+    <script>
+        const isFilledPlagiarism = localStorage.getItem('isFilledPlagiarism');
+        if (isFilledPlagiarism) {
+            $(".form-element").hide()
+            $(".survey-success-container").show()
+        }
+    </script>
     <script type="application/ld+json">
     {
         "@context": "https://schema.org/",
