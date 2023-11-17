@@ -1,10 +1,9 @@
 <form class="tab-pane-inner" id="plagiarism-checker-form">
     <div class="upper class-name d-flex flex-column gap-5">
-        <h1 class="h4-700 h4-m-700">Plagiarism Checker Survey</h1>
+        <h1 class="h4-700 h4-m-700">@lang('plagiarism.survey-title')</h1>
         <div class="form-container pt-4">
             <div>
-                <label for="" class="b1-400 b1-m-400">How interested are you in using the cmlabs Plagiarism
-                    Checker?</label>
+                <label for="" class="b1-400 b1-m-400">@lang('plagiarism.survey-q1')</label>
                 <div class="input-group w-100">
                     <div class="d-flex justify-content-between align-items-center w-100 text-dark-20">
                         <div class="flex-1">1</div>
@@ -21,13 +20,13 @@
                     <input type="range" name="interest" id="interest" class="form-range w-100" min="1"
                         max="10" step="1" value="5">
                     <div class="d-flex justify-content-between align-items-center w-100 text-dark-20">
-                        <div>Not Interested</div>
-                        <div>Very interested</div>
+                        <div>@lang('plagiarism.survey-q1-left')</div>
+                        <div>@lang('plagiarism.survey-q1-right')</div>
                     </div>
                 </div>
             </div>
             <div>
-                <label for="" class="b1-400 b1-m-400">How often do you use plagiarism checker?</label>
+                <label for="" class="b1-400 b1-m-400">@lang('plagiarism.survey-q2')</label>
                 <div class="input-group w-100">
                     <div class="d-flex justify-content-between align-items-center w-100 text-dark-20">
                         <div class="flex-1">1</div>
@@ -44,8 +43,8 @@
                     <input type="range" name="frequency" id="frequency" class="form-range w-100" min="1"
                         max="10" step="1" value="5">
                     <div class="d-flex justify-content-between align-items-center w-100 text-dark-20">
-                        <div>Very rarely</div>
-                        <div>Very often</div>
+                        <div>@lang('plagiarism.survey-q2-left')</div>
+                        <div>@lang('plagiarism.survey-q2-right')</div>
                     </div>
                 </div>
             </div>
@@ -53,10 +52,10 @@
     </div>
     <div class="buttons d-flex align-items-center justify-content-end gap-3">
         <button type="button" class="btn button-gray-10" onclick="$('#nav-hiw-tab').trigger('click')">
-            Back
+            @lang('plagiarism.nav-back')
         </button>
         <button type="submit" id="submit-survey-btn" class="btn button-primary-70">
-            Submit
+            @lang('plagiarism.nav-submit')
         </button>
     </div>
 </form>
@@ -79,19 +78,19 @@
                     window.scrollTo(0, 0)
                     $(".form-element").hide()
                     $(".survey-success-container").show()
-                    toastr.success('Form submitted, thank you!')
+                    toastr.success('@lang("plagiarism.toast-success")')
                     $("#submit-survey-btn").prop("disabled", false)
 
                     localStorage.setItem('isFilledPlagiarism', 'true');
                 },
                 error: (e) => {
                     console.log('error', e);
-                    toastr.error('Something error, please try again')
+                    toastr.error('@lang("plagiarism.toast-error")')
                     $("#submit-survey-btn").prop("disabled", false)
                 },
                 failed: () => {
                     console.log('failed');
-                    toastr.error('Something error, please try again')
+                    toastr.error('@lang("plagiarism.toast-error")')
                     $("#submit-survey-btn").prop("disabled", false)
                 }
             });

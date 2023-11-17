@@ -76,4 +76,43 @@ return [
     "broaden" => "Broaden your SEO knowledge",
     "launch" => "LAUNCH",
     "highlight" => "Are you tired of spending hours double-checking your work for plagiarism? Now, embrace your writing with our ultimate safeguard against content duplication, Plagiarism Checker (by Copyscape). Powered by cutting-edge algorithms, our tool will scan your text with lightning speed so that you can rest easy knowing your content is authentic.",
+
+    // SURVEY
+    "tab-intro" => "Intro",
+    "tab-hiw" => "How it Works",
+    "tab-survey" => "Survey",
+    
+    "nav-hiw" => "See How It Works",
+    "nav-survey" => "Fill Survey",
+    "nav-submit" => "Submit",
+    "nav-back" => "Back",
+    
+    "intro-title" => "Help Us Know <br>What You Are Interested In",
+    "intro-desc" => [
+        'We are conducting a survey to one of our tool called <strong>Plagiarism Checker</strong>. If you are interested in this tool and wanted to know more about it, you can go to the next step.',
+        'We are conducting a survey to one of our tool called <strong>Plagiarism Checker</strong>. If you are interested in this tool and wanted to know more about it, you can go to the next step.',
+    ],
+    "intro-list" => [
+        'Lorem ipsum dolor sit amet consectetur. In sit vestibulum enim commodo.',
+        'Lorem ipsum dolor sit amet consectetur. In sit vestibulum enim commodo.',
+        'Lorem ipsum dolor sit amet consectetur. In sit vestibulum enim commodo.',
+    ],
+    
+    "hiw-title" => "See How It Works",
+    "see-fullscreen" => "See fullscreen",
+    
+    "survey-title" => "Plagiarism Checker Survey",
+    "survey-q1" => "How interested are you in using the cmlabs Plagiarism Checker?",
+    "survey-q1-left" => "Not Interested",
+    "survey-q1-right" => "Very interested",
+    "survey-q2" => "How often do you use plagiarism checker?",
+    "survey-q2-left" => "Very rare",
+    "survey-q2-right" => "Very often",
+    
+    "toast-success" => "Form submitted, thank you!",
+    "toast-error" => "Something error, please try again",
+
+    "success-title" => "Response Submitted",
+    "success-desc" => "Thank you for your response. Our team will review your suggestion.",
+    "explore-tools" => "Thank you for your response. Our team will review your suggestion.",
 ];
