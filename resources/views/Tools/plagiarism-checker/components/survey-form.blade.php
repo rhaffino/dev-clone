@@ -79,7 +79,7 @@
                     window.scrollTo(0, 0)
                     $(".form-element").hide()
                     $(".survey-success-container").show()
-
+                    toastr.success('Form submitted, thank you!')
                     $("#submit-survey-btn").prop("disabled", false)
                 },
                 error: (e) => {
