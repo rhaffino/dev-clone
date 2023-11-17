@@ -78,6 +78,7 @@
         if (isFilledPlagiarism) {
             $(".form-element").hide()
             $(".survey-success-container").show()
+            $("#success-title").text('@lang('plagiarism.success-filled-title')')
         }
     </script>
     <script type="application/ld+json">

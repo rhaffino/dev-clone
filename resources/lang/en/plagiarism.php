@@ -113,6 +113,7 @@ return [
     "toast-error" => "Something error, please try again",
 
     "success-title" => "Response Submitted",
+    "success-filled-title" => "Response Already Submitted",
     "success-desc" => "Thank you for your response. Our team will review your suggestion.",
-    "explore-tools" => "Thank you for your response. Our team will review your suggestion.",
+    "explore-tools" => "Explore other tools",
 ];
