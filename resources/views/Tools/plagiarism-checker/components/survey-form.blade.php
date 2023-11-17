@@ -3,7 +3,7 @@
         <h1 class="h4-700 h4-m-700">Plagiarism Checker Survey</h1>
         <div class="form-container pt-4">
             <div>
-                <label for="" class="b1-400 b1-m-00">How interested are you in using the cmlabs Plagiarism
+                <label for="" class="b1-400 b1-m-400">How interested are you in using the cmlabs Plagiarism
                     Checker?</label>
                 <div class="input-group w-100">
                     <div class="d-flex justify-content-between align-items-center w-100 text-dark-20">
@@ -27,7 +27,7 @@
                 </div>
             </div>
             <div>
-                <label for="" class="b1-400 b1-m-00">How often do you use plagiarism checker?</label>
+                <label for="" class="b1-400 b1-m-400">How often do you use plagiarism checker?</label>
                 <div class="input-group w-100">
                     <div class="d-flex justify-content-between align-items-center w-100 text-dark-20">
                         <div class="flex-1">1</div>
