@@ -38,13 +38,13 @@
                     <div class="nav" id="nav-tab" role="tablist">
                         <button class="flex-1 nav-link active" id="nav-intro-tab" data-toggle="tab" data-target="#nav-intro"
                             type="button" role="tab" aria-controls="nav-intro" aria-selected="true"><i
-                                class="bx bx-sm bxs-megaphone"></i> Intro</button>
+                                class="bx bx-sm bxs-megaphone"></i> @lang('plagiarism.tab-intro')</button>
                         <button class="flex-1 nav-link" id="nav-hiw-tab" data-toggle="tab" data-target="#nav-hiw"
                             type="button" role="tab" aria-controls="nav-hiw" aria-selected="false"><i
-                                class="bx bx-sm bx-images"></i> How it Works</button>
+                                class="bx bx-sm bx-images"></i> @lang('plagiarism.tab-hiw')</button>
                         <button class="flex-1 nav-link" id="nav-survey-tab" data-toggle="tab" data-target="#nav-survey"
                             type="button" role="tab" aria-controls="nav-survey" aria-selected="false"><i
-                                class="bx bx-sm bx-spreadsheet"></i> Survey</button>
+                                class="bx bx-sm bx-spreadsheet"></i> @lang('plagiarism.tab-survey')</button>
                     </div>
                 </div>
                 <div class="col-lg-9 col-12 background-white survey-content form-element">
@@ -73,6 +73,13 @@
 
 @push('script')
     <script src="{{ asset('js/logic/plagiarism-survey.js') }}"></script>
+    <script>
+        const isFilledPlagiarism = localStorage.getItem('isFilledPlagiarism');
+        if (isFilledPlagiarism) {
+            $(".form-element").hide()
+            $(".survey-success-container").show()
+        }
+    </script>
     <script type="application/ld+json">
     {
         "@context": "https://schema.org/",
