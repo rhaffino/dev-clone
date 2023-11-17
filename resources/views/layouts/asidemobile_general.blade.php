@@ -225,6 +225,11 @@
                                     <span class="menu-text">Title and Meta Checker</span>
                                 </a>
                             </li>
+                            <li class="menu-item" aria-haspopup="true">
+                                <a href="/{{ $local }}/plagiarism-checker" class="menu-link">
+                                    <span class="menu-text">Plagiarism Checker</span>
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </li>

@@ -1,11 +1,11 @@
 <div class="tab-pane-inner">
     <div class="upper class-name d-flex flex-column gap-5">
-        <h1 class="h4-700 h4-m-700">See How It Works</h1>
+        <h1 class="h4-700 h4-m-700 mb-4">See How It Works</h1>
         <div>
             <div class="f-carousel" id="myCarousel">
                 <div class="fullscreen-indicator">
                     <i class="bx bx-fullscreen"></i>
-                    Click image to see fullscreen
+                    See fullscreen
                 </div>
                 <div class="f-carousel__slide" data-thumb-src="{{asset('media/images/plagiarism/thumbs/step-1.webp')}}">
                     <img width="640" class="image-gallery"  data-fancybox="gallery" alt=""

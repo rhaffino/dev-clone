@@ -118,7 +118,7 @@
 @endphp
 
 <div id="carouselToolsDesktop" class="carousel slide d-none d-lg-block" data-ride="carousel">
-    <ol class="carousel-indicators">
+    <ol class="carousel-indicators survey">
         @foreach (collect($tools)->chunk(3) as $index => $item)
             @if ($index === 6)
                 @if (auth()->check() && (auth()->check() ? auth()->user()->user_role_id == 3 : false))
@@ -187,7 +187,7 @@
 </div>
 
 <div id="carouselToolsMobile" class="carousel slide d-lg-none" data-ride="carousel">
-    <ol class="carousel-indicators">
+    <ol class="carousel-indicators survey">
         @foreach (collect($tools)->chunk(2) as $index => $item)
             @if ($index === 9)
                 @if (auth()->check() && (auth()->check() ? auth()->user()->user_role_id == 3 : false))
@@ -259,11 +259,11 @@
     </div>
 </div>
 
-@push('scripts')
+{{-- @push('scripts')
     <script>
         document.addEventListener("DOMContentLoaded", (event) => {
             initializeCarousel("carouselToolsDesktop")
             initializeCarousel("carouselToolsMobile")
         });
     </script>
-@endpush
+@endpush --}}
