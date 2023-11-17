@@ -714,6 +714,7 @@ button.radio,
 
     .image-gallery {
         height: 320px;
+        object-fit: cover;
     }
 
     @media screen and (max-width: 991px) {

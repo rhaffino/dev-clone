@@ -259,11 +259,11 @@
     </div>
 </div>
 
-@push('scripts')
+{{-- @push('scripts')
     <script>
         document.addEventListener("DOMContentLoaded", (event) => {
             initializeCarousel("carouselToolsDesktop")
             initializeCarousel("carouselToolsMobile")
         });
     </script>
-@endpush
+@endpush --}}
