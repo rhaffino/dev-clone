@@ -47,7 +47,7 @@
                                 class="bx bx-sm bx-spreadsheet"></i> Survey</button>
                     </div>
                 </div>
-                <div class="col-lg-9 col-12 background-white content form-element">
+                <div class="col-lg-9 col-12 background-white survey-content form-element">
                     <div class="tab-content survey-tabs" id="nav-tabContent">
                         <div class="tab-pane intro-tab fade show active" id="nav-intro" role="tabpanel"
                             aria-labelledby="nav-intro-tab">
