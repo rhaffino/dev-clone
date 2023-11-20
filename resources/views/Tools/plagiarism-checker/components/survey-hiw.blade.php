@@ -9,19 +9,19 @@
                 </div>
                 <div class="f-carousel__slide" data-thumb-src="{{asset('media/images/plagiarism/thumbs/step-1.webp')}}">
                     <img width="640" class="image-gallery"  data-fancybox="gallery" alt="how plagiarism checker cmlabs work step 1"
-                        data-lazy-src="{{asset('media/images/plagiarism/step-1.webp')}}" />
+                        data-lazy-src="{{asset('media/images/plagiarism/step-1-'. $lang. '.webp')}}" />
                 </div>
                 <div class="f-carousel__slide" data-thumb-src="{{asset('media/images/plagiarism/thumbs/step-2.webp')}}">
                     <img width="640" class="image-gallery"  data-fancybox="gallery" alt="how plagiarism checker cmlabs work step 2"
-                        data-lazy-src="{{asset('media/images/plagiarism/step-2.webp')}}" />
+                        data-lazy-src="{{asset('media/images/plagiarism/step-2-'. $lang. '.webp')}}" />
                 </div>
                 <div class="f-carousel__slide" data-thumb-src="{{asset('media/images/plagiarism/thumbs/step-3.webp')}}">
                     <img width="640" class="image-gallery"  data-fancybox="gallery" alt="how plagiarism checker cmlabs work step 3"
-                        data-lazy-src="{{asset('media/images/plagiarism/step-3.webp')}}" />
+                        data-lazy-src="{{asset('media/images/plagiarism/step-3-'. $lang. '.webp')}}" />
                 </div>
                 <div class="f-carousel__slide" data-thumb-src="{{asset('media/images/plagiarism/thumbs/step-4.webp')}}">
                     <img width="640" class="image-gallery"  data-fancybox="gallery" alt="how plagiarism checker cmlabs work step 4"
-                        data-lazy-src="{{asset('media/images/plagiarism/step-4.webp')}}" />
+                        data-lazy-src="{{asset('media/images/plagiarism/step-4-'. $lang. '.webp')}}" />
                 </div>                
             </div>
         </div>
