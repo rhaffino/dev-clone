@@ -89,13 +89,13 @@ return [
     
     "intro-title" => "Help Us Know <br>What You Are Interested In",
     "intro-desc" => [
-        'We are conducting a survey to one of our tool called <strong>Plagiarism Checker</strong>. If you are interested in this tool and wanted to know more about it, you can go to the next step.',
-        'We are conducting a survey to one of our tool called <strong>Plagiarism Checker</strong>. If you are interested in this tool and wanted to know more about it, you can go to the next step.',
+        'We are currently conducting a survey for one of our tools, the <strong>Plagiarism Checker</strong>. Plagiarism Checker is cmlabs tool that can assist you in:',
+        'We invite you to participate as your opinions and feedback are highly valuable. If you are interested and would like to learn more, you can proceed to the next step.',
     ],
     "intro-list" => [
-        'Lorem ipsum dolor sit amet consectetur. In sit vestibulum enim commodo.',
-        'Lorem ipsum dolor sit amet consectetur. In sit vestibulum enim commodo.',
-        'Lorem ipsum dolor sit amet consectetur. In sit vestibulum enim commodo.',
+        'Checking the level of plagiarism in your articles',
+        'Verifying the word count in your articles',
+        'Checking the estimated reading time of your articles',
     ],
     
     "hiw-title" => "See How It Works",
@@ -115,5 +115,5 @@ return [
     "success-title" => "Response Submitted",
     "success-filled-title" => "Response Already Submitted",
     "success-desc" => "Thank you for your response. Our team will review your suggestion.",
-    "explore-tools" => "Explore other tools",
+    "explore-tools" => "Explore Other SEO Tools",
 ];
