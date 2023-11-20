@@ -387,7 +387,7 @@ class ApiController extends Controller
      */
     public function plagiarismSurvey(Request $request) {
         try {
-            if(env('APP_ENV') == 'production' || env('APP_ENV') == 'development') {
+            if(env('APP_ENV') == 'production') {
                 $ipAddress = $request->ip();
                 $location = Location::get($ipAddress);
                 $fullLocation = "IP: $location->ip, Country Code: $location->countryCode, Region Code: $location->regionCode, Region Name:  $location->regionName, City Name: $location->cityName, Zipcode: $location->zipCode, Latitude: $location->latitude, Longitude: $location->longitude";
@@ -398,7 +398,7 @@ class ApiController extends Controller
                 Carbon::now('Asia/Jakarta')->format('l, d F Y H:i:s'),
                 $request->interest ?? 0,
                 $request->frequency ?? 0,
-                $fullLocation ?? 'N/A',
+                $fullLocation ?? 'staging.cmlabs.dev',
             ]]);
 
             return new BaseApiResource(null, 'Submitted');
