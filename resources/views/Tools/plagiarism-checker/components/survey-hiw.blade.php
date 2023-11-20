@@ -1,6 +1,6 @@
 <div class="tab-pane-inner">
     <div class="upper class-name d-flex flex-column gap-5">
-        <h1 class="h4-700 h4-m-700 mb-4">@lang('plagiarism.hiw-title')</h1>
+        <h2 class="h4-700 h4-m-700 mb-4">@lang('plagiarism.hiw-title')</h2>
         <div>
             <div class="f-carousel" id="myCarousel">
                 <div class="fullscreen-indicator">
