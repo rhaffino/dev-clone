@@ -1,6 +1,6 @@
 <form class="tab-pane-inner" id="plagiarism-checker-form">
     <div class="upper class-name d-flex flex-column gap-5">
-        <h1 class="h4-700 h4-m-700">@lang('plagiarism.survey-title')</h1>
+        <h2 class="h4-700 h4-m-700">@lang('plagiarism.survey-title')</h2>
         <div class="form-container pt-4">
             <div>
                 <label for="" class="b1-400 b1-m-400">@lang('plagiarism.survey-q1')</label>
