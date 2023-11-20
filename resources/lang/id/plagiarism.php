@@ -1,7 +1,7 @@
 <?php
 return [
-    "meta-title" => "",
-    "meta-desc" => "",
+    "meta-title" => "Plagiarism Checker cmlabs by CopyScape",
+    "meta-desc" => "Ensure content originality with Plagiarism Checker by CopyScape cmlabs. Detect and prevent plagiarism effortlessly with our powerful online tool. Safeguard your work and maintain integrity with our advanced plagiarism detection solutions.",
 
     "account_usage" => "PENGGUNAAN AKUN",
     "team_usage" => "Penggunaan Tim",
