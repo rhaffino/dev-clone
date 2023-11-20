@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
-@section('title', Lang::get('permutation.meta-title'))
+@section('title', Lang::get('plagiarism.meta-title'))
 
-@section('meta-desc', Lang::get('permutation.meta-desc'))
+@section('meta-desc', Lang::get('plagiarism.meta-desc'))
 
 @section('conical', '/en/plagiarism-checker')
 
