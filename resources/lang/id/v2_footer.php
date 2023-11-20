@@ -22,22 +22,17 @@ return [
     'sub_tool' => 'SEO Tools',
     'sub_resource' => 'Sumber Informasi',
     'sub_company' => 'Perusahaan',
-    'sub_partner' => 'Kolaborasi & Aliansi',
-    'sub_compliance' => 'Penyesuaian ',
+    'sub_partner' => 'Kolaborasi',
+    'sub_compliance' => 'Penyesuaian layanan',
     'sub_info' => 'Informasi',
     'sub_join' => 'Bergabunglah dengan kami!',
 
     'menu_partner' => 'Jadi Partner cmlabs?',
 
-    'menu_visit-jakarta' => "<b>Berencana mengunjungi Jakarta?</b> Ayo hangout",
-    'menu_visit-malang' => '<b>Berencana mengunjungi Malang?</b> Mari bergabung!',
+    'menu_visit-jakarta' => "<b>Mau visit kantor Jkt?</b> Let's hangout",
+    'menu_visit-malang' => "<b>Mau visit kantor Mlg?</b> Join the fun!",
 
     'menu_serp' => 'Keyword Tracker',
-    'menu_service_seo' => 'Jasa SEO',
-    'menu_service_writing' => 'Penulisan Konten SEO',
-    'menu_service_marketing' => 'Pemasaran Konten',
-    'menu_service_backlink' => 'Backlink',
-    'menu_service_backlink_national' => 'Backlink ke Media Nasional',
 
     'menu_tools_webmaster' => 'Untuk Webmaster',
     'menu_tools_writer' => 'Untuk Penulis Artikel',
@@ -98,23 +93,23 @@ return [
     "menu_press_release" => "Press Release",
     "menu_seo_smes" => "SEO for SMEs",
     "menu_testimony" => "Client's Testimony",
-    "menu_insight" => "Insight",
+    "menu_insight" => "Wawasan Umum",
 
     'sub_partnership' => "Partnership",
     'menu_contributor' => "Contributor Program",
 
-    "title-2" => "Tools untuk Spesialis SEO, Penulis & Web Developer",
+    "title-2" => "Tool untuk Spesialis SEO, Penulis Artikel & Web Developer",
 
     'menu_serp' => 'Keyword Tracker',
 
-    'menu_service_seo' => 'Jasa SEO <br><i class="text-primary-70 s-700 b2-m-700">mulai dari Rp10juta</i>',
-    'menu_service_writing' => 'Jasa Penulisan Artikel SEO<br><i class="text-primary-70 s-700 b2-m-700">mulai dari Rp450ribu</i>',
-    'menu_service_marketing' => 'Media Buying <br><i class="text-primary-70 s-700 b2-m-700">mulai dari Rp100juta</i>',
-    'menu_service_expert_writing' => 'Expert Writing <br><i class="text-primary-70 s-700 b2-m-700">mulai dari Rp800ribu</i>',
+    'menu_service_seo' => 'Jasa SEO <br><i class="text-primary-70 s-700 b2-m-700">mulai dari <span class="update-cost" data-id="Rp10m" data-usd="USD 698" data-cost="10000000"></span></i>',
+    'menu_service_writing' => 'Jasa Penulisan Artikel SEO<br><i class="text-primary-70 s-700 b2-m-700">mulai dari <span class="update-cost" data-id="Rp450k" data-usd="-" data-cost="450000"></span></i>',
+    'menu_service_expert_writing' => 'Expert Writing <br><i class="text-primary-70 s-700 b2-m-700">mulai dari <span class="update-cost" data-id="Rp800k" data-usd="-" data-cost="800000"></span></i>',
+    'menu_service_marketing' => 'Media Buying <br><i class="text-primary-70 s-700 b2-m-700">mulai dari <span class="update-cost" data-id="Rp100m" data-usd="-" data-cost="100000000"></span></i>',
     'menu_service_backlink' => 'Backlink dari Blogger',
     'menu_service_political' => 'SEO untuk Kampanye Politik',
     'menu_service_pr' => 'PR / Advertorial',
-    'menu_service_cta' => 'Hanya untuk Anda!!<br><i class="s-700 b2-m-700 font-italic">Dapatkan sekarang..</i>',
+    'menu_service_cta' => 'Hanya untuk Anda!!<br><i class="s-700 b2-m-700 text-danger-70 font-italic">Dapatkan sekarang..</i>',
 
     "menu_become-partner" => "Menjadi Mitra,<br><i class='text-success-70 s-700 b2-m-700'>untuk Agensi</i>",
     "menu_affiliate" => "Program Afiliasi,<br><i class='text-success-70 s-700 b2-m-700'>untuk Bizdev</i>",
@@ -132,10 +127,10 @@ return [
     "menu_blog" => "cmlabs Blog",
     "menu_terms" => "Kamus SEO",
     "menu_guidelines" => "Panduan SEO",
-    "menu_insight" => "Insight",
+    "menu_insight" => "Wawasan Umum",
     "menu_ebook" => "E-Book Gratis",
     "menu_news" => "cmlabs News",
-    'menu_class' => 'cmlabs Class<br><i class="text-yellow-80 s-700 b2-m-700">Acara Eksklusif</i>',
+    'menu_class' => 'cmlabs Class<br><i class="text-purple-70 s-700 b2-m-700">Acara Eksklusif</i>',
 
     "menu_notif" => "Pusat Pemberitahuan",
     "menu_client" => "Testimoni Klien",
@@ -151,5 +146,23 @@ return [
     "badge-desc" => "Psst! Hai, perusahaan SEO Stats and Tools! <strong>Jika berencana untuk menguasai pasar Indonesia</strong>, Anda telah datang ke tempat yang tepat! ",
     "badge-desc-cta" => "Mari kita wujudkan rencana itu menjadi kenyataan!",
 
-    "copyright" => "HAK CIPTA"
+    "copyright" => "HAK CIPTA",
+    
+    "explore-comp" => "Jelajahi penyesuaian kami",
+
+    "partnership-tag" => "BIAYA COST-EFFECTIVE, HINGGA 5%!",
+    "partnership-title" => "KAMI TERBUKA UNTUK KERJASAMA DENGAN BERBAGAI NICHE",
+    "partnerships" => [
+        "Organisasi Waralaba",
+        "Institusi Pendidikan",
+        "Perusahaan Jasa Profesional",
+        "Inkubator / Akselerator Startup",
+        "...dan 34 lainnya"
+    ]
 ];
+
+
+
+
+
+
