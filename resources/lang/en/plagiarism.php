@@ -1,7 +1,7 @@
 <?php
-return [
-    "meta-title" => "Plagiarism Checker oleh CopyScape",
-    "meta-desc" => "Pastikan keaslian konten dengan Plagiarism Checker cmlabs oleh CopyScape. Temukan dan cegah plagiarisme dengan mudah menggunakan alat online kami yang powerful. Lindungi karya Anda dan pertahankan integritas dengan solusi deteksi plagiarisme kami yang canggih.",
+return [    
+    "meta-title" => "Plagiarism Checker by CopyScape",
+    "meta-desc" => "Ensure content originality with Plagiarism Checker by CopyScape cmlabs. Detect and prevent plagiarism effortlessly with our powerful online tool. Safeguard your work and maintain integrity with our advanced plagiarism detection solutions.",
 
     "account_usage" => "ACCOUNT USAGE",
     "team_usage" => "Team Usage",
