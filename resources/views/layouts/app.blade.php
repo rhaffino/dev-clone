@@ -161,6 +161,7 @@
     </div>
 
     @include('v2.components.widget.floating-notification')
+    @include('v2.components.carousel-progress-script')
 
     <!--end::Scrolltop-->
     <!--end::Demo Panel-->
