@@ -525,7 +525,7 @@ id/pagespeed-test
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js"></script>
 <script src="{{asset('js/logic/trigerEnterButton.js')}}"></script>
-<script src="{{asset('js/logic/pagespeed.js')}}"></script>
+<script src="{{asset('js/logic/pagespeed.js')}}?9837"></script>
 @if (!session()->has('logged_in') || session()->get('logged_in') != 'true' && $access_limit <= 0)
     <script>
         $(function(){
