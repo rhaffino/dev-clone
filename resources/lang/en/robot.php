@@ -64,7 +64,7 @@ return [
                     <p>To create a robots.txt file using this tool, follow these steps:</p>',
     "howto2" => '<h4 class="sub-titles">Go to Robots.txt Generator Page</h4>
                     <p>One way to create a robots.txt file is to visit the robots.txt generator page. On that page, you can set the commands you will give the web crawler.</p>',
-    "howto3" => '<p>Figure 1: The robot.txt generator page view from cmlabs</p>
+    "howto3" => '<p>Figure 1: The robots.txt generator page view from cmlabs</p>
                     <h4 class="sub-titles">Select Access Permission For Default Robot</h4>
                     <p>Specify access permissions for the default web crawlers, whether they are allowed to crawl URLs or not. There are two options that you can choose, namely, allow and disallow.</p>',
     "howto4" => '<p>Figure 2: Dropdown view of the permission options granted to the default robot</p>
@@ -88,7 +88,7 @@ return [
                     <h6 class="sub-titles">Enter Directory / File Path</h6>
                     <p>A directory or file path is a specific location of a page that web crawlers may or may not crawl. You must pay close attention to writing the path because this command distinguishes between upper and lower case letters (eg "/File" and "/file" are considered different paths).</p>',
     "howto10" => '<p>Figure 8: Field to add the path to be crawled by the crawler</p>
-                    <h4 class="sub-titles">Copy Robot.txt</h4>
+                    <h4 class="sub-titles">Copy Robots.txt</h4>
                     <p>After entering the command for the web crawler in the field provided, you will see a preview of the robots.txt file in the right section. You can copy the generated syntax and paste it into the robots.txt file that you have created.</p>',
     "howto11" => '<p>Figure 9: Syntax copy options in the robots.txt generator.</p>
                     <h4 class="sub-titles">Export Syntax Robots.txt</h4>
@@ -101,5 +101,5 @@ return [
                     <p>This tool has options that make it easier for you to find out how to create another robots.txt file. Click the <b>&#34;Reset&#34;</b> option to delete all the commands you set in robots.txt earlier. Next, you can create a new robots.txt configuration file.</p>',
     "howto14" => '<p>Figure 12: Data reset options in the robots.txt generator.</p>',
     "whats-new-1" => "In this latest version, cmlabs added the export feature in the Robot TXT Generator tool. This feature is useful for users to directly check the code on Google Rich Result. The process of crawling websites and reviewing all content is now faster and more precise. You can learn more about this feature by trying it in person.",
-    "whats-new-2" => "In this latest version update, cmlabs added more useragent features. This feature allows more commands that the TXT Generator Robot can receive. So, Robot.txt is more specific in sorting out which content you want to cover and which ones you want to display. Better update for better work.",
+    "whats-new-2" => "In this latest version update, cmlabs added more useragent features. This feature allows more commands that the TXT Generator Robot can receive. So, Robots.txt is more specific in sorting out which content you want to cover and which ones you want to display. Better update for better work.",
 ];

@@ -132,7 +132,7 @@ id
                         <div class="card-body p-7">
                             <div class="text-center">
                                 <i class='text-darkgrey bx bx-mask bx-lg'></i>
-                                <h2 class="h6 text-darkgrey font-weight-bolder">Robot.txt Generator</h2>
+                                <h2 class="h6 text-darkgrey font-weight-bolder">Robots.txt Generator</h2>
                                 <p class="text-darkgrey mb-0">@lang('home.robot-txt-desc')</p>
                             </div>
                         </div>

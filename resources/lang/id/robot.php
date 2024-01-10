@@ -65,7 +65,7 @@ return [
                     <p>Adapun cara membuat file robots.txt menggunakan tool ini adalah sebagai berikut:</p>',
     "howto2" => '<h4 class="sub-titles">Buka Halaman Robots.txt Generator</h4>
                     <p>Salah satu cara membuat file robots.txt yaitu dengan mengunjungi halaman robots.txt generator. Pada halaman tersebut, Anda dapat mengatur perintah yang akan Anda berikan pada web crawler.</p>',
-    "howto3" => '<p>Gambar 1: Tampilan halaman robot.txt generator dari cmlabs</p>
+    "howto3" => '<p>Gambar 1: Tampilan halaman robots.txt generator dari cmlabs</p>
                     <h4 class="sub-titles">Pilih Izin Akses Untuk Robot Default</h4>
                     <p>Tentukan izin akses untuk default web crawler apakah mereka diizinkan untuk merayapi (crawl) URL atau tidak. Terdapat dua opsi yang bisa Anda pilih yaitu izinkan (allow) dan jangan izinkan (disallow).</p>',
     "howto4" => '<p>Gambar 2: Tampilan dropdown opsi izin yang diberikan kepada robot default</p>
@@ -90,7 +90,7 @@ return [
                     <h6 class="sub-titles">Masukkan Direktori / Path File</h6>
                     <p>Direktori atau path file adalah lokasi spesifik dari halaman yang boleh atau tidak boleh dirayapi oleh web crawler. Penulisan path harus benar-benar diperhatikan, sebab perintah ini membedakan huruf besar/kecil (misal: &#34;/File&#34; dan &#34;/file&#34; dianggap sebagai path berbeda).</p>',
     "howto10" => '<p>Gambar 8: Field untuk menambahkan path yang akan dirayapi (crawl) oleh crawler</p>
-                    <h4 class="sub-titles">Salin Syntax Robot.txt</h4>
+                    <h4 class="sub-titles">Salin Syntax Robots.txt</h4>
                     <p>Setelah menginputkan perintah untuk web crawler pada field yang disediakan, Anda akan melihat pratinjau file robots.txt pada bagian kanan. Anda bisa menyalin syntax yang telah dihasilkan tersebut dan menempelnya pada file robots.txt yang telah Anda buat.</p>',
     "howto11" => '<p>Gambar 9: Opsi menyalin syntax pada robots.txt generator.</p>
                     <h4 class="sub-titles">Ekspor Syntax Robots.txt</h4>
@@ -103,5 +103,5 @@ return [
                     <p>Tool ini memiliki opsi yang memudahkan Anda dalam menemukan cara membuat file robots.txt lainnya. Klik opsi <b>&#34;Reset&#34;</b> untuk menghapus seluruh perintah yang Anda atur dalam robots.txt sebelumnya. Selanjutnya, Anda bisa membuat konfigurasi file robots.txt baru.</p>',
     "howto14" => '<p>Gambar 12: Opsi reset data pada robots.txt generator.</p>',
     "whats-new-1" => "Pada versi terbaru ini, kami melengkapi tools Robot TXT Generator dengan fitur export. Fitur ini memudahkan pengguna untuk langsung memeriksa kode di Google Rich Result. Proses merayapi situs web dan meninjau semua konten kini lebih cepat dan tepat. Anda dapat mempelajari lebih dalam tentang fitur ini dengan mencobanya secara langsung.",
-    "whats-new-2" => "Pada update versi terbaru ini, kami menambahkan lebih banyak fitur useragent. Fitur ini memungkinkan lebih banyak perintah yang dapat diterima oleh Robot TXT Generator. Sehingga, Robot.txt lebih spesifik dalam memilah mana konten yang ingin Anda tutup dan mana yang ingin Anda tampilkan. Kami berharap pembaruan ini memudahkan pekerjaan Anda.",
+    "whats-new-2" => "Pada update versi terbaru ini, kami menambahkan lebih banyak fitur useragent. Fitur ini memungkinkan lebih banyak perintah yang dapat diterima oleh Robot TXT Generator. Sehingga, Robots.txt lebih spesifik dalam memilah mana konten yang ingin Anda tutup dan mana yang ingin Anda tampilkan. Kami berharap pembaruan ini memudahkan pekerjaan Anda.",
 ];
