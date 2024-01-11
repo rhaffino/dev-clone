@@ -46,7 +46,7 @@
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item @yield('header-checker')" href="/{{ $local }}/http-header-checker">HTTP Header Checker</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item @yield('robottxt-checker')" href="/{{ $local }}/robottxt-checker">Robot.TXT Checker</a>
+                            <a class="dropdown-item @yield('robottxt-checker')" href="/{{ $local }}/robottxt-checker">Robots.TXT Checker</a>
                         </div>
                     </li>
                     <li class="nav-item ml-7">

@@ -37,7 +37,7 @@
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item @yield('header-checker')" href="/{{ $local }}/http-header-checker">HTTP Header Checker</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item @yield('robotstxt-checker')" href="/{{ $local }}/robotstxt-checker">Robot.TXT Checker</a>
+                            <a class="dropdown-item @yield('robotstxt-checker')" href="/{{ $local }}/robotstxt-checker">Robots.TXT Checker</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item @yield('serp-simulator')" href="/{{ $local }}/serp-simulator">SERP Simulator</a>
                         </div>

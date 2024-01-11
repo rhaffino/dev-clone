@@ -43,7 +43,7 @@
             'link' => 'ssl-checker',
         ],
         [
-            'title' => 'Robot.txt Generator',
+            'title' => 'Robots.txt Generator',
             'desc' => __('home.robot-txt-desc'),
             'icon' => "<i class='text-purple-70 bx bx-mask bx-sm'></i>",
             'link' => 'robotstxt-generator',
