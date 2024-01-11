@@ -21,7 +21,7 @@ return [
     'usp_3' => 'Full access to SEO guideline and terms',
     'usp_3_desc' => 'Learn more about SEO at cmlabs resources',
 
-    'mid_title' => 'Level up your <strong>SEO!</strong>',
+    'mid_title' => 'Odyssey the SEO-Puzzles',
 
     'sub_product' => 'SEO Product',
     'sub_service' => 'Solutions',
@@ -72,7 +72,7 @@ return [
     'find_us' => 'Find us on',
 
     // new lang for welcome-page
-    "bottom_title" => "Level Up Your SEO",
+    "bottom_title" => "Odyssey the SEO-Puzzles",
 
     "menu_seo_consultant" => "SEO Consultant",
     "menu_seo_writing" => "SEO Writing",
