@@ -15,7 +15,7 @@ return [
     'usp_3' => 'Akses penuh ke panduan SEO dan istilahnya',
     'usp_3_desc' => 'Pelajari lebih lanjut tentang SEO di cmlabs',
 
-    'mid_title' => 'Level up your <strong>SEO!</strong>',
+    'mid_title' => 'Odyssey the SEO-Puzzles',
 
     'sub_product' => 'Produk SEO',
     'sub_service' => 'Jasa',
@@ -84,7 +84,7 @@ return [
     "menu_testimony" => "Testimoni Klien",
 
     // new lang for welcome-page
-    "bottom_title" => "Level Up Your SEO",
+    "bottom_title" => "Odyssey the SEO-Puzzles",
 
     "menu_seo_consultant" => "SEO Consultant",
     "menu_seo_writing" => "SEO Writing",
