@@ -310,7 +310,7 @@
         }, {
             "@type": "ListItem",
             "position": 2,
-            "name": "Robot.txt Generator",
+            "name": "Robots.txt Generator",
             "item": "{{url('/')}}/{{$local}}/robotstxt-generator"
         }]
     }
