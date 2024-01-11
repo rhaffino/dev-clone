@@ -2,7 +2,7 @@
 return [
     "meta-title" => "Robots.txt Generator SEO - Kustom & Cek File robots.txt Gratis disini!",
     "meta-desc" => "Gunakan robots.txt generator untuk mengatur indexing status laman. Bantu Google mengoptimasi dan tingkat performa web Anda.",
-    "title" => "ROBOT.TXT GENERATOR",
+    "title" => "ROBOTS.TXT GENERATOR",
     "subtitle" => "Buat file robots.txt dengan mudah",
     "label-robot-access" => "Akses robot default",
     "placeholder-robot-access" => "Pilih akses",

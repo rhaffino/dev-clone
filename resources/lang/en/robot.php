@@ -2,7 +2,7 @@
 return [
     "meta-title" => "Robots.txt Generator for SEO - Custom and Check robots.txt File in Free",
     "meta-desc" => "Use robots.txt generator to set the index status of the link on your website. Helps Google optimize dan improve your web performance.",
-    "title" => "ROBOT.TXT GENERATOR",
+    "title" => "ROBOTS.TXT GENERATOR",
     "subtitle" => "Generate robots.txt file easily",
     "label-robot-access" => "Default robot access",
     "placeholder-robot-access" => "Select Access",
