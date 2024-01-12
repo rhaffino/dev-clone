@@ -15,7 +15,7 @@ return [
     'usp_3' => 'Akses penuh ke panduan SEO dan istilahnya',
     'usp_3_desc' => 'Pelajari lebih lanjut tentang SEO di cmlabs',
 
-    'mid_title' => 'Odyssey the SEO-Puzzles',
+    'mid_title' => 'Supervene Search Odyssey',
 
     'sub_product' => 'Produk SEO',
     'sub_service' => 'Jasa',
@@ -84,7 +84,7 @@ return [
     "menu_testimony" => "Testimoni Klien",
 
     // new lang for welcome-page
-    "bottom_title" => "Odyssey the SEO-Puzzles",
+    "bottom_title" => "Supervene Search Odyssey",
 
     "menu_seo_consultant" => "SEO Consultant",
     "menu_seo_writing" => "SEO Writing",
@@ -147,7 +147,7 @@ return [
     "badge-desc-cta" => "Mari kita wujudkan rencana itu menjadi kenyataan!",
 
     "copyright" => "HAK CIPTA",
-    
+
     "explore-comp" => "Jelajahi penyesuaian kami",
 
     "partnership-tag" => "BIAYA COST-EFFECTIVE, HINGGA 5%!",
@@ -160,9 +160,3 @@ return [
         "...dan 34 lainnya"
     ]
 ];
-
-
-
-
-
-
