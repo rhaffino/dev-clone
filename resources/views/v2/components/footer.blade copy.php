@@ -338,14 +338,14 @@
 									__('v2_footer.menu_disclaimer') </a></li> --}}
                             <li class="d-none d-lg-flex text-gray-100">
                                 <span class="s-400 s-m-400 d-lg-flex align-items-center">@lang('v2_footer.copyright') &copy;
-                                    2019-2023 PT CMLABS INDONESIA DIGITAL</span>
+                                    2019-2024 PT CMLABS INDONESIA DIGITAL</span>
                             </li>
                         </ul>
                     </div>
                 </div>
                 <div class="mt-3 mt-lg-0 col-lg-5 d-flex d-lg-none justify-content-start text-gray-100">
                     <span class="s-700 s-m-700 d-lg-flex align-items-center text-footer">@lang('v2_footer.copyright') &copy;
-                        2019-2023 PT CMLABS INDONESIA DIGITAL</span>
+                        2019-2024 PT CMLABS INDONESIA DIGITAL</span>
                 </div>
             </div>
         </div>
