@@ -442,33 +442,29 @@ function addItem(allAudits, audit, category, group = null) {
             for (let chain of Object.keys(chains)) {
                 table += traceTreeData(chains[chain]);
             }
-            table += "</ul>";
-        } else if (allAudits[audit.id].details.type === "debugdata") {
-            table =
-                '<table style="width:100%;">\n' +
-                "<thead>\n" +
-                "<tr>\n<th>Property</th>\n<th>Value</th>" +
-                "\n</tr>\n" +
-                "</thead>\n" +
-                "<tbody>\n";
-            for (const property in allAudits[audit.id].details.items[0]) {
-                table += "\n<tr>";
-                table += "\n<td>" + property + "</td>";
-                table +=
-                    "\n<td>" +
-                    allAudits[audit.id].details.items[0][property] +
-                    "</td>";
-                table += "\n<tr>";
-            }
-            table += "</tbody>\n" + "</table>";
-        } else if (allAudits[audit.id].details.type === "filmstrip") {
-            table =
-                '<table style="width:100%;">\n' +
-                "<thead>\n" +
-                "<tr>\n<th>Timestamp</th>\n<th>Timing</th>\n<th>Data</th>" +
-                "\n</tr>\n" +
-                "</thead>\n" +
-                "<tbody>\n";
+            table += "</ul>"
+        } else if (allAudits[audit.id].details.type === 'debugdata') {
+            // table = "<table style=\"width:100%;\">\n" +
+            //         "<thead>\n" +
+            //         "<tr>\n<th>Property</th>\n<th>Value</th>"+
+            //         "\n</tr>\n" +
+            //         "</thead>\n" +
+            //         "<tbody>\n";
+            // for (const property in allAudits[audit.id].details.items[0]) {
+            //     table += "\n<tr>";
+            //     table += "\n<td>" + property + "</td>";
+            //     table += "\n<td>" + allAudits[audit.id].details.items[0][property] + "</td>";
+            //     table += "\n<tr>"
+            // }
+            // table += "</tbody>\n" +
+            //         "</table>";
+        } else if (allAudits[audit.id].details.type === 'filmstrip') {
+            table = "<table style=\"width:100%;\">\n" +
+                    "<thead>\n" +
+                    "<tr>\n<th>Timestamp</th>\n<th>Timing</th>\n<th>Data</th>"+
+                    "\n</tr>\n" +
+                    "</thead>\n" +
+                    "<tbody>\n";
             for (const property of allAudits[audit.id].details.items) {
                 table += "\n<tr>";
                 table += "\n<td>" + property["timestamp"] + "</td>";
@@ -558,10 +554,10 @@ function addItem(allAudits, audit, category, group = null) {
     jQuery(`.${category}-audit #${groupId} pre`).each(function () {
         // Get the HTML content of the <pre> element
         var htmlContent = jQuery(this).html();
-        
+
         // Convert the HTML content to a plain string
         var plainTextContent = jQuery('<div>').html(htmlContent).text();
-        
+
         // Set the plain string as the new content of the <pre> element
         jQuery(this).html(plainTextContent);
     });

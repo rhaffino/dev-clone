@@ -86,7 +86,7 @@
 						</div>
 					</div>
 					<div class="col-lg-12 text-center col-copyright">
-						<span class="h4 custom-copyright">Copyright &copy; 2023 <a href="https://cmlabs.co/" class="copyright-link" target="_blank">CMLABS</a></span>
+						<span class="h4 custom-copyright">Copyright &copy; 2024 <a href="https://cmlabs.co/" class="copyright-link" target="_blank">CMLABS</a></span>
 					</div> 
 		</div>
 	</div>
