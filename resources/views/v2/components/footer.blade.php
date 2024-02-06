@@ -437,4 +437,42 @@
                 console.error("Fetch error:", error);
             });
     </script>
+    <script>
+        function convertAndFillUSD() {
+            const USD_EXCHANGE_RATE = document.getElementById("usd-idr-footer").value;
+
+            const priceElements = document.querySelectorAll('.update-cost');
+
+            priceElements.forEach(priceElement => {
+                const idrValue = parseFloat(priceElement.getAttribute('data-cost'));
+                const usdValue = (idrValue / USD_EXCHANGE_RATE);
+
+                const formattedUSDValue = usdValue.toFixed(2);
+                const usdValueWithoutDecimal = usdValue === Math.floor(usdValue) ? Math.floor(usdValue) :
+                    formattedUSDValue;
+
+                priceElement.textContent = priceElement.getAttribute("data-id");
+            });
+        }
+
+        async function fetchExchangeRate() {
+            try {
+                const response = await fetch('https://currency-exchange.p.rapidapi.com/exchange?from=USD&to=IDR&q=1', {
+                    method: 'GET',
+                    headers: {
+                        'X-RapidAPI-Key': '77fe18d216mshbe7bb1d4de0b02ap1553e1jsnb8c5add91843',
+                        'X-RapidAPI-Host': 'currency-exchange.p.rapidapi.com'
+                    }
+                });
+                const result = await response.text();
+                document.getElementById("usd-idr-footer").value = result
+
+                convertAndFillUSD()
+            } catch (error) {
+                console.error(error);
+            }
+        }
+
+        fetchExchangeRate();
+    </script>
 @endpush
