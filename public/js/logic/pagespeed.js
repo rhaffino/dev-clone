@@ -28,83 +28,8 @@ toastr.options = {
 const categories = ['performance', 'accessibility', 'best-practices', 'seo', 'pwa'];
 hideResult();
 triggerEnter('#analysis-button', '#url');
-jQuery('#analysis-button').click(function () {
-    let match = /^(http(s)?|ftp):\/\//;
-    let urlWeb = jQuery('#url').val().replace(match, "");
-    let title = '';
-    let button = '';
-    let htmlFill = '';
-    if (lang === 'en') {
-        title = 'The crawling process will take some time';
-        button = 'Cancel';
-        htmlFill = 'While waiting please read our blog <a href="javascript:window.open(\'https://cmlabs.co/blog/\')" style="text-decoration: underline">here</a>'
-    } else {
-        title = 'Proses crawling akan memakan waktu';
-        button = 'Batal';
-        htmlFill = 'Sambil menunggu silahkan baca blog kami <a href="javascript:window.open(\'https://cmlabs.co/blog/\')" style="text-decoration: underline">disini</a>'
-    }
-    Swal.fire({
-        title: title,
-        html: htmlFill,
-        showCancelButton: true,
-        cancelButtonColor: '#FE2151',
-        allowClickOutside: false,
-        cancelButtonText: button,
-        // timer:0,
-        // timerProgressBar:true,
-        onBeforeOpen: () => {
-            // $('#swal2-content').after('<div class="spinner spinner-primary spinner-lg mr-15 spinner-right"></div>');
-            // $('.swal2-confirm').after('<br>')
-            // Swal.enableButtons();
-            $('.swal2-actions').css('flex-direction', 'column');
-            $('.swal2-actions').css('flex-direction', 'column');
-            $('.swal2-actions').css('flex-wrap', 'nowrap');
-            $('.swal2-actions').css('justify-content', 'flex-start');
-            $('.swal2-actions').css('align-items', 'center');
-            $('.swal2-actions').css('align-content', 'center');
-            $('.swal2-confirm').addClass('mb-9');
-            Swal.showLoading();
-        }
-    }).then((result) => {
-        if (result.dismiss === 'cancel') {
-            loader.abort();
-        }
-    });
-    // jQuery('#spinner').addClass('spinner spinner-success spinner-right');
-    hideResult();
-    jQuery('#container-loader').css('display', 'block');
-    loader = jQuery.ajax({
-        url: 'https://pagespeedonline.googleapis.com/pagespeedonline/v5/runPagespeed?category=ACCESSIBILITY&category=BEST_PRACTICES&category=PERFORMANCE&category=PWA&category=SEO&url=' + encodeURIComponent('https://' + urlWeb) + '&key=AIzaSyDjg7PenszK_cEZfg4tzvOlKFmnufwxVLs',
-        success: function (data) {
-            try {
-                increaseCounter('page-speed-counter')
-                closeCta()
-                renderResult(data)
-                refreshLocalStorage();
-                checkCounter('page-speed-counter', () => showCta(data))
-                saveData(data)
-                recordUserActivity('https://' + urlWeb);
-            } catch (e) {
-                Swal.close()
-                toastr.error(e)
-            }
-        },
-        error: function (response) {
-            // jQuery('#spinner').removeClass('spinner spinner-success spinner-right');
-            // console.log(response);
-            if (response.statusText === 'abort') {
-                if (lang === 'en')
-                    toastr.error('Cancel button clicked', 'Cancel');
-                else toastr.error('Anda membatalkan proses', 'Batal');
-            } else {
-                if (lang === 'en')
-                    toastr.error('Url not found or something went wrong. Use https:// or http://', 'Error');
-                else toastr.error('Url tidak ditemukan atau terjadi sesuatu yang salah. Gunakan https:// atau http://', 'Error');
-            }
-            Swal.close();
-        }
-    });
-});
+
+jQuery('#analysis-button').click(analyze);
 
 function showCta(data){
     let score = (data.lighthouseResult.categories.performance.score * 100).toFixed(0);
@@ -728,7 +653,24 @@ function recordUserActivity(_url) {
     })
 }
 
+function checkAutoRun(){
+    // get query params, if url and auto run exist, run the analyze function
+    const params = new Proxy(new URLSearchParams(window.location.search), {
+        get: (searchParams, prop) => searchParams.get(prop),
+    });
+    
+    let url = params.url;
+    let autoRun = params.auto;
+
+    if(url && autoRun){
+        $("#url").val(url)
+        analyze()
+    }
+}
+
 $(document).ready(function () {
+    checkAutoRun()
+
     $("#performancePB").click(function () {
         $("#performance").fadeIn().removeClass("d-none").addClass("d-block");
         $("#accessibility").removeClass("d-block").addClass("d-none").fadeOut();
@@ -800,3 +742,81 @@ $(document).ready(function () {
         $("#pwaPB").addClass("active");
     });
 });
+
+function analyze() {
+    let match = /^(http(s)?|ftp):\/\//;
+    let urlWeb = jQuery('#url').val().replace(match, "");
+    let title = '';
+    let button = '';
+    let htmlFill = '';
+    if (lang === 'en') {
+        title = 'The crawling process will take some time';
+        button = 'Cancel';
+        htmlFill = 'While waiting please read our blog <a href="javascript:window.open(\'https://cmlabs.co/blog/\')" style="text-decoration: underline">here</a>'
+    } else {
+        title = 'Proses crawling akan memakan waktu';
+        button = 'Batal';
+        htmlFill = 'Sambil menunggu silahkan baca blog kami <a href="javascript:window.open(\'https://cmlabs.co/blog/\')" style="text-decoration: underline">disini</a>'
+    }
+    Swal.fire({
+        title: title,
+        html: htmlFill,
+        showCancelButton: true,
+        cancelButtonColor: '#FE2151',
+        allowClickOutside: false,
+        cancelButtonText: button,
+        // timer:0,
+        // timerProgressBar:true,
+        onBeforeOpen: () => {
+            // $('#swal2-content').after('<div class="spinner spinner-primary spinner-lg mr-15 spinner-right"></div>');
+            // $('.swal2-confirm').after('<br>')
+            // Swal.enableButtons();
+            $('.swal2-actions').css('flex-direction', 'column');
+            $('.swal2-actions').css('flex-direction', 'column');
+            $('.swal2-actions').css('flex-wrap', 'nowrap');
+            $('.swal2-actions').css('justify-content', 'flex-start');
+            $('.swal2-actions').css('align-items', 'center');
+            $('.swal2-actions').css('align-content', 'center');
+            $('.swal2-confirm').addClass('mb-9');
+            Swal.showLoading();
+        }
+    }).then((result) => {
+        if (result.dismiss === 'cancel') {
+            loader.abort();
+        }
+    });
+    // jQuery('#spinner').addClass('spinner spinner-success spinner-right');
+    hideResult();
+    jQuery('#container-loader').css('display', 'block');
+    loader = jQuery.ajax({
+        url: 'https://pagespeedonline.googleapis.com/pagespeedonline/v5/runPagespeed?category=ACCESSIBILITY&category=BEST_PRACTICES&category=PERFORMANCE&category=PWA&category=SEO&url=' + encodeURIComponent('https://' + urlWeb) + '&key=AIzaSyDjg7PenszK_cEZfg4tzvOlKFmnufwxVLs',
+        success: function (data) {
+            try {
+                increaseCounter('page-speed-counter')
+                closeCta()
+                renderResult(data)
+                refreshLocalStorage();
+                checkCounter('page-speed-counter', () => showCta(data))
+                saveData(data)
+                recordUserActivity('https://' + urlWeb);
+            } catch (e) {
+                Swal.close()
+                toastr.error(e)
+            }
+        },
+        error: function (response) {
+            // jQuery('#spinner').removeClass('spinner spinner-success spinner-right');
+            // console.log(response);
+            if (response.statusText === 'abort') {
+                if (lang === 'en')
+                    toastr.error('Cancel button clicked', 'Cancel');
+                else toastr.error('Anda membatalkan proses', 'Batal');
+            } else {
+                if (lang === 'en')
+                    toastr.error('Url not found or something went wrong. Use https:// or http://', 'Error');
+                else toastr.error('Url tidak ditemukan atau terjadi sesuatu yang salah. Gunakan https:// atau http://', 'Error');
+            }
+            Swal.close();
+        }
+    });
+}

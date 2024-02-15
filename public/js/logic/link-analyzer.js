@@ -380,6 +380,21 @@ function createChart(internal_link_value, external_link_value, nofollow_link_val
     }
 }
 
+function checkAutoRun(){
+    // get query params, if url and auto run exist, run the analyze function
+    const params = new Proxy(new URLSearchParams(window.location.search), {
+        get: (searchParams, prop) => searchParams.get(prop),
+    });
+    
+    let url = params.url;
+    let autoRun = params.auto;
+
+    if(url && autoRun){
+        $("#input-url").val(url)
+        analyze(url)
+    }
+}
+
 $('#input-url').keyup(function() {
     const _url = $(this).val();
     if (checkUrl(_url)) {
