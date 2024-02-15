@@ -662,8 +662,6 @@ function checkAutoRun(){
     let url = params.url;
     let autoRun = params.auto;
 
-    console.log(url, autoRun)
-
     if(url && autoRun){
         $("#url").val(url)
         analyze()
