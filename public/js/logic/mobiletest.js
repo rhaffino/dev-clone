@@ -209,7 +209,9 @@ $(document).ready(function() {
 //     }
 // })
 
-check_url.click(function() {
+check_url.click(generate)
+
+function generate() {
     let _url = data_url.val()
     let protocol = getProtocol(_url)
 
@@ -340,7 +342,7 @@ check_url.click(function() {
             $('#task-done').addClass('d-none')
         }
     })
-})
+}
 
 function renderAllData(result){
     resultdata(result.mobileFriendliness, result.screenshot.data)
@@ -522,6 +524,21 @@ function closeCta() {
     $('#cta-danger').hide()
 }
 
+function checkAutoRun(){
+    // get query params, if url and auto run exist, run the analyze function
+    const params = new Proxy(new URLSearchParams(window.location.search), {
+        get: (searchParams, prop) => searchParams.get(prop),
+    });
+    
+    let url = params.url;
+    let autoRun = params.auto;
+
+    if(url && autoRun){
+        $("#tested_url").val(url)
+        generate()
+    }
+}
+
 $('#cancel-request-btn').click(function() {
     jqueryRequest.abort();
     updateProgressBar(0);
@@ -576,3 +593,7 @@ $('#local-history-mobile').on('click', '.delete-history--btn', function () {
 
     renderAllData(history.data);
 })
+
+$(document).ready(function () {
+    checkAutoRun()
+});
