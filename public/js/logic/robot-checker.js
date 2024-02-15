@@ -413,6 +413,21 @@ function getProtocol(url) {
     }
 }
 
+function checkAutoRun(){
+    // get query params, if url and auto run exist, run the analyze function
+    const params = new Proxy(new URLSearchParams(window.location.search), {
+        get: (searchParams, prop) => searchParams.get(prop),
+    });
+    
+    let url = params.url;
+    let autoRun = params.auto;
+
+    if(url && autoRun){
+        $("#input-url").val(url)
+        analyze($("#input-url").val(), $("#checkResource").is(":checked"), $("#user-agent").val())
+    }
+}
+
 // Interaction
 $("#input-url").keyup(function () {
     const _url = $(this).val();
@@ -495,7 +510,8 @@ $("#crawl-btn").click(function () {
 
 $(document).ready(function () {
     getHistories();
-
+    checkAutoRun()
+    
     $(function () {
         $("body").tooltip({ selector: "[data-toggle=tooltip]" });
     });
