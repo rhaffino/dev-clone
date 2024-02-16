@@ -17,7 +17,7 @@ const constrain = {
     maxDescPixel: 920,
 }
 
-jQuery('#crawlURL').click(function () {
+function generate () {
     let url = jQuery('#url').val();
     $.post({
         url: META_CHECKER_URL,
@@ -54,7 +54,9 @@ jQuery('#crawlURL').click(function () {
             toastr.error(err.responseJSON.message)
         }
     });
-})
+}
+
+jQuery('#crawlURL').click(generate)
 
 $('#title').on('keyup', function () {
     var rateTitle = titleChecker($(this).val());
@@ -443,9 +445,26 @@ function recordUserActivity(_url) {
     })
 }
 
+function checkAutoRun(){
+    // get query params, if url and auto run exist, run the analyze function
+    const params = new Proxy(new URLSearchParams(window.location.search), {
+        get: (searchParams, prop) => searchParams.get(prop),
+    });
+    
+    let url = params.url;
+    let autoRun = params.auto;
+
+    if(url && autoRun){
+        $("#url").val(url)
+        generate()
+    }
+}
+
 $(document).ready(function () {
     $("#crawlURL").attr("disabled", true);
     $("#title").focus();
+    checkAutoRun()
+    
     $('#manualModeOff').click(function () {
         $('#manualModeOn').removeClass("d-none").addClass("d-block");
         $('#botModeOff').removeClass("d-none").addClass("d-block");
