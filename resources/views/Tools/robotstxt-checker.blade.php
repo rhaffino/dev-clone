@@ -47,7 +47,7 @@ id/robotstxt-checker
                             @endforeach
                         </select>
                         @if (session()->has('logged_in') || session()->get('logged_in') == 'true')
-                            <button id="crawl-btn" type="button" class="btn btn-crawl" name="button" data-toggle="tooltip" data-theme="dark" title="@lang('lookup.lookup-btn-tooltip')">@lang('robot-checker.btn-check')</button>
+                            <button id="crawl-btn" type="button" class="btn btn-crawl" name="button" data-theme="dark">@lang('robot-checker.btn-check')</button>
                         @elseif (isset($access_limit) && $access_limit > 0)
                             <button disabled="disabled" type="button" class="btn btn-crawl" name="button" data-toggle="tooltip" data-theme="dark" title="@lang('lookup.lookup-btn-tooltip')">@lang('robot-checker.btn-check')</button>
                         @else
