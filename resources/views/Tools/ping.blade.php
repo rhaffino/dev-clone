@@ -42,7 +42,7 @@ id/ping
                             <option value="ip">@lang('ping.ping-select-ipaddress')</option>
                         </select>
                         @if (session()->has('logged_in') || session()->get('logged_in') == 'true')
-                            <button id="crawl-btn" type="button" class="btn btn-crawl" name="button" data-toggle="tooltip" data-theme="dark" title="@lang('lookup.lookup-btn-tooltip')">@lang('ping.ping-btn')</button>
+                            <button id="crawl-btn" type="button" class="btn btn-crawl" name="button" data-theme="dark">@lang('ping.ping-btn')</button>
                         @elseif (isset($access_limit) && $access_limit > 0)
                             <button disabled="disabled" type="button" class="btn btn-crawl" name="button" data-toggle="tooltip" data-theme="dark" title="@lang('lookup.lookup-btn-tooltip')">@lang('ping.ping-btn')</button>
                         @else
