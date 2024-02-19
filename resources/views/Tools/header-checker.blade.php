@@ -484,7 +484,7 @@ id/http-header-checker
                     </div>
                     <div class="col-sm-3 col-md-2 col-lg-3 col-xl-2 d-flex justify-content-end py-1">
                         @if (session()->has('logged_in') || session()->get('logged_in') == 'true')
-                            <button id="crawl-btn" type="button" class="btn btn-crawl" name="button" data-toggle="tooltip" data-theme="dark" title="@lang('headerchecker.headerchecker-btn-tooltip')">@lang('headerchecker.headerchecker-btn')</button>
+                            <button id="crawl-btn" type="button" class="btn btn-crawl" name="button" data-theme="dark">@lang('headerchecker.headerchecker-btn')</button>
                         @elseif (isset($access_limit) && $access_limit > 0)
                             <button disabled="disabled" type="button" class="btn btn-crawl" name="button" data-toggle="tooltip" data-theme="dark" title="@lang('headerchecker.headerchecker-btn-tooltip')">@lang('headerchecker.headerchecker-btn')</button>
                         @else

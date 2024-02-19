@@ -55,7 +55,7 @@ id/hreflang-checker
                             <button disabled="disabled" type="button" class="btn btn-crawl" name="button">@lang('hreflang.check-btn')</button>
                         @else 
                             <button id="check-btn" class="next-button" style="display: none"></button>
-                            <button id="process-button" type="button" class="btn btn-crawl check-limit-button analysist-button-guest" name="button">@lang('hreflang.check-btn')</button>
+                            <button id="process-button" type="button" class="btn btn-crawl check-limit-button analysist-button-guest" name="button" data-toggle="tooltip" data-theme="dark" title="@lang('serp-simulator.serp-btn-tooltip')">@lang('hreflang.check-btn')</button>
                         @endif
                     </div>
                 </div>
