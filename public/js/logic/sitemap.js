@@ -33,12 +33,13 @@ $(document).ready(function() {
     cancel(false)
     refreshLocalStorage()
     clearTable();
-    const socket = io(URL_API, {
-        transports: ['websocket'],
-        secure: true
-    });
+    let socket;
     triggerEnter('#generate', '#url');
     $('#generate').click(function() {
+        socket = io(URL_API, {
+            transports: ['websocket'],
+            secure: true
+        });
         $(this).prop('disabled', true)
         clearTable();
         rendering.skip = 0;
@@ -55,47 +56,53 @@ $(document).ready(function() {
         buttonOn(false)
         $("#result").empty();
         isCanceled = false;
-    });
 
-    $('#cancelOn').on('click', function() {
-        socket.emit('stop');
-        cancel(false)
-        $("#noCrawlResult").show();
-        $("#generateCrawlResult").hide();
-        $('#info').html(robot_sleep)
-        $('#detail-progress').empty();
-        isCanceled = true;
-        updateProgressBar(0)
-        toastr.error('Cancel your task')
-        $('#generate').prop('disabled', false)
-    });
+        socket.on('update queue', data => {
+            if (!isCanceled) {
+                $('#detail-progress').show()
+                $('#detail-progress').html(data.site_length + has_crawled)
+            }
+        });
+    
+        socket.on('result', response => {
+            clearTable();
+            $('#length-result').html(`(${response.data.length})`)
+            $('#detail-progress').empty()
+            $('#info').html(robot_done)
+            $('#noCrawlResult').hide();
+            buttonOn(true, response.hash)
+            DATA_FINAL = response.data;
+            removeShowMore()
+            renderData()
+            cancel(false)
+            $('#generate').prop('disabled', false)
+            saveData(response)
+            refreshLocalStorage()
+            socket.disconnect()
+            socket = null
+        });
+    
+        socket.on('notfound', msg => {
+            toastr.error('Error', msg)
+            socket.disconnect()
+            socket = null
+        })
 
-    socket.on('update queue', data => {
-        if (!isCanceled) {
-            $('#detail-progress').show()
-            $('#detail-progress').html(data.site_length + has_crawled)
-        }
-    });
-
-    socket.on('result', response => {
-        clearTable();
-        $('#length-result').html(`(${response.data.length})`)
-        $('#detail-progress').empty()
-        $('#info').html(robot_done)
-        $('#noCrawlResult').hide();
-        buttonOn(true, response.hash)
-        DATA_FINAL = response.data;
-        removeShowMore()
-        renderData()
-        cancel(false)
-        $('#generate').prop('disabled', false)
-        saveData(response)
-        refreshLocalStorage()
-    });
-
-    socket.on('notfound', msg => {
-        toastr.error('Error', msg)
-    })
+        $('#cancelOn').on('click', function() {
+            socket?.emit('stop');
+            cancel(false)
+            $("#noCrawlResult").show();
+            $("#generateCrawlResult").hide();
+            $('#info').html(robot_sleep)
+            $('#detail-progress').empty();
+            isCanceled = true;
+            updateProgressBar(0)
+            toastr.error('Cancel your task')
+            $('#generate').prop('disabled', false)
+            socket.disconnect()
+            socket = null
+        });    
+    });    
 });
 
 $('#url').on('input', function() {

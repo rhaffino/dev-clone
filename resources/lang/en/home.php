@@ -1,7 +1,7 @@
 <?php
 $data = count(json_decode(file_get_contents(base_path('resources/js/json/tools.json')),true));
 return [
-    "meta-title" => "29 SEO Tools (Free) English Version \ cmlabs",
+    "meta-title" => "30 SEO Tools (Free) English Version \ cmlabs",
     "meta-desc" => "Check your website with Free SEO tools cmlabs: Page Speed Test, Sitemap Generator, Word Counter, Title & Meta Desc Checker, etc.",
     "lang" => "en",
     "title" => "Free SEO Tools by CMLABS",
@@ -14,7 +14,7 @@ return [
     "sitemap-desc" => "Generator sitemap for developers helps create a sitemap in a script HTML code, know your page details, and make it easier for Google search engine to index your site pages.",
     "mobile-friendly-desc" => "Mobile-Friendly Test is a tool to check the mobile-friendly status of your website. Check for problems and make your website more mobile-friendly for an extensive target market.",
     "ssl-checker-desc" => "Check the validity of the SSL certificate on your website. Get the information using SSL Checker from cmlabs. This tool is available in two languages: Indonesian and English.",
-    "robot-txt-desc" => "Set the index status of the link on your website using the cmlabs robot.txt generator. Help Google optimize the indexing process and improve the performance of your website.",
+    "robot-txt-desc" => "Set the index status of the link on your website using the cmlabs robots.txt generator. Help Google optimize the indexing process and improve the performance of your website.",
     "redirect-checker-desc" => "Redirect Checker is a link analysis tool that linked to a URL with a status code preview. Manage your redirects, get the list and make the best SEO prospect for your website.",
     "technology-lookup-desc" => "The Technology lookup is a tool that effective for revealing the technology applied by a site. Identify the widget and applications to find the best prospects for the web.",
     "link-analyzer-desc" => "Track all the URLs that link to your site from external or internal. Input the link you want to review on the link analyzer, manage the list and get a better SEO performance.",
@@ -26,6 +26,7 @@ return [
     "http-header-checker-desc" => "The HTTP Header Checker is a tool designed to inspect and analyze the headers of Hypertext Transfer Protocol (HTTP) requests as well as responses exchanged between client and server.",
     "robotstxt-checker-desc" => "Robots.txt Checker is a tool designed to simplify the process of validating robots.txt files, maintaining order, protecting your website's valuable assets, and help you align with an accurate SEO strategy.",
     "serp-simulator-desc" => "The SERP Simulator by cmlabs is a tool that allows users to optimize various elements such as title tags, meta descriptions, or keywords, and preview how their website appears in search engine results (SERP).",
+    "meta-generator-desc" => "The Meta Generator is a tool designed to assist the process of creating meta tags and generating them in the appropriate format within the HTML code to ensure that web pages are effectively crawled and indexed by search engines.",
     "last-update" => "Last Update",
     "desc-1" => "Important Note",
     "desc-1-1" => "In using some tools that require you to enter a URL, make sure it is valid. Otherwise, the tool will not function properly.",
@@ -148,10 +149,11 @@ return [
     "desc-3-3-3" => "Developers need a Sitemap Generator and SSL Checker.",
     "desc-3-4" => "When does a Marketer or Product Manager need a cmlabs tool?",
     "desc-3-4-1" => "At the research, production, and audit stages, the cmlabs tool can be used. At the research stage, marketers can see the keyword density of competitors by using the Word Counter tool.",
-    "desc-3-4-2" => "At the development stage, the Product Manager can create an FAQ schema in the SERP by using the JSON-LD Schema FAQ. Apart from that, they can also optimize the appearance of websites on mobile devices using Mobile Friendly Testing. In order to speed up crawling using the Robot.txt Generator, you can also connect robot.txt to the website. The developer at this stage can create an XML sitemap using the Sitemap Generator.",
+    "desc-3-4-2" => "At the development stage, the Product Manager can create an FAQ schema in the SERP by using the JSON-LD Schema FAQ. Apart from that, they can also optimize the appearance of websites on mobile devices using Mobile Friendly Testing. In order to speed up crawling using the Robots.txt Generator, you can also connect robots.txt to the website. The developer at this stage can create an XML sitemap using the Sitemap Generator.",
     "desc-3-4-3" => "In the audit stage, content writers can check the title length and meta description using the Title & Meta Length Checker. SEO experts and developers can check website performance using the PageSpeed ​​Test. At this stage the developer can also check the SSL certificate using SSL Checker.",
     "update_desc" => "cmlabs has recently unveiled 7 cutting-edge tools designed to elevate your SEO games and streamline the process of creating SEO-friendly markup. We released 5 advanced JSON-LD Generators for Websites, Local Businesses, Events, Videos, and Organizations, each catering to specific needs and content types. There is also Robots.txt Checker which enables users to meticulously review and validate their robots.txt files, ensuring that search engine crawlers can efficiently index the content. Lastly, we have SERP Simulator, a tool designed to visualize how your web pages will appear in SERP and help you refine your meta tags and snippets to optimize the presentation of your content and increase organic traffic. Together, these seven tools from cmlabs will be your best allies in maximizing your SEO efforts. Try these tools now!",
     "desc-new-tools-21-aug-2023" => "Embark on a voyage of digital discovery as you engage with real-time metrics that reflect the vitality of your network's health and configuration. Now, you can diagnose your network's health as well as navigate your domain to ensure flawless communication, security, and performance of a website with our best tools, Ping Tool and HTTP Header Checker by cmlabs. Check and elevate your website management now!",
     "check" => "Check",
     "no_notif" => "There is currently no notification...",
+    "desc-new-tools-13-Oct-2023" => "30 Tools for Countless Solutions! cmlabs has reached a remarkable milestone with the release of 30 cutting-edge tools designed to empower businesses and individuals in the digital realm. All 30 tools, from Test & Checker, Sitemap.XML, and Robots.TXT to various JSON-LD Schema Generator, have been launched to address specific needs and challenges across diverse industries. Together with cmlabs tools, you can stand at the forefront of technological advancements. Try our tools based on your needs now!",
 ];

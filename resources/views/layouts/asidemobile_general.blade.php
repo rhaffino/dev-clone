@@ -132,6 +132,11 @@
                                                 <span class="menu-text">Robots .TXT Generator</span>
                                             </a>
                                         </li>
+                                        <li class="menu-item menu-item-children" aria-haspopup="true">
+                                            <a href="/{{ $local }}/meta-generator" class="menu-link">
+                                                <span class="menu-text">Meta Generator</span>
+                                            </a>
+                                        </li>
                                     </ul>
                                 </div>
                             </li>
@@ -194,7 +199,7 @@
                                         </li>
                                         <li class="menu-item menu-item-children" aria-haspopup="true">
                                             <a href="/{{ $local }}/robotstxt-checker" class="menu-link">
-                                                <span class="menu-text">Robot.TXT Checker</span>
+                                                <span class="menu-text">Robots.TXT Checker</span>
                                             </a>
                                         </li>
                                         <li class="menu-item menu-item-children" aria-haspopup="true">
@@ -218,6 +223,11 @@
                             <li class="menu-item" aria-haspopup="true">
                                 <a href="/{{ $local }}/page-title-meta-description-checker" class="menu-link">
                                     <span class="menu-text">Title and Meta Checker</span>
+                                </a>
+                            </li>
+                            <li class="menu-item" aria-haspopup="true">
+                                <a href="/{{ $local }}/plagiarism-checker" class="menu-link">
+                                    <span class="menu-text">Plagiarism Checker</span>
                                 </a>
                             </li>
                         </ul>

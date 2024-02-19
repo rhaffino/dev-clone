@@ -152,7 +152,7 @@ id/robotstxt-checker
 </div>
 @endif
 @component('layouts.new_ui_design', ['local' => $local, 'blogs' => $blogs, 'seo_terms' => $seo_terms, 'seo_guidelines' => $seo_guidelines])
-    @slot('title', 'Robot.txt Checker')
+    @slot('title', 'Robots.txt Checker')
     @slot('subcontent_1')
         <div class="" id="description-tab-1">
             <h2 class="text-black">@lang('robot-checker.desc-1')</h2>
@@ -238,7 +238,7 @@ id/robotstxt-checker
         }, {
             "@type": "ListItem",
             "position": 2,
-            "name": "Robot.txt Checker",
+            "name": "Robots.txt Checker",
             "item": "{{url('/')}}/{{$local}}/robottxt-checker"
         }]
     }

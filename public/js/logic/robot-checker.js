@@ -31,25 +31,27 @@ if (lang == "en") {
 const RobotTemplate = (robots, sitemap, _resource) => {
     const minRows = 10;
     const totalRows = Math.max(minRows, sitemap.length);
-            
+
     if (robots.rawRobots === null) {
         $("#result-status").css("color", "red");
         $("#result-status").html("404 Not Found");
     } else {
         $("#result-status").css("color", "#67B405");
-        $("#result-status").html("200 OK <i class='bx bxs-check-circle bx-sm ml-1 text-green'></i>");
+        $("#result-status").html(
+            "200 OK <i class='bx bxs-check-circle bx-sm ml-1 text-green'></i>"
+        );
     }
 
     if (robots.parser) {
-        if (robots.parser.host === null){
+        if (robots.parser.host === null) {
             var ParserRobots = "-";
-        }else{
+        } else {
             var ParserRobots = robots.parser.host;
         }
-        
-        if (robots.parser.sitemaps === null){
+
+        if (robots.parser.sitemaps === null) {
             var ParserSitemap = "-";
-        }else{
+        } else {
             var ParserSitemap = robots.parser.sitemaps;
         }
     } else {
@@ -111,7 +113,8 @@ const RobotTemplate = (robots, sitemap, _resource) => {
         </script>
     `;
 
-    const scriptScroll = `
+    const scriptScroll =
+        `
         <script>
            $(document).ready(function(){
                 var clickBtnCollapse = 0;
@@ -126,7 +129,9 @@ const RobotTemplate = (robots, sitemap, _resource) => {
                     }
                 });
 
-                if (`+ robots.rawRobots +` === null) {
+                if (` +
+        robots.rawRobots +
+        ` === null) {
                     $("#labelRobots").addClass("d-none");
                     $("#textRobots").addClass("d-none");
                 }else{
@@ -230,12 +235,12 @@ function analyze(_url, _resource) {
                 },
                 success: (res) => {
                     if (res.statusCode === 200) {
-                        $("#result-status").css('display', 'flex');
+                        $("#result-status").css("display", "flex");
                         renderAllData(res.data, _resource);
                         addHistory(_url, res.data);
                         getHistories();
                         toastr.success(
-                            "Success scan robot.txt checker",
+                            "Success scan robots.txt checker",
                             "Success"
                         );
                     } else if (err.responseJSON.statusCode === 429) {
@@ -371,15 +376,10 @@ function addHistory(url, data) {
 }
 
 function deleteHistory(_index) {
-    const histories = JSON.parse(
-        localStorage.getItem(ROBOT_LOCAL_STORAGE_KEY)
-    );
+    const histories = JSON.parse(localStorage.getItem(ROBOT_LOCAL_STORAGE_KEY));
 
     histories.splice(_index, 1);
-    localStorage.setItem(
-        ROBOT_LOCAL_STORAGE_KEY,
-        JSON.stringify(histories)
-    );
+    localStorage.setItem(ROBOT_LOCAL_STORAGE_KEY, JSON.stringify(histories));
 
     getHistories();
 }
@@ -389,8 +389,8 @@ let clearAllHistory = function () {
     getHistories();
 
     $("#result-status").hide();
-    $("#input-url").val('');
-    $("#result-list").html('');
+    $("#input-url").val("");
+    $("#result-list").html("");
     $("#result-list").hide();
     $("#result-empty").show();
 };
@@ -438,7 +438,7 @@ $("#local-history")
         deleteHistory($(this).data("index"));
     })
     .on("click", ".history--list", function (e) {
-        $("#result-status").css('display', 'flex');
+        $("#result-status").css("display", "flex");
         if (e.target.classList.contains("delete-history--btn")) return;
         const _url = $(this).data("url");
 
@@ -458,7 +458,7 @@ $("#local-history-mobile")
         deleteHistory($(this).data("index"));
     })
     .on("click", ".history--list", function (e) {
-        $("#result-status").css('display', 'flex');
+        $("#result-status").css("display", "flex");
         if (e.target.classList.contains("delete-history--btn")) return;
         const _url = $(this).data("url");
 
@@ -488,7 +488,7 @@ $("#crawl-btn").click(function () {
         analyze(
             $("#input-url").val(),
             $("#checkResource").is(":checked"),
-            $("#user-agent").val(),
+            $("#user-agent").val()
         );
     }
 });

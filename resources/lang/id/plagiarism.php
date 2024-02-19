@@ -1,7 +1,7 @@
 <?php
 return [
-    "meta-title" => "",
-    "meta-desc" => "",
+    "meta-title" => "Plagiarism Checker oleh CopyScape",
+    "meta-desc" => "Pastikan keaslian konten dengan Plagiarism Checker cmlabs oleh CopyScape. Temukan dan cegah plagiarisme dengan mudah menggunakan alat online kami yang powerful. Lindungi karya Anda dan pertahankan integritas dengan solusi deteksi plagiarisme kami yang canggih.",
 
     "account_usage" => "PENGGUNAAN AKUN",
     "team_usage" => "Penggunaan Tim",
@@ -76,4 +76,44 @@ return [
     "broaden" => "Perluas pengetahuan Anda tentang SEO",
     "launch" => "LUNCURKAN",
     "highlight" => "Mari cegah penyalinan dan pengutipan tanpa atribusi! Kini, cmlabs menghadirkan Plagiarism Checker (by Copyscape) sebagai solusi terbaik untuk melawan duplikasi konten. Berbekal data dengan basis kecanggihan algoritma, tool ini dapat memindai tulisan Anda dengan cepat untuk mencapai hasil tulisan yang orisinal dan bebas plagiasi.",
+
+    // SURVEY
+    "tab-intro" => "Intro",
+    "tab-hiw" => "Cara Kerja",
+    "tab-survey" => "Survei",
+    
+    "nav-hiw" => "Lihat Cara Kerja",
+    "nav-survey" => "Isi Survei",
+    "nav-submit" => "Kirim",
+    "nav-back" => "Kembali",
+    
+    "intro-title" => "Bantu Kami Mengetahui <br>Apa yang Anda Sukai",
+    "intro-desc" => [
+        'Kami sedang melakukan survei untuk salah satu tool kami, <strong>Plagiarism Checker</strong>. Plagiarism Checker adalah tool cmlabs yang dapat memudahkan Anda dalam:',
+        'Kami mengundang Anda untuk berpartisipasi karena pendapat dan masukan Anda sangat berharga. Jika Anda tertarik dan ingin mengetahuinya lebih jauh, Anda dapat melanjutkan ke langkah berikutnya.',
+    ],
+    "intro-list" => [
+        'Memeriksa level plagiarisme pada artikel Anda',
+        'Memeriksa jumlah kata pada artikel Anda',
+        'Memeriksa estimasi waktu baca artikel Anda',
+    ],
+    
+    "hiw-title" => "Lihat Cara Kerja",
+    "see-fullscreen" => "Lihat layar penuh",
+    
+    "survey-title" => "Survei Plagiarism Checker",
+    "survey-q1" => "Seberapa tertarik Anda menggunakan Plagiarism Checker dari cmlabs?",
+    "survey-q1-left" => "Tidak tertarik",
+    "survey-q1-right" => "Sangat tertarik",
+    "survey-q2" => "Seberapa sering Anda menggunakan plagiarism checker?",
+    "survey-q2-left" => "Sangat jarang ",
+    "survey-q2-right" => "Sangat sering",
+    
+    "toast-success" => "Tanggapan dikirim, terima kasih!",
+    "toast-error" => "Terjadi kesalahan, harap coba lagi",
+
+    "success-title" => "Tanggapan Telah Dikirim",
+    "success-filled-title" => "Anda Sudah Mengisi Tanggapan Ini",
+    "success-desc" => "Terima kasih atas tanggapan Anda. Tim kami akan meninjau saran Anda.",
+    "explore-tools" => "Jelajari SEO Tools Lainnya",
 ];

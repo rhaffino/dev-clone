@@ -377,24 +377,11 @@ function addItem(allAudits, audit, category, group = null) {
                                 } else {
                                     value = "";
                                 }
-                            } else if (
-                                heading["itemType"] === "code" &&
-                                item.hasOwnProperty(heading.key)
-                            ) {
-                                value = converter.makeHtml(
-                                    "`" + item[heading.key].value + "`"
-                                );
-                            } else if (heading["itemType"] === "link") {
-                                value =
-                                    '<a href="' +
-                                    item[heading.key].url +
-                                    '">' +
-                                    subStringUrl(item[heading.key].text) +
-                                    "</a>";
-                            } else if (
-                                heading["itemType"] === "node" ||
-                                heading["valueType"] === "node"
-                            ) {
+                            } else if ((heading['itemType'] === 'code' || heading['valueType'] === 'code') && item.hasOwnProperty(heading.key)) {
+                                value = `<pre>${document.createTextNode(String(item[heading.key])).textContent}</pre>`;
+                            } else if (heading['itemType'] === 'link') {
+                                value = "<a href=\"" + item[heading.key].url + "\">" + subStringUrl(item[heading.key].text) + "</a>"
+                            } else if (heading['itemType'] === 'node') {
                                 if (item[heading.key]) {
                                     if (audit.id === "link-name") {
                                         value =
@@ -455,33 +442,29 @@ function addItem(allAudits, audit, category, group = null) {
             for (let chain of Object.keys(chains)) {
                 table += traceTreeData(chains[chain]);
             }
-            table += "</ul>";
-        } else if (allAudits[audit.id].details.type === "debugdata") {
-            table =
-                '<table style="width:100%;">\n' +
-                "<thead>\n" +
-                "<tr>\n<th>Property</th>\n<th>Value</th>" +
-                "\n</tr>\n" +
-                "</thead>\n" +
-                "<tbody>\n";
-            for (const property in allAudits[audit.id].details.items[0]) {
-                table += "\n<tr>";
-                table += "\n<td>" + property + "</td>";
-                table +=
-                    "\n<td>" +
-                    allAudits[audit.id].details.items[0][property] +
-                    "</td>";
-                table += "\n<tr>";
-            }
-            table += "</tbody>\n" + "</table>";
-        } else if (allAudits[audit.id].details.type === "filmstrip") {
-            table =
-                '<table style="width:100%;">\n' +
-                "<thead>\n" +
-                "<tr>\n<th>Timestamp</th>\n<th>Timing</th>\n<th>Data</th>" +
-                "\n</tr>\n" +
-                "</thead>\n" +
-                "<tbody>\n";
+            table += "</ul>"
+        } else if (allAudits[audit.id].details.type === 'debugdata') {
+            // table = "<table style=\"width:100%;\">\n" +
+            //         "<thead>\n" +
+            //         "<tr>\n<th>Property</th>\n<th>Value</th>"+
+            //         "\n</tr>\n" +
+            //         "</thead>\n" +
+            //         "<tbody>\n";
+            // for (const property in allAudits[audit.id].details.items[0]) {
+            //     table += "\n<tr>";
+            //     table += "\n<td>" + property + "</td>";
+            //     table += "\n<td>" + allAudits[audit.id].details.items[0][property] + "</td>";
+            //     table += "\n<tr>"
+            // }
+            // table += "</tbody>\n" +
+            //         "</table>";
+        } else if (allAudits[audit.id].details.type === 'filmstrip') {
+            table = "<table style=\"width:100%;\">\n" +
+                    "<thead>\n" +
+                    "<tr>\n<th>Timestamp</th>\n<th>Timing</th>\n<th>Data</th>"+
+                    "\n</tr>\n" +
+                    "</thead>\n" +
+                    "<tbody>\n";
             for (const property of allAudits[audit.id].details.items) {
                 table += "\n<tr>";
                 table += "\n<td>" + property["timestamp"] + "</td>";
@@ -549,21 +532,35 @@ function addItem(allAudits, audit, category, group = null) {
     //     "      <p style=\"color:white;\">" + converter.makeHtml(allAudits[audit.id].description) + "</p>\n" +
     //     table +
     //     "    </div>\n");
-    jQuery('.' + category + '-audit #' + groupId).append("<div class=\"card\">\n" +
-        "                        <div class=\"card-header\">\n" +
-        "                            <div class=\"card-title collapsed\" data-toggle=\"collapse\" data-target=\"#" + audit.id + "\">\n" +
-        "<div class=\"mr-3\" style=\"width:15px\">" +
-        "<div class=\"btn btn-icon btn-circle bg-" + color + "\" style=\"height:15px; width:15px\">\n" +
-        "    </div></div><span class=\"title\">" + converter.makeHtml(allAudits[audit.id].title) + "<p class=\"text-" + color + "\">" + displayValue + "</p></span>" +
-        "                            </div>\n" +
-        "                        </div>\n" +
-        "                        <div id=\"" + audit.id + "\" class=\"collapse\" data-parent=\"#" + category + "-audit\">\n" +
-        "                            <div class=\"card-body\">\n" +
-        converter.makeHtml(allAudits[audit.id].description) +
-        table +
-        "                            </div>\n" +
-        "                        </div>\n" +
-        "                    </div>");
+    jQuery(`.${category}-audit #${groupId}`).append(`
+        <div class="card">
+            <div class="card-header">
+                <div class="card-title collapsed" data-toggle="collapse" data-target="#${audit.id}">
+                    <div class="mr-3" style="width:15px">
+                        <div class="btn btn-icon btn-circle bg-${color}" style="height:15px; width:15px"></div>
+                    </div>
+                    <span class="title">${converter.makeHtml(allAudits[audit.id].title)}<p class="text-${color}">${displayValue}</p></span>
+                </div>
+            </div>
+            <div id="${audit.id}" class="collapse" data-parent="#${category}-audit">
+                <div class="card-body pagespeed">
+                    ${converter.makeHtml(allAudits[audit.id].description)}
+                    ${table}
+                </div>
+            </div>
+        </div>
+    `);
+    // Select all child elements with the <pre> tag inside the appended content
+    jQuery(`.${category}-audit #${groupId} pre`).each(function () {
+        // Get the HTML content of the <pre> element
+        var htmlContent = jQuery(this).html();
+
+        // Convert the HTML content to a plain string
+        var plainTextContent = jQuery('<div>').html(htmlContent).text();
+
+        // Set the plain string as the new content of the <pre> element
+        jQuery(this).html(plainTextContent);
+    });
 }
 
 function addListenerForCollapsible() {

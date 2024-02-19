@@ -1,7 +1,7 @@
 <?php
 $data = count(json_decode(file_get_contents(base_path('resources/js/json/tools.json')),true));
 return [
-    "meta-title" => "29 SEO Tools (Gratis) Versi Bahasa Indonesia \ cmlabs",
+    "meta-title" => "30 SEO Tools (Gratis) Versi Bahasa Indonesia \ cmlabs",
     "meta-desc" => "Cek website dengan Free SEO Tools cmlabs: Page Speed Test, Sitemap Generator, Word Counter, Title & Meta Desc Checker, dll",
     "lang" => "id",
     "title" => "SEO Tool Gratis oleh CMLABS",
@@ -14,7 +14,7 @@ return [
     "sitemap-desc" => "Sitemap generator untuk developer membantu membuat sitemap dalam bahasa markup, ketahui detail halaman yang tersedia, dan permudah mesin pencarian Google mengindeks halaman.",
     "mobile-friendly-desc" => "Mobile Friendly Test adalah tool untuk mengecek status mobile-friendly laman situs Anda. Periksa masalah dan buat web Anda lebih ramah handphone untuk target pasar lebih luas.",
     "ssl-checker-desc" => "Cek validitas sertifikat SSL pada website Anda. Dan dapatkan informasinya menggunakan mesin  SSL Checker dari cmlabs. Tool ini tersedia dalam dua bahasa: Indonesia dan Inggris.",
-    "robot-txt-desc" => "Atur status index dari link URL pada website Anda menggunakan robot.txt generator dari cmlabs. Bantu Google mengoptimalkan proses indexing dan tingkatkan performa website Anda.",
+    "robot-txt-desc" => "Atur status index dari link URL pada website Anda menggunakan robots.txt generator dari cmlabs. Bantu Google mengoptimalkan proses indexing dan tingkatkan performa website Anda.",
     "redirect-checker-desc" => "Tool Redirect Checker adalah alat peninjau daftar link yang terhubung dengan sebuah URL lengkap dengan kode status dari tautan. Kelola link redirect untuk SEO yang tepat.",
     "technology-lookup-desc" => "Technology lookup berguna mengenali detail teknologi yang diterapkan sebuah situs. Identifikasi bahasa, alat widget dan versi lengkap untuk temukan prospek terbaik bagi web.",
     "link-analyzer-desc" => " Lacak tautan yang terhubung dengan situs Anda dari eksternal atau internal. Cukup masukkan URL yang ingin ditinjau dengan link analyzer dan pilih apakah Anda menginginkannya. ",
@@ -26,6 +26,7 @@ return [
     "http-header-checker-desc" => "HTTP Header Checker adalah alat yang dirancang untuk memeriksa dan menganalisis header permintaan Hypertext Transfer Protocol (HTTP) serta respons yang dipertukarkan antara klien dan server.",
     "robotstxt-checker-desc" => "Robots.txt Checker adalah tool yang dirancang khusus untuk menyederhanakan proses validasi file robots.txt, melindungi aset berharga situs web Anda, serta membantu Anda menyesuaikan strategi SEO yang akurat.",
     "serp-simulator-desc" => "SERP Simulator dari cmlabs adalah tool yang memudahkan pengguna dalam mengoptimasi elemen-elemen penting seperti tag judul, meta description atau keywords, sembari meninjau bagaimana website muncul dalam laman hasil pencarian (SERP).",
+    "meta-generator-desc" => "Meta Generator adalah tool yang dirancang untuk membantu proses pembuatan meta tag dan menyusunnya dalam format kode HTML untuk memastikan bahwa mesin pencari dapat mengindeks dan melakukan crawl secara efektif pada halaman web.",
     "last-update" => "Terakhir Diperbarui",
     "desc-1" => "Catatan Penting",
     "desc-1-1" => "Dalam menggunakan beberapa tool yang mengharuskan Anda memasukkan URL, pastikan itu valid. Jika tidak, tool tidak akan berfungsi dengan baik.",
@@ -148,10 +149,11 @@ return [
     "desc-3-3-3" => "Pengembang membutuhkan Sitemap Generator dan SSL Checker.",
     "desc-3-4" => "Kapan Pemasar atau Manajer Produk membutuhkan tool cmlabs?",
     "desc-3-4-1" => "Pada tahap penelitian, produksi, dan audit, tool cmlabs dapat digunakan. Pada tahap riset, pemasar dapat melihat kepadatan keyword pesaing dengan menggunakan tool Word Counter.",
-    "desc-3-4-2" => "Pada tahap pengembangan, Manajer Produk dapat membuat skema FAQ di SERP dengan menggunakan FAQ Skema JSON-LD. Selain itu, mereka juga dapat mengoptimalkan tampilan situs web di perangkat seluler menggunakan Pengujian Ramah Seluler. Untuk mempercepat perayapan menggunakan Robot.txt Generator, Anda juga dapat menghubungkan robot.txt ke situs web. Developer pada tahap ini dapat membuat peta situs XML menggunakan Sitemap Generator.",
+    "desc-3-4-2" => "Pada tahap pengembangan, Manajer Produk dapat membuat skema FAQ di SERP dengan menggunakan FAQ Skema JSON-LD. Selain itu, mereka juga dapat mengoptimalkan tampilan situs web di perangkat seluler menggunakan Pengujian Ramah Seluler. Untuk mempercepat perayapan menggunakan Robots.txt Generator, Anda juga dapat menghubungkan robots.txt ke situs web. Developer pada tahap ini dapat membuat peta situs XML menggunakan Sitemap Generator.",
     "desc-3-4-3" => "Pada tahap audit, penulis konten dapat memeriksa panjang judul dan deskripsi meta menggunakan Pemeriksa Judul & Panjang Meta. Pakar dan pengembang SEO dapat memeriksa kinerja situs web menggunakan Tes PageSpeed. Pada tahap ini developer juga bisa mengecek sertifikat SSL menggunakan SSL Checker.",
     "update_desc" => "Memperkenalkan, 7 tujuh tool terbaru dari cmlabs yang dirancang khurus untuk meningkatkan kinerja SEO Anda. Kami merilis 5 Tool JSON-LD Generator untuk Website, Local Business, Event, Video, dan Organization, guna membantu menyederhanakan proses pembuatan markup yang ramah SEO. Ada juga tool Robots.txt Checker yang memudahkan pengguna dalam meninjau dan memvalidasi file robots.txt serta memastikan bahwa mesin pencari dapat mengindeks konten secara menyeluruh. Terakhir, kami memperkenalkan tool SERP Simulator yang dirancang untuk memvisualisasikan tampilan halaman web Anda di SERP dan membantu Anda menyempurnakan meta tag untuk mengoptimalkan presentasi konten Anda. Maksimalkan strategi SEO Anda melalui 7 tool terbaru cmlabs segera. Coba sekarang!",
     "desc-new-tools-21-aug-2023" => "Pastikan aktivitas website Anda tetap terpantau aman dan terkonfigurasi! Lakukan analisis mendalam terhadap domain Anda dengan memantau metrik real-time vitalitas jaringan mulai dari konektivitas, keamanan, dan kinerjanya dengan menggunakan kedua tool terbaik dari cmlabs, Ping Tool dan HTTP Header Checker. Periksa dan tingkatkan manajemen website Anda sekarang juga!",
     "check" => "Cek",
     "no_notif" => "Saat ini tidak ada notifikasi...",
+    "desc-new-tools-13-Oct-2023" => "30 tools untuk berbagai solusi! cmlabs telah sukses merilis 30 t tool mutakhir yang dirancang untuk memberdayakan bisnis dan individu yang berkecimpung di ranah digital. Sebanyak 30 tools, mulai dari Test & Checker, Sitemap.XML, dan Robots.TXT hingga beragam JSON-LD Schema Generator, telah diluncurkan untuk mengatasi kebutuhan dan tantangan spesifik di berbagai industri. Bersama rangkaian tool dari cmlabs, Anda dapat berdiri di garis terdepan kemajuan teknologi. Coba masing-masing tool cmlabs berdasarkan kebutuhan Anda sekarang!",
 ];

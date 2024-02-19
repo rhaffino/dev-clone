@@ -2307,6 +2307,11 @@ input.input-url-meta-checker:focus {
     height: 82%;
 }
 
+.form-control.custom-textarea-89 {
+    resize: none;
+    height: 89%;
+}
+
 .form-control.custom-textarea-100px {
     resize: none;
     height: 100px;
@@ -2662,4 +2667,18 @@ input.input-url-meta-checker:focus {
 .result-collapse{
     max-height: 600px;
     overflow-y: auto;
+}
+
+.partnership-highlight {
+    display: flex;
+    max-width: 202px;
+    padding: 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background: #252a38;
 }

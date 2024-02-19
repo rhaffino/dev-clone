@@ -1,7 +1,7 @@
 <?php
-return [
-    "meta-title" => "",
-    "meta-desc" => "",
+return [    
+    "meta-title" => "Plagiarism Checker by CopyScape",
+    "meta-desc" => "Ensure content originality with Plagiarism Checker by CopyScape cmlabs. Detect and prevent plagiarism effortlessly with our powerful online tool. Safeguard your work and maintain integrity with our advanced plagiarism detection solutions.",
 
     "account_usage" => "ACCOUNT USAGE",
     "team_usage" => "Team Usage",
@@ -76,4 +76,44 @@ return [
     "broaden" => "Broaden your SEO knowledge",
     "launch" => "LAUNCH",
     "highlight" => "Are you tired of spending hours double-checking your work for plagiarism? Now, embrace your writing with our ultimate safeguard against content duplication, Plagiarism Checker (by Copyscape). Powered by cutting-edge algorithms, our tool will scan your text with lightning speed so that you can rest easy knowing your content is authentic.",
+
+    // SURVEY
+    "tab-intro" => "Intro",
+    "tab-hiw" => "How it Works",
+    "tab-survey" => "Survey",
+    
+    "nav-hiw" => "See How It Works",
+    "nav-survey" => "Fill Survey",
+    "nav-submit" => "Submit",
+    "nav-back" => "Back",
+    
+    "intro-title" => "Help Us Know <br>What You Are Interested In",
+    "intro-desc" => [
+        'We are currently conducting a survey for one of our tools, the <strong>Plagiarism Checker</strong>. Plagiarism Checker is cmlabs tool that can assist you in:',
+        'We invite you to participate as your opinions and feedback are highly valuable. If you are interested and would like to learn more, you can proceed to the next step.',
+    ],
+    "intro-list" => [
+        'Checking the level of plagiarism in your articles',
+        'Verifying the word count in your articles',
+        'Checking the estimated reading time of your articles',
+    ],
+    
+    "hiw-title" => "See How It Works",
+    "see-fullscreen" => "See fullscreen",
+    
+    "survey-title" => "Plagiarism Checker Survey",
+    "survey-q1" => "How interested are you in using the cmlabs Plagiarism Checker?",
+    "survey-q1-left" => "Not Interested",
+    "survey-q1-right" => "Very interested",
+    "survey-q2" => "How often do you use plagiarism checker?",
+    "survey-q2-left" => "Very rare",
+    "survey-q2-right" => "Very often",
+    
+    "toast-success" => "Form submitted, thank you!",
+    "toast-error" => "Something error, please try again",
+
+    "success-title" => "Response Submitted",
+    "success-filled-title" => "Response Already Submitted",
+    "success-desc" => "Thank you for your response. Our team will review your suggestion.",
+    "explore-tools" => "Explore Other SEO Tools",
 ];
