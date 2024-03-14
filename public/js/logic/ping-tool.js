@@ -80,7 +80,7 @@ function getHistories() {
         $("#local-history-mobile").append(EmptyHistoryTemplateMobile());
         return;
     }
-    
+
     let index = 0;
     for (let history of histories) {
         $("#local-history").append(
@@ -269,7 +269,7 @@ function renderAllData(data) {
         data.time != null
             ? `<span class="time-ping"><span class="label label-primary-version label-inline font-weight-normal px-2">${data.time}</span></span> ms`
             : "";
-    
+
     let _numericHost = data.numeric_host.replace(")", "");
 
     let _outputShow = data.output.replace("PING", "Ping");
@@ -348,7 +348,7 @@ function checkUrlStr(url) {
 
 function ValidateIPaddress(ipaddress) {
     var ipformat = /^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/;
-    
+
     if(ipaddress.match(ipformat)){
         return (true)
     }
@@ -372,6 +372,7 @@ function recordUserActivity(_url) {
             'submitted_url' : _url,
             'url': window.location.href,
             width_height: window.innerWidth + "x" + window.innerHeight,
+            email: userObject.email,
         },
         success: (res) => {
             if (res.statusCode === 200) {

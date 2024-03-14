@@ -151,6 +151,7 @@ function recordUserActivity(_url) {
             'submitted_url' : _url,
             'url': window.location.href,
             width_height: window.innerWidth + "x" + window.innerHeight,
+            email: userObject.email,
         },
         success: (res) => {
             if (res.statusCode === 200) {
@@ -236,7 +237,7 @@ function renderAllData(data) {
             $("#hreflang-result-list").append(
                 `<p class="text-center d-block">Tidak ada hreflang yang ditemukan</p>`
             );
-            
+
         }
 
         $('#hreflang-result-header').attr('style', 'display: none !important;');

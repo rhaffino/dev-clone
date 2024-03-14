@@ -427,7 +427,7 @@ class ApiController extends Controller
                     $ipAddress,
                     $agent->browser(),
                     $request->width_height,
-                    Auth::user()->email ?? '-',
+                    $request->input('email') ?? '-',
                     $fullLocation
                 ];
 
