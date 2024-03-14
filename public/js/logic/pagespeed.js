@@ -640,6 +640,7 @@ function recordUserActivity(_url) {
             'submitted_url' : _url,
             'url': window.location.href,
             width_height: window.innerWidth + "x" + window.innerHeight,
+            email: userObject.email,
         },
         success: (res) => {
             if (res.statusCode === 200) {
@@ -658,7 +659,7 @@ function checkAutoRun(){
     const params = new Proxy(new URLSearchParams(window.location.search), {
         get: (searchParams, prop) => searchParams.get(prop),
     });
-    
+
     let url = params.url;
     let autoRun = params.auto;
 

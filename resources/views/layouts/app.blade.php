@@ -167,7 +167,7 @@
     <!--end::Demo Panel-->
     <!--begin::Global Config(global config for global JS scripts)-->
     @stack("scripts")
-    
+
     <script>
         var KTAppSettings = {
             "breakpoints": {
@@ -285,6 +285,10 @@
                 $(this).text("Baca Selengkapnya")
             }
         });
+
+        let userObject = {
+            email: "{{ auth()->user()->email ?? '-' }}"
+        };
     </script>
     <script src="{{ asset('js/logic/cta-function.js') }}"></script>
     @stack('script')

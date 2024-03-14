@@ -63,7 +63,7 @@ $(document).ready(function() {
                 $('#detail-progress').html(data.site_length + has_crawled)
             }
         });
-    
+
         socket.on('result', response => {
             clearTable();
             $('#length-result').html(`(${response.data.length})`)
@@ -81,7 +81,7 @@ $(document).ready(function() {
             socket.disconnect()
             socket = null
         });
-    
+
         socket.on('notfound', msg => {
             toastr.error('Error', msg)
             socket.disconnect()
@@ -101,8 +101,8 @@ $(document).ready(function() {
             $('#generate').prop('disabled', false)
             socket.disconnect()
             socket = null
-        });    
-    });    
+        });
+    });
 });
 
 $('#url').on('input', function() {
@@ -277,6 +277,7 @@ function recordUserActivity(_url) {
             'submitted_url' : _url,
             'url': window.location.href,
             width_height: window.innerWidth + "x" + window.innerHeight,
+            email: userObject.email,
         },
         success: (res) => {
             if (res.statusCode === 200) {
