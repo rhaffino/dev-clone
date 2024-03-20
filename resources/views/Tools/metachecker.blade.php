@@ -83,7 +83,7 @@
                                 @if (session()->has('logged_in') || session()->get('logged_in') == 'true')
                                     <button id="crawlURL" class="btn btn-crawl px-10">@lang('metachecker.btn-crawl')</button>
                                 @elseif (isset($access_limit) && $access_limit > 0)
-                                    <button disabled="disabled" class="btn btn-crawl px-10">@lang('metachecker.btn-crawl')</button>
+                                    <button disabled="disabled" class="btn btn-crawl px-10" data-toggle="tooltip" data-theme="dark" title="@lang('lookup.lookup-btn-tooltip')">@lang('metachecker.btn-crawl')</button>
                                 @else 
                                     <button id="crawlURL" class="next-button" style="display: none"></button>
                                     <button id="process-button" class="btn btn-crawl px-10 check-limit-button analysist-button-guest">@lang('metachecker.btn-crawl')</button>
