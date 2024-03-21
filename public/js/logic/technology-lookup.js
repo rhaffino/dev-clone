@@ -178,8 +178,6 @@ function analyzeUrl(_url) {
         $("#technology-lookup-result-total").text("");
         $.post({
             url: LOOKUP_API_URL,
-            // url: "https://crawler.tools.cmlabs.dev/api-ext/tech-lookup",
-            // url: "https://tools-crawler-api-w3m734lsga-as.a.run.app/api/tech-lookup",
             data: {
                 _token: $("meta[name=csrf-token]").attr("content"),
                 url: _url,

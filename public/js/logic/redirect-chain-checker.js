@@ -172,7 +172,6 @@ function analyze(_url) {
     if (checkUrl(_url)) {
         $.post({
             url: REDIRECT_CHAIN_CHECKER_API_URL,
-            // url: "https://tools-api-w3m734lsga-as.a.run.app/api/redirect-chain-checker/check",
             data: {
                 _token: $("meta[name=csrf-token]").attr("content"),
                 url: _url,

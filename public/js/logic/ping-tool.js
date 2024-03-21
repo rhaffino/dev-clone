@@ -207,7 +207,6 @@ function analyzeUrl(_type, _url) {
     $("#ping-result-status").text("");
     $.post({
         url: PING_API_URL,
-        // url: "https://tools-api-w3m734lsga-as.a.run.app/api/ping-tool/check",
         data: {
             _token: $("meta[name=csrf-token]").attr("content"),
             type: _type,
