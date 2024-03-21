@@ -27,7 +27,7 @@ const PingTemplate = (host, numericHost, output, time) => `
   </div>
 </div>`;
 
-const HistoryTemplate = (index ,url , date) => `
+const HistoryTemplate = (index, url, date) => `
 <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px history--list" data-url="${url}">
   <div class="d-flex justify-content-between">
     <div class="local-collection-title">${url}</div>
@@ -80,11 +80,11 @@ function getHistories() {
         $("#local-history-mobile").append(EmptyHistoryTemplateMobile());
         return;
     }
-    
+
     let index = 0;
     for (let history of histories) {
         $("#local-history").append(
-            HistoryTemplate(index ,history.url, history.date)
+            HistoryTemplate(index, history.url, history.date)
         );
         $("#local-history-mobile").append(
             HistoryTemplateMobile(index, history.url, history.date)
@@ -162,7 +162,7 @@ function CheckAnalyze(type, value) {
     switch (type) {
         case "url":
             try {
-                if (checkUrlStr(value)){
+                if (checkUrlStr(value)) {
                     if (checkUrl(value)) {
                         analyzeUrl(type, value);
                     } else {
@@ -172,7 +172,7 @@ function CheckAnalyze(type, value) {
                         toastr.error("URL is not secure", "Error");
                         KTApp.unblock("#ping-result-container");
                     }
-                }else{
+                } else {
                     $("#ping-result-status").html("");
                     $("#ping-result-list").hide();
                     $("#ping-result-empty").show();
@@ -269,19 +269,16 @@ function renderAllData(data) {
         data.time != null
             ? `<span class="time-ping"><span class="label label-primary-version label-inline font-weight-normal px-2">${data.time}</span></span> ms`
             : "";
-    
+
     let _numericHost = data.numeric_host.replace(")", "");
 
     let _outputShow = data.output.replace("PING", "Ping");
     _outputShow = _outputShow.replace("data:", "data:<br/>");
-    _outputShow = _outputShow.replace(
-        "data bytes",
-        "data bytes<br/>"
-    );
+    _outputShow = _outputShow.replace("data bytes", "data bytes<br/>");
     _outputShow = _outputShow.replace(
         "Ping statistics for",
         "<br/><div class='custom-line'></div>Ping statistics for"
-        );
+    );
     _outputShow = _outputShow.replace(
         "ping statistics ---",
         "<br/><div class='custom-line'></div>Ping statistics for:<br/>"
@@ -313,9 +310,7 @@ function renderAllData(data) {
         $("#ping-result-status").addClass("text-red");
         $("#ping-result-status").removeClass("text-green");
 
-        $("#ping-result-list").append(
-            PingTemplate("-", "-", _outputShow, "-")
-        );
+        $("#ping-result-list").append(PingTemplate("-", "-", _outputShow, "-"));
     }
 }
 
@@ -347,12 +342,13 @@ function checkUrlStr(url) {
 }
 
 function ValidateIPaddress(ipaddress) {
-    var ipformat = /^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/;
-    
-    if(ipaddress.match(ipformat)){
-        return (true)
+    var ipformat =
+        /^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/;
+
+    if (ipaddress.match(ipformat)) {
+        return true;
     }
-    return (false)
+    return false;
 }
 
 function getProtocol(url) {
@@ -364,25 +360,41 @@ function getProtocol(url) {
     }
 }
 
+function checkAutoRun() {
+    // get query params, if url and auto run exist, run the analyze function
+    const params = new Proxy(new URLSearchParams(window.location.search), {
+        get: (searchParams, prop) => searchParams.get(prop),
+    });
+
+    let url = params.url;
+    let autoRun = params.auto;
+
+    if (url && autoRun) {
+        $("#input-url").val(url);
+
+        analyzeUrl("url", $("#input-url").val());
+    }
+}
+
 function recordUserActivity(_url) {
     $.post({
         url: USER_ACTIVITY_API_URL,
         data: {
-            '_token': $('meta[name="csrf-token"]').attr('content'),
-            'submitted_url' : _url,
-            'url': window.location.href,
+            _token: $('meta[name="csrf-token"]').attr("content"),
+            submitted_url: _url,
+            url: window.location.href,
             width_height: window.innerWidth + "x" + window.innerHeight,
         },
         success: (res) => {
             if (res.statusCode === 200) {
             } else {
-                console.log(err)
+                console.log(err);
             }
         },
         error: (err) => {
-            console.log(err)
-        }
-    })
+            console.log(err);
+        },
+    });
 }
 
 $("#input-url").keyup(function () {
@@ -466,6 +478,7 @@ $("#crawl-btn").click(function () {
 
 $(document).ready(function () {
     getHistories();
+    checkAutoRun();
 
     $(function () {
         $("body").tooltip({ selector: "[data-toggle=tooltip]" });

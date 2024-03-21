@@ -367,6 +367,7 @@ id/link-analyzer
 <script>
     $(document).ready(function() {
         getHistories();
+        checkAutoRun();        
     });
 </script>
 <script type="application/ld+json">

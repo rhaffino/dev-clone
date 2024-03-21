@@ -68,7 +68,7 @@ function recordUserActivity(_url) {
     })
 }
 
-$('#crawlButton').on('click', function() {
+const generate = () => {
     let url = $('#url').val().replace(/^(http(s)?|ftp):\/\//, '');
     url = url.substr(url.length - 1) === '/' ? url.slice(0, -1) : url;
     $.ajax({
@@ -100,7 +100,9 @@ $('#crawlButton').on('click', function() {
             else toastr.error('Error terjadi selama proses berlangsung', 'Error')
         }
     })
-});
+}
+
+$('#crawlButton').on('click', generate);
 
 let getData = function(index) {
     let data = JSON.parse(localStorage.getItem('ssl-checker'))[index]
@@ -266,6 +268,20 @@ let clearAll = function () {
     refreshLocalStorage();
 }
 
+function checkAutoRun(){
+    // get query params, if url and auto run exist, run the analyze function
+    const params = new Proxy(new URLSearchParams(window.location.search), {
+        get: (searchParams, prop) => searchParams.get(prop),
+    });
+    
+    let url = params.url;
+    let autoRun = params.auto;
+
+    if(url && autoRun){
+        $("#url").val(url)
+        generate()
+    }
+}
 
 function parseMonth(month) {
     switch (month) {
@@ -348,3 +364,7 @@ function parseMonthId(month) {
             break;
     }
 }
+
+$(document).ready(function () {
+    checkAutoRun()
+});

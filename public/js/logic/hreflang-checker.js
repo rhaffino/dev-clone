@@ -1,13 +1,13 @@
-const HREFLANG_CHECKER_LOCAL_STORAGE_KEY = 'hreflang-checker-history';
-const HREFLANG_CHECKER_COUNTER_KEY = 'hreflang-checker-counter';
+const HREFLANG_CHECKER_LOCAL_STORAGE_KEY = "hreflang-checker-history";
+const HREFLANG_CHECKER_COUNTER_KEY = "hreflang-checker-counter";
 
 var jqueryRequest = null;
 
 if (lang == "en") {
-    var created_at = "Created at "
+    var created_at = "Created at ";
     var localStorageNone = "This is your first impressions, no history yet!";
 } else if (lang == "id") {
-    var created_at = "Dibuat pada "
+    var created_at = "Dibuat pada ";
     var localStorageNone = "Ini adalah kesan pertama Anda, belum ada riwayat!";
 }
 
@@ -23,10 +23,13 @@ const HistoryTemplate = (index, url, date) => `
 </li>
 `;
 
-const EmptyHistoryTemplate = () => `
+const EmptyHistoryTemplate = () =>
+    `
 <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
   <div class="d-flex justify-content-center text-center">
-    <span>` + localStorageNone + `</span>
+    <span>` +
+    localStorageNone +
+    `</span>
   </div>
 </li>`;
 
@@ -41,10 +44,13 @@ const HistoryTemplateMobile = (index, url, date) => `
 </div>
 </div>`;
 
-const EmptyHistoryTemplateMobile = () => `
+const EmptyHistoryTemplateMobile = () =>
+    `
 <div class="custom-card py-5 px-3">
 <div class="d-flex justify-content-center text-center">
-  <span>` + localStorageNone + `</span>
+  <span>` +
+    localStorageNone +
+    `</span>
 </div>
 </div>`;
 
@@ -69,13 +75,13 @@ const HreflangResultTemplate = (no, url, hreflang, language, region) => `
 <hr class="my-3">`;
 
 function getHistories() {
-    $('#local-history').empty();
-    $('#local-history-mobile').empty();
+    $("#local-history").empty();
+    $("#local-history-mobile").empty();
     let histories = localStorage.getItem(HREFLANG_CHECKER_LOCAL_STORAGE_KEY);
     histories = histories ? JSON.parse(histories) : [];
     if (!histories || histories.length === 0) {
-        $('#local-history').append(EmptyHistoryTemplate());
-        $('#local-history-mobile').append(EmptyHistoryTemplateMobile());
+        $("#local-history").append(EmptyHistoryTemplate());
+        $("#local-history-mobile").append(EmptyHistoryTemplateMobile());
         return;
     }
     let index = 0;
@@ -118,9 +124,12 @@ function addHistory(url, data) {
     histories.push({
         url: url,
         data: data,
-        date: formatDate
-    })
-    localStorage.setItem(HREFLANG_CHECKER_LOCAL_STORAGE_KEY, JSON.stringify(histories));
+        date: formatDate,
+    });
+    localStorage.setItem(
+        HREFLANG_CHECKER_LOCAL_STORAGE_KEY,
+        JSON.stringify(histories)
+    );
     getHistories();
 }
 
@@ -147,21 +156,21 @@ function recordUserActivity(_url) {
     $.post({
         url: USER_ACTIVITY_API_URL,
         data: {
-            '_token': $('meta[name="csrf-token"]').attr('content'),
-            'submitted_url' : _url,
-            'url': window.location.href,
+            _token: $('meta[name="csrf-token"]').attr("content"),
+            submitted_url: _url,
+            url: window.location.href,
             width_height: window.innerWidth + "x" + window.innerHeight,
         },
         success: (res) => {
             if (res.statusCode === 200) {
             } else {
-                console.log(err)
+                console.log(err);
             }
         },
         error: (err) => {
-            console.log(err)
-        }
-    })
+            console.log(err);
+        },
+    });
 }
 
 function analyze(_url) {
@@ -169,18 +178,18 @@ function analyze(_url) {
         jqueryRequest = $.post({
             url: HREFLANG_API_URL,
             data: {
-                '_token': $('meta[name="csrf-token"]').attr('content'),
-                'url': _url
+                _token: $('meta[name="csrf-token"]').attr("content"),
+                url: _url,
             },
             beforeSend: () => {
-                $('#cancel-request-btn')
-                    .removeClass('btn-cancel-disabled')
-                    .addClass('btn-cancel')
-                    .removeAttr('disabled');
+                $("#cancel-request-btn")
+                    .removeClass("btn-cancel-disabled")
+                    .addClass("btn-cancel")
+                    .removeAttr("disabled");
                 updateProgressBar(20);
-                $('#progress-stop-message').hide();
-                $('#progress-finish-message').hide();
-                $('#progress-start-message').show();
+                $("#progress-stop-message").hide();
+                $("#progress-finish-message").hide();
+                $("#progress-start-message").show();
             },
             success: (res) => {
                 if (res.statusCode === 200) {
@@ -191,169 +200,201 @@ function analyze(_url) {
                     recordUserActivity(_url);
                     toastr.success("Success scan your hreflang", "Success");
                 } else {
-                    $('#hreflang-result-header').attr('style', 'display: none !important;');
-                    toastr.error(res.message, 'Error API');
+                    $("#hreflang-result-header").attr(
+                        "style",
+                        "display: none !important;"
+                    );
+                    toastr.error(res.message, "Error API");
                 }
             },
             error: (err) => {
                 if (err.responseJSON) {
-                    toastr.error(err.responseJSON.message, 'Error API');
+                    toastr.error(err.responseJSON.message, "Error API");
                 } else {
-                    toastr.error('Canceled', 'Error');
+                    toastr.error("Canceled", "Error");
                 }
 
-                $('#no-crawl-result').show();
+                $("#no-crawl-result").show();
             },
             complete: () => {
                 updateProgressBar(100);
-                $('#progress-start-message').hide();
-                $('#progress-finish-message').show();
-                $('#cancel-request-btn')
-                    .removeClass('btn-cancel')
-                    .addClass('btn-cancel-disabled')
-                    .attr('disabled', 'disabled')
-            }
-        })
+                $("#progress-start-message").hide();
+                $("#progress-finish-message").show();
+                $("#cancel-request-btn")
+                    .removeClass("btn-cancel")
+                    .addClass("btn-cancel-disabled")
+                    .attr("disabled", "disabled");
+            },
+        });
     } else {
-        toastr.error('URL Format is not valid', 'Error')
+        toastr.error("URL Format is not valid", "Error");
     }
 }
 
 function renderAllData(data) {
-    $('#no-crawl-result').hide();
-    $('#cta-warning').hide();
+    $("#no-crawl-result").hide();
+    $("#cta-warning").hide();
     $("#hreflang-result-list").empty();
     let _counter = 1;
 
-    if(data.length === 0) {
+    if (data.length === 0) {
         // if no result
-        $('#no-crawl-result').show();
+        $("#no-crawl-result").show();
         if (lang == "en") {
-            $('#hreflang-result-list').append(
+            $("#hreflang-result-list").append(
                 `<p class="text-center d-block">There is no hreflang found</p>`
             );
-        }else if (lang == "id") {
+        } else if (lang == "id") {
             $("#hreflang-result-list").append(
                 `<p class="text-center d-block">Tidak ada hreflang yang ditemukan</p>`
             );
-            
         }
 
-        $('#hreflang-result-header').attr('style', 'display: none !important;');
+        $("#hreflang-result-header").attr("style", "display: none !important;");
         checkCounter(HREFLANG_CHECKER_COUNTER_KEY, () => {
-            $('#cta-warning').show();
-        })
+            $("#cta-warning").show();
+        });
     } else {
-        $('#hreflang-result-header').removeAttr('style');
+        $("#hreflang-result-header").removeAttr("style");
         for (let _data of data) {
-            $("#hreflang-result-list")
-                .append(
-                    HreflangResultTemplate(_counter++,
-                        _data.url,
-                        _data.hreflang,
-                        _data.language ? _data.language.name : 'undefined',
-                        _data.location ? _data.location.name : 'undefined')
+            $("#hreflang-result-list").append(
+                HreflangResultTemplate(
+                    _counter++,
+                    _data.url,
+                    _data.hreflang,
+                    _data.language ? _data.language.name : "undefined",
+                    _data.location ? _data.location.name : "undefined"
                 )
+            );
         }
     }
 }
 
 function formatDate(date) {
     // Format should be : DD/MM/YYYY HH:ii
-    return `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()} ${date.getHours()}:${date.getMinutes()}`
+    return `${date.getDate()}/${
+        date.getMonth() + 1
+    }/${date.getFullYear()} ${date.getHours()}:${date.getMinutes()}`;
 }
 
 function checkUrl(url) {
     try {
-        let _url = new URL(url)
-        return _url.protocol === 'https:' || _url.protocol === 'http:';
+        let _url = new URL(url);
+        return _url.protocol === "https:" || _url.protocol === "http:";
     } catch (e) {
-        return false
+        return false;
     }
 }
 
 function getProtocol(url) {
     try {
-        let _url = new URL(url)
+        let _url = new URL(url);
         return _url.protocol;
     } catch (e) {
-        return false
+        return false;
     }
 }
 
 function updateProgressBar(value) {
-    $('#progress-bar-loader')
-        .css('width', `${value}%`)
-        .attr('aria-valuenow', value);
+    $("#progress-bar-loader")
+        .css("width", `${value}%`)
+        .attr("aria-valuenow", value);
 }
 
-$('#input-url').keyup(function() {
+function checkAutoRun() {
+    // get query params, if url and auto run exist, run the analyze function
+    const params = new Proxy(new URLSearchParams(window.location.search), {
+        get: (searchParams, prop) => searchParams.get(prop),
+    });
+
+    let url = params.url;
+    let autoRun = params.auto;
+
+    if (url && autoRun) {
+        $("#input-url").val(url);
+        analyze(url);
+    }
+}
+
+$("#input-url").keyup(function () {
     const _url = $(this).val();
     if (checkUrl(_url)) {
-        $('#empty-url').hide();
-        const _protocol = getProtocol(_url)
-        if (_protocol === 'https:') {
-            $('#unsecure-url').hide();
-            $('#secure-url').show();
+        $("#empty-url").hide();
+        const _protocol = getProtocol(_url);
+        if (_protocol === "https:") {
+            $("#unsecure-url").hide();
+            $("#secure-url").show();
         } else {
-            $('#secure-url').hide();
-            $('#unsecure-url').show();
+            $("#secure-url").hide();
+            $("#unsecure-url").show();
         }
     } else {
-        $('#empty-url').show();
-        $('#secure-url').hide();
-        $('#unsecure-url').hide();
+        $("#empty-url").show();
+        $("#secure-url").hide();
+        $("#unsecure-url").hide();
     }
 });
 
-$('#local-history').on('click', '.delete-history--btn', function() {
-    deleteHistory($(this).data('index'))
-}).on('click', '.history--list', function(e) {
-    if (e.target.classList.contains('delete-history--btn')) return;
-    const _url = $(this).data('url');
+$("#local-history")
+    .on("click", ".delete-history--btn", function () {
+        deleteHistory($(this).data("index"));
+    })
+    .on("click", ".history--list", function (e) {
+        if (e.target.classList.contains("delete-history--btn")) return;
+        const _url = $(this).data("url");
 
-    let histories = localStorage.getItem(HREFLANG_CHECKER_LOCAL_STORAGE_KEY);
-    histories = histories ? JSON.parse(histories) : [];
-    const history = histories.find(history => {
-        return history.url === _url;
+        let histories = localStorage.getItem(
+            HREFLANG_CHECKER_LOCAL_STORAGE_KEY
+        );
+        histories = histories ? JSON.parse(histories) : [];
+        const history = histories.find((history) => {
+            return history.url === _url;
+        });
+
+        dataResult = history.data;
+
+        renderAllData(history.data);
     });
 
-    dataResult = history.data;
+$("#local-history-mobile")
+    .on("click", ".delete-history--btn", function () {
+        deleteHistory($(this).data("index"));
+    })
+    .on("click", ".history--list", function (e) {
+        if (e.target.classList.contains("delete-history--btn")) return;
+        // analyze($(this).data('url'));
+        const _url = $(this).data("url");
 
-    renderAllData(history.data);
-})
+        let histories = localStorage.getItem(
+            HREFLANG_CHECKER_LOCAL_STORAGE_KEY
+        );
+        histories = histories ? JSON.parse(histories) : [];
+        const history = histories.find((history) => {
+            return history.url === _url;
+        });
 
-$('#local-history-mobile').on('click', '.delete-history--btn', function() {
-    deleteHistory($(this).data('index'))
-}).on('click', '.history--list', function(e) {
-    if (e.target.classList.contains('delete-history--btn')) return;
-    // analyze($(this).data('url'));
-    const _url = $(this).data('url');
+        dataResult = history.data;
 
-    let histories = localStorage.getItem(HREFLANG_CHECKER_LOCAL_STORAGE_KEY);
-    histories = histories ? JSON.parse(histories) : [];
-    const history = histories.find(history => {
-        return history.url === _url;
+        renderAllData(history.data);
     });
 
-    dataResult = history.data;
+$("#check-btn").click(function () {
+    analyze($("#input-url").val());
+});
 
-    renderAllData(history.data);
-})
-
-$('#check-btn').click(function() {
-    analyze($('#input-url').val());
-})
-
-$('#cancel-request-btn').click(function() {
+$("#cancel-request-btn").click(function () {
     jqueryRequest.abort();
     updateProgressBar(0);
-    $('#cancel-request-btn')
-        .removeClass('btn-cancel')
-        .addClass('btn-cancel-disabled')
-        .attr('disabled', 'disabled')
-})
+    $("#cancel-request-btn")
+        .removeClass("btn-cancel")
+        .addClass("btn-cancel-disabled")
+        .attr("disabled", "disabled");
+});
 
-$('.clear-history--btn').click(function() {
+$(".clear-history--btn").click(function () {
     clearAllHistory();
-})
+});
+
+$(document).ready(function () {
+    checkAutoRun();
+});
