@@ -3911,7 +3911,7 @@ button.radio input:checked ~ span,
 }
 
 .highlight-red {
-  background-color: #ad444536;
+  background-color: rgba(173, 68, 69, 0.2117647059);
   color: #AD4445;
 }
 
@@ -4062,7 +4062,7 @@ button.radio input:checked ~ span,
 }
 
 .calendar-container .calendar .date-item.other .value {
-  color: #204e748a;
+  color: rgba(32, 78, 116, 0.5411764706);
 }
 
 .text-underline {
