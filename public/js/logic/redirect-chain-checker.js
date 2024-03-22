@@ -1,13 +1,14 @@
 if (lang == "en") {
-    var created_at = "Created at "
-    var localStorageNone = "This is your first impressions, no history yet!"
+    var created_at = "Created at ";
+    var localStorageNone = "This is your first impressions, no history yet!";
 } else if (lang == "id") {
-    var created_at = "Dibuat pada "
-    var localStorageNone = "Ini adalah kesan pertama Anda, belum ada riwayat!"
+    var created_at = "Dibuat pada ";
+    var localStorageNone = "Ini adalah kesan pertama Anda, belum ada riwayat!";
 }
 
-const REDIRECT_CHAIN_CHECKER_LOCAL_STORAGE_KEY = 'redirect-chain-checker-history';
-const REDIRECT_CHAIN_CHECKER_COUNTER_KEY = 'redurect-chain-checker-counter';
+const REDIRECT_CHAIN_CHECKER_LOCAL_STORAGE_KEY =
+    "redirect-chain-checker-history";
+const REDIRECT_CHAIN_CHECKER_COUNTER_KEY = "redurect-chain-checker-counter";
 
 const RedirectResultTemplate = (url, status_code, date) => `
 <div class="row px-5">
@@ -64,13 +65,15 @@ const EmptyHistoryTemplateMobile = () => `
 </div>`;
 
 function getHistories() {
-    $('#local-history').empty();
-    $('#local-history-mobile').empty();
-    let histories = localStorage.getItem(REDIRECT_CHAIN_CHECKER_LOCAL_STORAGE_KEY);
+    $("#local-history").empty();
+    $("#local-history-mobile").empty();
+    let histories = localStorage.getItem(
+        REDIRECT_CHAIN_CHECKER_LOCAL_STORAGE_KEY
+    );
     histories = histories ? JSON.parse(histories) : [];
     if (!histories || histories.length === 0) {
-        $('#local-history').append(EmptyHistoryTemplate());
-        $('#local-history-mobile').append(EmptyHistoryTemplateMobile());
+        $("#local-history").append(EmptyHistoryTemplate());
+        $("#local-history-mobile").append(EmptyHistoryTemplateMobile());
         return;
     }
 
@@ -87,7 +90,9 @@ function getHistories() {
 }
 
 function addHistory(url, data) {
-    let histories = localStorage.getItem(REDIRECT_CHAIN_CHECKER_LOCAL_STORAGE_KEY);
+    let histories = localStorage.getItem(
+        REDIRECT_CHAIN_CHECKER_LOCAL_STORAGE_KEY
+    );
     histories = histories ? JSON.parse(histories) : [];
     const month = [
         "Jan",
@@ -114,9 +119,12 @@ function addHistory(url, data) {
     histories.push({
         url: url,
         data: data,
-        date: formatDate
-    })
-    localStorage.setItem(REDIRECT_CHAIN_CHECKER_LOCAL_STORAGE_KEY, JSON.stringify(histories));
+        date: formatDate,
+    });
+    localStorage.setItem(
+        REDIRECT_CHAIN_CHECKER_LOCAL_STORAGE_KEY,
+        JSON.stringify(histories)
+    );
     getHistories();
 }
 
@@ -143,22 +151,22 @@ function recordUserActivity(_url) {
     $.post({
         url: USER_ACTIVITY_API_URL,
         data: {
-            '_token': $('meta[name="csrf-token"]').attr('content'),
-            'submitted_url' : _url,
-            'url': window.location.href,
+            _token: $('meta[name="csrf-token"]').attr("content"),
+            submitted_url: _url,
+            url: window.location.href,
             width_height: window.innerWidth + "x" + window.innerHeight,
             email: userObject.email,
         },
         success: (res) => {
             if (res.statusCode === 200) {
             } else {
-                console.log(err)
+                console.log(err);
             }
         },
         error: (err) => {
-            console.log(err)
-        }
-    })
+            console.log(err);
+        },
+    });
 }
 
 function analyze(_url) {
@@ -166,19 +174,19 @@ function analyze(_url) {
         $.post({
             url: REDIRECT_CHAIN_CHECKER_API_URL,
             data: {
-                _token: $('meta[name=csrf-token]').attr('content'),
+                _token: $("meta[name=csrf-token]").attr("content"),
                 url: _url,
-                user_agent: $('#user-agent-select').val()
+                user_agent: $("#user-agent-select").val(),
             },
             beforeSend: () => {
-                $('#cancel-request-btn')
-                    .removeClass('btn-cancel-disabled')
-                    .addClass('btn-cancel')
-                    .removeAttr('disabled');
+                $("#cancel-request-btn")
+                    .removeClass("btn-cancel-disabled")
+                    .addClass("btn-cancel")
+                    .removeAttr("disabled");
                 updateProgressBar(20);
-                $('#progress-stop-message').hide();
-                $('#progress-finish-message').hide();
-                $('#progress-start-message').show();
+                $("#progress-stop-message").hide();
+                $("#progress-finish-message").hide();
+                $("#progress-start-message").show();
             },
             success: (res) => {
                 if (res.statusCode === 200) {
@@ -188,159 +196,207 @@ function analyze(_url) {
                     recordUserActivity(_url);
                     toastr.success("Success scan your redirect", "Success");
                 } else {
-                    $('#redirect-result').hide();
-                    $('#redirect-result-empty').show();
-                    toastr.error(res.message, 'Error')
+                    $("#redirect-result").hide();
+                    $("#redirect-result-empty").show();
+                    toastr.error(res.message, "Error");
                 }
             },
             error: (err) => {
-                if(err.responseJSON){
-                    if(err.responseJSON.statusCode === 429){
-                        let {minute, second} = convertSecond(err.responseJSON.data.current_time);
-                        toastr.error(`Please wait for ${minute} minutes and ${second} seconds`, `Error ${err.responseJSON.message}`)
+                if (err.responseJSON) {
+                    if (err.responseJSON.statusCode === 429) {
+                        let { minute, second } = convertSecond(
+                            err.responseJSON.data.current_time
+                        );
+                        toastr.error(
+                            `Please wait for ${minute} minutes and ${second} seconds`,
+                            `Error ${err.responseJSON.message}`
+                        );
                     } else {
-                        toastr.error(err.responseJSON.message, 'Error')
+                        toastr.error(err.responseJSON.message, "Error");
                     }
                 } else {
-                    toastr.error(err.statusText, 'Error');
+                    toastr.error(err.statusText, "Error");
                 }
 
-                $('#redirect-result').hide();
-                $('#redirect-result-empty').show();
+                $("#redirect-result").hide();
+                $("#redirect-result-empty").show();
             },
             complete: () => {
                 updateProgressBar(100);
-                $('#progress-start-message').hide();
-                $('#progress-finish-message').show();
-                $('#cancel-request-btn')
-                    .removeClass('btn-cancel')
-                    .addClass('btn-cancel-disabled')
-                    .attr('disabled', 'disabled')
-            }
-        })
+                $("#progress-start-message").hide();
+                $("#progress-finish-message").show();
+                $("#cancel-request-btn")
+                    .removeClass("btn-cancel")
+                    .addClass("btn-cancel-disabled")
+                    .attr("disabled", "disabled");
+            },
+        });
     } else {
-        $('#redirect-result').hide();
-        $('#redirect-result-empty').show();
-        toastr.error('URL Format is not valid', 'Error')
+        $("#redirect-result").hide();
+        $("#redirect-result-empty").show();
+        toastr.error("URL Format is not valid", "Error");
     }
 }
 
-function renderAllData(data){
-    $('#redirect-result-container').show();
-    $('#redirect-result-empty').hide();
-    $('#redirect-result').empty().show();
-    $('#cta-danger').hide();
+function renderAllData(data) {
+    $("#redirect-result-container").show();
+    $("#redirect-result-empty").hide();
+    $("#redirect-result").empty().show();
+    $("#cta-danger").hide();
 
-    if(data.redirects.length > 3) {
-        $('#cta-danger').show();
+    if (data.redirects.length > 3) {
+        $("#cta-danger").show();
     }
 
     for (let redirect of data.redirects) {
-        $('#redirect-result').append(
-            RedirectResultTemplate(redirect.url, redirect.status, formatDateToUTC7(redirect.date))
-        )
+        $("#redirect-result").append(
+            RedirectResultTemplate(
+                redirect.url,
+                redirect.status,
+                formatDateToUTC7(redirect.date)
+            )
+        );
     }
 }
 
-function formatDate(date){
-  const utcOffset = 7 * 60;
-  const adjustedDate = new Date(date.getTime() + utcOffset * 60 * 1000);
+function formatDate(date) {
+    const utcOffset = 7 * 60;
+    const adjustedDate = new Date(date.getTime() + utcOffset * 60 * 1000);
 
-  return `${adjustedDate.getDate()}/${adjustedDate.getMonth() + 1}/${adjustedDate.getFullYear()} ${adjustedDate.getHours()}:${adjustedDate.getMinutes().toString().padStart(2, '0')}`;
+    return `${adjustedDate.getDate()}/${
+        adjustedDate.getMonth() + 1
+    }/${adjustedDate.getFullYear()} ${adjustedDate.getHours()}:${adjustedDate
+        .getMinutes()
+        .toString()
+        .padStart(2, "0")}`;
 }
 
 function formatDateToUTC7(inputDate) {
-    const [day, month, year, hour, minute] = inputDate.split(/[\/ :]/).map(Number);
+    const [day, month, year, hour, minute] = inputDate
+        .split(/[\/ :]/)
+        .map(Number);
     const localDate = new Date(year, month, day, hour, minute);
 
     const utcOffset = 7 * 60; // UTC+7 in minutes
     const adjustedDate = new Date(localDate.getTime() + utcOffset * 60 * 1000);
 
-    return `${adjustedDate.getDate()}/${adjustedDate.getMonth() + 1}/${adjustedDate.getFullYear()} ${adjustedDate.getHours()}:${adjustedDate.getMinutes().toString().padStart(2, '0')}`;
-  }
+    return `${adjustedDate.getDate()}/${
+        adjustedDate.getMonth() + 1
+    }/${adjustedDate.getFullYear()} ${adjustedDate.getHours()}:${adjustedDate
+        .getMinutes()
+        .toString()
+        .padStart(2, "0")}`;
+}
 
 function checkUrl(url) {
     try {
-        let _url = new URL(url)
-        return _url.protocol === 'https:' || _url.protocol === 'http:';
+        let _url = new URL(url);
+        return _url.protocol === "https:" || _url.protocol === "http:";
     } catch (e) {
-        return false
+        return false;
     }
 }
 
-function getProtocol(url){
+function getProtocol(url) {
     try {
-        let _url = new URL(url)
+        let _url = new URL(url);
         return _url.protocol;
     } catch (e) {
-        return false
+        return false;
     }
 }
 
 function updateProgressBar(value) {
-    $('#progress-bar-loader')
-        .css('width', `${value}%`)
-        .attr('aria-valuenow', value);
+    $("#progress-bar-loader")
+        .css("width", `${value}%`)
+        .attr("aria-valuenow", value);
 }
 
-$('#input-url').keyup(function () {
+function checkAutoRun() {
+    // get query params, if url and auto run exist, run the analyze function
+    const params = new Proxy(new URLSearchParams(window.location.search), {
+        get: (searchParams, prop) => searchParams.get(prop),
+    });
+
+    let url = params.url;
+    let autoRun = params.auto;
+
+    if (url && autoRun) {
+        $("#input-url").val(url);
+        analyze(url);
+    }
+}
+
+$("#input-url").keyup(function () {
     const _url = $(this).val();
-    if(checkUrl(_url)){
-        $('#empty-url').hide();
-        const _protocol = getProtocol(_url)
-        if(_protocol === 'https:') {
-            $('#unsecure-url').hide();
-            $('#secure-url').show();
+    if (checkUrl(_url)) {
+        $("#empty-url").hide();
+        const _protocol = getProtocol(_url);
+        if (_protocol === "https:") {
+            $("#unsecure-url").hide();
+            $("#secure-url").show();
         } else {
-            $('#secure-url').hide();
-            $('#unsecure-url').show();
+            $("#secure-url").hide();
+            $("#unsecure-url").show();
         }
     } else {
-        $('#empty-url').show();
-        $('#secure-url').hide();
-        $('#unsecure-url').hide();
+        $("#empty-url").show();
+        $("#secure-url").hide();
+        $("#unsecure-url").hide();
     }
 });
 
-$('#local-history').on('click', '.delete-history--btn', function () {
-    deleteHistory($(this).data('index'))
-}).on('click', '.history--list', function (e) {
-    if (e.target.classList.contains('delete-history--btn')) return;
-    const _url = $(this).data('url');
+$("#local-history")
+    .on("click", ".delete-history--btn", function () {
+        deleteHistory($(this).data("index"));
+    })
+    .on("click", ".history--list", function (e) {
+        if (e.target.classList.contains("delete-history--btn")) return;
+        const _url = $(this).data("url");
 
-    let histories = localStorage.getItem(REDIRECT_CHAIN_CHECKER_LOCAL_STORAGE_KEY);
-    histories = histories ? JSON.parse(histories) : [];
-    const history = histories.find(history => {
-        return history.url === _url;
+        let histories = localStorage.getItem(
+            REDIRECT_CHAIN_CHECKER_LOCAL_STORAGE_KEY
+        );
+        histories = histories ? JSON.parse(histories) : [];
+        const history = histories.find((history) => {
+            return history.url === _url;
+        });
+
+        dataResult = history.data;
+
+        renderAllData(history.data);
     });
 
-    dataResult = history.data;
+$("#local-history-mobile")
+    .on("click", ".delete-history--btn", function () {
+        deleteHistory($(this).data("index"));
+    })
+    .on("click", ".history--list", function (e) {
+        if (e.target.classList.contains("delete-history--btn")) return;
+        // analyze($(this).data('url'));
+        const _url = $(this).data("url");
 
-    renderAllData(history.data);
-})
+        let histories = localStorage.getItem(
+            REDIRECT_CHAIN_CHECKER_LOCAL_STORAGE_KEY
+        );
+        histories = histories ? JSON.parse(histories) : [];
+        const history = histories.find((history) => {
+            return history.url === _url;
+        });
 
-$('#local-history-mobile').on('click', '.delete-history--btn', function () {
-    deleteHistory($(this).data('index'))
-}).on('click', '.history--list', function (e) {
-    if (e.target.classList.contains('delete-history--btn')) return;
-    // analyze($(this).data('url'));
-    const _url = $(this).data('url');
+        dataResult = history.data;
 
-    let histories = localStorage.getItem(REDIRECT_CHAIN_CHECKER_LOCAL_STORAGE_KEY);
-    histories = histories ? JSON.parse(histories) : [];
-    const history = histories.find(history => {
-        return history.url === _url;
+        renderAllData(history.data);
     });
 
-    dataResult = history.data;
-
-    renderAllData(history.data);
-})
-
-$('.clear-history--btn').click(function(){
+$(".clear-history--btn").click(function () {
     clearAllHistory();
 });
 
-$('#analyze-btn').click(function(){
-    analyze($('#input-url').val());
-})
+$("#analyze-btn").click(function () {
+    analyze($("#input-url").val());
+});
+
+$(document).ready(function () {
+    checkAutoRun();
+});
