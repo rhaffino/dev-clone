@@ -149,26 +149,26 @@ function recordUserActivity(_url) {
     $.post({
         url: USER_ACTIVITY_API_URL,
         data: {
-            '_token': $('meta[name="csrf-token"]').attr('content'),
-            'submitted_url' : _url,
-            'url': window.location.href,
+            _token: $('meta[name="csrf-token"]').attr("content"),
+            submitted_url: _url,
+            url: window.location.href,
             width_height: window.innerWidth + "x" + window.innerHeight,
             email: userObject.email,
         },
         success: (res) => {
             if (res.statusCode === 200) {
             } else {
-                console.log(err)
+                console.log(err);
             }
         },
         error: (err) => {
-            console.log(err)
-        }
-    })
+            console.log(err);
+        },
+    });
 }
 
 function analyze(_url) {
-    if (checkUrlStr(_url)){
+    if (checkUrlStr(_url)) {
         if (checkUrl(_url)) {
             $.post({
                 url: HTTP_HEADER_CHECK_API_URL,
@@ -190,7 +190,10 @@ function analyze(_url) {
                         addHistory(_url, res.data);
                         getHistories();
                         recordUserActivity(_url);
-                        toastr.success("Success scan http header checker", "Success");
+                        toastr.success(
+                            "Success scan http header checker",
+                            "Success"
+                        );
                     } else if (err.responseJSON.statusCode === 429) {
                         let { minute, second } = convertSecond(
                             err.responseJSON.data.current_time
@@ -228,23 +231,19 @@ function analyze(_url) {
         } else {
             toastr.error("URL is not secure", "Error");
         }
-    }else{
+    } else {
         toastr.error("URL Format is not valid", "Error");
     }
 }
 
 function renderAllData(data) {
-
     $("#http-header-empty").hide();
     $("#http-header-result-list").empty().show();
 
     $.each(data, function (key, value) {
         // Menampilkan hasil perulangan di console browser
-        $("#http-header-result-list").append(
-            HttpHeaderTemplate(key, value)
-        );
+        $("#http-header-result-list").append(HttpHeaderTemplate(key, value));
     });
-
 }
 
 function formatDate(date) {
@@ -265,12 +264,12 @@ function checkUrl(url) {
 
 function checkUrlStr(url) {
     try {
-      const regex = new RegExp(
-        "^(?:(?!://)(?:\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}))|^(?!:\/\/)(?=.{1,255}$)((.{1,63}\.){1,127}(?![0-9]*$)[a-z0-9-]+\.?)$|(.+)(?<!/)$"
-      );
-      return regex.test(url);
+        const regex = new RegExp(
+            "^(?:(?!://)(?:d{1,3}.d{1,3}.d{1,3}.d{1,3}))|^(?!://)(?=.{1,255}$)((.{1,63}.){1,127}(?![0-9]*$)[a-z0-9-]+.?)$|(.+)(?<!/)$"
+        );
+        return regex.test(url);
     } catch (e) {
-      return false;
+        return false;
     }
 }
 
@@ -280,6 +279,21 @@ function getProtocol(url) {
         return _url.protocol;
     } catch (e) {
         return false;
+    }
+}
+
+function checkAutoRun() {
+    // get query params, if url and auto run exist, run the analyze function
+    const params = new Proxy(new URLSearchParams(window.location.search), {
+        get: (searchParams, prop) => searchParams.get(prop),
+    });
+
+    let url = params.url;
+    let autoRun = params.auto;
+
+    if (url && autoRun) {
+        $("#input-url").val(url);
+        analyze(url);
     }
 }
 
@@ -357,6 +371,7 @@ $("#crawl-btn").click(function () {
 
 $(document).ready(function () {
     getHistories();
+    checkAutoRun();
 
     $(function () {
         $("body").tooltip({ selector: "[data-toggle=tooltip]" });
