@@ -93,6 +93,19 @@
             }
         }
     }
+    .footer-vanguard {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 6px 12px;
+        border-radius: 8px;
+        background: #060606;
+        width: fit-content;
+        margin: 12px 0;
+        @media screen and (max-width: 768px) {
+            width: 100%;
+        }
+    }
     .footer-credit {
         .cmlabs-container {
             padding-top: 16px;
