@@ -81,6 +81,18 @@
                         <div class="col-md-4 col-6 px-md-4 order-1">
                             <div class="footer-submenu-container order-0">
                                 {{-- solutions menu --}}
+                                <div class="">
+                                    <div class="d-none d-md-block text-dark-70 b2-700 h3-m-700 text-uppercase mb-2">
+                                        ALL-NEW<br>ALL-DIFFERENT
+                                    </div>
+                                    <div class="d-md-none text-dark-70 b2-700 h3-m-700 text-uppercase mb-2 text-center">
+                                        ALL-NEW ALL-DIFFERENT
+                                    </div>
+                                    <a class="footer-vanguard" href="https://vanguard.cmlabs.co">
+                                        <img height="16" src="{{ asset('media/logos/vanguard-green.webp') }}"
+                                            height="20px" alt="cmlabs vanguard logo">
+                                    </a>
+                                </div>
                                 <span
                                     class=" text-dark-70 b1-700 b1-m-700 text-decoration-underline">@lang('v2_footer.sub_service')</span>
                                 <ul>
@@ -145,6 +157,10 @@
                                         <li class="my-1 my-lg-2"><a class="text-dark-70 b2-400 b2-m-400"
                                                 href="https://career.cmlabs.co">@lang('v2_footer.menu_career') </a></li>
                                         @endif --}}
+                                    <li class="my-1 my-lg-2"><a
+                                            class="mktcmlgtm_footer_press_release text-dark-70 b2-400 b2-m-400"
+                                            href="https://career.cmlabs.co/">@lang('v2_footer.menu_career')</a>
+                                    </li>
                                     <li class="my-1 my-lg-2"><a
                                             class="mktcmlgtm_footer_press_release text-dark-70 b2-400 b2-m-400"
                                             href="https://cmlabs.co/{{ $lang_region }}/company/press-release">@lang('v2_footer.menu_press_release')</a>
@@ -407,7 +423,7 @@
 
 @push('script')
     <script>
-        fetch("{{ env('CMLABSCO_API_URL') }}/{{$lang}}-id/service-compliances-lists", {
+        fetch("{{ env('CMLABSCO_API_URL') }}/{{ $lang }}-id/service-compliances-lists", {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json",
@@ -426,7 +442,7 @@
 
                 list.forEach(item => {
                     container.innerHTML += `
-                    <li class="my-1 my-lg-2"><a 
+                    <li class="my-1 my-lg-2"><a
                         class="mktcmlgtm_footer_local_regulator_compliance_indonesia_only text-dark-70 b2-400 b2-m-400"
                         href="https://cmlabs.co/${item.language}-${item.region}/company/${item.slug}">${item.title}</a>
                     </li>

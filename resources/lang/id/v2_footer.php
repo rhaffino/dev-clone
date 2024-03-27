@@ -102,10 +102,10 @@ return [
 
     'menu_serp' => 'Keyword Tracker',
 
-    'menu_service_seo' => 'Jasa SEO <br><i class="text-primary-70 s-700 b2-m-700">mulai dari <span class="update-cost" data-id="Rp10m" data-usd="USD 698" data-cost="10000000"></span></i>',
-    'menu_service_writing' => 'Jasa Penulisan Artikel SEO<br><i class="text-primary-70 s-700 b2-m-700">mulai dari <span class="update-cost" data-id="Rp450k" data-usd="-" data-cost="450000"></span></i>',
-    'menu_service_expert_writing' => 'Expert Writing <br><i class="text-primary-70 s-700 b2-m-700">mulai dari <span class="update-cost" data-id="Rp800k" data-usd="-" data-cost="800000"></span></i>',
-    'menu_service_marketing' => 'Media Buying <br><i class="text-primary-70 s-700 b2-m-700">mulai dari <span class="update-cost" data-id="Rp100m" data-usd="-" data-cost="100000000"></span></i>',
+    'menu_service_seo' => 'Jasa SEO <br><i class="text-primary-70 s-700 b2-m-700">mulai dari <span class="update-cost" data-id="Rp 10juta" data-usd="USD 698" data-cost="10000000"></span></i>',
+    'menu_service_writing' => 'Jasa Penulisan Artikel SEO<br><i class="text-primary-70 s-700 b2-m-700">mulai dari <span class="update-cost" data-id="Rp 9juta" data-usd="-" data-cost="9000000"></span></i>',
+    'menu_service_expert_writing' => 'Expert Writing <br><i class="text-primary-70 s-700 b2-m-700">mulai dari <span class="update-cost" data-id="Rp 12.5juta" data-usd="-" data-cost="12500000"></span></i>',
+    'menu_service_marketing' => 'Media Buying <br><i class="text-primary-70 s-700 b2-m-700">mulai dari <span class="update-cost" data-id="Rp 100juta" data-usd="-" data-cost="100000000"></span></i>',
     'menu_service_backlink' => 'Backlink dari Blogger',
     'menu_service_political' => 'SEO untuk Kampanye Politik',
     'menu_service_pr' => 'PR / Advertorial',
