@@ -12,3 +12,41 @@
     -webkit-transform: scaleY(-1);
     transform: scaleY(-1);
 }
+
+/* Mega Menu - See More */
+.medium__nav-more{
+    display: none;
+}
+.container__mega-menu{
+    position: absolute;
+    width: 100%;
+    top: 54px;
+    left: 0;
+    z-index: 1;
+    display: none;
+}
+.title__mega-menu{
+    margin-bottom: 1rem;
+}
+.list-inline-item{
+    padding-bottom: .8rem; 
+}
+.list__mega-menu{
+    color: var(--black);
+}
+.list__mega-menu.active{
+    color: #3699FF;
+}
+.rotate-arrow:after{
+    rotate: 180deg;
+}
+
+/* No less than 991px, no greater than 1439px */
+@media (min-width:991px) and (max-width:1439px) {
+    .medium__nav {
+        display:none;
+    }
+    .medium__nav-more{
+        display: block;
+    }
+}​

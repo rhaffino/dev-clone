@@ -21,6 +21,9 @@ body {
 .custom-mb {
     margin-bottom: 35px;
 }
+.max__content{
+    width: max-content;
+}
 
 .text-primaryblue {
     color: var(--primaryblue);
