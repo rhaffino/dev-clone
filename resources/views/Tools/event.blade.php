@@ -4,16 +4,14 @@
 
 @section('meta-desc', Lang::get('event.meta-desc'))
 
-@section('meta-keyword', Lang::get('event.meta-keyword'))
-
-@section('conical','/en/json-ld-event-schema-generator')
+@section('conical','/en/json-ld-website-schema-generator')
 
 @section('en-link')
-en/json-ld-event-schema-generator
+en/json-ld-website-schema-generator
 @endsection
 
 @section('id-link')
-id/json-ld-event-schema-generator
+id/json-ld-website-schema-generator
 @endsection
 
 @section('content')

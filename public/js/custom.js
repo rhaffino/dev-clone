@@ -465,16 +465,24 @@ window.onscroll = function() {
     }
 }
 
-    var showCTA = false;
-    function showCTAForm() {
-        showCTA = !showCTA
-        if (showCTA) {
-            $("#cta-danger .cta-border").removeClass("cta-border-bottom");
-        } else {
-            $("#cta-danger .cta-border").addClass("cta-border-bottom");
-        }
+var showCTA = false;
+function showCTAForm() {
+    showCTA = !showCTA
+    if (showCTA) {
+        $("#cta-danger .cta-border").removeClass("cta-border-bottom");
+    } else {
+        $("#cta-danger .cta-border").addClass("cta-border-bottom");
     }
+}
 
-    function openPricing() {
-        window.open('https://cmlabs.co/en-id/pricing/seo-consultant', '_blank');
-    }
+function openPricing() {
+    window.open('https://cmlabs.co/en-id/pricing/seo-consultant', '_blank');
+}
+
+// Mega Menu
+$(document).ready(function() {
+    $("#mega-menu-more").click(function(){
+        $("#collapse-mega-menu-more").toggle()
+        $("#mega-menu-more").toggleClass("rotate-arrow")
+    }); 
+});
