@@ -24,16 +24,16 @@ id/mobile-test
             <h1 class="text-darkgrey font-weight-normal">@lang('mobiletest.title')</h1>
             <p class="text-darkgrey h4 font-weight-normal mb-10">@lang('mobiletest.sub-title')</p>
             @include('components.cta_form', ["message" => "It seems like your website still hasn't passed our mobile-friendly test. You can discuss your problem with our team by fulfilling your problem here."])
-            
+
             <!-- Alert Notification -->
             <div class="alert alert-limit d-flex justify-content-between align-items-center alert-php" role="alert" style="border-color: #C29C13; background-color: #FFF8DF; margin-bottom: 32px;">
                 <div class=" d-flex align-items-center mr-2" style="color: #C29C13;">
-                    <i class="icon pr-2 bx bxs-error-circle bx-sm"  style="color: #C29C13;"></i> 
+                    <i class="icon pr-2 bx bxs-error-circle bx-sm"  style="color: #C29C13;"></i>
                     @lang('alert.alert-notif')
                 </div>
             </div>
             @include('components.alert_limit')
-            
+
             <div class="header-blue mb-5 px-5 py-1">
                 <input type="hidden" id="#count-tools" autocomplete="off" value="{{ $access_count }}" >
                 <div class="row d-flex align-items-center">
@@ -49,7 +49,7 @@ id/mobile-test
                             <button disabled="disabled" type="button" class="btn btn-crawl" name="button">@lang('mobiletest.btn-check')</button>
                         @elseif (isset($access_limit) && $access_limit > 0)
                             <button disabled="disabled" type="button" class="btn btn-crawl" name="button">@lang('mobiletest.btn-check')</button>
-                            @else 
+                            @else
                             <button disabled="disabled" type="button" class="btn btn-crawl" name="button">@lang('mobiletest.btn-check')</button>
                             <!-- <button id="generateButton" class="next-button" style="display: none"></button> -->
                             <!-- <button id="process-button" type="button" class="btn btn-crawl check-limit-button analysist-button-guest" name="button" data-toggle="tooltip" data-theme="dark" title="@lang('serp-simulator.serp-btn-tooltip')">@lang('mobiletest.btn-check')</button> -->
@@ -348,7 +348,7 @@ id/mobile-test
                     $.post('{{ route("api.count") }}', {
                         _token: $('meta[name=csrf-token]').attr('content'),
                     });
-                    process_clicked = true; 
+                    process_clicked = true;
                     $('.next-button').trigger('click');
                     loginModal.innerHTML = `
                     <div
@@ -422,16 +422,16 @@ id/mobile-test
                 }, function (response) {
                     if (response.statusCode === 200) {
                         if (response.data.limit == 1) {
-                            var alert_html = '<div class="alert alert-limit d-flex justify-content-between align-items-center" role="alert" style="border-color: #C29C13; background-color: #FFF8DF; margin-bottom: 32px;">' + 
-                                '<div class="d-flex align-items-center mr-2" style="color: #C29C13;">'+ 
-                                    '<i class="icon pr-2 bx bxs-error-circle bx-sm"  style="color: #C29C13;"></i>' + 
-                                    response.data.message + 
-                                '</div>' + 
+                            var alert_html = '<div class="alert alert-limit d-flex justify-content-between align-items-center" role="alert" style="border-color: #C29C13; background-color: #FFF8DF; margin-bottom: 32px;">' +
+                                '<div class="d-flex align-items-center mr-2" style="color: #C29C13;">'+
+                                    '<i class="icon pr-2 bx bxs-error-circle bx-sm"  style="color: #C29C13;"></i>' +
+                                    response.data.message +
+                                '</div>' +
                                 '<a href="'+ response.data.logged_target +'" style="color: #C29C13; font-weight: 700;">Login</a>' +
                             '</div>';
                             $('#alert-limit').html(alert_html);
                         } else {
-                            process_clicked = true; 
+                            process_clicked = true;
                             $('.check-limit-button').trigger('click');
                         }
                     }

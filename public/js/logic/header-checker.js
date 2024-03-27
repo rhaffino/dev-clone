@@ -153,6 +153,7 @@ function recordUserActivity(_url) {
             submitted_url: _url,
             url: window.location.href,
             width_height: window.innerWidth + "x" + window.innerHeight,
+            email: userObject.email,
         },
         success: (res) => {
             if (res.statusCode === 200) {
@@ -370,6 +371,7 @@ $("#crawl-btn").click(function () {
 
 $(document).ready(function () {
     getHistories();
+    checkAutoRun();
 
     $(function () {
         $("body").tooltip({ selector: "[data-toggle=tooltip]" });
