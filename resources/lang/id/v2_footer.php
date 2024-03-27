@@ -106,6 +106,10 @@ return [
     'menu_service_writing' => 'Jasa Penulisan Artikel SEO<br><i class="text-primary-70 s-700 b2-m-700">mulai dari <span class="update-cost" data-id="Rp 9juta" data-usd="-" data-cost="9000000"></span></i>',
     'menu_service_expert_writing' => 'Expert Writing <br><i class="text-primary-70 s-700 b2-m-700">mulai dari <span class="update-cost" data-id="Rp 12.5juta" data-usd="-" data-cost="12500000"></span></i>',
     'menu_service_marketing' => 'Media Buying <br><i class="text-primary-70 s-700 b2-m-700">mulai dari <span class="update-cost" data-id="Rp 100juta" data-usd="-" data-cost="100000000"></span></i>',
+    'menu_service_backlink' => 'Backlink dari Blogger',
+    'menu_service_political' => 'SEO untuk Kampanye Politik',
+    'menu_service_pr' => 'PR / Advertorial',
+    'menu_service_cta' => 'Hanya untuk Anda!!<br><i class="s-700 b2-m-700 text-danger-70 font-italic">Dapatkan sekarang..</i>',
 
     "menu_become-partner" => "Menjadi Mitra,<br><i class='text-success-70 s-700 b2-m-700'>untuk Agensi</i>",
     "menu_affiliate" => "Program Afiliasi,<br><i class='text-success-70 s-700 b2-m-700'>untuk Bizdev</i>",

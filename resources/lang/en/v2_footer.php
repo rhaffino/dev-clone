@@ -94,6 +94,10 @@ return [
     'menu_service_writing' => 'SEO Writing <br><i class="text-primary-70 s-700 b2-m-700">starting from <span class="update-cost" data-id="Rp 9mio" data-usd="-" data-cost="9000000"></span></i>',
     'menu_service_expert_writing' => 'Expert Writing <br><i class="text-primary-70 s-700 b2-m-700">starting from <span class="update-cost" data-id="Rp 12.5mio" data-usd="-" data-cost="12500000"></span></i>',
     'menu_service_marketing' => 'Media Buying <br><i class="text-primary-70 s-700 b2-m-700">starting from <span class="update-cost" data-id="Rp 100mio" data-usd="-" data-cost="100000000"></span></i>',
+    'menu_service_backlink' => 'Blogger Backlink',
+    'menu_service_political' => 'SEO for Political Campaign',
+    'menu_service_pr' => 'PR / Advertorial',
+    'menu_service_cta' => 'Only for you!!<br><i class="s-700 b2-m-700 font-italic text-danger-70">Grab now..</i>',
 
     "menu_become-partner" => "Become Partner,<br><i class='text-success-70 s-700 b2-m-700'>for Agencies</i>",
     "menu_affiliate" => "Affiliate Program,<br><i class='text-success-70 s-700 b2-m-700'>for Bizdev</i>",
