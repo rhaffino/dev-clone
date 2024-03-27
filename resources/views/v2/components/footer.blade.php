@@ -215,7 +215,7 @@
                                             href="https://cmlabs.notion.site/SEO-Guidelines-bb8fae2783df4d7b8e9604bd33c19ed7"
                                             target="_blank" rel="noopener noreferrer nofollow">@lang('v2_footer.menu_insight') </a>
                                     </li>
-                                    @if ($lang === 'id')
+                                    {{-- @if ($lang === 'id') --}}
                                         <li class="my-1 my-lg-2"><a
                                                 class="mktcmlgtm_footer_id_cmlabs_ebook_gratis text-dark-70 b2-400 b2-m-400"
                                                 href="https://cmlabs.co/id-id/ebook">E-Book
@@ -224,17 +224,17 @@
                                                 class="mktcmlgtm_footer_id_cmlabs_event text-dark-70 b2-400 b2-m-400"
                                                 href="https://cmlabs.co/id-id/event">cmlabs
                                                 Event</a></li>
-                                    @endif
+                                    {{-- @endif --}}
                                     <li class="my-1 my-lg-2"><a
                                             class="mktcmlgtm_footer_news text-dark-70 b2-400 b2-m-400"
                                             href="https://cmlabs.co/{{ $lang_region }}/news">@lang('v2_footer.menu_news')
                                         </a></li>
-                                    @if ($lang === 'id')
+                                    {{-- @if ($lang === 'id') --}}
                                         <li class="my-1 my-lg-2"><a
                                                 class="mktcmlgtm_footer_id_cmlabs_class text-dark-70 b2-400 b2-m-400 two-rows"
                                                 href="https://cmlabs.co/id-id/notification/webinar-eksklusif-cmlabsblass">@lang('v2_footer.menu_class')
                                             </a></li>
-                                    @endif
+                                    {{-- @endif --}}
                                 </ul>
                             </div>
                             <div class="footer-submenu-container order-3 order-lg-4 mt-lg-4">
