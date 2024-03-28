@@ -233,8 +233,52 @@
                         </ul>
                     </div>
                 </li>
+                <li class="menu-item menu-item-submenu" aria-haspopup="true">
+                    <a href="" class="menu-link menu-toggle btn dropdown-toggle align-items-center">
+                        <span class="menu-text">Tools by Sequence</span>
+                    </a>
+                    <div class="menu-submenu">
+                        <i class="menu-arrow"></i>
+                        <ul class="menu-subnav">
+                            <li class="menu-item menu-item-parent" aria-haspopup="true">
+                                <span class="menu-link"><span class="menu-text">@lang('layout.nav-pricing')</span></span>
+                            </li>
+                                <li class="menu-item menu-item-children" aria-haspopup="true">
+                                    <a href="https://www.sequence.day/keyword-research" target="_blank" class="menu-link"><span class="menu-text">Keyword Research</span></a>
+                                </li>
+                                <li class="menu-item menu-item-children" aria-haspopup="true">
+                                    <a href="https://www.sequence.day/most-popular-indonesia-online-publisher" target="_blank" class="menu-link"><span class="menu-text">Most Popular Indonesia Online Publisher</span></a>
+                                </li>
+                                <li class="menu-item menu-item-children" aria-haspopup="true">
+                                    <a href="https://www.sequence.day/people-and-brand-mention" target="_blank" class="menu-link"><span class="menu-text">Person and Brand Mention on Online Publisher</span></a>
+                                </li>
+                                <li class="menu-item menu-item-children" aria-haspopup="true">
+                                    <a href="https://www.sequence.day/indonesia-online-publisher-sentiments" target="_blank" class="menu-link"><span class="menu-text">Sentiment Analysis</span></a>
+                                </li>
+                                <li class="menu-item menu-item-children" aria-haspopup="true">
+                                    <a href="https://www.sequence.day/site-explorer" target="_blank" class="menu-link"><span class="menu-text">Site Explorer</span></a>
+                                </li>
+                        </ul>
+                    </div>
+                </li>
+
                 <li class="menu-item">
-                    <a href="https://career.cmlabs.co" class="menu-link">
+                    <a href="https://cmlabs.co/en-id/cmlabs-surge" target="_blank" class="menu-link">
+                        <span class="menu-text">cmlabs Surge</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="https://cmlabs.co/en-id/traffic-calculator" target="_blank" class="menu-link">
+                        <span class="menu-text">Traffic Projection Calculator</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="https://app.sequence.day/auth/login" target="_blank" class="menu-link">
+                        <span class="menu-text">Search Stats by Sequence</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="https://career.cmlabs.co" target="_blank" class="menu-link">
                         <span class="menu-text">Career</span>
                     </a>
                 </li>

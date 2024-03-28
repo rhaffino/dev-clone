@@ -983,3 +983,216 @@ $(".reset").click(function (e) {
     $("#form-event").trigger("reset");
     eventFormat.resetrender();
 });
+
+$(document).on("keyup", ".imageUrl", function () {
+    updateJSON_imageUrl(parseInt($(this).data("id")), $(this).val());
+});
+
+$(document).on("change", ".startDate", function () {
+    updateJSON_startDate($(this).val());
+});
+
+$(document).on("keyup", ".startTime", function () {
+    updateJSON_startTime(parseInt($(this).data("id")), $(this).val());
+});
+
+$(document).on("change", ".endDate", function () {
+    updateJSON_endDate($(this).val());
+});
+
+$(document).on("keyup", ".endTime", function () {
+    updateJSON_endTime(parseInt($(this).data("id")), $(this).val());
+});
+
+$(document).on("change", ".eventStatus", function () {
+    updateJSON_eventStatus($(this).val());
+});
+
+$(document).on("change", ".attendanceMode", function () {
+    updateJSON_attendanceMode($(this).val());
+});
+
+$(document).on("keyup", ".streamUrl", function () {
+    updateJSON_streamUrl(parseInt($(this).data("id")), $(this).val());
+});
+
+$(document).on("keyup", ".vanue", function () {
+    updateJSON_vanue($(this).val());
+});
+
+$(document).on("keyup", ".street", function () {
+    updateJSON_street($(this).val());
+});
+
+$(document).on("keyup", ".city", function () {
+    updateJSON_city($(this).val());
+});
+
+$(document).on("change", "#country", function () {
+    updateJSON_country($(this).val());
+});
+
+$(document).on("change", "#region", function () {
+    updateJSON_region($(this).val());
+});
+
+$(document).on("keyup", ".zip", function () {
+    updateJSON_zip($(this).val());
+});
+
+$(document).on("change", ".performerType", function () {
+    updateJSON_performerType($(this).val());
+});
+
+$(document).on("keyup", ".performerName", function () {
+    updateJSON_performerName($(this).val());
+});
+
+$(document).on("change", "#currency", function () {
+    updateJSON_currency($(this).val());
+});
+
+// Ticket
+$(document).on("click", "#add-ticket", function () {
+    $("#ticket-offers").show();
+    ticketCounter++;
+
+    $("#ticket-offers").append(
+        '<div class="row ticket-list" data-id="' +
+            ticketCounter +
+            '"><div class="col-12 col-sm-12 py-3"><div class="row"><div class="col-sm-6 mb-5"><label class="text-black font-weight-bold" for="nameTicket">' +
+            label_ticket +
+            '</label><input type="text" name="" class="form-control nameTicket mb-5" placeholder="' +
+            placeholder_ticket +
+            '" value="" data-id="'+ ticketCounter +'"></div><div class="col-sm-5 mb-5"><label class="text-black font-weight-bold" for="priceTicket">' +
+            label_price +
+            '</label><input type="text" name="" class="form-control priceTicket mb-5" placeholder="' +
+            placeholder_price +
+            '" value="" data-id="'+ ticketCounter +'"></div><div class="col-sm-1 mb-5 align-self-center mt-md-0 mb-md-0"><div class="d-flex justify-content-end mb-md-3"><i class="bx bxs-x-circle bx-md delete deleteTicket" data-id="' +
+            ticketCounter +
+            '"></i></div></div></div></div><div class="col-12 col-sm-12"><div class="row"><div class="col-sm-4 mb-5"><label class="text-black font-weight-bold" for="availableTicket">' +
+            label_available +
+            '</label><div class="input-group date"><div class="input-group-append"><span class="input-group-text"><i class="bx bx-calendar text-darkgrey"></i></span></div><input type="text" id="kt_datepicker_2" name="" class="form-control custom-date availableTicket" readonly placeholder="' +
+            placeholder_available +
+            '" value="" / data-id="'+ ticketCounter +'"></div></div><div class="col-sm-4 mb-5"><label for="ticketUrl" class="font-weight-bold text-black">' +
+            label_url_ticket +
+            '</label><input type="text" class="form-control ticketUrl" name="" placeholder="' +
+            placeholder_url_ticket +
+            '" value="" data-id="' +
+            ticketCounter +
+            '"><div class="invalid-feedback url-ticket" data-id="' +
+            ticketCounter +
+            '">' +
+            invalid_url +
+            '</div></div><div class="col-sm-4 mb-5"><label class="text-black font-weight-bold" for="availability">' +
+            label_availability +
+            '</label><select class="form-control selectpicker custom-select-blue availability" data-id="'+ ticketCounter +'"><option value="InStock">' +
+            availability_1 +
+            '</option><option value="SoldOut">' +
+            availability_2 +
+            '</option><option value="PreOrder">' +
+            availability_3 +
+            '</option><option selected="selected" value="none">' +
+            availability_0 +
+            '</option></select></div></div><hr class="space-hr" data-id="' +
+            ticketCounter +
+            '"></div></div>'
+    );
+
+    eventFormat.offers.push({
+        "@type": "Offer",
+        name: "",
+        price: "",
+        priceCurrency: eventFormat.tempCurrency,
+        validFrom: "",
+        url: "",
+        availability: "",
+    });
+    eventFormat.render();
+
+    $(".availability").selectpicker("refresh");
+    $(".availableTicket").datepicker();
+});
+
+$(document).on("click", ".deleteTicket", function () {
+    deleteTicket(parseInt($(this).data("id")));
+});
+
+$(document).on("keyup", ".nameTicket", function () {
+    updateJSON_nameTicket(parseInt($(this).data("id")), $(this).val());
+});
+
+$(document).on("keyup", ".priceTicket", function () {
+    updateJSON_priceTicket(parseInt($(this).data("id")), $(this).val());
+});
+
+$(document).on("change", ".availableTicket", function () {
+    updateJSON_availableTicket(parseInt($(this).data("id")), $(this).val());
+});
+
+$(document).on("keyup", ".ticketUrl", function () {
+    updateJSON_ticketUrl(parseInt($(this).data("id")), $(this).val());
+});
+
+$(document).on("change", ".availability", function () {
+    updateJSON_availability(parseInt($(this).data("id")), $(this).val());
+});
+
+// Layout Action
+$(document).on("change", "#schema-json-ld", function () {
+    if ($(this).val() !== "home") {
+        window.location = "json-ld-" + $(this).val() + "-schema-generator";
+    } else {
+        window.location = "json-ld-schema-generator";
+    }
+});
+
+$("#copy").click(function () {
+    var copyText = jQuery("#json-format");
+    copyText.select();
+    document.execCommand("copy");
+    toastr.success("Copied to Clipboard", "Information");
+});
+
+$(".reset").click(function (e) {
+    $(".imageUrl").removeClass("is-invalid");
+    $(".startDate").datepicker("setDate", null);
+    $(".startTime").removeClass("is-invalid");
+    $(".endDate").datepicker("setDate", null);
+    $(".endTime").removeClass("is-invalid");
+    $(".eventStatus").selectpicker("val", "none");
+    $(".eventStatus").selectpicker("refresh");
+    $(".attendanceMode").selectpicker("val", "none");
+    $(".attendanceMode").selectpicker("refresh");
+    // online
+    $(".streamUrl").removeClass("is-invalid");
+    $(".timeZone").selectpicker("val", "none");
+    $(".timeZone").selectpicker("refresh");
+    // offline
+    $(".country").selectpicker("val", "none");
+    $(".country").selectpicker("refresh");
+    $(".region").attr("disabled", true);
+    $(".region").selectpicker("val", "none");
+    $(".region").selectpicker("refresh");
+    // Mix
+    $("#onlineAttendance").hide();
+    $("#offlineAttendance").hide();
+
+    $(".performerType").selectpicker("val", "none");
+    $(".performerType").selectpicker("refresh");
+    $(".performerName").attr("disabled", true);
+    // Ticket
+    $("#add-ticket").attr("disabled", true);
+    $("#currency").selectpicker("val", "none");
+    $("#currency").selectpicker("refresh");
+    $(".availableTicket").datepicker("setDate", null);
+    $(".streamUrl").removeClass("is-invalid");
+    $(".availability").selectpicker("val", "none");
+    $(".availability").selectpicker("refresh");
+    $("#ticket-offers").html("");
+    $("#ticket-offers").hide();
+
+    $(".invalid-feedback").hide();
+    $("#form-event").trigger("reset");
+    eventFormat.resetrender();
+});
