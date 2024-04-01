@@ -153,7 +153,7 @@ class ToolsController extends Controller
         $dataID = $this->HomeController->getBlogWordpressId();
         $dataEN = $this->HomeController->getBlogWordpressEn();
         $local = App::getLocale();
-        
+
         // Fetch Seo Term
         $seo_terms = Page::select('pages.id', 'pages.published_at', 'pages.title', 'pages.slug', 'pages.image', 'pages.created_by', DB::raw($lang == 'id' ? "'KAMUSSEO'" : "'SEOTERMS'" . " as 'type'"), DB::raw("'seo-terms' as 'link'"))
         ->join('page_categories', function ($join) use($lang) {
@@ -632,6 +632,7 @@ class ToolsController extends Controller
 
     public function wordcounter($lang)
     {
+        abort(500);
         App::setLocale($lang);
         $dataID = $this->HomeController->getBlogWordpressId();
         $dataEN = $this->HomeController->getBlogWordpressEn();
@@ -1426,8 +1427,8 @@ class ToolsController extends Controller
         $data['userId'] = Auth::user() ? Crypt::encrypt(Auth::user()->id . '-' . time()) : '';
 
         // return view('Tools/plagiarism-checker/survey', $data);
-        
-        if (Auth::check()  && (Auth::check() ? Auth::user()->user_role_id == 3 : false)) {            
+
+        if (Auth::check()  && (Auth::check() ? Auth::user()->user_role_id == 3 : false)) {
             $data['dataID'] = $this->HomeController->getBlogWordpressId();
             $data['dataEN'] = $this->HomeController->getBlogWordpressEn();
             // Get user plagiarism check logs
@@ -1491,8 +1492,8 @@ class ToolsController extends Controller
 
             $data["seo_terms"] = $seoTerms;
             $data["seo_guidelines"] = $seoGuidelines;
-            $data["blogs"] = $blogs;            
-            
+            $data["blogs"] = $blogs;
+
             return view('Tools/plagiarism-checker/index', $data);
         } else {
             return view('Tools/plagiarism-checker/survey', $data);
@@ -1563,7 +1564,7 @@ class ToolsController extends Controller
             return redirect('/');
         }
     }
-    
+
     public function pingTool($lang)
     {
         App::setLocale($lang);
@@ -1619,7 +1620,7 @@ class ToolsController extends Controller
             ->first();
 
         $blogs->published_at = Carbon::parse($seo_terms->published_at)->format('d F Y');
-        
+
         $is_maintenance = in_array('ping-tool', explode(',', env('TOOLS_MAINTENANCE'))) && env('APP_ENV') === 'production';
 
         return view('Tools/ping', compact('local', 'dataID', 'dataEN', 'is_maintenance', 'lang', 'blogs', 'seo_terms', 'seo_guidelines'));
@@ -1683,7 +1684,7 @@ class ToolsController extends Controller
 
         return view('Tools/website', compact('local', 'dataID', 'dataEN', 'is_maintenance', 'lang', 'blogs', 'seo_terms', 'seo_guidelines'));
     }
-    
+
     public function localBusiness($lang)
     {
         App::setLocale($lang);
@@ -1881,7 +1882,7 @@ class ToolsController extends Controller
         // country
         $path_country = public_path('json/regions.json');
         $country = json_decode(file_get_contents($path_country), true);
-        
+
         // province
         $path_province = public_path('json/province-id.json');
         $province = json_decode(file_get_contents($path_province), true);

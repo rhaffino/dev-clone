@@ -3,7 +3,6 @@
 namespace App\Services\Exceptions;
 
 use Carbon\Carbon;
-use Illuminate\Support\Facades\Http;
 
 class ReportToSpace implements ReportTo
 {
@@ -36,7 +35,13 @@ class ReportToSpace implements ReportTo
     public function send()
     {
         $this->v1();
-        return Http::post($this->_URL, $this->_card);
+        return file_get_contents($this->_URL, false, stream_context_create([
+            'http' => [
+                'method' => 'POST',
+                'header' => "Content-type: application/json\r\n",
+                'content' => json_encode($this->_card)
+            ]
+        ]));
     }
 
     // cards
@@ -52,7 +57,7 @@ class ReportToSpace implements ReportTo
                             'widgets' => [
                                 [
                                     'textParagraph' => [
-                                        'text' => "<b>cmlabsco Admin <font color='#ff0000'>ERROR</font></b>"
+                                        'text' => "<b>cmlabsco Tools <font color='#ff0000'>ERROR</font></b>"
                                     ]
                                 ]
                             ]
@@ -62,7 +67,7 @@ class ReportToSpace implements ReportTo
                                 [
                                     'keyValue' => [
                                         'topLabel' => 'repository',
-                                        'content' => 'https://github.com/cmlabsdev/admin-page/',
+                                        'content' => 'https://github.com/cmlabsdev/tools/',
                                         'contentMultiline' => true
                                     ]
                                 ],
@@ -149,7 +154,7 @@ class ReportToSpace implements ReportTo
                                                 'text' => 'REPOSITORY',
                                                 'onClick' => [
                                                     'openLink' => [
-                                                        'url' => 'https://github.com/cmlabsdev/admin-page/'
+                                                        'url' => 'https://github.com/cmlabsdev/tools/'
                                                     ]
                                                 ]
                                             ]
