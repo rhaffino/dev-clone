@@ -632,7 +632,6 @@ class ToolsController extends Controller
 
     public function wordcounter($lang)
     {
-        abort(500);
         App::setLocale($lang);
         $dataID = $this->HomeController->getBlogWordpressId();
         $dataEN = $this->HomeController->getBlogWordpressEn();
