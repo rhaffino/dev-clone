@@ -235,7 +235,7 @@
                 </li>
                 <li class="menu-item menu-item-submenu" aria-haspopup="true">
                     <a href="" class="menu-link menu-toggle btn dropdown-toggle align-items-center">
-                        <span class="menu-text">Tools by Sequence</span>
+                        <span class="menu-text">@lang('layout.nav-tools-sequence')</span>
                     </a>
                     <div class="menu-submenu">
                         <i class="menu-arrow"></i>
@@ -244,7 +244,7 @@
                                 <span class="menu-link"><span class="menu-text">@lang('layout.nav-pricing')</span></span>
                             </li>
                                 <li class="menu-item menu-item-children" aria-haspopup="true">
-                                    <a href="https://www.sequence.day/keyword-research" target="_blank" class="menu-link"><span class="menu-text">Keyword Research</span></a>
+                                    <a href="https://www.sequence.day/keyword-research" target="_blank" class="menu-link"><span class="menu-text">@lang('layout.nav-tools-sequence-1')</span></a>
                                 </li>
                                 <li class="menu-item menu-item-children" aria-haspopup="true">
                                     <a href="https://www.sequence.day/most-popular-indonesia-online-publisher" target="_blank" class="menu-link"><span class="menu-text">Most Popular Indonesia Online Publisher</span></a>
@@ -274,7 +274,7 @@
                 </li>
                 <li class="menu-item">
                     <a href="https://app.sequence.day/auth/login" target="_blank" class="menu-link">
-                        <span class="menu-text">Search Stats by Sequence</span>
+                        <span class="menu-text">@lang('layout.nav-stats-sequence')</span>
                     </a>
                 </li>
                 <li class="menu-item">

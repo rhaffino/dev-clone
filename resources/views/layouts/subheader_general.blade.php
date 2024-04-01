@@ -63,12 +63,12 @@
                         <a class="nav-link" href="https://cmlabs.co/en-id/traffic-calculator" target="_blank">Traffic Projection Calculator</a>
                     </li>
                     <li class="nav-item ml-7 medium__nav">
-                        <a class="nav-link" href="https://app.sequence.day/auth/login" target="_blank">Search Stats by Sequence</a>
+                        <a class="nav-link" href="https://app.sequence.day/auth/login" target="_blank">@lang('layout.nav-stats-sequence')</a>
                     </li>
                     <li class="nav-item dropdown ml-7 medium__nav">
-                        <a class="nav-link dropdown-toggle @yield('sequence')" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Tools by Sequence</a>
+                        <a class="nav-link dropdown-toggle @yield('sequence')" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">@lang('layout.nav-tools-sequence')</a>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="https://www.sequence.day/keyword-research" target="_blank">Keyword Research</a>
+                            <a class="dropdown-item" href="https://www.sequence.day/keyword-research" target="_blank">@lang('layout.nav-tools-sequence-1')</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="https://www.sequence.day/most-popular-indonesia-online-publisher" target="_blank">Most Popular Indonesia Online Publisher</a>
                             <div class="dropdown-divider"></div>
@@ -80,7 +80,7 @@
                         </div>
                     </li>
                     <li class="nav-item dropdown ml-7 medium__nav-more">
-                        <a id="mega-menu-more" class="nav-link dropdown-toggle @yield('see-more')" href="#" role="button">See More</a>
+                        <a id="mega-menu-more" class="nav-link dropdown-toggle @yield('see-more')" href="#" role="button">@lang('layout.see-more')</a>
                     </li>
                 </ul>
             </div>
@@ -103,7 +103,7 @@
                                     <a class="list-inline-item list__mega-menu" href="https://cmlabs.co/en-id/traffic-calculator" target="_blank">Traffic Projection Calculator</a>
                                 </li>
                                 <li>
-                                    <a class="list-inline-item list__mega-menu" href="https://app.sequence.day/auth/login" target="_blank">Search Stats by Sequence</a>
+                                    <a class="list-inline-item list__mega-menu" href="https://app.sequence.day/auth/login" target="_blank">@lang('layout.nav-stats-sequence')</a>
                                 </li>
                             </ul>
                         </div>
@@ -121,7 +121,7 @@
                                 </li>
                             </ul>
 
-                            <h2 class="title__mega-menu h3">Other Tools</h2>
+                            <h2 class="title__mega-menu h3">@lang('layout.other-tools')</h2>
                             <ul class="list-inline">
                                 <li>
                                     <a class="list-inline-item list__mega-menu @yield('word-counter')" href="/{{ $local }}/word-counter">Word Counter</a>
@@ -170,10 +170,10 @@
                             </ul>
                         </div>
                         <div class="col-sm">
-                            <h2 class="title__mega-menu h3">Tools by Sequence</h2>
+                            <h2 class="title__mega-menu h3">@lang('layout.nav-tools-sequence')</h2>
                             <ul class="list-inline">
                                 <li>
-                                    <a class="list-inline-item list__mega-menu" href="https://www.sequence.day/keyword-research" target="_blank">Keyword Research</a>
+                                    <a class="list-inline-item list__mega-menu" href="https://www.sequence.day/keyword-research" target="_blank">@lang('layout.nav-tools-sequence-1')</a>
                                 </li>
                                 <li>
                                     <a class="list-inline-item list__mega-menu" href="https://www.sequence.day/most-popular-indonesia-online-publisher" target="_blank">Most Popular Indonesia Online Publisher</a>
