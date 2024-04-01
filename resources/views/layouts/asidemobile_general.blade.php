@@ -233,6 +233,11 @@
                         </ul>
                     </div>
                 </li>
+                <li class="menu-item">
+                    <a href="https://app.sequence.day/auth/login" target="_blank" class="menu-link">
+                        <span class="menu-text">@lang('layout.nav-stats-sequence')</span>
+                    </a>
+                </li>
                 <li class="menu-item menu-item-submenu" aria-haspopup="true">
                     <a href="" class="menu-link menu-toggle btn dropdown-toggle align-items-center">
                         <span class="menu-text">@lang('layout.nav-tools-sequence')</span>
@@ -270,11 +275,6 @@
                 <li class="menu-item">
                     <a href="https://cmlabs.co/en-id/traffic-calculator" target="_blank" class="menu-link">
                         <span class="menu-text">Traffic Projection Calculator</span>
-                    </a>
-                </li>
-                <li class="menu-item">
-                    <a href="https://app.sequence.day/auth/login" target="_blank" class="menu-link">
-                        <span class="menu-text">@lang('layout.nav-stats-sequence')</span>
                     </a>
                 </li>
                 <li class="menu-item">

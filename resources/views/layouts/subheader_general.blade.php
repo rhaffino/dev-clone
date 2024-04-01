@@ -97,13 +97,13 @@
                         <div class="col-sm">
                             <ul class="list-inline">
                                 <li>
+                                    <a class="list-inline-item list__mega-menu" href="https://app.sequence.day/auth/login" target="_blank">@lang('layout.nav-stats-sequence')</a>
+                                </li>
+                                <li>
                                     <a class="list-inline-item list__mega-menu" href="https://cmlabs.co/en-id/cmlabs-surge" target="_blank">cmlabs Surge</a>
                                 </li>
                                 <li>
                                     <a class="list-inline-item list__mega-menu" href="https://cmlabs.co/en-id/traffic-calculator" target="_blank">Traffic Projection Calculator</a>
-                                </li>
-                                <li>
-                                    <a class="list-inline-item list__mega-menu" href="https://app.sequence.day/auth/login" target="_blank">@lang('layout.nav-stats-sequence')</a>
                                 </li>
                             </ul>
                         </div>
