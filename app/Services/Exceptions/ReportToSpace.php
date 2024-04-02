@@ -57,7 +57,7 @@ class ReportToSpace implements ReportTo
                             'widgets' => [
                                 [
                                     'textParagraph' => [
-                                        'text' => "<b>cmlabsco Tools <font color='#ff0000'>ERROR</font></b>"
+                                        'text' => "<b>cmlabs Tools <font color='#ff0000'>ERROR</font></b>"
                                     ]
                                 ]
                             ]
