@@ -312,7 +312,7 @@
                     <div class="partner-badge-card">
                         <p class="m-0 text-gray-110 text-center b2-400 fst-italic">@lang('v2_footer.badge-title')</p>
                         <div class="pill w-100">
-                            <img src="{{ asset('assets/images/sequence-logo.svg') ?? asset('media/logos/sequence-logo.svg') }}" height="20px"
+                            <img src="{{ asset('media/logos/sequence-logo.svg') }}" height="20px"
                                 alt="Sequence logo">
                             <div class="text-yellow-100 b1-400 b1-m-400">@lang('v2_footer.badge-name')</div>
                         </div>
