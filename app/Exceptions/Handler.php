@@ -54,6 +54,11 @@ class Handler extends ExceptionHandler
     {
         if (env('APP_ENV') == 'production') {
             try {
+                // ignore 404 not found exception
+                if ($exception->getStatusCode() == 404) {
+                    return parent::render($request, $exception);
+                }
+
                 $code = $exception->getCode() == 0 ? '-' : $exception->getCode();
                 $file = $exception->getFile() == '' ? '-' : $exception->getFile();
                 $line = (string)$exception->getLine() ?? '-';
