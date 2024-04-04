@@ -22,7 +22,7 @@
                 <div class="col-12 d-flex justify-content-start align-items-center">
                     <div class="dropdown dropdown-inline">
                         <button type="button" class="btn font-weight-bold button-language-mobile dropdown-toggle pl-0 pr-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span><i class="bx bx-world"></i> English</span>
+                            <span><i class="bx bx-world"></i> @lang('layout.language')</span>
                         </button>
                         <div class="dropdown-menu dropdown-menu-sm dropdown-menu-right dropdown-language-mobile">
                             <ul class="navi flex-column navi-hover">
@@ -215,32 +215,49 @@
                                     <span class="menu-text">Keyword Permutation</span>
                                 </a>
                             </li>
-                            <li class="menu-item" aria-haspopup="true">
-                                <a href="/{{ $local }}/word-counter" class="menu-link">
-                                    <span class="menu-text">Word Counter</span>
+                            <li class="menu-item menu-item-submenu" aria-haspopup="true">
+                                <a href="" class="menu-link menu-toggle btn dropdown-toggle align-items-center">
+                                    <span class="menu-text">@lang('layout.title-writer-tools')</span>
                                 </a>
-                            </li>
-                            <li class="menu-item" aria-haspopup="true">
-                                <a href="/{{ $local }}/page-title-meta-description-checker" class="menu-link">
-                                    <span class="menu-text">Title and Meta Checker</span>
-                                </a>
-                            </li>
-                            <li class="menu-item" aria-haspopup="true">
-                                <a href="/{{ $local }}/plagiarism-checker" class="menu-link">
-                                    <span class="menu-text">Plagiarism Checker</span>
-                                </a>
+                                <div class="menu-submenu">
+                                    <i class="menu-arrow"></i>
+                                    <ul class="menu-subnav">
+                                        <li class="menu-item menu-item-parent" aria-haspopup="true">
+                                            <span class="menu-link">
+                                                <span class="menu-text">@lang('layout.title-writer-tools')</span>
+                                            </span>
+                                        </li>
+                                        <li class="menu-item menu-item-children" aria-haspopup="true">
+                                            <a href="/{{ $local }}/word-counter" class="menu-link">
+                                                <span class="menu-text">Word Counter</span>
+                                            </a>
+                                        </li>
+                                        <li class="menu-item menu-item-children" aria-haspopup="true">
+                                            <a href="/{{ $local }}/page-title-meta-description-checker" class="menu-link">
+                                                <span class="menu-text">Title and Meta Checker</span>
+                                            </a>
+                                        </li>
+                                        {{-- @if (auth()->check() && (auth()->check() ? auth()->user()->user_role_id == 3 : false)) --}}
+                                        <li class="menu-item menu-item-children" aria-haspopup="true">
+                                            <a href="/{{ $local }}/plagiarism-checker" class="menu-link">
+                                                <span class="menu-text">Plagiarism Checker</span>
+                                            </a>
+                                        </li>
+                                        {{-- @endif --}}
+                                    </ul>
+                                </div>
                             </li>
                         </ul>
                     </div>
                 </li>
                 <li class="menu-item">
                     <a href="https://app.sequence.day/auth/login" target="_blank" class="menu-link">
-                        <span class="menu-text">@lang('layout.nav-stats-sequence')</span>
+                        <span class="menu-text relative flex-fit">@lang('layout.nav-stats-sequence') <span class="new-indicator new__indicator-asidemobile"></span></span>
                     </a>
                 </li>
                 <li class="menu-item menu-item-submenu" aria-haspopup="true">
                     <a href="" class="menu-link menu-toggle btn dropdown-toggle align-items-center">
-                        <span class="menu-text">@lang('layout.nav-tools-sequence')</span>
+                        <span class="menu-text relative">@lang('layout.nav-tools-sequence') <span class="new-indicator new__indicator-asidemobile-dropdown"></span></span>
                     </a>
                     <div class="menu-submenu">
                         <i class="menu-arrow"></i>
@@ -268,13 +285,13 @@
                 </li>
 
                 <li class="menu-item">
-                    <a href="https://cmlabs.co/en-id/cmlabs-surge" target="_blank" class="menu-link">
-                        <span class="menu-text">cmlabs Surge</span>
+                    <a href="https://cmlabs.co/{{ $local }}-id/cmlabs-surge" target="_blank" class="menu-link">
+                        <span class="menu-text relative flex-fit">cmlabs Surge <span class="new-indicator new__indicator-asidemobile"></span></span>
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="https://cmlabs.co/en-id/traffic-calculator" target="_blank" class="menu-link">
-                        <span class="menu-text">Traffic Projection Calculator</span>
+                    <a href="https://cmlabs.co/{{ $local }}-id/traffic-calculator" target="_blank" class="menu-link">
+                        <span class="menu-text relative flex-fit">Traffic Projection Calculator <span class="new-indicator new__indicator-asidemobile"></span></span>
                     </a>
                 </li>
                 <li class="menu-item">

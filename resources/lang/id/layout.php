@@ -103,5 +103,5 @@ return [
     "nav-tools-sequence" => "Tool dari Sequence",
     "nav-tools-sequence-1" => "Riset Kata Kunci",
     "see-more" => "Lihat Selengkapnya",
-    "other-tools" => "Tool Lainnya",
+    "title-writer-tools" => "Tool Penulis",
 ];
