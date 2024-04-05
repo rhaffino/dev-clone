@@ -96,24 +96,24 @@
                                             class="mktcmlgtm_footer_expert_writing text-dark-70 b2-400 b2-m-400 two-rows"
                                             href="https://cmlabs.co/{{ $lang_region }}/pricing/expert-writing">@lang('v2_footer.menu_service_expert_writing')
                                         </a></li>
-                                    @if ($lang_region === 'en-id' || $lang_region === 'id-id')
+                                    {{-- @if ($lang_region === 'en-id' || $lang_region === 'id-id') --}}
                                         <li class="my-1 my-lg-2"><a
                                                 class="mktcmlgtm_footer_media_buying text-dark-70 b2-400 b2-m-400 two-rows"
                                                 href="https://cmlabs.co/{{ $lang_region }}/pricing/media-buying">@lang('v2_footer.menu_service_marketing')
                                             </a></li>
-                                    @endif
-                                    @if (
+                                    {{-- @endif --}}
+                                    <li class="my-1 my-lg-2"><a
+                                            class="mktcmlgtm_footer_political_campaign text-dark-70 b2-400 b2-m-400"
+                                            href="https://cmlabs.co/{{ $lang_region }}/pricing/political-campaign">@lang('v2_footer.menu_service_political')</a>
+                                    </li>
+                                    {{-- @if (
                                         $lang_region === 'en-id' ||
                                             $lang_region === 'id-id' ||
                                             $lang_region === 'en-sg' ||
                                             $lang_region === 'en-au' ||
                                             $lang_region === 'en-us' ||
                                             $lang_region === 'en-gb')
-                                        <li class="my-1 my-lg-2"><a
-                                                class="mktcmlgtm_footer_political_campaign text-dark-70 b2-400 b2-m-400"
-                                                href="https://cmlabs.co/{{ $lang_region }}/pricing/political-campaign">@lang('v2_footer.menu_service_political')</a>
-                                        </li>
-                                    @endif
+                                    @endif --}}
                                     <li class="my-1 my-lg-2"><a
                                             class="mktcmlgtm_footer_blogger_backlink text-dark-70 b2-400 b2-m-400"
                                             href="https://cmlabs.co/{{ $lang_region }}/pricing/backlink">@lang('v2_footer.menu_service_backlink')
@@ -141,10 +141,10 @@
                                             class="mktcmlgtm_footer_contact_us text-dark-70 b2-400 b2-m-400"
                                             href="https://cmlabs.co/{{ $lang_region }}/company/contact">@lang('v2_footer.menu_contact')</a>
                                     </li>
-                                    {{-- @if ($region == 'id')
-                                        <li class="my-1 my-lg-2"><a class="text-dark-70 b2-400 b2-m-400"
-                                                href="https://career.cmlabs.co">@lang('v2_footer.menu_career') </a></li>
-                                        @endif --}}
+                                    <li class="my-1 my-lg-2"><a
+                                            class="mktcmlgtm_footer_press_release text-dark-70 b2-400 b2-m-400"
+                                            href="https://career.cmlabs.co/">@lang('v2_footer.menu_career')</a>
+                                    </li>
                                     <li class="my-1 my-lg-2"><a
                                             class="mktcmlgtm_footer_press_release text-dark-70 b2-400 b2-m-400"
                                             href="https://cmlabs.co/{{ $lang_region }}/company/press-release">@lang('v2_footer.menu_press_release')</a>
@@ -426,7 +426,7 @@
 
                 list.forEach(item => {
                     container.innerHTML += `
-                    <li class="my-1 my-lg-2"><a 
+                    <li class="my-1 my-lg-2"><a
                         class="mktcmlgtm_footer_local_regulator_compliance_indonesia_only text-dark-70 b2-400 b2-m-400"
                         href="https://cmlabs.co/${item.language}-${item.region}/company/${item.slug}">${item.title}</a>
                     </li>
