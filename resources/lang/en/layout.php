@@ -101,5 +101,5 @@ return [
     "nav-tools-sequence" => "Tools by Sequence",
     "nav-tools-sequence-1" => "Keyword Research",
     "see-more" => "See More",
-    "other-tools" => "Other Tools",
+    "title-writer-tools" => "Writer Tools",
 ];
