@@ -4,7 +4,7 @@ return [
     "meta-desc" => "Technology Lookup adalah tool untuk melihat widget, identifikasi bahasa dan versi lengkap teknologi yang digunakan sebuah situs.",
     "lang" => "id",
     "title" => "TECHNOLOGY LOOKUP",
-    "sub-title" => "Temukan Website Apa Yang Ingin Di Bangun",
+    "sub-title" => "Pelajari Bagaimana Website Dibangun",
     "lookup-btn" => "LOOKUP URL",
     "lookup-btn-tooltip" => "Anda hanya dapat mencari 5 kali dalam 1 jam",
     "technologies" => "Teknologi",
