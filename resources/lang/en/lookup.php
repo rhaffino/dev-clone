@@ -4,7 +4,7 @@ return [
     "meta-desc" => "Technology Lookup is a tool for identify widgets, identifying languages ​​and the full version of the technology applied by a site.",
     "lang" => "en",
     "title" => "TECHNOLOGY LOOKUP",
-    "sub-title" => "Find Out What Websites Are Built",
+    "sub-title" => "Learn How Websites Are Built",
     "lookup-btn" => "LOOKUP URL",
     "lookup-btn-tooltip" => "You can only search 5 times in 1 hour",
     "technologies" => "Technologies",
