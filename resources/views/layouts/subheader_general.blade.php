@@ -90,7 +90,6 @@
             {{-- <a href="{{ env('ANALYTICS_URL', 'https://app.cmlabs.co') }}" class="btn btn-custom-credit font-weight-bold mr-1">@lang('layout.button-register')</a> --}}
             {{-- <a href="{{ env('ANALYTICS_URL', 'https://app.cmlabs.co') }}" class="btn btn-custom-login ml-3"><b>@lang('layout.button-signin-1')</b> @lang('layout.button-signin-2')</a> --}}
         </div>
-
         <div class="collapse container__mega-menu" id="collapse-mega-menu-more">
             <div class="card card-body p-5">
                 <div class="container">

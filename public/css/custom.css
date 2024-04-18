@@ -25,6 +25,10 @@ body {
     width: max-content;
 }
 
+.max__content{
+    width: max-content;
+}
+
 .text-primaryblue {
     color: var(--primaryblue);
 }
