@@ -69,7 +69,7 @@
                     <li class="nav-item dropdown ml-7 medium__nav">
                         <a class="nav-link dropdown-toggle relative @yield('sequence')" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">@lang('layout.nav-tools-sequence') <span class="new-indicator new__indicator-subheader"></span></a>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="https://www.sequence.day/keyword-research" target="_blank">Keyword Research</a>
+                            <a class="dropdown-item" href="https://www.sequence.day/keyword-research" target="_blank">@lang('layout.nav-tools-sequence-1')</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="https://www.sequence.day/most-popular-indonesia-online-publisher" target="_blank">Most Popular Indonesia Online Publisher</a>
                             <div class="dropdown-divider"></div>
@@ -90,7 +90,6 @@
             {{-- <a href="{{ env('ANALYTICS_URL', 'https://app.cmlabs.co') }}" class="btn btn-custom-credit font-weight-bold mr-1">@lang('layout.button-register')</a> --}}
             {{-- <a href="{{ env('ANALYTICS_URL', 'https://app.cmlabs.co') }}" class="btn btn-custom-login ml-3"><b>@lang('layout.button-signin-1')</b> @lang('layout.button-signin-2')</a> --}}
         </div>
-        
         <div class="collapse container__mega-menu" id="collapse-mega-menu-more">
             <div class="card card-body p-5">
                 <div class="container">

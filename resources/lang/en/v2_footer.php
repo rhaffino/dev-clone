@@ -140,7 +140,7 @@ return [
     "badge-desc-cta" => "Let's turn those plan into reality, shall we?",
 
     "copyright" => "COPYRIGHT",
-
+    "whistleblower"=>"Whistleblower Protection",
     "explore-comp" => "Explore our compliance",
 
     "partnership-tag" => "COST-EFFECTIVE FEES, UP TO 5%!",

@@ -150,6 +150,7 @@ return [
     "copyright" => "HAK CIPTA",
 
     "explore-comp" => "Jelajahi penyesuaian kami",
+    "whistleblower"=>"Proteksi Whistleblower",
 
     "partnership-tag" => "BIAYA COST-EFFECTIVE, HINGGA 5%!",
     "partnership-title" => "KAMI TERBUKA UNTUK KERJASAMA DENGAN BERBAGAI NICHE",

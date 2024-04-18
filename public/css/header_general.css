@@ -2,7 +2,7 @@
     align-items: end;
     justify-content: center;
 }
-.header-general .nav-header .dropdown-toggle.nav-link:after, 
+.header-general .nav-header .dropdown-toggle.nav-link:after,
 .header-general .nav-header .dropdown-toggle.btn:after {
     content: none;
 }
@@ -29,7 +29,7 @@
     margin-bottom: 1rem;
 }
 .list-inline-item{
-    padding-bottom: .8rem; 
+    padding-bottom: .8rem;
 }
 .list__mega-menu{
     color: var(--black);
@@ -49,4 +49,4 @@
     .medium__nav-more{
         display: block;
     }
-}
+}​
