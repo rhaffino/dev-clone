@@ -57,7 +57,7 @@ function renderResult(data) {
 
         let score;
 
-        if ( data.lighthouseResult.categories[categories[j]].score == null ) {
+        if ( data.lighthouseResult.categories[categories[j]] == undefined || data.lighthouseResult.categories[categories[j]].score == null ) {
             score = 0
         } else {
             // console.log('real score : '+data.lighthouseResult.categories[categories[j]].score);
@@ -65,8 +65,10 @@ function renderResult(data) {
             // console.log('multiple score : '+data.lighthouseResult.categories[categories[j]].score * 100);
         }
 
-        strokeValue(score, j + 1, categories[j]);
-        displayAuditsResult(data, categories[j])
+        if (data.lighthouseResult.categories[categories[j]] != undefined) {
+            strokeValue(score, j + 1, categories[j]);
+            displayAuditsResult(data, categories[j]);
+        }
     }
     listener();
     addListenerForCollapsible();
@@ -433,11 +435,15 @@ function traceTreeData(data) {
 function subStringUrl(url) {
     let constrainUrl = 33;
     let fixedUrl = '...';
-    if (url.length > constrainUrl) {
-        fixedUrl += url.substring(url.length - constrainUrl);
-    } else {
-        fixedUrl = url;
+
+    if (url != undefined) {
+        if (url.length > constrainUrl) {
+            fixedUrl += url.substring(url.length - constrainUrl);
+        } else {
+            fixedUrl = url;
+        }
     }
+
     return fixedUrl;
 }
 
