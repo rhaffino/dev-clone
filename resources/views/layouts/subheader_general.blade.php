@@ -45,30 +45,31 @@
                     <li class="nav-item ml-7">
                         <a class="nav-link @yield('keyword-permutation')" href="/{{ $local }}/keyword-permutation">Keyword Permutation</a>
                     </li>
-                    <li class="nav-item ml-7 medium__nav">
-                        <a class="nav-link @yield('word-counter')" href="/{{ $local }}/word-counter">Word Counter</a>
+                    <li class="nav-item dropdown ml-7 medium__nav">
+                        <a class="nav-link dropdown-toggle @yield('writer-tools')" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">@lang('layout.title-writer-tools')</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item @yield('word-counter')" href="/{{ $local }}/word-counter">Word Counter</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item @yield('title-checker')" href="/{{ $local }}/page-title-meta-description-checker">Title and Meta Checker</a>
+                            {{-- @if (auth()->check() && (auth()->check() ? auth()->user()->user_role_id == 3 : false)) --}}
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item @yield('plagiarism-checker')" href="/{{ $local }}/plagiarism-checker">Plagiarism Checker</a>
+                            {{-- @endif --}}
+                        </div>
                     </li>
                     <li class="nav-item ml-7 medium__nav">
-                        <a class="nav-link @yield('title-checker')" href="/{{ $local }}/page-title-meta-description-checker">Title and Meta Checker</a>
-                    </li>
-                    {{-- @if (auth()->check() && (auth()->check() ? auth()->user()->user_role_id == 3 : false)) --}}
-                        <li class="nav-item ml-7">
-                            <a class="nav-link plagiarism @yield('plagiarism-checker')" href="/{{ $local }}/plagiarism-checker">Plagiarism Checker</a>
-                        </li>
-                    {{-- @endif --}}
-                    <li class="nav-item ml-7 medium__nav">
-                        <a class="nav-link" href="https://cmlabs.co/en-id/cmlabs-surge" target="_blank">cmlabs Surge</a>
+                        <a class="nav-link relative" href="https://cmlabs.co/{{ $local }}-id/cmlabs-surge" target="_blank">cmlabs Surge <span class="new-indicator new__indicator-subheader"></span></a>
                     </li>
                     <li class="nav-item ml-7 medium__nav">
-                        <a class="nav-link" href="https://cmlabs.co/en-id/traffic-calculator" target="_blank">Traffic Projection Calculator</a>
+                        <a class="nav-link relative" href="https://cmlabs.co/{{ $local }}-id/traffic-calculator" target="_blank">Traffic Projection Calculator <span class="new-indicator new__indicator-subheader"></span></a>
                     </li>
                     <li class="nav-item ml-7 medium__nav">
-                        <a class="nav-link" href="https://app.sequence.day/auth/login" target="_blank">Search Stats by Sequence</a>
+                        <a class="nav-link relative" href="https://app.sequence.day/auth/login" target="_blank">@lang('layout.nav-stats-sequence') <span class="new-indicator new__indicator-subheader"></span></a>
                     </li>
                     <li class="nav-item dropdown ml-7 medium__nav">
-                        <a class="nav-link dropdown-toggle @yield('sequence')" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Tools by Sequence</a>
+                        <a class="nav-link dropdown-toggle relative @yield('sequence')" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">@lang('layout.nav-tools-sequence') <span class="new-indicator new__indicator-subheader"></span></a>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="https://www.sequence.day/keyword-research" target="_blank">Keyword Research</a>
+                            <a class="dropdown-item" href="https://www.sequence.day/keyword-research" target="_blank">@lang('layout.nav-tools-sequence-1')</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="https://www.sequence.day/most-popular-indonesia-online-publisher" target="_blank">Most Popular Indonesia Online Publisher</a>
                             <div class="dropdown-divider"></div>
@@ -80,7 +81,7 @@
                         </div>
                     </li>
                     <li class="nav-item dropdown ml-7 medium__nav-more">
-                        <a id="mega-menu-more" class="nav-link dropdown-toggle @yield('see-more')" href="#" role="button">See More</a>
+                        <a id="mega-menu-more" class="nav-link dropdown-toggle relative @yield('see-more')" href="#" role="button">@lang('layout.see-more') <span class="new-indicator new__indicator-subheader"></span></a>
                     </li>
                 </ul>
             </div>
@@ -89,7 +90,6 @@
             {{-- <a href="{{ env('ANALYTICS_URL', 'https://app.cmlabs.co') }}" class="btn btn-custom-credit font-weight-bold mr-1">@lang('layout.button-register')</a> --}}
             {{-- <a href="{{ env('ANALYTICS_URL', 'https://app.cmlabs.co') }}" class="btn btn-custom-login ml-3"><b>@lang('layout.button-signin-1')</b> @lang('layout.button-signin-2')</a> --}}
         </div>
-
         <div class="collapse container__mega-menu" id="collapse-mega-menu-more">
             <div class="card card-body p-5">
                 <div class="container">
@@ -97,13 +97,13 @@
                         <div class="col-sm">
                             <ul class="list-inline">
                                 <li>
-                                    <a class="list-inline-item list__mega-menu" href="https://cmlabs.co/en-id/cmlabs-surge" target="_blank">cmlabs Surge</a>
+                                    <a class="list-inline-item list__mega-menu relative" href="https://app.sequence.day/auth/login" target="_blank">@lang('layout.nav-stats-sequence') <span class="new-indicator new__indicator-megamenu"></span></a>
                                 </li>
                                 <li>
-                                    <a class="list-inline-item list__mega-menu" href="https://cmlabs.co/en-id/traffic-calculator" target="_blank">Traffic Projection Calculator</a>
+                                    <a class="list-inline-item list__mega-menu relative" href="https://cmlabs.co/{{ $local }}-id/cmlabs-surge" target="_blank">cmlabs Surge <span class="new-indicator new__indicator-megamenu"></span></a>
                                 </li>
                                 <li>
-                                    <a class="list-inline-item list__mega-menu" href="https://app.sequence.day/auth/login" target="_blank">Search Stats by Sequence</a>
+                                    <a class="list-inline-item list__mega-menu relative" href="https://cmlabs.co/{{ $local }}-id/traffic-calculator" target="_blank">Traffic Projection Calculator <span class="new-indicator new__indicator-megamenu"></span></a>
                                 </li>
                             </ul>
                         </div>
@@ -121,7 +121,7 @@
                                 </li>
                             </ul>
 
-                            <h2 class="title__mega-menu h3">Other Tools</h2>
+                            <h2 class="title__mega-menu h3">@lang('layout.title-writer-tools')</h2>
                             <ul class="list-inline">
                                 <li>
                                     <a class="list-inline-item list__mega-menu @yield('word-counter')" href="/{{ $local }}/word-counter">Word Counter</a>
@@ -129,6 +129,11 @@
                                 <li>
                                     <a class="list-inline-item list__mega-menu @yield('title-checker')" href="/{{ $local }}/page-title-meta-description-checker">Title and Meta Checker</a>
                                 </li>
+                                {{-- @if (auth()->check() && (auth()->check() ? auth()->user()->user_role_id == 3 : false)) --}}
+                                <li>
+                                    <a class="list-inline-item list__mega-menu @yield('plagiarism-checker')" href="/{{ $local }}}/plagiarism-checker">Plagiarism Checker</a>
+                                </li>
+                                {{-- @endif --}}
                             </ul>
                         </div>
                         <div class="col-sm">
@@ -170,22 +175,22 @@
                             </ul>
                         </div>
                         <div class="col-sm">
-                            <h2 class="title__mega-menu h3">Tools by Sequence</h2>
+                            <h2 class="title__mega-menu h3">@lang('layout.nav-tools-sequence')</h2>
                             <ul class="list-inline">
                                 <li>
-                                    <a class="list-inline-item list__mega-menu" href="https://www.sequence.day/keyword-research" target="_blank">Keyword Research</a>
+                                    <a class="list-inline-item list__mega-menu relative" href="https://www.sequence.day/keyword-research" target="_blank">@lang('layout.nav-tools-sequence-1') <span class="new-indicator new__indicator-megamenu"></span></a>
                                 </li>
                                 <li>
-                                    <a class="list-inline-item list__mega-menu" href="https://www.sequence.day/most-popular-indonesia-online-publisher" target="_blank">Most Popular Indonesia Online Publisher</a>
+                                    <a class="list-inline-item list__mega-menu relative" href="https://www.sequence.day/most-popular-indonesia-online-publisher" target="_blank">Most Popular Indonesia Online Publisher <span class="new-indicator new__indicator-megamenu new__indicator-megamenu-popular"></span></a>
                                 </li>
                                 <li>
-                                    <a class="list-inline-item list__mega-menu" href="https://www.sequence.day/people-and-brand-mention" target="_blank">Person and Brand Mention on Online Publisher</a>
+                                    <a class="list-inline-item list__mega-menu relative" href="https://www.sequence.day/people-and-brand-mention" target="_blank">Person and Brand Mention on Online Publisher <span class="new-indicator new__indicator-megamenu new__indicator-megamenu-brand"></span></a>
                                 </li>
                                 <li>
-                                    <a class="list-inline-item list__mega-menu" href="https://www.sequence.day/indonesia-online-publisher-sentiments" target="_blank">Sentiment Analysis</a>
+                                    <a class="list-inline-item list__mega-menu relative" href="https://www.sequence.day/indonesia-online-publisher-sentiments" target="_blank">Sentiment Analysis <span class="new-indicator new__indicator-megamenu"></span></a>
                                 </li>
                                 <li>
-                                    <a class="list-inline-item list__mega-menu" href="https://www.sequence.day/site-explorer" target="_blank">Site Explorer</a>
+                                    <a class="list-inline-item list__mega-menu relative" href="https://www.sequence.day/site-explorer" target="_blank">Site Explorer <span class="new-indicator new__indicator-megamenu"></span></a>
                                 </li>
                             </ul>
                         </div>

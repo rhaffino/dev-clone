@@ -116,12 +116,12 @@
                                             class="mktcmlgtm_footer_expert_writing text-dark-70 b2-400 b2-m-400 two-rows"
                                             href="https://cmlabs.co/{{ $lang_region }}/pricing/expert-writing">@lang('v2_footer.menu_service_expert_writing')
                                         </a></li>
-                                    {{-- @if ($lang_region === 'en-id' || $lang_region === 'id-id')
+                                    {{-- @if ($lang_region === 'en-id' || $lang_region === 'id-id') --}}
                                         <li class="my-1 my-lg-2"><a
                                                 class="mktcmlgtm_footer_media_buying text-dark-70 b2-400 b2-m-400 two-rows"
                                                 href="https://cmlabs.co/{{ $lang_region }}/pricing/media-buying">@lang('v2_footer.menu_service_marketing')
                                             </a></li>
-                                    @endif --}}
+                                    {{-- @endif --}}
                                     <li class="my-1 my-lg-2"><a
                                             class="mktcmlgtm_footer_political_campaign text-dark-70 b2-400 b2-m-400"
                                             href="https://cmlabs.co/{{ $lang_region }}/pricing/political-campaign">@lang('v2_footer.menu_service_political')</a>
@@ -139,7 +139,7 @@
                                     <li class="my-1 my-lg-2"><a
                                             class="mktcmlgtm_footer_only_for_you text-dark-70 b2-400 b2-m-400 two-rows"
                                             href="https://cmlabs.co/{{ $lang_region }}/promo">@lang('v2_footer.menu_service_cta')
-                                        </a></li> --}}
+                                        </a></li>
                                 </ul>
                             </div>
                             <div class="footer-submenu-container order-2 order-lg-1 mt-lg-4">
@@ -159,10 +159,6 @@
                                             class="mktcmlgtm_footer_contact_us text-dark-70 b2-400 b2-m-400"
                                             href="https://cmlabs.co/{{ $lang_region }}/company/contact">@lang('v2_footer.menu_contact')</a>
                                     </li>
-                                    @if ($lang == 'id')
-                                        <li class="my-1 my-lg-2"><a class="text-dark-70 b2-400 b2-m-400"
-                                                href="https://career.cmlabs.co">@lang('v2_footer.menu_career') </a></li>
-                                    @endif
                                     <li class="my-1 my-lg-2"><a
                                             class="mktcmlgtm_footer_press_release text-dark-70 b2-400 b2-m-400"
                                             href="https://career.cmlabs.co/">@lang('v2_footer.menu_career')</a>
@@ -353,7 +349,7 @@
                     <div class="partner-badge-card">
                         <p class="m-0 text-gray-110 text-center b2-400 fst-italic">@lang('v2_footer.badge-title')</p>
                         <div class="pill w-100">
-                            <img src="{{ asset('assets/images/sequence-logo.svg') }}" height="20px"
+                            <img src="{{ asset('media/logos/sequence-logo.svg') }}" height="20px"
                                 alt="Sequence logo">
                             <div class="text-yellow-100 b1-400 b1-m-400">@lang('v2_footer.badge-name')</div>
                         </div>

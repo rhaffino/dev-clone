@@ -99,4 +99,9 @@ return [
     "invalid-longitude" => "Longitude Tidak Valid",
     "invalid_number" => "Nilai harus lebih dari 0",
     "invalid-hours" => "Jam Tidak Valid",
+    "nav-stats-sequence" => "Search Stats dari Sequence",
+    "nav-tools-sequence" => "Tool dari Sequence",
+    "nav-tools-sequence-1" => "Riset Kata Kunci",
+    "see-more" => "Lihat Selengkapnya",
+    "title-writer-tools" => "Tool Penulis",
 ];
