@@ -192,6 +192,9 @@
         flex-direction: column;
         gap: 12px;
         background: var(--dark-70, #252a38);
+        @media screen and (max-width: 768px) {
+            max-width: none !important;
+        }
     }
 
     .dropdown-compliance{
