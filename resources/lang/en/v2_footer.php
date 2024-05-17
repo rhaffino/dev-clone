@@ -92,9 +92,8 @@ return [
 
     'menu_service_seo' => 'SEO Services <br><i class="text-primary-70 s-700 b2-m-700">starting from <span class="update-cost" data-id="Rp 10mio" data-usd="USD 698" data-cost="10000000"></span></i>',
     'menu_service_writing' => 'SEO Writing <br><i class="text-primary-70 s-700 b2-m-700">starting from <span class="update-cost" data-id="Rp 9mio" data-usd="-" data-cost="9000000"></span></i>',
-    'menu_service_expert_writing' => 'Expert Writing <br><i class="text-primary-70 s-700 b2-m-700">starting from <span class="update-cost" data-id="Rp 12.5mio" data-usd="-" data-cost="12500000"></span></i>',
-    // 'menu_service_marketing' => 'Media Buying <br><i class="text-primary-70 s-700 b2-m-700">starting from <span class="update-cost" data-id="Rp 100mio" data-usd="-" data-cost="100000000"></span></i>',
-    'menu_service_marketing' => 'Media Buying',
+    'menu_service_expert_writing' => 'Expert Writing <br><i class="text-primary-70 s-700 b2-m-700">starting from <span class="update-cost" data-id="Rp 12.75mio" data-usd="-" data-cost="12750000"></span></i>',
+    'menu_service_marketing' => 'Media Buying <br><i class="text-primary-70 s-700 b2-m-700">starting from <span class="update-cost" data-id="Rp 100mio" data-usd="-" data-cost="100000000"></span></i>',
     'menu_service_backlink' => 'Blogger Backlink',
     'menu_service_political' => 'SEO for Political Campaign',
     'menu_service_pr' => 'PR / Advertorial',
