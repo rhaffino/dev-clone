@@ -143,12 +143,12 @@ class ApiController extends Controller
 
     public function analyzeSsl(Request $request)
     {
-        $validator = Validator::make($request->all(),[
-            "url" => ["required", "string", "regex:/^(?!:\/\/)(?=.{1,255}$)((.{1,63}\.){1,127}(?![0-9]*$)[a-z0-9-]+\.?)$/i"]
-        ]);
+        // $validator = Validator::make($request->all(),[
+        //     "url" => ["required", "string", "regex:/^(?!:\/\/)(?=.{1,255}$)((.{1,63}\.){1,127}(?![0-9]*$)[a-z0-9-]+\.?)$/i"]
+        // ]);
 
-        if ($validator->fails())
-            return new BaseApiResource(null,$validator->errors()->first(),422, 'danger');
+        // if ($validator->fails())
+        //     return new BaseApiResource(null,$validator->errors()->first(),422, 'danger');
 
         try {
             $response = $this->requestSslChecker($request->get('url'));
