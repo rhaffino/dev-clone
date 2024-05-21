@@ -1,7 +1,7 @@
 <?php
 return [
-    "meta-title" => "Tool Gratis JSON-LD FAQ Schema Generator",
-    "meta-desc" => "Gunakan realtime JSON-LD Schema Generator (FAQ Page) dari CMLABS untuk membuat FAQ Schema dan aktifkan rich snippet SERP di Google.",
+    "meta-title" => "Tool SEO Gratis JSON-LD FAQ Schema Generator",
+    "meta-desc" => "Gunakan JSON-LD FAQ Schema Generator tools untuk membuat stuktur data Frequently Asked Questions dan aktifkan rich snippet SERP di Google untuk halaman Anda.",
     "title" => "JSON-LD FAQ SCHEMA GENERATOR",
     "subtitle" => "Aktifkan Rich Snippet Di Serp",
     "btn-add" => "TAMBAH PERTANYAAN", 

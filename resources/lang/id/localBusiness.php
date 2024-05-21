@@ -1,7 +1,7 @@
 <?php
 return [
-    "meta-title" => "JSON-LD Local Business Schema Generator dari cmlabs",
-    "meta-desc" => "Gunakan markup schema JSON-LD Local Business Schema Generator dari cmlabs untuk memaksimalkan visibilitas dan peringkat website bisnis Anda!",
+    "meta-title" => "Tool SEO Gratis JSON-LD Local Business Schema Generator",
+    "meta-desc" => "Gunakan tools gratis markup schema JSON-LD Local Business Schema Generator dari cmlabs untuk memaksimalkan visibilitas dan peringkat website bisnis Anda.",
     "title" => "JSON-LD LOCAL BUSINESS SCHEMA GENERATOR",
     "subtitle" => "Menjadikan proses pembuatan markup lebih efisien, variatif, dan ramah SEO, agar meningkatkan visibilitas bisnis Anda di mesin pencarian.",
     "label-type" => "Tipe Bisnis Lokal",

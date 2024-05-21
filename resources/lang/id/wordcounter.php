@@ -2,7 +2,7 @@
 
 return [
     "meta-title" => "Word Counter - Alat Penghitung Kata & Keyword Density",
-    "meta-desc" => "Word Counter untuk menghitung kata, paragraf dan durasi membaca secara instan. Lengkap dengan SEO Keyword Density checker untuk penulis!",
+    "meta-desc" => "Word Counter adalah alat penghitung jumlah kata, paragraf dan durasi membaca secara instan. Lengkap dengan SEO Keyword Density checker, cek di sini.",
     "title" => "WORD COUNTER",
     "subtitle" => "Hitung Kata dalam Teks",
     "tooltip-copy" => "Salin",
