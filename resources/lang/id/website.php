@@ -1,7 +1,7 @@
 <?php
 return [
-    "meta-title" => "JSON-LD Website Schema Generator - Schema Markup dari cmlabs",
-    "meta-desc" => "JSON-LD Website Schema Generator dari cmlabs bantu Anda maksimalkan strategi SEO melalui skema markup untuk tingkatkan visibilitas web.",
+    "meta-title" => "Tool SEO Gratis JSON-LD Website Schema Generator",
+    "meta-desc" => "Optimasi website dan maksimalkan strategi SEO dengan menggunakan tools gratis JSON-LD Website schema generator untuk meningkatkankan visibilitas website Anda.",
     "title" => "JSON-LD WEBSITE SCHEMA GENERATOR",
     "subtitle" => "Ciptakan data terstruktur pada website melalui Schema Markup untuk memaksimalkan strategi SEO dan peringkat website di mesin pencari.",
     "label-name-website" => "Nama Website",
