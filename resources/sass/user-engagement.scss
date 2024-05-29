@@ -13,9 +13,11 @@ body.cmlabs-tools {
         display: flex;
         flex-direction: column;
         align-items: start;
+
         .cards-container-wrapper {
             max-height: 78vh;
             overflow: auto;
+
             &::-webkit-scrollbar {
                 background-color: map.get($colors, "gray-80");
                 height: 8px !important;
@@ -23,19 +25,23 @@ body.cmlabs-tools {
                 transition: 0.5s;
                 border-radius: 50px;
             }
+
             &::-webkit-scrollbar-track {
                 background-color: map.get($colors, "gray-30");
                 opacity: 0.1;
             }
+
             &::-webkit-scrollbar-thumb {
                 background-color: map.get($colors, "gray-80");
                 opacity: 0.7;
                 border-radius: 50px;
             }
+
             &::-webkit-scrollbar-button {
                 display: none !important;
             }
         }
+
         .cards-container {
             border: none;
             z-index: 91;
@@ -44,9 +50,11 @@ body.cmlabs-tools {
             gap: 12px;
             align-items: stretch;
             flex-direction: column;
+
             &::not(.feedback) {
                 max-width: 240px;
             }
+
             &.hide {
                 transform: translateY(200px);
                 opacity: 0;
@@ -76,26 +84,31 @@ body.cmlabs-tools {
                     align-items: center;
                     overflow: hidden;
                     height: 136px;
+
                     img {
                         width: 100%;
                     }
                 }
+
                 &-body {
                     padding: 8px 12px;
                     padding-right: 16px;
                     display: flex;
                     flex-direction: column;
                     gap: 4px;
+
                     a {
                         text-decoration: none;
                     }
                 }
+
                 .close-btn {
                     position: absolute;
                     top: 8px;
                     right: 12px;
                     cursor: pointer;
                 }
+
                 .pin-icon {
                     position: absolute;
                     bottom: 8px;
@@ -114,9 +127,11 @@ body.cmlabs-tools {
                 }
             }
         }
+
         .button-container {
             z-index: 92;
             position: relative;
+
             button {
                 box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.2);
                 background-color: white;
@@ -129,8 +144,10 @@ body.cmlabs-tools {
                 align-items: center;
                 justify-content: center;
                 transition: all 300ms;
+
                 &.active {
                     color: map.get($colors, "primary-70");
+
                     .red-dot {
                         position: absolute;
                         top: 8px;
@@ -141,16 +158,20 @@ body.cmlabs-tools {
                         background-color: map.get($colors, "danger-70");
                     }
                 }
+
                 &.close {
                     display: none;
                 }
             }
+
             @media screen and (max-width: 425px) {
                 button.btn-float-notif {
                     padding: 12px;
+
                     i {
                         margin-right: 0px;
                     }
+
                     span {
                         display: none;
                     }
@@ -159,9 +180,44 @@ body.cmlabs-tools {
         }
     }
 
+    .popup-card {
+        display: flex;
+        border-radius: 8px;
+        width: 462px;
+        // background: linear-gradient(0deg, #FFFFFF, #FFFFFF),
+        //     linear-gradient(280.5deg, rgba(188, 223, 252, 0.3) -12%, rgba(186, 193, 252, 0.3) 129.79%);
+        background: #e7f4ff;
+        padding: 30px 20px;
+        gap: 32px;
+        margin-left: 58px;
+
+        .illustration {
+            width: 142px;
+
+            img {
+                position: absolute;
+                bottom: 0;
+            }
+        }
+
+        .btn {
+            width: fit-content;
+            margin-top: 12px;
+            padding: 6px 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            &:hover {
+                color: white !important;
+            }
+        }
+    }
+
     .feedback {
         width: 304px;
         max-width: 304px;
+
         &.cards-container-middle {
             position: fixed;
             bottom: 0;
@@ -175,6 +231,7 @@ body.cmlabs-tools {
                 border-radius: 16px 16px 0 0;
             }
         }
+
         .feedback-card {
             display: flex;
             flex-direction: column;
@@ -183,6 +240,7 @@ body.cmlabs-tools {
             border-radius: 16px;
             overflow: hidden;
             background-color: white;
+
             &-body {
                 .title {
                     padding: 16px 24px;
@@ -193,13 +251,16 @@ body.cmlabs-tools {
 
                 .feedback-item {
                     cursor: pointer;
+
                     &:hover {
                         transition: 300ms;
                         background-color: map.get($colors, "gray-30");
                     }
+
                     input {
                         display: none;
                     }
+
                     label {
                         cursor: pointer;
                         padding: 16px 24px;
@@ -208,9 +269,11 @@ body.cmlabs-tools {
                     &.icon {
                         width: fit-content;
                         border-radius: 100px;
+
                         &:hover {
                             background-color: map.get($colors, "gray-40");
                         }
+
                         label {
                             padding: 0;
                             width: fit-content;
@@ -223,10 +286,12 @@ body.cmlabs-tools {
                     padding-top: 0;
                 }
             }
+
             &-footer {
                 padding: 24px;
                 background-color: map.get($colors, "gray-70");
             }
+
             .close-btn {
                 position: absolute;
                 top: 8px;
@@ -258,6 +323,7 @@ body.cmlabs-tools {
             margin-top: 8px;
             text-align: center;
         }
+
         .button-container {
             margin-top: 16px;
         }
@@ -306,6 +372,7 @@ body.cmlabs-tools {
             .announcement-title {
                 padding-top: 24px;
             }
+
             .emoji {
                 top: -28px;
                 left: 20px;
@@ -315,6 +382,7 @@ body.cmlabs-tools {
 
     .announcement-card,
     .cookies-card {
+
         .arrow,
         .arrow::before {
             position: absolute;
@@ -342,9 +410,11 @@ body.cmlabs-tools {
             .cards-container {
                 .notif-card {
                     max-width: 210px;
+
                     &-header {
                         height: 105px;
                     }
+
                     &-body {
                         p {
                             font-size: 14px;
