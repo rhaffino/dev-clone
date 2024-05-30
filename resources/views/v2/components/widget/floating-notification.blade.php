@@ -268,12 +268,12 @@
             }, 5500);
         </script>
     @endif
-    @if (in_array(Route::currentRouteName(), ['metadesc-checker']))
+    {{-- @if (in_array(Route::currentRouteName(), ['metadesc-checker']))
         <script>
             // script for auto show the popup
             setTimeout(() => {
                 showFeedbackCard()
             }, 10000);
         </script>
-    @endif
+    @endif --}}
 @endpush

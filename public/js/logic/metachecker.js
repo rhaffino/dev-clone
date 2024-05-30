@@ -46,6 +46,8 @@ function generate () {
                 save(url, res.data.title, res.data.description)
                 refreshLocalStorage();
                 recordUserActivity(url);
+                
+                showFeedbackCard()
             } else {
                 toastr.error(res.message)
             }
