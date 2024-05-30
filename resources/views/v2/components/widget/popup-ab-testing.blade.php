@@ -8,7 +8,7 @@
                 {!! __('ab-testing.kw-permutation.title') !!}
             </div>
             <a href="https://cmlabs.co/{{ $lang }}-id/pricing/seo-services"
-                class="button-primary-130 btn">{!! __('ab-testing.kw-permutation.cta') !!} <i class="bx bx-right-arrow-alt"></i></a>
+                class="toolscmlabs_keyword_permutation_popup_wanna_rank1 button-primary-130 btn">{!! __('ab-testing.kw-permutation.cta') !!} <i class="toolscmlabs_keyword_permutation_popup_wanna_rank1 bx bx-right-arrow-alt"></i></a>
         </div>
     @endif
 
@@ -21,7 +21,7 @@
                 {!! __('ab-testing.word-counter.title') !!}
             </div>
             <a href="https://cmlabs.co/{{ $lang }}-id/pricing/seo-services"
-                class="button-primary-130 btn">{!! __('ab-testing.word-counter.cta') !!} <i class="bx bx-right-arrow-alt"></i></a>
+                class="toolscmlabs_word_counter_popup_showme button-primary-130 btn">{!! __('ab-testing.word-counter.cta') !!} <i class="toolscmlabs_word_counter_popup_showme bx bx-right-arrow-alt"></i></a>
         </div>
     @endif
 
@@ -34,7 +34,7 @@
                 {!! __('ab-testing.robots.title') !!}
             </div>
             <a href="https://cmlabs.co/{{ $lang }}-id/pricing/seo-services"
-                class="button-primary-130 btn">{!! __('ab-testing.robots.cta') !!} <i class="bx bx-right-arrow-alt"></i></a>
+                class="toolscmlabs_robottxt_popup_expert_guidance button-primary-130 btn">{!! __('ab-testing.robots.cta') !!} <i class="toolscmlabs_robottxt_popup_expert_guidance bx bx-right-arrow-alt"></i></a>
         </div>
     @endif
 
@@ -47,7 +47,7 @@
                 {!! __('ab-testing.meta-desc.title') !!}
             </div>
             <a href="https://cmlabs.co/{{ $lang }}-id/pricing/content-writing"
-                class="button-primary-130 btn">{!! __('ab-testing.meta-desc.cta') !!} <i class="bx bx-right-arrow-alt"></i></a>
+                class="toolscmlabs_page_title_meta_desc_popup_showme button-primary-130 btn">{!! __('ab-testing.meta-desc.cta') !!} <i class="toolscmlabs_page_title_meta_desc_popup_showme bx bx-right-arrow-alt"></i></a>
         </div>
     @endif
 </div>
