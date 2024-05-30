@@ -51,6 +51,10 @@ body.cmlabs-tools {
             align-items: stretch;
             flex-direction: column;
 
+            &.feedback {
+                padding-right: 24px;
+            }
+
             &::not(.feedback) {
                 max-width: 240px;
             }
@@ -132,6 +136,10 @@ body.cmlabs-tools {
             z-index: 92;
             position: relative;
 
+            .btn {
+                box-shadow: 0px 0px 2.47px 0px #00000040;
+            }
+
             button {
                 box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.2);
                 background-color: white;
@@ -192,7 +200,8 @@ body.cmlabs-tools {
         margin-left: 58px;
 
         .illustration {
-            width: 142px;
+            width: 116px;
+            flex-shrink: 0;
 
             img {
                 position: absolute;
@@ -212,11 +221,22 @@ body.cmlabs-tools {
                 color: white !important;
             }
         }
+
+        @media screen and (max-width: 575px) {
+            margin-left: 0;
+            width: 100%;
+            padding: 20px 12px;
+        }
     }
 
     .feedback {
         width: 304px;
         max-width: 304px;
+
+        @media screen and (max-width: 575px) {
+            max-width: none;
+            width: 100%;
+        }
 
         &.cards-container-middle {
             position: fixed;

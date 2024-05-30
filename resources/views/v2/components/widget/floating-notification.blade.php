@@ -36,25 +36,41 @@
         @include('v2.components.widget.popup-ab-testing')
     </div>
 
-    <div class="button-container d-flex gap-3 align-items-end mt-3" style="gap: 20px">
+    <div class="button-container d-flex gap-3 flex-sm-row flex-column align-items-end mt-3" style="gap: 16px">
         @isset($notificationData)
             <button
-                class="btn btn-float-notif open align-items-center button-marketing {{ count($notificationData) > 0 && $notificationData != '' ? 'active' : '' }}">
+                class="order-2 order-md-1 btn btn-float-notif open align-items-center button-marketing {{ count($notificationData) > 0 && $notificationData != '' ? 'active' : '' }}">
                 <i class='bx bx-sm bxs-bell' style="padding: 0"></i>
                 <div class="red-dot"></div>
             </button>
-            <button class="btn btn-float-notif align-items-center close">
+            <button class="order-2 order-md-1 btn btn-float-notif align-items-center close">
                 <i class='bx bx-sm bxs-bell' style="padding: 0"></i>
                 <div class="red-dot"></div>
             </button>
         @endisset
 
-        @if(in_array(Route::currentRouteName(), ['keyword-permutation', 'robotstxt-checker', 'word-counter']))
+        @if (in_array(Route::currentRouteName(), [
+                'keyword-permutation',
+                'robotstxt-generator',
+                'word-counter',
+                'metadesc-checker',
+            ]))
             <button
-                class="btn btn-float-feedback btn-float-feedback-toggle align-items-center user-satisfaction active">
-                <i class='bx bx-message-alt-detail p-0'></i>
+                class="order-1 order-sm-2 btn btn-float-feedback btn-float-feedback-toggle align-items-center user-satisfaction active"
+                style="padding: 8px">
+                <svg width="24" height="23" viewBox="0 0 24 23" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M6.81836 6.54834H16.559V8.41929H6.81836V6.54834ZM6.81836 10.2902H13.6368V12.1612H6.81836V10.2902Z"
+                        fill="#777777" />
+                    <path
+                        d="M19.4814 1.87085H3.89637C2.82198 1.87085 1.94824 2.70997 1.94824 3.7418V20.5804L7.14293 16.8385H19.4814C20.5558 16.8385 21.4295 15.9993 21.4295 14.9675V3.7418C21.4295 2.70997 20.5558 1.87085 19.4814 1.87085ZM19.4814 14.9675H6.4942L3.89637 16.8385V3.7418H19.4814V14.9675Z"
+                        fill="#777777" />
+                </svg>
             </button>
-            <button class="btn btn-float-feedback align-items-center close user-satisfaction background-primary-70" style="opacity: 1">
+            <button
+                class="order-1 order-sm-2 btn btn-float-feedback align-items-center close user-satisfaction background-primary-70"
+                style="opacity: 1">
                 <i class='bx bx-sm bx-x p-0 text-white'></i>
             </button>
         @endif
@@ -242,5 +258,12 @@
                 })
             }
         }
+    </script>
+
+    <script>
+        // script for auto show the popup
+        setTimeout(() => {
+            showFeedbackCard()
+        }, 5500);
     </script>
 @endpush

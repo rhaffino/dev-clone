@@ -53,7 +53,7 @@ Route::middleware([ManualAuth::class])->group(function () {
         Route::get('/{lang}/json-ld-product-schema-generator', 'ToolsController@product');
         Route::get('/{lang}/json-ld-recipe-schema-generator', 'ToolsController@recipe');
         Route::get('/{lang}/word-counter', 'ToolsController@wordcounter')->name('word-counter');
-        Route::get('/{lang}/page-title-meta-description-checker', 'ToolsController@metachecker');
+        Route::get('/{lang}/page-title-meta-description-checker', 'ToolsController@metachecker')->name('metadesc-checker');
         Route::get('/{lang}/dummy-credit-card-generator', 'ToolsController@creditcard');
         Route::get('/{lang}/symbol-and-text-generator', 'ToolsController@symbolandtext');
         Route::get('/{lang}/pagespeed-test', 'ToolsController@pagespeed');
