@@ -1,5 +1,21 @@
 @php
-    $notificationData = collect([collect(['id' => 4, 'title_id' => 'Test', 'url_id' => 'https://cmlabs.co', 'image' => null, 'start_date' => null, 'end_date' => null, 'created_by' => 1, 'created_at' => '2023-07-05 10:20:58', 'updated_at' => '2023-07-11 09:08:12', 'gtm_class' => null, 'gtm_id' => null, 'title_en' => 'Test en', 'url_en' => 'https://cmlabs.co'])]);
+    $notificationData = collect([
+        collect([
+            'id' => 4,
+            'title_id' => 'Test',
+            'url_id' => 'https://cmlabs.co',
+            'image' => null,
+            'start_date' => null,
+            'end_date' => null,
+            'created_by' => 1,
+            'created_at' => '2023-07-05 10:20:58',
+            'updated_at' => '2023-07-11 09:08:12',
+            'gtm_class' => null,
+            'gtm_id' => null,
+            'title_en' => 'Test en',
+            'url_en' => 'https://cmlabs.co',
+        ]),
+    ]);
 @endphp
 
 <div class="floating-notification-section">
@@ -16,42 +32,54 @@
         </div>
     @endisset
 
-    {{-- @isset($satisfactionData)
-            <div class="cards-container feedback card-custom card-floating-popup hide d-none user-satisfaction">
-                @include('v2.widget.user-satisfaction-form')
-            </div>
-        @endisset --}}
+    <div class="cards-container feedback card-custom card-floating-popup hide user-satisfaction">
+        @include('v2.components.widget.popup-ab-testing')
+    </div>
 
-    <div class="button-container d-flex gap-3 align-items-end mt-3">
+    <div class="button-container d-flex gap-3 flex-sm-row flex-column align-items-end mt-3" style="gap: 16px">
         @isset($notificationData)
             <button
-                class="btn btn-float-notif open align-items-center button-marketing {{ count($notificationData) > 0 && $notificationData != '' ? 'active' : '' }}">
+                class="order-2 order-md-1 btn btn-float-notif open align-items-center button-marketing {{ count($notificationData) > 0 && $notificationData != '' ? 'active' : '' }}">
                 <i class='bx bx-sm bxs-bell' style="padding: 0"></i>
                 <div class="red-dot"></div>
             </button>
-            <button class="btn btn-float-notif align-items-center close">
+            <button class="order-2 order-md-1 btn btn-float-notif align-items-center close">
                 <i class='bx bx-sm bxs-bell' style="padding: 0"></i>
                 <div class="red-dot"></div>
             </button>
         @endisset
 
-        {{-- @isset($satisfactionData)
-                <button
-                    class="btn btn-float-feedback btn-float-feedback-toggle align-items-center d-none user-satisfaction {{ count($satisfactionData) > 0 ? 'active' : '' }}">
-                    <i class='bx bx-sm bxs-wink-smile'></i>
-                    <div class="red-dot"></div>
-                </button>
-                <button class="btn btn-float-feedback align-items-center close user-satisfaction">
-                    <i class='bx bx-sm bxs-wink-smile'></i>
-                    <div class="red-dot"></div>
-                </button>
-            @endisset --}}
+        @if (in_array(Route::currentRouteName(), [
+                'keyword-permutation',
+                'robotstxt-generator',
+                'word-counter',
+                'metadesc-checker',
+            ]))
+            <button
+                class="order-1 order-sm-2 btn btn-float-feedback btn-float-feedback-toggle align-items-center user-satisfaction active"
+                style="padding: 8px">
+                <svg width="24" height="23" viewBox="0 0 24 23" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M6.81836 6.54834H16.559V8.41929H6.81836V6.54834ZM6.81836 10.2902H13.6368V12.1612H6.81836V10.2902Z"
+                        fill="#777777" />
+                    <path
+                        d="M19.4814 1.87085H3.89637C2.82198 1.87085 1.94824 2.70997 1.94824 3.7418V20.5804L7.14293 16.8385H19.4814C20.5558 16.8385 21.4295 15.9993 21.4295 14.9675V3.7418C21.4295 2.70997 20.5558 1.87085 19.4814 1.87085ZM19.4814 14.9675H6.4942L3.89637 16.8385V3.7418H19.4814V14.9675Z"
+                        fill="#777777" />
+                </svg>
+            </button>
+            <button
+                class="order-1 order-sm-2 btn btn-float-feedback align-items-center close user-satisfaction background-primary-70"
+                style="opacity: 1">
+                <i class='bx bx-sm bx-x p-0 text-white'></i>
+            </button>
+        @endif
     </div>
 </div>
 
 @push('scripts')
     <script>
-        const language = "{{$lang}}"
+        const language = "{{ $lang }}"
         const notificationCard = (data, pinned = false, lang = 'en') => `
             <div class="notif-card notif" data-id="${data.id}">
                 ${data.image ? 
@@ -60,7 +88,7 @@
                 
                 <div class="notif-card-body">
                     <p class="b1-400 b1-m-400 text-dark-40 m-0 ${data.image ? "pe-4" : ""}">${lang == "en" ? data.title_en : data.title_id}</p>
-                    <a href="${lang == "en" ? data.url_en : data.url_id}" class="text-primary-70 b1-700 b1-m-700">{{__('home.check')}}</a>
+                    <a href="${lang == "en" ? data.url_en : data.url_id}" class="text-primary-70 b1-700 b1-m-700">{{ __('home.check') }}</a>
                 </div>
 
                 ${pinned ? `<i class='pin-icon bx bxs-pin bx-sm text-gray-100'></i>` : ''}                    
@@ -216,71 +244,6 @@
             showNotifCard();
     </script>
 
-    {{-- @isset($satisfactionData)
-            <script>
-                $(document).ready(function() {
-                    const type = @json($satisfactionData[0]->appear_frequency);
-                    const toast = document.getElementById("toast-success");
-                    // Dapatkan nilai token CSRF
-                    var csrfToken = $('meta[name="csrf-token"]').attr('content');
-
-                    $('input[name="feedbackSatisfaction"]').on('change', function() {
-                        var selectedFeedback = $('input[name="feedbackSatisfaction"]:checked').attr('id');
-                        var satisfactionId = $('input[name="feedbackSatisfaction"]:checked').data(
-                            'satisfaction-id');
-
-                        // Tambahkan token CSRF ke dalam data permintaan
-                        var requestData = {
-                            value: selectedFeedback,
-                            satisfaction_id: satisfactionId,
-                            _token: csrfToken
-                        };
-
-                        let duration
-
-                        switch (type) {
-                            case "1x per day":
-                                duration = 24 * 60 * 60 * 1000;
-                                break
-                            case "1x per month":
-                                duration = 30 * 24 * 60 * 60 * 1000;
-                                break
-                            case "1x per year":
-                                duration = 365 * 24 * 60 * 60 * 1000;
-                                break
-                        }
-
-                        var data = {
-                            value: 'filled user satisfaction',
-                            expiration: Date.now() + (duration ?? 0)
-                        };
-
-                        $.ajax({
-                            url: '/page/api/satisfaction',
-                            method: 'POST',
-                            data: requestData,
-                            success: function(response) {
-                                localStorage.setItem("lastFilledUserSatisfaction", JSON.stringify(data))
-                                toast.querySelector(".message").innerHTML =
-                                    "{{ __('v2_homepage.feedback-sent') }}";
-                                toast.style.display = "block";
-                                setTimeout(function() {
-                                    toast.style.display = "none";
-                                }, 3000);
-                                hideFeedbackCard();
-                                document.querySelectorAll(".user-satisfaction").forEach((item) => {
-                                    item?.remove()
-                                })
-                            },
-                            error: function(xhr, status, error) {
-                                console.error(error);
-                            }
-                        });
-                    });
-                });
-            </script>
-        @endisset --}}
-
     <script>
         var storedData = localStorage.getItem('lastFilledUserSatisfaction');
 
@@ -295,5 +258,12 @@
                 })
             }
         }
+    </script>
+
+    <script>
+        // script for auto show the popup
+        setTimeout(() => {
+            showFeedbackCard()
+        }, 5500);
     </script>
 @endpush
