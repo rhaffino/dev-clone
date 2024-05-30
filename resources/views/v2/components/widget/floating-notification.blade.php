@@ -260,10 +260,17 @@
         }
     </script>
 
-    <script>
-        // script for auto show the popup
-        setTimeout(() => {
-            showFeedbackCard()
-        }, 5500);
-    </script>
+    @if (in_array(Route::currentRouteName(), [
+            'keyword-permutation',
+            'robotstxt-generator',
+            'word-counter',
+            'metadesc-checker',
+        ]))
+        <script>
+            // script for auto show the popup
+            setTimeout(() => {
+                showFeedbackCard()
+            }, 5500);
+        </script>
+    @endif
 @endpush
