@@ -47,7 +47,8 @@ function generate () {
                 refreshLocalStorage();
                 recordUserActivity(url);
                 
-                showFeedbackCard()
+                showFeedbackCard()                
+                console.log(showFeedbackCard())
             } else {
                 toastr.error(res.message)
             }
