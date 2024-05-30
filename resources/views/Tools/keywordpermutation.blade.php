@@ -96,7 +96,9 @@ id/keyword-permutation
                                     </select>
                                 </div>
                                 <div class="col-md-4 col-lg-4 mb-3">
-                                    <button id="generator" type="button" class="btn btn-generate-permutation btn-block" name="button">@lang('permutation.permutation-btn')</button>
+                                    <div id="btn-container-popup" onclick="showFeedbackCard()">
+                                        <button id="generator" type="button" class="btn btn-generate-permutation btn-block" name="button">@lang('permutation.permutation-btn')</button>
+                                    </div>
                                 </div>
                                 <div class="col-12" id="custom-text-container" style="display: none">
                                     <div class="row">
