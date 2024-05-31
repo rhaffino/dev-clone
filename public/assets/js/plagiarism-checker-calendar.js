@@ -93,29 +93,22 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
 function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
-
 function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-
 function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
-
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
 function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
+function ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }
+function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t = null != arguments[r] ? arguments[r] : {}; r % 2 ? ownKeys(Object(t), !0).forEach(function (r) { _defineProperty(e, r, t[r]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach(function (r) { Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r)); }); } return e; }
+function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
+function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
 var initDate = new Date().toISOString().slice(0, 10);
 var bookedDate = [];
 var currentDate = new Date();
 var currentMonth = currentDate.getMonth();
-
 function getFormattedMonthYear(dateString) {
   var date = new Date(dateString);
   var month = date.toLocaleString('en-US', {
@@ -124,7 +117,6 @@ function getFormattedMonthYear(dateString) {
   var year = date.getFullYear();
   return month + ' ' + year;
 }
-
 $(document).ready(function () {
   getCalendar({}).then(function (result) {
     if (result.data.dates === '') {
@@ -142,19 +134,16 @@ $(document).ready(function () {
     getCalendar();
   });
 });
-
 function prevDate() {
   return getCalendar({
     order: 'prev'
   });
 }
-
 function nextDate() {
   return getCalendar({
     order: 'next'
   });
 }
-
 function getCalendar(data) {
   $('.calendar-btn').prop('disabled', true);
   var dateSplited = initDate.split('-');
@@ -173,28 +162,23 @@ function getCalendar(data) {
       $(".calendar").html("");
       var nowDateRes = res.data.calendar;
       var nowDate = [];
-
       for (var key in nowDateRes) {
         if (nowDateRes.hasOwnProperty(key)) {
           var obj = nowDateRes[key];
           obj.dateKey = key; // Add the date key to the object
-
           nowDate.push(obj);
         }
       }
-
       nowDate.sort(function (a, b) {
         return a.dateKey > b.dateKey ? 1 : -1;
       });
       var today;
-
       for (var i = 0; i < nowDate.length; i++) {
         if (!nowDate[i].prevMonth) {
           today = nowDate[i].dateKey;
           break;
         }
       }
-
       initDate = today;
       $("#month").html(getFormattedMonthYear(today));
       var givenMonth = new Date(today).getMonth();
@@ -202,36 +186,29 @@ function getCalendar(data) {
         $('.calendar').append($("<div class=\"date-item ".concat(date.weekend && "weekend", " ").concat((date.prevMonth || date.nextMonth) && "other", "\">\n                        <div class=\"date\">").concat(date.date, "</div>\n                            <div class=\"value\">").concat(type === "cost" ? "$" + parseFloat(date.cost).toFixed(2) : date.request, "</div>\n                    </div>")));
       });
       $('.calendar-btn').prop('disabled', false);
-
       if (givenMonth === currentMonth) {
         $(".calendar-btn.next").prop('disabled', true);
       }
     },
     error: function error(e) {
       var _console;
-
-      /* eslint-disable */
-      (_console = console).log.apply(_console, _toConsumableArray(oo_oo("2564644124_94_12_94_35_4", 'error', e)));
-
+      /* eslint-disable */(_console = console).log.apply(_console, _toConsumableArray(oo_oo("2564644124_94_12_94_35_4", 'error', e)));
       $('.calendar-btn').prop('disabled', false);
     },
     failed: function failed() {
       var _console2;
-
-      /* eslint-disable */
-      (_console2 = console).log.apply(_console2, _toConsumableArray(oo_oo("2564644124_98_12_98_33_4", 'failed')));
-
+      /* eslint-disable */(_console2 = console).log.apply(_console2, _toConsumableArray(oo_oo("2564644124_98_12_98_33_4", 'failed')));
       $('.calendar-btn').prop('disabled', false);
     }
   });
 }
-
 document.getElementById("prevMonthBtn").addEventListener("click", function () {
   prevDate();
 });
 document.getElementById("nextMonthBtn").addEventListener("click", function () {
   nextDate();
 })
+
 /* istanbul ignore next */
 
 /* c8 ignore start */
@@ -252,30 +229,23 @@ function oo_oo(i) {
   for (var _len = arguments.length, v = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
     v[_key - 1] = arguments[_key];
   }
-
   try {
     oo_cm().consoleLog(i, v);
   } catch (e) {}
-
   return v;
 }
-
-;
 /* istanbul ignore next */
 
 function oo_tr(i) {
   for (var _len2 = arguments.length, v = new Array(_len2 > 1 ? _len2 - 1 : 0), _key2 = 1; _key2 < _len2; _key2++) {
     v[_key2 - 1] = arguments[_key2];
   }
-
   try {
     oo_cm().consoleTrace(i, v);
   } catch (e) {}
-
   return v;
 }
 
-;
 /* istanbul ignore next */
 
 function oo_ts(v) {
@@ -296,9 +266,7 @@ function oo_te(v, i) {
 
   return v;
 }
-
-;
-/*eslint unicorn/no-abusive-eslint-disable:,eslint-comments/disable-enable-pair:,eslint-comments/no-unlimited-disable:,eslint-comments/no-aggregating-enable:,eslint-comments/no-duplicate-disable:,eslint-comments/no-unused-disable:,eslint-comments/no-unused-enable:,*/
+; /*eslint unicorn/no-abusive-eslint-disable:,eslint-comments/disable-enable-pair:,eslint-comments/no-unlimited-disable:,eslint-comments/no-aggregating-enable:,eslint-comments/no-duplicate-disable:,eslint-comments/no-unused-disable:,eslint-comments/no-unused-enable:,*/
 
 /***/ }),
 
@@ -309,7 +277,7 @@ function oo_te(v, i) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! F:\WORK\cmlabs\tools\resources\js\plagiarism-checker-calendar.js */"./resources/js/plagiarism-checker-calendar.js");
+module.exports = __webpack_require__(/*! C:\WebProjects\cmlabs-projects\php\tools\resources\js\plagiarism-checker-calendar.js */"./resources/js/plagiarism-checker-calendar.js");
 
 
 /***/ })

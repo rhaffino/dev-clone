@@ -143,12 +143,12 @@ class ApiController extends Controller
 
     public function analyzeSsl(Request $request)
     {
-        $validator = Validator::make($request->all(),[
-            "url" => ["required", "string", "regex:/^(?!:\/\/)(?=.{1,255}$)((.{1,63}\.){1,127}(?![0-9]*$)[a-z0-9-]+\.?)$/i"]
-        ]);
+        // $validator = Validator::make($request->all(),[
+        //     "url" => ["required", "string", "regex:/^(?!:\/\/)(?=.{1,255}$)((.{1,63}\.){1,127}(?![0-9]*$)[a-z0-9-]+\.?)$/i"]
+        // ]);
 
-        if ($validator->fails())
-            return new BaseApiResource(null,$validator->errors()->first(),422, 'danger');
+        // if ($validator->fails())
+        //     return new BaseApiResource(null,$validator->errors()->first(),422, 'danger');
 
         try {
             $response = $this->requestSslChecker($request->get('url'));
@@ -419,7 +419,7 @@ class ApiController extends Controller
                 $location = Location::get($ipAddress);
                 $fullLocation = "IP: $location->ip, Country Code: $location->countryCode, Region Code: $location->regionCode, Region Name:  $location->regionName, City Name: $location->cityName, Zipcode: $location->zipCode, Latitude: $location->latitude, Longitude: $location->longitude";
 
-                $row = array("", "", "", "", "", "", "");
+                $row = array("", "", "", "", "", "", "", "");
                 $row = [
                     date("l, d F Y H:i:s", strtotime('+7 hours')),
                     $request->url,
@@ -427,6 +427,7 @@ class ApiController extends Controller
                     $ipAddress,
                     $agent->browser(),
                     $request->width_height,
+                    $request->input('email') ?? '-',
                     $fullLocation
                 ];
 

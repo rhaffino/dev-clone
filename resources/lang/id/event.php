@@ -1,7 +1,7 @@
 <?php
 return [
     "meta-title" => "JSON-LD Event Schema Generator cmlabs - Schema Markup Acara",
-    "meta-desc" => "JSON-LD Event Schema Generator dari cmlabs bantu Anda menyusun struktur data (schema markup) agar acara/event yang digelar dapat muncul di SERP.",
+    "meta-desc" => "Gunakan JSON-LD Event Schema Generator dari cmlabs untuk menyusun struktur data (schema markup) agar acara/event yang Anda digelar dapat muncul di SERP.",
     "meta-keyword" => "event, event schema, google rich result, schema generator, google serp",
     "title" => "JSON-LD EVENT SCHEMA GENERATOR",
     "subtitle" => "Susun struktur data (schema markup) untuk menampilkan acara/event di laman SERP secara mudah dan teroptimasi dari segi UI & SEO.",
