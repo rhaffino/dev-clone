@@ -68,7 +68,7 @@
                         fill="#777777" />
                 </svg>
             </button>
-            <button
+            <button id="btn-{{ Route::currentRouteName() }}"
                 class="order-1 order-sm-2 btn btn-float-feedback align-items-center close user-satisfaction background-primary-70"
                 style="opacity: 1">
                 <i class='bx bx-sm bx-x p-0 text-white'></i>
@@ -82,18 +82,18 @@
         const language = "{{ $lang }}"
         const notificationCard = (data, pinned = false, lang = 'en') => `
             <div class="notif-card notif" data-id="${data.id}">
-                ${data.image ? 
+                ${data.image ?
                     `<div class="notif-card-header"> <img src="https://s3-cdn.cmlabs.co/${data.image}" alt="notif header image"> </div>` : ""
                 }
-                
+
                 <div class="notif-card-body">
                     <p class="b1-400 b1-m-400 text-dark-40 m-0 ${data.image ? "pe-4" : ""}">${lang == "en" ? data.title_en : data.title_id}</p>
                     <a href="${lang == "en" ? data.url_en : data.url_id}" class="text-primary-70 b1-700 b1-m-700">{{ __('home.check') }}</a>
                 </div>
 
-                ${pinned ? `<i class='pin-icon bx bxs-pin bx-sm text-gray-100'></i>` : ''}                    
+                ${pinned ? `<i class='pin-icon bx bxs-pin bx-sm text-gray-100'></i>` : ''}
                 <i data-id="${data.id}" class='close-btn close-notif-btn bx bx-x bx-sm text-gray-100' style='opacity: 1'></i>
-            </div>            
+            </div>
             `
 
         const notificationContainer = document.getElementById("notification-container")
@@ -161,6 +161,18 @@
     </script>
 
     <script>
+        // Function to check if a cookie exists
+        function cookieExists(name) {
+            let cookies = document.cookie.split(';');
+            for (let i = 0; i < cookies.length; i++) {
+                let cookie = cookies[i].trim();
+                if (cookie.indexOf(name + "=") === 0) {
+                    return true;
+                }
+            }
+            return false;
+        }
+
         const Notifcard = document.querySelector(".cards-container.notifications");
         const Feedbackcard = document.querySelector(".cards-container.feedback");
 
@@ -235,7 +247,17 @@
             showFeedbackCard()
         });
 
-        btnFeedbackClose?.addEventListener("click", hideFeedbackCard);
+        btnFeedbackClose?.addEventListener("click", function() {
+            if("{{Route::currentRouteName()}}" !== 'metadesc-checker'){
+                let date = new Date();
+                date.setTime(date.getTime() + (24 * 60 * 60 * 1000)); // 24 hours from now
+                let expires = "expires=" + date.toUTCString();
+                document.cookie = this.id + "=" + this.id + ";" + expires + ";path=/";
+            }
+
+            hideFeedbackCard()
+        });
+
         iconFeedbackClose?.addEventListener("click", hideFeedbackCard);
         btnNotifClose?.addEventListener("click", hideNotifCard);
 
@@ -263,17 +285,21 @@
     @if (in_array(Route::currentRouteName(), ['robotstxt-generator', 'word-counter']))
         <script>
             // script for auto show the popup
-            setTimeout(() => {
-                showFeedbackCard()
-            }, 5500);
+            if (!cookieExists('btn-{{ Route::currentRouteName() }}')) {
+                setTimeout(() => {
+                    showFeedbackCard()
+                }, 5500);
+            }
         </script>
     @endif
     @if (in_array(Route::currentRouteName(), ['metadesc-checker']))
         <script>
-            // script for auto show the popup
-            setTimeout(() => {
-                showFeedbackCard()
-            }, 10000);
+            if (!cookieExists('btn-{{ Route::currentRouteName() }}')) {
+                // script for auto show the popup
+                setTimeout(() => {
+                    showFeedbackCard()
+                }, 10000);
+            }
         </script>
     @endif
 @endpush
