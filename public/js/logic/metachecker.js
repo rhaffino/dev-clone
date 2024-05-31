@@ -47,11 +47,14 @@ function generate () {
                 refreshLocalStorage();
                 recordUserActivity(url);
                 
-                showFeedbackCard()                
-                let date = new Date();
-                date.setTime(date.getTime() + (24 * 60 * 60 * 1000)); // 24 hours from now
-                let expires = "expires=" + date.toUTCString();
-                document.cookie = 'btn-metadesc-checker' + "=" + 'btn-metadesc-checker' + ";" + expires + ";path=/";
+                if(!cookieExists('btn-metadesc-checker')){
+                    showFeedbackCard()
+                    
+                    let date = new Date();
+                    date.setTime(date.getTime() + (24 * 60 * 60 * 1000)); // 24 hours from now
+                    let expires = "expires=" + date.toUTCString();
+                    document.cookie = 'btn-metadesc-checker' + "=" + 'btn-metadesc-checker' + ";" + expires + ";path=/";
+                }
             } else {
                 toastr.error(res.message)
             }
