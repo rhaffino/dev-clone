@@ -446,7 +446,7 @@
     const META_CHECKER_URL = "{{route('api.analyze-meta')}}"
 </script>
 <script src="{{asset('js/logic/predifine-localstorage.js')}}"></script>
-<script src="{{asset('js/logic/metachecker.js')}}?0989"></script>
+<script src="{{asset('js/logic/metachecker.js')}}?09"></script>
 <script type="text/javascript">
     $('#toggle_button_writer').click();
 </script>
