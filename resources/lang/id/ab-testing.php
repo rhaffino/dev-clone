@@ -6,7 +6,7 @@ return [
     ],
     "word-counter" => [
         "title" => "Hitung jumlah kata aja ngga bisa bikin kamu rank #1 di SERP. <strong><em>Sorry not sorry</em></strong> ",
-        "cta" => "Show me!",
+        "cta" => "Apa selanjutnya?",
     ],
     "kw-permutation" => [
         "title" => "Keyword itu oke kok… <strong><em>kalau kamu cuma mau hasil yang biasa.</em></strong> ",

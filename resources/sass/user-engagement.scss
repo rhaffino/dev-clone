@@ -225,7 +225,15 @@ body.cmlabs-tools {
         @media screen and (max-width: 575px) {
             margin-left: 0;
             width: 100%;
-            padding: 20px 12px;
+            padding: 12px 8px;
+
+            .illustration {
+                width: 80px;
+
+                img {
+                    height: 84px !important;
+                }
+            }
         }
     }
 
