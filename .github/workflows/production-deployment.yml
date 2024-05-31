@@ -17,6 +17,8 @@ jobs:
           command: |
             cd /var/www/tools.cmlabs.co/
             sudo chown ubuntu:www-data -R ./
+            git stash
+            git stash clear
             git pull origin master
             composer install
             npm install
