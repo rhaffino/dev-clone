@@ -156,4 +156,8 @@ return [
     "check" => "Check",
     "no_notif" => "There is currently no notification...",
     "desc-new-tools-13-Oct-2023" => "30 Tools for Countless Solutions! cmlabs has reached a remarkable milestone with the release of 30 cutting-edge tools designed to empower businesses and individuals in the digital realm. All 30 tools, from Test & Checker, Sitemap.XML, and Robots.TXT to various JSON-LD Schema Generator, have been launched to address specific needs and challenges across diverse industries. Together with cmlabs tools, you can stand at the forefront of technological advancements. Try our tools based on your needs now!",
+    "ext-title" => "Streamline your analysis with the SEO Tools installed directly in your browser. It's time to become a true SEO expert.",
+    "ext-desc" => "Free on all Chromium-based web browsers",
+    "ext-cta-1" => "Install it on your browser now?",
+    "ext-cta-2" => "Explore Now",
 ];

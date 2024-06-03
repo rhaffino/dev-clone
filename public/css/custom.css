@@ -1368,6 +1368,8 @@ body .container-description .italics{
 
 .card-home {
     transition: 0.2s;
+    display: flex; 
+    flex-direction: column;
 }
 
 .card-home:hover {
