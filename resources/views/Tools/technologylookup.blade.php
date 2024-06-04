@@ -21,8 +21,18 @@ id/technology-lookup
 <div class="container container-tools mb-10">
     <div class="d-flex flex-column-fluid">
         <div class="container-fluid px-0">
-            <h1 class="text-darkgrey font-weight-normal">@lang('lookup.title')</h1>
-            <span class="text-darkgrey h4 font-weight-normal mb-10">@lang('lookup.sub-title')</span>
+            <div class="d-flex justify-content-between">
+                <div>
+                    <h1 class="text-darkgrey font-weight-normal">@lang('lookup.title')</h1>
+                    <span class="text-darkgrey h4 font-weight-normal mb-10">@lang('lookup.sub-title')</span>
+                </div>
+                <div class="d-lg-block d-none">
+                    <a href="https://chromewebstore.google.com/detail/technology-lookup-cmlabs/hhknkhcgnkdkkafiaicdfpiplbigodmj" target="_blank" rel="noopener noreferrer noindex" class="btn button-outline button-primary-70 b1-400">
+                        <i class="bx text-primary-70 bx-extension"></i>
+                        Get Extension
+                    </a>
+                </div>
+            </div>
 
             @include('components.alert_limit')
 
