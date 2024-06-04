@@ -21,8 +21,18 @@ id/hreflang-checker
 <div class="container container-tools mb-10">
     <div class="d-flex flex-column-fluid">
         <div class="container-fluid px-0">
-            <h1 class="text-darkgrey font-weight-normal">@lang('hreflang.title')</h1>
-            <p class="text-darkgrey h4 font-weight-normal mb-10 ">@lang('hreflang.sub-title')</p>
+            <div class="d-flex justify-content-between">
+                <div>
+                    <h1 class="text-darkgrey font-weight-normal">@lang('hreflang.title')</h1>
+                    <p class="text-darkgrey h4 font-weight-normal mb-10 ">@lang('hreflang.sub-title')</p>
+                </div>
+                <div class="d-lg-block d-none">
+                    <a href="https://chromewebstore.google.com/detail/hreflang-checker-cmlabs-s/bbiejobgmmjcjbnbabamojimombaoiij" target="_blank" rel="noopener noreferrer noindex" class="btn button-outline button-primary-70 b1-400">
+                        <i class="bx text-primary-70 bx-extension"></i>
+                        Get Extension
+                    </a>
+                </div>
+            </div>
             <div class="mb-5" id="cta-warning" style="display: none">
                 <div class="cta-yellow px-5 py-1 cta-border-bottom">
                     <div class="row d-flex align-items-center">

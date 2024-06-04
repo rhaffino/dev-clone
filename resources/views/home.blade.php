@@ -151,7 +151,7 @@ id
             </div>
             <div class="mt-10 row">
                 @foreach($tools as $tool)
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-8">
+                <div class="col-12 col-sm-6 col-md-4 col-xl-3 mb-8">
                     <div class="card card-custom card-stretch card-home p-7">
                         <div class="card-body p-0">
                             <div class="text-left">
@@ -160,10 +160,10 @@ id
                                 <p class="text-darkgrey mb-0">{{ $tool['description'] }}</p>
                             </div>
                         </div>
-                        <div class="card-footer text-left border-top-0 p-0 mt-5 d-flex">
+                        <div class="card-footer text-left border-top-0 p-0 mt-5 d-flex justify-content-between align-items-center">
                             <a href="{{ $tool['link'] }}" type="button" class="btn btn-launch" name="button">LAUNCH</a>
                             @isset($tool['ext'])
-                                <a href="{{ $tool['ext'] }}" type="button" class="btn btn-install" name="button">
+                                <a target="_blank" rel="noopener noreferrer nofollow" href="{{ $tool['ext'] }}" type="button" class="btn btn-install" name="button">
                                     <div class="install-cta">Install now</div>
                                     <div class="install-cta-desc">Browser Extension, Chromium-based</div>
                                 </a>
