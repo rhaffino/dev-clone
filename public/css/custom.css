@@ -2802,3 +2802,39 @@ input.input-url-meta-checker:focus {
 .flex-fit{    
     flex-grow: initial!important;
 }
+
+/* chrome extension entry card */
+.chrome-extension-card {
+    padding: 36px 24px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    border-radius: 16px;
+    width: 100%;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+.chrome-extension-card.variant-1 h2 {
+    max-width: 822px;
+}
+.chrome-extension-card.variant-2 h2 {
+    max-width: 420px;
+}
+.chrome-extension-card.variant-2 .h5-700 {
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 16px;
+}
+.chrome-extension-card .extension-pattern {
+    position: absolute;
+    top: 10px;
+    bottom: 10px;
+    height: 90%;
+}
+.chrome-extension-card .extension-pattern.left {
+    left: 10px;
+}
+.chrome-extension-card .extension-pattern.right {
+    right: 10px;
+}
