@@ -161,7 +161,7 @@
     </div>
 
     @include('v2.components.widget.floating-notification')
-    @include('v2.components.widget.floating-contact')
+    {{-- @include('v2.components.widget.floating-contact') --}}
 
     @include('v2.components.carousel-progress-script')
 
