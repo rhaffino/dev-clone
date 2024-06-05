@@ -109,7 +109,7 @@
                             </ul>
                         </div>
                         <div class="col-sm">
-                            <h2 class="title__mega-menu h3">Generator</h2>
+                            <p class="title__mega-menu h3">Generator</p>
                             <ul class="list-inline">
                                 <li>
                                     <a class="list-inline-item list__mega-menu @yield('sitemap')" href="/{{ $local }}/sitemap-generator">Sitemap .XML Generator</a>
@@ -122,7 +122,7 @@
                                 </li>
                             </ul>
 
-                            <h2 class="title__mega-menu h3">@lang('layout.title-writer-tools')</h2>
+                            <p class="title__mega-menu h3">@lang('layout.title-writer-tools')</p>
                             <ul class="list-inline">
                                 <li>
                                     <a class="list-inline-item list__mega-menu @yield('word-counter')" href="/{{ $local }}/word-counter">Word Counter</a>
@@ -138,7 +138,7 @@
                             </ul>
                         </div>
                         <div class="col-sm">
-                            <h2 class="title__mega-menu h3">Test & Checker</h2>
+                            <p class="title__mega-menu h3">Test & Checker</p>
                             <ul class="list-inline">
                                 <li>
                                     <a class="list-inline-item list__mega-menu @yield('page-speed')" href="/{{ $local }}/pagespeed-test">Page Speed Test</a>
@@ -176,7 +176,7 @@
                             </ul>
                         </div>
                         <div class="col-sm">
-                            <h2 class="title__mega-menu h3">@lang('layout.nav-tools-sequence')</h2>
+                            <p class="title__mega-menu h3">@lang('layout.nav-tools-sequence')</p>
                             <ul class="list-inline">
                                 <li>
                                     <a class="list-inline-item list__mega-menu relative" href="https://www.sequence.day/keyword-research" target="_blank">@lang('layout.nav-tools-sequence-1') <span class="new-indicator new__indicator-megamenu"></span></a>
@@ -199,6 +199,5 @@
                 </div>
             </div>
         </div>
-
     </div>
 </div>

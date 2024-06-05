@@ -34,35 +34,35 @@ return [
     "howto-title" => 'Bagaimana Cara Menggunakan Person Schema Generator?',
     "howto1" => '<h2>Bagaimana Cara Menggunakan Person Schema Generator?</h2>
                     <p>Adapun cara menghasilkan person schema menggunakan tool ini adalah sebagai berikut:</p>',
-    "howto1-1" => '<h4 class="sub-titles">Buka Halaman JSON-LD Person Schema Generator</h4>
+    "howto1-1" => '<h3 class="sub-titles">Buka Halaman JSON-LD Person Schema Generator</h3>
                     <p>Silahkan buka laman <a href="https://tools.cmlabs.co/id/json-ld-person-schema-generator">JSON-LD Person Schema Generator</a> untuk mengawali langkah Anda dalam membuat person schema markup secara otomatis. Pastikan Anda telah memilih <b>&#34;Person&#34;</b> pada jenis schema markup yang ingin dibuat.</p>',
     "howto2" => '<p>Gambar 1: Tampilan halaman <i class="italics">person schema generator</i> dari cmlabs.</p>
-                    <h4 class="sub-titles">Masukkan Nama</h4>
+                    <h3 class="sub-titles">Masukkan Nama</h3>
                     <p>Pertama-tama masukkan nama pada bagian yang disediakan. Pastikan Anda telah memasukkan format nama yang benar.</p>',
     "howto3" => '<p>Gambar 2: Masukkan nama pada kolom yang tersedia untuk membuat person schema markup.</p>
-                    <h4 class="Tambah URL Anda">Tambah URL Anda</h4>
+                    <h3 class="Tambah URL Anda">Tambah URL Anda</h3>
                     <p>Selanjutnya, Anda bisa menambahkan URL. URL ini dapat berupa URL pribadi atau URL dari perusahaan yang Anda miliki. Dalam menambahkan data URL pastikan Anda telah memasukkan URL yang tepat dan bukan <i class="italics">broken link.</i></p>',
     "howto4" => '<p>Gambar 3: Masukkan URL pada kolom yang tersedia untuk membuat person schema markup.</p>
-                    <h4 class="sub-titles">Masukkan URL Gambar</h4>
+                    <h3 class="sub-titles">Masukkan URL Gambar</h3>
                     <p>Tahapan selanjutnya yaitu memasukkan URL gambar. Hal ini bertujuan agar personal profil Anda akan ditampilkan dengan gambar tertentu di hasil pencarian.</p>',
     "howto5" => '<p>Gambar 4: Masukkan URL gambar pada kolom yang tersedia untuk membuat person schema markup.</p>
-                    <h4 class="sub-titles">Tambahkan Profil Sosial Media</h4>
+                    <h3 class="sub-titles">Tambahkan Profil Sosial Media</h3>
                     <p>Selanjutnya, tambahkan profil sosial media. Terdapat banyak opsi sosial media yang bisa Anda pilih di tool ini. Setelah menentukan pilihan sosial media, Anda perlu memasukkan URL dari sosial media Anda pada kolom yang tersedia.</p>',
     "howto6" => '<p>Gambar 5: Opsi profil sosial yang bisa ditambahkan untuk membuat person schema markup.</p>
-                    <h4 class="sub-titles">Lengkapi Data Pekerjaan</h4>
+                    <h3 class="sub-titles">Lengkapi Data Pekerjaan</h3>
                     <p>Tuliskan nama pekerjaan Anda saat ini pada kolom yang tersedia. Kemudian, pastikan tidak ada kesalahan ketik dalam pekerjaan Anda.</p>',
     "howto7" => '<p>Gambar 6: Masukkan jenis pekerjaan pada kolom yang tersedia untuk membuat person schema markup.</p>
-                    <h4 class="sub-titles">Cantumkan Nama Perusahaan</h4>
+                    <h3 class="sub-titles">Cantumkan Nama Perusahaan</h3>
                     <p>Selain nama pekerjaan, Anda juga perlu menambahkan nama perusahaan tempat Anda bekerja saat ini. </p>',
     "howto8" => '<p>Gambar 7: Masukkan nama perusahaan pada kolom yang tersedia untuk membuat person schema markup.</p>
-                    <h4 class="sub-titles">Salin Person Schema Markup Yang Dihasilkan</h4>
+                    <h3 class="sub-titles">Salin Person Schema Markup Yang Dihasilkan</h3>
                     <p>Jika Anda telah melengkapi atribut yang dibutuhkan untuk membuat Person schema markup, maka Anda akan melihat preview schema markup di bagian kanan. Anda dapat menyalin schema markupsecara langsung dengan tombol <b>&#34;salin&#34;</b> dan pasang ke dalam kode program Anda.</p>',
     "howto9" => '<p>Gambar 8: Opsi salin <i class="italics">Person schema markup</i></p>
-                    <h4 class="sub-titles">Cek Validasi Script JSON-LD Person Schema</h4>
+                    <h3 class="sub-titles">Cek Validasi Script JSON-LD Person Schema</h3>
                     <p>Dengan Person schema generator, Anda juga bisa memeriksa validitas <i class="italics">script</i> JSON-LD yang Anda gunakan. Cara mengeceknya pun cukup mudah, cukup tekan opsi cek yang terdapat di bagian pratinjau <i class="italics">script</i> yang dihasilkan.</p>
                     <p>Ketika Anda menekan tombol tersebut, maka Anda akan dialihkan menuju laman <a href="https://search.google.com/test/rich-results">Rich Result Test</a> milik Google. Pada halaman tersebut, Anda dapat mengecek apakah <i class="italics">schema markup</i> yang dihasilkan dapat berfungsi dengan baik di penelusuran Google.</p>',
     "howto10" => '<p>Gambar 9: Opsi cek validasi Person schema markup</p>
-                    <h4 class="sub-titles">Reset Schema Generator</h4>
+                    <h3 class="sub-titles">Reset Schema Generator</h3>
                     <p>Tool ini memiliki opsi yang memudahkan Anda dalam membuat Person schema baru. Cukup klik opsi <b>&#34;Reset&#34;</b> dan menghapus seluruh data yang telah ditambahkan sebelumnya. Selanjutnya, Anda bisa membuat script baru.</p>',
     "howto11" => '<p>Gambar 10: Opsi reset data yang ditambahkan pada Person schema generator.</p>
                     <p>Itulah pembahasan singkat mengenai cara membuat person schema menggunakan tools <a href="https://tools.cmlabs.co/id/json-ld-person-schema-generator">JSON-LD person schema generator</a> dari cmlabs. Tools ini dapat membantu Anda menghasilkan schema markup secara cepat dan efisien. Coba tool ini sekarang!</p>',

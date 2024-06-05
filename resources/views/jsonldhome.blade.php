@@ -208,7 +208,7 @@ id/json-ld-schema-generator
     @slot('title', 'JSON-LD')
     @slot('subcontent_1')
         <div class="" id="description-tab-1">
-            <h3 class="h3-700 h3-m-700">@lang('jsonldhome.desc-1')</h3>
+            <h2 class="h3-700 h3-m-700">@lang('jsonldhome.desc-1')</h2>
             <p>@lang('jsonldhome.desc-1-1')</p>
             <p>@lang('jsonldhome.desc-1-2')</p>
             <p>@lang('jsonldhome.desc-1-3')</p>
@@ -221,7 +221,7 @@ id/json-ld-schema-generator
     @endslot
     @slot('subcontent_2')
         <div class="d-none" id="description-tab-2">
-            <h3 class="h3-700 h3-m-700">@lang('jsonldhome.desc-2')</h3>
+            <h2 class="h3-700 h3-m-700">@lang('jsonldhome.desc-2')</h2>
             <p>@lang('jsonldhome.desc-2-1')</p>
             <p>@lang('jsonldhome.desc-2-2')</p>
             <p>@lang('jsonldhome.desc-2-3')</p>
@@ -232,7 +232,7 @@ id/json-ld-schema-generator
     @endslot
     @slot('subcontent_3')
         <div class="d-none" id="description-tab-3" style="">
-            <h3 class="h3-700 h3-m-700">@lang('jsonldhome.desc-3')</h3>
+            <h2 class="h3-700 h3-m-700">@lang('jsonldhome.desc-3')</h2>
             <p>@lang('jsonldhome.desc-3-1')</p>
             <p>@lang('jsonldhome.desc-3-2')</p>
             <p>@lang('jsonldhome.desc-3-3')</p>

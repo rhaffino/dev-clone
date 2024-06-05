@@ -104,7 +104,7 @@ id/pagespeed-test
                                                 </div>
                                             </div>
                                         </div>
-                                        <h2 class="font-weight-bold text-center mb-4 h6 text-black">Peformance</h2>
+                                        <p class="font-weight-bold text-center mb-4 h6 text-black">Peformance</p>
                                     </div>
                                 </div>
                                 <div class="col-6 col-sm-4 col-md-4 col-lg-4 col-xl">
@@ -122,7 +122,7 @@ id/pagespeed-test
                                                 </div>
                                             </div>
                                         </div>
-                                        <h2 class="font-weight-bold text-center mb-4 h6 text-black">Accesibility</h2>
+                                        <p class="font-weight-bold text-center mb-4 h6 text-black">Accesibility</p>
                                     </div>
                                 </div>
                                 <div class="col-6 col-sm-4 col-md-4 col-lg-4 col-xl">
@@ -140,7 +140,7 @@ id/pagespeed-test
                                                 </div>
                                             </div>
                                         </div>
-                                        <h2 class=" font-weight-bold text-center mb-4 h6 text-black">Best Practices</h2>
+                                        <p class=" font-weight-bold text-center mb-4 h6 text-black">Best Practices</p>
                                     </div>
                                 </div>
                                 <div class="col-6 col-sm-4 col-md-4 col-lg-4 col-xl">
@@ -158,7 +158,7 @@ id/pagespeed-test
                                                 </div>
                                             </div>
                                         </div>
-                                        <h2 class=" font-weight-bold text-center mb-4 h6 text-black">SEO</h2>
+                                        <p class=" font-weight-bold text-center mb-4 h6 text-black">SEO</p>
                                     </div>
                                 </div>
                                 <div class="col-6 col-sm-4 col-md-4 col-lg-4 col-xl">
@@ -176,7 +176,7 @@ id/pagespeed-test
                                                 </div>
                                             </div>
                                         </div>
-                                        <h2 class=" font-weight-bold text-center mb-4 h6 text-black">PWA</h2>
+                                        <p class=" font-weight-bold text-center mb-4 h6 text-black">PWA</p>
                                     </div>
                                 </div>
                             </div>
@@ -429,7 +429,7 @@ id/pagespeed-test
         <div class="d-none" id="description-tab-2">
             <h2 class="text-black">@lang('pagespeed.desc-2')</h2>
             <p class="text-black">@lang('pagespeed.desc-2-1')</p>
-            <h4 class="sub-titles" class="text-black">@lang('pagespeed.desc-2-1-1-1')</h4>
+            <h3 class="sub-titles" class="text-black">@lang('pagespeed.desc-2-1-1-1')</h3>
             <p class="text-black">@lang('pagespeed.desc-2-1-1-2')</p>
             <p class="text-black">@lang('pagespeed.desc-2-1-1-3')</p>
             <ul>
@@ -440,11 +440,11 @@ id/pagespeed-test
             <p class="text-black">@lang('pagespeed.desc-2-1-3-1')</p>
             <p class="text-black">@lang('pagespeed.desc-2-1-4-1')</p>
             <p class="text-black">@lang('pagespeed.desc-2-1-5-1')</p>
-            <h4 class="sub-titles">@lang('pagespeed.desc-2-2-1')</h4>
+            <h3 class="sub-titles">@lang('pagespeed.desc-2-2-1')</h3>
             <p class="text-black">@lang('pagespeed.desc-2-2-2')</p>
-            <h4 class="sub-titles">@lang('pagespeed.desc-2-3-1')</h4>
+            <h3 class="sub-titles">@lang('pagespeed.desc-2-3-1')</h3>
             <p class="text-black">@lang('pagespeed.desc-2-3-2')</p>
-            <h4 class="sub-titles">@lang('pagespeed.desc-2-4-1')</h4>
+            <h3 class="sub-titles">@lang('pagespeed.desc-2-4-1')</h3>
             <p class="text-black">@lang('pagespeed.desc-2-4-2')</p>
             <ul>
                 <li>@lang('pagespeed.desc-2-4-1-1')</li>
@@ -452,7 +452,7 @@ id/pagespeed-test
                 <li>@lang('pagespeed.desc-2-4-1-3')</li>
                 <li>@lang('pagespeed.desc-2-4-1-4')</li>
             </ul>
-            <h4 class="sub-titles">@lang('pagespeed.desc-2-5-1')</h4>
+            <h3 class="sub-titles">@lang('pagespeed.desc-2-5-1')</h3>
             <p class="text-black">@lang('pagespeed.desc-2-5-2')</p>
         </div>
     @endslot
@@ -461,12 +461,12 @@ id/pagespeed-test
             <h2 class="text-black">@lang('pagespeed.desc-3')</h2>
             <p class="text-black">@lang('pagespeed.desc-3-1')</p>
             <p class="text-black">@lang('pagespeed.desc-3-2')</p>
-            <h4 class="sub-titles">@lang('pagespeed.desc-3-3-1')</h4>
+            <h3 class="sub-titles">@lang('pagespeed.desc-3-3-1')</h3>
             <p class="text-black">@lang('pagespeed.desc-3-3-2')</p>
-            <h4 class="sub-titles">@lang('pagespeed.desc-3-4-1')</h4>
+            <h3 class="sub-titles">@lang('pagespeed.desc-3-4-1')</h3>
             <p class="text-black">@lang('pagespeed.desc-3-4-2')</p>
             <p class="text-black">@lang('pagespeed.desc-3-4-3')</p>
-            <h4 class="sub-titles">@lang('pagespeed.desc-3-5-1')</h4>
+            <h3 class="sub-titles">@lang('pagespeed.desc-3-5-1')</h3>
             <p class="text-black">@lang('pagespeed.desc-3-5-2')</p>
             <p class="text-black">@lang('pagespeed.desc-3-5-3')</p>
         </div>

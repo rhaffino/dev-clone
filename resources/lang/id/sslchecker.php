@@ -1,7 +1,7 @@
 <?php
 return [
-    "meta-title" => "SSL Certificate Checker - Analisa Status Instalasi & Issues Konfigurasi",
-    "meta-desc" => "Gunakan SSL Checker tool dari untuk memastikan validalitas sebuah website. Temukan informasi expiration date dan keterangan TLS Certificate.",
+    "meta-title" => "SSL Certificate Checker - Analisa Status dan Issue Instalasi",
+    "meta-desc" => "SSL Checker dari cmlabs dapat membantu memvalidalitas webisite Anda. Temukan informasi expiration date dan keterangan TLS Certificate di sini secara gratis.",
     "title" => "SSL CHECKER TOOL",
     "subtitle" => "Periksa Sertifikat SSL Anda",
     "btn-check" => "CEK URL",
@@ -83,16 +83,16 @@ return [
     "howto-title" => 'Cara Menggunakan SSL Certificate Checker',
     "howto1" => '<h2>Cara Menggunakan SSL Certificate Checker</h2>
                     <p>Untuk mengoperasikan SSL Certificate Checker secara gratis, simak langkah-langkah berikut ini.</p>',
-    "howto2" => '<h4 class="sub-titles">Buka Halaman SSL Certificate Checker cmlabs</h4>
+    "howto2" => '<h3 class="sub-titles">Buka Halaman SSL Certificate Checker cmlabs</h3>
                     <p>Sebagai langkah utama, tentunya Anda harus membuka halaman dari tool ini. Setelah itu, Anda akan melihat beberapa fitur yang tersedia seperti kolom URL, tampilan hasil, riwayat pengecekan, hingga penjelasan singkat mengenai tools ini.</p>',
     "howto3" => '<p>Gambar 1: Tampilan awal SSL Certificate Checker cmlabs</p>
-                    <h4 class="sub-titles">Masukkan URL Website</h4>
+                    <h3 class="sub-titles">Masukkan URL Website</h3>
                     <p>Untuk melihat status dan detail informasi sertifikat SSL suatu website, Anda harus memasukkan URL website pada <i class="italics">field</i> yang tersedia. Pastikan Anda telah memasukkan URL dalam format yang benar (e.g https://example.com). Selanjutnya, klik tombol <b>&#34;Cek URL&#34;</b> untuk memberikan perintah pada tool ini agar memulai pengecekan pada website tersebut.</p>',
     "howto4" => '<p>Gambar 2: Memasukkan URL website untuk mengetahui informasi sertifikat SSL</p>
-                    <h4 class="sub-titles">Melihat Hasil Cek Sertifikat SSL</h4>
+                    <h3 class="sub-titles">Melihat Hasil Cek Sertifikat SSL</h3>
                     <p>Setelah Anda menekan tombol Cek URL, sistem alat ini akan segera memunculkan hasil cek sertifikat SSL dengan cepat. Field Hasil/Result dapat menampilkan beberapa informasi seperti:</p>',
     "howto5" => '<p>Gambar 3: Hasil cek sertifikat ssl</p>
-                    <h6 class="sub-titles">SSL Certificate</h6>
+                    <h4 class="sub-titles">SSL Certificate</h4>
                     <p>Dalam field hasil, hal utama yang dimunculkan adalah informasi TLS Certificate (SSL Certificate) seperti</p>
                     <ul>
                         <li><b>Common Name:</b> nama domain</li>
@@ -101,11 +101,11 @@ return [
                         <li><b>Serial Number:</b> nomor sertifikat</li>
                         <li><b>SHA1 Thumbprint:</b> thumbprint unik yang dimiliki setiap sertifikat</li>
                     </ul>
-                        <h6 class="sub-titles">Tanggal Kedaluwarsa Sertifikat</h6>
+                        <h4 class="sub-titles">Tanggal Kedaluwarsa Sertifikat</h4>
                         <p>Dengan alat ini, Anda juga dapat mengetahui kapan sertifikat dari website yang Anda cek akan kedaluwarsa. Hal ini dapat memudahkan Anda untuk tetap menjaga instalasi SSL dengan baik. </p>
-                        <h6 class="sub-titles">Status Instalasi SSL</h6>
+                        <h4 class="sub-titles">Status Instalasi SSL</h4>
                         <p>Selain informasi detail sertifikat, alat ini mampu menampilkan status instalasi sertifikat pada website. Instalasi SSL harus dilakukan dengan benar karena Anda bertanggung jawab atas informasi pengunjung website. </p>
-                        <h6 class="sub-titles">Lihat Riwayat Pengecekan</h6>
+                        <h4 class="sub-titles">Lihat Riwayat Pengecekan</h4>
                         <p>Fitur terakhir dari alat ini adalah Local History atau Riwayat Anda. Tool ini memungkinkan Anda untuk melihat semua riwayat URL yang pernah diperiksa menggunakan tool ini. </p>
                         <p>Dengan Adanya fitur ini, Anda tidak perlu mengetikkan kembali URL yang pernah dicek jika ingin melakukan pengecekan ulang. Anda juga dapat menghapus riwayat penggunaan menggunakan tombol &#34;Hapus&#34; pada bagian kanan fitur riwayat penggunaan.</p>',
     "howto6" => '<p>Gambar 4: Fitur Local History untuk melihat riwayat pengecekan pada SSL certificate checker.</p>

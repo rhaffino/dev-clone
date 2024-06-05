@@ -84,10 +84,10 @@ return [
     "desc-2-10-2" => "The tool provides real-time previews of the generated structured data. Hence, it allows you to visualize how it will appear while you ensure it meets your significant requirements.",
     "howto-title" =>'How to Use JSON-LD Local Business Schema Generator by cmlabs?',
     "howto1" => '<p>JSON-LD Local Business Schema Generator by cmlabs is your secret weapon to make your business pop up at the top of search results, complete with star ratings, contact information, and even special announcements! Here’s how you can use this tool to get those significant achievements.</p>
-                <h3 class="sub-titles">Open the JSON-LD Local Business Schema Generator Page</h3>',
+                <h4 class="sub-titles">Open the JSON-LD Local Business Schema Generator Page</h4>',
     "howto2" => '<p>Figure 1: Page view of JSON-LD Local Business Schema Generator by cmlabs.</p>
                 <p>The first thing you need to do is go to the JSON-LD Schema Generator tools page by cmlabs. Then, choose Local Business Generator to start generating the schema markup for your business.</p>
-                <h3 class="sub-titles">Input The Required Data</h3>',
+                <h4 class="sub-titles">Input The Required Data</h4>',
     "howto3" => '<p>Figure 2: Enter the data in the provided fields.</p>
                 <p>Once you are on the generator\'s page, you have to provide specific information about your local business to create the JSON-LD markup. Here\'s a breakdown of the required data fields:</p>
                 <ul>
@@ -109,7 +109,7 @@ return [
                 <p>While you enter each business detail, our tool will process the schema markup script in the column on the right side. This script is the magic that translates your provided information into structured data understood by search engines.</p>
                 <p>As you complete the form, keep an eye on the script\'s progress to ensure that all the essential data is being accurately transformed into JSON-LD format. Once all the necessary information is inputted, the generator will generate a ready-to-use JSON-LD markup code that you can effortlessly integrate into your website\'s HTML.</p>
                 <p>This code is like a digital business card for your local venture, allowing search engines to showcase your business effectively to online users searching for products or services in your area.</p>
-                <h3 class="sub-titles">Select Your Action</h3>
+                <h4 class="sub-titles">Select Your Action</h4>
                 <p>Within this tool, there are three approaches you can use: Copy, Check, and Reset. Understand each function below!</p>
                 <h4>Copy</h4>',
     "howto4" => '<p>Figure 3: Copy Option</p>

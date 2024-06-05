@@ -229,7 +229,7 @@ id/redirect-checker
         <div class="d-none" id="description-tab-2">
             <h2 class="text-black">@lang('redirectchecker.desc-2')</h2>
             <p class="text-black">@lang('redirectchecker.desc-2-1')</p>
-            <h4 class="sub-titles">@lang('redirectchecker.desc-2-1-1')</h4>
+            <h3 class="sub-titles">@lang('redirectchecker.desc-2-1-1')</h4>
             <p class="text-black">@lang('redirectchecker.desc-2-1-2')</p>
             <ul>
                 <li class="text-black">@lang('redirectchecker.desc-2-1-3')</li>
@@ -249,10 +249,10 @@ id/redirect-checker
                 <li class="text-black">@lang('redirectchecker.desc-2-1-1-14')</li>
                 <li class="text-black">@lang('redirectchecker.desc-2-1-1-15')</li>
             </ul>
-            <h4 class="sub-titles">@lang('redirectchecker.desc-2-2-1')</h4>
+            <h3 class="sub-titles">@lang('redirectchecker.desc-2-2-1')</h4>
             <p class="text-black">@lang('redirectchecker.desc-2-2-2')</p>
             <p class="text-black">@lang('redirectchecker.desc-2-2-3')</p>
-            <h4 class="sub-titles">@lang('redirectchecker.desc-2-3-1')</h4>
+            <h3 class="sub-titles">@lang('redirectchecker.desc-2-3-1')</h4>
             <p class="text-black">@lang('redirectchecker.desc-2-3-2')</p>
             <ul>
                 <li class="text-black">@lang('redirectchecker.desc-2-3-1-1')</li>
@@ -261,7 +261,7 @@ id/redirect-checker
                 <li class="text-black">@lang('redirectchecker.desc-2-3-1-4')</li>
                 <li class="text-black">@lang('redirectchecker.desc-2-3-1-5')</li>
             </ul>
-            <h4 class="sub-titles">@lang('redirectchecker.desc-2-4-1')</h4>
+            <h3 class="sub-titles">@lang('redirectchecker.desc-2-4-1')</h4>
             <p class="text-black">@lang('redirectchecker.desc-2-4-2')</p>
             <p class="text-black">@lang('redirectchecker.desc-2-4-3')</p>
         </div>
@@ -270,9 +270,9 @@ id/redirect-checker
         <div class="d-none" id="description-tab-3">
             <h2 class="text-black">@lang('redirectchecker.desc-3')</h2>
             <p class="text-black">@lang('redirectchecker.desc-3-1')</p>
-            <h4 class="sub-titles">@lang('redirectchecker.desc-3-1-1')</h4>
+            <h3 class="sub-titles">@lang('redirectchecker.desc-3-1-1')</h4>
             <p class="text-black">@lang('redirectchecker.desc-3-1-2')</p>
-            <h4 class="sub-titles">@lang('redirectchecker.desc-3-2-1')</h4>
+            <h3 class="sub-titles">@lang('redirectchecker.desc-3-2-1')</h4>
             <p class="text-black">@lang('redirectchecker.desc-3-2-2')</p>
             <p class="text-black">@lang('redirectchecker.desc-3-2-3')</p>
             <p class="text-black">@lang('redirectchecker.desc-3-2-4')</p>

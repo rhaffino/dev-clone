@@ -169,10 +169,10 @@ id/technology-lookup
         <div class="d-none" id="description-tab-3">
             <h2 class="text-black">@lang('lookup.desc-3')</h2>
             <p class="text-black">@lang('lookup.desc-3-1')</p>
-            <h4 class="sub-titles">@lang('lookup.desc-3-1-1')</h4>
+            <h3 class="sub-titles">@lang('lookup.desc-3-1-1')</h3>
             <p class="text-black">@lang('lookup.desc-3-1-2')</p>
             <p class="text-black">@lang('lookup.desc-3-1-3')</p>
-            <h4 class="sub-titles">@lang('lookup.desc-3-2-1')</h4>
+            <h3 class="sub-titles">@lang('lookup.desc-3-2-1')</h3>
             <p class="text-black">@lang('lookup.desc-3-2-2')</p>
             <p class="text-black">@lang('lookup.desc-3-2-3')</p>
         </div>

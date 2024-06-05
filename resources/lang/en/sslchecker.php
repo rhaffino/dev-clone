@@ -83,16 +83,16 @@ return [
     "howto-title" => 'How to Use SSL Certificate Checker',
     "howto1" => '<h2>How to Use SSL Certificate Checker</h2>
                     <p>To operate SSL Certificate Checker for free, here are steps.</p>',
-    "howto2" => '<h4 class="sub-titles">Open SSL Certificate Checker page</h4>
+    "howto2" => '<h3 class="sub-titles">Open SSL Certificate Checker page</h3>
                     <p>First of all, you have to open the page of this tool. After that, you will see several available features such as the URL column, display results, checking history, to a brief explanation of this tool.</p>',
     "howto3" => '<p>Figure 1: Initial view of cmlabs SSL Certificate Checker</p>
-                    <h4 class="sub-titles">Enter Website URL</h4>
+                    <h3 class="sub-titles">Enter Website URL</h3>
                     <p>To view the status and detailed information of a website&#39;s SSL certificate, you must enter the website&#39;s URL in the field provided. Make sure you have entered the URL in the correct format (e.g https://example.com). Next, click the <b>&#34;Check URL&#34;</b> button to give the command to this tool to start checking the website.</p>',
     "howto4" => '<p>Figure 2: Entering the website URL to find out the SSL certificate information</p>
-                    <h4 class="sub-titles">View SSL Certificate Check Results</h4>
+                    <h3 class="sub-titles">View SSL Certificate Check Results</h3>
                     <p>After you press the Check URL button, the system will immediately display the results of the SSL certificate check quickly. The Result field can display some information such as</p>',
     "howto5" => '<p>Figure 3: SSL certificate check results</p>
-                    <h6 class="sub-titles">SSL Certificate</h6>
+                    <h4 class="sub-titles">SSL Certificate</h4>
                     <p>In the results field, the main thing that appears is TLS Certificate (SSL Certificate) information such as:</p>
                     <ul>
                         <li><b>Common Name:</b> domain name</li>
@@ -101,11 +101,11 @@ return [
                         <li><b>Serial Number:</b> certificate number</li>
                         <li><b>SHA1 Thumbprint:</b> the unique thumbprint each certificate has</li>
                     </ul>
-                    <h6 class="sub-titles">Certificate Expiration Date</h6>
+                    <h4 class="sub-titles">Certificate Expiration Date</h4>
                     <p>With this tool, you can also find out when the certificate from the website you are checking will expire. This can make it easier for you to maintain a good SSL installation.</p>
-                    <h6 class="sub-titles">SSL Installation Status</h6>
+                    <h4 class="sub-titles">SSL Installation Status</h4>
                     <p>In addition to certificate details, this tool can display the certificate installation status on the website. SSL installation must be done properly because you are responsible for website visitor information.</p>
-                    <h6 class="sub-titles">View Checking History</h6>
+                    <h4 class="sub-titles">View Checking History</h4>
                     <p>The last feature of this tool is your Local History. This tool allows you to view all URL history that has been checked using this tool.</p>
                     <p>With this feature, you don&#39;t need to re-type the URL that was checked if you want to re-check it. You can also delete usage history using the <b>&#34;Clear&#34;</b> button on the right side of the usage history feature.</p>',
     "howto6" => '<p>Figure 4: Local History feature to view the history of checking the SSL certificate checker.</p>

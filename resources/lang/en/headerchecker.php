@@ -30,23 +30,23 @@ return [
     "table-header" => "Description",
     "howto-title" => '<h2>How to Use HTTP Header Checker cmlabs</h2>',
     "howto1" => '<p>Quickly ensure that your website is secure and compliant! Follow the steps below to obtain meaningful analysis results.</p>',
-    "howto2" => '<h4 class="sub-titles">Go to The HTTP Header Checker Page</h4>',
+    "howto2" => '<h3 class="sub-titles">Go to The HTTP Header Checker Page</h3>',
     "howto3" => '<p>Figure 1: The front page view of HTTP Header Checker by cmlabs</p>
                 <p>The first thing you need to do is go to the <b>"Text & Checker"</b> section on cmlabs website. Then, select the HTTP Header Checker option to start inspecting the headers of the desired website.</p>
-                <h4 class="sub-titles">Enter Website URL</h4>',
+                <h3 class="sub-titles">Enter Website URL</h3>',
     "howto4" => '<p>Figure 2: Input website URL</p>
                 <p>To initiate the review process, you will be asked to input a URL as shown in the example within the blue box. To ensure a smooth review process, make sure the URL you input follows the following format: <b>https://www.example.com</b>.</p>
-                <h4>Now, Check Your HTTP Header!</h4>',
+                <h3>Now, Check Your HTTP Header!</h3>',
     "howto5" => '<p>Figure 3: Click "Check URL"</p>
                 <p>The next step is to start the inspection process. After entering the URL, simply press the "Check URL" button to initiate the process.Then, wait a few moments until the analysis results are successfully loaded. Rest assured, because the inspection process of this tool will be just as fast as you blinked!</p>
-                <h4>Analyze The Outcome</h4>',
+                <h3>Analyze The Outcome</h3>',
     "howto6" => '<p>Figure 4: Analyze your HTTP Header Checker results</p>
                 <p>After the loading phase is complete, you will be presented with a wide range of outcomes that showcase the website\'s performance. The examination results cover essential details such as Connection, Content-Type, Date, Etag, Link, Platform, Server, and beyond.</p>
                 <p>In conclusion, this tool not only provides you with a comprehensive analysis of crucial elements, but it also empowers you with actionable insights to optimize your website\'s performance and enhance user experiences.By harnessing the valuable information gleaned from this tool, you can make informed decisions that contribute to a seamless and efficient online presence.</p>',
-    "howto7" => '<h4 class="sub-titles">Monitor Technology Lookup Usage History</h4>
+    "howto7" => '<h3 class="sub-titles">Monitor Technology Lookup Usage History</h3>
                     <p>Finally, you can also view a list of Technology Lookup usage history. In the list, you will see a list of website URLs that you have monitored through the Technology Lookup from cmlabs.</p>',
     "howto8" => '<p>Figure 5: A list of history using technology lookup from cmlabs.</p>
-                    <h4 class="sub-titles">Login After 5 Times Usage</h4>
+                    <h3 class="sub-titles">Login After 5 Times Usage</h3>
                     <p>Some cmlabs free tools require a login process after 5 times use, Technology Lookup is one of them. If you have used it 5 times, our system will automatically display a message stating that you have reached the usage limit.</p>',
     "howto9" => '<p>Figure 6: Usage warning has reached the limit. In this warning, there is a login button that directs to the login page.</p>
                     <p>You can log in by clicking the login button on the warning message that appears. Next, you will be directed to the cmlabs login page. Please enter the required data, or you can log in via Google.</p>',

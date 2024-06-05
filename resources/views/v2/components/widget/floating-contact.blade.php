@@ -2,9 +2,9 @@
     <div class="card card-custom card-floating-popup desktop hide d-none">
         <div class="card-header border-0">
             <div class="d-flex w-100 align-items-center justify-content-between mb-2">
-                <h3 class="b1-700 p-0 m-0 text-white">
+                <p class="b1-700 p-0 m-0 text-white mb-2">
                     Test Title
-                </h3>
+                </p>
                 <i class='bx bx-x bx-sm d-sm-none text-white-50' id="dismiss-btn"></i>
             </div>
             <p class="text-white s-400 m-0">

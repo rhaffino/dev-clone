@@ -62,30 +62,30 @@ return [
     "howto-title" => 'How to Use Robots.txt Generator',
     "howto1" => '<h2>How to Use Robots.txt Generator</h2>
                     <p>To create a robots.txt file using this tool, follow these steps:</p>',
-    "howto2" => '<h4 class="sub-titles">Go to Robots.txt Generator Page</h4>
+    "howto2" => '<h3 class="sub-titles">Go to Robots.txt Generator Page</h3>
                     <p>One way to create a robots.txt file is to visit the robots.txt generator page. On that page, you can set the commands you will give the web crawler.</p>',
     "howto3" => '<p>Figure 1: The robots.txt generator page view from cmlabs</p>
-                    <h4 class="sub-titles">Select Access Permission For Default Robot</h4>
+                    <h3 class="sub-titles">Select Access Permission For Default Robot</h3>
                     <p>Specify access permissions for the default web crawlers, whether they are allowed to crawl URLs or not. There are two options that you can choose, namely, allow and disallow.</p>',
     "howto4" => '<p>Figure 2: Dropdown view of the permission options granted to the default robot</p>
-                    <h4 class="sub-titles">Set Crawl Delay</h4>
+                    <h3 class="sub-titles">Set Crawl Delay</h3>
                     <p>You can set how long the crawl delay will be for the web crawler. If you set crawl-delay then the web crawler will wait for some time before crawling your URL. Robots.txt generator allows you to choose without crawl delay or delay for 5 to 120 seconds.</p>',
     "howto5" => '<p>Figure 3: A dropdown view of the crawl delay options provided to the default robot</p>
-                    <h4 class="sub-titles">Enter Sitemap (If Any)</h4>
+                    <h3 class="sub-titles">Enter Sitemap (If Any)</h3>
                     <p>A sitemap is a file that lists the URLs of your website, with this file, web crawlers will find it easier to crawl and index your site. You can enter the sitemap path into the field provided.</p>
                     <p>Make sure you have entered the correct sitemap path because this command is case sensitive (eg “/Sitemap.xml” and “/sitemap.xml” are considered different paths).</p>',
     "howto6" => '<p>Figure 4: The display field for entering the sitemap path associated with your URL</p>
-                    <h4 class="sub-titles">Add Directive In Robots.txt</h4>
+                    <h3 class="sub-titles">Add Directive In Robots.txt</h3>
                     <p>You can add directives to the robots.txt file by pressing the <b>&#34;Add Directive&#34;</b> button. Directives are commands given to web crawlers to tell you whether you allow or deny them to crawl certain URLs.</p>',
     "howto7" => '<p>Figure 5: Button for adding commands to be executed by the web crawler</p>
                     <p>In the robots.txt generator, there are three rules that you need to adjust in the directive section, namely:</p>
-                    <h6 class="sub-titles">Set Access Permission</h6>
+                    <h4 class="sub-titles">Set Access Permission</h4>
                     <p>You can set the access permissions granted to web crawlers, whether you allow or disallow them from crawling your web pages. The options that can be used allow and disallow.</p>',
     "howto8" => '<p>Figure 6: Choice of access permissions to be granted to web crawlers</p>
-                    <h6 class="sub-titles">Select User-Agent</h6>
+                    <h4 class="sub-titles">Select User-Agent</h4>
                     <p>A user-agent is the type of web crawler that you will instruct to crawl. The choice of this web crawler depends on the search engine used, such as Baiduspider, Bingbot, Googlebot, and others. The web crawler option can be selected via the available user-agent dropdown.</p>',
     "howto9" => '<p>Figure 7: User-agent options available in cmlabs robots.txt generator</p>
-                    <h6 class="sub-titles">Enter Directory / File Path</h6>
+                    <h4 class="sub-titles">Enter Directory / File Path</h4>
                     <p>A directory or file path is a specific location of a page that web crawlers may or may not crawl. You must pay close attention to writing the path because this command distinguishes between upper and lower case letters (eg "/File" and "/file" are considered different paths).</p>',
     "howto10" => '<p>Figure 8: Field to add the path to be crawled by the crawler</p>
                     <h4 class="sub-titles">Copy Robots.txt</h4>

@@ -1,7 +1,7 @@
 <?php
 return [
-    "meta-title" => "Redirect Checker Gratis - Cek HTTP Status Code Website untuk SEO",
-    "meta-desc" => "Redirect checker memudahkan developer web mengetahui HTTP  status code  5xx, 4xx, 3xx dan 2xx dari laman. Tingkatkan aspek SEO dari website Anda.",
+    "meta-title" => "Redirect Checker - Cek HTTP Status Code Website untuk SEO",
+    "meta-desc" => "Redirect checker memudahkan developer mengetahui HTTP status code 5xx, 4xx, 3xx dan 2xx dari sebuah halaman web. Meningkatkan performa SEO dari website Anda.",
     "lang" => "id",
     "title" => "REDIRECT CHECKER",
     "sub-title" => "Cek Dan Lihat Redirect Chain",
@@ -59,30 +59,30 @@ return [
     "howto-title" => 'Cara Menggunakan Redirect Chain Checker dari cmlabs',
     "howto1" => '<h2>Cara Menggunakan Redirect Chain Checker dari cmlabs</h2>
                     <p>Berikut adalah langkah-langkah menggunakan tool ini.</p>',
-    "howto2" => '<h4 class="sub-titles">Buka Halaman Redirect Chain Checker</h4>
+    "howto2" => '<h3 class="sub-titles">Buka Halaman Redirect Chain Checker</h3>
                     <p>Pertama-tama, untuk menggunakan tool ini Anda dapat membuka halaman Redirect Chain Checker. Pada halaman tersebut, Anda akan melihat beberapa fitur yang ditawarkan oleh alat ini. Mulai dari penambahan URL yang akan diperiksa, tampilan hasil cek redirect, hingga riwayat pengecekan link redirect yang telah Anda lakukan sebelumnya.</p>',
     "howto3" => '<p>Gambar 1: Tampilan halaman Redirect Chain Checker</p>
-                    <h4 class="sub-titles">Masukkan URL</h4>
+                    <h3 class="sub-titles">Masukkan URL</h3>
                     <p>Agar bisa melakukan cek redirect, Anda harus memasukkan URL  pada field yang disediakan. Pastikan Anda telah memasukkan URL dalam format yang benar (e.g https://example.com). Selanjutnya, klik tombol &#34;Cek URL&#34; untuk memberikan perintah pada tool ini agar memulai pengecekan redirect pada link tersebut.</p>',
     "howto4" => '<p>Gambar 2: Tampilan ketika user telah memasukkan URL website pada field yang disediakan.</p>
-                    <h4 class="sub-titles">Pilih User Agent</h4>
+                    <h3 class="sub-titles">Pilih User Agent</h3>
                     <p>Setelah memasukkan URL dengan benar, langkah selanjutnya adalah memilih user agent untuk memeriksa link redirect yang dimasukkan. Fitur ini menyediakan pilihan User Agent bervariasi yang dapat dipilih sesuai kebutuhan Anda. Untuk memilihnya, klik <b>&#34;Pilih User Agent&#34;</b> lalu akan muncul dropdown daftar User Agent. </p>',
     "howto5" => '<p>Gambar 3: Fitur pilih user agent pada redirect chain checker</p>
-                    <h4 class="sub-titles">Melihat Hasil Cek Redirect</h4>
+                    <h3 class="sub-titles">Melihat Hasil Cek Redirect</h3>
                     <p>Anda perlu menunggu beberapa saat hingga proses cek redirect selesai dilakukan. Meskipun tool ini gratis, namun data pengecekan  yang ditampilkan cukup jelas. Beberapa metrik yang bisa Anda temukan pada hasil  cek adalah:</p>
-                    <h6 class="sub-titles"></h6>
+                    <h4 class="sub-titles">Kode Status</h4>
                     <p>Setelah proses cek selesai, sistem tool ini akan menampilkan status code dari link yang diperiksa. Jenis HTML Status Code yang ditampilkan biasanya adalah sebagai berikut:</p>
                     <ul>
                         <li><b>301:</b> adalah jenis pengalihan URL yang bersifat permanen. Biasanya digunakan ketika Anda memutuskan untuk memindahkan seluruh konten dari domain lama menuju domain website baru.</li>
                         <li><b>302:</b> jenis pengalihan URL yang bersifat sementara. Anda bisa menggunakan redirect jenis ini ketika halaman web sedang dalam perbaikan yang cukup serius.</li>
                         <li><b>200:</b> menunjukkan status berhasil atau halaman tujuan dari pengalihan link yang diperiksa.</li>
                     </ul>
-                    <h6 class="sub-titles">Tanggal Pengecekan</h6>
+                    <h4 class="sub-titles">Tanggal Pengecekan</h4>
                     <p>Selain status code, Anda juga akan melihat tanggal pengecekan URL tersebut. Dengan adanya data tanggal pengecekan, Anda dapat memeriksa kembali apakah hasil cek dan status yang disajikan berdasarkan data terkini. </p>
-                    <h4 class="sub-titles">Melihat Riwayat Penggunaan</h4>
+                    <h3 class="sub-titles">Melihat Riwayat Penggunaan</h3>
                     <p>Hal terakhir yang bisa Anda lakukan pada Redirect Chain Checker adalah melihat riwayat penggunaan tool ini. Dalam daftar tersebut, Anda akan melihat daftar URL website yang telah Anda periksa sebelumnya.</p>',
     "howto6" => '<p>Gambar 4: Menu riwayat penggunaan Redirect chain checker</p>
-                    <h4 class="sub-titles">Login Setelah 5 Kali Penggunaaan</h4>
+                    <h3 class="sub-titles">Login Setelah 5 Kali Penggunaaan</h3>
                     <p>Beberapa alat gratis cmlabs membutuhkah proses login setelah pemakaian sebanyak 5 kali, Redirect Checker adalah salah satunya. Jika Anda telah menggunakannya sebanyak 5 kali, sistem kami akan secara otomatis menampilkan pesan yang menyatakan bahwa Anda telah mencapai batas pemakaian</p>',
     "howto7" => '<p>Gambar 5: Peringatan pemakaian telah mencapai batas. Pada peringatan ini, terdapat tombol login yang mengarahkan pada login page</p>
                     <p>Anda dapat melakukan login dengan mengklik tombol login pada pesan peringatan yang muncul. Selanjutnya, Anda akan diarahkan menuju halaman login cmlabs. Silahkan masukkan data yang dibutuhkan, atau Anda dapat melakukan login melalui Google.</p>',

@@ -35,25 +35,25 @@ return [
     "howto-title" => 'How to Use the Link Analyzer',
     "howto1" => '<h2>How to Use the Link Analyzer</h2>
                     <p>In this section, you will find out how to operate the link analyzer tool in detail. Check out the steps below.</p>',
-    "howto2" => '<h4 class="sub-titles">Go to Link Analyzer Page</h4>
+    "howto2" => '<h3 class="sub-titles">Go to Link Analyzer Page</h3>
                     <p>The first step is to open the Link Analyzer cmlabs page. On this page, you will see all the available features such as the URL column, the analysis results column, to the usage history.</p>',
     "howto3" => '<p>Figure 1: Link Analyzer page view</p>
-                    <h4 class="sub-titles">Enter Website URL</h4>
+                    <h3 class="sub-titles">Enter Website URL</h3>
                     <p>The second step to analyze the link is to enter the URL in the field provided. Make sure you have entered the URL in the correct format (e.g https://example.com). Next, click the <b>&#34;Analyze URL&#34;</b> button to give the command to this tool to start checking the website.</p>',
     "howto4" => '<p>Figure 2: Entering the URL in the available fields</p>
-                    <h4 class="sub-titles">View URL Analysis Results</h4>
+                    <h3 class="sub-titles">View URL Analysis Results</h3>
                     <p>After you press the Analyze URL button, the system will immediately display the results. The Result field can display some information such as:</p>
-                    <h6 class="sub-titles">Graph of Total Links</h6>
+                    <h4 class="sub-titles">Graph of Total Links</h4>
                     <p>This tool is capable of displaying a graphic of the links with a pie chart. In this section, you can find out the number of internal links, external links, nofollow, and dofollow along with the percentage.</p>',
     "howto5" => '<p>Figure 3: Pie chart of link analysis results</p>
-                    <h6 class="sub-titles">List of Internal and External Links</h6>
+                    <h4 class="sub-titles">List of Internal and External Links</h4>
                     <p>At the bottom of the pie chart, you can see a list of internal links and external links of the URL you are checking. The results displayed are in accordance with the amount listed on the pie chart above. You can select one of the menus (internal link/external link) to display the results. After that, you will see a list of links and the anchor text of the link.</p>',
     "howto6" => '<p>Figure 4: List of Internal Links and External Links</p>
-                    <h6 class="sub-titles">View Usage History</h6>
+                    <h4 class="sub-titles">View Usage History</h4>
                     <p>The last feature of this tool is Local History or usage history. This tool allows you to view all the history of the link analysis you have performed.</p>
                     <p>With this feature, you don&#39;t need to re-type the URL that was checked if you want to re-check it. You can also delete usage history using the <b>&#34;Clear&#34;</b> button on the right side of the usage history feature.</p>',
     "howto7" => '<p>Figure 5: Local History feature to view usage history</p>
-                    <h4 class="sub-titles">Login After 5 Times of Use</h4>
+                    <h3 class="sub-titles">Login After 5 Times of Use</h3>
                     <p>Some of the cmlabs free tools require logging in after 5 times of use, Link Analyzer is one of them. If you have used it 5 times, our system will automatically display a message stating that you have reached the usage limit.</p>',
     "howto8" => '<p>Figure 6: The usage warning has reached the limit. In this warning, there is a login button that directs to the login page.</p>
                     <p>You can log in by clicking the login button on the warning message that appears. Next, you will be directed to the cmlabs login page. Please enter the required data, or you can log in via Google.</p>',

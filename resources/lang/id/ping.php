@@ -1,7 +1,7 @@
 <?php
 return [
-    "meta-title" => "Ping Tool | cmlabs",
-    "meta-desc" => "Gunakan Ping Tool dari cmlabs untuk menguji ketersediaan alamat IP hingga menganalisis kualitas jaringan internet Anda. Coba sekarang!",
+    "meta-title" => "Ping Tool SEO - Test Konektivitas Website Anda",
+    "meta-desc" => "Ping tool adalah tool SEO yang digunakan untuk menguji konektivitas jhingga ketersedian alamat IP dari sebuah website. Test Ping Tool online gratis di sini.",
     "lang" => "id",
     "title" => "Ping Tool",
     "sub-title" => "Cek Pengelolaan Jaringan Anda",
@@ -30,15 +30,15 @@ return [
     "desc-2-1-5" => "<b>Pengecekan Status Server Jarak Jauh:</b> Tool ini menjadi alternatif cara untuk menilai ketersediaan dan responsivitas alamat IP atau URL tertentu secara cepat dan terukur.",
     "howto-title" => '<h2>Bagaimana Cara Menggunakan Ping Tool cmlabs?</h2>',
     "howto1" => '<p>Pastikan domain atau alamat IP Anda online, tersedia, dan responsif sekarang! Ikuti langkah-langkah di bawah ini dan dapatkan hasil untuk analisis lebih lanjut.</p>',
-    "howto2" => '<h4 class="sub-titles">Buka Halaman Ping Tool cmlabs</h4>',
+    "howto2" => '<h3 class="sub-titles">Buka Halaman Ping Tool cmlabs</h3>',
     "howto3" => '<p>Gambar 1: Tampilan halaman depan Ping Tool dari cmlabs</p>
                     <p>Hal pertama yang perlu Anda lakukan adalah pergi ke halaman ”Text & Checker” di website cmlabs. Kemudian, pilih Tool Ping untuk memulai pemeriksaan pengelolaan jaringan Anda.</p>
-                    <h4 class="sub-titles">Masukkan URL atau Alamat IP</h4>
+                    <h3 class="sub-titles">Masukkan URL atau Alamat IP</h3>
                     <p>Untuk memulai pemeriksaan, masukkan alamat IP atau URL seperti contoh yang tertera pada kotak berwarna biru. Anda dapat memasukkan input berupa <b>https://www.example.com</b> atau <b>192.168.32.1</b> sesuai keputusan Anda!</p>',
-    "howto4" => '<h4 class="sub-titles">Pilih Jenis Input (URL/Alamat IP)</h4>',
+    "howto4" => '<h3 class="sub-titles">Pilih Jenis Input (URL/Alamat IP)</h3>',
     "howto5" => '<p>Gambar 2: Pilih jenis input Anda</p>
                     <p>Setelah alamat IP atau URL dimasukkan, tekan tombol “<b>Pilih Tipe Masukan</b>” dan sesuaikan pilihan sesuai dengan data yang sudah diinput sebelumnya (pilih URL jika Anda memasukkan URL, pilih Alamat IP jika Anda memasukkan Alamat IP)</p>
-                    <h4 class="sub-titles">Lalu, Ping!</h4>',
+                    <h3 class="sub-titles">Lalu, Ping!</h3>',
     "howto6" => '<p>Gambar 3: Tekan “Ping” untuk memulai proses pemeriksaan</p>
                     <p>Untuk memulai proses pemindaian, Anda bisa langsung menekan tombol dengan label “Ping” di bagian pojok kanan atas</p>
                     <p>Tunggu beberapa saat hingga proses pemindaian selesai sepenuhnya. Setelah prosesnya selesai, Anda akan melihat hasil dengan serangkaian detail-detail yang menjelaskan keadaan dan ketersediaan jaringan internet. Secara keseluruhan, hasil pemindaian akan menunjukkan:</p> 
@@ -50,11 +50,11 @@ return [
                     </ul>
                     <p>Anda bisa mengandalkan Ping Tool dari cmlabs sebagai sahabat bagi pengguna pemula maupun profesional IT yang berpengalaman.Dengan menggunakan cara yang lebih efisien dalam mengukur konektivitas jaringan, latensi, dan kinerja, waktu analisis Anda apat menjadi lebih tepat, cepat, dan akurat.Jadi, mari atasi atasi berbagai jenis masalah konektivitas jaringan dan percayakan tool cmlabs sebagai aset penting dalam menjaga infrastruktur server yang tangguh. 
                     </p>
-                    <h4 class="sub-titles">Pantau Riwayat Penggunaan Ping Tool</h4>
+                    <h3 class="sub-titles">Pantau Riwayat Penggunaan Ping Tool</h3>
                     <p>Terakhir, Anda juga bisa melihat daftar riwayat penggunaan Ping Tool. Dalam daftar tersebut, Anda akan melihat daftar URL website yang telah Anda pantau melalui Ping Tool dari cmlabs.</p>
                     ',
     "howto7" => '<p>Gambar 4: Daftar riwayat penggunaan ping tool dari cmlabs.</p>
-                    <h4 class="sub-titles">Login Setelah 5 Kali Penggunaaan</h4>
+                    <h3 class="sub-titles">Login Setelah 5 Kali Penggunaaan</h3>
                     <p>Beberapa alat gratis cmlabs membutuhkah proses login setelah pemakaian sebanyak 5 kali, Ping Tool adalah salah satunya. Jika Anda telah menggunakannya sebanyak 5 kali, sistem kami akan secara otomatis menampilkan pesan yang menyatakan bahwa Anda telah mencapai batas pemakaian.</p>',
     "howto8" => '<p>Gambar 5: Peringatan pemakaian telah mencapai batas. Pada peringatan ini, terdapat tombol login yang mengarahkan pada login page.</p>
                     <p>Anda dapat melakukan login dengan mengklik tombol login pada pesan peringatan yang muncul. Selanjutnya, Anda akan diarahkan menuju halaman login cmlabs. Silahkan masukkan data yang dibutuhkan, atau Anda dapat melakukan login melalui Google.</p>',
