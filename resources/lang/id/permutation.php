@@ -1,7 +1,7 @@
 <?php
 return [
-    "meta-title" =>"Tool SEO Keyword Permutation Generator - Penghasil Ribuan Keyword secara Cepat",
-    "meta-desc" => "Kombinasikan kata dengan keyword combination tool untuk membantu persingkat waktu riset",
+    "meta-title" =>"Keyword Permutation Generator - Hasilkan Ribuan Keyword secara Cepat",
+    "meta-desc" => "Keyword Permutation Generator adalah alat SEO yang dapat membantu menghasilkan ribuan kata kunci secara cepat. Membantu mempersingkat waktu riset keyword.",
     "lang" => "id",
     "title" => "KEYWORD PERMUTATION",
     "sub-title" => "Permutasi Keyword SEO Generator",

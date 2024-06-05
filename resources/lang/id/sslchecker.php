@@ -1,7 +1,7 @@
 <?php
 return [
-    "meta-title" => "SSL Certificate Checker - Analisa Status Instalasi & Issues Konfigurasi",
-    "meta-desc" => "Gunakan SSL Checker tool dari untuk memastikan validalitas sebuah website. Temukan informasi expiration date dan keterangan TLS Certificate.",
+    "meta-title" => "SSL Certificate Checker - Analisa Status dan Issue Instalasi",
+    "meta-desc" => "SSL Checker dari cmlabs dapat membantu memvalidalitas webisite Anda. Temukan informasi expiration date dan keterangan TLS Certificate di sini secara gratis.",
     "title" => "SSL CHECKER TOOL",
     "subtitle" => "Periksa Sertifikat SSL Anda",
     "btn-check" => "CEK URL",

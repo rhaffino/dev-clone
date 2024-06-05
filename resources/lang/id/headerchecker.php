@@ -1,7 +1,7 @@
 <?php
 return [
-    "meta-title" => "HTTP Header Checker dari cmlabs",
-    "meta-desc" => "HTTP Header Checker oleh cmlabs – Solusi terbaik untuk memastikan konfigurasi, keamanan, dan kinerja sebuah wesbite. Periksa Header HTTP sekarang!",
+    "meta-title" => "HTTP Header Checker - Cek HTTP status code website Anda",
+    "meta-desc" => "HTTP Header Checker dari cmlabs adalah solusi terbaik untuk memastikan konfigurasi, keamanan, dan kinerja sebuah wesbite. Periksa HTTP Header Gratis sekarang!",
     "lang" => "id",
     "title" => "HTTP Header Checker",
     "sub-title" => "Cek HTTP Header Anda",

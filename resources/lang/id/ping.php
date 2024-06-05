@@ -1,7 +1,7 @@
 <?php
 return [
-    "meta-title" => "Ping Tool | cmlabs",
-    "meta-desc" => "Gunakan Ping Tool dari cmlabs untuk menguji ketersediaan alamat IP hingga menganalisis kualitas jaringan internet Anda. Coba sekarang!",
+    "meta-title" => "Ping Tool SEO - Test Konektivitas Website Anda",
+    "meta-desc" => "Ping tool adalah tool SEO yang digunakan untuk menguji konektivitas jhingga ketersedian alamat IP dari sebuah website. Test Ping Tool online gratis di sini.",
     "lang" => "id",
     "title" => "Ping Tool",
     "sub-title" => "Cek Pengelolaan Jaringan Anda",

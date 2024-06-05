@@ -1,7 +1,7 @@
 <?php
 return [
-    "meta-title" => "Sitemap Generator - Buat Google XML Sitemap Online untuk SEO",
-    "meta-desc" => "XML Sitemap Generator Tool gratis dari cmlabs untuk buat file XML dan permudah mesin pencari mengindeks laman Anda.",
+    "meta-title" => "Sitemap Generator - Free XML Sitemap Maker untuk SEO",
+    "meta-desc" => "Sitemap Generator adalah tools gratis dari cmlabs untuk membuat file XML dan permudah mesin pencari mengindeks halaman website Anda.",
     "title" => "SITEMAP GENERATOR",
     "sub-title" => "Perkaya Sitemap Untuk Crawler",
     "btn-generate" => "HASILKAN",

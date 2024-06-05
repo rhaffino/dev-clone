@@ -1,7 +1,7 @@
 <?php
 return [
-    "meta-title" => "Link Analyzer Tool Online - Cek Link Internal & Eksternal dari Website Anda",
-    "meta-desc" => "Tool link analyzer membantu Anda mengecek link yang terhubung dengan web, dari internal dan external laman. Analisa dan atur link untuk tingkatkan SEO.",
+    "meta-title" => "Link Analyzer Tool  - Cek Link Internal & Eksternal Website",
+    "meta-desc" => "Link analyzer gratis dari cmlabs adalah tool SEO yang dapat membantu Anda mengecek link yang terhubung dengan sebuah website, baik dari internal dan external.",
     "lang" => "id",
     "title" => "LINK ANALYZER",
     "sub-title" => "Terus Lacak Semua Tautan Di Situs Web Anda",

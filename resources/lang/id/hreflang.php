@@ -1,7 +1,7 @@
 <?php
 return [
-    "meta-title" => "Hreflang Tag Checker - Cek Atribut Bahasa & Wilayah Website",
-    "meta-desc" => "Hreflang checker adalah alat untuk mengidentifikasi tag hreflang secara otomatis. Bantu Google mengenali bahasa dan menempatkannya di pasar yang tepat.",
+    "meta-title" => "Hreflang Checker - Cek Atribut Bahasa dan Wilayah Website",
+    "meta-desc" => "Hreflang tags checker adalah tool SEO untuk mengidentifikasi tag hreflang secara otomatis. Bantu Google mengenali bahasa dan menempatkannya di pasar yang tepat.",
     "lang" => "id",
     "title" => "HREFLANG CHECKER",
     "sub-title" => "Cepat Memeriksa Tag Hreflang Untuk Halaman",

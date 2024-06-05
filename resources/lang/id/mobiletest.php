@@ -1,8 +1,7 @@
 <?php
 return [
-    "meta-title" => "Mobile Friendly Test - Pratinjau Performa Web di Seluler untuk SEO",
-    "meta-desc" => "Cek tampilan web dengan Mobile Friendly Test dari cmlabs. Identifikasi masalah dan analisa performa web agar lebih ramah handphone.",
-    "title" => "MOBILE FRIENDLY TEST",
+    "meta-title" => "Mobile Friendly Test - Pantau Performa Website di Seluler",
+    "meta-desc" => "Mobile Friendly Test dari cmlabs dapat membantu Anda mengidentifikasi masalah dan analisa performa website agar lebih ramah pada perangkat handphone.",
     "sub-title" => "Tes Tampilan Web Di Mobile",
     "btn-check" => "CEK URL",
     "page-issues" => "Masalah pemuatan halaman",
