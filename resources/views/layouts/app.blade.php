@@ -168,8 +168,8 @@
     <!--end::Scrolltop-->
     <!--end::Demo Panel-->
     <!--begin::Global Config(global config for global JS scripts)-->
-    @stack('scripts')
 
+    @stack('scripts')
     <script src="{{ asset('assets/js/floating-contact.js') }}"></script>
     <script>
         var KTAppSettings = {
@@ -288,6 +288,10 @@
                 $(this).text("Baca Selengkapnya")
             }
         });
+
+        let userObject = {
+            email: "{{ auth()->user()->email ?? '-' }}"
+        };
     </script>
     <script src="{{ asset('js/logic/cta-function.js') }}"></script>
     @stack('script')

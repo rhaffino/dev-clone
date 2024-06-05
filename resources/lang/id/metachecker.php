@@ -1,9 +1,9 @@
 <?php
 return [
+    "meta-title" => "Title dan Meta Description Length Checker - Google SERP Preview",
+    "meta-desc" => "Title dan meta tag checker adalah alat untuk memeriksa panjang teks dari judul & deskripsi meta pada halaman web serta pratinjau Google untuk SEO.",
     "title" => "TITLE & META DESCRIPTION CHECKER",
     "sub-title" => "Cek Panjang Judul dan Meta",            
-    "meta-title" => "Title dan Meta Description Length Checker - Google SERP Preview",
-    "meta-desc" => "Tool title dan meta decription length checker cmlabs dengan pratinjau Google untuk SEO. Dapatkan lebih banyak klik dengan meta yang tepat!",
     "input-hint-manual" => "Ketik atau tempel teks Anda ...",
     "btn-crawl" => "TELUSURI URL",
     "tooltip-manual-off" => "mode MANUAL NONAKTIF",

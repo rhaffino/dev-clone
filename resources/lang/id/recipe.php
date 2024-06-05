@@ -1,7 +1,7 @@
 <?php
 return [
-    "meta-title" => "Tool Gratis JSON-LD Recipe Schema Generator",
-    "meta-desc" => "Optimasi website anda dan tarik perhatian user dengan tool online JSON-LD Recipe generator gratis ini",
+    "meta-title" => "Tool SEO Gratis JSON-LD Recipe Schema Generator",
+    "meta-desc" => "Optimasi website Anda dengan menggunakan markup schema JSON-LD Recipe schema generator dan aktifkan rich snippet SERP di Google untuk halaman Anda.",
     "title" => "JSON-LD RECIPE SCHEMA GENERATOR",
     "subtitle" => "Tarik Perhatian User Ke Website Anda",
     "label-name" => "Nama",

@@ -1,7 +1,7 @@
 <?php
 return [
-    "meta-title" => "Tool Gratis JSON-LD Product Schema Generator",
-    "meta-desc" => "Jadikan Produk Anda tampil beda diantara kompetitor online dengan tool Product schema generator",
+    "meta-title" => "Tool SEO Gratis JSON-LD Product Schema Generator",
+    "meta-desc" => "Gunakan tools gratis JSON-LD Product schema generator dan jadikankan produk Anda tampil beda diantara kompetitor serta aktifkan rich snippet untuk halaman Anda.",
     "title" => "JSON-LD PRODUCT SCHEMA GENERATOR",
     "subtitle" => "Berdiri Beda Di Antara Kompetitor",
     "btn-addReview" => "TAMBAH ULASAN",
