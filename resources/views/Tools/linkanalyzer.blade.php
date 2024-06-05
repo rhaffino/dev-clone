@@ -304,7 +304,7 @@ id/link-analyzer
     @endslot
     @slot('subcontent_4')
         <div class="d-none" id="description-tab-4">
-            <h4 class="sub-titles">@lang('analyzer.desc-4')</h4>
+            <h3 class="sub-titles">@lang('analyzer.desc-4')</h3>
             <p class="text-black">@lang('analyzer.desc-4-1-1')</p>
             <p class="text-black">@lang('analyzer.desc-4-1-2')</p>
             <p class="text-black">@lang('analyzer.desc-4-1-3')</p>

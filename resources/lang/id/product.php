@@ -89,38 +89,38 @@ return [
     "howto-title" => 'Bagaimana Cara Menggunakan Product Schema Generator?',
     "howto1" => '<h2>Bagaimana Cara Menggunakan Product Schema Generator?</h2>
                     <p>Product schema generator adalah tool yang bisa Anda gunakan untuk membuat product schema markup secara gratis. Menambahkan schema markup ke halaman product bisa membuat informasi product Anda ditampilkan pada rich result di SERP Google. Adapun cara menghasilkan product schema markup menggunakan tool ini adalah sebagai berikut:</p>',
-    "howto2" => '<h4 class="sub-titles">Buka Halaman JSON-LD Product Schema Generator</h4>
+    "howto2" => '<h3 class="sub-titles">Buka Halaman JSON-LD Product Schema Generator</h3>
                     <p>Pertama-tama, buka laman <a href="">JSON-LD Product Schema Generator</a> untuk memulai pembuatan <i class="italics">product schema markup</i> secara otomatis. Schema markup yang dihasilkan juga telah sesuai dengan pedoman penelusuran Google.</p>',
     "howto3" => '<p>Gambar 1: Tampilan halaman <i class="italics">product schema generator</i> dari cmlabs.</p>
-                    <h4 class="sub-titles">Masukkan Informasi Umum</h4>
+                    <h3 class="sub-titles">Masukkan Informasi Umum</h3>
                     <p>Masukkan informasi umum seperti nama produk, URL gambar produk, dan nama brand yang mengeluarkan produk pada kolom yang disediakan.</p>
                     <p>Kemudian, Anda bisa menambahkan informasi lain yang dibutuhkan. Akan lebih baik jika Anda mendeskripsikan produk secara detail. Namun, jika dirasa tidak perlu menambahkan suatu informasi, Anda dapat melewatkan pengisian data pada kolom tersebut.</p>',
     "howto4" => '<p>Gambar 2: Masukkan nama produk, url gambar produk, dan nama brand ke dalam product schema generator.</p>
-                    <h4 class="sub-titles">Identifikasi Properti</h4>
+                    <h3 class="sub-titles">Identifikasi Properti</h3>
                     <p>Selanjutnya, Anda bisa menambahkan identifikasi properti. Terdapat beberapa pilihan properti seperti sku, gtin8, gtin13, gtin14, dan mpn. Pada bagian ini, Anda bisa menambahkan beberapa properti dalam satu produk. Selanjutnya, Anda akan diminta untuk mengisi data sesuai jenis properti yang Anda pilih.</p>',
     "howto5" => '<p>Gambar 3: Pilih jenis identifikasi dan masukkan data yang dibutuhkan ke dalam product schema generator.</p>
-                    <h4 class="sub-titles">Masukkan Deskripsi Produk</h4>
+                    <h3 class="sub-titles">Masukkan Deskripsi Produk</h3>
                     <p>Selanjutnya, Anda bisa menambahkan deskripsi dari produk yang Anda tawarkan. Buatlah deskripsi yang benar-benar menggambarkan keunggulan produk dan memuat informasi yang mungkin dibutuhkan pengguna. Dengan begitu, halaman produk bisa memiliki performa yang lebih optimal.</p>',
     "howto6" => '<p>Gambar 4: Masukkan deskripsi produk ke dalam product schema generator.</p>
-                    <h4 class="sub-titles">Tambahkan Penawaran</h4>
+                    <h3 class="sub-titles">Tambahkan Penawaran</h3>
                     <p>Kemudian, Anda bisa menambahakan penawaran. Terdapat dua opsi penawaran yang bisa dipilih yaitu tawaran atau penawaran agregat. Simak penjelasannya berikut:</p>
-                    <h6 class="sub-titles">Tawaran</h6>
+                    <h4 class="sub-titles">Tawaran</h4>
                     <p>Tawaran adalah jenis penawaran yang diberikan kepada produk tunggal. Misalnya, penawaran menyewa mobil, penjualan tiket film, dan lainnya. Terdapat beberapa data yang perlu Anda tambahkan yaitu tipe tawaran, url produk, mata uang, harga, dan informasi lainnya yang dirasa perlu untuk Anda tambahkan.</p>',
     "howto7" => '<p>Gambar 5: Masukkan tipe tawaran, url produk, mata uang, harga, dan informasi lain yang dibutuhkan ke dalam product schema generator.</p>
-                    <h4 class="sub-titles">Penawaran Agregat</h4>
+                    <h3 class="sub-titles">Penawaran Agregat</h3>
                     <p>Penawaran agregat dapat digunakan ketika suatu produk memiliki beberapa penawaran. Misalnya, penawaran sepatu yang sama oleh beberapa pedagang berbeda. Terdapat beberapa data yang perlu Anda tambahkan yaitu tipe tawaran, url produk, mata uang, harga tertinggi, jumlah penawaran, dan informasi lainnya yang dirasa perlu untuk Anda tambahkan.</p>',
     "howto8" => '<p>Gambar 6: Masukkan tipe tawaran, url produk, mata uang, harga tertinggi, jumlah penawaran, dan informasi lain yang dibutuhkan ke dalam product schema generator.</p>
-                    <h4 class="sub-titles">Tambahkan Ulasan Produk</h4>
+                    <h3 class="sub-titles">Tambahkan Ulasan Produk</h3>
                     <p>Terdapat beberapa data yang perlu Anda tambahkan yaitu nama ulasan, isi ulasan, peringkat, tanggal, penulis ulasan, dan informasi lainnya yang dirasa perlu untuk Anda tambahkan.</p>',
     "howto9" => '<p>Gambar 7: Masukkan nama ulasan, isi ulasan, peringkat, tanggal, penulis ulasan, dan informasi lain yang dibutuhkan ke dalam product schema generator.</p>
-                    <h4 class="sub-titles">Salin Product Schema Markup Yang Dihasilkan</h4>
+                    <h3 class="sub-titles">Salin Product Schema Markup Yang Dihasilkan</h3>
                     <p>Jika Anda telah melengkapi atribut yang dibutuhkan untuk membuat Product schema markup, maka Anda akan melihat preview schema markup di bagian kanan. Anda dapat menyalin schema markup secara langsung dengan tombol <b>&#34;salin&#34;</b> dan pasang ke dalam kode program Anda.</p>',
     "howto10" => '<p>Gambar 8: Opsi salin <i class="italics">Product schema markup</i></p>
-                    <h4 class="sub-titles">Cek Validasi Script JSON-LD Product Schema</h4>
+                    <h3 class="sub-titles">Cek Validasi Script JSON-LD Product Schema</h3>
                     <p>Dengan Person schema generator, Anda juga bisa memeriksa validitas <i class="italics">script</i> JSON-LD yang Anda gunakan. Cara mengeceknya pun cukup mudah, cukup tekan opsi <b>cek</b> yang terdapat di bagian pratinjau <i class="italics">script</i> yang dihasilkan.</p>
                     <p>Ketika Anda menekan tombol tersebut, maka Anda akan dialihkan menuju laman <a href="https://search.google.com/test/rich-results">Rich Result Test</a> milik Google. Pada halaman tersebut, Anda dapat mengecek apakah <i class="italics">schema markup</i> yang dihasilkan dapat berfungsi dengan baik di penelusuran Google.</p>',
     "howto11" => '<p>Gambar 9: Opsi cek validasi Product schema markup</p>
-                    <h4 class="sub-titles">Reset Schema Generator</h4>
+                    <h3 class="sub-titles">Reset Schema Generator</h3>
                     <p>Tool ini memiliki opsi yang memudahkan Anda dalam membuat Product schema baru. Cukup klik opsi <b>&#34;Reset&#34;</b> dan menghapus seluruh data yang telah ditambahkan sebelumnya. Selanjutnya, Anda bisa membuat script baru.</p>',
     "howto12" => '<p>Gambar 10: Opsi reset data yang ditambahkan pada Product schema generator.</p>
                     <p>Demikian penjelasan terkait cara membuat product schema markup menggunakan tools <a href="https://tools.cmlabs.co/id/json-ld-product-schema-generator">JSON-LD Product Schema Generator</a> dari cmlabs. Tools ini dapat membantu Anda menghasilkan schema markup secara cepat dan efisien. Coba tool ini sekarang!</p>',

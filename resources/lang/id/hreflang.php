@@ -31,29 +31,29 @@ return [
     "howto-title" => 'Cara Menggunakan Hreflang Tag Checker',
     "howto1" => '<h2>Cara Menggunakan Hreflang Tag Checker</h2>
                     <p>Panduan ini disusun untuk membantu Anda menggunakan tool ini secara tepat dan menganalisis hasil yang dapat ditampilkan. Berikut langkah-langkahnya.</p>',
-    "howto2" => '<h4 class="sub-titles">Buka Halaman Hreflang Checker cmlabs</h4>
+    "howto2" => '<h3 class="sub-titles">Buka Halaman Hreflang Checker cmlabs</h3>
                     <p>Sebagai langkah awal, silakan membuka halaman dari tool ini. Anda bisa mengaksesnya melalui tautan ini. Setelah itu, Anda akan melihat beberapa fitur yang tersedia seperti kolom URL, tampilan hasil, riwayat pengecekan, hingga penjelasan singkat mengenai tool ini.</p>',
     "howto3" => '<p>Gambar 1: Tampilan halaman Hreflang Checker cmlabs</p>
-                    <h4 class="sub-titles">Masukkan URL Website</h4>
+                    <h3 class="sub-titles">Masukkan URL Website</h3>
                     <p>Langkah kedua untuk mengidentifikasi hreflang tag yaitu dengan memasukkan URL yang akan diperiksa pada field yang tersedia. Pastikan Anda telah memasukkan URL dalam format yang benar (e.g https://example.com). Selanjutnya, klik tombol <b>&#34;Cek URL&#34;</b> untuk memberikan perintah pada tool ini agar memulai pengecekan pada website tersebut.</p>',
     "howto4" => '<p>Gambar 2: Memasukkan URL website untuk mengidentifikasi hreflang tag</p>
-                    <h4 class="sub-titles">Melihat Hasil Identifikasi Hreflang Tag</h4>
+                    <h3 class="sub-titles">Melihat Hasil Identifikasi Hreflang Tag</h3>
                     <p>Setelah Anda menekan tombol Cek URL, sistem tool ini akan segera memunculkan hasil identifikasi dengan cepat. Field Hasil/Result dapat menampilkan beberapa informasi seperti:</p>
-                    <h6 class="sub-titles">URL</h6>
+                    <h4 class="sub-titles">URL</h4>
                     <p>Daftar URL yang ditampilkan merupakan variasi dari URL yang dimasukkan sebelumnya. Misalnya, Anda memasukkan URL <a href="https://cmlabs.co/en-id">&#34;https://cmlabs.co&#34;</a> lalu pada kolom URL di bawahnya akan muncul beberapa URL variasi dari website tersebut seperti <a href="https://cmlabs.co/en-id">&#34;https://cmlabs.co/en-id&#34;,</a><a href="https://cmlabs.co/en-my">&#34;https://cmlabs.co/en-my&#34;</a> dan seterusnya. </p>',
     "howto5" => '<p>Gambar 3: Daftar URL yang berhasil diidentifikasi</p>
-                    <h6 class="sub-titles">Hreflang Tag</h6>
+                    <h4 class="sub-titles">Hreflang Tag</h4>
                     <p>Di Sebelah kanan dari daftar URL, Anda dapat melihat tag hreflang yang digunakan pada setiap URL. Atribut tag HTML inilah yang memberitahu <i class="italics">search engine</i> hubungan antara halaman dalam berbagai bahasa di website Anda. Contoh dari hreflang tag adalah &#34;en-id&#34;, &#34;en-my&#34;, dan sebagainya.</p>
-                    <h6 class="sub-titles">Bahasa</h6>
+                    <h4 class="sub-titles">Bahasa</h4>
                     <p>Bahasa yang digunakan tentunya akan berbeda pada setiap hreflang tag yang dipasang. Dengan begitu, target pengguna dapat memahami isi website sesuai dengan preferensi bahasa yang dipilih. </p>
                     <p>Bukan hanya untuk pengguna, namun, atribut ini juga digunakan untuk memberikan sinyal pada Google untuk melayani URL dengan bahasa yang benar dalam hasil pencariannya berdasarkan preferensi bahasa pengguna. </p>
-                    <h6 class="sub-titles">Wilayah</h6>
+                    <h4 class="sub-titles">Wilayah</h4>
                     <p>Data terakhir yang dapat Anda lihat pada hreflang checker cmlabs adalah wilayah target dari URL yang diperiksa. Anda dapat mengetahui apakah target wilayah pada URL tertentu sudah sesuai dengan bahasa dan tag hreflang yang dipasang.</p>
-                    <h4 class="sub-titles">Lihat Riwayat Pengecekan</h4>
+                    <h3 class="sub-titles">Lihat Riwayat Pengecekan</h3>
                     <p>Fitur terakhir dari tool ini adalah Local History atau Riwayat Anda. Tool ini memungkinkan Anda untuk melihat semua riwayat pemeriksaan hreflang pada hreflang checker cmlabs.</p>
                     <p>Dengan Adanya fitur ini, Anda tidak perlu mengetikkan kembali URL yang pernah dicek jika ingin melakukan pengecekan ulang. Anda juga dapat menghapus riwayat penggunaan menggunakan tombol &#34;Hapus&#34; pada bagian kanan fitur riwayat penggunaan.</p>',
     "howto6" => '<p>Gambar 4: Fitur Local History untuk melihat riwayat pengecekan pada hreflang checker.</p>
-                    <h4 class="sub-tit;es">Login Setelah 5 Kali Penggunaan </h4>
+                    <h3 class="sub-tit;es">Login Setelah 5 Kali Penggunaan </h3>
                     <p>Beberapa alat gratis cmlabs membutuhkah proses login setelah pemakaian sebanyak 5 kali, Hreflang Checker adalah salah satunya. Jika Anda telah menggunakannya sebanyak 5 kali, sistem kami akan secara otomatis menampilkan pesan yang menyatakan bahwa Anda telah mencapai batas pemakaian.</p>',
     "howto7" => '<p>Gambar 5: Peringatan pemakaian telah mencapai batas. Pada peringatan ini, terdapat tombol login yang mengarahkan pada login page.</p>
                     <p>Anda dapat melakukan login dengan mengklik tombol login pada pesan peringatan yang muncul. Selanjutnya, Anda akan diarahkan menuju halaman login cmlabs. Silahkan masukkan data yang dibutuhkan, atau Anda dapat melakukan login melalui Google.</p>',

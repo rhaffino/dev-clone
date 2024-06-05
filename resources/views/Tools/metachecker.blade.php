@@ -368,10 +368,10 @@
                 <p>@lang('metachecker.desc-2-1')</p>
                 <p>@lang('metachecker.desc-2-2')</p>
                 <p>@lang('metachecker.desc-2-3')</p>
-                <h4 class="sub-titles">@lang('metachecker.desc-2-1-1')</h4>
+                <h3 class="sub-titles">@lang('metachecker.desc-2-1-1')</h3>
                 <p>@lang('metachecker.desc-2-1-2')</p>
                 <p>@lang('metachecker.desc-2-1-3')</p>
-                <h4 class="sub-titles">@lang('metachecker.desc-2-2-1')</h4>
+                <h3 class="sub-titles">@lang('metachecker.desc-2-2-1')</h3>
                 <p>@lang('metachecker.desc-2-2-2')</p>
             </div>
         @endslot

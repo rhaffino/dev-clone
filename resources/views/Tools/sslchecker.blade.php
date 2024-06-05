@@ -165,13 +165,13 @@ id/ssl-checker
         <div class="d-none" id="description-tab-3">
             <h2>@lang('sslchecker.desc-3')</h2>
             <p>@lang('sslchecker.desc-3-1')</p>
-            <h4 class="sub-titles">@lang('sslchecker.desc-3-2-1')</h4>
+            <h3 class="sub-titles">@lang('sslchecker.desc-3-2-1')</h3>
             <p>@lang('sslchecker.desc-3-2-2')</p>
-            <h4 class="sub-titles">@lang('sslchecker.desc-3-3-1')</h4>
+            <h3 class="sub-titles">@lang('sslchecker.desc-3-3-1')</h3>
             <p>@lang('sslchecker.desc-3-3-2')</p>
-            <h4 class="sub-titles">@lang('sslchecker.desc-3-4-1')</h4>
+            <h3 class="sub-titles">@lang('sslchecker.desc-3-4-1')</h3>
             <p>@lang('sslchecker.desc-3-4-2')</p>
-            <h4 class="sub-titles">@lang('sslchecker.desc-3-5-1')</h4>
+            <h3 class="sub-titles">@lang('sslchecker.desc-3-5-1')</h3>
             <p>@lang('sslchecker.desc-3-5-2')</p>
         </div>
     @endslot
@@ -211,9 +211,9 @@ id/ssl-checker
         <div class="d-none" id="description-tab-5">
             <h2>@lang('sslchecker.desc-5')</h2>
             <p>@lang('sslchecker.desc-5-1')</p>
-            <h4 class="sub-titles">@lang('sslchecker.desc-5-2-1')</h4>
+            <h3 class="sub-titles">@lang('sslchecker.desc-5-2-1')</h3>
             <p>@lang('sslchecker.desc-5-2-2')</p>
-            <h4 class="sub-titles">@lang('sslchecker.desc-5-3-1')</h4>
+            <h3 class="sub-titles">@lang('sslchecker.desc-5-3-1')</h3>
             <p>@lang('sslchecker.desc-5-3-2')</p>
         </div>
     @endslot

@@ -334,14 +334,14 @@ id/json-ld-recipe-schema-generator
         <div class="d-none" id="description-tab-2">
             <h2 class="text-black">@lang('recipe.desc-2')</h2>
             <p class="text-black">@lang('recipe.desc-2-1')</p>
-            <h4 class="sub-titles">@lang('recipe.desc-2-2-1')</h4>
+            <h3 class="sub-titles">@lang('recipe.desc-2-2-1')</h3>
             <p class="text-black">@lang('recipe.desc-2-2-2')</p>
             <p class="text-black">@lang('recipe.desc-2-2-3')</p>
             <img class="mb-4" src="{{asset('/media/images/recipe-1.png')}}" alt="recipe-1" width="60%">
             <p class="text-black">@lang('recipe.desc-2-2-4')</p>
             <p class="text-black">@lang('recipe.desc-2-2-5')</p>
 
-            <h4 class="sub-titles">@lang('recipe.desc-2-3-1')</h4>
+            <h3 class="sub-titles">@lang('recipe.desc-2-3-1')</h3>
             <p class="text-black">@lang('recipe.desc-2-3-2')</p>
             <img class="mb-4" src="{{asset('/media/images/recipe-2.png')}}" alt="recipe-2" width="60%">
             <p class="text-black">@lang('recipe.desc-2-3-3')</p>
@@ -352,10 +352,10 @@ id/json-ld-recipe-schema-generator
         <div class="d-none" id="description-tab-3">
             <h2 class="text-black">@lang('recipe.desc-3')</h2>
             <p class="text-black">@lang('recipe.desc-3-1')</p>
-            <h4 class="sub-titles">@lang('recipe.desc-3-2-1')</h4>
+            <h3 class="sub-titles">@lang('recipe.desc-3-2-1')</h3>
             <p class="text-black">@lang('recipe.desc-3-2-2')</p>
             <p class="text-black">@lang('recipe.desc-3-2-3')</p>
-            <h4 class="sub-titles">@lang('recipe.desc-3-3-1')</h4>
+            <h3 class="sub-titles">@lang('recipe.desc-3-3-1')</h3>
             <p class="text-black">@lang('recipe.desc-3-3-2')</p>
             <p class="text-black">@lang('recipe.desc-3-3-3')</p>
         </div>

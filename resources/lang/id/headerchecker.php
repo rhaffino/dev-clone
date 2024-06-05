@@ -30,23 +30,23 @@ return [
     "table-header" => "Keterangan",
     "howto-title" => '<h2>Bagaimana Cara Menggunakan Tool HTTP Header Checker cmlabs?</h2>',
     "howto1" => '<p>Segera pastikan apakah website Anda aman dan memenuhi standar! Ikuti langkah-langkah di bawah ini untuk memperoleh hasil analisis yang signifikan.</p>',
-    "howto2" => '<h4 class="sub-titles">Buka Halaman HTTP Header Checker cmlabs</h4>',
+    "howto2" => '<h3 class="sub-titles">Buka Halaman HTTP Header Checker cmlabs</h3>',
     "howto3" => '<p>Gambar 1: Tampilan halaman depan HTTP Header Checker dari cmlabs</p>
                 <p>Hal pertama yang perlu Anda lakukan adalah mengunjungi halaman “<b>Text & Checker</b>” di website cmlabs. Kemudian, pilih opsi HTTP Header Checker untuk memeriksa Header website yang Anda inginkan. </p>
-                <h4 class="sub-titles">Masukkan URL</h4>',
+                <h3 class="sub-titles">Masukkan URL</h3>',
     "howto4" => '<p>Gambar 2: Masukkan URL domain website</p>
                 <p>Untuk memulai proses peninjauan, Anda hanya perlu memasukkan URL seperti contoh yang tertera pada kotak berwarna biru. Agar proses pemeriksaannya berjalan lancar, pastikan URL yang Anda masukkan sesuai dengan contoh, yaitu dalam format: <b>https://www.example.com</b>.</p>
-                <h4>Now, Check Your HTTP Header!</h4>',
+                <h3>Now, Check Your HTTP Header!</h3>',
     "howto5" => '<p>Gambar 3: Klik Periksa URL</p>
-                <p>Langkah selanjutnya adalah memulai proses pemeriksaan. Setelah URL dimasukkan, Anda hanya perlu menekan tombol “<b>Periksa URL</b>” untuk menjalankan prosesnya. Lalu, tunggu beberapa saat sampai hasil analisis berhasil dimuat. Anda tidak perlu khawatir karena proses pemeriksaan pada HTTP Header Checker ini tidak memakan waktu lama.</p><h4>Periksa Hasil dan Lakukan Analisis</h4>',
+                <p>Langkah selanjutnya adalah memulai proses pemeriksaan. Setelah URL dimasukkan, Anda hanya perlu menekan tombol “<b>Periksa URL</b>” untuk menjalankan prosesnya. Lalu, tunggu beberapa saat sampai hasil analisis berhasil dimuat. Anda tidak perlu khawatir karena proses pemeriksaan pada HTTP Header Checker ini tidak memakan waktu lama.</p><h3>Periksa Hasil dan Lakukan Analisis</h3>',
     "howto6" => '',
     "howto7" => '<p>Gambar 4: Ilustrasi contoh hasil pemeriksaan HTTP Header</p>
                 <p>Setelah proses pemeriksaan berakhir, Anda akan disajikan dengan hasil yang menunjukkan sejulah detail terkait kinerja suatu website. Hasil pemeriksaan ini nantinya mencakup sejumlah detail penting seperti Connection, Content-Type, Date, Etag, Link, Platform, Server, dan masih banyak lagi.</p>
                 <p>Selain menyajikan hasil analisis komprehensif terhadap elemen-elemen penting tersebut, tool ini juga memberikan saran terkait tindakan yang perlu dilakukan sebagai langkah optimasi kinerja website Anda dan meningkatkan user experience.Dengan memanfaatkan hasil analisis dari tool HTTP Header Checker ini, Anda dapat membuat keputusan yang berdasar dan lebih terstruktur.</p>
-                <h4 class="sub-titles">Memantau Riwayat HTTP Header Checker</h4>
+                <h3 class="sub-titles">Memantau Riwayat HTTP Header Checker</h3>
                 <p>Terakhir, Anda juga dapat melihat daftar riwayat penggunaan HTTP Header Checker. Dalam daftar tersebut, Anda akan melihat daftar URL situs web yang telah Anda pantau melalui HTTP Header Checker dari cmlabs.</p>',
     "howto8" => '<p>Gambar 5: Daftar riwayat menggunakan HTTP Header Checker dari cmlabs.</p>
-                <h4 class="sub-titles">Login Setelah 5 Kali Penggunaan</h4>
+                <h3 class="sub-titles">Login Setelah 5 Kali Penggunaan</h3>
                 <p>Beberapa tool gratis cmlabs membutuhkan proses login setelah 5 kali penggunaan, HTTP Header Checker adalah salah satunya. Jika Anda telah menggunakannya sebanyak 5 kali, sistem kami akan secara otomatis menampilkan pesan yang menyatakan bahwa Anda telah mencapai batas penggunaan.</p>',
     "howto9" => '<p>Gambar 6: Peringatan penggunaan telah mencapai batas. Pada peringatan ini, terdapat tombol login yang mengarahkan ke halaman login.</p>
                 <p>Anda dapat login dengan mengklik tombol login pada pesan peringatan yang muncul. Selanjutnya, Anda akan diarahkan ke halaman login cmlabs. Silakan masukkan data yang diperlukan, atau Anda dapat login melalui Google.</p>',

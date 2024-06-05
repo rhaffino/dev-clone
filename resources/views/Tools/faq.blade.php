@@ -190,11 +190,11 @@ id/json-ld-faq-schema-generator
         <div class="d-none" id="description-tab-2">
             <h2>@lang('faq.desc-2')</h2>
             <p>@lang('faq.desc-2-1')</p>
-            <h4 class="sub-titles">@lang('faq.desc-2-2-1')</h4>
+            <h3 class="sub-titles">@lang('faq.desc-2-2-1')</h3>
             <p>@lang('faq.desc-2-2-2')</p>
-            <h4 class="sub-titles">@lang('faq.desc-2-3-1')</h4>
+            <h3 class="sub-titles">@lang('faq.desc-2-3-1')</h3>
             <p>@lang('faq.desc-2-3-2')</p>
-            <h4 class="sub-titles">@lang('faq.desc-2-4-1')</h4>
+            <h3 class="sub-titles">@lang('faq.desc-2-4-1')</h3>
             <p>@lang('faq.desc-2-4-2')</p>
         </div>
     @endslot
@@ -209,12 +209,12 @@ id/json-ld-faq-schema-generator
         <div class="d-none" id="description-tab-4">
             <h2>@lang('faq.desc-4')</h2>
             <p>@lang('faq.desc-4-1')</p>
-            <h4 class="sub-titles">@lang('faq.desc-4-2-1')</h4>
+            <h3 class="sub-titles">@lang('faq.desc-4-2-1')</h3>
             <p>@lang('faq.desc-4-2-2')</p>
             <p>@lang('faq.desc-4-2-3')</p>
-            <h4 class="sub-titles">@lang('faq.desc-4-3-1')</h4>
+            <h3 class="sub-titles">@lang('faq.desc-4-3-1')</h3>
             <p>@lang('faq.desc-4-3-2')</p>
-            <h4 class="sub-titles">@lang('faq.desc-4-4-1')</h4>
+            <h3 class="sub-titles">@lang('faq.desc-4-4-1')</h3>
             <p>@lang('faq.desc-4-4-2')</p>
         </div>
     @endslot

@@ -45,23 +45,23 @@ return [
     "howto1" => '<h2>How to Use the Title and Meta Checker</h2>
                         <p>Writing title tag and meta description generally needs to be adjusted according to the need of website optimization. To see if the title and description you make fits the SEO principles, you can check it with the Title and Meta Checker from cmlabs.</p>',
     "howto2" => '<p>Here are the steps to use this free SEO tool from cmlabs that you must know:</p>
-                        <h4 class="sub-titles">Go to the Title and Meta Checker Page</h4>',
+                        <h3 class="sub-titles">Go to the Title and Meta Checker Page</h3>',
     "howto3" => '<p>Figure 1: The display of the Title and Meta Checker page</p>
                         <p>To adjust the title tag and description, you should access the <a href="https://tools.cmlabs.co/en/page-title-meta-description-checker">Title and Meta Checker</a> page on cmlabs site first. Once you enter it, you will be welcomed by the display of two columns, which are Page Title and Meta Description. On the upper side, you will see the column to input your website’s URL.</p>',
     "howto4" => '<p>Figure 2: The picture of Manual and Bot mode in Title and Meta Checker from cmlabs</p>
                         <p>There are two available modes provided by the tool, which are manual and bot. Manual mode can be used to adjust title and description according to your needs. In this mode, you can write or copy texts and adjust it according to the SEO principles.</p>
                         <p>On the other hand, the bot mode will display the title and description based on the data from the website’s URL you input in the designated column. You just need to copy the URL of the site or page. Afterward, you can click on the <b>Crawl URL</b> button to get the result of the title tag and meta description automatically.</p>
-                        <h4 class="sub-titles">Input the Text in the Title and Meta Description Column</h4>',
+                        <h3 class="sub-titles">Input the Text in the Title and Meta Description Column</h3>',
     "howto5" => '<p>Figure 3: Write the title and description on the Title and Meta Checker from cmlabs</p>
                         <p>After choosing the mode, you can input the text in the column. You can copy the text and paste it in the respective places for the title and description. Aside from that, you can write and edit the text right away. </p>
-                        <h4 class="sub-titles">Adjust the Title Tag and Meta Description</h4>
+                        <h3 class="sub-titles">Adjust the Title Tag and Meta Description</h3>
                         <P>To write the title, the criteria of the characters should generally be adjusted according to SEO principles which consist of 50-60 characters. As for the pixel itself, the title should not be more than 500 pixels.</P>
                         <P>As for the meta description, the text should consist of 50-150 characters. The pixel length of the description should not be longer than 900. </P>
                         <P>If the writing of the title and description already complies with the SEO principles, the indicator light will turn to green. However, if it doesn’t, the light will stay white.</P>',
     "howto6" => '<p>Figure 4: The lack numbers of characters of title tag and meta description</p>
                         <p>If the character or the pixel exceeds the requirement, then you will get the warning next to the indicator and under the text. The notification will also be displayed when the characters or pixels are less than what is required by the system.</p>',
     "howto7" => '<p>Figure 5: Excessive characters and pixels on title and meta description</p>
-                        <h4 class="sub-titles">Log In After Using Bot Mode 5 Times</h4>
+                        <h3 class="sub-titles">Log In After Using Bot Mode 5 Times</h3>
                         <p>Some cmlabs free tools require a login process after being used for five times. Title and Meta Checker bot mode is one of them. If you have used the tool in bot mode for 5 times, then our system will automatically display a message that states you have reached the limit of usage. </p>',
     "howto8" => '<p>Figure 6: Usage warning has reached the limit. In this warning, there is a login button that directs to the login page.</p>
                         <p>You can log in by clicking the login button on the warning message that appears. Next, you will be directed to the cmlabs login page. You may enter the required data, or you can log in via Google.</p>',

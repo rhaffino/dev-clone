@@ -41,22 +41,22 @@ return [
     "howto-title" => 'How to Use a Sitemap Generator?',
     "howto1" => '<h2>How to Use a Sitemap Generator?</h2>
                     <p>A sitemap is a file containing a list of URLs on a website that is useful for making it easier for search engines to understand the structure of your website. Follow a few easy steps to use the following generator sitemap:</p>',
-    "howto2" => '<h4 class="sub-titles">Go to Sitemap Generator Page</h4>
+    "howto2" => '<h3 class="sub-titles">Go to Sitemap Generator Page</h3>
                     <p>To start creating a sitemap, please open the Sitemap Generator page from cmlabs first. On that page, you can add the URL you want to create a sitemap for, view a list of URLs linked to the website, and view the history of using the sitemap generator.</p>',
     "howto3" => '<p>Figure 1: Sitemap Generator page view from cmlabs</p>
-                    <h4 class="sub-titles">Enter Website URL</h4>
+                    <h3 class="sub-titles">Enter Website URL</h3>
                     <p>The first thing you need to do is enter the URL of the website. After adding the website URL in the field provided, then you need to press the <b>&#34;Generate&#34;</b> button. Thus, this tool will execute the command to generate the sitemap.</p>',
     "howto4" => '<p>Figure 2: The display when the user has entered the website URL in the provided field.</p>
-                    <h4 class="sub-titles">Wait Until the Sitemap Is Created Successfully</h4>
+                    <h3 class="sub-titles">Wait Until the Sitemap Is Created Successfully</h3>
                     <p>Next, you need to wait a while until the sitemap is displayed. This is because this tool takes time to get a list of URLs that are linked to the website URLs that you typed earlier.</p>',
     "howto5" => '<p>Figure 3: Display of information that the generator sitemap is crawling data.</p>
-                    <h4 class="sub-titles">Check Sitemap Results In Results Section</h4>
+                    <h3 class="sub-titles">Check Sitemap Results In Results Section</h3>
                     <p>After this tool has successfully crawled the website URL you entered, you will see a list of URLs that are linked to that website. You can add this list of URLs to your current sitemap file. If you do not have a sitemap file, then you can click the <b>&#34;Download Sitemap&#34;</b> button and the generated sitemap will be saved on your device.</p>',
     "howto6" => '<p>Figure 4: List of linked URLs on tracked websites.</p>
-                    <h4 class="sub-titles">View Your Sitemap Creation History</h4>
+                    <h3 class="sub-titles">View Your Sitemap Creation History</h3>
                     <p>Sitemap Generator allows you to view the history of using this tool. In the history data, you will see a list of website URLs that you have added when using the Sitemap Generator tool from cmlabs.</p>',
     "howto7" => '<p>Figure 5: List of sitemap generator usage history.</p>
-                    <h4 class="sub-titles">Login After 5 Times Usage</h4>
+                    <h3 class="sub-titles">Login After 5 Times Usage</h3>
                     <p>Some free cmlabs tools require login after 5 times of use, Sitemap Generator is one of them. If you have used it 5 times, our system will automatically display a message stating that you have reached the usage limit.</p>',
     "howto8" => '<p>Figure 6: The usage warning has reached the limit. In this warning, there is a login button that directs to the login page.</p>
                     <p>You can log in by clicking the login button on the warning message that appears. Next, you will be directed to the cmlabs login page. Please enter the required data, or you can log in via Google.</p>',

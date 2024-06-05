@@ -61,33 +61,33 @@ return [
     "desc-7-3-2" => "Meskipun Google tidak merayapi (crawl) atau mengindeks konten yang tidak diizinkan oleh robots.txt, namun Google masih bisa menemukan dan mengindeks URL tersebut jika ditautkan dari website lain. Sehingga, alamat URL dan informasi yang tersedia secara publik bisa muncul di hasil penelusuran Google.",
     "desc-7-3-3" => "Demikian pembahasan mengenai robots.txt generator dari cmlabs. Dengan memanfaatkan tool ini, Anda bisa menyederhanakan alur kerja dalam membuat file robots.txt. Hanya dengan beberapa klik, Anda bisa menambahkan konfigurasi pada file robots.txt yang baru.",
     "howto-title" => 'Cara Menggunakan Robots.txt Generator',
-    "howto1" => '<h2>Cara Menggunakan Robots.txt Generator</h2>
+    "howto1" => '<h3>Cara Menggunakan Robots.txt Generator</h3>
                     <p>Adapun cara membuat file robots.txt menggunakan tool ini adalah sebagai berikut:</p>',
-    "howto2" => '<h4 class="sub-titles">Buka Halaman Robots.txt Generator</h4>
+    "howto2" => '<h3 class="sub-titles">Buka Halaman Robots.txt Generator</h3>
                     <p>Salah satu cara membuat file robots.txt yaitu dengan mengunjungi halaman robots.txt generator. Pada halaman tersebut, Anda dapat mengatur perintah yang akan Anda berikan pada web crawler.</p>',
     "howto3" => '<p>Gambar 1: Tampilan halaman robots.txt generator dari cmlabs</p>
-                    <h4 class="sub-titles">Pilih Izin Akses Untuk Robot Default</h4>
+                    <h3 class="sub-titles">Pilih Izin Akses Untuk Robot Default</h3>
                     <p>Tentukan izin akses untuk default web crawler apakah mereka diizinkan untuk merayapi (crawl) URL atau tidak. Terdapat dua opsi yang bisa Anda pilih yaitu izinkan (allow) dan jangan izinkan (disallow).</p>',
     "howto4" => '<p>Gambar 2: Tampilan dropdown opsi izin yang diberikan kepada robot default</p>
-                    <h4 class="sub-titles">Atur Penundaan Crawl (Crawl Delay)</h4>
+                    <h3 class="sub-titles">Atur Penundaan Crawl (Crawl Delay)</h3>
                     <p>Anda bisa mengatur berapa lama penundaan perayapan (crawl delay) yang akan dilakukan oleh web crawler. Jika Anda mengatur crawl-delay maka web crawler akan menunggu beberapa waktu sebelum merayapi URL Anda. Robots.txt generator memungkinkan Anda untuk memilih tanpa penundaan crawl atau menunda selama 5 hingga 120 detik.</p>',
     "howto5" => '<p>Gambar 3: Tampilan dropdown opsi penundaan crawl yang diberikan kepada robot default</p>
-                    <h4 class="sub-titles">Masukkan Sitemap (Jika Ada)</h4>
+                    <h3 class="sub-titles">Masukkan Sitemap (Jika Ada)</h3>
                     <p>Sitemap merupakan file yang memuat daftar URL dari website Anda, dengan file ini web crawler akan lebih mudah merayapi (crawl) dan mengindeks situs. Anda bisa memasukkan path sitemap ke dalam field yang disediakan.</p>
                     <p>Pastikan Anda telah memasukkan path sitemap yang tepat, sebab perintah ini membedakan huruf besar/kecil (misal: &#34;/Sitemap.xml&#34; dan &#34;/sitemap.xml&#34; dianggap sebagai path berbeda).</p>',
     "howto6" => '<p>Gambar 4: Tampilan field untuk memasukkan path sitemap yang terkait dengan URL Anda</p>
-                    <h4 class="sub-titles">Tambahkan Directive Dalam Robots.txt</h4>
+                    <h3 class="sub-titles">Tambahkan Directive Dalam Robots.txt</h3>
                     <p>Dengan menggunakan robots.txt generator, Anda bisa menambahkan beberapa directive pada file robots.txt dengan menekan tombol <b>&#34;Add Directive&#34;</b>. Directive adalah perintah yang diberikan kepada web crawler untuk memberi tahu apakah Anda mengizinkan atau menolak mereka untuk merayapi URL tertentu.</p>',
     "howto7" => '<p>Gambar 5: Tombol untuk menambahkan perintah yang akan dieksekusi oleh web crawler</p>
                     <p>Pada robots.txt generator, terdapat tiga aturan yang perlu Anda sesuaikan pada bagian directive, yaitu:
                     </p>
-                    <h6 class="sub-titles">Atur Izin Akses</h6>
+                    <h4 class="sub-titles">Atur Izin Akses</h4>
                     <p>Anda bisa mengatur izin akses yang diberikan kepada web crawler, apakah anda mengizinkan atau melarang mereka merayapi halaman web Anda. Opsi yang bisa digunakan yaitu izinkan (allow) dan jangan izinkan (disallow).</p>',
     "howto8" => '<p>Gambar 6: Pilihan izin akses yang akan diberikan kepada web crawler</p>
-                    <h6 class="sub-titles">Pilih User-Agent</h6>
+                    <h4 class="sub-titles">Pilih User-Agent</h4>
                     <p>User-agent adalah jenis web crawler yang akan Anda perintahkan untuk melakukan perayapan (crawling). Pilihan web crawler ini bergantung pada search engine yang digunakan, seperti Baiduspider, Bingbot, Googlebot, dan lainnya. Opsi web crawler dapat dipilih melalui dropdown user-agent yang tersedia.</p>',
     "howto9" => '<p>Gambar 7: Pilihan user agent yang tersedia di cmlabs robots.txt generator</p>
-                    <h6 class="sub-titles">Masukkan Direktori / Path File</h6>
+                    <h4 class="sub-titles">Masukkan Direktori / Path File</h4>
                     <p>Direktori atau path file adalah lokasi spesifik dari halaman yang boleh atau tidak boleh dirayapi oleh web crawler. Penulisan path harus benar-benar diperhatikan, sebab perintah ini membedakan huruf besar/kecil (misal: &#34;/File&#34; dan &#34;/file&#34; dianggap sebagai path berbeda).</p>',
     "howto10" => '<p>Gambar 8: Field untuk menambahkan path yang akan dirayapi (crawl) oleh crawler</p>
                     <h4 class="sub-titles">Salin Syntax Robots.txt</h4>

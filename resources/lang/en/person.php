@@ -34,35 +34,35 @@ return [
     "howto-title" => 'How to Use Person Schema Generator?',
     "howto1" => '<h2>How to Use Person Schema Generator?</h2>
                     <p>The steps to generate a person schema using this tool is as follows:</p>',
-    "howto1-1" =>'<h4 class="sub-titles">Go to JSON-LD Person Schema Generator Page</h4>
+    "howto1-1" =>'<h3 class="sub-titles">Go to JSON-LD Person Schema Generator Page</h3>
                     <p>Please open the <a href="https://tools.cmlabs.co/en/json-ld-person-schema-generator">JSON-LD Person Schema Generator</a> page to start your steps in automatically creating a person schema markup. Make sure you have selected <b>&#34;Person&#34;</b> in the type of schema markup you want to create.</p>',
     "howto2" => '<p>Figure 1: Display of the person schema generator page from cmlabs.</p>
-                    <h4 class="sub-titles">Input Your Name</h4>
+                    <h3 class="sub-titles">Input Your Name</h3>
                     <p>First of all, input your name in the space provided. Make sure you have entered the correct name format.</p>',
     "howto3" => '<p>Figure 2: Enter a name in the column provided to create a person schema markup.</p>
-                    <h4 class="sub-titles">Add your URL</h4>
+                    <h3 class="sub-titles">Add your URL</h3>
                     <p>Next, you can add any URL, which can be a personal URL or a URL from a company that you own. In adding URL data make sure you have input the right URL and not a broken link.</p>',
     "howto4" => '<p>Figure 3: Enter the URL in the space provided to create a person schema markup.</p>
-                    <h4 class="sub-titles">Enter Image URL</h4>
+                    <h3 class="sub-titles">Enter Image URL</h3>
                     <p>With the image URL your personal profile will be displayed with certain images in search results. Make sure to enter a URL that matches your image file path.</p>',
     "howto5" => '<p>Figure 4: Enter the image URL in the space provided to create a person schema markup.</p>
-                    <h4 class="sub-titles">Add Social Media Profile</h4>
+                    <h3 class="sub-titles">Add Social Media Profile</h3>
                     <p>Next, add a social media profile. There are many social media options that you can choose from in this tool. After determining the choice of social media, you need to enter the URL of your social media in the column provided.</p>',
     "howto6" => '<p>Figure 5: Social profile options that can be added to create person schema markup.</p>
-                    <h4 class="sub-titles">Complete Job Data</h4>
+                    <h3 class="sub-titles">Complete Job Data</h3>
                     <p>You&#39;ll also need to include job data. Write the name of your current job in the column provided. Then, make sure there are no typos in your data.</p>',
     "howto7" => '<p>Figure 6: Enter the type of work in the column provided to create a person schema markup.</p>
-                    <h4 class="sub-titles">Put Company Name</h4>
+                    <h3 class="sub-titles">Put Company Name</h3>
                     <p>Next, add the name of the company where you currently work. As with the job title, make sure to enter the company name in the correct writing format.</p>',
     "howto8" => '<p>Figure 7: Enter the company name in the column provided to create a person schema markup.</p>
-                    <h4 class="sub-titles">Copy Generated Person Schema Markup</h4>
+                    <h3 class="sub-titles">Copy Generated Person Schema Markup</h3>
                     <p>If you have completed the required attributes, then you will see a preview of the schema markup on the right side of the page. You can copy the schema markup directly with the “copy” button and paste it into your program code.</p>',
     "howto9" => '<p>Figure 8: Person schema markup copy options</p>
-                    <h4 class="sub-titles">Check JSON-LD Person Schema Script Validation</h4>
+                    <h3 class="sub-titles">Check JSON-LD Person Schema Script Validation</h3>
                     <p>With the Person schema generator, you can also check the validity of the JSON-LD script you are using. How to check it is quite easy, just press the check option contained in the preview of the resulting script.</p>
                     <p>When you press the button, you will be redirected to <a href="https://search.google.com/test/rich-results">Google&#39;s Rich Result Test</a> page. On that page, you can check if the generated schema markup is working properly in Google search.</p>',
     "howto10" => '<p>Figure 9: Person schema markup validation check options</p>
-                    <h4 class="sub-titles">Reset Schema Generator</h4>
+                    <h3 class="sub-titles">Reset Schema Generator</h3>
                     <p>This tool has options that make it easier for you to create a new Person schema. Just click the <b>&#34;Reset&#34;</b> option and delete all the data that was added previously. Next, you can create a new script.</p>',
     "howto11" => '<p>Figure 10: Data reset option added to Person schema generator.</p>
                     <p>That&#39;s a brief discussion on how to create a person schema using the <a href="https://tools.cmlabs.co/en/json-ld-person-schema-generator">JSON-LD person schema generator</a> tool from cmlabs. These tools can help you generate schema markup quickly and efficiently. Try this tool now!</p>',
