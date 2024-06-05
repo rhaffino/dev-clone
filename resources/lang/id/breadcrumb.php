@@ -1,7 +1,7 @@
 <?php
 return [
-    "meta-title" => "Tool Gratis JSON-LD Breadcrumb Schema Generator",
-    "meta-desc" => "Tampilkan letak spesifik halaman website Anda dengan gunakan breadcrumb schema generator tool secara gratis.",
+    "meta-title" => "JSON-LD Breadcrumb Schema Generator - Tools SEO Gratis",
+    "meta-desc" => "Membuat breadcrumb menjadi lebih mudah. Tampilkan letak spesifik halaman website Anda dengan gunakan breadcrumb schema generator tool secara gratis.",
     "title" => "JSON-LD BREADCRUMB SCHEMA GENERATOR",
     "subtitle" => "Tampilkan Halaman Anda Lebih Spesifik",
     "btn-add" => "TAMBAH URL",

@@ -1,7 +1,7 @@
 <?php
 return [
-    "meta-title" => "Tool Gratis JSON-LD How To Schema Generator",
-    "meta-desc" => "Buat konten website Anda terlihat spesifik sebagai konten panduan dengan JSON-LD How To Schema Generator",
+    "meta-title" => "Tool SEO Gratis JSON-LD How To Schema Generator",
+    "meta-desc" => "Gunakan JSON-LD How-to Schema Generator tools untuk membuat konten website Anda terlihat spesifik dan aktifkan rich snippet SERP di Google untuk halaman Anda.",
     "title" => "JSON-LD HOW TO SCHEMA GENERATOR",
     "subtitle" => "Buat Website Anda Jadi Lebih Menarik Dan Tampil Berbeda",
     "btn-add-supply" => "TAMBAH PENAWARAN",

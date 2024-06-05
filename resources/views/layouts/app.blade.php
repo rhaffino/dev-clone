@@ -161,7 +161,7 @@
     </div>
 
     @include('v2.components.widget.floating-notification')
-    @include('v2.components.widget.floating-contact')
+    {{-- @include('v2.components.widget.floating-contact') --}}
 
     @include('v2.components.carousel-progress-script')
 
@@ -169,7 +169,6 @@
     <!--end::Demo Panel-->
     <!--begin::Global Config(global config for global JS scripts)-->
     @stack('scripts')
-
     <script src="{{ asset('assets/js/floating-contact.js') }}"></script>
     <script>
         var KTAppSettings = {

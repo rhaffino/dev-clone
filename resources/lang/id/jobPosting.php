@@ -1,7 +1,7 @@
 <?php
 return [
-    "meta-title" => "Tool Gratis JSON-LD Job Posting Schema Generator",
-    "meta-desc" => "Buat konten website Anda terlihat spesifik sebagai konten panduan dengan JSON-LD How To Schema Generator",
+    "meta-title" => "Tool SEO Gratis JSON-LD Job Posting Schema Generator",
+    "meta-desc" => "Gunakan JSON-LD Job Posting schema generator untuk postingan pekerjaan yang lebih terstruktur dan aktifkan rich snippet SERP di Google untuk halaman Anda.",
     "title" => "JSON-LD JOB POSTING SCHEMA GENERATOR",
     "subtitle" => "Buat Website Anda Jadi Lebih Menarik Dan Tampil Berbeda",
     "label-jobTitle"=>"Judul pekerjaan",

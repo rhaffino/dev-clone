@@ -1,7 +1,7 @@
 <?php
 return [
-    "meta-title" => "Tool Gratis JSON-LD Person Schema Generator",
-    "meta-desc" => "Halaman Anda bisa tampil berbeda dan lebih spesifik dengan tool person dari JSON LD online dan gratis",
+    "meta-title" => "Tool SEO Gratis JSON-LD Person Schema Generator",
+    "meta-desc" => "Gunakan JSON-LD Person schema generator untuk membuat informasi personal lebih spesifik dan aktifkan rich snippet SERP di Google untuk halaman Anda.",
     "title" => "JSON-LD PERSON SCHEMA GENERATOR",
     "subtitle" => "Tampilkan Halaman Anda Dengan Cara Berbeda",
     "label-name" => "Nama",
