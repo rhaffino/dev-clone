@@ -72,7 +72,7 @@ id
         'title' => 'Redirect Chain Checker',
         'description' => __('home.redirect-checker-desc'),
         'link' => "/{{ $local }}/redirect-checker",
-        'ext' => 'https://chromewebstore.google.com/detail/robotstxt-checker-cmlabs/boiflndbjkenhmlbgbdnfebpooigmnkc',
+        'ext' => 'https://chromewebstore.google.com/detail/redirect-chain-checker-cm/idopchcomjihlocdhibhmmlomjkejjbg',
     ],
     [
         'icon' => 'bx bx-bot',
@@ -160,10 +160,10 @@ id
                                 <p class="text-darkgrey mb-0">{{ $tool['description'] }}</p>
                             </div>
                         </div>
-                        <div class="card-footer text-left border-top-0 p-0 mt-5 d-flex justify-content-between align-items-center">
+                        <div class="card-footer text-left border-top-0 p-0 mt-5 d-flex align-items-center">
                             <a href="{{ $tool['link'] }}" type="button" class="btn btn-launch" name="button">LAUNCH</a>
                             @isset($tool['ext'])
-                                <a target="_blank" rel="noopener noreferrer nofollow" href="{{ $tool['ext'] }}" type="button" class="btn btn-install" name="button">
+                                <a target="_blank" rel="noopener noreferrer nofollow" href="{{ $tool['ext'] }}" type="button" class="btn btn-install" name="button" style="flex-grow: 1">
                                     <div class="install-cta">Install now</div>
                                     <div class="install-cta-desc">Browser Extension, Chromium-based</div>
                                 </a>

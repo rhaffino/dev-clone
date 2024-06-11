@@ -41,7 +41,9 @@
                     </div>
                 </div>
                 <div class="mt-8">
-                    @include('v2.components.chrome-extension')
+                    @if (!Route::currentRouteNamed('home'))
+                        @include('v2.components.chrome-extension')
+                    @endif
                 </div>
                 <div class="row mt-10">
                     @component('layouts.new_booster_card')
