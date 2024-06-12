@@ -77,11 +77,6 @@
                     <li class="nav-item dropdown ml-9">
                         <a class="nav-link" href="https://career.cmlabs.co/">Career</a>
                     </li>
-                    <li class="nav-item dropdown ml-9" style="padding-bottom: 15px">
-                        <a class="" target="_blank" rel="noopener noreferrer nofollow" aria-label="SEO Tools - Chromium-based" href="https://chromewebstore.google.com/search/cmlabs%20seo%20tools">
-                            <img height="22px" src="{{ asset('media/extension/ext-badge.svg') }}" alt="cmlabs extension entry point">
-                        </a>
-                    </li>
                 </ul>
             </div>
         </div>
