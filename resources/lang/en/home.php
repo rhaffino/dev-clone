@@ -163,4 +163,5 @@ return [
     "install-cta" => "Install Now",
     "card-cta" => "Browser extension, Chromium-based",
     "get-extension" => "Get Extension",
+    "launch" => "LAUNCH"
 ];
