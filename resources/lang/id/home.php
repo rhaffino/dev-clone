@@ -163,4 +163,5 @@ return [
     "install-cta" => "Pasang Sekarang",
     "card-cta" => "Ekstensi peramban, berbasis Chromium",
     "get-extension" => "Dapatkan Ekstensi",
+    "launch" => "LUNCURKAN",
 ];

@@ -161,7 +161,7 @@ id
                             </div>
                         </div>
                         <div class="card-footer text-left border-top-0 p-0 mt-5 d-flex align-items-center">
-                            <a href="{{ $tool['link'] }}" type="button" class="btn btn-launch" name="button">LAUNCH</a>
+                            <a href="{{ $tool['link'] }}" type="button" class="btn btn-launch" name="button">@lang('home.launch')</a>
                             @isset($tool['ext'])
                                 <a target="_blank" rel="noopener noreferrer nofollow" href="{{ $tool['ext'] }}" type="button" class="btn btn-install" name="button" style="flex-grow: 1">
                                     <div class="install-cta">@lang('home.install-cta')</div>
