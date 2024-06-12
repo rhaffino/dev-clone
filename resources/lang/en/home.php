@@ -160,4 +160,7 @@ return [
     "ext-desc" => "Free on all Chromium-based web browsers",
     "ext-cta-1" => "Install it on your browser now?",
     "ext-cta-2" => "Explore Now",
+    "install-cta" => "Install Now",
+    "card-cta" => "Browser extension, Chromium-based",
+    "get-extension" => "Get Extension",
 ];

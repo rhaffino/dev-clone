@@ -164,8 +164,8 @@ id
                             <a href="{{ $tool['link'] }}" type="button" class="btn btn-launch" name="button">LAUNCH</a>
                             @isset($tool['ext'])
                                 <a target="_blank" rel="noopener noreferrer nofollow" href="{{ $tool['ext'] }}" type="button" class="btn btn-install" name="button" style="flex-grow: 1">
-                                    <div class="install-cta">Install now</div>
-                                    <div class="install-cta-desc">Browser Extension, Chromium-based</div>
+                                    <div class="install-cta">@lang('home.install-cta')</div>
+                                    <div class="install-cta-desc">@lang('home.card-cta')</div>
                                 </a>
                             @endisset
                         </div>
