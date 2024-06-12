@@ -27,7 +27,7 @@ id/redirect-checker
                     <p class="text-darkgrey h4 font-weight-normal mb-10">@lang('redirectchecker.sub-title')</p>
                 </div>
                 <div class="d-lg-block d-none">
-                    <a href="https://chromewebstore.google.com/detail/robotstxt-checker-cmlabs/boiflndbjkenhmlbgbdnfebpooigmnkc" target="_blank" rel="noopener noreferrer noindex" class="btn button-outline button-primary-70 b1-400">
+                    <a href="https://chromewebstore.google.com/detail/redirect-chain-checker-cm/idopchcomjihlocdhibhmmlomjkejjbg" target="_blank" rel="noopener noreferrer noindex" class="btn button-outline button-primary-70 b1-400">
                         <i class="bx text-primary-70 bx-extension"></i>
                         Get Extension
                     </a>
