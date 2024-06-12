@@ -1372,8 +1372,6 @@ body .container-description .italics{
 
 .card-home {
     transition: 0.2s;
-    display: flex;
-    flex-direction: column;
 }
 
 .card-home:hover {
@@ -1381,61 +1379,8 @@ body .container-description .italics{
     background: var(--primaryblue);
 }
 
-.card-home .card-footer .btn-launch {
-    flex-shrink: 0;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    justify-content: center;
-}
-
-.card-home .card-footer {
-    gap: 4px;
-}
-
-.card-home .card-footer .btn-install:hover {
-    color: var(--primaryblue) !important;
-    background: white !important;
-    border: 1px solid white !important;
-}
-
-.card-home .card-footer .btn-install:hover .install-cta, .card-home .card-footer .btn-install:hover .install-cta-desc {
-    color: var(--primaryblue) !important;
-}
-
-.card-home .card-footer .btn-install {
-    padding: 6px 14px;
-}
-
-.card-home .card-footer .btn-install .install-cta {
-    flex-shrink: 0;
-    font-size: 14px;
-    color: #686868;
-    display: flex;
-    text-align: left;
-}
-
-.card-home .card-footer .btn-install .install-cta-desc {
-    font-size: 7px;
-    color: #B3B3B3;
-    text-align: left;
-}
-
-.card-home:hover .card-footer .btn-install .install-cta {
-    color: white;
-}
-
-.card-home:hover .card-footer .btn-install .install-cta-desc {
-    font-size: 7px;
-    color: white;
-}
-
 .card-home:hover i, .card-home:hover h2, .card-home:hover p {
     color: white;
-}
-
-a.btn.button-outline.button-primary-70:hover, a.btn.button-outline.button-primary-70:hover i{
-    color: white !important;
 }
 
 .card-home:hover .btn-launch {
@@ -2742,41 +2687,6 @@ input.input-url-meta-checker:focus {
     background: #252a38;
 }
 
-/* chrome extension entry card */
-.chrome-extension-card {
-    padding: 36px 24px;
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    border-radius: 16px;
-    width: 100%;
-    flex-direction: column;
-    position: relative;
-    overflow: hidden;
-}
-.chrome-extension-card.variant-1 h2 {
-    max-width: 822px;
-}
-.chrome-extension-card.variant-2 h2 {
-    max-width: 420px;
-}
-.chrome-extension-card.variant-2 .h5-700 {
-    font-size: 15px;
-    font-weight: 700;
-    line-height: 16px;
-}
-.chrome-extension-card .extension-pattern {
-    position: absolute;
-    top: 10px;
-    bottom: 10px;
-    height: 90%;
-}
-.chrome-extension-card .extension-pattern.left {
-    left: 10px;
-}
-.chrome-extension-card .extension-pattern.right {
-    right: 10px;
-}
 .new-indicator{
     background-color: #f76162;
     border-radius: 9999px;

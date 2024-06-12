@@ -14,129 +14,6 @@ en
 id
 @endsection
 
-@php
-    $tools = [
-    [
-        'icon' => 'bx bx-calculator',
-        'title' => 'Word Counter',
-        'description' => __('home.word-counter-desc'),
-        'link' => "/{{ $local }}/word-counter"
-    ],
-    [
-        'icon' => 'bx bx-text',
-        'title' => 'Title & Lengths Checker',
-        'description' => __('home.meta-checker-desc'),
-        'link' => "/{{ $local }}/page-title-meta-description-checker",
-        'ext' => 'https://chromewebstore.google.com/detail/title-meta-description-ch/bhncaplgjfhllfadbkeigmfnpilkmbgh',
-    ],
-    [
-        'icon' => 'bx bx-code-curly',
-        'title' => 'JSON-LD Generator',
-        'description' => __('home.json-ld-desc'),
-        'link' => "/{{ $local }}/json-ld-schema-generator",
-    ],
-    [
-        'icon' => 'bx bx-timer',
-        'title' => 'Page Speed Test',
-        'description' => __('home.pagespeed-desc'),
-        'link' => "/{{ $local }}/pagespeed-test",
-        'ext' => 'https://chromewebstore.google.com/detail/pagespeed-test-cmlabs-seo/nobbcbccegiignfcapabdeegmaehhifo',
-    ],
-    [
-        'icon' => 'bx bx-code-block',
-        'title' => 'Sitemap Generator',
-        'description' => __('home.sitemap-desc'),
-        'link' => "/{{ $local }}/sitemap-generator",        
-    ],
-    [
-        'icon' => 'bx bx-mobile-alt',
-        'title' => 'Mobile Friendly Test',
-        'description' => __('home.mobile-friendly-desc'),
-        'link' => "/{{ $local }}/mobile-friendly-test",        
-    ],
-    [
-        'icon' => 'bx bx-check-shield',
-        'title' => 'SSL Checker',
-        'description' => __('home.ssl-checker-desc'),
-        'link' => "/{{ $local }}/ssl-checker",
-        'ext' => 'https://chromewebstore.google.com/detail/ssl-checker-cmlabs-seo-to/cadoggliajpmopeepmlamhefgkobljfl',
-    ],
-    [
-        'icon' => 'bx bx-mask',
-        'title' => 'Robots.txt Generator',
-        'description' => __('home.robot-txt-desc'),
-        'link' => "/{{ $local }}/robotstxt-generator",        
-    ],
-    [
-        'icon' => 'bx bx-link',
-        'title' => 'Redirect Chain Checker',
-        'description' => __('home.redirect-checker-desc'),
-        'link' => "/{{ $local }}/redirect-checker",
-        'ext' => 'https://chromewebstore.google.com/detail/redirect-chain-checker-cm/idopchcomjihlocdhibhmmlomjkejjbg',
-    ],
-    [
-        'icon' => 'bx bx-bot',
-        'title' => 'Technology Lookup',
-        'description' => __('home.technology-lookup-desc'),
-        'link' => "/{{ $local }}/technology-lookup",
-        'ext' => 'https://chromewebstore.google.com/detail/technology-lookup-cmlabs/hhknkhcgnkdkkafiaicdfpiplbigodmj',
-    ],
-    [
-        'icon' => 'bx bx-globe',
-        'title' => 'Link Analyzer',
-        'description' => __('home.link-analyzer-desc'),
-        'link' => "/{{ $local }}/link-analyzer",
-        'ext' => 'https://chromewebstore.google.com/detail/link-analyzer-cmlabs-seo/fllajeihhfpfpebnbkplefdofjpdkoim',
-    ],
-    [
-        'icon' => 'bx bx-file-find',
-        'title' => 'Hreflang Checker',
-        'description' => __('home.hreflang-checker-desc'),
-        'link' => "/{{ $local }}/hreflang-checker",
-        'ext' => 'https://chromewebstore.google.com/detail/hreflang-checker-cmlabs-s/bbiejobgmmjcjbnbabamojimombaoiij',
-    ],
-    [
-        'icon' => 'bx bx-shape-circle',
-        'title' => 'Keyword Permutation',
-        'description' => __('home.keyword-permutation-desc'),
-        'link' => "/{{ $local }}/keyword-permutation",        
-    ],
-    [
-        'icon' => 'bx bx-terminal',
-        'title' => 'Ping Tool',
-        'description' => __('home.ping-tool-desc'),
-        'link' => "/{{ $local }}/ping-tool",
-        'ext' => 'https://chromewebstore.google.com/detail/ping-checker-cmlabs-seo-t/lepccdjicogieagnblakpemnhcghhlob',
-    ],
-    [
-        'icon' => 'bx bx-code',
-        'title' => 'HTTP Header Checker',
-        'description' => __('home.http-header-checker-desc'),
-        'link' => "/{{ $local }}/http-header-checker",
-        'ext' => 'https://chromewebstore.google.com/detail/http-header-checker-cmlab/anheghnibajoikjegiciidlmnnffecha',
-    ],
-    [
-        'icon' => 'bx bx-list-check',
-        'title' => 'Robots.txt Checker',
-        'description' => __('home.robotstxt-checker-desc'),
-        'link' => "/{{ $local }}/robotstxt-checker",
-        'ext' => 'https://chromewebstore.google.com/detail/robotstxt-checker-cmlabs/boiflndbjkenhmlbgbdnfebpooigmnkc',
-    ],
-    [
-        'icon' => 'bxl-google',
-        'title' => 'SERP Simulator',
-        'description' => __('home.serp-simulator-desc'),
-        'link' => "/{{ $local }}/serp-simulator",        
-    ],
-    [
-        'icon' => 'bx bx-purchase-tag-alt',
-        'title' => 'Meta Generator',
-        'description' => __('home.meta-generator-desc'),
-        'link' => "/{{ $local }}/meta-generator",        
-    ],
-];
-@endphp
-
 @section('content')
 <div class="container container-tools mb-10">
     <div class="d-flex flex-column-fluid">
@@ -150,35 +27,279 @@ id
                 </div>
             </div>
             <div class="mt-10 row">
-                @foreach($tools as $tool)
-                <div class="col-12 col-sm-6 col-md-4 col-xl-3 mb-8">
-                    <div class="card card-custom card-stretch card-home p-7">
-                        <div class="card-body p-0">
-                            <div class="text-left">
-                                <i class='text-darkgrey {{ $tool['icon'] }} bx-lg'></i>
-                                <h2 class="h6 text-darkgrey font-weight-bolder">{{ $tool['title'] }}</h2>
-                                <p class="text-darkgrey mb-0">{{ $tool['description'] }}</p>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-8">
+                    <div class="card card-custom card-stretch card-home">
+                        <div class="card-body p-7">
+                            <div class="text-center">
+                                <i class='text-darkgrey bx bx-calculator bx-lg'></i>
+                                <h2 class="h6 text-darkgrey font-weight-bolder">Word Counter</h2>
+                                <p class="text-darkgrey mb-0">@lang('home.word-counter-desc')</p>
                             </div>
                         </div>
-                        <div class="card-footer text-left border-top-0 p-0 mt-5 d-flex align-items-center">
-                            <a href="{{ $tool['link'] }}" type="button" class="btn btn-launch" name="button">@lang('home.launch')</a>
-                            @isset($tool['ext'])
-                                <a target="_blank" rel="noopener noreferrer nofollow" href="{{ $tool['ext'] }}" type="button" class="btn btn-install" name="button" style="flex-grow: 1">
-                                    <div class="install-cta">@lang('home.install-cta')</div>
-                                    <div class="install-cta-desc">@lang('home.card-cta')</div>
-                                </a>
-                            @endisset
+                        <div class="card-footer text-center border-top-0 pt-0">
+                            <a href="/{{ $local }}/word-counter" type="button" class="btn btn-launch" name="button">LAUNCH</a>
                         </div>
                     </div>
                 </div>
-            @endforeach
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-8">
+                    <div class="card card-custom card-stretch card-home">
+                        <div class="card-body p-7">
+                            <div class="text-center">
+                                <i class='text-darkgrey bx bx-text bx-lg'></i>
+                                <h2 class="h6 text-darkgrey font-weight-bolder">Title & Lengths Checker</h2>
+                                <p class="text-darkgrey mb-0">@lang('home.meta-checker-desc')</p>
+                            </div>
+                        </div>
+                        <div class="card-footer text-center border-top-0 pt-0">
+                            <a href="/{{ $local }}/page-title-meta-description-checker" type="button" class="btn btn-launch" name="button">LAUNCH</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-8">
+                    <div class="card card-custom card-stretch card-home">
+                        <div class="card-body p-7">
+                            <div class="text-center">
+                                <i class='text-darkgrey bx bx-code-curly bx-lg'></i>
+                                <h2 class="h6 text-darkgrey font-weight-bolder">JSON-LD Generator</h2>
+                                <p class="text-darkgrey mb-0">@lang('home.json-ld-desc')</p>
+                            </div>
+                        </div>
+                        <div class="card-footer text-center border-top-0 pt-0">
+                            <a href="/{{ $local }}/json-ld-schema-generator" type="button" class="btn btn-launch" name="button">LAUNCH</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-8">
+                    <div class="card card-custom card-stretch card-home">
+                        <div class="card-body p-7">
+                            <div class="text-center">
+                                <i class='text-darkgrey bx bx-timer bx-lg'></i>
+                                <h2 class="h6 text-darkgrey font-weight-bolder">Page Speed Test</h2>
+                                <p class="text-darkgrey mb-0">@lang('home.pagespeed-desc')</p>
+                            </div>
+                        </div>
+                        <div class="card-footer text-center border-top-0 pt-0">
+                            <a href="/{{ $local }}/pagespeed-test" type="button" class="btn btn-launch" name="button">LAUNCH</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-8">
+
+                    <div class="card card-custom card-stretch card-home">
+                        <div class="card-body p-7">
+                            <div class="text-center">
+                                <i class='text-darkgrey bx bx-code-block bx-lg'></i>
+                                <h2 class="h6 text-darkgrey font-weight-bolder">Sitemap Generator</h2>
+                                <p class="text-darkgrey mb-0">@lang('home.sitemap-desc')</p>
+                            </div>
+                        </div>
+                        <div class="card-footer text-center border-top-0 pt-0">
+                            <a href="/{{ $local }}/sitemap-generator" type="button" class="btn btn-launch" name="button">LAUNCH</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-8">
+                    <div class="card card-custom card-stretch card-home">
+                        <div class="card-body p-7">
+                            <div class="text-center">
+                                <i class='text-darkgrey bx bx-mobile-alt bx-lg'></i>
+                                <h2 class="h6 text-darkgrey font-weight-bolder">Mobile Friendly Test</h2>
+                                <p class="text-darkgrey mb-0">@lang('home.mobile-friendly-desc')</p>
+                            </div>
+                        </div>
+                        <div class="card-footer text-center border-top-0 pt-0">
+                            <a href="/{{ $local }}/mobile-friendly-test" type="button" class="btn btn-launch" name="button">LAUNCH</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-8">
+                    <div class="card card-custom card-stretch card-home">
+                        <div class="card-body p-7">
+                            <div class="text-center">
+                                <i class='text-darkgrey bx bx-check-shield bx-lg'></i>
+                                <h2 class="h6 text-darkgrey font-weight-bolder">SSL Checker</h2>
+                                <p class="text-darkgrey mb-0">@lang('home.ssl-checker-desc')</p>
+                            </div>
+                        </div>
+                        <div class="card-footer text-center border-top-0 pt-0">
+                            <a href="/{{ $local }}/ssl-checker" type="button" class="btn btn-launch" name="button">LAUNCH</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-8">
+                    <div class="card card-custom card-stretch card-home">
+                        <div class="card-body p-7">
+                            <div class="text-center">
+                                <i class='text-darkgrey bx bx-mask bx-lg'></i>
+                                <h2 class="h6 text-darkgrey font-weight-bolder">Robots.txt Generator</h2>
+                                <p class="text-darkgrey mb-0">@lang('home.robot-txt-desc')</p>
+                            </div>
+                        </div>
+                        <div class="card-footer text-center border-top-0 pt-0">
+                            <a href="/{{ $local }}/robotstxt-generator" type="button" class="btn btn-launch" name="button">LAUNCH</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-8">
+                    <div class="card card-custom card-stretch card-home">
+                        <div class="card-body p-7">
+                            <div class="text-center">
+                                <i class='text-darkgrey bx bx-link bx-lg'></i>
+                                <h2 class="h6 text-darkgrey font-weight-bolder">Redirect Chain Checker</h2>
+                                <p class="text-darkgrey mb-0">@lang('home.redirect-checker-desc')</p>
+                            </div>
+                        </div>
+                        <div class="card-footer text-center border-top-0 pt-0">
+                            <a href="/{{ $local }}/redirect-checker" type="button" class="btn btn-launch" name="button">LAUNCH</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-8">
+                    <div class="card card-custom card-stretch card-home">
+                        <div class="card-body p-7">
+                            <div class="text-center">
+                                <i class='text-darkgrey bx bx-bot bx-lg'></i>
+                                <h2 class="h6 text-darkgrey font-weight-bolder">Technology Lookup</h2>
+                                <p class="text-darkgrey mb-0">@lang('home.technology-lookup-desc')</p>
+                            </div>
+                        </div>
+                        <div class="card-footer text-center border-top-0 pt-0">
+                            <a href="/{{ $local }}/technology-lookup" type="button" class="btn btn-launch" name="button">LAUNCH</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-8">
+                    <div class="card card-custom card-stretch card-home">
+                        <div class="card-body p-7">
+                            <div class="text-center">
+                                <i class='text-darkgrey bx bx-lg bx-globe'></i>
+                                <h2 class="h6 text-darkgrey font-weight-bolder">Link Analyzer</h2>
+                                <p class="text-darkgrey mb-0">@lang('home.link-analyzer-desc')</p>
+                            </div>
+                        </div>
+                        <div class="card-footer text-center border-top-0 pt-0">
+                            <a href="/{{ $local }}/link-analyzer" type="button" class="btn btn-launch" name="button">LAUNCH</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-8">
+                    <div class="card card-custom card-stretch card-home">
+                        <div class="card-body p-7">
+                            <div class="text-center">
+                                <i class='text-darkgrey bx bx-file-find bx-lg'></i>
+                                <h2 class="h6 text-darkgrey font-weight-bolder">Hreflang Checker</h2>
+                                <p class="text-darkgrey mb-0">@lang('home.hreflang-checker-desc')</p>
+                            </div>
+                        </div>
+                        <div class="card-footer text-center border-top-0 pt-0">
+                            <a href="/{{ $local }}/hreflang-checker" type="button" class="btn btn-launch" name="button">LAUNCH</a>
+                        </div>
+                    </div>
+                </div>
+                    {{--
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-8">
+                    <div class="card card-custom card-stretch card-home">
+                        <div class="card-body p-7">
+                            <div class="text-center">
+                                <i class='text-darkgrey bx bx-test-tube bx-lg'></i>
+                                <h2 class="h6 text-darkgrey font-weight-bolder">Keyword Research</h2>
+                                <p class="text-darkgrey">JSON-LD Generator adalah sebuah tools yang dibuat oleh cmlabs untuk memudahkan user.</p>
+                                <a href="/{{ $local }}/keyword-research" type="button" class="btn btn-launch" name="button">LAUNCH</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                --}}
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-8">
+                    <div class="card card-custom card-stretch card-home">
+                        <div class="card-body p-7">
+                            <div class="text-center">
+                                <i class='text-darkgrey bx bx-shape-circle bx-lg'></i>
+                                <h2 class="h6 text-darkgrey font-weight-bolder">Keyword Permutation</h2>
+                                <p class="text-darkgrey mb-0">@lang('home.keyword-permutation-desc')</p>
+                            </div>
+                        </div>
+                        <div class="card-footer text-center border-top-0 pt-0">
+                            <a href="/{{ $local }}/keyword-permutation" type="button" class="btn btn-launch" name="button">LAUNCH</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-8">
+                    <div class="card card-custom card-stretch card-home">
+                        <div class="card-body p-7">
+                            <div class="text-center">
+                                <i class='text-darkgrey bx bx-terminal bx-lg'></i>
+                                <h2 class="h6 text-darkgrey font-weight-bolder">Ping Tool</h2>
+                                <p class="text-darkgrey mb-0">@lang('home.ping-tool-desc')</p>
+                            </div>
+                        </div>
+                        <div class="card-footer text-center border-top-0 pt-0">
+                            <a href="/{{ $local }}/ping-tool" type="button" class="btn btn-launch" name="button">LAUNCH</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-8">
+                    <div class="card card-custom card-stretch card-home">
+                        <div class="card-body p-7">
+                            <div class="text-center">
+                                <i class='text-darkgrey bx bx-code bx-lg'></i>
+                                <h2 class="h6 text-darkgrey font-weight-bolder">HTTP Header Checker</h2>
+                                <p class="text-darkgrey mb-0">@lang('home.http-header-checker-desc')</p>
+                            </div>
+                        </div>
+                        <div class="card-footer text-center border-top-0 pt-0">
+                            <a href="/{{ $local }}/http-header-checker" type="button" class="btn btn-launch" name="button">LAUNCH</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-8">
+                    <div class="card card-custom card-stretch card-home">
+                        <div class="card-body p-7">
+                            <div class="text-center">
+                                <i class='text-darkgrey bx bx-list-check bx-lg'></i>
+                                <h2 class="h6 text-darkgrey font-weight-bolder">Robots.txt Checker</h2>
+                                <p class="text-darkgrey mb-0">@lang('home.robotstxt-checker-desc')</p>
+                            </div>
+                        </div>
+                        <div class="card-footer text-center border-top-0 pt-0">
+                            <a href="/{{ $local }}/robotstxt-checker" type="button" class="btn btn-launch" name="button">LAUNCH</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-8">
+                    <div class="card card-custom card-stretch card-home">
+                        <div class="card-body p-7">
+                            <div class="text-center">
+                                <i class='text-darkgrey bx bxl-google bx-lg'></i>
+                                <h2 class="h6 text-darkgrey font-weight-bolder">SERP Simulator</h2>
+                                <p class="text-darkgrey mb-0">@lang('home.serp-simulator-desc')</p>
+                            </div>
+                        </div>
+                        <div class="card-footer text-center border-top-0 pt-0">
+                            <a href="/{{ $local }}/serp-simulator" type="button" class="btn btn-launch" name="button">LAUNCH</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-8">
+                    <div class="card card-custom card-stretch card-home">
+                        <div class="card-body p-7">
+                            <div class="text-center">
+                                <i class='text-darkgrey bx bx-purchase-tag-alt bx-lg'></i>
+                                <h2 class="h6 text-darkgrey font-weight-bolder">Meta Generator</h2>
+                                <p class="text-darkgrey mb-0">@lang('home.meta-generator-desc')</p>
+                            </div>
+                        </div>
+                        <div class="card-footer text-center border-top-0 pt-0">
+                            <a href="/{{ $local }}/meta-generator" type="button" class="btn btn-launch" name="button">LAUNCH</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            {{-- <div class="d-flex align-items-center">
+            <div class="d-flex align-items-center">
                 <i class='bx bxs-check-circle text-darkgrey mr-1'></i>
                 <span class="text-darkgrey">@lang('home.last-update') 13 Oct, 2023 | @lang('layout.version') 2.0</span>
-            </div> --}}
-            <div class="mt-3">
-                @include('v2.components.chrome-extension')
             </div>
         </div>
     </div>
