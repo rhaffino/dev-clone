@@ -21,8 +21,20 @@ id/robotstxt-checker
 <div class="container container-tools mb-10">
     <div class="d-flex flex-column-fluid">
         <div class="container-fluid px-0">
-            <h1 class="text-darkgrey font-weight-normal">@lang('robot-checker.title')</h1>
-            <p class="text-darkgrey h4 font-weight-normal mb-10">@lang('robot-checker.subtitle')</p>
+            <div class="d-flex justify-content-between">
+                <div>
+                    <h1 class="text-darkgrey font-weight-normal">@lang('robot-checker.title')</h1>
+                    <p class="text-darkgrey h4 font-weight-normal mb-10">@lang('robot-checker.subtitle')</p>
+                </div>
+                <div class="d-lg-block d-none">
+                    <a href="https://chromewebstore.google.com/detail/robotstxt-checker-cmlabs/boiflndbjkenhmlbgbdnfebpooigmnkc"
+                        target="_blank" rel="noopener noreferrer noindex"
+                        class="btn button-outline button-primary-70 b1-400">
+                        <i class="bx text-primary-70 bx-extension"></i>
+                        @lang('home.get-extension')
+                    </a>
+                </div>
+            </div>
 
             @include('components.alert_limit')
 
