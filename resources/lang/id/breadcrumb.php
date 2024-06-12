@@ -1,7 +1,7 @@
 <?php
 return [
-    "meta-title" => "Tool Gratis JSON-LD Breadcrumb Schema Generator",
-    "meta-desc" => "Tampilkan letak spesifik halaman website Anda dengan gunakan breadcrumb schema generator tool secara gratis.",
+    "meta-title" => "JSON-LD Breadcrumb Schema Generator - Tools SEO Gratis",
+    "meta-desc" => "Membuat breadcrumb menjadi lebih mudah. Tampilkan letak spesifik halaman website Anda dengan gunakan breadcrumb schema generator tool secara gratis.",
     "title" => "JSON-LD BREADCRUMB SCHEMA GENERATOR",
     "subtitle" => "Tampilkan Halaman Anda Lebih Spesifik",
     "btn-add" => "TAMBAH URL",
@@ -38,26 +38,26 @@ return [
     "howto-title" => 'Cara Menggunakan Breadcrumb Schema Generator',
     "howto1" => '<h2>Cara Menggunakan Breadcrumb Schema Generator</h2>
                     <p><i class="italics">Breadcrumb schema generator</i> adalah tool yang dapat membantu Anda untuk menghasilkan <i class="italics"">breadcrumb schema markup</i> dengan lebih mudah. Berikut adalah cara membuat <i class="italics"">breadcrumb</i> yang dapat Anda lakukan melalui tool ini:</p>',
-    "howto1-1" => '<h4 class="sub-titles">Buka Halaman JSON-LD Breadcrumb Schema Generator</h4>
+    "howto1-1" => '<h3 class="sub-titles">Buka Halaman JSON-LD Breadcrumb Schema Generator</h3>
                     <p>Sebagai langkah awal dalam membuat <i class="italics"">breadcrumb</i>, Anda perlu membuka halaman <a href="https://tools.cmlabs.co/id/json-ld-breadcrumb-schema-generator">JSON-LD Breadcrumb Schema Generator</a> terlebih dahulu. Dengan tool ini, Anda tidak perlu khawatir mengalami kendala dalam pembuatan <i class="italics"">breadcrumb</i>, sebab tool ini akan menyajikan <i class="italics"">breadcrumb schema markup</i> yang sesuai dengan pedoman penelusuran Google.</p>',
     "howto2" => '<p>Gambar 1: Tampilan halaman <i class="italics">breadcrumb</i> schema generator dari cmlabs.</p>
-                    <h4 class="sub-titles">Masukkan Data Yang Dibutuhkan</h4>
+                    <h3 class="sub-titles">Masukkan Data Yang Dibutuhkan</h3>
                     <p>Cara membuat <i class="italics">breadcrumb</i> menggunakan tool JSON-LD generator cmlabs terbilang cukup mudah. Pastikan Anda telah memilih opsi breadcrumb pada skema yang ingin dibuat. Selanjutnya cukup tambahkan nama halaman dan URL-nya pada field yang tersedia atau hapus field yang tidak dibutuhkan.</p>',
     "howto3" => '<p>Gambar 2: Masukkan data yang dibutuhkan untuk membuat breadcrumb schema markup.</p>
-                    <h4 class="sub-titles">Tambah URL Baru</h4>
+                    <h3 class="sub-titles">Tambah URL Baru</h3>
                     <p>Secara default, <i class="italics">breadcrumb schema generator</i> menyediakan 2 field yang dapat Anda gunakan untuk menyusun <i class="italics">script</i> JSON-LD <i class="italics">breadcrumb</i>. Jika Anda ingin menambah halaman lain, maka Anda bisa menekan tombol <b>&#34;Tambah URL&#34;</b> dan tool ini akan menampilkan field baru yang bisa Anda gunakan untuk menambah halaman baru beserta URL-nya.</p>',
     "howto4" => '<p>Gambar 3: Tombol <b>&#34;Tambah URL&#34;</b> pada breadcrumb <i class="italics">schema generator dari cmlabs</i>.</p>
-                    <h4 class="sub-titles">Hapus URL</h4>
+                    <h3 class="sub-titles">Hapus URL</h3>
                     <p>Apabila Anda ingin menghapus halaman yang tidak dibutuhkan dari breadcrumb tersebut, maka Anda bisa menekan ikon silang yang berada di sisi kanan field untuk memasukkan nama halaman dan URL tersebut. Perlu diperhatikan, field yang dihapus tidak dapat dipulihkan kembali.</p>',
     "howto5" => '<p>Gambar 4: Tombol <b>ikon silang</b> untuk menghapus URL pada <i class="italics">breadcrumb schema generator</i> dari cmlabs.</p>
-                    <h4 class="sub-titles">Salin Script JSON-LD Yang Dihasilkan</h4>
+                    <h3 class="sub-titles">Salin Script JSON-LD Yang Dihasilkan</h3>
                     <p>Setelah memasukkan data yang dibutuhkan, Anda akan melihat pratinjau <i class="italics">breadcrumb schema markup</i> pada bagian kanan. Cara menambahkan <i class="italics">breadcrumb</i> schema pada website yaitu dengan menekan opsi salin, kemudian tempel <i class="italics">script</i> yang telah dibuat ke dalam kode program Anda.</p>',
     "howto6" => '<p>Gambar 5: Opsi salin <i class="italics">breadcrumb schema markup</i></p>
-                    <h4 class="sub-titles">Cek Validasi Script JSON-LD</h4>
+                    <h3 class="sub-titles">Cek Validasi Script JSON-LD</h3>
                     <p>Dengan <i class="italics">breadcrumb schema generator</i>, Anda juga bisa memeriksa validitas <i class="italics">script</i> JSON-LD yang Anda gunakan untuk membuat <i class="italics">breadcrumb</i>. Cara cek <i class="italics">breadcrumb</i> pun cukup mudah, Anda hanya perlu menekan opsi cek yang terdapat di bagian pratinjau <i class="italics">script</i> yang dihasilkan.</p>
                     <p>Ketika Anda menekan tombol tersebut, maka Anda akan dialihkan menuju laman <a href="https://search.google.com/test/rich-results">Rich Result Test</a> milik Google. Pada halaman tersebut, Anda dapat mengecek apakah <i class="italics">script breadcrumb</i> dapat berfungsi dengan baik di penelusuran Google.</p>',
     "howto7" => '<p>Gambar 6: Opsi cek validasi <i class="italics">breadcrumb schema markup</i></p>
-                    <h4 class="sub-titles">Reset Breadcrumb Schema Generator</h4>
+                    <h3 class="sub-titles">Reset Breadcrumb Schema Generator</h3>
                     <p>Tool ini juga memberikan opsi yang memudahkan Anda dalam menghapus seluruh data yang telah Anda masukkan sebelumnya. Anda hanya perlu memilih opsi <b>&#34;Reset&#34;</b> dan tool ini akan menampilkan field baru, sehingga Anda bisa membuat <i class="italics">breadcrumb schema</i> lainnya.</p>',
     "howto8" => '<p>Gambar 7: Opsi reset data yang ditambahkan pada <i class="italics">breadcrumb schema generator</i>.</p>',
 

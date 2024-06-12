@@ -97,4 +97,9 @@ return [
     "invalid-longitude" => "Invalid Longitude",
     "invalid_number" => "Value should be more than 0",
     "invalid-hours" => "Invalid Hours",
+    "nav-stats-sequence" => "Search Stats by Sequence",
+    "nav-tools-sequence" => "Tools by Sequence",
+    "nav-tools-sequence-1" => "Keyword Research",
+    "see-more" => "See More",
+    "title-writer-tools" => "Writer Tools",
 ];

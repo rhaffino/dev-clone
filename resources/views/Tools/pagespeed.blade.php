@@ -112,6 +112,100 @@
                                 {{--
                         <span class="font-15px what-is-this" style="color:#9A99A2">(@lang('layout.what-is-this'))</span>
                         --}}
+                    </div>
+                    <div class="card card-custom">
+                        <div class="card-body py-4 px-0">
+                            <div class="row justify-content-center px-4" id="pagespeed-tab">
+                                <div class="col-6 col-sm-4 col-md-4 col-lg-4 col-xl">
+                                    <div class="circleProgressBar active" id="performancePB">
+                                        <div class="progress progress-red performance" data-percentage="0">
+                                            <span class="progress-left">
+                                                <span class="progress-bar progress-bar-performance"></span>
+                                            </span>
+                                            <span class="progress-right">
+                                                <span class="progress-bar progress-bar-performance"></span>
+                                            </span>
+                                            <div class="progress-value" style="width:100%">
+                                                <div class="value-performance value-red">
+                                                    0
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="font-weight-bold text-center mb-4 h6 text-black">Peformance</p>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-sm-4 col-md-4 col-lg-4 col-xl">
+                                    <div class="circleProgressBar" id="accessibilityPB">
+                                        <div class="progress progress-red accessibility" data-percentage="0">
+                                            <span class="progress-left">
+                                                <span class="progress-bar progress-bar-accessibility"></span>
+                                            </span>
+                                            <span class="progress-right">
+                                                <span class="progress-bar progress-bar-accessibility"></span>
+                                            </span>
+                                            <div class="progress-value" style="width:100%">
+                                                <div class="value-accessibility value-red">
+                                                    0
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="font-weight-bold text-center mb-4 h6 text-black">Accesibility</p>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-sm-4 col-md-4 col-lg-4 col-xl">
+                                    <div class="circleProgressBar" id="practicePB">
+                                        <div class="progress progress-red best-practices" data-percentage="0">
+                                            <span class="progress-left">
+                                                <span class="progress-bar progress-bar-best-practices"></span>
+                                            </span>
+                                            <span class="progress-right">
+                                                <span class="progress-bar progress-bar-best-practices"></span>
+                                            </span>
+                                            <div class="progress-value" style="width:100%">
+                                                <div class="value-best-practices value-red">
+                                                    0
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class=" font-weight-bold text-center mb-4 h6 text-black">Best Practices</p>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-sm-4 col-md-4 col-lg-4 col-xl">
+                                    <div class="circleProgressBar" id="seoPB">
+                                        <div class="progress progress-red seo" data-percentage="0">
+                                            <span class="progress-left">
+                                                <span class="progress-bar progress-bar-seo"></span>
+                                            </span>
+                                            <span class="progress-right">
+                                                <span class="progress-bar progress-bar-seo"></span>
+                                            </span>
+                                            <div class="progress-value" style="width:100%">
+                                                <div class="value-seo value-red">
+                                                    0
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class=" font-weight-bold text-center mb-4 h6 text-black">SEO</p>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-sm-4 col-md-4 col-lg-4 col-xl">
+                                    <div class="circleProgressBar" id="pwaPB">
+                                        <div class="progress progress-red pwa" data-percentage="0">
+                                            <span class="progress-left">
+                                                <span class="progress-bar progress-bar-pwa"></span>
+                                            </span>
+                                            <span class="progress-right">
+                                                <span class="progress-bar progress-bar-pwa"></span>
+                                            </span>
+                                            <div class="progress-value" style="width:100%">
+                                                <div class="value-pwa value-red">
+                                                    0
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class=" font-weight-bold text-center mb-4 h6 text-black">PWA</p>
+                                    </div>
+                                </div>
                             </div>
                             <div class="card card-custom">
                                 <div class="card-body py-4 px-0">
@@ -472,19 +566,89 @@
                 </div>
             </div>
         </div>
-    @endif
-    @component('layouts.new_ui_design', [
-        'local' => $local,
-        'blogs' => $blogs,
-        'seo_terms' => $seo_terms,
-        'seo_guidelines' => $seo_guidelines,
-    ])
-        @slot('title', 'PageSpeed Test')
-        @slot('subcontent_1')
-            <div class="" id="description-tab-1">
-                <h2 class="text-black">@lang('pagespeed.desc-1')</h2>
-                <p class="text-black">@lang('pagespeed.desc-1-1')</p>
-                <p class="text-black">@lang('pagespeed.desc-1-2')</p>
+    </div>
+</div>
+@endif
+@component('layouts.new_ui_design', ['local' => $local, 'blogs' => $blogs, 'seo_terms' => $seo_terms, 'seo_guidelines' => $seo_guidelines])
+    @slot('title', 'PageSpeed Test')
+    @slot('subcontent_1')
+        <div class="" id="description-tab-1">
+            <h2 class="text-black">@lang('pagespeed.desc-1')</h2>
+            <p class="text-black">@lang('pagespeed.desc-1-1')</p>
+            <p class="text-black">@lang('pagespeed.desc-1-2')</p>
+        </div>
+    @endslot
+    @slot('subcontent_2')
+        <div class="d-none" id="description-tab-2">
+            <h2 class="text-black">@lang('pagespeed.desc-2')</h2>
+            <p class="text-black">@lang('pagespeed.desc-2-1')</p>
+            <h3 class="sub-titles" class="text-black">@lang('pagespeed.desc-2-1-1-1')</h3>
+            <p class="text-black">@lang('pagespeed.desc-2-1-1-2')</p>
+            <p class="text-black">@lang('pagespeed.desc-2-1-1-3')</p>
+            <ul>
+                <li>@lang('pagespeed.desc-2-1-2-3')</li>
+                <li>@lang('pagespeed.desc-2-1-2-4')</li>
+                <li>@lang('pagespeed.desc-2-1-2-5')</li>
+            </ul>
+            <p class="text-black">@lang('pagespeed.desc-2-1-3-1')</p>
+            <p class="text-black">@lang('pagespeed.desc-2-1-4-1')</p>
+            <p class="text-black">@lang('pagespeed.desc-2-1-5-1')</p>
+            <h3 class="sub-titles">@lang('pagespeed.desc-2-2-1')</h3>
+            <p class="text-black">@lang('pagespeed.desc-2-2-2')</p>
+            <h3 class="sub-titles">@lang('pagespeed.desc-2-3-1')</h3>
+            <p class="text-black">@lang('pagespeed.desc-2-3-2')</p>
+            <h3 class="sub-titles">@lang('pagespeed.desc-2-4-1')</h3>
+            <p class="text-black">@lang('pagespeed.desc-2-4-2')</p>
+            <ul>
+                <li>@lang('pagespeed.desc-2-4-1-1')</li>
+                <li>@lang('pagespeed.desc-2-4-1-2')</li>
+                <li>@lang('pagespeed.desc-2-4-1-3')</li>
+                <li>@lang('pagespeed.desc-2-4-1-4')</li>
+            </ul>
+            <h3 class="sub-titles">@lang('pagespeed.desc-2-5-1')</h3>
+            <p class="text-black">@lang('pagespeed.desc-2-5-2')</p>
+        </div>
+    @endslot
+    @slot('subcontent_3')
+        <div class="d-none" id="description-tab-3">
+            <h2 class="text-black">@lang('pagespeed.desc-3')</h2>
+            <p class="text-black">@lang('pagespeed.desc-3-1')</p>
+            <p class="text-black">@lang('pagespeed.desc-3-2')</p>
+            <h3 class="sub-titles">@lang('pagespeed.desc-3-3-1')</h3>
+            <p class="text-black">@lang('pagespeed.desc-3-3-2')</p>
+            <h3 class="sub-titles">@lang('pagespeed.desc-3-4-1')</h3>
+            <p class="text-black">@lang('pagespeed.desc-3-4-2')</p>
+            <p class="text-black">@lang('pagespeed.desc-3-4-3')</p>
+            <h3 class="sub-titles">@lang('pagespeed.desc-3-5-1')</h3>
+            <p class="text-black">@lang('pagespeed.desc-3-5-2')</p>
+            <p class="text-black">@lang('pagespeed.desc-3-5-3')</p>
+        </div>
+    @endslot
+    @slot('how_to_content')
+        <div class="d-none" id="how-to">
+            @lang('pagespeed.howto1')
+            <div class="expand-text">
+                @lang('pagespeed.howto2')
+                <img class="mb-4" src="{{asset('/media/images/pagespeed_instruction_1.webp')}}" alt="HowTo-pagespeed-1" width="80%">
+                @lang('pagespeed.howto3')
+                <img class="mb-4" src="{{asset('/media/images/pagespeed_instruction_2.webp')}}" alt="HowTo-pagespeed-2" width="80%">
+                @lang('pagespeed.howto4')
+                <img class="mb-4" src="{{asset('/media/images/pagespeed_instruction_3.webp')}}" alt="HowTo-pagespeed-3" width="80%">
+                @lang('pagespeed.howto5')
+                <img class="mb-4" src="{{asset('/media/images/pagespeed_instruction_4.webp')}}" alt="HowTo-pagespeed-4" width="80%">
+                @lang('pagespeed.howto6')
+                <img class="mb-4" src="{{asset('/media/images/pagespeed_instruction_5.webp')}}" alt="HowTo-pagespeed-5" width="80%">
+                @lang('pagespeed.howto7')
+                <img class="mb-4" src="{{asset('/media/images/pagespeed_instruction_6.webp')}}" alt="HowTo-pagespeed-6" width="80%">
+                @lang('pagespeed.howto8')
+                <img class="mb-4" src="{{asset('/media/images/pagespeed_instruction_7.webp')}}" alt="HowTo-pagespeed-7" width="80%">
+                @lang('pagespeed.howto9')
+                <img class="mb-4" src="{{asset('/media/images/pagespeed_instruction_8.webp')}}" alt="HowTo-pagespeed-8" width="80%">
+                @lang('pagespeed.howto10')
+                <img class="mb-4" src="{{asset('/media/images/pagespeed_instruction_9.webp')}}" alt="HowTo-pagespeed-9" width="80%">
+                @lang('pagespeed.howto11')
+                <img class="mb-4" src="{{asset('/media/images/pagespeed_instruction_10.webp')}}" alt="HowTo-pagespeed-10" width="80%">
+                @lang('pagespeed.howto12')
             </div>
         @endslot
         @slot('subcontent_2')

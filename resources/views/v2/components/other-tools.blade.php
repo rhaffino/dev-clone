@@ -146,7 +146,7 @@
                                         {!! $tool['icon'] !!}
                                     </div>
                                     <div class="tools-card-body">
-                                        <h3 class="h6-700 h6-m-700">{{ $tool['title'] }}</h3>
+                                        <p class="h6-700 h6-m-700 mb-3">{{ $tool['title'] }}</p>
                                         <p class="s-400 text-dark-40">{{ $tool['desc'] }}</p>
                                         <a href="/{{ $local }}/{{ $tool['link'] }}"
                                             class="mt-8 b2-700 b2-m-700 text-dark-70 d-flex align-items-center"><u>@lang('plagiarism.launch')</u> <i
@@ -168,7 +168,7 @@
                                     {!! $tool['icon'] !!}
                                 </div>
                                 <div class="tools-card-body">
-                                    <h3 class="h6-700 h6-m-700">{{ $tool['title'] }}</h3>
+                                    <p class="h6-700 h6-m-70 mb-3">{{ $tool['title'] }}</p>
                                     <p class="s-400 text-dark-40">{{ $tool['desc'] }}</p>
                                     <a href="/{{ $local }}/{{ $tool['link'] }}"
                                         class="mt-8 b2-700 b2-m-700 text-dark-70 d-flex align-items-center"><u>@lang('plagiarism.launch')</u> <i
@@ -210,7 +210,7 @@
                                         </div>
                                         <div class="tools-card-body">
                                             <div class="d-flex flex-column">
-                                                <h3 class="h6-700 h6-m-700">{{ $tool['title'] }}</h3>
+                                                <p class="h6-700 h6-m-700 mb-3">{{ $tool['title'] }}</p>
                                                 <p class="s-400 text-dark-40 mt-3">{{ $tool['desc'] }}</p>
                                             </div>
                                             <a href="/{{ $local }}/{{ $tool['link'] }}"
@@ -234,7 +234,7 @@
                                     </div>
                                     <div class="tools-card-body">
                                         <div class="d-flex flex-column">
-                                            <h3 class="h6-700 h6-m-700">{{ $tool['title'] }}</h3>
+                                            <p class="h6-700 h6-m-700 mb-3">{{ $tool['title'] }}</p>
                                             <p class="s-400 text-dark-40 mt-3">{{ $tool['desc'] }}</p>
                                         </div>
                                         <a href="/{{ $local }}/{{ $tool['link'] }}"

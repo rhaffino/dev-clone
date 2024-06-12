@@ -176,24 +176,24 @@ id/json-ld-website-schema-generator
             <p>@lang('website.desc-2-2')</p>
             <p>@lang('website.desc-2-3')</p>
             <p>@lang('website.desc-2-4')</p>
-            <h4 class="sub-titles">@lang('website.desc-2-2-1')</h4>
+            <h3 class="sub-titles">@lang('website.desc-2-2-1')</h3>
             <p>@lang('website.desc-2-2-2')</p>
-            <h4 class="sub-titles">@lang('website.desc-2-3-1')</h4>
+            <h3 class="sub-titles">@lang('website.desc-2-3-1')</h3>
             <p>@lang('website.desc-2-3-2')</p>
-            <h4 class="sub-titles">@lang('website.desc-2-4-1')</h4>
+            <h3 class="sub-titles">@lang('website.desc-2-4-1')</h3>
             <p>@lang('website.desc-2-4-2')</p>
-            <h4 class="sub-titles">@lang('website.desc-2-5-1')</h4>
+            <h3 class="sub-titles">@lang('website.desc-2-5-1')</h3>
             <p>@lang('website.desc-2-5-2')</p>
-            <h4 class="sub-titles">@lang('website.desc-2-6-1')</h4>
+            <h3 class="sub-titles">@lang('website.desc-2-6-1')</h3>
             <p>@lang('website.desc-2-6-2')</p>
-            <h4 class="sub-titles">@lang('website.desc-2-7-1')</h4>
+            <h3 class="sub-titles">@lang('website.desc-2-7-1')</h3>
             <p>@lang('website.desc-2-7-2')</p>
-            <h4 class="sub-titles">@lang('website.desc-2-8-1')</h4>
+            <h3 class="sub-titles">@lang('website.desc-2-8-1')</h3>
             <p>@lang('website.desc-2-8-2')</p>
             <p>@lang('website.desc-2-8-3')</p>
-            <h4 class="sub-titles">@lang('website.desc-2-9-1')</h4>
+            <h3 class="sub-titles">@lang('website.desc-2-9-1')</h3>
             <p>@lang('website.desc-2-9-2')</p>
-            <h4 class="sub-titles">@lang('website.desc-2-10-1')</h4>
+            <h3 class="sub-titles">@lang('website.desc-2-10-1')</h3>
             <p>@lang('website.desc-2-10-2')</p>
         </div>
     @endslot

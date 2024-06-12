@@ -170,19 +170,99 @@
                 </div>
             </div>
         </div>
-    @endif
-    @component('layouts.new_ui_design', [
-        'local' => $local,
-        'blogs' => $blogs,
-        'seo_terms' => $seo_terms,
-        'seo_guidelines' => $seo_guidelines,
-    ])
-        @slot('title', 'SSL Certificate Checker')
-        @slot('subcontent_1')
-            <div class="" id="description-tab-1">
-                <h2>@lang('sslchecker.desc-1')</h2>
-                <p>@lang('sslchecker.desc-1-1')</p>
-                <p>@lang('sslchecker.desc-1-2')</p>
+    </div>
+</div>
+@endif
+@component('layouts.new_ui_design', ['local' => $local, 'blogs' => $blogs, 'seo_terms' => $seo_terms, 'seo_guidelines' => $seo_guidelines])
+    @slot('title', 'SSL Certificate Checker')
+    @slot('subcontent_1')
+        <div class="" id="description-tab-1">
+            <h2>@lang('sslchecker.desc-1')</h2>
+            <p>@lang('sslchecker.desc-1-1')</p>
+            <p>@lang('sslchecker.desc-1-2')</p>
+        </div>
+    @endslot
+    @slot('subcontent_2')
+        <div class="d-none" id="description-tab-2">
+            <h2>@lang('sslchecker.desc-2')</h2>
+            <p>@lang('sslchecker.desc-2-1')</p>
+            <p>@lang('sslchecker.desc-2-2')</p>
+            <p>@lang('sslchecker.desc-2-3')</p>
+        </div>
+    @endslot
+    @slot('subcontent_3')
+        <div class="d-none" id="description-tab-3">
+            <h2>@lang('sslchecker.desc-3')</h2>
+            <p>@lang('sslchecker.desc-3-1')</p>
+            <h3 class="sub-titles">@lang('sslchecker.desc-3-2-1')</h3>
+            <p>@lang('sslchecker.desc-3-2-2')</p>
+            <h3 class="sub-titles">@lang('sslchecker.desc-3-3-1')</h3>
+            <p>@lang('sslchecker.desc-3-3-2')</p>
+            <h3 class="sub-titles">@lang('sslchecker.desc-3-4-1')</h3>
+            <p>@lang('sslchecker.desc-3-4-2')</p>
+            <h3 class="sub-titles">@lang('sslchecker.desc-3-5-1')</h3>
+            <p>@lang('sslchecker.desc-3-5-2')</p>
+        </div>
+    @endslot
+    @slot('subcontent_4')
+        <div class="d-none" id="description-tab-4">
+            <h2>@lang('sslchecker.desc-4')</h2>
+            <p>@lang('sslchecker.desc-4-1')</p>
+            <p>@lang('sslchecker.desc-4-2')</p>
+            <ol>
+                <li><h3><b>@lang('sslchecker.desc-4-2-1')</b></h3></li>
+                <p>@lang('sslchecker.desc-4-2-2')</p>
+                <h4 class="sub-titles">@lang('sslchecker.desc-4-2-1-1')</h4>
+                <p>@lang('sslchecker.desc-4-2-1-2')</p>
+                <p>@lang('sslchecker.desc-4-2-1-3')</p>
+                <h4 class="sub-titles">@lang('sslchecker.desc-4-2-2-1')</h4>
+                <p>@lang('sslchecker.desc-4-2-2-2')</p>
+                <p>@lang('sslchecker.desc-4-2-2-3')</p>
+                <h4 class="sub-titles">@lang('sslchecker.desc-4-2-3-1')</h4>
+                <p>@lang('sslchecker.desc-4-2-3-2')</p>
+                <p>@lang('sslchecker.desc-4-2-3-3')</p>
+
+                <li><h3><b>@lang('sslchecker.desc-4-3-1')</b></h3></li>
+                <p>@lang('sslchecker.desc-4-3-2')</p>
+                <h4 class="sub-titles">@lang('sslchecker.desc-4-3-2-1')</h4>
+                <p>@lang('sslchecker.desc-4-3-2-2')</p>
+                <p>@lang('sslchecker.desc-4-3-2-3')</p>
+                <h4 class="sub-titles">@lang('sslchecker.desc-4-3-3-1')</h4>
+                <p>@lang('sslchecker.desc-4-3-3-2')</p>
+                <p>@lang('sslchecker.desc-4-3-3-3')</p>
+                <h4 class="sub-titles">@lang('sslchecker.desc-4-3-4-1')</h4>
+                <p>@lang('sslchecker.desc-4-3-4-2')</p>
+                <p>@lang('sslchecker.desc-4-3-4-3')</p>
+            </ol>
+        </div>
+    @endslot
+    @slot('subcontent_5')
+        <div class="d-none" id="description-tab-5">
+            <h2>@lang('sslchecker.desc-5')</h2>
+            <p>@lang('sslchecker.desc-5-1')</p>
+            <h3 class="sub-titles">@lang('sslchecker.desc-5-2-1')</h3>
+            <p>@lang('sslchecker.desc-5-2-2')</p>
+            <h3 class="sub-titles">@lang('sslchecker.desc-5-3-1')</h3>
+            <p>@lang('sslchecker.desc-5-3-2')</p>
+        </div>
+    @endslot
+    @slot('how_to_content')
+        <div class="d-none" id="how-to">
+            @lang('sslchecker.howto1')
+            <div class="expand-text">
+                @lang('sslchecker.howto2')
+                <img class="mb-4" src="{{asset('/media/images/sslchecker_instruction_1.webp')}}" alt="HowTo-sslchecker-1" width="80%">
+                @lang('sslchecker.howto3')
+                <img class="mb-4" src="{{asset('/media/images/sslchecker_instruction_2.webp')}}" alt="HowTo-sslchecker-2" width="80%">
+                @lang('sslchecker.howto4')
+                <img class="mb-4" src="{{asset('/media/images/sslchecker_instruction_3.webp')}}" alt="HowTo-sslchecker-3" width="80%">
+                @lang('sslchecker.howto5')
+                <img class="mb-4" src="{{asset('/media/images/sslchecker_instruction_4.webp')}}" alt="HowTo-sslchecker-4" width="80%">
+                @lang('sslchecker.howto6')
+                <img class="mb-4" src="{{asset('/media/images/sslchecker_instruction_5.webp')}}" alt="HowTo-sslchecker-5" width="80%">
+                @lang('sslchecker.howto7')
+                <img class="mb-4" src="{{asset('/media/images/sslchecker_instruction_6.webp')}}" alt="HowTo-sslchecker-6" width="80%">
+                @lang('sslchecker.howto8')
             </div>
         @endslot
         @slot('subcontent_2')

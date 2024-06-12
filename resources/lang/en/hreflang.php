@@ -31,31 +31,31 @@ return [
     "howto-title" => 'How to Use Hreflang Tag Checker',
     "howto1" => '<h2>How to Use Hreflang Tag Checker</h2>
                     <p>This guide is structured to help you use the tool properly and analyze the results it can display. Here are the steps.</p>',
-    "howto2" => '<h4 class="sub-titles">Go to the Hreflang Checker cmlabs page</h4>
+    "howto2" => '<h3 class="sub-titles">Go to the Hreflang Checker cmlabs page</h3>
                     <p>As a first step, please open the page of this tool. You can access it via this link. After that, you will see several available features such as the URL column, display results, checking history, to a brief explanation of this tool.</p>',
     "howto3" => '<p>Figure 1: Hreflang Checker cmlabs page view</p>
-                    <h4 class="sub-titles">Enter Website URL</h4>
+                    <h3 class="sub-titles">Enter Website URL</h3>
                     <p>The second step to identify the hreflang tag is to enter the URL in the field provided. Make sure you have entered the URL in the correct format (e.g https://example.com). Next, click the <b>&#34;Check URL&#34;</b> button to give the command to this tool to start checking the website.</p>',
     "howto4" => '<p>Figure 2: Entering the website URL to identify the hreflang tag</p>
-                    <h4 class="sub-titles">See Hreflang Tag Identification Results</h4>
+                    <h3 class="sub-titles">See Hreflang Tag Identification Results</h3>
                     <p>After you press the Check URL button, this tool system will immediately display the identification results quickly. The Result field can display some information such as:</p>
-                    <h6 class="sub-titles">URL</h6>
+                    <h4 class="sub-titles">URL</h4>
                     <p>The URL list shown is a variation of the URL entered earlier. For example, you enter the URL “https://cmlabs.co” and then in the URL column below it will appear several URL variations from the website such as “https://cmlabs.co/en-id”, <br>
                     "https://cmlabs.co/en-my" and so on.
                     </p>',
     "howto5" => '<p>Figure 3: List of identified URLs</p>
-                    <h6 class="sub-titles">Hreflang Tags</h6>
+                    <h4 class="sub-titles">Hreflang Tags</h4>
                     <p>On the right side of the URL list, you can see the hreflang tags used for each URL. It is this HTML tag attribute that tells search engines the relationship between the various language pages on your website. Examples of hreflang tags are &#34;en-id&#34;, &#34;en-my&#34;, and so on.</p>
-                    <h6 class="sub-titles">Language</h6>
+                    <h4 class="sub-titles">Language</h4>
                     <p>The language used will of course be different for each hreflang tag that is installed. That way, the target user can understand the content of the website according to the chosen language preference.</p>
                     <p>Not just for users, this attribute is also used to signal Google to serve URLs with the correct language in its search results based on the user&#39;s language preference.</p>
-                    <h6 class="sub-titles">Region</h6>
+                    <h4 class="sub-titles">Region</h4>
                     <p>The last data you can see in the hreflang checker cmlabs is the target region of the URL being checked. You can find out if the target region of a particular URL matches the language and hreflang tags installed.</p>
-                    <h4 class="sub-titles">View Checking History</h4>
+                    <h3 class="sub-titles">View Checking History</h3>
                 <p>The last feature of this tool is your Local History. This tool allows you to view all hreflang check history on hreflang checker cmlabs.</p>
                 <p>With this feature, you don&#39;t need to re-type the URL that was checked if you want to re-check it. You can also delete usage history using the <b>&#34;Clear&#34;</b> button on the right side of the usage history feature.</p>',
     "howto6" => '<p>Figure 4: Local History feature to view the history of checking the hreflang checker.</p>
-                    <h4 class="sub-titles">Login After 5 Times Usage</h4>
+                    <h3 class="sub-titles">Login After 5 Times Usage</h3>
                     <p>Some cmlabs tools require a login process after 5 times use, Hreflang Checker is one of them. If you have used it 5 times, our system will automatically display a message stating that you have reached the usage limit.</p>',
     "howto7" => '<p>Figure 5: Usage warning has reached the limit. In this warning, there is a login button that directs to the login page.</p>
                     <p>You can log in by clicking the login button on the warning message that appears. Next, you will be directed to the cmlabs login page. Please enter the required data, or you can log in via Google.</p>',

@@ -4,7 +4,7 @@ return [
     "meta-desc" => "Technology Lookup is a tool for identify widgets, identifying languages ​​and the full version of the technology applied by a site.",
     "lang" => "en",
     "title" => "TECHNOLOGY LOOKUP",
-    "sub-title" => "Find Out What Websites Are Built",
+    "sub-title" => "Learn How Websites Are Built",
     "lookup-btn" => "LOOKUP URL",
     "lookup-btn-tooltip" => "You can only search 5 times in 1 hour",
     "technologies" => "Technologies",
@@ -29,19 +29,19 @@ return [
     "howto-title" => 'How to Use Technology Lookup cmlabs',
     "howto1" => '<h2>How to Use Technology Lookup cmlabs</h2>
                     <p>The following guide was created to assist you in using this tool. Follow these steps:</p>',
-    "howto2" => '<h4 class="sub-titles">Go to Technology Lookup Page</h4>
+    "howto2" => '<h3 class="sub-titles">Go to Technology Lookup Page</h3>
                     <p>Please open the Technology Lookup page from cmlabs first. On that page, you can add the URL you want to see the technology for, identify the technology on the website being tracked, and view the history of Technology Lookup usage.</p>',
     "howto3" => '<p>Figure 1: View of the Technology Lookup tool page from cmlabs</p>
-                    <h4 class="sub-titles">Enter Website URL</h4>
+                    <h3 class="sub-titles">Enter Website URL</h3>
                     <p>In order to identify the technology on a website, you must enter the website URL in the field provided. Make sure you have entered the URL in the correct format (e.g https://example.com). Then, click the <b>&#34;LOOKUP URL&#34;</b> button to give the command to this tool to start checking the technology on the website.</p>',
     "howto4" => '<p>Figure 2: The display when the user has entered the website URL in the provided field.</p>
-                    <h4 class="sub-titles">Identify Technology Stacks on Websites</h4>
+                    <h3 class="sub-titles">Identify Technology Stacks on Websites</h3>
                     <p>After a while, you can see the stack of technology used on the website in the Technology section. The Technology Lookup tool allows you to view widgets, operating systems, javascript libraries, web servers, and identify the full version of the technology a site uses.</p>',
     "howto5" => '<p>Figure 3: Display of the results of monitoring the technology stack used on the tracked website.</p>
-                    <h4 class="sub-titles">Monitor Technology Lookup Usage History</h4>
+                    <h3 class="sub-titles">Monitor Technology Lookup Usage History</h3>
                     <p>Finally, you can also view a list of Technology Lookup usage history. In the list, you will see a list of website URLs that you have monitored through the Technology Lookup from cmlabs.</p>',
     "howto6" => '<p>Figure 4: A list of history using technology lookup from cmlabs.</p>
-                    <h4 class="sub-titles">Login After 5 Times Usage</h4>
+                    <h3 class="sub-titles">Login After 5 Times Usage</h3>
                     <p>Some cmlabs free tools require a login process after 5 times use, Technology Lookup is one of them. If you have used it 5 times, our system will automatically display a message stating that you have reached the usage limit.</p>',
     "howto7" => '<p>Figure 5: Usage warning has reached the limit. In this warning, there is a login button that directs to the login page.</p>
                     <p>You can log in by clicking the login button on the warning message that appears. Next, you will be directed to the cmlabs login page. Please enter the required data, or you can log in via Google.</p>',

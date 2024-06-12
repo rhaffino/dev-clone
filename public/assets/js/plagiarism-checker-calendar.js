@@ -93,17 +93,16 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
+function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
 var initDate = new Date().toISOString().slice(0, 10);
 var bookedDate = [];
 var currentDate = new Date();
 var currentMonth = currentDate.getMonth();
-
 function getFormattedMonthYear(dateString) {
   var date = new Date(dateString);
   var month = date.toLocaleString('en-US', {
@@ -112,7 +111,6 @@ function getFormattedMonthYear(dateString) {
   var year = date.getFullYear();
   return month + ' ' + year;
 }
-
 $(document).ready(function () {
   getCalendar({}).then(function (result) {
     if (result.data.dates === '') {
@@ -130,19 +128,16 @@ $(document).ready(function () {
     getCalendar();
   });
 });
-
 function prevDate() {
   return getCalendar({
     order: 'prev'
   });
 }
-
 function nextDate() {
   return getCalendar({
     order: 'next'
   });
 }
-
 function getCalendar(data) {
   $('.calendar-btn').prop('disabled', true);
   var dateSplited = initDate.split('-');
@@ -161,28 +156,23 @@ function getCalendar(data) {
       $(".calendar").html("");
       var nowDateRes = res.data.calendar;
       var nowDate = [];
-
       for (var key in nowDateRes) {
         if (nowDateRes.hasOwnProperty(key)) {
           var obj = nowDateRes[key];
           obj.dateKey = key; // Add the date key to the object
-
           nowDate.push(obj);
         }
       }
-
       nowDate.sort(function (a, b) {
         return a.dateKey > b.dateKey ? 1 : -1;
       });
       var today;
-
       for (var i = 0; i < nowDate.length; i++) {
         if (!nowDate[i].prevMonth) {
           today = nowDate[i].dateKey;
           break;
         }
       }
-
       initDate = today;
       $("#month").html(getFormattedMonthYear(today));
       var givenMonth = new Date(today).getMonth();
@@ -190,7 +180,6 @@ function getCalendar(data) {
         $('.calendar').append($("<div class=\"date-item ".concat(date.weekend && "weekend", " ").concat((date.prevMonth || date.nextMonth) && "other", "\">\n                        <div class=\"date\">").concat(date.date, "</div>\n                            <div class=\"value\">").concat(type === "cost" ? "$" + parseFloat(date.cost).toFixed(2) : date.request, "</div>\n                    </div>")));
       });
       $('.calendar-btn').prop('disabled', false);
-
       if (givenMonth === currentMonth) {
         $(".calendar-btn.next").prop('disabled', true);
       }
@@ -205,7 +194,6 @@ function getCalendar(data) {
     }
   });
 }
-
 document.getElementById("prevMonthBtn").addEventListener("click", function () {
   prevDate();
 });
@@ -222,7 +210,7 @@ document.getElementById("nextMonthBtn").addEventListener("click", function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! F:\WORK\cmlabs\tools\resources\js\plagiarism-checker-calendar.js */"./resources/js/plagiarism-checker-calendar.js");
+module.exports = __webpack_require__(/*! C:\D\1. cmlabs\cmlabs Tools\tools\resources\js\plagiarism-checker-calendar.js */"./resources/js/plagiarism-checker-calendar.js");
 
 
 /***/ })

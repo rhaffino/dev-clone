@@ -382,10 +382,10 @@
                 <p>@lang('metachecker.desc-2-1')</p>
                 <p>@lang('metachecker.desc-2-2')</p>
                 <p>@lang('metachecker.desc-2-3')</p>
-                <h4 class="sub-titles">@lang('metachecker.desc-2-1-1')</h4>
+                <h3 class="sub-titles">@lang('metachecker.desc-2-1-1')</h3>
                 <p>@lang('metachecker.desc-2-1-2')</p>
                 <p>@lang('metachecker.desc-2-1-3')</p>
-                <h4 class="sub-titles">@lang('metachecker.desc-2-2-1')</h4>
+                <h3 class="sub-titles">@lang('metachecker.desc-2-2-1')</h3>
                 <p>@lang('metachecker.desc-2-2-2')</p>
             </div>
         @endslot
@@ -463,6 +463,15 @@
     }]
 }
 </script>
+<script>
+    const META_CHECKER_URL = "{{route('api.analyze-meta')}}"
+</script>
+<script src="{{asset('js/logic/predifine-localstorage.js')}}"></script>
+<script src="{{asset('js/logic/metachecker.js')}}?09"></script>
+<script type="text/javascript">
+    $('#toggle_button_writer').click();
+</script>
+@if (!session()->has('logged_in') || session()->get('logged_in') != 'true' && $access_limit <= 0)
     <script>
         const META_CHECKER_URL = "{{ route('api.analyze-meta') }}"
     </script>

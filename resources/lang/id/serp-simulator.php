@@ -1,7 +1,7 @@
 <?php
 return [
-    "meta-title" =>"SERP Simulator  dari cmlabs - Visualisasikan Website di SERP",
-    "meta-desc" => "SERP Simulator dari cmlabs adalah tool untuk menguji tag judul, deskripsi, dan keyword serta meninjau visualisasi website  di SERP.  Coba sekarang!",
+    "meta-title" =>"SERP Simulator - Visualisasikan Tampilan Website di SERP",
+    "meta-desc" => "SERP Simulator adalah tool SEO untuk menguji title tag, meta description, dan keyword serta meninjau visualisasi tampilan website di SERP. Coba sekarang!",
     "lang" => "en",
     "title" => "SERP Simulator",
     "sub-title" => "Lihat pratinjau website Anda di laman hasil pencarian.",

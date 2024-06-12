@@ -1,7 +1,7 @@
 <?php
 return [
-    "meta-title" => "Tool Gratis JSON-LD How To Schema Generator",
-    "meta-desc" => "Buat konten website Anda terlihat spesifik sebagai konten panduan dengan JSON-LD How To Schema Generator",
+    "meta-title" => "Tool SEO Gratis JSON-LD How To Schema Generator",
+    "meta-desc" => "Gunakan JSON-LD How-to Schema Generator tools untuk membuat konten website Anda terlihat spesifik dan aktifkan rich snippet SERP di Google untuk halaman Anda.",
     "title" => "JSON-LD HOW TO SCHEMA GENERATOR",
     "subtitle" => "Buat Website Anda Jadi Lebih Menarik Dan Tampil Berbeda",
     "btn-add-supply" => "TAMBAH PENAWARAN",
@@ -53,10 +53,10 @@ return [
     "howto1" => '<h2>Cara Menggunakan How-To Schema Generator</h2>
                     <p>How-to schema generator adalah tool yang bisa Anda gunakan untuk membuat how-to schema markup secara gratis. How to adalah jenis konten yang berfungsi untuk memberikan petunjuk atau panduan kepada pengguna melalui serangkaian langkah guna menyelesaikan suatu tugas atau kegiatan tertentu.</p>',
     "howto1-1" => '<p>Langkah-langkah yang bisa Anda tempuh untuk menghasilkan how to schema markup menggunakan tool ini adalah sebagai berikut:</p>
-                    <h4 class="sub-titles">Buka Halaman JSON-LD How-To Schema Generator</h4>
+                    <h3 class="sub-titles">Buka Halaman JSON-LD How-To Schema Generator</h3>
                     <p>Pertama-tama buka <a href="https://tools.cmlabs.co/id/json-ld-how-to-schema-generator">laman JSON-LD How-To Schema Generator</a> untuk memulai perjalanan Anda dalam membuat schema markup secara otomatis. Tool ini akan memudahkan Anda membuat konten yang berisi petunjuk memiliki tampilan yang lebih menarik di SERP. Schema markup yang dihasilkan oleh tool ini juga sudah sesuai dengan pedoman penelusuran Google.</p>',
     "howto2" => '<p>Gambar 1: Tampilan halaman <i class="italics">how to schema generator</i> dari cmlabs.</p>
-                    <h4 class="sub-titles">Masukkan Informasi Umum</h4>
+                    <h3 class="sub-titles">Masukkan Informasi Umum</h3>
                     <p>Dengan memasukkan data yang dibutuhkan untuk membuat how to schema markup, Anda bisa langsung melihat pratinjau schema markup yang berhasil dibuat. Pada informasi umum, terdapat beberapa data yang perlu Anda tambahkan meliputi:</p>
                     <ul>
                     <li><b>Nama:</b> judul dari petunjuk atau instruksi yang dibuat.</li>
@@ -66,24 +66,24 @@ return [
                     <li><b>URL Gambar:</b> lokasi atau path file tempat Anda menyimpan gambar yang akan digunakan pada konten petunjuk tersebut.</li>
                 </ul>',
     "howto3" => '<p>Gambar 2: Masukkan informasi umum pada field yang tersedia di how to schema generator.</p>
-                <h4 class="sub-titles">Tambah Penawaran</h4>
+                <h3 class="sub-titles">Tambah Penawaran</h3>
                 <p>Selanjutnya, Anda bisa menambahkan beberapa bahan pada kolom yang disediakan. Bahan adalah barang atau hal-hal yang dibutuhkan ketika pengguna menjalankan petunjuk atau instruksi yang Anda berikan. Perlu diperhatikan, input yang diterima oleh tool ini adalah teks.</p>',
     "howto4" => '<p>Gambar 3: Tambahkan penawaran atau supply pada field yang tersedia di how to schema generator.</p>
-                <h4 class="sub-titles">Tambah Tool</h4>
+                <h3 class="sub-titles">Tambah Tool</h3>
                 <p>Anda juga perlu menambahkan beberapa alat yang dibutuhkan pengguna untuk menjalankan petunjuk atau instruksi yang Anda berikan pada kolom yang disediakan. Perlu diperhatikan, input yang diterima oleh tool ini adalah teks.</p>',
     "howto5" => '<p>Gambar 4: Tambahkan tool atau alat yang digunakan untuk melakukan instruksi pada field yang tersedia di how to schema generator.</p>
-                <h4 class="sub-titles">Masukkan Instruksi</h4>
+                <h3 class="sub-titles">Masukkan Instruksi</h3>
                 <p>Setelah menginputkan bahan dan alat ke dalam field yang disediakan, selanjutnya Anda perlu memasukkan serangkaian langkah atau instruksi yang harus dilakukan untuk menyelesaikan suatu hal. Anda perlu memasukkan beberapa data seperti, deskripsi instruksi, URL gambar, nama atau judul instruksi, dan URL instruksi.</p>
                 <p>Anda bisa menambahkan beberapa langkah tambahan dengan menekan tombol <b>&#34;Tambah URL&#34;</b>. Tidak hanya itu, Anda juga bisa menghapus langkah yang tidak diperlukan dengan menekan <b>ikon silang</b> yang ada di samping kanan field instruksi.</p>',
     "howto6" => '<p>Gambar 5: Tambahkan serangkaian langkah atau instruksi pada field yang tersedia di how to schema generator.</p>
-                <h4 class="sub-titles">Salin How-to Schema Markup Yang Dihasilkan</h4>
+                <h3 class="sub-titles">Salin How-to Schema Markup Yang Dihasilkan</h3>
                 <p>Jika Anda telah melengkapi atribut yang dibutuhkan untuk membuat how to schema markup, maka Anda akan melihat preview schema markup di bagian kanan. Anda dapat menyalin schema markup secara langsung dengan tombol <b>&#34;salin&#34;</b> dan pasang ke dalam kode program Anda.</p>',
     "howto7" => '<p>Gambar 6: Opsi salin <i class="italics">How-to schema markup</i></p>
-                <h4 class="sub-titles">Cek Validasi Script JSON-LD How-to Schema</h4>
+                <h3 class="sub-titles">Cek Validasi Script JSON-LD How-to Schema</h3>
                 <p>Dengan How-to schema generator, Anda juga bisa memeriksa validitas <i class="italics">script</i> JSON-LD yang Anda gunakan. Cara mengeceknya pun cukup mudah, cukup tekan opsi cek yang terdapat di bagian pratinjau <i class="italics">script</i> yang dihasilkan.</p>
                 <p>Ketika Anda menekan tombol tersebut, maka Anda akan dialihkan menuju laman <a href="https://search.google.com/test/rich-results">Rich Result Test</a> milik Google. Pada halaman tersebut, Anda dapat mengecek apakah <i class="italics">schema markup</i> yang dihasilkan dapat berfungsi dengan baik di penelusuran Google.</p>',
     "howto8" => '<p>Gambar 7: Opsi cek validasi How-to schema markup</p>
-                    <h4 class="sub-titles">Reset Schema Generator</h4>
+                    <h3 class="sub-titles">Reset Schema Generator</h3>
                     <p>Tool ini memiliki opsi yang memudahkan Anda dalam membuat How-to schema baru. Cukup klik opsi <b>&#34;Reset&#34;</b> dan menghapus seluruh data yang telah ditambahkan sebelumnya. Selanjutnya, Anda bisa membuat script baru.</p>',
     "howto9" => '<p>Gambar 8: Opsi reset data yang ditambahkan pada How-toschema generator.</p>
                 <p>Itulah pembahasan singkat mengenai cara membuat how to schema markup menggunakan tools <a href="https://tools.cmlabs.co/id/json-ld-how-to-schema-generator">JSON-LD How To Schema Generator</a> dari cmlabs. Tools ini dapat membantu Anda menghasilkan schema markup secara cepat dan efisien. Coba tool ini sekarang!</p>',

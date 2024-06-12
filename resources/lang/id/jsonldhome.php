@@ -1,7 +1,7 @@
 <?php
 return [
-    "meta-title" => "JSON LD Generator Markup Skema untuk SEO",
-    "meta-desc" => "Pilih struktur data untuk skema resep, lowongan kerja, produk dan buat markup dari JSON-LD Generator.",
+    "meta-title" => "JSON LD Generator Markup Skema Gratis untuk SEO",
+    "meta-desc" => "Buat berbagai struktur data secara otomatis melalui JSON-LD Schema Markup Generator.  Membantu mesin pencari memahami halaman Anda dengan lebih baik.",
     "lang" => "id",
     "title" => "JSON-LD SCHEMA GENERATOR",
     "sub-title" => "JSON LD Generator menghasilkan skrip markup untuk menampilkan skema pada artikel yang relevan. Cek dan sesuaikan jenisnya dengan artikel Anda.",

@@ -1,7 +1,7 @@
 <?php
 return [
-    "meta-title" => "JSON-LD Video Schema Generator -  Schema Markup dari cmlabs",
-    "meta-desc" => "Buat schema markup secara efisien untuk optimasi video Anda dari segi SEO dengan JSON-LD Video Schema Generator dari cmlabs. Coba sekarang!",
+    "meta-title" => "Tool SEO Gratis JSON-LD Video Schema Generator",
+    "meta-desc" => "Gunakan JSON-LD video schema generator secara efisien untuk optimasi video Anda dari segi SEO dengan JSON-LD Video Schema Generator dari cmlabs. Coba sekarang!",
     "title" => "JSON-LD VIDEO SCHEMA GENERATOR",
     "subtitle" => "Memudahkan pembuatan schema markup untuk meningkatkan visibilitas video web Anda.",
     "label-name" => "Judul Video",

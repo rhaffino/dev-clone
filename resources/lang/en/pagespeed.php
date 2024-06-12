@@ -88,28 +88,28 @@ return [
     "howto-title" => 'How to Use PageSpeed ​​Test?',
     "howto1" => '<h2>How to Use PageSpeed ​​Test?</h2>
                     <p>The following guide contains how to use PageSpeed ​​Test you can do. Follow each step to the end.</p>',
-    "howto2" => '<h4 class="sub-titles">Go to PageSpeed ​​Test Page</h4>
+    "howto2" => '<h3 class="sub-titles">Go to PageSpeed ​​Test Page</h3>
                     <p>As a first step in starting a website page speed check, you need to open the PageSpeed ​​Test page. On that page, you will see some of the features that the tool has. Starting from adding the URL to be checked for page speed, displaying the results of the page speed check, to the page speed checking history that you have done before.</p>',
     "howto3" => '<p>Figure 1: PageSpeed ​​Test page view from cmlabs</p>
-                    <h4 class="sub-titles">Enter Website URL</h4>
+                    <h3 class="sub-titles">Enter Website URL</h3>
                     <p>In order to be able to check page speed, you must first enter the website URL in the field provided. Make sure you have entered the URL in the correct format (e.g https://example.com). Next, click the <b>&#34;Generate&#34;</b> button to give the command to this tool to start checking pagespeed on the website.</p>',
     "howto4" => '<p>Figure 2: The display when the user has entered the website URL in the provided field.</p>
-                    <h4 class="sub-titles">PageSpeed ​​Check Result Analysis</h4>
+                    <h3 class="sub-titles">PageSpeed ​​Check Result Analysis</h3>
                     <p>You need to wait a while until the pagespeed check process is complete. Although this tool can be accessed for free, the pagespeed checking data displayed is quite complete. Some of the metrics you can find in your PageSpeed ​​Test results are:</p>
-                    <h6 class="sub-titles">Performance</h6>
+                    <h4 class="sub-titles">Performance</h4>
                     <p>This metric displays the results of testing the overall website performance. Starting from the test results of core web vitals metrics, time to interactive, total blocking time, to speed index. The value categories are divided into good (90-100), need improvement (50-89), and bad (0-49).</p>',
     "howto5" => '<p>Figure 3: Performance assessment results from websites tracked using PageSpeed ​​Test</p>
-                    <h6 class="sub-titles">Accessibility</h6>
+                    <h4 class="sub-titles">Accessibility</h4>
                     <p>This metric displays the results of your web page accessibility assessment. The accessibility of a website is assessed based on how easily the website can be accessed by users.</p>',
     "howto6" => '<p>Figure 4: Detailed page accessibility assessment of websites tracked using PageSpeed ​​Test</p>
-                    <h6 class="sub-titles">Best Practice</h6>
+                    <h4 class="sub-titles">Best Practice</h4>
                     <p>This metric will display a report containing information on whether your website has implemented best practices in website creation. If the assessment results still need improvement, this is the right time for you to improve website performance.</p>',
     "howto7" => '<p>Figure 5: Best practice metrics assessment results on tracked websites</p>
-                    <h6 class="sub-titles">SEO</h6>
+                    <h4 class="sub-titles">SEO</h4>
                     <p>You will also find the results of the SEO assessment of your website. The following report will contain information on whether your website has been optimized on search engines or not. With this report, you can find elements that need to be improved on your website.</p>',
     "howto8" => '<p>Figure 6: Detailed results of Search Engine Optimization (SEO) quality assessments on tracked websites
                     </p>
-                    <h6 class="sub-titles">PWA</h6>
+                    <h4 class="sub-titles">PWA</h4>
                     <P>In the following assessment results, you will see whether your website has met the Progressive Web App (PWA) criteria. If the website has not implemented PWA optimally, this can be a sign that you have found a space that needs to be improved on your website. That way, the website can provide a better user experience.</P>',
     "howto9" => '<p>Figure 7: Detailed Progressive Web App (PWA) assessment results on tracked websites</p>
                     <h4 class="sub-titles">View PageSpeed ​​Test Usage History</h4>

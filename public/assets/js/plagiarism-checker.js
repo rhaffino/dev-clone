@@ -94,21 +94,14 @@
 /***/ (function(module, exports) {
 
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
-
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-
 function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
-function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
+function _iterableToArrayLimit(arr, i) { var _i = null == arr ? null : "undefined" != typeof Symbol && arr[Symbol.iterator] || arr["@@iterator"]; if (null != _i) { var _s, _e, _x, _r, _arr = [], _n = !0, _d = !1; try { if (_x = (_i = _i.call(arr)).next, 0 === i) { if (Object(_i) !== _i) return; _n = !1; } else for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i); _n = !0); } catch (err) { _d = !0, _e = err; } finally { try { if (!_n && null != _i["return"] && (_r = _i["return"](), Object(_r) !== _r)) return; } finally { if (_d) throw _e; } } return _arr; } }
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
 var WORDS_LENGTH = 0;
 var TOP_DENSITY = 0;
 var results, querywords, allviewurl;
-
 if (lang && lang == "en") {
   var seeDetailText = "See details";
   var seeOther = "See other results";
@@ -118,18 +111,15 @@ if (lang && lang == "en") {
   var seeOther = "Lihat hasil lainnya";
   var textMatched = "Teks sesuai";
 }
-
 function checkUrl(url) {
   try {
     var _url = new URL(url);
-
     return _url.protocol === 'https:' || _url.protocol === 'http:';
   } catch (e) {
     // console.log(e)
     return false;
   }
 }
-
 function checkUrlLevel(url) {
   var urlWithoutProtocol = url.replace(/^(https?:\/\/)?/, '');
   urlWithoutProtocol = urlWithoutProtocol.replace(/\/+$/, '');
@@ -139,26 +129,25 @@ function checkUrlLevel(url) {
   });
   var level = segments.length;
   return level;
-} // WORD CHECKER
+}
 
-
+// WORD CHECKER
 function numberWithCommas(x) {
   return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
-
 var input = document.querySelector('#text-check'),
-    inputLink = document.querySelector('#url-check'),
-    characterCount = document.querySelector('#characterCount'),
-    wordCount = document.querySelector('#wordCount'),
-    totalWordsEst = document.querySelector('#totalWordsEst'),
-    sentenceCount = document.querySelector('#sentenceCount'),
-    paragraphCount = document.querySelector('#paragraphCount'),
-    costEst = document.querySelector('#costEst'),
-    linkCheckerBtn = document.querySelector('#linkCheckerBtn'),
-    readingTime = document.querySelector('#readingTime'),
-    topKeywordsMobile = document.querySelector('#topKeywordsMobile'),
-    topKeywords2Mobile = document.querySelector('#top2Mobile'),
-    topKeywords3Mobile = document.querySelector('#top3Mobile');
+  inputLink = document.querySelector('#url-check'),
+  characterCount = document.querySelector('#characterCount'),
+  wordCount = document.querySelector('#wordCount'),
+  totalWordsEst = document.querySelector('#totalWordsEst'),
+  sentenceCount = document.querySelector('#sentenceCount'),
+  paragraphCount = document.querySelector('#paragraphCount'),
+  costEst = document.querySelector('#costEst'),
+  linkCheckerBtn = document.querySelector('#linkCheckerBtn'),
+  readingTime = document.querySelector('#readingTime'),
+  topKeywordsMobile = document.querySelector('#topKeywordsMobile'),
+  topKeywords2Mobile = document.querySelector('#top2Mobile'),
+  topKeywords3Mobile = document.querySelector('#top3Mobile');
 characterCount.innerHTML = 0;
 wordCount.innerHTML = 0;
 totalWordsEst.innerHTML = 0;
@@ -168,11 +157,9 @@ readingTime.innerHTML = 0;
 $(".estimation-card").hide();
 $(".result-card").hide();
 var topKeyword = [];
-
 for (var i = 1; i < 6; i++) {
   topKeyword.push(document.querySelector('#top' + i));
 }
-
 var radioButtons = document.querySelectorAll('input[type="radio"][name="density"]');
 var fontSizeButtons = document.querySelectorAll('input[type="radio"][name="font-size"]');
 var resultTypeButtons = document.querySelectorAll('input[type="radio"][name="results"]');
@@ -183,13 +170,11 @@ $("#top2").hide();
 $("#top3").hide();
 $("#top4").hide();
 $("#top5").hide();
-
 var calculateCost = function calculateCost(words) {
   var cost = 0.03;
   var wordPerCost = words > 200 ? Math.ceil((words - 200) / 100) : 0;
   return cost + wordPerCost * 0.01;
 };
-
 var historyCard = function historyCard(content, cost, wordCount, date) {
   var createdAt = new Date(date);
   var formattedDate = "".concat(createdAt.getFullYear(), "-").concat((createdAt.getMonth() + 1).toString().padStart(2, "0"), "-").concat(createdAt.getDate().toString().padStart(2, "0"));
@@ -197,17 +182,15 @@ var historyCard = function historyCard(content, cost, wordCount, date) {
   createdAt.setHours(createdAt.getHours() + 7);
   return "\n        <div class=\"card card-custom mb-5 mt-4\">\n            <div class=\"card-body px-3 py-3 row align-items-center\">\n                <div class=\"col-4 b2-400 text-dark-60\">\n                    ".concat(content.substring(0, 58), "...\n                </div>\n                <div class=\"col-2 b2-700 text-purple-70\">\n                    $").concat(cost, "\n                </div>\n                <div class=\"col-2 b2-700 text-primary-70\">\n                    ").concat(wordCount, " words\n                </div>\n                <div class=\"col-2 b2-400 text-dark-60\">\n                    ").concat(formattedDate, "\n                </div >\n                <div class=\"col-2 b2-400 text-dark-60\">\n                    ").concat(formattedTime, "\n                </div>\n            </div >\n        </div > ");
 };
-
 var updateStats = function updateStats(data) {
   var _data = _slicedToArray(data, 7),
-      userReq = _data[0],
-      userWord = _data[1],
-      userCost = _data[2],
-      teamReq = _data[3],
-      teamTotal = _data[4],
-      teamWord = _data[5],
-      teamCost = _data[6];
-
+    userReq = _data[0],
+    userWord = _data[1],
+    userCost = _data[2],
+    teamReq = _data[3],
+    teamTotal = _data[4],
+    teamWord = _data[5],
+    teamCost = _data[6];
   $("#userReq").html(userReq);
   $("#userWord").html(userWord);
   $("#userCost").html(userCost);
@@ -216,21 +199,18 @@ var updateStats = function updateStats(data) {
   $("#teamWord").html(teamWord);
   $("#teamCost").html(teamCost);
 };
-
 var updateUserHistory = function updateUserHistory(data) {
   $("#my-account").html("");
   $.each(data, function (index, value) {
     $("#my-account").append(historyCard(value.content, value.cost, value.word_count, value.created_at));
   });
 };
-
 var updateTeamHistory = function updateTeamHistory(data) {
   $("#all-account").html("");
   $.each(data, function (index, value) {
     $("#all-account").append(historyCard(value.content, value.cost, value.word_count, value.created_at));
   });
 };
-
 var fetchLogAndUpdate = function fetchLogAndUpdate() {
   $.get({
     url: PLAGIARISM_LOGS_API_URL,
@@ -251,13 +231,12 @@ var fetchLogAndUpdate = function fetchLogAndUpdate() {
       toastr.error(err.responseJSON.message);
     }
   });
-}; // listen for words density
+};
 
-
+// listen for words density
 radioButtons.forEach(function (radioButton) {
   radioButton.addEventListener('change', function (event) {
     var selectedValue = event.target.value;
-
     switch (selectedValue) {
       case "1":
         $("#top1").show();
@@ -266,7 +245,6 @@ radioButtons.forEach(function (radioButton) {
         $("#top4").hide();
         $("#top5").hide();
         break;
-
       case "2":
         $("#top1").hide();
         $("#top2").show();
@@ -274,7 +252,6 @@ radioButtons.forEach(function (radioButton) {
         $("#top4").hide();
         $("#top5").hide();
         break;
-
       case "3":
         $("#top1").hide();
         $("#top2").hide();
@@ -282,7 +259,6 @@ radioButtons.forEach(function (radioButton) {
         $("#top4").hide();
         $("#top5").hide();
         break;
-
       case "4":
         $("#top1").hide();
         $("#top2").hide();
@@ -290,7 +266,6 @@ radioButtons.forEach(function (radioButton) {
         $("#top4").show();
         $("#top5").hide();
         break;
-
       case "5":
         $("#top1").hide();
         $("#top2").hide();
@@ -298,7 +273,6 @@ radioButtons.forEach(function (radioButton) {
         $("#top4").hide();
         $("#top5").show();
         break;
-
       default:
         $("#top1").hide();
         $("#top2").hide();
@@ -308,8 +282,9 @@ radioButtons.forEach(function (radioButton) {
         break;
     }
   });
-}); // function for change font size
+});
 
+// function for change font size
 fontSizeButtons.forEach(function (fontSizeBtn) {
   fontSizeBtn.addEventListener('change', function (event) {
     var selectedValue = event.target.value;
@@ -319,34 +294,31 @@ fontSizeButtons.forEach(function (fontSizeBtn) {
     $("textarea").addClass(selectedValue);
   });
 });
-
 var showDensity = function showDensity() {
   $(".words-density").show();
   $(".plagiarism-result").hide();
 };
-
 var showPlagiarism = function showPlagiarism() {
   $(".words-density").hide();
   $(".plagiarism-result").show();
-}; // function for change result mode
+};
 
-
+// function for change result mode
 resultTypeButtons.forEach(function (resultBtn) {
   resultBtn.addEventListener('change', function (event) {
     var selectedValue = event.target.value;
-
     if (selectedValue === "density") {
       showDensity();
     } else {
       showPlagiarism();
     }
   });
-}); // function for change history type
+});
 
+// function for change history type
 historyTypeButtons.forEach(function (btn) {
   btn.addEventListener('change', function (event) {
     var selectedValue = event.target.value;
-
     if (selectedValue === "calendar") {
       $("#history-calendar").show();
       $("#history-list").hide();
@@ -355,8 +327,9 @@ historyTypeButtons.forEach(function (btn) {
       $("#history-calendar").hide();
     }
   });
-}); // function for change size of result
+});
 
+// function for change size of result
 resultSizeButtons.forEach(function (btn) {
   btn.addEventListener('change', function (event) {
     var selectedValue = event.target.value;
@@ -366,25 +339,25 @@ resultSizeButtons.forEach(function (btn) {
       if (count < parseInt(selectedValue)) {
         $(".result-container").append(resultCards(index, querywords, result));
       }
-
       count++;
     });
     $(".result-container").append("\n            <a href=\"".concat(allviewurl, "\" id=\"fullUrl\" target=\"_blank\" rel=\"noopener noreferrer noindex\" class=\"btn button-gray-20 b2-700 full-url-btn\"> <u>See detail result</u></a>\n            "));
   });
-}); // function for change collapse behavior of result
+});
 
+// function for change collapse behavior of result
 document.querySelectorAll('input[type="radio"][name="result-collapse"]').forEach(function (btn) {
   btn.addEventListener('change', function (event) {
     var selectedValue = event.target.value;
-
     if (selectedValue == "expand") {
       $(".result-container").slideDown();
     } else {
       $(".result-container").slideUp();
     }
   });
-}); // function for remove content on text input
+});
 
+// function for remove content on text input
 $(".remove-btn").on("click", function () {
   $(".result-input").html("");
   $(".result-container").html("");
@@ -395,8 +368,9 @@ $(".remove-btn").on("click", function () {
   $(".plagiarism-result").hide();
   $("#text-check").removeClass("h-400");
   wordCounter();
-}); // linkChecker
+});
 
+// linkChecker
 $("#linkCheckerBtn").on("click", function () {
   if (checkUrl(inputLink.value)) {
     $("#urlEmbedContainer").attr("src", inputLink.value);
@@ -414,11 +388,9 @@ $("#linkCheckerBtn").on("click", function () {
     toastr.error('URL Format is not valid', 'Error');
   }
 });
-
 function wordCounter() {
   characterCount.innerHTML = numberWithCommas(input.value.length);
   var words = input.value.replace(/['";:,.?\xbf\-!\xa1]+/g, "").match(/\S+/g);
-
   if (input.value != "") {
     $("#emptyState").hide();
     $(".estimation-card").show();
@@ -428,7 +400,6 @@ function wordCounter() {
     $("#emptyState").show();
     $(".estimation-card").hide();
   }
-
   if (words) {
     wordCount.innerHTML = words.length;
     totalWordsEst.innerHTML = words.length;
@@ -438,10 +409,8 @@ function wordCounter() {
     wordCount.innerHTML = 0;
     WORDS_LENGTH = 0;
   }
-
   if (words) {
     var sentences = input.value.match(/\w([^.?!;\u2026]+[.?!;\u2026]+)/g);
-
     if (!sentences) {
       sentenceCount.innerHTML = 0;
     } else {
@@ -450,17 +419,14 @@ function wordCounter() {
   } else {
     sentenceCount.innerHTML = 0;
   }
-
   if (words) {
     var paragraphs = input.value.replace(/\n$/gm, '').split(/\n/);
     paragraphCount.innerHTML = paragraphs.length;
   } else {
     paragraphCount.innerHTML = 0;
   }
-
   if (words) {
     var seconds = Math.floor(words.length * 60 / 275);
-
     if (seconds > 59) {
       var minutes = Math.floor(seconds / 60);
       seconds = seconds - minutes * 60;
@@ -471,62 +437,47 @@ function wordCounter() {
   } else {
     readingTime.innerHTML = "0s";
   }
-
   if (words) {
     var nonStopWords = [];
     var stopWords = ["+", "a", "able", "about", "above", "abst", "accordance", "according", "accordingly", "across", "actually", "adj", "after", "afterwards", "again", "against", "ah", "all", "almost", "alone", "along", "already", "also", "although", "always", "am", "among", "amongst", "an", "and", "another", "any", "anybody", "anyhow", "anymore", "anyone", "anything", "anyway", "anyways", "anywhere", "apparently", "approximately", "are", "aren", "arent", "around", "as", "aside", "at", "auth", "available", "away", "awfully", "b", "back", "be", "because", "before", "beforehand", "behind", "below", "beside", "besides", "between", "beyond", "biol", "both", "brief", "briefly", "but", "by", "c", "ca", "certain", "certainly", "co", "com", "contain", "couldnt", "d", "downwards", "due", "e", "ed", "edu", "eg", "eight", "either", "else", "elsewhere", "et", "et-al", "etc", "even", "ever", "ex", "f", "ff", "fifth", "first", "five", "fix", "followed", "following", "follows", "for", "former", "formerly", "forth", "found", "four", "from", "further", "furthermore", "g", "gave", "get", "gets", "getting", "give", "given", "gives", "giving", "go", "goes", "gone", "got", "gotten", "h", "had", "happens", "hardly", "has", "hasn't", "have", "haven't", "having", "he", "hed", "hence", "her", "here", "hereafter", "hereby", "herein", "heres", "hereupon", "hers", "herself", "hes", "hi", "hid", "him", "himself", "his", "hither", "home", "how", "howbeit", "however", "hundred", "i", "id", "ie", "if", "i'll", "im", "immediate", "immediately", "importance", "important", "in", "inc", "indeed", "index", "information", "instead", "into", "invention", "inward", "is", "isn't", "it", "itd", "it'll", "its", "itself", "i've", "j", "just", "k", "keep", "keeps", "kept", "kg", "km", "know", "known", "knows", "l", "largely", "last", "lately", "later", "latter", "latterly", "least", "less", "lest", "let", "lets", "like", "liked", "likely", "line", "little", "'ll", "look", "looking", "looks", "ltd", "m", "made", "mainly", "make", "makes", "many", "may", "maybe", "me", "mean", "means", "meantime", "meanwhile", "merely", "mg", "might", "million", "miss", "ml", "more", "moreover", "most", "mostly", "mr", "mrs", "much", "mug", "must", "my", "myself", "n", "na", "name", "namely", "nay", "nd", "near", "nearly", "necessarily", "necessary", "need", "needs", "neither", "never", "nevertheless", "new", "next", "nine", "ninety", "no", "nobody", "non", "none", "nonetheless", "noone", "nor", "normally", "nos", "not", "noted", "nothing", "now", "nowhere", "o", "obtain", "obtained", "obviously", "of", "off", "often", "oh", "ok", "okay", "old", "omitted", "on", "once", "one", "ones", "only", "onto", "or", "ord", "other", "others", "otherwise", "ought", "our", "ours", "ourselves", "out", "outside", "over", "overall", "owing", "own", "p", "page", "pages", "part", "particular", "particularly", "per", "perhaps", "placed", "please", "plus", "poorly", "possible", "possibly", "potentially", "pp", "predominantly", "previously", "primarily", "probably", "promptly", "proud", "provides", "put", "q", "que", "quickly", "quite", "qv", "r", "ran", "rather", "rd", "re", "readily", "really", "recent", "recently", "ref", "refs", "regarding", "regardless", "regards", "related", "relatively", "research", "respectively", "resulted", "resulting", "results", "right", "run", "s", "said", "same", "saw", "say", "saying", "says", "sec", "section", "see", "seeing", "seem", "seemed", "seeming", "seems", "seen", "self", "selves", "sent", "seven", "several", "shall", "she", "shed", "she'll", "shes", "should", "shouldn't", "show", "showed", "shown", "showns", "shows", "significant", "significantly", "similar", "similarly", "since", "six", "slightly", "so", "some", "somebody", "somehow", "someone", "somethan", "something", "sometime", "sometimes", "somewhat", "somewhere", "soon", "sorry", "specifically", "specified", "specify", "specifying", "still", "stop", "strongly", "sub", "substantially", "successfully", "such", "sufficiently", "sup", "sure", "t", "take", "taken", "taking", "tell", "tends", "th", "than", "thanx", "that", "that'll", "thats", "that've", "the", "their", "theirs", "them", "themselves", "then", "thence", "there", "thereafter", "thereby", "thered", "therefore", "therein", "there'll", "thereof", "therere", "theres", "thereto", "thereupon", "there've", "these", "they", "theyd", "they'll", "theyre", "they've", "think", "this", "those", "thou", "though", "thoughh", "thousand", "throug", "through", "throughout", "thru", "thus", "til", "tip", "to", "together", "too", "took", "toward", "towards", "tried", "tries", "truly", "try", "trying", "ts", "twice", "two", "u", "un", "under", "unfortunately", "unless", "unlike", "unlikely", "until", "unto", "up", "upon", "ups", "us", "use", "used", "useful", "usefully", "usefulness", "uses", "using", "usually", "v", "value", "various", "'ve", "very", "via", "viz", "vol", "vols", "vs", "w", "want", "wants", "was", "wasn't", "way", "we", "wed", "welcome", "we'll", "went", "were", "weren't", "we've", "what", "whatever", "what'll", "whats", "when", "whence", "whenever", "where", "whereafter", "whereas", "whereby", "wherein", "wheres", "whereupon", "wherever", "whether", "which", "while", "whim", "whither", "who", "whod", "whoever", "whole", "who'll", "whom", "whomever", "whos", "whose", "why", "widely", "willing", "wish", "with", "within", "without", "won't", "words", "world", "would", "wouldn't", "www", "x", "y", "yes", "yet", "you", "youd", "you'll", "your", "youre", "yours", "yourself", "yourselves", "you've", "z", "zero", "(", ")"];
-
     for (var i = 0; i < words.length; i++) {
       if (stopWords.indexOf(words[i].toLowerCase()) === -1) {
         nonStopWords.push(words[i].toLowerCase());
       }
     }
-
     for (var j = 1; j < 6; j++) {
       var keywords = {};
-
       for (var i = 0; i < nonStopWords.length - (j - 1); i++) {
         var key = '';
-
         for (var k = i; k < i + j; k++) {
           key += nonStopWords[k] + ' ';
         }
-
         key = key.trim();
-
         if (key in keywords) {
           keywords[key] += 1;
         } else {
           keywords[key] = 1;
         }
       }
-
       var sortedKeywords = [];
       var weights = 0;
-
       for (var keyword in keywords) {
         sortedKeywords.push([keyword, keywords[keyword]]);
         weights += keywords[keyword];
       }
-
       sortedKeywords.sort(function (a, b) {
         return b[1] - a[1];
       });
       var density = 0;
-
       if (j === 2 || j === 3) {
         if (sortedKeywords[0]) {
           density = sortedKeywords[0];
         }
-
         if (density > TOP_DENSITY) TOP_DENSITY = density;
       }
-
       topKeyword[j - 1].innerHTML = "";
-
       for (var i = 0; i < sortedKeywords.length && i < 10; i++) {
         var div = document.createElement('div');
-
         if (i == 9) {
           div.innerHTML = "<div class='row'>" + "<div class='col-8'>" + "<div class='d-flex justify-content-start align-items-center'>" + "<div class='container-label-top-keywords mr-3'>" + "<span class='label label-lg label-non-top-3'>" + (i + 1) + "</span>" + "</div>" + sortedKeywords[i][0] + "</div>" + "</div>" + "<div class='col-4 d-flex justify-content-end align-items-center'>" + "<div class='d-flex justify-content-end align-items-center'>" + "<span class='mr-3 font-weight-bolder mt-1'>" + sortedKeywords[i][1] + "</span>" + "<span class='mt-1'>" + (sortedKeywords[i][1] / nonStopWords.length * 100).toFixed(1) + "%</span>" + "</div>" + "</div>" + "</div>";
         } else if (i > 2) {
@@ -534,17 +485,14 @@ function wordCounter() {
         } else {
           div.innerHTML = "<div class='row'>" + "<div class='col-8'>" + "<div class='d-flex justify-content-start align-items-center'>" + "<div class='container-label-top-keywords mr-3'>" + "<span class='label label-lg label-top-3'>" + (i + 1) + "</span>" + "</div>" + sortedKeywords[i][0] + "</div>" + "</div>" + "<div class='col-4 d-flex justify-content-end align-items-center'>" + "<div class='d-flex justify-content-end align-items-center'>" + "<span class='mr-3 font-weight-bolder mt-1'>" + sortedKeywords[i][1] + "</span>" + "<span class='mt-1'>" + (sortedKeywords[i][1] / nonStopWords.length * 100).toFixed(1) + "%</span>" + "</div>" + "</div>" + "</div>" + "<hr class='my-2'>";
         }
-
         topKeyword[j - 1].appendChild(div);
       }
     }
   }
 }
-
 input.addEventListener("input", function () {
   wordCounter();
 });
-
 var resultCards = function resultCards(index, totalWords, data) {
   var percentage = Math.round(data.minwordsmatched / totalWords * 100);
   var levelUrl = checkUrlLevel(data.url);
@@ -553,7 +501,9 @@ var resultCards = function resultCards(index, totalWords, data) {
   titlesizer.text(data.title);
   var pixel = Math.floor(titlesizer.innerWidth());
   return "\n<div class=\"accordion accordion-light accordion-toggle-arrow custom-features-accordion\" id = \"accordionResult".concat(data.index, "\">\n    <div class=\"card bg-white px-3\" style=\"\">\n        <div class=\"card-header\" id=\"headingOne2\">\n            <div class=\"card-title collapsed pr-4 justify-content-between\" data-toggle=\"collapse\"\n                data-target=\"#accordion").concat(index + 1, "One\">\n                <div class=\"index-pill s-400\">").concat(data.index, "</div>\n                <div class=\"d-flex align-items-center\">\n                    ").concat(data.percentmatched != undefined ? "\n                    <p class=\"m-0 s-400 text-primary-70 mr-3\">".concat(data.percentmatched, "%</p>\n                    <p class=\"m-0 s-400\">").concat(textMatched, "</p>") : "<p class=\"m-0 s-400\">".concat(seeDetailText, "</p>"), "\n                </div>\n            </div>\n        </div>\n        <div id=\"accordion").concat(data.index, "One\" class=\"collapse\" data-parent=\"#accordionResult").concat(data.index, "\">\n            <div class=\"card-body py-2\">\n                <div class=\"d-flex align-items-center flex-column\">\n                    <hr class='my-2 w-100'>\n                        <div class=\"row w-100\">\n                            <div class=\"col-7 s-400 text-ellipsis\"><a href=\"").concat(data.url, "\" target=\"_blank\" rel=\"noopener noreferrer noindex\">").concat(data.url, "</a></div>\n                            <div class=\"col-3 s-400 flex-shrink-0 text-primary-70\">").concat(levelUrl, " levels</div>\n                            <div class=\"col-2 s-400 flex-shrink-0 text-gray-100 text-right\">URL</div>\n                        </div>\n                        <hr class='my-2 w-100'>\n                            <div class=\"row w-100\">\n                                <div class=\"col-7 s-400 text-ellipsis\">").concat(data.title, "</div>\n                                <div class=\"col-3 s-400 flex-shrink-0 text-primary-70\">").concat(pixel, " pixels</div>\n                                <div class=\"col-2 s-400 flex-shrink-0 text-gray-100 text-right\">Title</div>\n                            </div>\n                            <hr class='my-2 w-100'>\n                                <div class=\"d-flex w-100 justify-content-end pr-3\">\n                                    <p class=\"m-0 mx-3 s-400 text-gray-100\">(").concat(data.minwordsmatched, " of ").concat(totalWords, ")</p>\n                                </div>\n                                <div class=\"my-3 w-100 py-2 px-3 background-gray-20 b2-400\">\n                                    ").concat(data.textsnippet, "\n                                </div>\n\n                                <div class=\"my-2 d-flex align-items-start justify-content-start w-100\">\n                                    <a href=\"").concat(data.url, "\" target=\"_blank\" rel=\"noopener noreferrer noindex\" class=\"btn button-gray-20 b2-700\"> <u>View \"index\" on Copyscape</u></a>\n                                </div>\n\n                                <hr class='my-2 w-100'>\n                                    <div class=\"d-flex w-100 justify-content-end mb-3 pr-3\">\n                                        <p class=\"m-0 mx-3 s-400 text-gray-100\">(").concat(data.minwordsmatched, " of ").concat(totalWords, ")</p>\n                                        <p class=\"m-0 mx-3 s-400 text-primary-70\">").concat(percentage, "%</p>\n                                        <p class=\"m-0 ml-3 s-400 text-gray-100\">Minimum words matched limit</p>\n                                    </div>\n                                </div>\n                            </div>\n                        </div>\n                </div>\n            </div>");
-}; // function to highlight the matched text
+};
+
+// function to highlight the matched text
 // function styleMatchedText(originalText, resultText) {
 //     const splitted = resultText.split("... ").filter(item => item.trim() !== "");
 //     console.log(splitted)
@@ -562,26 +512,23 @@ var resultCards = function resultCards(index, totalWords, data) {
 //         var regex = new RegExp(match, 'g');
 //         originalText = originalText.replace(regex, '<span class="highlight-red">' + match + '</span>');
 //     }
+
 //     return originalText;
 // }
 
-
 function styleMatchedText(originalText, resultText) {
   var escapedResultText = resultText.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); // Escape special regex characters
-
   var regex = new RegExp(escapedResultText, 'g');
   originalText = originalText.replace(regex, '<span class="highlight-red">$&</span>');
   return originalText;
 }
-
 function animateValue(id, start, end, duration) {
   var obj = jQuery('.' + id),
-      range,
-      current,
-      increment,
-      stepTime,
-      timer;
-
+    range,
+    current,
+    increment,
+    stepTime,
+    timer;
   if (start == end) {
     range = 0;
     current = start;
@@ -597,14 +544,12 @@ function animateValue(id, start, end, duration) {
     timer = setInterval(function () {
       current += increment;
       obj.html(current + '%');
-
       if (current == end) {
         clearInterval(timer);
       }
     }, stepTime);
   }
 }
-
 function strokeValue(score, category, isReverse) {
   var card = jQuery('.' + category);
   var value = jQuery('.value-' + category);
@@ -614,7 +559,6 @@ function strokeValue(score, category, isReverse) {
   card.removeClass('progress-green');
   card.removeClass('progress-red');
   card.removeClass('progress-orange');
-
   if (isReverse && score < 50 || !isReverse && score >= 90) {
     card.addClass('progress-red');
     value.addClass('value-red');
@@ -625,19 +569,18 @@ function strokeValue(score, category, isReverse) {
     card.addClass('progress-green');
     value.addClass('value-green');
   }
-
   card.attr('data-percentage', score);
   animateValue('value-' + category, 0, score, 3000);
 }
-
 $("#text-check").on("change", function () {
   if ($("#text-check").val() !== "") {
     $("#text-check").addClass("h-400");
   } else {
     $("#text-check").removeClass("h-400");
   }
-}); // PLAGIARISM CHECKER
+});
 
+// PLAGIARISM CHECKER
 $("#button-checker").on("click", function () {
   var text;
   Swal.fire({
@@ -653,7 +596,6 @@ $("#button-checker").on("click", function () {
       } else {
         text = $('#url-check').val();
       }
-
       $.post({
         url: PLAGIARISM_CHECK_URL,
         data: {
@@ -677,8 +619,9 @@ $("#button-checker").on("click", function () {
             showPlagiarism();
             strokeValue(res.data.allpercentmatched, "duplicate", false);
             strokeValue(100 - res.data.allpercentmatched, "unique", true);
-            $("#button-checker").prop("disabled", false); // var textareaContent = styleMatchedText(text, res.data.alltextmatched)
+            $("#button-checker").prop("disabled", false);
 
+            // var textareaContent = styleMatchedText(text, res.data.alltextmatched)
             var textareaContent = _text;
             $('.result-input').append(textareaContent);
             $('.result-input').show();
@@ -690,7 +633,6 @@ $("#button-checker").on("click", function () {
             results.forEach(function (result, index) {
               $(".result-container").append(resultCards(index, querywords, result));
             });
-
             if (results.length > 0 && res.data.allpercentmatched != 100) {
               $(".result-option").show();
               $(".result-container").append("\n                                <a href=\"".concat(res.data.allviewurl, "\" id=\"fullUrl\" target=\"_blank\" rel=\"noopener noreferrer noindex\" class=\"btn button-gray-20 b2-700 full-url-btn\"> <u>").concat(seeOther, "</u></a>\n                                "));
@@ -698,7 +640,6 @@ $("#button-checker").on("click", function () {
               $(".result-option").hide();
               $(".result-container").hide();
             }
-
             fetchLogAndUpdate();
           } else {
             toastr.error(res.message);
@@ -723,7 +664,7 @@ $("#button-checker").on("click", function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! F:\WORK\cmlabs\tools\resources\js\plagiarism-checker.js */"./resources/js/plagiarism-checker.js");
+module.exports = __webpack_require__(/*! C:\D\1. cmlabs\cmlabs Tools\tools\resources\js\plagiarism-checker.js */"./resources/js/plagiarism-checker.js");
 
 
 /***/ })

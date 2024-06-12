@@ -26,7 +26,7 @@
 
                 <div class="row mt-10">
                     <div class="col-12">
-                        <h2 class="h6-700">@lang('plagiarism.other_tools')</h2>
+                        <p class="h6-700 mb-3">@lang('plagiarism.other_tools')</p>
                     </div>
                     <div class="col-12 mt-6">
                         @include('v2.components.other-tools')
@@ -34,7 +34,7 @@
                 </div>
                 <div class="row mt-16">
                     <div class="col-12">
-                        <h2 class="h6-700">@lang('plagiarism.broaden')</h2>
+                        <p class="h6-700 mb-3">@lang('plagiarism.broaden')</p>
                     </div>
                     <div class="col-12 mt-6">
                         @include('v2.components.cmlabs-resources')

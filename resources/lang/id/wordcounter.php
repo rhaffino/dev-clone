@@ -2,7 +2,7 @@
 
 return [
     "meta-title" => "Word Counter - Alat Penghitung Kata & Keyword Density",
-    "meta-desc" => "Word Counter untuk menghitung kata, paragraf dan durasi membaca secara instan. Lengkap dengan SEO Keyword Density checker untuk penulis!",
+    "meta-desc" => "Word Counter adalah alat penghitung jumlah kata, paragraf dan durasi membaca secara instan. Lengkap dengan SEO Keyword Density checker, cek di sini.",
     "title" => "WORD COUNTER",
     "subtitle" => "Hitung Kata dalam Teks",
     "tooltip-copy" => "Salin",
@@ -63,7 +63,7 @@ return [
                     ',
     "howto2" => '<p>Alat penghitung kata online dari cmlabs ini gratis dan bisa digunakan kapan saja. Tidak ada batas penggunaan kata sehingga Anda bisa menggunakannya untuk mengevaluasi berbagai macam bentuk teks secara praktis dan otomatis.</p>
                     <p>Untuk menggunakan Word Counter dari cmlabs, ikuti langkah-langkah berikut ini:</p>
-                    <h4 class="sub-titles">Masuk ke Halaman Word Counter cmlabs</h4>',
+                    <h3 class="sub-titles">Masuk ke Halaman Word Counter cmlabs</h3>',
     "howto3" => '<p>Gambar 1: Tampilan halaman depan Word Counter dari cmlabs</p>
                     <p>Mulai proses penghitungan kata secara otomatis dengan membuka halaman <a href="https://tools.cmlabs.co/in/word-counter">Word Counter</a> dari cmlabs. Di halaman utama ini, Anda dapat melihat tampilan box untuk menyalin teks dari draft yang telah Anda buat maupun menuliskannya secara langsung.</p>
                     <p>Terdapat beberapa spesifikasi yang perlu Anda perhatikan dalam penggunaan <i class="italics">tool</i> ini. Setiap <i class="italics">counter</i> memberikan indikasi apakah teks sudah memenuhi keperluan penulisan yang Anda tetapkan.</p>',
@@ -73,11 +73,11 @@ return [
                     <p>Jangan lupa untuk mengaktifkan Autosave agar data Anda tersimpan sekalipun tab tidak sengaja tertutup. Anda bisa klik ikon di sisi kanan atas box teks. Apabila ikon berwarna biru, maka tandanya sistem <i class="italics">autosave</i> sudah diaktifkan.
                     </p>',
     "howto5" => '<p>Gambar 3:  Tampilan ikon Create New dan Autosave</p>
-                    <h4 class="sub-titles">Cek Jumlah Karakter, Kata, dan Kalimat</h4>',
+                    <h3 class="sub-titles">Cek Jumlah Karakter, Kata, dan Kalimat</h3>',
     "howto6" => '<p>Gambar 4: Ilustrasi dari spesifikasi <i class="italics">counter</i></p>
                     <p>Teks yang dimasukkan pada <i class="italics">field</i> akan dianalisis oleh sistem <i class="italics">counter</i> cmlabs. Hasil penghitungan bisa dilihat langsung oleh pengguna. Dengan kata lain, alat ini tidak membutuhkan waktu sama sekali untuk melakukan <i class="italics">processing</i> data.</p>
                     <p>Rincian hasil hitungan karakter, kata, dan kalimat bisa dilihat di bagian atas box teks. Di samping itu, Anda bisa melihat berapa jumlah paragraf dan lamanya waktu membaca di baris yang sama.</p>
-                    <h4 class="sub-titles">Cek Keyword Density</h4>',
+                    <h3 class="sub-titles">Cek Keyword Density</h3>',
     "howto7" => '<p>Gambar 5: Tampilan kolom <i class="italics">keyword density</i> di Word Counter dari cmlabs</p>
                     <p>Di samping jumlah kata, penulisan artikel berdasarkan kaidah SEO harus dilakukan dengan memperhatikan <i class="italics">keyword density.</i> Alat penghitung kata dari cmlabs ini dapat menampilkan laporan dan rincian <i class="italics">density</i> atau kepadatan kata kunci dengan cepat.</p>
                     <p>Anda dapat melakukan pengecekan <i class="italics">density</i> setiap kata dengan melihat persentase yang ada di sisi kanan kolom. Data diurutkan berdasarkan jumlah kata dan banyaknya volume atau kepadatannya di dalam teks.</p>

@@ -171,19 +171,59 @@
                 </div>
             </div>
         </div>
-    @endif
-    @component('layouts.new_ui_design', [
-        'local' => $local,
-        'blogs' => $blogs,
-        'seo_terms' => $seo_terms,
-        'seo_guidelines' => $seo_guidelines,
-    ])
-        @slot('title', 'Technology Lookup')
-        @slot('subcontent_1')
-            <div class="" id="description-tab-1">
-                <h2 class="text-black">@lang('lookup.desc-1')</h2>
-                <p class="text-black">@lang('lookup.desc-1-1')</p>
-                <p class="text-black">@lang('lookup.desc-1-2')</p>
+    </div>
+</div>
+@endif
+@component('layouts.new_ui_design', ['local' => $local, 'blogs' => $blogs, 'seo_terms' => $seo_terms, 'seo_guidelines' => $seo_guidelines])
+    @slot('title', 'Technology Lookup')
+    @slot('subcontent_1')
+        <div class="" id="description-tab-1">
+            <h2 class="text-black">@lang('lookup.desc-1')</h2>
+            <p class="text-black">@lang('lookup.desc-1-1')</p>
+            <p class="text-black">@lang('lookup.desc-1-2')</p>
+        </div>
+    @endslot
+    @slot('subcontent_2')
+        <div class="d-none" id="description-tab-2">
+            <h2 class="text-black">@lang('lookup.desc-2')</h2>
+            <p class="text-black">@lang('lookup.desc-2-1')</p>
+            <ul>
+                <li><p class="text-black">@lang('lookup.desc-2-1-1')</p></li>
+                <li><p class="text-black">@lang('lookup.desc-2-1-2')</p></li>
+                <li><p class="text-black">@lang('lookup.desc-2-1-3')</p></li>
+                <li><p class="text-black">@lang('lookup.desc-2-1-4')</p></li>
+            </ul>
+        </div>
+    @endslot
+    @slot('subcontent_3')
+        <div class="d-none" id="description-tab-3">
+            <h2 class="text-black">@lang('lookup.desc-3')</h2>
+            <p class="text-black">@lang('lookup.desc-3-1')</p>
+            <h3 class="sub-titles">@lang('lookup.desc-3-1-1')</h3>
+            <p class="text-black">@lang('lookup.desc-3-1-2')</p>
+            <p class="text-black">@lang('lookup.desc-3-1-3')</p>
+            <h3 class="sub-titles">@lang('lookup.desc-3-2-1')</h3>
+            <p class="text-black">@lang('lookup.desc-3-2-2')</p>
+            <p class="text-black">@lang('lookup.desc-3-2-3')</p>
+        </div>
+    @endslot
+    @slot('how_to_content')
+        <div class="d-none" id="how-to">
+            @lang('lookup.howto1')
+            <div class="expand-text">
+                @lang('lookup.howto2')
+                <img class="mb-4" src="{{asset('/media/images/lookup_instruction_1.webp')}}" alt="HowTo-lookup-1" width="80%">
+                @lang('lookup.howto3')
+                <img class="mb-4" src="{{asset('/media/images/lookup_instruction_2.webp')}}" alt="HowTo-lookup-2" width="80%">
+                @lang('lookup.howto4')
+                <img class="mb-4" src="{{asset('/media/images/lookup_instruction_3.webp')}}" alt="HowTo-lookup-3" width="80%">
+                @lang('lookup.howto5')
+                <img class="mb-4" src="{{asset('/media/images/lookup_instruction_4.webp')}}" alt="HowTo-lookup-4" width="80%">
+                @lang('lookup.howto6')
+                <img class="mb-4" src="{{asset('/media/images/lookup_instruction_5.webp')}}" alt="HowTo-lookup-5" width="80%">
+                @lang('lookup.howto7')
+                <img class="mb-4" src="{{asset('/media/images/lookup_instruction_6.webp')}}" alt="HowTo-lookup-6" width="80%">
+                @lang('lookup.howto8')
             </div>
         @endslot
         @slot('subcontent_2')

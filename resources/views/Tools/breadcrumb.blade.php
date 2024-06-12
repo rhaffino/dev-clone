@@ -216,11 +216,11 @@ id/json-ld-breadcrumb-schema-generator
         <div class="d-none" id="description-tab-2">
             <h2>@lang('breadcrumb.desc-2')</h2>
             <p>@lang('breadcrumb.desc-2-1')</p>
-            <h4 class="sub-titles">@lang('breadcrumb.desc-2-2-1')</h4>
+            <h3 class="sub-titles">@lang('breadcrumb.desc-2-2-1')</h3>
             <p>@lang('breadcrumb.desc-2-2-2')</p>
-            <h4 class="sub-titles">@lang('breadcrumb.desc-2-3-1')</h4>
+            <h3 class="sub-titles">@lang('breadcrumb.desc-2-3-1')</h3>
             <p>@lang('breadcrumb.desc-2-3-2')</p>
-            <h4 class="sub-titles">@lang('breadcrumb.desc-2-4-1')</h4>
+            <h3 class="sub-titles">@lang('breadcrumb.desc-2-4-1')</h3>
             <p>@lang('breadcrumb.desc-2-4-2')</p>
         </div>
     @endslot
@@ -228,11 +228,11 @@ id/json-ld-breadcrumb-schema-generator
         <div class="d-none" id="description-tab-3">
             <h2>@lang('breadcrumb.desc-3')</h2>
             <p>@lang('breadcrumb.desc-3-1')</p>
-            <h4 class="sub-titles">@lang('breadcrumb.desc-3-2-1')</h4>
+            <h3 class="sub-titles">@lang('breadcrumb.desc-3-2-1')</h3>
             <p>@lang('breadcrumb.desc-3-2-2')</p>
-            <h4 class="sub-titles">@lang('breadcrumb.desc-3-3-1')</h4>
+            <h3 class="sub-titles">@lang('breadcrumb.desc-3-3-1')</h3>
             <p>@lang('breadcrumb.desc-3-3-2')</p>
-            <h4 class="sub-titles">@lang('breadcrumb.desc-3-4-1')</h4>
+            <h3 class="sub-titles">@lang('breadcrumb.desc-3-4-1')</h3>
             <p>@lang('breadcrumb.desc-3-4-2')</p>
         </div>
     @endslot

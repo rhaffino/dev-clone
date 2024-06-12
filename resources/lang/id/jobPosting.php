@@ -1,7 +1,7 @@
 <?php
 return [
-    "meta-title" => "Tool Gratis JSON-LD Job Posting Schema Generator",
-    "meta-desc" => "Buat konten website Anda terlihat spesifik sebagai konten panduan dengan JSON-LD How To Schema Generator",
+    "meta-title" => "Tool SEO Gratis JSON-LD Job Posting Schema Generator",
+    "meta-desc" => "Gunakan JSON-LD Job Posting schema generator untuk postingan pekerjaan yang lebih terstruktur dan aktifkan rich snippet SERP di Google untuk halaman Anda.",
     "title" => "JSON-LD JOB POSTING SCHEMA GENERATOR",
     "subtitle" => "Buat Website Anda Jadi Lebih Menarik Dan Tampil Berbeda",
     "label-jobTitle"=>"Judul pekerjaan",
@@ -81,44 +81,44 @@ return [
     "howto-title" =>'Cara Menggunakan Job Posting Schema Generator?',
     "howto1" =>'<h2>Cara Menggunakan Job Posting Schema Generator?</h2>
                     <p>Job Posting schema generator adalah tool yang bisa Anda gunakan untuk membuat job posting schema secara gratis. Adapun cara menghasilkan job posting schema menggunakan tool ini adalah sebagai berikut:</p>',
-    "howto1-1" => '<h4 class="sub-titles">Buka Halaman JSON-LD Job Posting Schema Generator</h4>
+    "howto1-1" => '<h3 class="sub-titles">Buka Halaman JSON-LD Job Posting Schema Generator</h3>
                     <p>Buka laman <a href="https://tools.cmlabs.co/en/json-ld-job-posting-schema-generator">JSON-LD Job Posting Schema Generator</a> untuk membuat lowongan pekerjaan menggunakan schema markup.</p>',
     "howto2" =>'<p>Gambar 1: Tampilan halaman <i class="italics">job posting schema generator</i> dari cmlabs.</p>
-                    <h4 class="sub-titles">Masukkan Judul Pekerjaan</h4>
+                    <h3 class="sub-titles">Masukkan Judul Pekerjaan</h3>
                     <p>Selanjutnya, Anda perlu memasukkan judul pekerjaan. Cukup tuliskan posisi pekerjaan apa yang saat ini tersedia di perusahaan Anda. Kemudian, pastikan tidak ada kesalahan ketik dalam judul pekerjaan tersebut.</p>',
     "howto3" =>'<p>Gambar 2: Masukkan judul pekerjaan pada field yang tersedia di job posting schema generator.</p>
-                    <h4 class="sub-titles">Tambahkan Identifier Pekerjaan</h4>
+                    <h3 class="sub-titles">Tambahkan Identifier Pekerjaan</h3>
                     <p>Selain judul pekerjaan, tambahkan identifier pekerjaan yaitu ID unik organisasi penyedia lapangan kerja untuk pekerjaan tersebut. Seperti halnya judul pekerjaan, pastikan untuk memasukkan identifier pekerjaan dalam format penulisan yang benar.</p>',
     "howto4" =>'<p>Gambar 3: Masukkan identifier pekerjaan pada field yang tersedia di job posting schema generator.</p>
-                    <h4 class="sub-titles">Jelaskan Deskripsi Pekerjaan</h4>
+                    <h3 class="sub-titles">Jelaskan Deskripsi Pekerjaan</h3>
                     <p>Selanjutnya, Anda juga perlu menambahkan deskripsi pekerjaan yang akan Anda posting. Deskripsi merupakan gambaran lengkap terkait pekerjaan.</p>',
     "howto5" =>'<p>Gambar 4: Masukkan deskripsi pekerjaan pada field yang tersedia di job posting schema generator.</p>
-                    <h4 class="sub-titles">Tambahkan Data Perusahaan dan Industri Anda</h4>
+                    <h3 class="sub-titles">Tambahkan Data Perusahaan dan Industri Anda</h3>
                     <p>Masukkan data perusahaan sebagai representasi dari organisasi yang menawarkan lowongan pekerjaan. Anda perlu mengisi nama dan URL perusahaan dan cantumkan industri perusahaan Anda.</p>',
     "howto6" =>'<p>Gambar 5: Masukkan data perusahaan dan industri pada field yang tersedia di job posting schema generator.</p>
-                    <h4 class="sub-titles">Tentukan Jenis Pekerjaan dan Jam Kerja</h4>
+                    <h3 class="sub-titles">Tentukan Jenis Pekerjaan dan Jam Kerja</h3>
                     <p>Selanjutnya, pilih salah satu jenis pekerjaan. Seperti yang terlihat pada gambar, ada beberapa opsi pekerjaan yaitu full time, part time, intern, dan sebagainya. Kemudian, tambahkan juga jam kerja pada kolom yang berada tepat di samping kanan jenis pekerjaan.</p>',
     "howto7" =>'<p>Gambar 6: Tentukan jenis pekerjaan dan jam kerja pada field yang tersedia di job posting schema generator.</p>
-                    <h4 class="sub-titles">Atur Waktu Posting dan Deadline Pendaftaran</h4>
+                    <h3 class="sub-titles">Atur Waktu Posting dan Deadline Pendaftaran</h3>
                     <p>Hal yang terpenting yaitu atur waktu kapan info pekerjaan ini akan Anda posting dan tentukan deadline pendaftaran. Anda cukup mengklik field yang tersedia dan tool ini akan menampilkan pemilih tanggal, kemudian Anda bisa menentukan waktu posting dan deadline pendaftaran.</p>',
     "howto8" =>'<p>Gambar 7: Atur waktu publikasi lowongan dan deadline pendaftaran pada field yang tersedia di job posting schema generator.</p>
-                    <h4 class="sub-titles">Lengkapi Lokasi Perusahaan</h4>
+                    <h3 class="sub-titles">Lengkapi Lokasi Perusahaan</h3>
                     <p>Tambahkan lokasi perusahaan seperti nama jalan, kota, provinsi, kode pos, dan negara dimana perusahaan Anda berada. Namun, apabila Anda menawarkan pekerjaan remote, cukup tekan checkbox pada opsi <b>&#34;Remote Job&#34;</b>. Dengan demikian, Anda tidak perlu memasukkan lokasi perusahaan.</p>',
     "howto9" =>'<p>Gambar 8: Lengkapi lokasi perusahaan pada field yang tersedia di job posting schema generator.</p>
-                    <h4 class="sub-titles">Bagikan Informasi Gaji</h4>
+                    <h3 class="sub-titles">Bagikan Informasi Gaji</h3>
                     <p>Setelah itu, masukkan data gaji pokok, gaji maksimum, mata uang, dan frekuensi pembayaran. Terdapat beberapa opsi untuk frekuensi pembayaran, yaitu per jam, mingguan, bulanan, atau tahunan.</p>',
     "howto10" =>'<p>Gambar 9: Lengkapi informasi gaji pada field yang tersedia di job posting schema generator.</p>
-                    <h4 class="sub-titles">Tambahkan Informasi Lainnya</h4>
+                    <h3 class="sub-titles">Tambahkan Informasi Lainnya</h3>
                     <p>Selain menambahkan beberapa data di atas, Anda juga bisa menambahkan informasi lain terkait lowongan pekerjaan yang akan dipublikasikan. Informasi lainnya mencakup tanggungjawab, keahlian, kualifikasi, persyaratan pendidikan, dan pengalaman.</p>',
     "howto11" =>'<p>Gambar 10: Tambahkan informasi lainnya pada field yang tersedia di job posting schema generator.</p>
-                    <h4 class="sub-titles">Salin Job Posting Schema Markup Yang Dihasilkan</h4>
+                    <h3 class="sub-titles">Salin Job Posting Schema Markup Yang Dihasilkan</h3>
                     <p>Jika Anda telah melengkapi atribut yang dibutuhkan untuk membuat Job Posting schema markup, maka Anda akan melihat preview schema markup di bagian kanan. Anda dapat menyalin schema markupsecara langsung dengan tombol <b>&#34;salin&#34;</b> dan pasang ke dalam kode program Anda.</p>',
     "howto12" =>'<p>Gambar 11: Opsi salin <i class="italics">Job Posting schema markup</i></p>
-                    <h4 class="sub-titles">Cek Validasi Script JSON-LD Job Posting Schema</h4>
+                    <h3 class="sub-titles">Cek Validasi Script JSON-LD Job Posting Schema</h3>
                     <p>Dengan Job Posting schema generator, Anda juga bisa memeriksa validitas <i class="italics">script</i> JSON-LD yang Anda gunakan. Cara mengeceknya pun cukup mudah, cukup tekan opsi cek yang terdapat di bagian pratinjau <i class="italics">script</i> yang dihasilkan.</p>
                     <p>Ketika Anda menekan tombol tersebut, maka Anda akan dialihkan menuju laman <a href="https://search.google.com/test/rich-results">Rich Result Test</a> milik Google. Pada halaman tersebut, Anda dapat mengecek apakah <i class="italics">schema markup</i> yang dihasilkan dapat berfungsi dengan baik di penelusuran Google.</p>',
     "howto13" =>'<p>Gambar 12: Opsi cek validasi Job Posting schema markup</p>
-                    <h4 class="subtitles">Reset Schema Generator</h4>
+                    <h3 class="subtitles">Reset Schema Generator</h3>
                     <p>Tool ini memiliki opsi yang memudahkan Anda dalam membuat Job Posting schema baru. Cukup klik opsi <b>&#34;Reset&#34;</b> dan menghapus seluruh data yang telah ditambahkan sebelumnya. Selanjutnya, Anda bisa membuat script baru.</p>',
     "howto14" =>'<p>Gambar 13: Opsi reset data yang ditambahkan pada Job Posting schema generator.</p>
                     <p>Itulah pembahasan singkat mengenai cara membuat job posting schema menggunakan tools <a href="https://tools.cmlabs.co/en/json-ld-faq-schema-generator">JSON-LD Job Posting Schema Generator</a> dari cmlabs. Tools ini dapat membantu Anda menghasilkan schema markup secara cepat dan efisien. Coba tool ini sekarang!</p>',

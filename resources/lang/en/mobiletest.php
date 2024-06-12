@@ -48,24 +48,24 @@ return [
     "howto-title" => 'How to Use Mobile-Friendly Test',
     "howto1" => '<h2>How to Use Mobile-Friendly Test</h2>
                     <p>We have summarized the steps you must take to operate this tool. Read more below.</p>',
-    "howto2" => '<h4 class="sub-titles">Go to the Mobile-Friendly Test tool page</h4>
+    "howto2" => '<h3 class="sub-titles">Go to the Mobile-Friendly Test tool page</h3>
                     <p>As the main step, of course, you have to open the page of this tool. After that, you will see several available features such as the URL column, display of results, checking progress, mobile preview, history, to a brief explanation of this tool.</p>',
     "howto3" => '<p>Figure 1: Mobile-friendly test page display from cmlabs</p>
-                    <h4 class="sub-titles">Enter Website URL</h4>
+                    <h3 class="sub-titles">Enter Website URL</h3>
                     <p>You must first enter the website URL in the field provided. Make sure you have entered the URL in the correct format (e.g https://example.com). Next, click the <b>&#34;Check URL&#34;</b> button to give the command to this tool to start checking the website.</p>',
     "howto4" => '<p>Figure 2: How to enter a website URL to check for mobile-friendliness</p>
-                    <h4 class="sub-titles">Analysis of Mobile-Friendly Test Results</h4>
+                    <h3 class="sub-titles">Analysis of Mobile-Friendly Test Results</h3>
                     <p>After you click the Check URL button, you will wait a while for the robot to check. You can see the progress in the progress bar below the URL field. This process does not take much time, you can immediately find out in the results field on the left side of the page.</p>
                     <p>The results page will display the mobile-friendliness status of the URL you entered along with any issues found if any.</p>',
     "howto5" => '<p>Figure 3: Mobile-friendly check results from previously entered URLs.</p>
-                    <h4 class="sub-titles">Reviewing Mobile View</h4>
+                    <h3 class="sub-titles">Reviewing Mobile View</h3>
                     <p>In addition to displaying mobile-friendliness results, you can also see how the website will look when accessed via mobile. This feature allows you to analyze the UI/UX appearance of the mobile view.</p>',
     "howto6" => '<p>Figure 4: Mobile preview feature on Mobile-Friendly test</p>
-                    <h4 class="sub-titles">View Mobile-Friendly Test Usage History</h4>
+                    <h3 class="sub-titles">View Mobile-Friendly Test Usage History</h3>
                     <p>The last thing you can do using the Mobile-Friendly Test is look at your history of using the tool. This tool allows you to view all URL history that has been checked using this tool.</p>
                     <p>With this feature, you don&#39;t need to re-type the URL that was checked if you want to re-check it. You can also delete usage history using the <b>&#34;Clear&#34;</b> button on the right side of the usage history feature.</p>',
     "howto7" => '<p>Figure 5: History feature of the Mobile-Friendly Test tool from cmlabs</p>
-                    <h4 class="sub-titles">Login After 5 Times of Usage</h4>
+                    <h3 class="sub-titles">Login After 5 Times of Usage</h3>
                     <p>Some cmlabs  free tools require a login process after 5 times of use, Mobile-friendly Test is one of them. If you have used it 5 times, our system will automatically display a message stating that you have reached the usage limit.</p>',
     "howto8" => '<p>Figure 6: The usage warning. In this warning, there is a login button that directs to the login page.</p>
                     <p>You can log in by clicking the login button on the warning message that appears. Next, you will be directed to the cmlabs login page. Please enter the required data, or you can log in via Google.</p>',

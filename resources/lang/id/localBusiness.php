@@ -1,7 +1,7 @@
 <?php
 return [
-    "meta-title" => "JSON-LD Local Business Schema Generator dari cmlabs",
-    "meta-desc" => "Gunakan markup schema JSON-LD Local Business Schema Generator dari cmlabs untuk memaksimalkan visibilitas dan peringkat website bisnis Anda!",
+    "meta-title" => "Tool SEO Gratis JSON-LD Local Business Schema Generator",
+    "meta-desc" => "Gunakan tools gratis markup schema JSON-LD Local Business Schema Generator dari cmlabs untuk memaksimalkan visibilitas dan peringkat website bisnis Anda.",
     "title" => "JSON-LD LOCAL BUSINESS SCHEMA GENERATOR",
     "subtitle" => "Menjadikan proses pembuatan markup lebih efisien, variatif, dan ramah SEO, agar meningkatkan visibilitas bisnis Anda di mesin pencarian.",
     "label-type" => "Tipe Bisnis Lokal",
@@ -84,10 +84,10 @@ return [
     "desc-2-10-2" => "Tool ini menyediakan pratinjau script secara real-time agar Anda dapat memvisualisasikan bagaimana tampilannya sembari memastikan bahwa strukturnya telah memenuhi keinginan Anda.",
     "howto-title" =>'Cara Menggunakan JSON-LD Local Business Schema Generator dari cmlabs',
     "howto1" => '<p>JSON-LD Local Business Schema Generator dari cmlabs adalah senjata rahasia Anda untuk membuat bisnis muncul di puncak hasil pencarian Google, lengkap dengan ulasan mengenai bisnis, alamat, jam operasional, hingga informasi kontak sekalipun. Berikut adalah tata cara penggunaannya secara lengkap.</p>
-                <h3 class="sub-titles">Buka Halaman JSON-LD Local Business Schema Generator</h3>',
+                <h4 class="sub-titles">Buka Halaman JSON-LD Local Business Schema Generator</h4>',
     "howto2" => '<p>Gambar 1: Halaman utama tool JSON-LD Local Business Schema Generator dari cmlabs</p>
                 <p>Pertama-tama, Anda perlu mengunjungi halaman tool JSON-LD Schema Generator dari cmlabs. Kemudian, pilih "<b>Local Business Generator</b>" untuk memulai pembuatan markup schema untuk bisnis Anda.</p>
-                <h3 class="sub-titles">Masukkan Data yang Diperlukan</h3>',
+                <h4 class="sub-titles">Masukkan Data yang Diperlukan</h4>',
     "howto3" => '<p>Figure 2: Masukkan  data pada kolom yang tersedia.</p>
                 <p>Setelah Anda berada di halaman generator, Anda harus memberikan informasi spesifik tentang bisnis lokal Anda untuk membuat markup JSON-LD. Berikut adalah rincian mengenai sejumlah data yang perlu dimasukkan:</p>
                 <ul>
@@ -109,7 +109,7 @@ return [
                 <p>Selagi Anda memasukkan setiap detail bisnis Anda, tool kami akan memproses skrip markup schema pada kolom di sebelah kanan. Script JSON-LD ini adalah senjata rahasia yang akan menerjemahkan informasi-informasi di atas menjadi struktur data yang dipahami oleh mesin pencari.</p>
                 <p>Saat melengkapi formulir, Anda disarankan untuk terus memperhatikannya demi memastikan bahwa semua data diubah menjadi format JSON-LD secara akurat. </p>
                 <p>Setelah semua informasi yang diperlukan dimasukkan, schema generator akan menghasilkan kode markup JSON-LD yang siap digunakan dan dapat dengan mudah Anda integrasikan ke dalam kode HTML situs web Anda.</p>
-                <h3 class="sub-titles">Tentukan Langkah Selanjutnya</h3>
+                <h4 class="sub-titles">Tentukan Langkah Selanjutnya</h4>
                 <p>Dengan tool ini, Anda dapat menggunakan tiga pendekatan, yaitu: Salin, Cek, dan Reset. Pahami fungsi dari masing-masing metode tersebut di bawah ini:</p>
                 <h4>Salin</h4>',
     "howto4" => '<p>Gambar 3: Opsi Salin</p>

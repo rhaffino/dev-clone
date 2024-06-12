@@ -328,19 +328,77 @@
                 </div>
             </div>
         </div>
-    @endif
-    @component('layouts.new_ui_design', [
-        'local' => $local,
-        'blogs' => $blogs,
-        'seo_terms' => $seo_terms,
-        'seo_guidelines' => $seo_guidelines,
-    ])
-        @slot('title', 'Link Analyzer Tool')
-        @slot('subcontent_1')
-            <div class="" id="description-tab-1">
-                <h2 class="text-black">@lang('analyzer.desc-1')</h2>
-                <p class="text-black">@lang('analyzer.desc-1-1')</p>
-                <p class="text-black">@lang('analyzer.desc-1-2')</p>
+    </div>
+</div>
+@endif
+@component('layouts.new_ui_design', ['local' => $local, 'blogs' => $blogs, 'seo_terms' => $seo_terms, 'seo_guidelines' => $seo_guidelines])
+    @slot('title', 'Link Analyzer Tool')
+    @slot('subcontent_1')
+        <div class="" id="description-tab-1">
+            <h2 class="text-black">@lang('analyzer.desc-1')</h2>
+            <p class="text-black">@lang('analyzer.desc-1-1')</p>
+            <p class="text-black">@lang('analyzer.desc-1-2')</p>
+        </div>
+    @endslot
+    @slot('subcontent_2')
+        <div class="d-none" id="description-tab-2">
+            <h2 class="text-black">@lang('analyzer.desc-2')</h2>
+            <p class="text-black">@lang('analyzer.desc-2-1')</p>
+            <ul>
+                <li><p class="text-black">@lang('analyzer.desc-2-1-1')</p></li>
+                <li><p class="text-black">@lang('analyzer.desc-2-1-2')</p></li>
+                <li><p class="text-black">@lang('analyzer.desc-2-1-3')</p></li>
+                <li><p class="text-black">@lang('analyzer.desc-2-1-4')</p></li>
+                <li><p class="text-black">@lang('analyzer.desc-2-1-5')</p></li>
+            </ul>
+        </div>
+    @endslot
+    @slot('subcontent_3')
+        <div class="d-none" id="description-tab-3">
+            <h2>@lang('analyzer.desc-3')</h2>
+            <p class="text-black">@lang('analyzer.desc-3-1')</p>
+            <ul>
+                <li><p class="text-black">@lang('analyzer.desc-3-1-1')</p></li>
+                <li><p class="text-black">@lang('analyzer.desc-3-1-2')</p></li>
+                <li><p class="text-black">@lang('analyzer.desc-3-1-3')</p></li>
+                <li><p class="text-black">@lang('analyzer.desc-3-1-4')</p></li>
+            </ul>
+        </div>
+    @endslot
+    @slot('subcontent_4')
+        <div class="d-none" id="description-tab-4">
+            <h3 class="sub-titles">@lang('analyzer.desc-4')</h3>
+            <p class="text-black">@lang('analyzer.desc-4-1-1')</p>
+            <p class="text-black">@lang('analyzer.desc-4-1-2')</p>
+            <p class="text-black">@lang('analyzer.desc-4-1-3')</p>
+            <ul>
+                <li><p class="text-black">@lang('analyzer.desc-4-1-1-1')</p></li>
+                <li><p class="text-black">@lang('analyzer.desc-4-1-1-2')</p></li>
+                <li><p class="text-black">@lang('analyzer.desc-4-1-1-3')</p></li>
+                <li><p class="text-black">@lang('analyzer.desc-4-1-1-4')</p></li>
+                <li><p class="text-black">@lang('analyzer.desc-4-1-1-5')</p></li>
+            </ul>
+        </div>
+    @endslot
+    @slot('how_to_content')
+        <div class="d-none" id="how-to">
+            @lang('analyzer.howto1')
+            <div class="expand-text">
+            @lang('analyzer.howto2')
+                <img class="mb-4" src="{{asset('/media/images/analyzer_instruction_1.webp')}}" alt="HowTo-analyzer-1" width="80%">
+                @lang('analyzer.howto3')
+                <img class="mb-4" src="{{asset('/media/images/analyzer_instruction_2.webp')}}" alt="HowTo-analyzer-2" width="80%">
+                @lang('analyzer.howto4')
+                <img class="mb-4" src="{{asset('/media/images/analyzer_instruction_3.webp')}}" alt="HowTo-analyzer-3" width="80%">
+                @lang('analyzer.howto5')
+                <img class="mb-4" src="{{asset('/media/images/analyzer_instruction_4.webp')}}" alt="HowTo-analyzer-4" width="80%">
+                @lang('analyzer.howto6')
+                <img class="mb-4" src="{{asset('/media/images/analyzer_instruction_5.webp')}}" alt="HowTo-analyzer-5" width="80%">
+                @lang('analyzer.howto7')
+                <img class="mb-4" src="{{asset('/media/images/analyzer_instruction_6.webp')}}" alt="HowTo-analyzer-6" width="80%">
+                @lang('analyzer.howto8')
+                <img class="mb-4" src="{{asset('/media/images/analyzer_instruction_7.webp')}}" alt="HowTo-analyzer-7" width="80%">
+                @lang('analyzer.howto9')
             </div>
         @endslot
         @slot('subcontent_2')

@@ -1,10 +1,9 @@
 <?php
 return [
-    "meta-title" => "Meta Generator dari cmlabs - Buat Meta Tag Mudah & Efisien",
-    "meta-desc" => "Meta Generator dari cmlabs adalah tool yang mempermudah pembuatan meta tag suatu halaman web dalam format kode HTML . Coba sekarang!",
+    "meta-title" => "Meta Generator  - Membuat Meta Tags Menjadi Mudah & Cepat",
+    "meta-desc" => "Meta Generator dari cmlabs adalah tool SEO yang mempermudah pembuatan meta tags suatu halaman website dalam format kode HTML . Coba gratis sekarang!",
     "title" => "META GENERATOR",
     "subtitle" => "Bantu Anda menyusun meta tag pada halaman web agar terindeks mesin pencari.",
-
     "label-title" => "Judul Situs",
     "placeholder-title" => "Judul berisi maksimal 60 karakter",
     "label-description" => "Deskripsi Situs",

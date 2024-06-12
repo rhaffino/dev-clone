@@ -46,6 +46,15 @@ function generate () {
                 save(url, res.data.title, res.data.description)
                 refreshLocalStorage();
                 recordUserActivity(url);
+                
+                if(!cookieExists('btn-metadesc-checker')){
+                    showFeedbackCard()
+                    
+                    let date = new Date();
+                    date.setTime(date.getTime() + (24 * 60 * 60 * 1000)); // 24 hours from now
+                    let expires = "expires=" + date.toUTCString();
+                    document.cookie = 'btn-metadesc-checker' + "=" + 'btn-metadesc-checker' + ";" + expires + ";path=/";
+                }
             } else {
                 toastr.error(res.message)
             }
@@ -432,6 +441,7 @@ function recordUserActivity(_url) {
             'submitted_url' : _url,
             'url': window.location.href,
             width_height: window.innerWidth + "x" + window.innerHeight,
+            email: userObject.email,
         },
         success: (res) => {
             if (res.statusCode === 200) {
@@ -450,7 +460,7 @@ function checkAutoRun(){
     const params = new Proxy(new URLSearchParams(window.location.search), {
         get: (searchParams, prop) => searchParams.get(prop),
     });
-    
+
     let url = params.url;
     let autoRun = params.auto;
 
@@ -464,7 +474,7 @@ $(document).ready(function () {
     $("#crawlURL").attr("disabled", true);
     $("#title").focus();
     checkAutoRun()
-    
+
     $('#manualModeOff').click(function () {
         $('#manualModeOn').removeClass("d-none").addClass("d-block");
         $('#botModeOff').removeClass("d-none").addClass("d-block");

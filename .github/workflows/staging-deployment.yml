@@ -17,6 +17,8 @@ jobs:
           command: |
             cd /var/www/staging-tools/
             echo ${{secrets.HOST_PASS}} | sudo -S chown dev:www-data -R ./
+            git stash
+            git stash clear
             git pull origin develop
             composer install
             npm install
