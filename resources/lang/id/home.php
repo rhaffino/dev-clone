@@ -156,4 +156,12 @@ return [
     "check" => "Cek",
     "no_notif" => "Saat ini tidak ada notifikasi...",
     "desc-new-tools-13-Oct-2023" => "30 tools untuk berbagai solusi! cmlabs telah sukses merilis 30 t tool mutakhir yang dirancang untuk memberdayakan bisnis dan individu yang berkecimpung di ranah digital. Sebanyak 30 tools, mulai dari Test & Checker, Sitemap.XML, dan Robots.TXT hingga beragam JSON-LD Schema Generator, telah diluncurkan untuk mengatasi kebutuhan dan tantangan spesifik di berbagai industri. Bersama rangkaian tool dari cmlabs, Anda dapat berdiri di garis terdepan kemajuan teknologi. Coba masing-masing tool cmlabs berdasarkan kebutuhan Anda sekarang!",
+    "ext-title" => "Permudah proses analisis dengan SEO Tools yang terpasang langsung di peramban Anda. Saatnya menjadi ahli SEO sejati.",
+    "ext-desc" => "Gratis di semua peramban berbasis Chromium",
+    "ext-cta-1" => "Pasang di peramban Anda sekarang?",
+    "ext-cta-2" => "Jelajahi sekarang",
+    "install-cta" => "Pasang Sekarang",
+    "card-cta" => "Ekstensi peramban, berbasis Chromium",
+    "get-extension" => "Dapatkan Ekstensi",
+    "launch" => "LUNCURKAN",
 ];
