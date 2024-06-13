@@ -1,7 +1,7 @@
 <?php
 return [
-    "meta-title" => "Sitemap Generator - Buat Google XML Sitemap Online untuk SEO",
-    "meta-desc" => "XML Sitemap Generator Tool gratis dari cmlabs untuk buat file XML dan permudah mesin pencari mengindeks laman Anda.",
+    "meta-title" => "Sitemap Generator - Free XML Sitemap Maker untuk SEO",
+    "meta-desc" => "Sitemap Generator adalah tools gratis dari cmlabs untuk membuat file XML dan permudah mesin pencari mengindeks halaman website Anda.",
     "title" => "SITEMAP GENERATOR",
     "sub-title" => "Perkaya Sitemap Untuk Crawler",
     "btn-generate" => "HASILKAN",
@@ -42,22 +42,22 @@ return [
     "howto-title" => 'Cara Menggunakan Sitemap Generator?',
     "howto1" => '<h2>Cara Menggunakan Sitemap Generator?</h2>
                     <p>Sitemap merupakan sebuah file berisi daftar URL pada suatu website yang berguna untuk memudahkan <i class="italics">search engine</i> memahami struktur website Anda. Ikuti beberapa langkah mudah untuk menggunakan sitemap generator berikut:</p>',
-    "howto2" => '<h4 class="sub-titles">Buka Halaman Sitemap Generator</h4>
+    "howto2" => '<h3 class="sub-titles">Buka Halaman Sitemap Generator</h3>
                     <p>Untuk memulai pembuatan sitemap, silahkan buka halaman <a href="https://tools.cmlabs.co/id/sitemap-generator">Sitemap Generator</a> dari cmlabs terlebih dahulu. Pada halaman tersebut, Anda bisa menambahkan URL yang ingin dibuat sitemapnya, melihat daftar URL yang terhubung dengan website, dan melihat riwayat penggunaan sitemap generator.</p>',
     "howto3" => '<p>Gambar 1: Tampilan halaman Sitemap Generator dari cmlabs</p>
-                    <h4 class="sub-titles">Masukkan URL Website</h4>
+                    <h3 class="sub-titles">Masukkan URL Website</h3>
                     <p>Cara membuat sitemap yang perlu dilakukan pertama kali yaitu masukkan URL website yang akan dilacak. Setelah menambahkan URL website pada field yang tersedia, selanjutnya Anda perlu menekan tombol <b>&#34;Generate&#34;</b>. Dengan demikian, tool ini akan mengeksekusi perintah untuk menghasilkan sitemap tersebut.</p>',
     "howto4" => '<p>Gambar 2: Tampilan ketika user telah memasukkan URL website pada field yang disediakan.</p>
-                    <h4 class="sub-titles">Tunggu Hingga Sitemap Berhasil Dibuat</h4>
+                    <h3 class="sub-titles">Tunggu Hingga Sitemap Berhasil Dibuat</h3>
                     <p>Selanjutnya, Anda perlu menunggu beberapa saat hingga sitemap ditampilkan. Hal ini karena tool ini membutuhkan waktu untuk mendapatkan daftar URL yang terhubung dengan URL website yang Anda ketikkan sebelumnya.</p>',
     "howto5" => '<p>Gambar 3: Tampilan informasi bahwa sitemap generator sedang melakukan perayapan data.</p>
-                    <h4 class="sub-titles">Periksa Hasil Sitemap Di Bagian Hasil</h4>
+                    <h3 class="sub-titles">Periksa Hasil Sitemap Di Bagian Hasil</h3>
                     <p>Setelah tool ini berhasil merayapi (crawl) URL website yang Anda masukkan, maka Anda akan melihat daftar URL yang terhubung pada website tersebut. Daftar URL ini bisa Anda tambahkan ke dalam file sitemap Anda saat ini. Apabila Anda belum memiliki file sitemap, maka Anda bisa mengklik tombol <b>&#34;Download Sitemap&#34;</b> dan sitemap yang dihasilkan akan tersimpan dalam perangkat Anda.</p>',
     "howto6" => '<p>Gambar 4: Tampilan daftar URL yang terhubung pada website yang dilacak.</p>
-                    <h4 class="sub-titles">Lihat Riwayat Pembuatan Sitemap Anda</h4>
+                    <h3 class="sub-titles">Lihat Riwayat Pembuatan Sitemap Anda</h3>
                     <p>Sitemap Generator memungkinkan Anda untuk melihat riwayat penggunaan tool ini. Dalam data riwayat tersebut, Anda akan melihat daftar URL website yang telah Anda tambahkan ketika menggunakan tool Sitemap Generator dari cmlabs.</p>',
     "howto7" => '<p>Gambar 5: Daftar riwayat penggunaan sitemap generator.</p>
-                    <h4 class="sub-titles">Login Setelah 5 Kali Penggunaaan </h4>
+                    <h3 class="sub-titles">Login Setelah 5 Kali Penggunaaan </h3>
                     <p>Beberapa alat gratis cmlabs membutuhkah proses login setelah pemakaian sebanyak 5 kali, Sitemap Generator adalah salah satunya. Jika Anda telah menggunakannya sebanyak 5 kali, sistem kami akan secara otomatis menampilkan pesan yang menyatakan bahwa Anda telah mencapai batas pemakaian.</p>',
     "howto8" => '<p>Gambar 6: Peringatan pemakaian telah mencapai batas. Pada peringatan ini, terdapat tombol login yang mengarahkan pada login page.</p>
                     <p>Anda dapat melakukan login dengan mengklik tombol login pada pesan peringatan yang muncul. Selanjutnya, Anda akan diarahkan menuju halaman login cmlabs. Silahkan masukkan data yang dibutuhkan, atau Anda dapat melakukan login melalui Google.</p>',

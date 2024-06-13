@@ -1,8 +1,7 @@
 <?php
 return [
-    "meta-title" => "Mobile Friendly Test - Pratinjau Performa Web di Seluler untuk SEO",
-    "meta-desc" => "Cek tampilan web dengan Mobile Friendly Test dari cmlabs. Identifikasi masalah dan analisa performa web agar lebih ramah handphone.",
-    "title" => "MOBILE FRIENDLY TEST",
+    "meta-title" => "Mobile Friendly Test - Pantau Performa Website di Seluler",
+    "meta-desc" => "Mobile Friendly Test dari cmlabs dapat membantu Anda mengidentifikasi masalah dan analisa performa website agar lebih ramah pada perangkat handphone.",
     "sub-title" => "Tes Tampilan Web Di Mobile",
     "btn-check" => "CEK URL",
     "page-issues" => "Masalah pemuatan halaman",
@@ -48,25 +47,25 @@ return [
     "howto-title" => 'Cara Menggunakan Mobile-Friendly Test',
     "howto1" => '<h2>Cara Menggunakan Mobile-Friendly Test</h2>
                     <p>Agar Anda dapat menggunakannya dengan baik, kami telah merangkum langkah-langkah yang harus Anda lakukan dalam mengoperasikan alat ini. Simak selengkapnya di bawah ini.</p>',
-    "howto2" => '<h4 class="sub-titles">Buka Halaman Mobile-Friendly Test tool</h4>
+    "howto2" => '<h3 class="sub-titles">Buka Halaman Mobile-Friendly Test tool</h3>
                     <p>Sebagai langkah utama, tentunya Anda harus membuka halaman dari tool ini. Setelah itu, Anda akan melihat beberapa fitur yang tersedia seperti kolom URL, tampilan hasil, progress pengecekan, pratinjau seluler, riwayat, hingga penjelasan singkat mengenai tools ini.</p>',
     "howto3" => '<p>Gambar 1: Tampilan halaman Mobile-friendly test dari cmlabs</p>
-                    <h4 class="sub-titles">Masukkan URL Website</h4>
+                    <h3 class="sub-titles">Masukkan URL Website</h3>
                     <p>Agar bisa melakukan cek mobile-friendliness suatu website, Anda harus memasukkan URL website pada field yang tersedia. Pastikan Anda telah memasukkan URL dalam format yang benar (e.g https://example.com). Selanjutnya, klik tombol <b>&#34;Cek URL&#34;</b> untuk memberikan perintah pada tool ini agar memulai pengecekan pada website tersebut.</p>',
     "howto4" => '<p>Gambar 2: Cara memasukkan URL website untuk dilakukan pengecekan mobile-friendliness</p>
-                    <h4 class="sub-titles">Analisa Hasil Mobile-Friendly Test</h4>
+                    <h3 class="sub-titles">Analisa Hasil Mobile-Friendly Test</h3>
                     <p>Setelah Anda mengklik tombol Cek URL, Anda akan menunggu beberapa saat agar robot melakukan pengecekan. Anda dapat melihat progressnya pada <i class="italics">progress bar</i> di bawah <i class="italics">field</i> URL. Proses ini tidak memakan banyak waktu, Anda bisa langsung mengetahuinya di field hasil di bagian kiri halaman.</p>
                     <p>Halaman hasil akan menampilkan status mobile-friendliness dari URL yang Anda masukkan beserta isu yang ditemukan bila ada. </p>',
     "howto5" => '<p>Gambar 3: Hasil cek mobile-friendly dari URL yang dimasukkan sebelumnya. </p>
                     <p>Dengan mengetahui hasil mobile-friendliness dari alat ini, Anda dapat meningkatkan performa saat ini. Oleh karena itu, perlu adanya perbaikan secara berkala untuk menjaga atau memperbaiki isu yang muncul. </p>
-                    <h4 class="sub-titles">Meninjau Tampilan Seluler</h4>
+                    <h3 class="sub-titles">Meninjau Tampilan Seluler</h3>
                     <p>Selain menampilkan hasil mobile-friendliness, Anda juga dapat melihat bagaimana tampilan website tersebut jika diakses melalui seluler. Fitur ini memungkinkan Anda menganalisa tampilan UI/UX pada mobile view.</p>',
     "howto6" => '<p>Gambar 4: Fitur pratinjau seluler pada Mobile-Friendly test</p>
-                    <h4 class="sub-titles">Lihat Riwayat Penggunaan Mobile-Friendly Test</h4>
+                    <h3 class="sub-titles">Lihat Riwayat Penggunaan Mobile-Friendly Test</h3>
                     <p>Hal terakhir yang bisa Anda lakukan menggunakan Mobile-Friendly Test adalah melihat riwayat penggunaan tool ini. Tool ini memungkinkan And auntuk melihat semua riwayat URL yang pernah diperiksa menggunakan tool ini.</p>
                     <p>Dengan Adanya fitur ini, Anda tidak perlu mengetikkan kembali URL yang pernah dicek jika ingin melakukan pengecekan ulang. Anda juga dapat menghapus riwayat penggunaan menggunakan tombol <b>&#34;Hapus&#34;</b> pada bagian kanan fitur riwayat penggunaan.</p>',
     "howto7" => '<p>Gambar 5: Fitur riwayat pengecekan pada Mobile-Friendly Test tool dari cmlabs</p>
-                    <h4 class="sub-titles">Login Setelah 5 Kali Penggunaaan </h4>
+                    <h3 class="sub-titles">Login Setelah 5 Kali Penggunaaan </h3>
                     <p>Beberapa alat gratis cmlabs membutuhkah proses login setelah pemakaian sebanyak 5 kali, Mobile-friendly Test adalah salah satunya. Jika Anda telah menggunakannya sebanyak 5 kali, sistem kami akan secara otomatis menampilkan pesan yang menyatakan bahwa Anda telah mencapai batas pemakaian.</p>',
     "howto8" => '<p>Gambar 6: Peringatan pemakaian telah mencapai batas. Pada peringatan ini, terdapat tombol login yang mengarahkan pada login page.</p>
                     <p>Anda dapat melakukan login dengan mengklik tombol login pada pesan peringatan yang muncul. Selanjutnya, Anda akan diarahkan menuju halaman login cmlabs. Silahkan masukkan data yang dibutuhkan, atau Anda dapat melakukan login melalui Google.</p>',

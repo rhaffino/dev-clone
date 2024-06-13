@@ -237,28 +237,28 @@ id/json-ld-organization-schema-generator
             <p>@lang('organization.desc-2-2')</p>
             <p>@lang('organization.desc-2-3')</p>
             <p>@lang('organization.desc-2-4')</p>
-            <h4 class="sub-titles">@lang('organization.desc-2-5')</h4>
+            <h3 class="sub-titles">@lang('organization.desc-2-5')</h3>
             <p>@lang('organization.desc-2-5-1')</p>
             <p>@lang('organization.desc-2-5-2')</p>
             <p>@lang('organization.desc-2-5-3')</p>
-            <h4 class="sub-titles">@lang('organization.desc-2-6')</h4>
+            <h3 class="sub-titles">@lang('organization.desc-2-6')</h3>
             <p>@lang('organization.desc-2-6-1')</p>
-            <h4 class="sub-titles">@lang('organization.desc-2-7')</h4>
+            <h3 class="sub-titles">@lang('organization.desc-2-7')</h3>
             <p>@lang('organization.desc-2-7-1')</p>
             <p>@lang('organization.desc-2-7-2')</p>
-            <h4 class="sub-titles">@lang('organization.desc-2-8')</h4>
+            <h3 class="sub-titles">@lang('organization.desc-2-8')</h3>
             <p>@lang('organization.desc-2-8-1')</p>
             <p>@lang('organization.desc-2-8-2')</p>
-            <h4 class="sub-titles">@lang('organization.desc-2-9')</h4>
+            <h3 class="sub-titles">@lang('organization.desc-2-9')</h3>
             <p>@lang('organization.desc-2-9-1')</p>
             <p>@lang('organization.desc-2-9-2')</p>
-            <h4 class="sub-titles">@lang('organization.desc-2-10')</h4>
+            <h3 class="sub-titles">@lang('organization.desc-2-10')</h3>
             <p>@lang('organization.desc-2-10-1')</p>
             <p>@lang('organization.desc-2-10-2')</p>
-            <h4 class="sub-titles">@lang('organization.desc-2-11')</h4>
+            <h3 class="sub-titles">@lang('organization.desc-2-11')</h3>
             <p>@lang('organization.desc-2-11-1')</p>
             <p>@lang('organization.desc-2-11-2')</p>
-            <h4 class="sub-titles">@lang('organization.desc-2-12')</h4>
+            <h3 class="sub-titles">@lang('organization.desc-2-12')</h3>
             <p>@lang('organization.desc-2-12-1')</p>
             <p>@lang('organization.desc-2-12-2')</p>
         </div>

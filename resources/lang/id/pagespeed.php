@@ -86,27 +86,27 @@ return [
     "howto-title" => 'Cara Menggunakan PageSpeed Test',
     "howto1" => '<h2>Cara Menggunakan PageSpeed Test</h2>
                     <p>Panduan berikut memuat cara penggunaan PageSpeed Test yang dapat Anda lakukan. Ikuti tiap langkahnya hingga akhir.</p>',
-    "howto2" => '<h4 class="sub-titles">Buka Halaman PageSpeed Test</h4>
+    "howto2" => '<h3 class="sub-titles">Buka Halaman PageSpeed Test</h3>
                     <p>Sebagai langkah awal dalam memulai cek pagespeed website, Anda perlu membuka halaman <a href="https://tools.cmlabs.co/id/pagespeed-test">PageSpeed Test</a>. Pada halaman tersebut, Anda akan melihat beberapa fitur yang dimiliki tool tersebut. Mulai dari penambahan URL yang akan diperiksa pagespeednya, tampilan hasil cek pagespeed, hingga riwayat pengecekan pagespeed yang telah Anda lakukan sebelumnya.</p>',
     "howto3" => '<p>Gambar 1: Tampilan halaman PageSpeed Test dari cmlabs</p>
-                    <h4 class="sub-titles">Masukkan URL Website</h4>
+                    <h3 class="sub-titles">Masukkan URL Website</h3>
                     <p>Agar bisa melakukan cek pagespeed, pertama-tama Anda harus memasukkan URL website pada field yang tersedia. Pastikan Anda telah memasukkan URL dalam format yang benar (e.g https://example.com). Selanjutnya, klik tombol <b>&#34;Generate&#34;</b> untuk memberikan perintah pada tool ini agar memulai pengecekan pagespeed pada website tersebut.</p>',
     "howto4" => '<p>Gambar 2: Tampilan ketika user telah memasukkan URL website pada field yang disediakan.</p>
-                    <h4 class="sub-titles">Analisa Hasil Cek PageSpeed</h4>
+                    <h3 class="sub-titles">Analisa Hasil Cek PageSpeed</h3>
                     <p>Anda perlu menunggu beberapa saat hingga proses cek pagespeed selesai dilakukan. Meskipun tool ini dapat diakses secara gratis, namun data pengecekan pagespeed yang ditampilkan cukup lengkap. Beberapa metrik yang bisa Anda temukan pada hasil PageSpeed Test adalah:</p>
-                    <h6 class="sub-titles">Performance</h6>
+                    <h4 class="sub-titles">Performance</h4>
                     <p>Metrik ini menampilkan hasil pengujian performa website secara keseluruhan. Mulai dari hasil pengujian metrik <a href="https://cmlabs.co/id-id/seo-guidelines/core-web-vitals">core web vitals</a>, <i class="italics">time to interactive, total blocking time,</i> hingga <i class="italics">speed index</i>. Kategori nilai dibagi menjadi baik (90-100), perlu peningkatan (50-89), dan buruk (0-49). Dengan mengetahui hasil ini, Anda akan memperoleh petunjuk tentang cara meningkatkan website yang bisa diterapkan.</p>',
     "howto5" => '<p>Gambar 3: Hasil penilaian performa dari website yang dilacak menggunakan PageSpeed Test</p>
-                    <h6 class="sub-titles">Accessibility</h6>
+                    <h4 class="sub-titles">Accessibility</h4>
                     <p>Metrik ini menampilkan hasil penilaian aksesibilitas halaman web Anda. Aksesibilitas suatu website dinilai berdasarkan seberapa mudah website dapat diakses oleh pengguna. Hal ini bertujuan agar website yang dibangun tidak memberikan hambatan bagi pengguna yang menyandang disabilitas dalam mengakses informasi.</p>',
     "howto6" => '<p>Gambar 4: Detail penilaian aksesibilitas halaman dari website yang dilacak menggunakan PageSpeed Test</p>
-                    <h6 class="sub-titles">Best Practice</h6>
+                    <h4 class="sub-titles">Best Practice</h4>
                     <p>Metrik ini akan menampilkan laporan yang memuat informasi apakah website Anda telah menerapkan praktik terbaik dalam pembuatan website. Jika hasil penilaian masih belum optimal, ini adalah waktu yang tepat bagi Anda untuk meningkatkan performa website.</p>',
     "howto7" => '<p>Gambar 5: Hasil penilaian metrik <i class="italics">best practice</i> pada website yang dilacak</p>
-                    <h6 class="sub-titles">SEO</h6>
+                    <h4 class="sub-titles">SEO</h4>
                     <p>Anda juga akan menemukan hasil penilaian SEO dari website Anda. Laporan berikut akan memuat informasi apakah website yang Anda miliki telah dioptimalkan di search engine atau belum. Dengan laporan ini, Anda bisa menemukan elemen yang perlu ditingkatkan dari website Anda.</p>',
     "howto8" => '<p>Gambar 6: Detail hasil penilaian kualitas Search Engine Optimization (SEO) pada website yang dilacak</p>
-                    <h6 class="sub-titles">PWA</h6>
+                    <h4 class="sub-titles">PWA</h4>
                     <p>Pada hasil penilaian berikut, Anda akan melihat apakah website Anda telah memenuhi kriteria Progressive Web App (PWA). Jika website belum menerapkan PWA secara optimal, ini bisa menjadi pertanda bahwa Anda telah menemukan ruang yang perlu ditingkatkan dari website Anda. Dengan begitu, website bisa menyajikan pengalaman pengguna yang lebih baik.</p>',
     "howto9" => '<p>Gambar 7: Detail hasil penilaian Progressive Web App (PWA) pada website yang dilacak</p>
                     <h4 class="sub-titles">Lihat Riwayat Penggunaan PageSpeed Test</h4>

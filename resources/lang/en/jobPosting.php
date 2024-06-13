@@ -81,44 +81,44 @@ return [
     "howto-title" =>'How to Use the Job Posting Schema Generator?',
     "howto1" =>'<h2>How to Use the Job Posting Schema Generator?</h2>
                     <p>The steps to generate a job posting schema using this tool is as follows:</p>',
-    "howto1-1" => '<h4 class="sub-titles">Go to the JSON-LD Job Posting Schema Generator Page</h4>
+    "howto1-1" => '<h3 class="sub-titles">Go to the JSON-LD Job Posting Schema Generator Page</h3>
                     <p>Go to the JSON-LD Job Posting Schema Generator page to create a job posting using schema markup.</p>',
     "howto2" =>'<p>Figure 1: The job posting schema generator page display from cmlabs.</p>
-                    <h4 class="sub-titles">Input Job Title</h4>
+                    <h3 class="sub-titles">Input Job Title</h3>
                     <p>Write down what job positions are currently available in your company. Then, make sure there are no typos in the job title.</p>',
     "howto3" =>'<p>Figure 2: Enter the job title in the field provided in the job posting schema generator.</p>
-                    <h4 class="sub-titles">Add Job Identifier</h4>
+                    <h3 class="sub-titles">Add Job Identifier</h3>
                     <p>Add a job identifier, which is the unique ID of the employment provider organization for the job. Be sure to enter the job identifier in the correct writing format.</p>',
     "howto4" =>'<p>Figure 3: Enter the job identifier in the field provided in the job posting schema generator.</p>
-                    <h4 class="sub-titles">Explain Job Description</h4>
+                    <h3 class="sub-titles">Explain Job Description</h3>
                     <p>Next, you will also need to add a description of the job you are going to post. </p>',
     "howto5" =>'<p>Figure 4: Enter a job description in the fields provided in the job posting schema generator.</p>
-                    <h4 class="sub-titles">Add Your Company and Industry Data</h4>
+                    <h3 class="sub-titles">Add Your Company and Industry Data</h3>
                     <p>Add your company data as a representation of the organization offering the job vacancy. You need to fill in the company name and URL and your company industry.</p>',
     "howto6" =>'<p>Figure 5: Enter company and industry data in the fields provided in the job posting schema generator.</p>
-                    <h4 class="sub-titles">Determine the Type of Work and Working Hours</h4>
+                    <h3 class="sub-titles">Determine the Type of Work and Working Hours</h3>
                     <p>Next, select a job type. As seen in the picture, there are several job options, namely full-time, part-time, internal, and so on. Then, also add working hours in the column right next to the type of work.</p>',
     "howto7" =>'<p>Figure 6: Specify the type of work and working hours in the available fields in the job posting schema generator.</p>
-                    <h4 class="sub-titles">Set the Posting Time and Registration Deadline</h4>
+                    <h3 class="sub-titles">Set the Posting Time and Registration Deadline</h3>
                     <p>Set a time when you will post this job info and set a registration deadline. Click on the available fields and this tool will display a date picker, then you can specify the posting time and registration deadline.</p>',
     "howto8" =>'<p>Figure 7: Set the job publication time and registration deadline in the fields provided in the job posting schema generator.</p>
-                    <h4 class="sub-titles">Complete Company Location</h4>
+                    <h3 class="sub-titles">Complete Company Location</h3>
                     <p>Next, add the complete company location such as street name, city, province, postal code, and country. However, if you are offered a remote job, simply press the checkbox on the <b>&#34;Remote Job&#34;</b> option. That way, you don&#39;t have to add a company location.</p>',
     "howto9" =>'<p>Figure 8: Complete the location of the company in the fields provided in the job posting schema generator.</p>
-                    <h4 class="sub-titles">Share Salary Information</h4>
+                    <h3 class="sub-titles">Share Salary Information</h3>
                     <p>You can also share salary information on the job posting schema. You can add data on basic salary, maximum salary, currency, and payment frequency. There are several options for the frequency of payments, namely hourly, weekly, monthly, or annually.</p>',
     "howto10" =>'<p>Figure 9: Complete salary information in the fields provided in the job posting schema generator.</p>
-                    <h4 class="sub-titles">Add More Information</h4>
+                    <h3 class="sub-titles">Add More Information</h3>
                     <p>Add other information related to job vacancies that will be published. Other information includes responsibilities, skills, qualifications, educational requirements, and experience.
                     </p>',
     "howto11" =>'<p>Figure 10: Add more information to the available fields in the job posting schema generator.</p>
-                    <h4 class="sub-titles">Copy Job Posting Schema Markup Generated</h4>
+                    <h3 class="sub-titles">Copy Job Posting Schema Markup Generated</h3>
                     <p>If you have completed the required attributes to create a Job Posting schema markup, then you will see a preview of the schema markup on the right side of the page. You can copy the schema markup directly with the <b>&#34;copy&#34;</b> button and paste it into your program code.</p>',
     "howto12" =>'<p>Figure 11: Job posting schema markup copy options</p>
-                    <h4 class="sub-titles">Check JSON-LD Script Validity</h4>
+                    <h3 class="sub-titles">Check JSON-LD Script Validity</h3>
                     <p>With the Job Posting schema generator, you can also check the validity of the JSON-LD script you are using. How to <b>check</b> it is quite easy, just press the check option contained in the preview of the resulting script.</p>',
     "howto13" =>'<p>Figure 12: Job posting schema markup validation check options</p>
-                    <h4 class="sub-titles">Reset Schema Generator</h4>
+                    <h3 class="sub-titles">Reset Schema Generator</h3>
                     <p>This tool has options that make it easier for you to create a new Job Posting schema. Just click the <b>&#34;Reset&#34;</b> option and delete all the data that was added previously. Next, you can create a new script.</p>',
     "howto14" =>'<p>Figure 13: Data reset option added to the Job Posting schema generator.</p>
                     <p>That&#39;s a brief discussion about how to create a job posting schema using the <a href="https://tools.cmlabs.co/en/json-ld-faq-schema-generator">JSON-LD Job Posting Schema Generator</a> tool from cmlabs. These tools can help you generate schema markup quickly and efficiently. Try this tool now!</p>',

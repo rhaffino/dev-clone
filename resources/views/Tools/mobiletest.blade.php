@@ -252,16 +252,16 @@ id/mobile-test
         <div class="d-none" id="description-tab-6">
             <h2>@lang('mobiletest.desc-6')</h2>
             <p>@lang('mobiletest.desc-6-1')</p>
-            <h4 class="sub-titles">@lang('mobiletest.desc-6-1-1')</h4>
+            <h3 class="sub-titles">@lang('mobiletest.desc-6-1-1')</h3>
             <p>@lang('mobiletest.desc-6-1-2')</p>
             <p>@lang('mobiletest.desc-6-1-3')</p>
-            <h4 class="sub-titles">@lang('mobiletest.desc-6-2-1')</h4>
+            <h3 class="sub-titles">@lang('mobiletest.desc-6-2-1')</h3>
             <p>@lang('mobiletest.desc-6-2-2')</p>
-            <h4 class="sub-titles">@lang('mobiletest.desc-6-3-1')</h4>
+            <h3 class="sub-titles">@lang('mobiletest.desc-6-3-1')</h3>
             <p>@lang('mobiletest.desc-6-3-2')</p>
-            <h4 class="sub-titles">@lang('mobiletest.desc-6-4-1')</h4>
+            <h3 class="sub-titles">@lang('mobiletest.desc-6-4-1')</h3>
             <p>@lang('mobiletest.desc-6-4-2')</p>
-            <h4 class="sub-titles">@lang('mobiletest.desc-6-5-1')</h4>
+            <h3 class="sub-titles">@lang('mobiletest.desc-6-5-1')</h3>
             <p>@lang('mobiletest.desc-6-5-2')</p>
             <p>@lang('mobiletest.desc-6-5-3')</p>
         </div>

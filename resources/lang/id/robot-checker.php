@@ -1,7 +1,7 @@
 <?php
 return [
-    "meta-title" => "Robots.txt Checker dari cmlabs - Cek File Robots.txt pada Website",
-    "meta-desc" => "Robots.txt Checker dari cmlabs adalah tool yang dapat membantu Anda melakukan uji dan validasi file robots.txt pada sebuah situs web. Coba sekarang",
+    "meta-title" => "Robots.txt Checker Online - Cek File Robots.txt pada Website",
+    "meta-desc" => "Robots.txt Checker dari cmlabs adalah tool SEO yang dapat membantu Anda melakukan uji dan validasi file robots.txt pada sebuah website. Coba gratis sekarang!",
     "title" => "Robots.txt Checker",
     "subtitle" => "Periksa file robots.txt pada website Anda. Mudah dan cepat.",
     "url-placeholder" => "https://www.example.com",

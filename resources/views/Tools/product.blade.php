@@ -340,16 +340,16 @@ id/json-ld-product-schema-generator
         <div class="d-none" id="description-tab-3">
             <h2>@lang('product.desc-3')</h2>
             <p>@lang('product.desc-3-1')</p>
-            <h4 class="sub-titles">@lang('product.desc-3-2-1')</h4>
+            <h3 class="sub-titles">@lang('product.desc-3-2-1')</h3>
             <p>@lang('product.desc-3-2-2')</p>
             <p>@lang('product.desc-3-2-3')</p>
-            <h4 class="sub-titles">@lang('product.desc-3-3-1')</h4>
+            <h3 class="sub-titles">@lang('product.desc-3-3-1')</h3>
             <p>@lang('product.desc-3-3-2')</p>
             <ul>
                 <li>@lang('product.desc-3-3-3')</li>
                 <li>@lang('product.desc-3-3-4')</li>
             </ul>
-            <h4 class="sub-titles">@lang('product.desc-3-4-1')</h4>
+            <h3 class="sub-titles">@lang('product.desc-3-4-1')</h3>
             <p>@lang('product.desc-3-4-2')</p>
             <ul>
                 <li>@lang('product.desc-3-4-3')</li>

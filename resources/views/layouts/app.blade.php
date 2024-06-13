@@ -79,7 +79,7 @@
     <link href="{{ asset('css/themes/layout/brand/light.css?v=7.0.9') }}" rel="stylesheet" type="text/css" />
 
     <!-- Custom Page CSS -->
-    <link href="{{ asset('css/custom.css') }}?347" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('css/custom.css') }}?12062024" rel="stylesheet" type="text/css" />
     <link href="{{ asset('css/header_general.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('css/asidemobile_generale.css') }}" rel="stylesheet" type="text/css" />
 

@@ -260,13 +260,13 @@ id/json-ld-how-to-schema-generator
         <div class="d-none" id="description-tab-2">
             <h2>@lang('howto.desc-2')</h2>
             <p>@lang('howto.desc-2-1')</p>
-            <h4 class="sub-titles">@lang('howto.desc-2-2-1')</h4>
+            <h3 class="sub-titles">@lang('howto.desc-2-2-1')</h3>
             <p>@lang('howto.desc-2-2-2')</p>
-            <h4 class="sub-titles">@lang('howto.desc-2-3-1')</h4>
+            <h3 class="sub-titles">@lang('howto.desc-2-3-1')</h3>
             <p>@lang('howto.desc-2-3-2')</p>
-            <h4 class="sub-titles">@lang('howto.desc-2-4-1')</h4>
+            <h3 class="sub-titles">@lang('howto.desc-2-4-1')</h3>
             <p>@lang('howto.desc-2-4-2')</p>
-            <h4 class="sub-titles">@lang('howto.desc-2-5-1')</h4>
+            <h3 class="sub-titles">@lang('howto.desc-2-5-1')</h3>
             <p>@lang('howto.desc-2-5-2')</p>
         </div>
     @endslot

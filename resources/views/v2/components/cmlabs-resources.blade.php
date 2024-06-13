@@ -9,7 +9,7 @@
             </div>
             <div class="card-body">
                 <div class="text-purple-70 b2-700 b2-m-700">BLOGS</div>
-                <h3 class="h6-700 h-6-m-700 text-dark-70">{{ $blogs->title }}</h3>
+                <p class="h6-700 h-6-m-700 text-dark-70 mb-2">{{ $blogs->title }}</p>
                 <p class="m-0 b2-400 b2-m-400 text-gray-90">{{ $blogs->published_at }}</p>
             </div>
         </a>
@@ -24,7 +24,7 @@
             </div>
             <div class="card-body">
                 <div class="text-purple-70 b2-700 b2-m-700">SEO TERMS</div>
-                <h3 class="h6-700 h-6-m-700 text-dark-70">{{ $seo_terms->title }}</h3>
+                <p class="h6-700 h-6-m-700 text-dark-70 mb-2">{{ $seo_terms->title }}</p>
                 <p class="m-0 b2-400 b2-m-400 text-gray-90">{{ $seo_terms->published_at }}</p>
             </div>
         </a>
@@ -40,7 +40,7 @@
             </div>
             <div class="card-body">
                 <div class="text-purple-70 b2-700 b2-m-700">SEO GUIDELINES</div>
-                <h3 class="h6-700 h-6-m-700 text-dark-70">{{ $seo_guidelines->title }}</h3>
+                <p class="h6-700 h-6-m-700 text-dark-70 mb-2">{{ $seo_guidelines->title }}</p>
                 <p class="m-0 b2-400 b2-m-400 text-gray-90">
                     {{ $seo_guidelines->published_at }}</p>
             </div>
