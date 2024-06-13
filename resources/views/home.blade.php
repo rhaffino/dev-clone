@@ -173,10 +173,11 @@ id
                 </div>
             @endforeach
             </div>
-            <div class="d-flex align-items-center">
+            @include('v2.components.chrome-extension')
+            {{-- <div class="d-flex align-items-center">
                 <i class='bx bxs-check-circle text-darkgrey mr-1'></i>
                 <span class="text-darkgrey">@lang('home.last-update') 13 Oct, 2023 | @lang('layout.version') 2.0</span>
-            </div>
+            </div> --}}
         </div>
     </div>
 </div>
