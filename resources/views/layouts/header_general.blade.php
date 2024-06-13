@@ -75,11 +75,12 @@
                         <a class="nav-link active" href="/{{ $local }}">SEO Tools</a>
                     </li>--}}
                     <li class="nav-item dropdown ml-9">
-                        <a class="nav-link" href="https://career.cmlabs.co/">Career</a>
+                        <a class="nav-link d-flex align-items-center" href="https://career.cmlabs.co/">Career <i class='bx bx-link-external text-gray-90 bx-xs ml-2'></i></a>
                     </li>
                     <li class="nav-item dropdown ml-9" style="padding-bottom: 15px">
-                        <a class="" target="_blank" rel="noopener noreferrer nofollow" aria-label="SEO Tools - Chromium-based" href="https://chromewebstore.google.com/search/cmlabs%20seo%20tools">
+                        <a class="d-flex align-items-center" target="_blank" rel="noopener noreferrer nofollow" aria-label="SEO Tools - Chromium-based" href="https://chromewebstore.google.com/search/cmlabs%20seo%20tools">
                             <img height="22px" src="{{ asset('media/extension/ext-badge.svg') }}" alt="cmlabs extension entry point">
+                            <i class='bx bx-link-external ml-2 text-gray-90'></i>
                         </a>
                     </li>
                 </ul>
