@@ -98,13 +98,13 @@
                         <div class="col-sm">
                             <ul class="list-inline">
                                 <li>
-                                    <a class="list-inline-item list__mega-menu relative" href="https://app.sequence.day/auth/login" target="_blank">@lang('layout.nav-stats-sequence') <span class="new-indicator new__indicator-megamenu"></span></a>
+                                    <a class="list-inline-item list__mega-menu relative" href="https://app.sequence.day/auth/login" target="_blank">@lang('layout.nav-stats-sequence') <i class='bx bx-link-external text-gray-90 bx-xs mt-1 mb-1'></i> <span class="new-indicator new__indicator-megamenu"></span></a>
                                 </li>
                                 <li>
-                                    <a class="list-inline-item list__mega-menu relative" href="https://cmlabs.co/{{ $local }}-id/cmlabs-surge" target="_blank">cmlabs Surge <span class="new-indicator new__indicator-megamenu"></span></a>
+                                    <a class="list-inline-item list__mega-menu relative" href="https://cmlabs.co/{{ $local }}-id/cmlabs-surge" target="_blank">cmlabs Surge <i class='bx bx-link-external text-gray-90 bx-xs mt-1 mb-1'></i><span class="new-indicator new__indicator-megamenu"></span></a>
                                 </li>
                                 <li>
-                                    <a class="list-inline-item list__mega-menu relative" href="https://cmlabs.co/{{ $local }}-id/traffic-calculator" target="_blank">Traffic Projection Calculator <span class="new-indicator new__indicator-megamenu"></span></a>
+                                    <a class="list-inline-item list__mega-menu relative" href="https://cmlabs.co/{{ $local }}-id/traffic-calculator" target="_blank">Traffic Projection Calculator <i class='bx bx-link-external text-gray-90 bx-xs mt-1 mb-1'></i> <span class="new-indicator new__indicator-megamenu"></span></a>
                                 </li>
                             </ul>
                         </div>
@@ -179,19 +179,19 @@
                             <p class="title__mega-menu h3">@lang('layout.nav-tools-sequence')</p>
                             <ul class="list-inline">
                                 <li>
-                                    <a class="list-inline-item list__mega-menu relative" href="https://www.sequence.day/keyword-research" target="_blank">@lang('layout.nav-tools-sequence-1') <span class="new-indicator new__indicator-megamenu"></span></a>
+                                    <a class="list-inline-item list__mega-menu relative" href="https://www.sequence.day/keyword-research" target="_blank">@lang('layout.nav-tools-sequence-1') <i class='bx bx-link-external text-gray-90 bx-xs mt-1 mb-1'></i> <span class="new-indicator new__indicator-megamenu"></span></a>
                                 </li>
                                 <li>
-                                    <a class="list-inline-item list__mega-menu relative" href="https://www.sequence.day/most-popular-indonesia-online-publisher" target="_blank">Most Popular Indonesia Online Publisher <span class="new-indicator new__indicator-megamenu new__indicator-megamenu-popular"></span></a>
+                                    <a class="list-inline-item list__mega-menu relative" href="https://www.sequence.day/most-popular-indonesia-online-publisher" target="_blank">Most Popular Indonesia Online Publisher <i class='bx bx-link-external text-gray-90 bx-xs mt-1 mb-1'></i> <span class="new-indicator new__indicator-megamenu new__indicator-megamenu-popular"></span></a>
                                 </li>
                                 <li>
-                                    <a class="list-inline-item list__mega-menu relative" href="https://www.sequence.day/people-and-brand-mention" target="_blank">Person and Brand Mention on Online Publisher <span class="new-indicator new__indicator-megamenu new__indicator-megamenu-brand"></span></a>
+                                    <a class="list-inline-item list__mega-menu relative" href="https://www.sequence.day/people-and-brand-mention" target="_blank">Person and Brand Mention on Online Publisher <i class='bx bx-link-external text-gray-90 bx-xs mt-1 mb-1'></i> <span class="new-indicator new__indicator-megamenu new__indicator-megamenu-brand"></span></a>
                                 </li>
                                 <li>
-                                    <a class="list-inline-item list__mega-menu relative" href="https://www.sequence.day/indonesia-online-publisher-sentiments" target="_blank">Sentiment Analysis <span class="new-indicator new__indicator-megamenu"></span></a>
+                                    <a class="list-inline-item list__mega-menu relative" href="https://www.sequence.day/indonesia-online-publisher-sentiments" target="_blank">Sentiment Analysis <i class='bx bx-link-external text-gray-90 bx-xs mt-1 mb-1'></i> <span class="new-indicator new__indicator-megamenu"></span></a>
                                 </li>
                                 <li>
-                                    <a class="list-inline-item list__mega-menu relative" href="https://www.sequence.day/site-explorer" target="_blank">Site Explorer <span class="new-indicator new__indicator-megamenu"></span></a>
+                                    <a class="list-inline-item list__mega-menu relative" href="https://www.sequence.day/site-explorer" target="_blank">Site Explorer <i class='bx bx-link-external text-gray-90 bx-xs mt-1 mb-1'></i> <span class="new-indicator new__indicator-megamenu"></span></a>
                                 </li>
                             </ul>
                         </div>
