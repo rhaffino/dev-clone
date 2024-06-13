@@ -252,12 +252,12 @@
                 </li>
                 <li class="menu-item">
                     <a href="https://app.sequence.day/auth/login" target="_blank" class="menu-link">
-                        <span class="menu-text relative flex-fit">@lang('layout.nav-stats-sequence') <span class="new-indicator new__indicator-asidemobile"></span></span>
+                        <span class="menu-text relative flex-fit">@lang('layout.nav-stats-sequence') <i class='bx bx-link-external text-gray-90 bx-xs ml-1'></i> <span class="new-indicator new__indicator-asidemobile"></span></span>
                     </a>
                 </li>
                 <li class="menu-item menu-item-submenu" aria-haspopup="true">
                     <a href="" class="menu-link menu-toggle btn dropdown-toggle align-items-center">
-                        <span class="menu-text relative">@lang('layout.nav-tools-sequence') <span class="new-indicator new__indicator-asidemobile-dropdown"></span></span>
+                        <span class="menu-text relative">@lang('layout.nav-tools-sequence')  <span class="new-indicator new__indicator-asidemobile-dropdown"></span></span>
                     </a>
                     <div class="menu-submenu">
                         <i class="menu-arrow"></i>
@@ -266,19 +266,19 @@
                                 <span class="menu-link"><span class="menu-text">@lang('layout.nav-pricing')</span></span>
                             </li>
                                 <li class="menu-item menu-item-children" aria-haspopup="true">
-                                    <a href="https://www.sequence.day/keyword-research" target="_blank" class="menu-link"><span class="menu-text">@lang('layout.nav-tools-sequence-1')</span></a>
+                                    <a href="https://www.sequence.day/keyword-research" target="_blank" class="menu-link"><span class="menu-text">@lang('layout.nav-tools-sequence-1') <i class='bx bx-link-external text-gray-90 bx-xs ml-1'></i></span></a>
                                 </li>
                                 <li class="menu-item menu-item-children" aria-haspopup="true">
-                                    <a href="https://www.sequence.day/most-popular-indonesia-online-publisher" target="_blank" class="menu-link"><span class="menu-text">Most Popular Indonesia Online Publisher</span></a>
+                                    <a href="https://www.sequence.day/most-popular-indonesia-online-publisher" target="_blank" class="menu-link"><span class="menu-text">Most Popular Indonesia Online Publisher <i class='bx bx-link-external text-gray-90 bx-xs ml-1'></i></span></a>
                                 </li>
                                 <li class="menu-item menu-item-children" aria-haspopup="true">
-                                    <a href="https://www.sequence.day/people-and-brand-mention" target="_blank" class="menu-link"><span class="menu-text">Person and Brand Mention on Online Publisher</span></a>
+                                    <a href="https://www.sequence.day/people-and-brand-mention" target="_blank" class="menu-link"><span class="menu-text">Person and Brand Mention on Online Publisher <i class='bx bx-link-external text-gray-90 bx-xs ml-1'></i></span></a>
                                 </li>
                                 <li class="menu-item menu-item-children" aria-haspopup="true">
-                                    <a href="https://www.sequence.day/indonesia-online-publisher-sentiments" target="_blank" class="menu-link"><span class="menu-text">Sentiment Analysis</span></a>
+                                    <a href="https://www.sequence.day/indonesia-online-publisher-sentiments" target="_blank" class="menu-link"><span class="menu-text">Sentiment Analysis <i class='bx bx-link-external text-gray-90 bx-xs ml-1'></i></span></a>
                                 </li>
                                 <li class="menu-item menu-item-children" aria-haspopup="true">
-                                    <a href="https://www.sequence.day/site-explorer" target="_blank" class="menu-link"><span class="menu-text">Site Explorer</span></a>
+                                    <a href="https://www.sequence.day/site-explorer" target="_blank" class="menu-link"><span class="menu-text">Site Explorer <i class='bx bx-link-external text-gray-90 bx-xs ml-1'></i></span></a>
                                 </li>
                         </ul>
                     </div>
@@ -286,17 +286,17 @@
 
                 <li class="menu-item">
                     <a href="https://cmlabs.co/{{ $local }}-id/cmlabs-surge" target="_blank" class="menu-link">
-                        <span class="menu-text relative flex-fit">cmlabs Surge <span class="new-indicator new__indicator-asidemobile"></span></span>
+                        <span class="menu-text relative flex-fit">cmlabs Surge <i class='bx bx-link-external text-gray-90 bx-xs ml-1'></i> <span class="new-indicator new__indicator-asidemobile"></span></span>
                     </a>
                 </li>
                 <li class="menu-item">
                     <a href="https://cmlabs.co/{{ $local }}-id/traffic-calculator" target="_blank" class="menu-link">
-                        <span class="menu-text relative flex-fit">Traffic Projection Calculator <span class="new-indicator new__indicator-asidemobile"></span></span>
+                        <span class="menu-text relative flex-fit">Traffic Projection Calculator <i class='bx bx-link-external text-gray-90 bx-xs ml-1'></i> <span class="new-indicator new__indicator-asidemobile"></span></span>
                     </a>
                 </li>
                 <li class="menu-item">
                     <a href="https://career.cmlabs.co" target="_blank" class="menu-link">
-                        <span class="menu-text">Career</span>
+                        <span class="menu-text">Career <i class='bx bx-link-external text-gray-90 bx-xs ml-1'></i></span>
                     </a>
                 </li>
             </ul>
