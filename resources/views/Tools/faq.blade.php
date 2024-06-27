@@ -177,7 +177,7 @@ id/json-ld-faq-schema-generator
 @endif
 
 @component('layouts.new_ui_design', ['local' => $local, 'blogs' => $blogs, 'seo_terms' => $seo_terms, 'seo_guidelines' => $seo_guidelines])
-    @slot('title', 'JSON L-D FAQ Schema Generator')
+    @slot('title', 'FAQ Schema Generator')
     @slot('subcontent_1')
         <div class="" id="description-tab-1">
             <h2>@lang('faq.desc-1')</h2>

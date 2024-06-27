@@ -1,7 +1,7 @@
 <?php
 return [
-    "meta-title" =>"Ping Tool by cmlabs",
-    "meta-desc" => "With Ping Tool by cmlabs, you can test the existence of IP addresses, analyze the network quality, and many more. Try now!",
+    "meta-title" =>"Ping Tool | Reliable Ping Checker by cmlabs",
+    "meta-desc" => "With Ping Tool, a ping checker  by cmlabs, you can test the existence of IP addresses, analyze the network quality, and many more. Try now!",
     "lang" => "en",
     "title" => "Ping Tool",
     "sub-title" => "Test Your Network Management",
@@ -14,7 +14,7 @@ return [
     "lookup-btn-tooltip" => "You can only search 5 times in 1 hour",
     "highlight" => "Check your network management with the new and advanced Ping Tool by cmlabs! Experience seamless connectivity as you effortlessly diagnose and monitor your network's health. From identifying latency issues to ensuring rapid response times, Ping Tool by cmlabs will empower you to keep running smoothly in this digital world. Ping now!",
     "desc-1" => "What is Ping Tool by cmlabs?",
-    "desc-1-1" => "Have you ever had a road trip and periodically check your GPS to ensure you're on track and have the best time?",
+    "desc-1-1" => "Ping checker is a tool to test network connectivity by sending data packets to a device and measuring the response time. <br> <br> Have you ever had a road trip and periodically checked your GPS to ensure you're on track and have the best time?",
     "desc-1-2" => "Just like that, network administrators and tech-savvy individuals have their own version of the \"tracking tool\" in the digital realm, known as Ping Tool.",
     "desc-1-3" => "Just as you rely on GPS to stay informed about your journey, Free Ping Tool by cmlabs allows you to remain alert and informed about the health and efficiency of your network connections on a website.",
     "desc-1-4" => "In this digital landscape, this tool stands as a crucial instrument to help users measure how quickly their data travels as well as ensure a smooth and uninterrupted online experience. ",
