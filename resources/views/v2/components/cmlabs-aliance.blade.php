@@ -16,7 +16,7 @@
         <img src="{{ asset('media/images/sequence-card.webp') }}" class="img-fluid"
             alt="Sequence business partner card">
     </a>
-    <div class="storylabs-container mt-10">
+    {{-- <div class="storylabs-container mt-10">
         <div class="storylabs-container-head">
             <div class="s-700 s-m-700 text-dark-50">StoryLabs</div>
             <div class="b2-700 b2-m-700 text-center">@lang('plagiarism.story_lab-desc')</div>
@@ -43,5 +43,5 @@
                 <div class="b2-400 b2-m-400">Partnership</div>
             </a>
         </div>
-    </div>
+    </div> --}}
 </div>

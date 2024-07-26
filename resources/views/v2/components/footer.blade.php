@@ -84,6 +84,19 @@
                     <div class="row">
                         <div class="col-md-4 col-12 px-md-4 order-1">
                             <div class="footer-submenu-container order-0">
+                                <div class="">
+                                    <div class="d-none d-md-block text-dark-70 b2-700 h3-m-700 text-uppercase mb-2">
+                                        ALL-NEW<br>ALL-DIFFERENT
+                                    </div>
+                                    <div class="d-md-none text-dark-70 b2-700 h3-m-700 text-uppercase mb-2 text-center">
+                                        ALL-NEW ALL-DIFFERENT
+                                    </div>
+                                    <a class="footer-vanguard" href="https://vanguard.cmlabs.co">
+                                        <img height="16"
+                                            src="{{ asset('media/images/vanguard/vanguard-green.webp') }}"
+                                            alt="cmlabs vanguard logo">
+                                    </a>
+                                </div>
                                 {{-- solutions menu --}}
                                 <div class="">
                                     <div class="d-none d-md-block text-dark-70 b2-700 h3-m-700 text-uppercase mb-2">
@@ -214,7 +227,13 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-md-4 col-12 order-md-2 order-3">
+                        <div class="col-md-4 col-6 order-md-2 order-3">
+                            <div class="mb-3 d-none d-md-block">
+                                <div class="text-dark-70 b2-700 h3-m-700 text-uppercase mb-2">BROWSER EXTENSION</div>
+                                <a class="mktcmlgtm_footer_extension_seo_tools" target="_blank" rel="noopener noreferrer nofollow" aria-label="SEO Tools - Chromium-based" href="https://chromewebstore.google.com/search/cmlabs%20seo%20tools">
+                                    <img class="mktcmlgtm_footer_extension_seo_tools" height="60px" src="{{ asset('media/images/cmlabs-extension.svg') }}" alt="cmlabs extension entry point">
+                                </a>
+                            </div>
                             <div class="footer-submenu-container order-2 order-lg-1 mt-3 mt-lg-0">
                                 {{-- resources menu --}}
                                 <span
@@ -293,50 +312,49 @@
                             <div class="footer-submenu-container order-2 order-lg-1">
                                 {{-- partnership menu --}}
                                 <span
-                                    class="d-none d-lg-block text-dark-70 b1-700 b1-m-700 text-uppercase">@lang('v2_footer.sub_partner')</span>
-                                <div class="row">
+                                    class="d-none d-lg-block text-dark-70 h6-700 h6-m-700 text-uppercase">@lang('footer.sub_partner')</span>
+                                <div data-bs-toggle="collapse" data-bs-target="#partner-footer"
+                                    class="d-lg-none footer-title h3-700 h3-m-700 d-flex mb-0 justify-content-between collapsed">
+                                    @lang('footer.sub_partner')<i class="bx bx-chevron-down"></i>
+                                </div>
+                                <div class="row collapse d-lg-flex" id="partner-footer" data-bs-parent="#main-footer" >
                                     <div class="col-md-12 col-12">
-                                        <div data-toggle="collapse" data-target="#partnership-footer"
-                                            aria-expanded="false" aria-controls="collapseExample"
-                                            class="footer-title d-flex justify-content-between px-3 w-100 h3-700 h3-m-700 mb-1 mb-lg-2 text-dark-70 toggle-dropdown-footer d-lg-none">
-                                            @lang('v2_footer.sub_partner') <i class="bx bx-chevron-down"></i></div>
-                                        <ul class="collapse px-3 px-lg-1 pb-5 pt-2 py-lg-1 d-lg-block" id="partnership-footer">
-                                            <li class="my-1 my-lg-2"><a
-                                                    class="mktcmlgtm_footer_become_partner text-dark-70 b2-400 b2-m-400 two-rows"
-                                                    href="https://cmlabs.co/{{ $lang_region }}/become-partner">@lang('v2_footer.menu_become-partner')</a>
+                                        <ul>
+                                            <li class="my-1 my-lg-3"><a
+                                                    class="mktcmlgtm_footer_become_partner text-dark-70 b2-400 b1-m-400 two-rows"
+                                                    href="https://cmlabs.co/{{ $lang_region }}/become-partner">@lang('footer.menu_become-partner')</a>
                                             </li>
                                             @if ($lang_region === 'en-id')
-                                                <li class="my-1 my-lg-2"><a
-                                                        class="mktcmlgtm_footer_affiliate_program text-dark-70 b2-400 b2-m-400 two-rows"
-                                                        href="https://cmlabs.co/{{ $lang_region }}/affiliate-program">@lang('v2_footer.menu_affiliate')</a>
+                                                <li class="my-1 my-lg-3"><a
+                                                        class="mktcmlgtm_footer_affiliate_program text-dark-70 b2-400 b1-m-400 two-rows"
+                                                        href="https://cmlabs.co/{{ $lang_region }}/affiliate-program">@lang('footer.menu_affiliate')</a>
                                                 </li>
                                             @elseif ($lang_region === 'id-id')
-                                                <li class="my-1 my-lg-2"><a
-                                                        class="mktcmlgtm_footer_affiliate_program text-dark-70 b2-400 b2-m-400 two-rows"
-                                                        href="https://cmlabs.co/id-id/program-afiliasi">@lang('v2_footer.menu_affiliate')</a>
+                                                <li class="my-1 my-lg-3"><a
+                                                        class="mktcmlgtm_footer_affiliate_program text-dark-70 b2-400 b1-m-400 two-rows"
+                                                        href="https://cmlabs.co/id-id/program-afiliasi">@lang('footer.menu_affiliate')</a>
                                                 </li>
                                             @endif
-                                            <li class="my-1 my-lg-2"><a
-                                                    class="mktcmlgtm_footer_contributor text-dark-70 b2-400 b2-m-400 two-rows"
-                                                    href="https://cmlabs.co/{{ $lang_region }}/become-contributor">@lang('v2_footer.menu_contributor')</a>
-                                            </li>
-                                            <li class="my-1 my-lg-2">
-                                                <a href="https://cmlabs.co/{{ $lang_region }}/partnership""
-                                                    class="my-1 my-lg-2 class-name partnership-highlight">
-                                                    <div>
-                                                        <div class="s-700 text-purple-30">@lang('v2_footer.partnership-tag')</div>
-                                                        <p class="text-gray-90 s-400 m-0 mt-1">@lang('v2_footer.partnership-title')</p>
-                                                    </div>
-                                                    <ul class="d-flex gap-2 flex-column">
-                                                        @foreach (trans('v2_footer.partnerships') as $item)
-                                                            <li class="b2-400 b2-m-400 text-white mt-2">
-                                                                {{ $item }}
-                                                            </li>
-                                                        @endforeach
-                                                    </ul>
-                                                </a>
+                                            <li class="my-1 my-lg-3"><a
+                                                    class="mktcmlgtm_footer_contributor text-dark-70 b2-400 b1-m-400 two-rows"
+                                                    href="https://cmlabs.co/{{ $lang_region }}/become-contributor">@lang('footer.menu_contributor')</a>
                                             </li>
                                         </ul>
+                                    </div>
+                                    <div class="col-md-12 col-12">
+                                        <a href="https://cmlabs.co/{{ $lang_region }}/partnership"
+                                            class="my-1 my-lg-3 class-name partnership-highlight" style="background: #f0f0f0">
+                                            <div>
+                                                <div class="s-700 text-purple-70">@lang('footer.partnership-tag')</div>
+                                                <p class="text-gray-100 s-400 m-0 mt-1">@lang('footer.partnership-title')</p>
+                                            </div>
+                                            <ul class="d-flex gap-2 flex-column">
+                                                @foreach (trans('footer.partnerships') as $item)
+                                                    <li class="b2-400 b1-m-400 text-dark-70">{{ $item }}
+                                                    </li>
+                                                @endforeach
+                                            </ul>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
