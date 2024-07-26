@@ -22,7 +22,7 @@
                     <a href="tel:622166604470" class="office-phone b2-500 text-dark-100"> <span
                             class="text-dark-30">(+62) 21-</span><b>666-04470</b></a>
 
-                    <p class="office-address b2-400 b2-m-400 mt-2">
+                    {{-- <p class="office-address b2-400 b2-m-400 mt-2">
                         <span class="b2-700 b2-m-700 text-purple-70">cmlabs Jakarta Office 2</span> Jl. Tanah Abang I
                         No.11, Petojo Selatan, Gambir, Jakarta Pusat, DKI Jakarta 10160, Indonesia
                     </p>
@@ -32,7 +32,7 @@
                         Kota Malang, Jawa Timur, 65141, Indonesia
                     </p>
                     <a href="tel:62341475665" class="office-phone b2-500 text-dark-100"> <span
-                            class="text-dark-30">(+62) 341-</span><b>475-665</b></a>
+                            class="text-dark-30">(+62) 341-</span><b>475-665</b></a> --}}
                     <div class="d-flex flex-column">
                         <a href="https://cmlabs.co/{{ $lang_region }}/jakarta-office"
                             class="mktcmlgtm_footer_visit_jakarta">
@@ -63,7 +63,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div>
+                        <div class="mt-4">
                             <p class="text-dark-50 mt-2 text-lg-start desc b2-400 mb-0">@lang('v2_footer.badge-desc')</p>
                             <p class="text-dark-50 mt-1 text-lg-start desc b2-400"><a
                                     href="https://cmlabs.co/{{ $lang_region }}/become-partner">@lang('v2_footer.badge-desc-cta')</a>
@@ -80,6 +80,19 @@
                     <div class="row">
                         <div class="col-md-4 col-6 px-md-4 order-1">
                             <div class="footer-submenu-container order-0">
+                                <div class="">
+                                    <div class="d-none d-md-block text-dark-70 b2-700 h3-m-700 text-uppercase mb-2">
+                                        ALL-NEW<br>ALL-DIFFERENT
+                                    </div>
+                                    <div class="d-md-none text-dark-70 b2-700 h3-m-700 text-uppercase mb-2 text-center">
+                                        ALL-NEW ALL-DIFFERENT
+                                    </div>
+                                    <a class="footer-vanguard" href="https://vanguard.cmlabs.co">
+                                        <img height="16"
+                                            src="{{ asset('media/images/vanguard/vanguard-green.webp') }}"
+                                            alt="cmlabs vanguard logo">
+                                    </a>
+                                </div>
                                 {{-- solutions menu --}}
                                 <span
                                     class=" text-dark-70 b1-700 b1-m-700 text-decoration-underline">@lang('v2_footer.sub_service')</span>
@@ -193,6 +206,12 @@
                             </div>
                         </div>
                         <div class="col-md-4 col-6 order-md-2 order-3">
+                            <div class="mb-3 d-none d-md-block">
+                                <div class="text-dark-70 b2-700 h3-m-700 text-uppercase mb-2">BROWSER EXTENSION</div>
+                                <a class="mktcmlgtm_footer_extension_seo_tools" target="_blank" rel="noopener noreferrer nofollow" aria-label="SEO Tools - Chromium-based" href="https://chromewebstore.google.com/search/cmlabs%20seo%20tools">
+                                    <img class="mktcmlgtm_footer_extension_seo_tools" height="60px" src="{{ asset('media/images/cmlabs-extension.svg') }}" alt="cmlabs extension entry point">
+                                </a>
+                            </div>
                             <div class="footer-submenu-container order-2 order-lg-1 mt-3 mt-lg-0">
                                 {{-- resources menu --}}
                                 <span
@@ -260,42 +279,46 @@
                         <div class="col-md-4 col-6 order-md-3 order-2">
                             <div class="footer-submenu-container order-2 order-lg-1">
                                 {{-- partnership menu --}}
-                                <span class=" text-dark-70 b1-700 b1-m-700 text-uppercase">@lang('v2_footer.sub_partner')</span>
-
-                                <div class="row">
+                                <span
+                                    class="d-none d-lg-block text-dark-70 h6-700 h6-m-700 text-uppercase">@lang('v2_footer.sub_partner')</span>
+                                <div data-bs-toggle="collapse" data-bs-target="#partner-footer"
+                                    class="d-lg-none footer-title h3-700 h3-m-700 d-flex mb-0 justify-content-between collapsed">
+                                    @lang('v2_footer.sub_partner')<i class="bx bx-chevron-down"></i>
+                                </div>
+                                <div class="row collapse d-lg-flex" id="partner-footer" data-bs-parent="#main-footer" >
                                     <div class="col-md-12 col-12">
                                         <ul>
-                                            <li class="my-1 my-lg-2"><a
-                                                    class="mktcmlgtm_footer_become_partner text-dark-70 b2-400 b2-m-400 two-rows"
+                                            <li class="my-1 my-lg-3"><a
+                                                    class="mktcmlgtm_footer_become_partner text-dark-70 b2-400 b1-m-400 two-rows"
                                                     href="https://cmlabs.co/{{ $lang_region }}/become-partner">@lang('v2_footer.menu_become-partner')</a>
                                             </li>
                                             @if ($lang_region === 'en-id')
-                                                <li class="my-1 my-lg-2"><a
-                                                        class="mktcmlgtm_footer_affiliate_program text-dark-70 b2-400 b2-m-400 two-rows"
+                                                <li class="my-1 my-lg-3"><a
+                                                        class="mktcmlgtm_footer_affiliate_program text-dark-70 b2-400 b1-m-400 two-rows"
                                                         href="https://cmlabs.co/{{ $lang_region }}/affiliate-program">@lang('v2_footer.menu_affiliate')</a>
                                                 </li>
                                             @elseif ($lang_region === 'id-id')
-                                                <li class="my-1 my-lg-2"><a
-                                                        class="mktcmlgtm_footer_affiliate_program text-dark-70 b2-400 b2-m-400 two-rows"
+                                                <li class="my-1 my-lg-3"><a
+                                                        class="mktcmlgtm_footer_affiliate_program text-dark-70 b2-400 b1-m-400 two-rows"
                                                         href="https://cmlabs.co/id-id/program-afiliasi">@lang('v2_footer.menu_affiliate')</a>
                                                 </li>
                                             @endif
-                                            <li class="my-1 my-lg-2"><a
-                                                    class="mktcmlgtm_footer_contributor text-dark-70 b2-400 b2-m-400 two-rows"
+                                            <li class="my-1 my-lg-3"><a
+                                                    class="mktcmlgtm_footer_contributor text-dark-70 b2-400 b1-m-400 two-rows"
                                                     href="https://cmlabs.co/{{ $lang_region }}/become-contributor">@lang('v2_footer.menu_contributor')</a>
                                             </li>
                                         </ul>
                                     </div>
                                     <div class="col-md-12 col-12">
-                                        <a href="https://cmlabs.co/{{ $lang_region }}/partnership""
-                                            class="my-1 my-lg-2 class-name partnership-highlight">
+                                        <a href="https://cmlabs.co/{{ $lang_region }}/partnership"
+                                            class="my-1 my-lg-3 class-name partnership-highlight" style="background: #f0f0f0">
                                             <div>
-                                                <div class="s-700 text-purple-30">@lang('v2_footer.partnership-tag')</div>
-                                                <p class="text-gray-90 s-400 m-0 mt-1">@lang('v2_footer.partnership-title')</p>
+                                                <div class="s-700 text-purple-70">@lang('v2_footer.partnership-tag')</div>
+                                                <p class="text-gray-100 s-400 m-0 mt-1">@lang('v2_footer.partnership-title')</p>
                                             </div>
                                             <ul class="d-flex gap-2 flex-column">
                                                 @foreach (trans('v2_footer.partnerships') as $item)
-                                                    <li class="b2-400 b2-m-400 text-white mt-2">{{ $item }}
+                                                    <li class="b2-400 b1-m-400 text-dark-70">{{ $item }}
                                                     </li>
                                                 @endforeach
                                             </ul>
