@@ -312,32 +312,32 @@
                             <div class="footer-submenu-container order-2 order-lg-1">
                                 {{-- partnership menu --}}
                                 <span
-                                    class="d-none d-lg-block text-dark-70 h6-700 h6-m-700 text-uppercase">@lang('footer.sub_partner')</span>
+                                    class="d-none d-lg-block text-dark-70 h6-700 h6-m-700 text-uppercase">@lang('v2_footer.sub_partner')</span>
                                 <div data-bs-toggle="collapse" data-bs-target="#partner-footer"
                                     class="d-lg-none footer-title h3-700 h3-m-700 d-flex mb-0 justify-content-between collapsed">
-                                    @lang('footer.sub_partner')<i class="bx bx-chevron-down"></i>
+                                    @lang('v2_footer.sub_partner')<i class="bx bx-chevron-down"></i>
                                 </div>
                                 <div class="row collapse d-lg-flex" id="partner-footer" data-bs-parent="#main-footer" >
                                     <div class="col-md-12 col-12">
                                         <ul>
                                             <li class="my-1 my-lg-3"><a
                                                     class="mktcmlgtm_footer_become_partner text-dark-70 b2-400 b1-m-400 two-rows"
-                                                    href="https://cmlabs.co/{{ $lang_region }}/become-partner">@lang('footer.menu_become-partner')</a>
+                                                    href="https://cmlabs.co/{{ $lang_region }}/become-partner">@lang('v2_footer.menu_become-partner')</a>
                                             </li>
                                             @if ($lang_region === 'en-id')
                                                 <li class="my-1 my-lg-3"><a
                                                         class="mktcmlgtm_footer_affiliate_program text-dark-70 b2-400 b1-m-400 two-rows"
-                                                        href="https://cmlabs.co/{{ $lang_region }}/affiliate-program">@lang('footer.menu_affiliate')</a>
+                                                        href="https://cmlabs.co/{{ $lang_region }}/affiliate-program">@lang('v2_footer.menu_affiliate')</a>
                                                 </li>
                                             @elseif ($lang_region === 'id-id')
                                                 <li class="my-1 my-lg-3"><a
                                                         class="mktcmlgtm_footer_affiliate_program text-dark-70 b2-400 b1-m-400 two-rows"
-                                                        href="https://cmlabs.co/id-id/program-afiliasi">@lang('footer.menu_affiliate')</a>
+                                                        href="https://cmlabs.co/id-id/program-afiliasi">@lang('v2_footer.menu_affiliate')</a>
                                                 </li>
                                             @endif
                                             <li class="my-1 my-lg-3"><a
                                                     class="mktcmlgtm_footer_contributor text-dark-70 b2-400 b1-m-400 two-rows"
-                                                    href="https://cmlabs.co/{{ $lang_region }}/become-contributor">@lang('footer.menu_contributor')</a>
+                                                    href="https://cmlabs.co/{{ $lang_region }}/become-contributor">@lang('v2_footer.menu_contributor')</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -345,11 +345,11 @@
                                         <a href="https://cmlabs.co/{{ $lang_region }}/partnership"
                                             class="my-1 my-lg-3 class-name partnership-highlight" style="background: #f0f0f0">
                                             <div>
-                                                <div class="s-700 text-purple-70">@lang('footer.partnership-tag')</div>
-                                                <p class="text-gray-100 s-400 m-0 mt-1">@lang('footer.partnership-title')</p>
+                                                <div class="s-700 text-purple-70">@lang('v2_footer.partnership-tag')</div>
+                                                <p class="text-gray-100 s-400 m-0 mt-1">@lang('v2_footer.partnership-title')</p>
                                             </div>
                                             <ul class="d-flex gap-2 flex-column">
-                                                @foreach (trans('footer.partnerships') as $item)
+                                                @foreach (trans('v2_footer.partnerships') as $item)
                                                     <li class="b2-400 b1-m-400 text-dark-70">{{ $item }}
                                                     </li>
                                                 @endforeach
