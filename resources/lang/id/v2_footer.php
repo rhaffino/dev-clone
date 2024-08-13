@@ -131,7 +131,7 @@ return [
     "menu_insight" => "Wawasan Umum",
     "menu_ebook" => "E-Book Gratis",
     "menu_news" => "cmlabs News",
-    'menu_class' => 'cmlabs Class<br><i class="text-purple-70 s-700 b2-m-700">Acara Eksklusif</i>',
+    'menu_class' => 'cmlabs Class',
 
     "menu_notif" => "Pusat Pemberitahuan",
     "menu_client" => "Testimoni Klien",
