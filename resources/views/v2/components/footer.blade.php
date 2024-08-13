@@ -82,10 +82,10 @@
                             <div class="footer-submenu-container order-0">
                                 <div class="">
                                     <div class="d-none d-md-block text-dark-70 b2-700 h3-m-700 text-uppercase mb-2">
-                                        ALL-NEW<br>ALL-DIFFERENT
+                                        ALL-NEW<br>
                                     </div>
-                                    <div class="d-md-none text-dark-70 b2-700 h3-m-700 text-uppercase mb-2 text-center">
-                                        ALL-NEW ALL-DIFFERENT
+                                    <div class="d-md-none text-dark-70 b2-700 h3-m-700 text-uppercase mb-2">
+                                        ALL-NEW 
                                     </div>
                                     <a class="footer-vanguard" href="https://vanguard.cmlabs.co">
                                         <img height="16"

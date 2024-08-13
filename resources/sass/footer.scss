@@ -4,6 +4,18 @@
     .cmlabs-container {
         padding-top: 64px;
     }
+    .footer-vanguard {
+        align-items: center;
+        background: #060606;
+        border-radius: 8px;
+        display: flex;
+        height: 60px;
+        justify-content: center;
+        margin-bottom: 24px;
+        padding: 6px 12px;
+        width: -moz-fit-content;
+        width: fit-content;
+    }
     .footer-menu {
         padding-bottom: 24px;
         .footer-submenu-container {
@@ -107,7 +119,7 @@
             li {
                 a {
                     color: map.get($colors, "dark-20");
-                    &.icon{
+                    &.icon {
                         color: map.get($colors, "primary-70");
                     }
                 }
@@ -181,11 +193,11 @@
         background: var(--dark-70, #f0f0f0);
     }
 
-    .dropdown-compliance{
+    .dropdown-compliance {
         min-width: 17rem;
     }
 
-    .footer-separator{
+    .footer-separator {
         width: 1px;
         height: 100%;
         background-color: map.get($colors, "gray-70");
