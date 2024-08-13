@@ -11,13 +11,9 @@
     <input type="hidden" id="usd-idr-footer">
     <div class="footer-menu background-gray-30">
         <div class="cmlabs-container">
+            <p class="footer-title h3-700 h3-m-700 text-dark-70 ">@lang('v2_footer.bottom_title')</p>
             <div class="row">
-                <div data-toggle="collapse" data-target="#level-up-footer" aria-expanded="false"
-                    aria-controls="collapseExample"
-                    class="footer-title d-flex justify-content-between px-3 w-100
-                     h3-700 h3-m-700 mb-5 mb-lg-2 text-dark-70 toggle-dropdown-footer">
-                    @lang('v2_footer.bottom_title') <i class="bx bx-chevron-down"></i></div>
-                <div id="level-up-footer" class="col-lg-4 col-12 collapse show">
+                <div class="col-lg-4 col-12">
                     <p class="office-location p-700 p-m-700">Jakarta, Indonesia (HQ)</p>
                     <p class="office-address b2-400 b2-m-400">
                         <span class="b2-700 b2-m-700 text-purple-70">cmlabs Jakarta HQ</span> Jl. Pluit Kencana Raya
@@ -82,7 +78,7 @@
                 </div>
                 <div class="col-lg-7 col-12 mt-lg-0 mt-3">
                     <div class="row">
-                        <div class="col-md-4 col-12 px-md-4 order-1">
+                        <div class="col-md-4 col-6 px-md-4 order-1">
                             <div class="footer-submenu-container order-0">
                                 <div class="">
                                     <div class="d-none d-md-block text-dark-70 b2-700 h3-m-700 text-uppercase mb-2">
@@ -98,25 +94,9 @@
                                     </a>
                                 </div>
                                 {{-- solutions menu --}}
-                                <div class="">
-                                    <div class="d-none d-md-block text-dark-70 b2-700 h3-m-700 text-uppercase mb-2">
-                                        ALL-NEW<br>ALL-DIFFERENT
-                                    </div>
-                                    <div class="d-md-none text-dark-70 b2-700 h3-m-700 text-uppercase mb-2 text-center">
-                                        ALL-NEW ALL-DIFFERENT
-                                    </div>
-                                    <a class="footer-vanguard" href="https://vanguard.cmlabs.co">
-                                        <img height="16" src="{{ asset('media/logos/vanguard-green.webp') }}"
-                                            height="20px" alt="cmlabs vanguard logo">
-                                    </a>
-                                </div>
                                 <span
-                                    class="d-none d-lg-block text-dark-70 b1-700 b1-m-700 text-decoration-underline">@lang('v2_footer.sub_service')</span>
-                                <div data-toggle="collapse" data-target="#solution-footer" aria-expanded="false"
-                                    aria-controls="collapseExample"
-                                    class="footer-title d-flex justify-content-between px-3 w-100 h3-700 h3-m-700 mb-5 mb-lg-2 text-dark-70 toggle-dropdown-footer d-lg-none">
-                                    @lang('v2_footer.sub_service') <i class="bx bx-chevron-down"></i></div>
-                                <ul class="collapse px-3 px-lg-1 pb-5 pt-2 py-lg-1 d-lg-block" id="solution-footer">
+                                    class=" text-dark-70 b1-700 b1-m-700 text-decoration-underline">@lang('v2_footer.sub_service')</span>
+                                <ul>
                                     <li class="my-1 my-lg-2 "><a
                                             class="mktcmlgtm_footer_seo_services text-dark-70 b2-400 b2-m-400 two-rows"
                                             href="https://cmlabs.co/{{ $lang_region }}/pricing/seo-services">@lang('v2_footer.menu_service_seo')
@@ -139,8 +119,14 @@
                                             class="mktcmlgtm_footer_political_campaign text-dark-70 b2-400 b2-m-400"
                                             href="https://cmlabs.co/{{ $lang_region }}/pricing/political-campaign">@lang('v2_footer.menu_service_political')</a>
                                     </li>
-                                    {{-- @if ($lang_region === 'en-id' || $lang_region === 'id-id' || $lang_region === 'en-sg' || $lang_region === 'en-au' || $lang_region === 'en-us' || $lang_region === 'en-gb')
-                                    @endif
+                                    {{-- @if (
+                                        $lang_region === 'en-id' ||
+                                            $lang_region === 'id-id' ||
+                                            $lang_region === 'en-sg' ||
+                                            $lang_region === 'en-au' ||
+                                            $lang_region === 'en-us' ||
+                                            $lang_region === 'en-gb')
+                                    @endif --}}
                                     <li class="my-1 my-lg-2"><a
                                             class="mktcmlgtm_footer_blogger_backlink text-dark-70 b2-400 b2-m-400"
                                             href="https://cmlabs.co/{{ $lang_region }}/pricing/backlink">@lang('v2_footer.menu_service_backlink')
@@ -158,12 +144,8 @@
                             <div class="footer-submenu-container order-2 order-lg-1 mt-lg-4">
                                 {{-- company menu --}}
                                 <span
-                                    class="d-none d-lg-block text-dark-70 b1-700 b1-m-700 text-decoration-underline">@lang('v2_footer.sub_company')</span>
-                                <div data-toggle="collapse" data-target="#company-footer" aria-expanded="false"
-                                    aria-controls="collapseExample"
-                                    class="footer-title d-flex justify-content-between px-3 w-100 h3-700 h3-m-700 mb-5 mb-lg-2 text-dark-70 toggle-dropdown-footer d-lg-none">
-                                    @lang('v2_footer.sub_company') <i class="bx bx-chevron-down"></i></div>
-                                <ul class="collapse px-3 px-lg-1 pb-5 pt-2 py-lg-1 d-lg-block" id="company-footer">
+                                    class=" text-dark-70 b1-700 b1-m-700 text-decoration-underline">@lang('v2_footer.sub_company')</span>
+                                <ul>
                                     <li class="my-1 my-lg-2"><a
                                             class="mktcmlgtm_footer_about_cmlabs text-dark-70 b2-400 b2-m-400"
                                             href="https://cmlabs.co/{{ $lang_region }}/company/about">@lang('v2_footer.menu_about')</a>
@@ -179,10 +161,6 @@
                                     <li class="my-1 my-lg-2"><a
                                             class="mktcmlgtm_footer_press_release text-dark-70 b2-400 b2-m-400"
                                             href="https://cmlabs.co/{{ $lang_region }}/company/press-release">@lang('v2_footer.menu_press_release')</a>
-                                    </li>
-                                    <li class="my-1 my-lg-2"><a
-                                            class="mktcmlgtm_footer_press_release text-dark-70 b2-400 b2-m-400"
-                                            href="https://cmlabs.co/{{ $lang_region }}/whistleblower-protection/">@lang('v2_footer.whistleblower')</a>
                                     </li>
                                     <div class="dropdown">
                                         <div class="text-dark-70 b2-400 b2-m-400 dropdown-toggle" type="button"
@@ -237,12 +215,8 @@
                             <div class="footer-submenu-container order-2 order-lg-1 mt-3 mt-lg-0">
                                 {{-- resources menu --}}
                                 <span
-                                    class="d-none d-lg-block text-dark-70 b1-700 b1-m-700 text-decoration-underline">@lang('v2_footer.sub_resource')</span>
-                                <div data-toggle="collapse" data-target="#resources-footer" aria-expanded="false"
-                                    aria-controls="collapseExample"
-                                    class="footer-title d-flex justify-content-between px-3 w-100 h3-700 h3-m-700 mb-5 mb-lg-2 text-dark-70 toggle-dropdown-footer d-lg-none">
-                                    @lang('v2_footer.sub_resource') <i class="bx bx-chevron-down"></i></div>
-                                <ul class="collapse px-3 px-lg-1 pb-5 pt-2 py-lg-1 d-lg-block" id="resources-footer">
+                                    class=" text-dark-70 b1-700 b1-m-700 text-decoration-underline">@lang('v2_footer.sub_resource')</span>
+                                <ul>
                                     <li class="my-1 my-lg-2"><a
                                             class="mktcmlgtm_footer_blog  text-dark-70 b2-400 b2-m-400"
                                             href="https://cmlabs.co/{{ $lang_region }}/blog">@lang('v2_footer.menu_blog')
@@ -258,57 +232,51 @@
                                     <li class="my-1 my-lg-2"><a
                                             class="mktcmlgtm_footer_insight text-dark-70 b2-400 b2-m-400"
                                             href="https://cmlabs.notion.site/SEO-Guidelines-bb8fae2783df4d7b8e9604bd33c19ed7"
-                                            target="_blank" rel="noopener noreferrer nofollow">@lang('v2_footer.menu_insight')
-                                        </a>
+                                            target="_blank" rel="noopener noreferrer nofollow">@lang('v2_footer.menu_insight') </a>
                                     </li>
                                     {{-- @if ($lang === 'id') --}}
-                                    <li class="my-1 my-lg-2"><a
-                                            class="mktcmlgtm_footer_id_cmlabs_ebook_gratis text-dark-70 b2-400 b2-m-400"
-                                            href="https://cmlabs.co/id-id/ebook">E-Book
-                                            Gratis</a></li>
-                                    <li class="my-1 my-lg-2"><a
-                                            class="mktcmlgtm_footer_id_cmlabs_event text-dark-70 b2-400 b2-m-400"
-                                            href="https://cmlabs.co/id-id/event">cmlabs
-                                            Event</a></li>
+                                        <li class="my-1 my-lg-2"><a
+                                                class="mktcmlgtm_footer_id_cmlabs_ebook_gratis text-dark-70 b2-400 b2-m-400"
+                                                href="https://cmlabs.co/id-id/ebook">E-Book
+                                                Gratis</a></li>
+                                        <li class="my-1 my-lg-2"><a
+                                                class="mktcmlgtm_footer_id_cmlabs_event text-dark-70 b2-400 b2-m-400"
+                                                href="https://cmlabs.co/id-id/event">cmlabs
+                                                Event</a></li>
                                     {{-- @endif --}}
                                     <li class="my-1 my-lg-2"><a
                                             class="mktcmlgtm_footer_news text-dark-70 b2-400 b2-m-400"
                                             href="https://cmlabs.co/{{ $lang_region }}/news">@lang('v2_footer.menu_news')
                                         </a></li>
                                     {{-- @if ($lang === 'id') --}}
-                                    <li class="my-1 my-lg-2"><a
-                                            class="mktcmlgtm_footer_id_cmlabs_class text-dark-70 b2-400 b2-m-400 two-rows"
-                                            href="https://cmlabs.co/id-id/notification/webinar-eksklusif-cmlabsblass">@lang('v2_footer.menu_class')
-                                        </a></li>
+                                        <li class="my-1 my-lg-2"><a
+                                                class="mktcmlgtm_footer_id_cmlabs_class text-dark-70 b2-400 b2-m-400 two-rows"
+                                                href="https://cmlabs.co/id-id/notification/webinar-eksklusif-cmlabsblass">@lang('v2_footer.menu_class')
+                                            </a></li>
                                     {{-- @endif --}}
                                 </ul>
                             </div>
                             <div class="footer-submenu-container order-3 order-lg-4 mt-lg-4">
                                 {{-- info menu --}}
                                 <span
-                                    class="d-none d-lg-block text-dark-70 b1-700 b1-m-700 text-decoration-underline">@lang('v2_footer.sub_info')</span>
-                                <div data-toggle="collapse" data-target="#solution-footer" aria-expanded="false"
-                                    aria-controls="collapseExample"
-                                    class="footer-title d-flex justify-content-between px-3 w-100 h3-700 h3-m-700 mb-5 mb-lg-2 text-dark-70 toggle-dropdown-footer d-lg-none">
-                                    @lang('v2_footer.sub_info') <i class="bx bx-chevron-down"></i></div>
-                                <ul class="collapse px-3 px-lg-1 pb-5 pt-2 py-lg-1 d-lg-block" id="solution-footer">
-                                    <ul>
-                                        <li class="my-1 my-lg-2"><a
-                                                class="mktcmlgtm_footer_notification text-dark-70 b2-400 b2-m-400"
-                                                href="https://cmlabs.co/{{ $lang_region }}/notification">@lang('v2_footer.menu_notif')</a>
-                                        </li>
-                                        <li class="my-1 my-lg-2"><a
-                                                class="mktcmlgtm_footer_testimony text-dark-70 b2-400 b2-m-400"
-                                                href="https://cmlabs.co/{{ $lang_region }}/case-studies">@lang('v2_footer.menu_testimony')</a>
-                                        </li>
-                                        <li class="my-1 my-lg-2"><a
-                                                class="mktcmlgtm_footer_FAQ text-dark-70 b2-400 b2-m-400"
-                                                href="https://faq.cmlabs.co/en-id">@lang('v2_footer.menu_faq')</a>
-                                        </li>
-                                    </ul>
+                                    class=" text-dark-70 b1-700 b1-m-700 text-decoration-underline">@lang('v2_footer.sub_info')</span>
+                                <ul>
+                                    <li class="my-1 my-lg-2"><a
+                                            class="mktcmlgtm_footer_notification text-dark-70 b2-400 b2-m-400"
+                                            href="https://cmlabs.co/{{ $lang_region }}/notification">@lang('v2_footer.menu_notif')</a>
+                                    </li>
+                                    <li class="my-1 my-lg-2"><a
+                                            class="mktcmlgtm_footer_testimony text-dark-70 b2-400 b2-m-400"
+                                            href="https://cmlabs.co/{{ $lang_region }}/case-studies">@lang('v2_footer.menu_testimony')</a>
+                                    </li>
+                                    <li class="my-1 my-lg-2"><a
+                                            class="mktcmlgtm_footer_FAQ text-dark-70 b2-400 b2-m-400"
+                                            href="https://faq.cmlabs.co/en-id">@lang('v2_footer.menu_faq')</a>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
-                        <div class="col-md-4 col-12 order-md-3 order-2">
+                        <div class="col-md-4 col-6 order-md-3 order-2">
                             <div class="footer-submenu-container order-2 order-lg-1">
                                 {{-- partnership menu --}}
                                 <span
@@ -462,7 +430,7 @@
 
 @push('script')
     <script>
-        fetch("{{ env('CMLABSCO_API_URL') }}/{{ $lang }}-id/service-compliances-lists", {
+        fetch("{{ env('CMLABSCO_API_URL') }}/{{$lang}}-id/service-compliances-lists", {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json",
