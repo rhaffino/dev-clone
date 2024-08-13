@@ -26,7 +26,7 @@
                     <a href="tel:622166604470" class="office-phone b2-500 text-dark-100"> <span
                             class="text-dark-30">(+62) 21-</span><b>666-04470</b></a>
 
-                    <p class="office-address b2-400 b2-m-400 mt-2">
+                    {{-- <p class="office-address b2-400 b2-m-400 mt-2">
                         <span class="b2-700 b2-m-700 text-purple-70">cmlabs Jakarta Office 2</span> Jl. Tanah Abang I
                         No.11, Petojo Selatan, Gambir, Jakarta Pusat, DKI Jakarta 10160, Indonesia
                     </p>
@@ -36,7 +36,7 @@
                         Kota Malang, Jawa Timur, 65141, Indonesia
                     </p>
                     <a href="tel:62341475665" class="office-phone b2-500 text-dark-100"> <span
-                            class="text-dark-30">(+62) 341-</span><b>475-665</b></a>
+                            class="text-dark-30">(+62) 341-</span><b>475-665</b></a> --}}
                     <div class="d-flex flex-column">
                         <a href="https://cmlabs.co/{{ $lang_region }}/jakarta-office"
                             class="mktcmlgtm_footer_visit_jakarta">
@@ -67,7 +67,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div>
+                        <div class="mt-4">
                             <p class="text-dark-50 mt-2 text-lg-start desc b2-400 mb-0">@lang('v2_footer.badge-desc')</p>
                             <p class="text-dark-50 mt-1 text-lg-start desc b2-400"><a
                                     href="https://cmlabs.co/{{ $lang_region }}/become-partner">@lang('v2_footer.badge-desc-cta')</a>
@@ -86,10 +86,10 @@
                             <div class="footer-submenu-container order-0">
                                 <div class="">
                                     <div class="d-none d-md-block text-dark-70 b2-700 h3-m-700 text-uppercase mb-2">
-                                        ALL-NEW<br>ALL-DIFFERENT
+                                        ALL-NEW<br>
                                     </div>
-                                    <div class="d-md-none text-dark-70 b2-700 h3-m-700 text-uppercase mb-2 text-center">
-                                        ALL-NEW ALL-DIFFERENT
+                                    <div class="d-md-none text-dark-70 b2-700 h3-m-700 text-uppercase mb-2">
+                                        ALL-NEW 
                                     </div>
                                     <a class="footer-vanguard" href="https://vanguard.cmlabs.co">
                                         <img height="16"

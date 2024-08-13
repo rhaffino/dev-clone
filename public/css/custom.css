@@ -2799,7 +2799,7 @@ input.input-url-meta-checker:focus {
 .relative{
     position: relative;
 }
-.flex-fit{    
+.flex-fit{
     flex-grow: initial!important;
 }
 
@@ -2837,4 +2837,16 @@ input.input-url-meta-checker:focus {
 }
 .chrome-extension-card .extension-pattern.right {
     right: 10px;
+}
+.footer-vanguard{
+    align-items: center;
+    background: #060606;
+    border-radius: 8px;
+    display: flex;
+    height: 60px;
+    justify-content: center;
+    margin-bottom: 24px;
+    padding: 6px 12px;
+    width: -moz-fit-content;
+    width: fit-content;
 }
