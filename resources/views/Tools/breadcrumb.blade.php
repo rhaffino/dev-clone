@@ -32,7 +32,7 @@ id/json-ld-breadcrumb-schema-generator
                                     <label for="schema-json-ld" class="font-weight-bold text-black h6">@lang('layout.which-schema')</label>
                                     <select class="form-control selectpicker custom-select-blue custom-searchbox" tabindex="null" data-size="4" data-live-search="true" id="schema-json-ld">
                                         <option value="home">Home</option>
-                                        <option value="breadcrumb" selected="selected">Breadcrumb</option>
+                                        <option value="breadcrumb" selected="selected">Breadcrumbs</option>
                                         <option value="faq">FAQ Page</option>
                                         <option value="how-to">How-to</option>
                                         <option value="job-posting">Job Posting</option>
