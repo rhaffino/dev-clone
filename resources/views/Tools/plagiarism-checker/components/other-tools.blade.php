@@ -114,6 +114,13 @@
             'icon' => "<i class='text-purple-70 bx bx-shape-circle bx-sm'></i>",
             'link' => 'plagiarism-checker',
         ],
+        [
+            'title' => 'Heading Tags Test',
+            'desc' => __('home.heading-tags-test-desc'),
+            'icon' => '<i class="text-purple-70 bx bx-heading bx-sm"></i>',
+            'link' => 'heading-tags-test',
+        ],
+
     ];
 @endphp
 

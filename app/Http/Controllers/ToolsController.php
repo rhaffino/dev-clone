@@ -2147,6 +2147,47 @@ class ToolsController extends Controller
 
         return view('Tools/metagenerator', compact('local', 'dataID', 'dataEN', 'is_maintenance', 'lang', 'blogs', 'seo_terms', 'seo_guidelines', 'languages'));
     }
+    
+    public function headingTagsTest($lang)
+    {
+        // Set locale berdasarkan bahasa yang diterima dari URL
+        App::setLocale($lang);
+
+        // Fetch data SEO atau blog yang diperlukan (ini hanya contoh, sesuaikan dengan data Anda)
+        $dataID = $this->HomeController->getBlogWordpressId();
+        $dataEN = $this->HomeController->getBlogWordpressEn();
+        $local = App::getLocale();
+
+        // Dapatkan halaman yang terkait dengan Heading Tags Test jika ada
+        $headingTagsTestPage = Page::select('pages.id', 'pages.published_at', 'pages.title', 'pages.slug', 'pages.image', 'pages.created_by')
+            ->where('pages.language', $lang)
+            ->where('pages.slug', 'heading-tags-test')
+            ->where('pages.status', '1')
+            ->orderBy('pages.created_at', 'DESC')
+            ->first();
+
+        // Format tanggal publikasi (jika ada data)
+        if ($headingTagsTestPage) {
+        $headingTagsTestPage->published_at = Carbon::parse($headingTagsTestPage->published_at)->format('d F Y');
+        }
+
+        // Data dummy untuk contoh, bisa diambil dari database atau API
+        $headings = [
+            'h1' => 'Contoh Judul H1',
+            'h2' => 'Contoh Subjudul H2',
+        ];
+
+        // Tambahkan data lain yang mungkin diperlukan seperti maintenance mode, dsb.
+        $is_maintenance = in_array('heading-tags-test', explode(',', env('TOOLS_MAINTENANCE'))) && env('APP_ENV') === 'production';
+
+        // Dapatkan daftar bahasa dari file JSON (ini contoh, pastikan jalurnya benar)
+        $path = public_path('json/languages.json');
+        $languages = json_decode(file_get_contents($path), true);
+
+        // Kembalikan view dan data ke Blade template
+        return view('Tools.heading-tags-test', compact('local', 'dataID', 'dataEN', 'is_maintenance', 'lang', 'headings', 'headingTagsTestPage', 'languages'));
+    }
+
 
     public function englishVersion()
     {

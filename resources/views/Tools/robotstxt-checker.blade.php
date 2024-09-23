@@ -382,15 +382,16 @@ id/robotstxt-checker
             description_1.classList.remove("d-none");
             description_2.classList.remove("d-none");
             how_to.classList.remove("d-none");
-            read_more_button.innerHTML = @json( __('layout.show-less') );
+            read_more_button.innerHTML = read_more_button.innerHTML = __('layout.show-less');
+
             read = true;
         } else {
             description_2.style.display = 'none';
             how_to.style.display = 'none';
             description_2.classList.add("d-none");
             how_to.classList.add("d-none");
-            read_more_button.innerHTML = @json( __('layout.read-more') );
-            read = false;
+            read_more_button.innerHTML = read_more_button.innerHTML = __('layout.read-more');
+
         }
     });
 </script>

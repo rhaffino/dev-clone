@@ -134,6 +134,13 @@ id
         'description' => __('home.meta-generator-desc'),
         'link' => "/{{ $local }}/meta-generator",        
     ],
+    [
+        'icon' => 'bx bx-heading',
+        'title' => 'Heading Tags Test',
+        'description' => __('home.heading-tags-test-desc'),
+        'link' => "/{$local}/heading-tags-test",
+    ],
+  
 ];
 @endphp
 
@@ -409,7 +416,7 @@ id
     });
 </script>
 @endpush
-
+ 
 @section('home')
 active
 @endsection
