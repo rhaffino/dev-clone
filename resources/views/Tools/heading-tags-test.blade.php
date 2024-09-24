@@ -179,7 +179,6 @@
         color: #007bff;
         margin-left: 10px;
     }
-
     #local-history {
         border-radius: 5px;
         background-color: #f5f5f5;
